@@ -1,0 +1,85 @@
+{
+ "root_frame_id": "fe7729aa-56d6-43bd-a533-7be37d352db9",
+ "collected_at": "2026-11-13T21:38:32+0000",
+ "claude_science_version": "0.1.72",
+ "artifacts": [
+  {
+   "filename": "county_table_input.csv",
+   "artifact_id": "e8c482f6-ecae-40ab-a006-b8da9f4b9c10",
+   "version_id": "2034e53c-a3b0-4a7f-87ae-0c251a1eed16",
+   "version_number": 1,
+   "content_type": "text/csv",
+   "sha256": "5120b31e2c8c841170bf71a06a3e94b8c6db425c678f7f31e32541622f54c388",
+   "app_checksum": "5120b31e2c8c841170bf71a06a3e94b8c6db425c678f7f31e32541622f54c388",
+   "language": "python",
+   "has_code": true,
+   "has_environment": true,
+   "created_at": "2026-11-13T21:30:58.695Z"
+  },
+  {
+   "filename": "county_table_analysis.csv",
+   "artifact_id": "4dbcb8f8-e97b-4beb-8e4f-1ff0d42edf3a",
+   "version_id": "d06b6d31-e9b6-471a-bb7b-c7e5f7ee1e84",
+   "version_number": 2,
+   "content_type": "text/csv",
+   "sha256": "269cb80eb841283304e63eddc744b7c4ac8e20b21914294c8f16a797c92a95d7",
+   "app_checksum": "269cb80eb841283304e63eddc744b7c4ac8e20b21914294c8f16a797c92a95d7",
+   "language": "python",
+   "has_code": true,
+   "has_environment": true,
+   "created_at": "2026-11-13T21:31:49.643Z"
+  },
+  {
+   "filename": "funnel_curative_intent.png",
+   "artifact_id": "3ab864df-ec37-42a4-a388-20bef3265cfe",
+   "version_id": "91f56a8b-8394-4d32-9078-13a98aee567d",
+   "version_number": 1,
+   "content_type": "image/png",
+   "sha256": "00ea7e7e6eb25cdc10692783fbeb70f6bed2b6ec4da2ab11546b39c6fa07d149",
+   "app_checksum": "00ea7e7e6eb25cdc10692783fbeb70f6bed2b6ec4da2ab11546b39c6fa07d149",
+   "language": "python",
+   "has_code": false,
+   "has_environment": true,
+   "created_at": "2026-11-13T21:30:58.763Z"
+  },
+  {
+   "filename": "rank_correlations.csv",
+   "artifact_id": "1f3c1d4e-7233-43ad-aec5-0bb194dc5823",
+   "version_id": "23082ee9-847d-4cf3-a63d-9df1aed9261a",
+   "version_number": 1,
+   "content_type": "text/csv",
+   "sha256": "9bb187374516d821ec66705dc2141d55fabf5975151a33ed351fb48ac6a555c9",
+   "app_checksum": "9bb187374516d821ec66705dc2141d55fabf5975151a33ed351fb48ac6a555c9",
+   "language": "python",
+   "has_code": true,
+   "has_environment": true,
+   "created_at": "2026-11-13T21:30:58.793Z"
+  },
+  {
+   "filename": "lung_curative_funnel.py",
+   "artifact_id": "dae4646f-5dbe-4162-9a7e-039921a6b565",
+   "version_id": "7b3ca43a-382c-4ee0-9fcc-e5edad410376",
+   "version_number": 2,
+   "content_type": "text/x-python",
+   "sha256": "e7a7b0f369123c555abf0b146fd4956903202cf64104d08162467358177b6dd9",
+   "app_checksum": "e7a7b0f369123c555abf0b146fd4956903202cf64104d08162467358177b6dd9",
+   "language": "python",
+   "has_code": false,
+   "has_environment": true,
+   "created_at": "2026-11-13T21:31:49.678Z"
+  },
+  {
+   "filename": "results_summary.md",
+   "artifact_id": "c906c1e0-1441-4a15-aaa3-88aed028645c",
+   "version_id": "2e66e669-c70e-4bf0-a2b6-7a50f80e81fc",
+   "version_number": 2,
+   "content_type": "text/markdown",
+   "sha256": "cded313fbfd881ce0ca2c82d1d06aff2617d436796c8dcda6b845702aa38cad8",
+   "app_checksum": "cded313fbfd881ce0ca2c82d1d06aff2617d436796c8dcda6b845702aa38cad8",
+   "language": "python",
+   "has_code": false,
+   "has_environment": true,
+   "created_at": "2026-11-13T21:31:59.539Z"
+  }
+ ]
+}

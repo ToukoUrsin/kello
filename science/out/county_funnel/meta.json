@@ -1,0 +1,4 @@
+{"title": "County differences in curative-intent treatment are far larger than chance",
+ "finding_en": "If every county treated at the national rate of 27.0%, chance alone would put about one county outside the 95% limits. Twelve of 22 are outside. Lapland, South Karelia and Kymenlaakso are below even the 99.8% limits. The seven counties below the limits are together about 50 patients a year short of the national share. This is not adjusted for stage or age, because those are not published per county, so it shows where to look, not why.",
+ "figure": "artifacts/funnel_curative_intent.png",
+ "figure_alt": "Funnel plot: share of lung cancer patients who received curative-intent treatment against the number of patients, one point per county, with control limits around the national 27.0%. Twelve counties are labelled outside the limits."}
