@@ -758,6 +758,8 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
               ? <p className="st-so">On paper the gap is a fourth step: who is given treatment that aims to cure. The chart check comes first: it shows how much of it is real.</p>
               : B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "possibly_here")
               ? <p className="st-so">The clear gap is a fourth step: who is given treatment that aims to cure. The steps marked possibly may add to it.</p>
+              : steps.find((x) => x.id === "detection")?.verdict === "cannot_tell"
+              ? <p className="st-so">So the gap shows at a fourth step: who is given treatment that aims to cure. Whether late stage is behind it, the chart check tells.</p>
               : <p className="st-so">So the gap is a fourth step: who is given treatment that aims to cure.</p>)}
             {drugLow && <p className="st-also num">Also low: drug therapy on record, {one(drugLow.value)}% here against {one(drugLow.national)}% in Finland. The registry under-records it, so the chart check also counts biomarker tests and drug treatment. <button className="st-fig" onClick={() => openSource({ kind: drugLow.kind, source_id: drugLow.source_id, source_url: drugLow.source_url, page: drugLow.page, quote: drugLow.quote, read_by: drugLow.read_by, period: drugLow.period, what: drugLow.label_en, value: `${one(drugLow.value)}%` })}>Source</button></p>}
           </div>
