@@ -1,0 +1,60 @@
+{
+ "id": "top",
+ "file": "captures/top.mp4",
+ "duration": 9.489,
+ "fps": 60,
+ "viewport": [
+  1024,
+  576
+ ],
+ "scale": 3,
+ "base": "http://127.0.0.1:8742",
+ "captured_at": "2026-11-14T02:17:48+0000",
+ "source_frames": 6,
+ "source_fps_mean": 0.6,
+ "cursor": [
+  [
+   0,
+   563.2,
+   345.59999999999997
+  ]
+ ],
+ "clicks": [],
+ "marks": [
+  {
+   "name": "head",
+   "t": 0.387,
+   "box": [
+    24,
+    99,
+    714,
+    50
+   ]
+  },
+  {
+   "name": "wait",
+   "t": 1.399,
+   "box": [
+    24,
+    155,
+    739,
+    69
+   ]
+  },
+  {
+   "name": "strip",
+   "t": 2.296,
+   "box": [
+    24,
+    240,
+    976,
+    95
+   ]
+  }
+ ],
+ "api": {},
+ "texts": {
+  "head": "Of 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year.",
+  "wait": "Lapland's patients do not wait longer: 31.2 days from diagnosis to treatment in the OYS area, 36.9 in Finland. Fewer are treated to cure. Measured · Cancer Registry 2018–mid 2022 · p. 28 · read by Gemini · Published for the collaborative area, not for the county."
+ }
+}

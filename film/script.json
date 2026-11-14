@@ -1,0 +1,177 @@
+{
+ "voice": {
+  "id": "JBFqnCBsd6RMkjVDRZzb",
+  "name": "George (ElevenLabs stock voice)",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+   "stability": 0.55,
+   "similarity_boost": 0.8,
+   "style": 0.1,
+   "use_speaker_boost": true,
+   "speed": 1.05
+  }
+ },
+ "_say": "\"say\" is what the voice is sent (phonetic spellings of Finnish names); \"text\" is the caption. Same number of words in both.",
+ "say_map": {
+  "Kello": "Kel-lo",
+  "Kello's": "Kel-lo's",
+  "Oulu": "Oh-loo"
+ },
+ "gap": 0.3,
+ "scenes": [
+  {
+   "id": "hook",
+   "lead": 0.4,
+   "tail": 0.3,
+   "lines": [
+    {
+     "id": "h1",
+     "text": "You lead cancer care in Lapland."
+    },
+    {
+     "id": "h2",
+     "text": "Of a hundred of your lung cancer patients, eighteen are treated to cure.",
+     "gap": 0.25
+    },
+    {
+     "id": "h3",
+     "text": "In Vantaa and Kerava, thirty-six.",
+     "gap": 0.3
+    },
+    {
+     "id": "h4",
+     "text": "Same country. Same cancer.",
+     "gap": 0.3
+    }
+   ]
+  },
+  {
+   "id": "reveal",
+   "lead": 0.3,
+   "tail": 0.35,
+   "lines": [
+    {
+     "id": "r1",
+     "text": "Lapland's patients do not wait longer: thirty-one days from diagnosis to treatment, thirty-seven in Finland."
+    },
+    {
+     "id": "r2",
+     "text": "Fewer are treated to cure. About twelve patients a year."
+    }
+   ]
+  },
+  {
+   "id": "real",
+   "lead": 0.3,
+   "tail": 0.4,
+   "lines": [
+    {
+     "id": "q1",
+     "text": "Is the gap real? Not chance, not age, not just missing records."
+    },
+    {
+     "id": "q2",
+     "text": "Stage at diagnosis is not published: an eight-week records audit settles it."
+    }
+   ]
+  },
+  {
+   "id": "switch",
+   "lead": 0.3,
+   "tail": 0.7,
+   "lines": [
+    {
+     "id": "s1",
+     "text": "Now switch on Kello's plan."
+    },
+    {
+     "id": "s2",
+     "text": "Six actions, for two hundred and eleven thousand five hundred euros a year.",
+     "gap": 1.6
+    }
+   ]
+  },
+  {
+   "id": "card",
+   "lead": 0.4,
+   "tail": 1.0,
+   "lines": [
+    {
+     "id": "c1",
+     "text": "By the model, five of those twelve patients are treated to cure. Forty-three percent of the gap."
+    }
+   ]
+  },
+  {
+   "id": "orders",
+   "lead": 0.4,
+   "tail": 0.3,
+   "lines": [
+    {
+     "id": "o2",
+     "text": "Precise radiotherapy, for early cancer that cannot be operated: thirty thousand four hundred euros a year. First step: write the referral rule. Owner: the chief of oncology."
+    }
+   ]
+  },
+  {
+   "id": "verify",
+   "lead": 0.3,
+   "tail": 0.5,
+   "min": 19,
+   "lines": [
+    {
+     "id": "v1",
+     "text": "But is it already running? Kello checks the web, live, through Oxylabs."
+    },
+    {
+     "id": "v2",
+     "text": "It searches, reads the hospital's own pages, and quotes them.",
+     "gap": 1.4
+    },
+    {
+     "id": "v3",
+     "text": "This morning's check and the live run agree: Oulu University Hospital already offers it. Ask them first.",
+     "gap": 0.9
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "lead": 0.3,
+   "tail": 0.4,
+   "lines": [
+    {
+     "id": "p1",
+     "text": "That goes straight into the plan: one page, in English or Finnish, ready to send."
+    }
+   ]
+  },
+  {
+   "id": "sources",
+   "lead": 0.3,
+   "tail": 0.5,
+   "lines": [
+    {
+     "id": "g1",
+     "text": "Every number opens its source: Gemini read nine hundred and sixty-six registry values, each with its page and quote."
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "lead": 0.4,
+   "tail": 2.3,
+   "lines": [
+    {
+     "id": "a2",
+     "text": "We ask for a six-month pilot of two actions: a chest surgeon reviews every decision not to operate, and those who cannot be operated get radiotherapy."
+    },
+    {
+     "id": "a3",
+     "text": "The goal: from eighteen and a half to twenty and a half percent treated to cure, by 2028.",
+     "gap": 0.4
+    }
+   ]
+  }
+ ]
+}

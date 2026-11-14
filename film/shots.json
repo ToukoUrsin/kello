@@ -1,0 +1,1198 @@
+{
+ "_": "Shot list for the screen captures (v5). One entry = one capture file. Re-record everything with one command: film/recapture.sh (or capture.py <ids>). Every step waits for a selector, never for a fixed time, except short holds the film needs as still footage. Steps: wait (ms hold) · wait_for / wait_gone (target) · wait_api (url part) · move · click · scroll (target, block = where it lands, 0-1) · scroll_by (px) · goto (hash) · eval (js) · expect (target + contains: the shot FAILS if the page no longer says what the voice-over says). Any step may carry mark (a name the film zooms to), box (target whose box the mark stores; default the step's own target) and closest (use the box of that ancestor). Targets: css | text | role+name, plus nth / has_text; any = the first that exists, so a restyled UI can sit next to the current one. Put the new UI's target FIRST in each any-list. The viewport is small on purpose (1024x576, recorded at 3x): the film shows the page near full frame, so 15 px app text lands at 28+ px in 1080p.",
+ "base": "http://127.0.0.1:8742",
+ "viewport": [
+  1024,
+  576
+ ],
+ "scale": 3,
+ "fps": 30,
+ "jpeg_quality": 92,
+ "shots": [
+  {
+   "id": "home",
+   "scene": "hook",
+   "what": "The first screen: the headline (Lapland 18 of 100, Vantaa and Kerava 36) and the three 100-dot charts. A still; the film's camera moves over it.",
+   "url": "#/",
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": ".dotcols.home"
+       },
+       {
+        "css": ".dotcols"
+       }
+      ]
+     },
+     "timeout": 60000
+    },
+    {
+     "wait": 1200
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "head",
+     "box": {
+      "any": [
+       {
+        "css": "main h1"
+       },
+       {
+        "css": "h1"
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": "main h1"
+       },
+       {
+        "css": "h1"
+       }
+      ]
+     },
+     "contains": [
+      "Lapland, 18 of 100",
+      "Vantaa and Kerava, 36"
+     ],
+     "as": "head"
+    },
+    {
+     "mark": "chart",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcols"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "lap",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 0
+       }
+      ]
+     }
+    },
+    {
+     "mark": "fin",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 1
+       }
+      ]
+     }
+    },
+    {
+     "mark": "best",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 2
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".dotcols"
+       }
+      ]
+     },
+     "contains": [
+      "Lapland",
+      "18.5",
+      "27.0",
+      "Vantaa and Kerava",
+      "35.6"
+     ],
+     "as": "chart"
+    },
+    {
+     "wait": 15000
+    }
+   ]
+  },
+  {
+   "id": "dots",
+   "scene": "hook, switch",
+   "what": "Lapland's dot chart on Today; hold; switch on the plan; the dots move; scroll to the missing-patients bar.",
+   "url": "#/county/21",
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "role": "group",
+        "name": "Show the plan"
+       },
+       {
+        "css": ".dotcols"
+       }
+      ]
+     },
+     "timeout": 30000
+    },
+    {
+     "click": {
+      "role": "button",
+      "name": "Today",
+      "exact": true
+     },
+     "ms": 0,
+     "pause": 0
+    },
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": "button[aria-pressed='true']",
+        "has_text": "Today"
+       },
+       {
+        "role": "button",
+        "name": "Today",
+        "exact": true
+       }
+      ]
+     }
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": ".dotcols"
+       },
+       {
+        "role": "group",
+        "name": "Show the plan"
+       }
+      ]
+     },
+     "block": 0.6,
+     "ms": 100
+    },
+    {
+     "wait": 1600
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "title",
+     "box": {
+      "any": [
+       {
+        "text": "how many are treated to cure?"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "chart",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcols"
+       },
+       {
+        "role": "group",
+        "name": "Show the plan"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "lap",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 0
+       }
+      ]
+     }
+    },
+    {
+     "mark": "fin",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 1
+       }
+      ]
+     }
+    },
+    {
+     "mark": "best",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 2
+       }
+      ]
+     }
+    },
+    {
+     "mark": "toggle",
+     "box": {
+      "any": [
+       {
+        "role": "group",
+        "name": "Show the plan"
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".dotcols"
+       }
+      ]
+     },
+     "contains": [
+      "Lapland",
+      "18.5",
+      "27.0",
+      "Vantaa and Kerava",
+      "35.6"
+     ],
+     "as": "chart"
+    },
+    {
+     "wait": 5500
+    },
+    {
+     "click": {
+      "role": "button",
+      "name": "With the plan"
+     },
+     "ms": 1000,
+     "mark": "switch"
+    },
+    {
+     "wait": 450,
+     "mark": "lap_after",
+     "box": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 0
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".dotcol",
+        "nth": 0
+       }
+      ]
+     },
+     "contains": [
+      "18.5",
+      "22.2"
+     ],
+     "as": "lap_after"
+    },
+    {
+     "wait": 2600
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": ".missbar"
+       },
+       {
+        "text": "patients a year are missing"
+       }
+      ]
+     },
+     "block": 0.62,
+     "ms": 1100,
+     "mark": "miss"
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".missbar"
+       }
+      ]
+     },
+     "contains": [
+      "12.1",
+      "5.2"
+     ],
+     "as": "miss"
+    },
+    {
+     "wait": 3500
+    }
+   ]
+  },
+  {
+   "id": "top",
+   "scene": "reveal",
+   "what": "Top of Lapland's page: the headline and the waiting-time line.",
+   "url": "#/county/21",
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": ".pagehead h1"
+       },
+       {
+        "css": "main h1"
+       }
+      ]
+     },
+     "timeout": 30000
+    },
+    {
+     "wait": 900
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "head",
+     "box": {
+      "any": [
+       {
+        "css": ".pagehead h1"
+       },
+       {
+        "css": "main h1"
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".pagehead h1"
+       },
+       {
+        "css": "main h1"
+       }
+      ]
+     },
+     "contains": [
+      "Lapland, 18",
+      "In Finland it is 27",
+      "12 patients a year"
+     ],
+     "as": "head"
+    },
+    {
+     "mark": "wait",
+     "box": {
+      "text": "do not wait longer"
+     },
+     "closest": "p"
+    },
+    {
+     "expect": {
+      "text": "do not wait longer"
+     },
+     "contains": [
+      "31.2 days",
+      "36.9",
+      "Fewer are treated to cure"
+     ],
+     "as": "wait"
+    },
+    {
+     "mark": "strip",
+     "box": {
+      "any": [
+       {
+        "css": ".strip"
+       },
+       {
+        "text": "missing patients a year"
+       }
+      ]
+     }
+    },
+    {
+     "wait": 7000
+    }
+   ]
+  },
+  {
+   "id": "gap",
+   "scene": "real",
+   "what": "Lapland's page: the strip 'Is this gap real?' with its five checks. A still; the film rings each answer in turn.",
+   "url": "#/county/21",
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": ".gapstrip-head"
+       },
+       {
+        "text": "Is this gap real?"
+       }
+      ]
+     },
+     "timeout": 60000
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": ".gapstrip-head"
+       }
+      ]
+     },
+     "block": 0.3,
+     "ms": 100
+    },
+    {
+     "wait": 1000
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "head",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip-head"
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".gapstrip-head"
+       }
+      ]
+     },
+     "contains": [
+      "Four of five checks",
+      "8 weeks",
+      "€8,000"
+     ],
+     "as": "head"
+    },
+    {
+     "mark": "strip",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "wrap",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstripwrap"
+       },
+       {
+        "css": "#sec-why"
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": ".gapstrip"
+       }
+      ]
+     },
+     "contains": [
+      "less than once in 500",
+      "age adjustment",
+      "Cannot tell",
+      "8 of 12"
+     ],
+     "as": "strip"
+    },
+    {
+     "mark": "c0",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip li",
+        "nth": 0
+       }
+      ]
+     }
+    },
+    {
+     "mark": "c1",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip li",
+        "nth": 1
+       }
+      ]
+     }
+    },
+    {
+     "mark": "c2",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip li",
+        "nth": 2
+       }
+      ]
+     }
+    },
+    {
+     "mark": "c3",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip li",
+        "nth": 3
+       }
+      ]
+     }
+    },
+    {
+     "mark": "c4",
+     "box": {
+      "any": [
+       {
+        "css": ".gapstrip li",
+        "nth": 4
+       }
+      ]
+     }
+    },
+    {
+     "wait": 12000
+    }
+   ]
+  },
+  {
+   "id": "card",
+   "scene": "orders, verify",
+   "what": "Action 1 as an order (title, cost, first step, owner); then a live web check on it, start to the Ask-first result. Real wait (15-60 s); the film speeds it up and says so.",
+   "url": "#/county/21",
+   "keep_api": [
+    "/api/verify/latest"
+   ],
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') h3"
+       },
+       {
+        "css": "article:has-text('Precise radiotherapy') h3"
+       }
+      ]
+     },
+     "timeout": 30000
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') h3"
+       },
+       {
+        "css": "article:has-text('Precise radiotherapy') h3"
+       }
+      ]
+     },
+     "block": 0.2,
+     "ms": 100
+    },
+    {
+     "wait": 1000
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "card",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy')"
+       },
+       {
+        "css": "article:has-text('Precise radiotherapy')"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "askpre",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .askfirst"
+       }
+      ]
+     }
+    },
+    {
+     "move": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') h3"
+       },
+       {
+        "css": "article:has-text('Precise radiotherapy') h3"
+       }
+      ]
+     },
+     "at": [
+      0.3,
+      0.5
+     ],
+     "ms": 900,
+     "mark": "title"
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy')"
+       }
+      ]
+     },
+     "contains": [
+      "€30,400",
+      "Write the referral rule",
+      "Chief physician of oncology"
+     ],
+     "as": "card"
+    },
+    {
+     "wait": 1600
+    },
+    {
+     "move": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') dl.facts dd",
+        "nth": 0
+       },
+       {
+        "text": "€30,400"
+       }
+      ]
+     },
+     "ms": 700,
+     "mark": "cost",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') dl.facts"
+       }
+      ]
+     }
+    },
+    {
+     "wait": 1600
+    },
+    {
+     "move": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') >> text=Then, the first step"
+       },
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .cmain"
+       }
+      ]
+     },
+     "ms": 800,
+     "mark": "first",
+     "closest": "p, dl"
+    },
+    {
+     "wait": 1800
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') >> text=Owner."
+       }
+      ]
+     },
+     "block": 0.42,
+     "ms": 900,
+     "mark": "owner_scrolled"
+    },
+    {
+     "move": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') >> text=Owner."
+       },
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .cmain"
+       }
+      ]
+     },
+     "ms": 600,
+     "mark": "owner",
+     "closest": "p, dl"
+    },
+    {
+     "wait": 1600
+    },
+    {
+     "click": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') button:has-text('Check on the web')"
+       }
+      ]
+     },
+     "ms": 800,
+     "mark": "click"
+    },
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .livebox"
+       },
+       {
+        "text": "Checking now"
+       }
+      ]
+     },
+     "timeout": 20000,
+     "mark": "live"
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .livebox"
+       },
+       {
+        "text": "Checking now"
+       }
+      ]
+     },
+     "block": 0.45,
+     "ms": 900,
+     "mark": "live_box"
+    },
+    {
+     "wait": 6000,
+     "mark": "trace",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .livebox"
+       }
+      ]
+     }
+    },
+    {
+     "wait_gone": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .livebox"
+       }
+      ]
+     },
+     "timeout": 240000,
+     "mark": "done"
+    },
+    {
+     "wait": 200
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .vdiff"
+       },
+       {
+        "text": "Stored answer, 14 Nov"
+       }
+      ]
+     },
+     "block": 0.35,
+     "ms": 1000,
+     "mark": "vdiff"
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .vdiff"
+       }
+      ]
+     },
+     "contains": [
+      "Stored answer",
+      "This run"
+     ],
+     "as": "vdiff"
+    },
+    {
+     "mark": "was",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .vdiff .was"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "now",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .vdiff .now"
+       }
+      ]
+     }
+    },
+    {
+     "wait": 2500
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .askfirst"
+       },
+       {
+        "text": "Ask first (web check"
+       }
+      ]
+     },
+     "block": 0.42,
+     "ms": 1100,
+     "mark": "ask"
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .askfirst"
+       }
+      ]
+     },
+     "contains": [
+      "Ask first",
+      "OYS"
+     ],
+     "as": "ask"
+    },
+    {
+     "mark": "quote",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') .askfirst blockquote"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "then",
+     "box": {
+      "any": [
+       {
+        "css": "article.card:has-text('Precise radiotherapy') >> text=Then, the first step"
+       }
+      ]
+     },
+     "closest": "p"
+    },
+    {
+     "wait": 5500
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "scene": "plan",
+   "what": "The one-page plan: title, row 1 with the web check note, then Suomi.",
+   "url": "#/plan/21?budget=1000000&lang=en",
+   "before": [
+    {
+     "wait_for": {
+      "css": "article.sheet h1"
+     },
+     "timeout": 60000
+    },
+    {
+     "wait_gone": {
+      "css": "article.sheet .skeleton"
+     },
+     "timeout": 240000
+    },
+    {
+     "goto": "#/plan/21?budget=1000000&lang=fi"
+    },
+    {
+     "wait": 1500
+    },
+    {
+     "wait_gone": {
+      "css": "article.sheet .skeleton"
+     },
+     "timeout": 240000
+    },
+    {
+     "goto": "#/plan/21?budget=1000000&lang=en"
+    },
+    {
+     "wait": 1500
+    },
+    {
+     "wait_gone": {
+      "css": "article.sheet .skeleton"
+     },
+     "timeout": 240000
+    },
+    {
+     "wait": 900
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "title",
+     "box": {
+      "css": "article.sheet h1"
+     }
+    },
+    {
+     "expect": {
+      "css": "article.sheet h1"
+     },
+     "contains": [
+      "5.2",
+      "€211,500"
+     ],
+     "as": "title"
+    },
+    {
+     "wait": 2200
+    },
+    {
+     "scroll": {
+      "text": "Web check 14 Nov: ask first"
+     },
+     "block": 0.5,
+     "ms": 1500,
+     "mark": "row",
+     "closest": "tr"
+    },
+    {
+     "mark": "note",
+     "box": {
+      "text": "Web check 14 Nov: ask first"
+     },
+     "closest": "div, p, td"
+    },
+    {
+     "wait": 2600
+    },
+    {
+     "click": {
+      "role": "button",
+      "name": "Suomi"
+     },
+     "ms": 900,
+     "mark": "fi"
+    },
+    {
+     "wait_gone": {
+      "any": [
+       {
+        "css": "article.sheet .skeleton"
+       },
+       {
+        "css": "article.sheet[aria-busy='true']"
+       }
+      ]
+     },
+     "timeout": 240000
+    },
+    {
+     "wait": 500
+    },
+    {
+     "scroll": {
+      "css": "article.sheet h1"
+     },
+     "block": 0.3,
+     "ms": 1200,
+     "mark": "title_fi"
+    },
+    {
+     "expect": {
+      "css": "article.sheet h1"
+     },
+     "contains": [
+      "5,2",
+      "211 500"
+     ],
+     "as": "title_fi"
+    },
+    {
+     "wait": 3000
+    }
+   ]
+  },
+  {
+   "id": "source",
+   "scene": "sources",
+   "what": "Click the source tag under the chart; the drawer shows page 14 and the quoted registry row, and how many values Gemini read.",
+   "url": "#/county/21",
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": "button.chip",
+        "has_text": "p. 14"
+       }
+      ]
+     },
+     "timeout": 30000
+    },
+    {
+     "scroll": {
+      "css": "button.chip",
+      "has_text": "p. 14"
+     },
+     "block": 0.45,
+     "ms": 100
+    },
+    {
+     "wait": 800
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "chipzone",
+     "box": {
+      "css": "button.chip",
+      "has_text": "p. 14"
+     }
+    },
+    {
+     "click": {
+      "css": "button.chip",
+      "has_text": "p. 14"
+     },
+     "at": [
+      0.25,
+      0.5
+     ],
+     "ms": 1000,
+     "mark": "chip"
+    },
+    {
+     "wait_for": {
+      "css": "[role='dialog']"
+     },
+     "mark": "drawer"
+    },
+    {
+     "wait": 700
+    },
+    {
+     "move": {
+      "any": [
+       {
+        "css": "[role='dialog'] .focus blockquote"
+       },
+       {
+        "text": "Lapin hyvinvointialue | 131"
+       }
+      ]
+     },
+     "ms": 900,
+     "mark": "focus",
+     "box": {
+      "css": "[role='dialog'] .focus"
+     }
+    },
+    {
+     "mark": "quote",
+     "box": {
+      "text": "Lapin hyvinvointialue | 131"
+     },
+     "closest": "blockquote, div"
+    },
+    {
+     "expect": {
+      "css": "[role='dialog']"
+     },
+     "contains": [
+      "131 | 710 | 18.5",
+      "966 values"
+     ],
+     "as": "drawer"
+    },
+    {
+     "wait": 2000
+    },
+    {
+     "move": {
+      "text": "read 966 values"
+     },
+     "ms": 800,
+     "mark": "read",
+     "closest": "p"
+    },
+    {
+     "wait": 3500
+    }
+   ]
+  }
+ ]
+}
