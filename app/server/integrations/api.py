@@ -421,6 +421,32 @@ def verify_latest(area_id: str | None = None, stored: bool = False):
     return {"area_id": area_id or "FI", "checks": checks}
 
 
+# ----------------------------------------------------------------- MongoDB Atlas: search the quoted sentences, run history
+
+@router.get("/api/evidence/search")
+def evidence_search(q: str = "", area_id: str | None = None, limit: int = 30):
+    """Sentences the web checks quoted from public pages that match `q`. Atlas Search (Finnish and English
+    analyzers) when MongoDB Atlas answers; otherwise a word match over the stored files. `backend` says which."""
+    from . import mongo_store
+
+    return mongo_store.search(q, _area(area_id) if area_id and area_id != "FI" else None, limit)
+
+
+@router.get("/api/evidence/stats")
+def evidence_stats():
+    from . import mongo_store
+
+    return mongo_store.stats()
+
+
+@router.get("/api/verify/history")
+def verify_history(area_id: str | None = None):
+    """Live runs kept per action of one county, and how many gave each advice."""
+    from . import mongo_store
+
+    return mongo_store.history(_area(area_id) if area_id and area_id != "FI" else None)
+
+
 # ----------------------------------------------------------------- county scout
 
 class ScoutBody(BaseModel):

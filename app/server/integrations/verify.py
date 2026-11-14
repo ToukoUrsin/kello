@@ -707,6 +707,12 @@ def check_measure(iv: dict, area_id: str | None = None, on_event=None, budget_s:
     res = present(res)
     for k in ("previous", "live_candidate", "stability"):
         res.pop(k, None)
+    try:  # every live run is kept in MongoDB Atlas when it is configured, also the ones that change nothing on screen
+        from . import mongo_store
+
+        mongo_store.log_run(res)
+    except Exception:  # noqa: BLE001
+        pass
     if old:
         old = present(old)
         # On the public site one visitor's run must not change what every other screen and visitor sees:

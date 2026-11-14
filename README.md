@@ -17,7 +17,7 @@ Create `.env` in the repository root with the keys below, then run:
 app/run.sh --build
 ```
 
-Set `JUNCTION_OXYLABS_API_KEY`, `GEMINI_API_KEY`, and `ANTHROPIC_API_KEY`; set `ANTHROPIC_BASE_URL` only when using a gateway.
+Set `JUNCTION_OXYLABS_API_KEY`, `GEMINI_API_KEY`, and `ANTHROPIC_API_KEY`; set `ANTHROPIC_BASE_URL` only when using a gateway. Optional: `MONGODB_URI` (MongoDB Atlas) for the search over quoted sentences and the run history; `python -m integrations.mongo_store seed` from `app/server` loads the stored checks.
 
 ## What it shows
 
@@ -99,6 +99,24 @@ PDFs, a Shiny app and dashboards. Gemini (`gemini-4-carbon`) read them into 1,62
 and the quoted text it was read from (`data/processed/gemini_extracted.jsonl`). These rows are what the map leads
 with. In the app, "Read a report" does the same for any URL or uploaded file. Code: `app/server/integrations/gemini_reader.py`.
 
+**MongoDB Atlas — the quoted sentences, searchable, and every live run kept.** The web checks quote 362 sentences
+word for word from public pages, across 103 checks in 23 counties. Atlas holds them in three collections
+(database `kello`): `checks` (the stored answer per action and county), `quotes` (one document per quoted
+sentence, with the county, the action and what the page was read for) and `runs` (every live check a visitor
+starts; on the public site the answer on screen is pinned, so without this a visitor's run would leave no trace).
+
+- **Atlas Search** over `quotes` with the Finnish and English analyzers (`lucene.finnish`, `lucene.english`):
+  in "Sources & method", "Search what the hospitals' own pages say" answers questions such as "which counties'
+  pages say anything about stereotactic radiotherapy?". Finnish inflects heavily: *stereotaktinen* finds
+  *stereotaktisilla*, which a plain word match does not.
+- **Aggregation** over `runs`: `GET /api/verify/history?area_id=21` gives, per action, how many live runs are
+  kept and how many gave each advice.
+- **Fallback**: without `MONGODB_URI`, or when Atlas does not answer, the same sentences are searched in the
+  JSON files with a plain word match, and the page says which of the two answered.
+
+No personal data is stored: only public pages and the checks themselves. Code: `app/server/integrations/mongo_store.py`;
+routes `GET /api/evidence/search`, `/api/evidence/stats`, `/api/verify/history`.
+
 **Reproducible analyses.** `science/drive.py` drives a local analysis app from a script and
 answers its permission cards from a fixed allowlist. Each analysis is saved with its code, environment and
 execution log under `science/out/` and listed in the app under Sources & method.
@@ -116,7 +134,7 @@ deploy/fly.sh --secrets  # only resend the Oxylabs and Gemini keys
 The image (`Dockerfile`, `fly.toml`, `.dockerignore`) holds the API, the built web app, `data/processed`,
 `data/model`, `data/evidence`, `science/out` and the stored plans, checks, scouts and report reads. The hosted copy serves Claude-written plans from the stored pages (a budget that is not stored shows the nearest stored plan, labelled),
 the live check and the scout run on Oxylabs with Gemini as the model, and when a live run fails the stored
-result is shown with its date. Keys are Fly secrets (`JUNCTION_OXYLABS_API_KEY`, `JUNCTION_GEMINI_API_KEY`).
+result is shown with its date. Keys are Fly secrets (`JUNCTION_OXYLABS_API_KEY`, `JUNCTION_GEMINI_API_KEY`, and `MONGODB_URI` when Atlas is used).
 
 ## Layout
 

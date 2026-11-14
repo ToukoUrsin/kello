@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import EvidenceSearch from "./EvidenceSearch";
 import { api, ArchiveCopy, chipText, int, isRegistry, KIND_HELP, KIND_LABEL, Kind, one, period, publisherOf, readerName, savedCopy, SrcRef, useAsync } from "./lib";
 import { Failed, Loading } from "./App";
 
@@ -112,6 +113,7 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
             <h3>What you are looking at</h3>
             <p>Kello shows where each wellbeing services county loses lung cancer patients between diagnosis and treatment that aims to cure, and what closes that gap. The care path comes from the Finnish Cancer Registry's own county figures. The plan is Kello's: a list of actions with an owner, a cost, a first step and a measure, chosen by stated rules. Public aggregate data only; no patient-level data.</p>
           </section>
+          <EvidenceSearch scope={scope} scopeName={area.data?.area?.short_en ?? null} />
           <section>
             <h3>Three kinds of number</h3>
             <ul style={{ listStyle: "none", paddingLeft: 0 }}>

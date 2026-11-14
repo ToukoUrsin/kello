@@ -7,7 +7,7 @@
 #
 # Needs flyctl and FLY_API_TOKEN. The deployment receives OXYLABS_API_KEY and
 # GEMINI_API_KEY (JUNCTION_OXYLABS_API_KEY and JUNCTION_GEMINI_API_KEY remain
-# accepted aliases). No key is printed or written to a file.
+# accepted aliases), and MONGODB_URI when it is set. No key is printed or written to a file.
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ -z "${KELLO_LOCAL:-}" && -f "$SCRIPT_DIR/fly.local.sh" ]]; then
@@ -27,7 +27,11 @@ send_secrets() {
   local gemini="${JUNCTION_GEMINI_API_KEY:-${GEMINI_API_KEY:-}}"
   : "${oxylabs:?set OXYLABS_API_KEY or JUNCTION_OXYLABS_API_KEY}"
   : "${gemini:?set GEMINI_API_KEY or JUNCTION_GEMINI_API_KEY}"
-  fly secrets set -a "$APP" "JUNCTION_OXYLABS_API_KEY=$oxylabs" "JUNCTION_GEMINI_API_KEY=$gemini" >/dev/null
+  # Optional: MongoDB Atlas (search over the quoted sentences, every live run kept). Without it the files answer.
+  local mongo="${MONGODB_URI:-${JUNCTION_MONGODB_URI:-}}"
+  local extra=()
+  [[ -n "$mongo" ]] && extra+=("MONGODB_URI=$mongo")
+  fly secrets set -a "$APP" "JUNCTION_OXYLABS_API_KEY=$oxylabs" "JUNCTION_GEMINI_API_KEY=$gemini" ${extra[@]+"${extra[@]}"} >/dev/null
   echo "secrets staged for $APP"
 }
 

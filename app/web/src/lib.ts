@@ -238,7 +238,13 @@ export const api = {
   scoutStart: (area_id: string) => request<LiveJob<ScoutResult>>("/api/scout/start", post({ area_id })),
   liveJob: <T,>(id: string, since: number) => request<LiveJob<T>>(`/api/live/${id}?since=${since}`),
   notePlan: (isFixture: boolean) => note("plan", isFixture),
+  /** Sentences the web checks quoted from public pages; `backend` says whether MongoDB Atlas or the stored files answered. */
+  evidenceSearch: (q: string, area_id?: string | null) => request<EvidenceResult>(`/api/evidence/search?q=${encodeURIComponent(q)}${area_id ? `&area_id=${encodeURIComponent(area_id)}` : ""}`).catch(() => ({ backend: "files", query: q, hits: [], counties: [] } as EvidenceResult)),
+  evidenceStats: () => request<EvidenceStats>("/api/evidence/stats").catch(() => null),
 };
+export interface EvidenceHit { url: string; domain: string; title: string; quote: string; about: string; parts: { t: string; hit: boolean }[]; areas: { id: string; name: string }[]; actions: string[] }
+export interface EvidenceResult { backend: "mongodb_atlas" | "files"; query: string; hits: EvidenceHit[]; counties: string[] }
+export interface EvidenceStats { backend: "mongodb_atlas" | "files"; quotes: number; checks: number; counties: number; runs: number | null }
 
 /* ---------- async state hook ---------- */
 export interface Async<T> { data: T | null; error: string | null; loading: boolean; reload: () => void }

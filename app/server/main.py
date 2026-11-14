@@ -250,6 +250,25 @@ def funnel():
 
 
 @app.on_event("startup")
+def _seed_atlas():
+    """On the hosted copy, load the stored web checks into MongoDB Atlas (when MONGODB_URI is set) so the search
+    and the run history read the same checks this build ships. Local copies do not write to the shared cluster."""
+    if not os.environ.get("KELLO_HOSTED"):
+        return
+
+    def run():
+        try:
+            from integrations import mongo_store
+
+            if mongo_store.uri():
+                print(f"[atlas] {mongo_store.seed()}", flush=True)
+        except Exception as e:  # noqa: BLE001
+            print(f"[atlas] seed failed: {type(e).__name__}", flush=True)
+
+    threading.Thread(target=run, daemon=True).start()
+
+
+@app.on_event("startup")
 def _warm_memory():
     """Fill the in-memory answers in the background so the first visitor does not pay for them."""
     def run():
