@@ -183,7 +183,7 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
           {analyses.length > 0 && (
             <section>
               <h3>Reproducible analyses</h3>
-              <p>Run with Claude Science from a script. Each one keeps its figures, data, code and every permission it was given, so the result can be re-run.</p>
+              <p>Each analysis was run from a script by an AI research agent (Claude Science). Each one keeps its figures, data, code and every permission it was given, so the result can be re-run.</p>
               <ul className="sci">
                 {analyses.map((a) => (
                   <li key={a.id}><b>{a.title}</b>

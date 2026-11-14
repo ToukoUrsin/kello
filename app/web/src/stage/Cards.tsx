@@ -51,6 +51,9 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
   part?: "head" | "rows";
 }) {
   const per = unit === "deaths" ? "deaths avoided a year" : "patients a year";
+  /** "about 1 patient a year", "about 1.7 patients a year". */
+  const pa = (x: number) => `${dec(x)} ${unit !== "deaths" && dec(x) === "1" ? "patient a year" : per}`;
+  const none = !narrow && rows.every((r) => !r.on);   // before the first action lands there is no sum to show
   // The total is the sum of the rows on screen, never a number on its way somewhere: the headline shows the same value.
   return (
     <div className={"st-ledger" + (part ? ` ${part}` : "")}>
@@ -58,15 +61,15 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
         <>
           <div className="st-total narrowed" key="n"><b className="num">{eurx(narrow.low)} to {eurx(narrow.high)}</b><span>a year</span></div>
           <ul className="st-narrow">
-            {narrow.fresh.n > 0 && <li><i className="none" aria-hidden="true" /><span><b>{narrow.fresh.n} with no public sign of it:</b> <span className="num">{eurx(narrow.fresh.eur)}, about {dec(narrow.fresh.extra)} {per}</span></span></li>}
-            <li><i className="partly" aria-hidden="true" /><span><b>{narrow.part.n} partly in place:</b> <span className="num">up to {eurx(narrow.part.eur)} for what is missing, up to {dec(narrow.part.extra)} {per}</span></span></li>
-            {narrow.open.n > 0 && <li><i aria-hidden="true" /><span><b>{narrow.open.n} not checked yet:</b> <span className="num">{eurx(narrow.open.eur)}, about {dec(narrow.open.extra)} {per}</span></span></li>}
+            {narrow.fresh.n > 0 && <li><i className="none" aria-hidden="true" /><span><b>{narrow.fresh.n} with no public sign of it:</b> <span className="num">{eurx(narrow.fresh.eur)}, about {pa(narrow.fresh.extra)}</span></span></li>}
+            <li><i className="partly" aria-hidden="true" /><span><b>{narrow.part.n} partly in place:</b> <span className="num">up to {eurx(narrow.part.eur)} for what is missing, up to {pa(narrow.part.extra)}</span></span></li>
+            {narrow.open.n > 0 && <li><i aria-hidden="true" /><span><b>{narrow.open.n} not checked yet:</b> <span className="num">{eurx(narrow.open.eur)}, about {pa(narrow.open.extra)}</span></span></li>}
           </ul>
         </>
       ) : (
-        <div className="st-total"><b className="num">{eurx(Math.round(total))}</b><span>a year</span></div>
+        <div className="st-total" style={none ? { visibility: "hidden" } : undefined}><b className="num">{eurx(Math.round(total))}</b><span>a year</span></div>
       )}
-      {part !== "rows" && <p className={"st-reach" + (rangeOn ? " on" : "")}>
+      {part !== "rows" && <p className={"st-reach" + (rangeOn ? " on" : "")} style={none ? { visibility: "hidden" } : undefined}>
         <span className="num">{narrow ? `If all ${narrow.n} are needed in full: ` : ""}{unit === "deaths" ? `about ${one(reached)} deaths avoided a year` : of != null ? `${narrow ? "reach" : "reaches"} about ${int(Math.round(reached))} of ${of} a year` : `about ${int(Math.round(reached))} more treated to cure a year`}</span>
         <span className="st-range num">range {int(Math.round(lo) || 0)} to {int(Math.round(hi) || 0)}</span>
         <KindTag kind="estimated" title="Modelled from the measured gap and each action's effect. The range starts at 0: no effect is possible." />
@@ -80,7 +83,7 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
               <span className="num st-cost">{p.count != null ? eur(p.eur) : eurx(p.eur)}</span>
               {!compact && (
                 <span className="st-row2">
-                  {!(checkOn && check?.advice) && effectOn === 0 && on && <span className="st-per num">{p.extra < 0.05 ? "finds the cause, moves no patient by itself" : `about ${dec(p.extra)} ${per}`}</span>}
+                  {!(checkOn && check?.advice) && effectOn === 0 && on && <span className="st-per num">{p.extra < 0.05 ? "finds the cause, moves no patient by itself" : `about ${pa(p.extra)}`}</span>}
                   {check?.advice && <em className={"st-advice" + (checkOn ? " on" : "")}>{check.advice}</em>}
                   {checkOn && missOn && check?.missing && <span className="st-miss" title={`Missing: ${check.missing}`}>Missing: {check.missing}</span>}
                   {effect && (

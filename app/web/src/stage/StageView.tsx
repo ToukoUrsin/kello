@@ -571,7 +571,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   const liveNote = liveState === "running" ? `Checking live, ${liveSec} s`
     : liveState === "done" ? "Live answer, checked just now."
     : liveState === "failed" ? `The live check failed${featured?.v ? `. Stored answer of ${storedAt} shown` : ""}.`
-    : liveState === "stored" ? (!lr ? `No answer in 20 s${featured?.v ? `. Stored answer of ${storedAt} shown` : ""}.` : lr.live_slow_s != null ? `Stored answer of ${storedAt}: the live check took longer than ${lr.live_slow_s} s.` : lr.live_outcome === "kept" ? `Stored answer of ${storedAt}: this run found less.` : `Stored answer of ${storedAt}: the live check did not finish.`)
+    : liveState === "stored" ? (!lr ? `No answer in 20 s${featured?.v ? `. Stored answer of ${storedAt} shown` : ""}.` : lr.live_slow_s != null ? `Stored answer of ${storedAt}: the live check took longer than ${lr.live_slow_s} s.` : lr.live_outcome === "kept" ? (lr.live_pinned ? `Live run done. The plan keeps the stored answer of ${storedAt}.` : `Stored answer of ${storedAt}: this run found less.`) : `Stored answer of ${storedAt}: the live check did not finish.`)
     : null;
   const liveSteps = liveState === "running" ? live.steps.slice(-5) : [];
 

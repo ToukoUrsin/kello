@@ -709,11 +709,16 @@ def check_measure(iv: dict, area_id: str | None = None, on_event=None, budget_s:
         res.pop(k, None)
     if old:
         old = present(old)
-        if local_evidence(res) < local_evidence(old):
-            for k in ("previous", "live_candidate", "stability", "live_trace"):
+        # On the public site one visitor's run must not change what every other screen and visitor sees:
+        # the stored answer stays, and this run is shown next to it.
+        pinned = bool(os.environ.get("KELLO_VERIFY_PIN"))
+        if pinned or local_evidence(res) < local_evidence(old):
+            for k in ("previous", "live_candidate", "stability", "live_trace", "live_pinned"):
                 old.pop(k, None)
             old.update(live_outcome="kept", live_candidate=_view(res), live_trace=res.get("trace") or [],
                        live_seconds=res.get("seconds"))
+            if pinned and local_evidence(res) >= local_evidence(old):
+                old["live_pinned"] = True
             return old
         res["previous"] = _view(old)
         res["live_outcome"] = "replaced"
@@ -737,7 +742,7 @@ def latest(area_id: str | None = None) -> list[dict]:
     for f in STORE.glob(f"*__{want}.json"):
         try:
             r = present(json.loads(f.read_text(encoding="utf-8")))
-            for k in ("previous", "live_candidate", "stability", "live_trace", "live_outcome"):
+            for k in ("previous", "live_candidate", "stability", "live_trace", "live_outcome", "live_pinned"):
                 r.pop(k, None)  # the stored answer as it stands; what a live run changed is shown only after that run
             out.append(r)
         except (OSError, ValueError):

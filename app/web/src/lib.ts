@@ -89,6 +89,7 @@ export interface VerifyResult { question?: string; verdict: string; summary_en?:
   plan_effect?: "exclude" | "flag" | "keep" | null; plan_effect_reason_en?: string | null; advice?: "take_out" | "narrow" | "check_first" | "keep" | null;
   in_use_label_en?: string | null; verdict_en?: string | null; effect_label_en?: string | null; supported_en?: string | null; not_supported_en?: string | null; missing_en?: string | null; missing_short_en?: string | null;
   searched_en?: string | null; queries?: string[] | null; endpoints_used?: EndpointUse[] | null; model?: string | null; models?: string[] | null; from_cache?: boolean; live_error?: string | null;
+  live_pinned?: boolean;
   previous?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string; model?: string; evidence_n?: number } | null; stability?: string; live_candidate?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string; model?: string; evidence_n?: number } | null;
   live_outcome?: "first" | "replaced" | "kept" | "failed" | null; live_slow_s?: number | null; live_error_en?: string | null; live_tried_at?: string | null; evidence_n?: number | null; live_trace?: TraceStep[] | null;
   trace?: TraceStep[] | null; rounds?: number | null; searches?: number | null; pages_read?: unknown[] | null; seconds?: number | null }

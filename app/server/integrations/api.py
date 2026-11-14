@@ -33,6 +33,8 @@ a crash with nothing stored.
 
 from __future__ import annotations
 
+import os
+
 import asyncio
 import hashlib
 import json
@@ -368,7 +370,9 @@ def _verify_job(intervention_id: str, area_id: str | None) -> dict:
             return res
         seed = verify.present(json.loads(_SEED[verify._file(intervention_id, area_)].decode("utf-8")))
         if verify.local_evidence(res) >= verify.local_evidence(seed):
-            _DEMO_FRESH.pop(key, None)
+            f = _DEMO_FRESH.pop(key, None)
+            if f is not None and os.environ.get("KELLO_VERIFY_PIN"):
+                f.write_bytes(_SEED[f])               # this viewer sees the live answer; the shared stored one stays
             return res
         f = _DEMO_FRESH.pop(key, None)                # found less than the stored check: the stored one stays
         if f is not None:

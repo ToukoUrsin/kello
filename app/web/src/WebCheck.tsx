@@ -63,6 +63,10 @@ export function LiveOutcome({ v, retry }: { v: VerifyResult; retry?: () => void 
       </div>
     );
   }
+  if (o === "kept" && v.live_pinned) {
+    const now = gistOf(v.live_candidate), was = gistOf(v);
+    return <p className="small liveout" role="status">{now === was ? <>This run gave the same answer as the stored check of {dayShort(v.checked_at)}: <b>{was}</b>.</> : <>This run read it as <b>{now}</b>. The plan keeps the stored check of {dayShort(v.checked_at)} (<b>{was}</b>) so every screen shows one answer; the hospital settles it in week 1.</>}</p>;
+  }
   if (o === "kept") return <p className="small liveout" role="status">This run found less than the stored check of {dayShort(v.checked_at)}, so the answer stays: <b>{ADVICE[v.advice ?? ""] ?? gistOf(v)}</b>.</p>;
   if (o === "failed") return <p className="small liveout readerr" role="status">The live run did not finish ({v.live_error_en ?? "the search or the model failed"}), so this is the stored check of {dayShort(v.checked_at)}.{retry && <> <button className="btn sm" onClick={retry}>Try again</button></>}</p>;
   return null;

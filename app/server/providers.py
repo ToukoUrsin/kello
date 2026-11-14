@@ -1464,7 +1464,7 @@ def _shape_for_ui(res: dict, scope: str, budget_eur: float) -> dict:
     if left <= 0:
         left_en, left_fi = "the whole budget is used", "koko budjetti käytetään"
     elif sat:
-        left_en = f"{eur_en(left)} left: nothing else pays off at these assumptions"
+        left_en = f"{eur_en(left)} not needed: no other action adds patients"
         left_fi = f"{eur_fi(left)} jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää"
     else:
         left_en = f"{eur_en(left)} left: less than the next measure costs"

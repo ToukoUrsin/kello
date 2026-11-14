@@ -15,6 +15,8 @@ export interface DotM { id: string; county: string; idx: number; x: number; y: n
 export interface PlaceM { id: string; name: string; county: string; x: number; y: number; r: number; pop: number; km: number; rank: number }
 export interface PinM { id: string; n: number; short: string; name: string; eur: number; extra: number; lo: number; hi: number; kind: string; group: "seat" | "hospital" | "line" | "county"; x: number; y: number; area?: string; count?: number }
 export interface PageM { url: string; domain: string; title: string; quotes: string[]; about?: string }
+/** The advice of a web check in words a reader new to the page understands. */
+const RUN_ADVICE: Record<string, string> = { take_out: "Already runs: taken out", narrow: "Pay for the missing part", check_first: "Ask the hospital first", keep: "Stays in the plan" };
 export interface CheckM { pin: string; v: VerifyResult | null; label: string | null; tone: string; advice: string | null; adviceCode: string | null; missing?: string | null; pages: PageM[]; queries: string[]; searches: number; featured: boolean; sub?: string; title?: string }
 
 export function makeLayout(W: number, H: number): Layout {
@@ -158,7 +160,7 @@ const TONE: Record<string, string> = { yes: "yes", partly: "partly", planned: "p
 export function checkOf(pin: string, v: VerifyResult | null | undefined, featured: boolean): CheckM {
   if (!v) return { pin, v: null, label: null, tone: "none", advice: null, adviceCode: null, pages: [], queries: [], searches: 0, featured };
   const queries = v.queries?.length ? v.queries : (v.trace ?? []).filter((t) => /search/i.test(t.tool ?? "") && typeof t.input === "string").map((t) => t.input as string);
-  return { pin, v, label: v.in_use_label_en ?? IN_USE_SHORT[v.in_use_here ?? ""] ?? null, tone: TONE[v.in_use_here ?? ""] ?? "none", advice: adviceWord(v), adviceCode: v.advice ?? null, missing: v.in_use_here === "partly" || v.in_use_here === "planned" ? v.missing_short_en ?? null : null,
+  return { pin, v, label: v.in_use_label_en ?? IN_USE_SHORT[v.in_use_here ?? ""] ?? null, tone: TONE[v.in_use_here ?? ""] ?? "none", advice: RUN_ADVICE[v.advice ?? ""] ?? adviceWord(v), adviceCode: v.advice ?? null, missing: v.in_use_here === "partly" || v.in_use_here === "planned" ? v.missing_short_en ?? null : null,
     pages: pagesOf(v), queries, searches: v.searches ?? queries.length, featured };
 }
 
