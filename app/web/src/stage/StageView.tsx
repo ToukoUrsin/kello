@@ -356,6 +356,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
       : <>{n} actions{isFI ? ` in ${pins.length} counties` : ""}, {eurx(sumEur)} a year, reach about {whole(planExtra)} of the {myDots}.</>;
   } else if (a === 3) head = !found.length ? <>No stored web check for this plan.</> : reached(v, 3, T.check.rest0 + others.length * restEvery) ? <>Each action checked on the web: {found.join(", ")}.</> : <>Is each action already in place? Reading the public pages.</>;
   else if (a === 4) { const e = featIv ? effectText(featIv.effect) : null; const p = pins.find((x) => x.id === evId); head = featIv && e ? <>{isFI ? shortName(featIv.id, featIv.name_en) : p?.short}: {e.value}, range {e.range}, {featIv.effect.kind === "measured" ? "measured in" : `an ${featIv.effect.kind ?? "assumption"} from`} {featIv.evidence.length} studies.</> : <>The studies behind the plan.</>; }
+  else if (deaths && tot) head = <>{myDots === 0 ? "At or above the national share: the" : "The"} plan avoids about {one(tot.shown.deaths)} deaths a year.</>;
   else head = sim.data && yearIdx < years.length ? <>The plan, year by year: {int(sim.data.runs_total ?? 0)} simulated runs.</> : sim.data ? <>By {years[years.length - 1]}, about {whole(sim.data.reached.median)} more a year treated to cure, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</> : <>The plan, year by year.</>;
 
   /* ---------- the activity line ---------- */
@@ -452,7 +453,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
 
   const fatal = geo.error ?? ov.error;
   const ready = !!(l && P && ov.data && !stage.loading);
-  const cls = `st a${a}${l?.phone ? " phone" : ""}${explore ? " explore" : ""}${run.playing ? " playing" : ""}${zoomed ? " zoomed" : ""}${reduced ? " reduced" : ""}`;
+  const cls = `st a${a}${l?.phone ? " phone" : l && l.H < 700 ? " short" : ""}${explore ? " explore" : ""}${run.playing ? " playing" : ""}${zoomed ? " zoomed" : ""}${reduced ? " reduced" : ""}`;
   const hot = tip ? counties.find((c) => c.id === tip.id) : null;
   const lr = liveResult, storedAt = when(lr?.checked_at ?? featured?.v?.checked_at);
   const liveNote = liveState === "running" ? `Checking live, ${liveSec} s`
@@ -475,7 +476,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
               label={`Map of Finland by wellbeing services county. ${total} people a year miss treatment that aims to cure${!isFI && myDots ? `, ${myDots} of them in ${name}` : ""}.`} />
             {links.length > 0 && <svg className="st-links" width={l.W} height={l.H} aria-hidden="true">{links.map((d, i) => <path key={i} d={d} pathLength={1} />)}</svg>}
             <div className="st-over">
-              {mode === "work" && hospitals.map((h) => (
+              {mode === "work" && hospitals.filter((h) => isFI || !zoomed || h.id === hosp?.id).map((h) => (
                 <Pinned key={h.id} x={h.x} y={h.y} className={"st-hosp" + ((isFI ? a === 1 : h.id === hosp?.id) ? " lead" : "") + (reached(v, 1, T.where.places) ? " on" : "")}>
                   <i title={h.name_en} /><span>{h.city}{!isFI && h.id === hosp?.id ? " University Hospital" : ""}</span>
                 </Pinned>
@@ -604,9 +605,9 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
           <div className="st-card">
             {sim.data ? (
               <>
-                <p className="st-year"><b className="num">{yearIdx > 0 ? years[yearIdx - 1] : sim.data.baseline_period?.replace("-", "–") ?? sim.data.years[0]}</b><span className="num">{yearIdx > 0 ? `${treatedN} of ${reachedIds.size} reached are treated to cure` : "measured, before the plan"}</span></p>
+                <p className="st-year"><b className="num">{yearIdx > 0 ? years[yearIdx - 1] : sim.data.baseline_period?.replace("-", "–") ?? sim.data.years[0]}</b><span className="num">{yearIdx === 0 ? "measured, before the plan" : reachedIds.size ? `${treatedN} of ${reachedIds.size} reached are treated to cure` : "share treated to cure, with and without the plan"}</span></p>
                 <SimChart sim={sim.data} nat={!isFI} upto={yearIdx} w={(l?.colW ?? 380) - (l?.phone ? 0 : 34)} />
-                <p className="st-fine on"><i className="st-key reached" /> reached by the plan <i className="st-key treated" /> treated to cure <i className="st-key lost" /> still missed</p>
+                {reachedIds.size > 0 && <p className="st-fine on"><i className="st-key reached" /> reached by the plan <i className="st-key treated" /> treated to cure <i className="st-key lost" /> still missed</p>}
               </>
             ) : <p className="st-quiet">{sim.loading ? "Running the simulation" : "The simulation is not available right now."}</p>}
           </div>

@@ -13,6 +13,9 @@
 .st-area.pick { cursor: pointer; }
 .st-area.pick:hover { stroke: var(--ink); }
 
+/* Zoomed in, the rest of the country runs on under the two columns: fade it out there so the words stay readable. */
+.st.zoomed:not(.phone) .st-svg { -webkit-mask-image: linear-gradient(90deg, transparent calc(var(--col) * 0.5), #000 calc(var(--col) + var(--pad) + 24px), #000 calc(100% - var(--col) - var(--pad) - 24px), transparent calc(100% - var(--col) * 0.5)); mask-image: linear-gradient(90deg, transparent calc(var(--col) * 0.5), #000 calc(var(--col) + var(--pad) + 24px), #000 calc(100% - var(--col) - var(--pad) - 24px), transparent calc(100% - var(--col) * 0.5)); }
+
 /* where people live */
 .st-places circle { fill: var(--ink-2); opacity: 0; transition: opacity 420ms ease-out, fill 300ms ease-out; }
 .st-places.on circle { opacity: 0.2; }
@@ -336,6 +339,15 @@
 .st.phone .st-right { padding-bottom: 12px; }
 .st.phone .st-nav { justify-content: flex-start; order: 2; }
 .st.phone .st-h { font-size: 22px; margin-top: -4px; }
+/* a short laptop screen: pins on one line, the verdict as its mark; the words stay on the pin being checked and in the plan card */
+.st.short .st-stack:not(.fi) .st-pin { align-items: center; padding: 3px 8px 3px 3px; }
+.st.short .st-stack:not(.fi) .st-pin-t { flex-direction: row; align-items: center; gap: 6px; }
+.st.short .st-stack:not(.fi) .st-pin em:not(.st-chip) { display: none; }
+.st.short .st-stack:not(.fi) .st-chip { font-size: 0; gap: 0; }
+.st.short .st-stack:not(.fi) { align-items: flex-start; }
+.st.short .st-stack.left:not(.fi) { align-items: flex-end; }
+.st.short .st-tools button { font-size: 12px; padding: 0 3px; }
+.st.phone .st-tools button { font-size: 12px; padding: 0 3px; }
 .st.phone .st-pin .st-pin-t { display: none; }
 .st.phone .st-pin { padding: 2px; border-radius: 50%; }
 .st.phone .st-stack { flex-direction: row; }
