@@ -440,6 +440,18 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     setSites((s) => [...s, { lon: +ll[0].toFixed(4), lat: +ll[1].toFixed(4), kind: siteKind }]);
     setSiteKind(null);
   };
+  const runFor = (id: string, play = false) => { window.location.hash = `#/run/${id}${play ? "?play=1" : ""}`; };
+  // The counties with the most people missing, as one-tap runs: the same steps, a different county, a different plan.
+  const moreRuns = [...counties].filter((c) => c.id !== scope && c.dots > 0).sort((x, y) => y.dots - x.dots || x.name.localeCompare(y.name)).slice(0, 4);
+  const otherRuns = (label: string) => moreRuns.length > 0 && (
+    <div className="st-others on">
+      <span>{label}</span>
+      {moreRuns.map((c) => <button key={c.id} className="btn sm" onClick={() => runFor(c.id, true)}>{c.name} <small className="num">{c.dots}</small></button>)}
+      {!isFI && <button className="btn sm" onClick={() => runFor("FI", true)}>Finland <small className="num">{total}</small></button>}
+    </div>
+  );
+  const B3: [string, string][] = [["detection", "Found late"], ["referral", "Referred slowly"], ["diagnosis", "Treated slowly"]];
+  const B3V: Record<string, string> = { not_behind: "no", here: "yes, here", possibly_here: "possibly", cannot_tell: "cannot tell: not published by county" };
   const pickCounty = a === 0 && !explore ? (id: string) => { window.location.hash = `#/run/${id}`; } : undefined;
 
   /* ---------- pins grouped by where they stand ---------- */
@@ -511,7 +523,14 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
       </div>
 
       <section className="st-left" aria-live="polite">
-        <p className="st-kicker">{explore ? "Explore" : <><span className="num">{a + 1}</span> {ACTS[a].label}</>} <span>{name}</span></p>
+        <p className="st-kicker">{explore ? "Explore" : <><span className="num">{a + 1}</span> {ACTS[a].label}</>}
+          <label className="st-pick">Run for
+            <select value={scope} onChange={(e) => runFor(e.target.value)} aria-label="Choose the county to run">
+              <option value="FI">Finland</option>
+              {[...areas].sort((x, y) => (x.short_en ?? "").localeCompare(y.short_en ?? "")).map((x) => <option key={x.id} value={x.id}>{x.short_en}</option>)}
+            </select>
+          </label>
+        </p>
         {head && <h1 className={"st-h" + (headOn ? " on" : "")} key={`${a}`}>{head}</h1>}
 
         {!explore && a === 0 && ready && (
@@ -530,6 +549,8 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
             )}
             <p className={"st-fine" + (headOn ? " on" : "")}><i className="st-key lost" /> one person a year short of the national share. {stage.data?.notes?.patients_en ?? ""}</p>
             {!isFI && me && me.pct != null && myDots === 0 && <p className="st-fine on">At or above the national share.</p>}
+            <p className="st-fine on"><b>Why lung cancer.</b> It is one of the cancers in Goal 3 of the national cancer strategy, and the Cancer Registry publishes treatment by county for it.</p>
+            {otherRuns("Every county gets its own run. Tap one on the map, or:")}
           </div>
         )}
 
@@ -571,6 +592,19 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
           <div className={"st-ask" + (askOn ? " on" : "")}>
             {ask && pilot ? <p>Six months with {name}{hosp ? ` and ${hosp.city}` : ""}: <span className="num">{ask}</span>.</p> : <p>{isFI ? "The plan county by county, with who does what." : `The plan for ${name}, with who does what.`}</p>}
             <button className="btn primary" onClick={() => open("plan")}>Open the plan</button>
+            {otherRuns("The same run, another county, a different plan:")}
+          </div>
+        )}
+
+        {!explore && a === 1 && !isFI && steps.length > 0 && (
+          <div className={"st-three" + (reached(v, 1, T.where.step[2]) ? " on" : "")}>
+            <p>The three bottlenecks the challenge names, checked for {name}:</p>
+            <ul>
+              {B3.map(([id, label]) => { const st = steps.find((x) => x.id === id); return st ? <li key={id} className={st.verdict ?? ""}><span>{label}?</span> <b>{B3V[st.verdict ?? ""] ?? st.verdict_en}</b></li> : null; })}
+            </ul>
+            {steps.some((x) => x.id === "treatment" && x.verdict === "here") && !B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "here") && (B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "possibly_here")
+              ? <p>The clear gap is a fourth step: who is given treatment that aims to cure. The steps marked possibly may add to it.</p>
+              : <p>So the gap is a fourth step: who is given treatment that aims to cure.</p>)}
           </div>
         )}
       </section>

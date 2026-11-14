@@ -235,7 +235,7 @@ def budget_curve(scope: str, objective: str | None = None, exclude: list[str] | 
             cum += float(c.get("eur") or 0)
             sums.append(cum)
         hi = max(flat * 1.4, 100_000.0)
-        grid = {0.0, hi} | {round(hi * i / 12, -3) for i in range(1, 12)}
+        grid = {0.0, hi, flat} | {round(hi * i / 12, -3) for i in range(1, 12)}   # the flat point itself is always on the curve
         county = len(sums) <= 12
         if county:                                # a county: also every point where one more action fits
             grid |= set(sums) | {max(0.0, s - 1) for s in sums}

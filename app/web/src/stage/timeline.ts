@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 /** The six acts of one run. Lengths in milliseconds; together about a minute. */
 export const ACTS = [
   { id: "gap", label: "The gap", ms: 8000 },
-  { id: "where", label: "Where they are lost", ms: 8000 },
+  { id: "where", label: "Where they are lost", ms: 10000 },
   { id: "plan", label: "The plan", ms: 10000 },
   { id: "check", label: "The check", ms: 15000 },
   { id: "evidence", label: "The evidence", ms: 8000 },

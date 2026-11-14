@@ -369,3 +369,22 @@
   .st-dot { transform: none; }
   .st-pin { translate: 0 0; }
 }
+
+/* county picker, one-tap runs for other counties, the three bottlenecks */
+.st-kicker .st-pick { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; letter-spacing: 0; text-transform: none; font-weight: 550; color: var(--ink-3); }
+.st-pick select { height: 28px; padding: 0 26px 0 8px; font: inherit; font-size: 13px; font-weight: 600; color: var(--ink); background-color: var(--surface); border: 1px solid var(--line-strong); border-radius: 6px; cursor: pointer; }
+.st-pick select:hover { border-color: var(--accent, #104281); }
+.st-others { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; }
+.st-others > span { flex: 0 0 100%; font-size: 12px; color: var(--ink-3); }
+.st-others .btn small { margin-left: 4px; color: var(--ink-3); font-weight: 500; }
+.st-three { display: flex; flex-direction: column; gap: 8px; max-width: 46ch; opacity: 0; transform: translateY(6px); transition: opacity 320ms ease-out, transform 420ms var(--ease); }
+.st-three.on { opacity: 1; transform: none; }
+.st-three p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--ink-2, var(--ink-3)); }
+.st-three p:last-child { color: var(--ink); font-weight: 600; font-size: 14px; }
+.st-three ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.st-three li { display: flex; gap: 8px; font-size: 14px; line-height: 1.4; }
+.st-three li span { flex: 0 0 9.5em; color: var(--ink-3); }
+.st-three li b { font-weight: 600; }
+.st.phone .st-others > span { flex-basis: 100%; }
+
+@media (max-width: 640px) { .st-kicker { flex-wrap: nowrap; } .st-kicker .st-pick { font-size: 0; gap: 0; } .st-pick select { max-width: 150px; } }
