@@ -65,7 +65,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   const [explore, setExplore] = useState(init.explore);
   const [tool, setTool] = useState<Tool>(init.tool);
   const [budget, setBudget] = useState<number | null>(null);
-  const [siteKind, setSiteKind] = useState<SiteKind | null>(null);
+  const [siteKind, setSiteKind] = useState<SiteKind | null>(init.explore && init.tool === "site" ? "radiotherapy" : null);
   const [sites, setSites] = useState<{ lat: number; lon: number; kind: SiteKind }[]>([]);
   const [siteCost, setSiteCost] = useState<number | null>(null);
   const [level, setLevel] = useState<null | "national" | "best">(null);
@@ -585,7 +585,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
         </nav>
         {explore ? (
           <div className="st-card">
-            <Explore tool={tool} setTool={(t) => { setTool(t); setSiteKind(null); }} isFI={isFI} name={name} w={(l?.colW ?? 380) - (l?.phone ? 0 : 34)} unit={deaths ? "Deaths avoided a year" : "Patients reached a year"}
+            <Explore tool={tool} setTool={(t) => { setTool(t); setSiteKind(t === "site" && !sites.length ? "radiotherapy" : null); }} isFI={isFI} name={name} w={(l?.colW ?? 380) - (l?.phone ? 0 : 34)} unit={deaths ? "Deaths avoided a year" : "Patients reached a year"}
               curve={curve.data} curveLoading={curve.loading} budget={budget} setBudget={setBudget} numbers={numbers} myDots={myDots}
               pins={pins} exclude={exclude} toggle={tapPin} total={opt.data?.totals.eur ?? null} extra={tot ? { median: tot.shown.extra, lo: tot.extra_curative_patients_per_year.lo, hi: tot.extra_curative_patients_per_year.hi } : null} optLoading={opt.loading}
               siteKind={siteKind} setSiteKind={setSiteKind} scenario={sc} scenarioLoading={scenario.loading && sites.length > 0} nSites={sites.length} removeSite={() => setSites((s) => s.slice(0, -1))} siteCost={siteCost} setSiteCost={setSiteCost} hasStage={!!stage.data} focus={focus}
