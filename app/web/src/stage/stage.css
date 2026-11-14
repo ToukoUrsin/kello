@@ -433,7 +433,8 @@
 .st-three { display: flex; flex-direction: column; gap: 8px; max-width: 46ch; opacity: 0; transform: translateY(6px); transition: opacity 320ms ease-out, transform 420ms var(--ease); }
 .st-three.on { opacity: 1; transform: none; }
 .st-three p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--ink-2, var(--ink-3)); }
-.st-three p:last-child { color: var(--ink); font-weight: 600; font-size: 14px; }
+.st-three p.st-so { color: var(--ink); font-weight: 600; font-size: 14px; }
+.st-three p.st-also .st-fig { display: inline; margin: 0; font-size: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .st-three ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .st-three li { display: flex; gap: 8px; font-size: 14px; line-height: 1.4; }
 .st-three li span { flex: 0 0 9.5em; color: var(--ink-3); }
@@ -451,3 +452,6 @@
 
 .st-proof { max-width: none; color: var(--ink-2); }
 .st-proof b { color: var(--ink); font-weight: 600; }
+
+.st-domain em { font-style: normal; margin-left: 8px; color: var(--ink-3); }
+.st-askline { max-width: 46ch; }

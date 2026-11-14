@@ -321,6 +321,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   /* ---------- the check ---------- */
   const shownCheck = (sel && a >= 3 ? pinChecks.get(sel) : null) ?? featured;
   const isFeat = shownCheck === featured;
+  const shownPin = shownCheck ? pins.find((p) => p.id === shownCheck.pin) ?? null : null;
   const pages = (shownCheck?.pages ?? []).slice(0, l && l.H < 700 ? 2 : 3);
   const queriesOn = countAt(v, 3, T.check.query0, T.check.queryEvery, Math.min(4, shownCheck?.queries.length ?? 0));
   const pagesOn = liveState === "running" ? 0 : isFeat ? countAt(v, 3, T.check.page0, T.check.pageEvery, pages.length) : pages.length;
@@ -400,6 +401,13 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     <Ledger rows={rows} total={sumEur} reached={deaths ? landed.reduce((s, p) => s + p.extra, 0) : planExtra} of={deaths ? null : myDots || null} lo={tot ? (deaths ? tot.deaths_avoided_per_year.lo : tot.extra_curative_patients_per_year.lo) : 0} hi={tot ? (deaths ? tot.deaths_avoided_per_year.hi : tot.extra_curative_patients_per_year.hi) : 0}
       rangeOn={rangeOn} unit={deaths ? "deaths" : "extra"} compact={isFI} sel={sel} onSel={tapPin} flyTo={evId} narrow={narrowOn || (a > 3 && !!narrow && narrow.part.n > 0) ? narrow : null} part={part} />
   );
+  // The records check of "Is this gap real?", in the same words; when it cannot tell, the Run says so before it names a step.
+  const recCheck = isFI ? null : area.data?.gap_checks?.find((c) => c.id === "records") ?? null;
+  const recUnsure = recCheck?.verdict === "cannot_tell";
+  const drug = isFI ? null : area.data?.pathway?.drug_finding?.drug ?? null;
+  const drugLow = drug && drug.value != null && drug.national != null && drug.value < drug.national - 5 ? drug : null;
+  // The ask is made once, in the county the run starts in: the one with the most people short.
+  const askFor = !isFI && ask && pilot && !deaths && hosp && counties.length && counties.every((c) => c.dots <= (me?.dots ?? 0)) ? hosp.name_en : null;
   let head: React.ReactNode = null, headKey = `${a}`;
   if (explore) {
     const t = tool === "actions" || tool === "records" ? (isFI ? "budget" : tool) : tool;
@@ -423,7 +431,8 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     else {
       const here = steps.filter((s) => s.verdict === "here"), maybe = steps.filter((s) => s.verdict === "possibly_here");
       const wait = steps.find((s) => s.id === "diagnosis")?.verdict === "not_behind";
-      head = here.length ? <>{wait && here.some((s) => s.id === "treatment") ? "Not the wait. " : ""}{name} loses them at {here.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}.{maybe.length ? ` ${maybe.map((s) => WHERE[s.id] ?? s.label_en).join(" and ").replace(/^./, (c) => c.toUpperCase())} may add to it.` : ""}</>
+      head = here.length && recUnsure ? <>On paper {name} loses them at {here.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}. Missing records could explain most of it.</>
+        : here.length ? <>{wait && here.some((s) => s.id === "treatment") ? "Not the wait. " : ""}{name} loses them at {here.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}.{maybe.length ? ` ${maybe.map((s) => WHERE[s.id] ?? s.label_en).join(" and ").replace(/^./, (c) => c.toUpperCase())} may add to it.` : ""}</>
         : maybe.length ? <>A possible weak point in {name}: {maybe.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}.</>
         : steps.length ? <>No step of the care path stands out in {name}.</> : <>Where {name} loses them.</>;
     }
@@ -452,14 +461,14 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     head = <>The same run in all {nat.n} counties: about {whole(nat.extra)} of the {total} a year for {eurx(nat.eur)}, range {whole(nat.lo)} to {whole(nat.hi)}{worst ? <>, {worst.name} first</> : null}.</>;
   }
   else head = sim.data && yearIdx < years.length ? <>The plan played forward, year by year, to {years[years.length - 1]}.</>
-    : sim.data ? (narrow && narrow.part.n > 0 ? <>If all {narrow.n} actions are needed in full: about {whole(sim.data.reached.median)} more a year treated to cure by {years[years.length - 1]}, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>
+    : sim.data ? (narrow && narrow.part.n > 0 ? <>If the hospital confirms all {narrow.n} are missing in full: about {whole(sim.data.reached.median)} more a year treated to cure by {years[years.length - 1]}, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>
       : <>By {years[years.length - 1]}, about {whole(sim.data.reached.median)} more a year treated to cure, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>)
     : <>The plan, year by year.</>;
 
   /* ---------- the activity line ---------- */
   const log = useMemo(() => {
     const out: Activity[] = [], f = funnel.data, fa = f?.areas.find((x) => x.id === scope);
-    if (f) out.push({ act: 0, at: 0, text: `Reading registry report${f.page ? `, page ${fa?.page ?? f.page}` : ""}: Finland ${int(f.national.k)} of ${int(f.national.n)} = ${one(f.national.pct)}%`, src: { kind: "measured", source_id: f.source_id, source_url: f.source_url, page: f.page, read_by: f.read_by, period: f.period, quote: f.quote, what: f.label_en, value: `${one(f.national.pct)}%` } });
+    if (f) out.push({ act: 0, at: 0, text: `Reading registry report${f.page ? `, page ${f.page}` : ""}: Finland ${int(f.national.k)} of ${int(f.national.n)} = ${one(f.national.pct)}%`, src: { kind: "measured", source_id: f.source_id, source_url: f.source_url, page: f.page, read_by: f.read_by, period: f.period, quote: f.quote, what: f.label_en, value: `${one(f.national.pct)}%` } });
     if (f && fa) out.push({ act: 0, at: 1400, text: `Reading registry report, page ${fa.page ?? f.page}: ${name} ${int(fa.k)} of ${int(fa.n)} = ${one(fa.pct)}%`, src: srcOfFunnel(f, scope, name) });
     if (total) out.push({ act: 0, at: T.gap.dotsFrom, text: `Shortfall against the national share: ${total} people a year in ${counties.filter((c) => c.dots > 0).length} counties${me && myDots ? `, ${one(me.missing)} in ${name}` : ""}` });
     if (me && hosp && me.km != null) out.push({ act: 1, at: T.where.line, text: `Distance to ${hosp.name_en}: ${int(Math.round(me.km))} km (straight line x 1.3, by where people live)` });
@@ -698,6 +707,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
                 {isFeat && a === 3 && pagesOn === 0 && queriesOn < shownCheck.queries.length + 1
                   ? <ol className="st-trace">{shownCheck.queries.slice(0, queriesOn).map((q, i) => <li key={q} className={i === queriesOn - 1 ? "now" : ""}>Searching: {q}</li>)}</ol>
                   : <p className="st-mono">{shownCheck.searches} searches · {shownCheck.pages.length} pages read · {[...new Set(shownCheck.pages.map((p) => p.domain))].join(", ")}</p>}
+                {isFI && shownPin && <p className="st-fine on">Shown: the check for {shownPin.short}. Each of the {pins.length} counties has its own: pick one on the map.</p>}
                 {pages.map((p, i) => <PageCard key={p.url} p={p} i={i} on={i < pagesOn} quoteOn={i < quotesOn} />)}
               </>
             ) : <p className="st-quiet">{!checksOk ? "Loading the stored checks" : sel ? "Not checked yet: no stored web check for this action." : "No stored web check for this plan."}</p>}
@@ -715,6 +725,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
           <div className={"st-ask" + (askOn ? " on" : "")}>
             {!(ask && pilot) && <p>{isFI ? "The plan county by county, with who does what." : `The plan for ${name}, with who does what.`}</p>}
             {ask && pilot && nat && nat.n > 1 && nat.hi != null && !isFI && !deaths && <span className="st-fine on num">The {whole(nat.extra)} is modelled, range {whole(nat.lo)} to {whole(nat.hi)}. The six months are counted: {pilot.audit?.charts} charts, about {whole(pilot.six_months?.no_surgery_decisions_reviewed?.expected ?? 0)} decisions.</span>}
+            {askFor && <p className="st-askline">What we ask: one introduction, to {name}'s wellbeing services county and {askFor}.</p>}
             <button className="btn primary" onClick={() => open("plan")}>Open the plan</button>
             {ask && pilot && (
               <details className="st-more st-sixmonths">
@@ -741,10 +752,14 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
             <p>The three bottlenecks the challenge names, checked for {name}:</p>
             <ul>
               {B3.map(([id, label]) => { const st = steps.find((x) => x.id === id); return st ? <li key={id} className={st.verdict ?? ""}><span>{label}?</span> <b>{B3V[st.verdict ?? ""] ?? st.verdict_en}</b></li> : null; })}
+              {recCheck?.short_answer_en && <li className={recUnsure ? "possibly_here" : ""}><span>Only missing records?</span> <b>{recCheck.short_answer_en.replace(/^./, (c) => c.toLowerCase()).replace(/\.$/, "")}</b></li>}
             </ul>
-            {steps.some((x) => x.id === "treatment" && x.verdict === "here") && !B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "here") && (B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "possibly_here")
-              ? <p>The clear gap is a fourth step: who is given treatment that aims to cure. The steps marked possibly may add to it.</p>
-              : <p>So the gap is a fourth step: who is given treatment that aims to cure.</p>)}
+            {steps.some((x) => x.id === "treatment" && x.verdict === "here") && !B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "here") && (recUnsure
+              ? <p className="st-so">On paper the gap is a fourth step: who is given treatment that aims to cure. The chart check comes first: it shows how much of it is real.</p>
+              : B3.some(([id]) => steps.find((x) => x.id === id)?.verdict === "possibly_here")
+              ? <p className="st-so">The clear gap is a fourth step: who is given treatment that aims to cure. The steps marked possibly may add to it.</p>
+              : <p className="st-so">So the gap is a fourth step: who is given treatment that aims to cure.</p>)}
+            {drugLow && <p className="st-also num">Also low: drug therapy on record, {one(drugLow.value)}% here against {one(drugLow.national)}% in Finland. The registry under-records it, so the chart check also counts biomarker tests and drug treatment. <button className="st-fig" onClick={() => openSource({ kind: drugLow.kind, source_id: drugLow.source_id, source_url: drugLow.source_url, page: drugLow.page, quote: drugLow.quote, read_by: drugLow.read_by, period: drugLow.period, what: drugLow.label_en, value: `${one(drugLow.value)}%` })}>Source</button></p>}
           </div>
         )}
       </section>

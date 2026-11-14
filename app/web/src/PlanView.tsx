@@ -214,7 +214,9 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
   const ownPilot = !!pilot && scope !== "FI";
   // The pilot is drawn once, from its data, below the plan; the model's own pilot paragraph is left out so it is not said twice.
   const md = useMemo(() => {
-    const m = lang === "fi" ? plainMoneyFi(fiNumbers(raw)) : plainMoney(plainAreas(raw));
+    // An effect held at the ceiling has its high end equal to its value: "0.7 (0.0–0.7)" reads as a mistake, so it is said in words.
+    const capped = (t: string) => t.replace(/(\d+[.,]\d) \(0[.,]0[–-]\1\)/g, lang === "fi" ? "enintään $1 (voi olla 0)" : "up to $1 (could be 0)");
+    const m = capped(lang === "fi" ? plainMoneyFi(fiNumbers(raw)) : plainMoney(plainAreas(raw)));
     return ownPilot ? m.replace(/\n## (?:Pilot ask|Pilottiehdotus)\s*\n[\s\S]*?(?=\n## |$)/, "\n") : m;
   }, [raw, lang, ownPilot]);
   // Today's web checks, printed under the action they belong to. The stored plan itself never changes with a check.

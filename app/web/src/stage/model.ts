@@ -151,6 +151,8 @@ export function pagesOf(v: VerifyResult): PageM[] {
     let p = out.find((x) => x.url === s.url);
     if (!p) { p = { url: s.url, domain: host(s.url), title: s.title ?? host(s.url), quotes: [], about: s.about }; out.push(p); }
     if (s.quote && !p.quotes.includes(s.quote)) p.quotes.push(s.quote);
+    // A page can answer two questions; "is it in place here" wins over "does it work".
+    if (s.about === "in_use" || (s.about === "effect" && p.about !== "in_use")) p.about = s.about;
   }
   // The page that answers "is it in place here" goes first.
   const lead = v.in_use_source?.url;

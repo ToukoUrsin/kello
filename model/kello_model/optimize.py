@@ -411,8 +411,8 @@ class Optimizer:
         k = priors.REACHABLE_SHARE_OF_SHORTFALL
         r = [
             BUDGET_BASIS + " Costs are assumptions unless the action says otherwise.",
-            f"Objective '{objective}': the plan maximises {OBJECTIVE_EN[objective]}. The other objectives can be chosen: "
-            + "; ".join(f"'{o}' = {OBJECTIVE_EN[o]}" for o in OBJECTIVES if o != objective) + ".",
+            f"Goal: the plan maximises {OBJECTIVE_EN[objective]}. Other goals can be chosen: "
+            + "; ".join(OBJECTIVE_EN[o] for o in OBJECTIVES if o != objective) + ".",
             "Method: buy the measure that adds most to the objective per euro, re-calculate what every other measure would add, and "
             "repeat until nothing more fits the budget or nothing more adds anything.",
             f"Measures with low-confidence evidence are ranked at {priors.LOW_CONFIDENCE_WEIGHT:g} of their modelled value. They can still "
@@ -434,7 +434,7 @@ class Optimizer:
             "Screening is counted from the people screened: participants x their lung cancer death rate without screening x the trial "
             "effect. The cost pays for the same participants.",
             f"Deaths avoided through treatment access = extra patients treated to cure x {m.conv[0]:g} ({m.conv[1]:g}-{m.conv[2]:g}) deaths "
-            "within five years avoided per patient. This is an assumption, not a causal estimate (see parameters.json, curative_access).",
+            "within five years avoided per patient. This is an assumption, not a causal estimate.",
             "Deaths avoided through days saved use the published hazard ratio per four weeks of delay (Hanna, BMJ 2020), for patients "
             "treated with curative intent only; its interval includes no effect, so a lower bound can be below zero.",
             f"Overlap: of several pre-diagnosis or mortality measures in one county, the k-th largest counts for {priors.DIMINISHING:g}^k of "

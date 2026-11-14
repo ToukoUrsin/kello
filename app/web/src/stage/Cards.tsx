@@ -70,7 +70,7 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
         <div className="st-total" style={none ? { visibility: "hidden" } : undefined}><b className="num">{eurx(Math.round(total))}</b><span>a year</span></div>
       )}
       {part !== "rows" && <p className={"st-reach" + (rangeOn ? " on" : "")} style={none ? { visibility: "hidden" } : undefined}>
-        <span className="num">{narrow ? `If all ${narrow.n} are needed in full: ` : ""}{unit === "deaths" ? `about ${one(reached)} deaths avoided a year` : of != null ? `${narrow ? "reach" : "reaches"} about ${int(Math.round(reached))} of ${of} a year` : `about ${int(Math.round(reached))} more treated to cure a year`}</span>
+        <span className="num">{narrow ? `If the hospital confirms all ${narrow.n} are missing in full: ` : ""}{unit === "deaths" ? `about ${one(reached)} deaths avoided a year` : of != null ? `${narrow ? "reach" : "reaches"} about ${int(Math.round(reached))} of ${of} a year` : `about ${int(Math.round(reached))} more treated to cure a year`}</span>
         <span className="st-range num">range {int(Math.round(lo) || 0)} to {int(Math.round(hi) || 0)}</span>
         <KindTag kind="estimated" title="Modelled from the measured gap and each action's effect. The range starts at 0: no effect is possible." />
       </p>}
@@ -104,11 +104,13 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
   );
 }
 
+/** What a page was read for: a study from another country is not a sign the action runs here. */
+const PAGE_ROLE: Record<string, string> = { in_use: "Is it in place here?", effect: "Does it work? A study elsewhere", context: "Background" };
 /** A public page the check read, with the sentence it leans on, word for word. */
 export function PageCard({ p, on, quoteOn, i }: { p: PageM; on: boolean; quoteOn: boolean; i: number }) {
   return (
     <a className={"st-page" + (on ? " on" : "")} href={p.url} target="_blank" rel="noreferrer" data-page={i}>
-      <span className="st-domain">{p.domain}</span>
+      <span className="st-domain">{p.domain}{PAGE_ROLE[p.about ?? ""] && <em>{PAGE_ROLE[p.about ?? ""]}</em>}</span>
       <b>{p.title}</b>
       {p.quotes[0] && <q className={quoteOn ? "on" : ""} lang={/[äö]/i.test(p.quotes[0]) ? "fi" : undefined}>{p.quotes[0]}</q>}
     </a>

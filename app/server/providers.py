@@ -234,11 +234,11 @@ def _pathway_for(area_id: str, cp: dict | None) -> dict:
     if t1 is None or tn is None:
         wait_v, wait_a = "cannot_tell", "Days from diagnosis to treatment are not published by county."
     elif float(t1) <= float(tn) + 1:
-        wait_v, wait_a = "not_behind", f"Treatment starts {float(t1):.0f} days after diagnosis in this university hospital area, {float(tn):.0f} in Finland (all treatments together, estimated). No sign that patients here wait longer."
+        wait_v, wait_a = "not_behind", f"Treatment starts {int(float(t1) + 0.5)} days after diagnosis in this university hospital area, {int(float(tn) + 0.5)} in Finland (all treatments together, estimated). No sign that patients here wait longer."
     elif float(t1) <= float(tn) + 5:
-        wait_v, wait_a = "possibly_here", f"Treatment starts {float(t1):.0f} days after diagnosis in this university hospital area, {float(tn):.0f} in Finland: slightly longer."
+        wait_v, wait_a = "possibly_here", f"Treatment starts {int(float(t1) + 0.5)} days after diagnosis in this university hospital area, {int(float(tn) + 0.5)} in Finland: slightly longer."
     else:
-        wait_v, wait_a = "here", f"Treatment starts {float(t1):.0f} days after diagnosis in this university hospital area, {float(tn):.0f} in Finland. Patients here wait longer."
+        wait_v, wait_a = "here", f"Treatment starts {int(float(t1) + 0.5)} days after diagnosis in this university hospital area, {int(float(tn) + 0.5)} in Finland. Patients here wait longer."
     c1, cn = num("curative")
     miss = float(((cp.get("missing_patients") or {}).get("total") or {}).get("median") or 0) if isinstance((cp.get("missing_patients") or {}).get("total"), dict) else 0.0
     if c1 is None or cn is None:
