@@ -571,8 +571,15 @@ def _gap_checks(area_id: str, path: dict, mvi: dict | None = None) -> dict:
             else:
                 tail, tail_fi = "Both ranges reach Finland's figure, so age may explain it.", "Molemmat vaihteluvälit yltävät koko maan lukuun, joten ikä voi selittää eron."
             verdict = "holds" if (men_clear or women_clear) else "cannot_tell"
-            add("age", q, qfi, "No: still lower after age adjustment." if verdict == "holds" else "Cannot tell.",
-                "Ei: osuus on pienempi myös ikävakioituna." if verdict == "holds" else "Ei voi sanoa.",
+            if men_clear and women_clear:
+                short, short_fi = "No: still lower after age adjustment.", "Ei: osuus on pienempi myös ikävakioituna."
+            elif men_clear:
+                short, short_fi = "Not for men: still lower after age adjustment. For women it could be chance.", "Ei miehillä: osuus on pienempi myös ikävakioituna. Naisilla ero voi olla sattumaa."
+            elif women_clear:
+                short, short_fi = "Not for women: still lower after age adjustment. For men it could be chance.", "Ei naisilla: osuus on pienempi myös ikävakioituna. Miehillä ero voi olla sattumaa."
+            else:
+                short, short_fi = "Cannot tell.", "Ei voi sanoa."
+            add("age", q, qfi, short, short_fi,
                 f"The registry's own age-adjusted share is {men['value']}% for men ({men['lo']}–{men['hi']}) and {women['value']}% for women ({women['lo']}–{women['hi']}), "
                 f"against {natl['men']}% and {natl['women']}% in Finland. {tail}",
                 f"Rekisterin oma ikävakioitu osuus on miehillä {_fi_num(men['value'])} % ({_fi_num(men['lo'])}–{_fi_num(men['hi'])}) ja naisilla {_fi_num(women['value'])} % "
