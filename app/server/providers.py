@@ -491,6 +491,15 @@ def _fi_place(fi_full: str) -> tuple[str, str]:
     return fi_full, fi_full
 
 
+def records_estimate(patients_per_year: float, no_record_pct: float) -> tuple[float, float, float]:
+    """Patients a year with no treatment on record, and how many of them can be hidden cured patients: a realistic
+    reading and the very most. Nationally 79% of patients with no record die within a year, 12% of those treated to cure."""
+    unrecorded = patients_per_year * no_record_pct / 100
+    extreme = math.floor(unrecorded * (1.0 - 0.79) / (1.0 - 0.12) * 10) / 10
+    plausible = math.floor(unrecorded * (0.85 - 0.79) / (0.85 - 0.12) * 10) / 10
+    return unrecorded, plausible, extreme
+
+
 def _gap_checks(area_id: str, path: dict, mvi: dict | None = None) -> dict:
     """Five plain-word checks of whether a county's shortfall is real. Never claims more than its data."""
     cur = _stage(path, "curative")
@@ -599,9 +608,7 @@ def _gap_checks(area_id: str, path: dict, mvi: dict | None = None) -> dict:
     q, qfi = "Is it just missing records?", "Onko kyse vain puuttuvista kirjauksista?"
     short_n = (path.get("missing_patients") or {}).get("per_year") or 0
     if no_record.get("value") is not None and path.get("patients_per_year") and short_n > 0 and below:
-        unrecorded = path["patients_per_year"] * no_record["value"] / 100
-        extreme = math.floor(unrecorded * (1.0 - 0.79) / (1.0 - 0.12) * 10) / 10
-        plausible = math.floor(unrecorded * (0.85 - 0.79) / (0.85 - 0.12) * 10) / 10
+        unrecorded, plausible, extreme = records_estimate(path["patients_per_year"], no_record["value"])
         left = max(short_n - plausible, 0)
         left_ext = max(short_n - extreme, 0)
         verdict = "mostly_holds" if left >= 0.5 * short_n else "cannot_tell"

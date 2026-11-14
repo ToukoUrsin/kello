@@ -32,6 +32,7 @@ if str(SERVER) not in sys.path:
 import frontpage  # noqa: E402
 import plan as plan_mod  # noqa: E402
 import providers  # noqa: E402
+import stage as stage_mod  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 log = logging.getLogger("kello")
@@ -65,6 +66,32 @@ class OptimizeBody(BaseModel):
     budget_eur: float = Field(ge=0, le=1e9)
     objective: str | None = None
     exclude: list[str] = Field(default_factory=list)
+
+
+class SiteBody(BaseModel):
+    lat: float = Field(ge=59, le=71)
+    lon: float = Field(ge=19, le=32)
+    kind: str = "radiotherapy"
+
+
+class ScenarioBody(BaseModel):
+    sites: list[SiteBody] = Field(default_factory=list, max_length=6)
+    cost_eur_per_year: float | None = Field(default=None, ge=0, le=1e9)
+
+
+class CurveBody(BaseModel):
+    scope: str
+    objective: str | None = None
+    exclude: list[str] = Field(default_factory=list)
+
+
+class SimulatePlanBody(BaseModel):
+    scope: str
+    budget_eur: float = Field(ge=0, le=1e9)
+    objective: str | None = None
+    exclude: list[str] = Field(default_factory=list)
+    runs: int = Field(default=300, ge=50, le=1000)
+    seed: int = 1
 
 
 class VerifyBody(BaseModel):
@@ -141,6 +168,35 @@ def simulate(body: SimulateBody):
 def optimize(body: OptimizeBody):
     try:
         return providers.optimize(body.scope, body.budget_eur, body.objective, body.exclude)
+    except KeyError as e:
+        _not_found(f"scope {e}")
+
+
+@app.get("/api/stage")
+def stage():
+    return Response(providers.json_bytes("stage_json", stage_mod.stage), media_type="application/json")
+
+
+@app.post("/api/scenario")
+def scenario(body: ScenarioBody):
+    try:
+        return stage_mod.scenario([s.model_dump() for s in body.sites], body.cost_eur_per_year)
+    except KeyError as e:
+        _not_found(f"data {e}")
+
+
+@app.post("/api/budget-curve")
+def budget_curve(body: CurveBody):
+    try:
+        return stage_mod.budget_curve(body.scope, body.objective, body.exclude)
+    except KeyError as e:
+        _not_found(f"scope {e}")
+
+
+@app.post("/api/simulate-plan")
+def simulate_plan(body: SimulatePlanBody):
+    try:
+        return stage_mod.simulate_plan(body.scope, body.budget_eur, body.exclude, body.runs, body.seed, body.objective)
     except KeyError as e:
         _not_found(f"scope {e}")
 
