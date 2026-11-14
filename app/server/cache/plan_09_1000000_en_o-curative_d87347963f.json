@@ -1,0 +1,206 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Päijät-Häme: 0.5 more lung cancer patients a year treated to cure, for €41,000 a year",
+ "markdown": "# Päijät-Häme: 0.5 more lung cancer patients a year treated to cure, for €41,000 a year\n\n> 0.5 more patients a year treated to cure · €41,000 of €1.00M · €959,000 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in Päijät-Häme, 30 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, 1.0 patient a year is missing from treatment that aims to cure (range 0.0–5.6) [^care_curative][^model]. Compared with Finland as a whole the estimated shortfall is 0.0 patients a year (range 0.0–1.2), so there is nothing to split between surgery and radiotherapy [^care_curative][^model].\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 29.6% to 30.0% by 2028: 0.5 more patients a year (range 0.0–0.5), for €41,000 a year, about €82,000 per extra patient. [^care_curative][^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 1 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 0.5 (0.0–0.5) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 11.8% → 12.2% by 2028 |\n| | **Total** | **€41,000** | **0.5 (0.0–0.5)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €633,566 a year; modelled to avoid 1.1 deaths a year (0.2–2.8). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 29.6% (2019–2023, measured) → 30.0% by 2028. [^care_curative][^model]\n- Share of patients operated: 11.8% → 12.2% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nThe remaining €959,000 buys nothing more in the model [^model]. The access measures are limited by the reachable part of the measured shortfall, not by money [^model]. More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided instead [^model]. Lung cancer causes about 104 deaths a year in Päijät-Häme, and this plan is modelled to avoid 0.1 of them [^deaths][^model].\n\n## Limits\n\n- Effects are assumptions, not trial results. The range runs from every assumption at its lowest to every assumption at its highest, and it is not a probability [^model].\n- The comparison with the expected share is adjusted only for residents' age, not for stage, fitness, histology, smoking or how the cancer was found. County figures cannot show cause [^model].\n- The symptom-to-treatment clock is estimated, not measured, and is only a secondary view [^model]. A check against measured outcomes confirmed none of three expected links [^model].",
+ "claims": [
+  {
+   "text": "Of 100 lung cancer patients in Päijät-Häme, 30 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Compared with the best quarter of counties, 1.0 patient a year is missing from treatment that aims to cure (range 0.0–5.6) . Compared with Finland as a whole the estimated shortfall is 0.0 patients a year (range 0.0–1.2), so there is nothing to split between surgery and radiotherapy .",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Raise the share of lung cancer patients treated to cure from 29.6% to 30.0% by 2028: 0.5 more patients a year (range 0.0–0.5), for €41,000 a year, about €82,000 per extra patient.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "A chest surgeon reviews every decision not to operate**. Chief physician of pulmonology; chief of thoracic surgery at the university hospital",
+   "source_ids": [
+    "ev_surgeon_second_opinion_1"
+   ]
+  },
+  {
+   "text": "No trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Low-dose CT screening for long-term heavy smokers**: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €633,566 a year; modelled to avoid 1.1 deaths a year (0.2–2.8). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Share of patients treated to cure: 29.6% (2019–2023, measured) → 30.0% by 2028.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Share of patients operated: 11.8% → 12.2% by 2028.",
+   "source_ids": [
+    "care_surgery",
+    "model"
+   ]
+  },
+  {
+   "text": "The registry's public figures cover 2019–2023; count these each month from the county's own records.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "The remaining €959,000 buys nothing more in the model . The access measures are limited by the reachable part of the measured shortfall, not by money . More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided instead . Lung cancer causes about 104 deaths a year in Päijät-Häme, and this plan is modelled to avoid 0.1 of them .",
+   "source_ids": [
+    "model",
+    "deaths"
+   ]
+  },
+  {
+   "text": "Effects are assumptions, not trial results. The range runs from every assumption at its lowest to every assumption at its highest, and it is not a probability .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The comparison with the expected share is adjusted only for residents' age, not for stage, fitness, histology, smoking or how the cancer was found. County figures cannot show cause .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The symptom-to-treatment clock is estimated, not measured, and is only a secondary view . A check against measured outcomes confirmed none of three expected links .",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "This plan does not use the estimated symptom-to-treatment clock.",
+    "reason": "The source does not state that the plan does not use the clock; it says the clock is an estimated, secondary view. Replaced with that supported statement so the next sentence keeps its reference."
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "Compared with Finland as a whole there is no shortfall, so there is nothing to split between surgery and radiotherapy [^care_curative][^model].",
+    "reason": "This presented an estimate as certain. The source gives 0.0 patients a year with a range of 0.0–1.2 and marks no_shortfall as false. Rewritten as an estimate with its range."
+   },
+   {
+    "sentence": "The remaining €959,000 buys nothing more in the model.",
+    "reason": "The sentence had a figure and claim but no source marker. Added [^model], which is the obvious source (plan saturation note)."
+   },
+   {
+    "sentence": "The shares are adjusted only for residents' age, not for stage, fitness, histology, smoking or how the cancer was found.",
+    "reason": "The measured shares are not adjusted at all. Only the expected-share comparison is adjusted, and only for the share of residents aged 65 or over. Rewritten so the measured shares are not described as adjusted."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Treatment that aims to cure (measured; 2019–2023; read by Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), p. 14",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kello model: the optimiser and its stated assumptions (estimated; see Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "ev_surgeon_second_opinion_1": {
+   "title": "Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %.",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "year": 2013,
+   "design": "retrospective observational study, national audit linked to surgeon workforce data, England 2008-2009",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "care_surgery": {
+   "title": "Operated (measured; 1.1.2018-30.6.2022; read by Gemini). Finnish Cancer Registry lung cancer report, p. 25-26",
+   "publisher": null,
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": null,
+   "kind": "measured"
+  },
+  "deaths": {
+   "title": "Lung cancer deaths and age-standardised mortality by area, 2020-2024 (measured). Finnish Cancer Registry statistics",
+   "publisher": "Finnish Cancer Registry",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "09",
+ "budget_eur": 1000000.0,
+ "lang": "en",
+ "objective": "curative",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "11.8 of 100 patients are operated here, 14.9 in Finland."
+  }
+ ],
+ "pilot": null,
+ "action_studies": [
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "11.8 of 100 patients are operated here, 14.9 in Finland."
+  }
+ ],
+ "strip": {
+  "closes": 0.5,
+  "of": null,
+  "pct": null,
+  "deaths": null,
+  "spent": 41000.0,
+  "budget": 1000000.0,
+  "left": 959000.0,
+  "saturated": true,
+  "lead_en": "0.5 more patients a year treated to cure",
+  "lead_fi": "0,5 potilasta lisää parantavaan hoitoon vuodessa",
+  "money_en": "€41,000 of €1.00M",
+  "money_fi": "41 000 € / 1 milj. €",
+  "left_en": "€959,000 left: nothing else pays off at these assumptions",
+  "left_fi": "959 000 € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää",
+  "text_en": "0.5 more patients a year treated to cure · €41,000 of €1.00M · €959,000 left: nothing else pays off at these assumptions",
+  "text_fi": "0,5 potilasta lisää parantavaan hoitoon vuodessa · 41 000 € / 1 milj. € · 959 000 € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää"
+ },
+ "written_sections": [
+  "The gap",
+  "What more money buys, and what it cannot",
+  "Limits"
+ ],
+ "generated_at": "2026-11-14T10:57:54+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in Päijät-Häme, 30 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, 1.0 patient a year is missing from treatment that aims to cure (range 0.0–5.6) [^care_curative][^model]. Compared with Finland as a whole there is no shortfall, so there is nothing to split between surgery and radiotherapy [^care_curative][^model].\n\n## What more money buys, and what it cannot\nThe remaining €959,000 buys nothing more in the model. The access measures are limited by the reachable part of the measured shortfall, not by money [^model]. More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided instead [^model]. Lung cancer causes about 104 deaths a year in Päijät-Häme, and this plan is modelled to avoid 0.1 of them [^deaths][^model].\n\n## Limits\n- Effects are assumptions, not trial results. The range runs from every assumption at its lowest to every assumption at its highest, and it is not a probability [^model].\n- The shares are adjusted only for residents' age, not for stage, fitness, histology, smoking or how the cancer was found. County figures cannot show cause [^model].\n- This plan does not use the estimated symptom-to-treatment clock. A check against measured outcomes confirmed none of three expected links [^model]."
+}

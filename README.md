@@ -7,7 +7,7 @@ Junction 2026, AstraZeneca challenge "Equal Care Across Finland". Live demo: htt
 
 ## What is live and what is stored
 
-Live: the web check (Oxylabs Web API searches and page reads, with the answer written by Claude or Gemini), the optimiser, and the scout. Stored: 966 registry values read by Gemini (946 re-confirmed, 20 unverified), county plan texts written once by Claude and served from `app/server/cache`, and page reads cached for speed.
+Live: the web check (Oxylabs Web API searches and page reads, with the answer written by Claude or Gemini), the optimiser, and the scout. Stored: 1,628 registry values read by Gemini (1,607 re-confirmed, 21 unverified), county plan texts written once by Claude and served from `app/server/cache`, and page reads cached for speed.
 
 ## Run it
 
@@ -32,8 +32,8 @@ Set `JUNCTION_OXYLABS_API_KEY`, `GEMINI_API_KEY`, and `ANTHROPIC_API_KEY`; set `
   from diagnosis to treatment in the Oulu university hospital area, 37 in Finland). About 12 a year are missing from
   curative treatment: 7 not operated, 5 not given curative radiotherapy.
 - **Two more findings.** Across counties, the further people live from a university hospital, the fewer are treated to
-  cure (rank correlation −0.66; −0.37 with the share of residents over 65 held fixed). Drug treatment is on record for
-  10.3% of Lapland's patients against 25.1% in Finland; that field is the registry's least reliable.
+  cure (rank correlation −0.66; −0.30 with the share of residents over 65 held fixed). Drug treatment is on record for
+  12.7% of Lapland's patients against 25.1% in Finland; that field is the registry's least reliable.
 - **What to do.** For Lapland six actions for €211,500 a year, about 5 of the 12 patients (range 0–7.7, modelled).
   Each action has an owner, a first step this week, the county's own reason for it and the study its effect comes from.
   A live web check asks whether the action is already running there, and the plan changes with the answer.
@@ -95,7 +95,7 @@ does not. Code: `app/server/integrations/` (`verify.py`, `agent.py`, `oxylabs.py
 measured runs in its `README.md`; real outputs in `examples/verify_*.json`.
 
 **Gemini API — reading reports that have no API.** County-level lung cancer quality data in Finland exists only in
-PDFs, a Shiny app and dashboards. Gemini (`gemini-4-hydrogen`) read them into 966 rows, each with page number
+PDFs, a Shiny app and dashboards. Gemini (`gemini-4-carbon`) read them into 1,628 rows, each with page number
 and the quoted text it was read from (`data/processed/gemini_extracted.jsonl`). These rows are what the map leads
 with. In the app, "Read a report" does the same for any URL or uploaded file. Code: `app/server/integrations/gemini_reader.py`.
 

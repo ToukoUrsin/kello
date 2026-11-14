@@ -1,0 +1,696 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Finland: 32.1 more lung cancer patients a year treated to cure, for €1.42M a year",
+ "markdown": "# Finland: 32.1 more lung cancer patients a year treated to cure, for €1.42M a year\n\n> Closes 32.1 of 65.5 missing patients a year (49%) · €1.42M of €5.00M · €3.58M left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in Finland, 27 get treatment that aims to cure. By county it runs from 18 in Lapland to 36 in Vantaa and Kerava. Bringing every county below the national share up to it is about 66 patients a year; 50 of them are in the 7 counties that are below it by more than chance. [^care_curative] Compared with the best quarter of counties (30.4% treated to cure), 123.1 patients a year are missing. The material gives no range for this and no split by surgery or radiotherapy. [^care_curative] [^model]\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 27.0% to 28.1% by 2028: 32.1 more patients a year (range 0.0–48.9), for €1.42M a year, about €44,000 per extra patient. [^care_curative][^model] That closes 49% of the measured shortfall against Finland as a whole (65.5 patients a year). [^model]\n\n## Funded actions\n\n| # | County | Funded measures | Cost a year | More patients treated to cure a year |\n|---|---|---|---|---|\n| 1 | **Lapland** | A chest surgeon reviews every decision not to operate; Weekly video review of every stage I-III patient with the university hospital's specialists; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Travel and hotel paid for patients far from the university hospital; Fitness test and training before anyone is ruled too frail for curative treatment; Check the charts of patients with no treatment on record | €211,500 | 5.2 |\n| 2 | **Kymenlaakso** | A chest surgeon reviews every decision not to operate; Weekly video review of every stage I-III patient with the university hospital's specialists; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Travel and hotel paid for patients far from the university hospital; Fitness test and training before anyone is ruled too frail for curative treatment | €185,650 | 4.0 |\n| 3 | **Southwest Finland** | Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Fitness test and training before anyone is ruled too frail for curative treatment; Check the charts of patients with no treatment on record | €141,330 | 3.4 |\n| 4 | **Satakunta** | A chest surgeon reviews every decision not to operate; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Weekly video review of every stage I-III patient with the university hospital's specialists | €121,280 | 3.2 |\n| 5 | **North Karelia** | A chest surgeon reviews every decision not to operate; Weekly video review of every stage I-III patient with the university hospital's specialists; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Travel and hotel paid for patients far from the university hospital | €146,000 | 3.1 |\n| 6 | **Kanta-Häme** | A chest surgeon reviews every decision not to operate; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Weekly video review of every stage I-III patient with the university hospital's specialists | €115,840 | 2.9 |\n| 7 | **North Ostrobothnia** | Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Fitness test and training before anyone is ruled too frail for curative treatment | €98,500 | 2.5 |\n| 8 | **South Savo** | A chest surgeon reviews every decision not to operate; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Weekly video review of every stage I-III patient with the university hospital's specialists | €111,920 | 2.4 |\n| 9 | **South Karelia** | Weekly video review of every stage I-III patient with the university hospital's specialists; Travel and hotel paid for patients far from the university hospital; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Fitness test and training before anyone is ruled too frail for curative treatment; Check the charts of patients with no treatment on record | €117,250 | 2.2 |\n| 10 | **North Savo** | Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Fitness test and training before anyone is ruled too frail for curative treatment | €61,690 | 1.5 |\n| 11 | **Kainuu** | A chest surgeon reviews every decision not to operate; Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Travel and hotel paid for patients far from the university hospital; Fitness test and training before anyone is ruled too frail for curative treatment | €79,900 | 1.2 |\n| 12 | **Central Ostrobothnia** | Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated; Travel and hotel paid for patients far from the university hospital; Fitness test and training before anyone is ruled too frail for curative treatment | €27,200 | 0.5 |\n| | **Total** | | **€1.42M** | **32.1 (0.0–48.9)** |\n\nEach county's own plan lists the owner, the first step and the measure for every action. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €17.4M a year; modelled to avoid 29.9 deaths a year (6.8–77.9). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 27.0% (2019–2023, measured) → 28.1% by 2028. [^care_curative][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nThe remaining €3.58M buys nothing more in the model. The access measures are limited by the reachable part of the measured shortfall, not by money. [^model] More could come from a national decision on low-dose CT screening for long-term heavy smokers, or from ranking measures by deaths avoided, which funds pathway measures. [^model] Lung cancer causes about 2,303 deaths a year in Finland. This plan is modelled to avoid 4.8 of them a year (range 0.0-14.7). [^deaths] [^model]\n\n## Limits\n\n- Every effect is an assumption, not a trial result. The range runs from all assumptions at their lowest to all at their highest. It is not a probability range. [^model]\n- The model adjusts only for the share of residents aged 65 or over. It does not adjust for stage, other illness, histology, how cancer was found, smoking or recording. County figures cannot show cause. [^model]\n- In a county-level check, 0 of 3 outcomes matched the estimated symptom-to-treatment clock beyond chance. [^model]",
+ "claims": [
+  {
+   "text": "Of 100 lung cancer patients in Finland, 27 get treatment that aims to cure. By county it runs from 18 in Lapland to 36 in Vantaa and Kerava. Bringing every county below the national share up to it is about 66 patients a year; 50 of them are in the 7 counties that are below it by more than chance.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Compared with the best quarter of counties (30.4% treated to cure), 123.1 patients a year are missing. The material gives no range for this and no split by surgery or radiotherapy.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Raise the share of lung cancer patients treated to cure from 27.0% to 28.1% by 2028: 32.1 more patients a year (range 0.0–48.9), for €1.42M a year, about €44,000 per extra patient.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "That closes 49% of the measured shortfall against Finland as a whole (65.5 patients a year).",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Each county's own plan lists the owner, the first step and the measure for every action.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Low-dose CT screening for long-term heavy smokers**: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €17.4M a year; modelled to avoid 29.9 deaths a year (6.8–77.9). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Share of patients treated to cure: 27.0% (2019–2023, measured) → 28.1% by 2028.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "The registry's public figures cover 2019–2023; count these each month from the county's own records.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "The remaining €3.58M buys nothing more in the model. The access measures are limited by the reachable part of the measured shortfall, not by money.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "More could come from a national decision on low-dose CT screening for long-term heavy smokers, or from ranking measures by deaths avoided, which funds pathway measures.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Lung cancer causes about 2,303 deaths a year in Finland. This plan is modelled to avoid 4.8 of them a year (range 0.0-14.7).",
+   "source_ids": [
+    "deaths",
+    "model"
+   ]
+  },
+  {
+   "text": "Every effect is an assumption, not a trial result. The range runs from all assumptions at their lowest to all at their highest. It is not a probability range.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The model adjusts only for the share of residents aged 65 or over. It does not adjust for stage, other illness, histology, how cancer was found, smoking or recording. County figures cannot show cause.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "In a county-level check, 0 of 3 outcomes matched the estimated symptom-to-treatment clock beyond chance.",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "The estimated symptom-to-treatment clock is not used in this plan.",
+    "reason": "The material does not say the clock is unused in this plan; it only calls it a secondary, estimated view. The clause was cut, and the clock is now named in the next sentence so that sentence still makes sense."
+   },
+   {
+    "sentence": "In a county-level check, 0 of 3 measured outcomes matched it beyond chance.",
+    "reason": "The word 'measured' is not in the material for these outcomes, so it was cut. The rest of the sentence was kept and merged with the clock reference."
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "Shares are adjusted only for residents aged 65 or over. They are not adjusted for stage, other illness, histology, how cancer was found, smoking or recording.",
+    "reason": "The shares shown are measured, unadjusted figures, and the shortfall is plain arithmetic on them. Only the model's expected value adjusts for age, and no adjusted result is given. Rewritten so it says the model, not the shares, is adjusted."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Treatment that aims to cure (measured; 2019–2023; read by Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), p. 13",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kello model: the optimiser and its stated assumptions (estimated; see Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "deaths": {
+   "title": "Lung cancer deaths and age-standardised mortality by area, 2020-2024 (measured). Finnish Cancer Registry statistics",
+   "publisher": "Finnish Cancer Registry",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "FI",
+ "budget_eur": 5000000.0,
+ "lang": "en",
+ "objective": "gap",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 1,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 1,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 1,
+   "id": "travel_accommodation_support",
+   "name": "Travel and hotel paid for patients far from the university hospital",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 1,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 1,
+   "id": "recording_audit",
+   "name": "Check the charts of patients with no treatment on record",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "27.5% of Finland's patients have no treatment on record. Until charts are checked in the counties furthest below, nobody knows how much of the gap is care."
+  },
+  {
+   "n": 2,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 2,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 2,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 2,
+   "id": "travel_accommodation_support",
+   "name": "Travel and hotel paid for patients far from the university hospital",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 2,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 3,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 3,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 3,
+   "id": "recording_audit",
+   "name": "Check the charts of patients with no treatment on record",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "27.5% of Finland's patients have no treatment on record. Until charts are checked in the counties furthest below, nobody knows how much of the gap is care."
+  },
+  {
+   "n": 4,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 4,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 4,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 5,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 5,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 5,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 5,
+   "id": "travel_accommodation_support",
+   "name": "Travel and hotel paid for patients far from the university hospital",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 6,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 6,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 6,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 7,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 7,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 8,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 8,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 8,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 9,
+   "id": "video_mdt_stage1_3",
+   "name": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 9,
+   "id": "travel_accommodation_support",
+   "name": "Travel and hotel paid for patients far from the university hospital",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 9,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 9,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 9,
+   "id": "recording_audit",
+   "name": "Check the charts of patients with no treatment on record",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "27.5% of Finland's patients have no treatment on record. Until charts are checked in the counties furthest below, nobody knows how much of the gap is care."
+  },
+  {
+   "n": 10,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 10,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 11,
+   "id": "surgeon_second_opinion",
+   "name": "A chest surgeon reviews every decision not to operate",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "n": 11,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 11,
+   "id": "travel_accommodation_support",
+   "name": "Travel and hotel paid for patients far from the university hospital",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 11,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 12,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "n": 12,
+   "id": "travel_accommodation_support",
+   "name": "Travel and hotel paid for patients far from the university hospital",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "n": 12,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  }
+ ],
+ "pilot": null,
+ "action_studies": [
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "recording_audit",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "27.5% of Finland's patients have no treatment on record. Until charts are checked in the counties furthest below, nobody knows how much of the gap is care."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "recording_audit",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "27.5% of Finland's patients have no treatment on record. Until charts are checked in the counties furthest below, nobody knows how much of the gap is care."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "recording_audit",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "27.5% of Finland's patients have no treatment on record. Until charts are checked in the counties furthest below, nobody knows how much of the gap is care."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "14.9 of 100 patients are operated in Finland as a whole. The review starts in the counties that operate fewer."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "28.8 of 100 patients get radiotherapy in Finland as a whole. The referral rule starts in the counties that give less."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "27.0 of 100 patients are treated to cure in Finland; 7 counties are below that by more than chance, and this starts there."
+  }
+ ],
+ "strip": {
+  "closes": 32.1,
+  "of": 65.5,
+  "pct": 49,
+  "deaths": null,
+  "spent": 1418060.0,
+  "budget": 5000000.0,
+  "left": 3581940.0,
+  "saturated": true,
+  "lead_en": "Closes 32.1 of 65.5 missing patients a year (49%)",
+  "lead_fi": "Kuroo umpeen 32,1 vuosittain puuttuvasta 65,5 potilaasta (49 %)",
+  "money_en": "€1.42M of €5.00M",
+  "money_fi": "1,42 milj. € / 5 milj. €",
+  "left_en": "€3.58M left: nothing else pays off at these assumptions",
+  "left_fi": "3,58 milj. € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää",
+  "text_en": "Closes 32.1 of 65.5 missing patients a year (49%) · €1.42M of €5.00M · €3.58M left: nothing else pays off at these assumptions",
+  "text_fi": "Kuroo umpeen 32,1 vuosittain puuttuvasta 65,5 potilaasta (49 %) · 1,42 milj. € / 5 milj. € · 3,58 milj. € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää"
+ },
+ "written_sections": [
+  "The gap",
+  "What more money buys, and what it cannot",
+  "Limits"
+ ],
+ "generated_at": "2026-11-14T11:06:44+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in Finland, 27 get treatment that aims to cure. By county it runs from 18 in Lapland to 36 in Vantaa and Kerava. Bringing every county below the national share up to it is about 66 patients a year; 50 of them are in the 7 counties that are below it by more than chance. [^care_curative] Compared with the best quarter of counties (30.4% treated to cure), 123.1 patients a year are missing. The material gives no range for this and no split by surgery or radiotherapy. [^care_curative] [^model]\n\n## What more money buys, and what it cannot\nThe remaining €3.58M buys nothing more in the model. The access measures are limited by the reachable part of the measured shortfall, not by money. [^model] More could come from a national decision on low-dose CT screening for long-term heavy smokers, or from ranking measures by deaths avoided, which funds pathway measures. [^model] Lung cancer causes about 2,303 deaths a year in Finland. This plan is modelled to avoid 4.8 of them a year (range 0.0-14.7). [^deaths] [^model]\n\n## Limits\n- Every effect is an assumption, not a trial result. The range runs from all assumptions at their lowest to all at their highest. It is not a probability range. [^model]\n- Shares are adjusted only for residents aged 65 or over. They are not adjusted for stage, other illness, histology, how cancer was found, smoking or recording. County figures cannot show cause. [^model]\n- The estimated symptom-to-treatment clock is not used in this plan. In a county-level check, 0 of 3 measured outcomes matched it beyond chance. [^model]"
+}

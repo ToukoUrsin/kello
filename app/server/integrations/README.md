@@ -6,7 +6,7 @@ Two sponsor integrations of Kello. Everything in `examples/` is a real run from 
 |---|---|---|
 | Live web check | For one measure in one county: is it already running there, and does evidence support the effect we assume? The answer changes the plan. | Oxylabs Web API + Claude (`claude-opus-5-5`); Gemini (`gemini-4-hydrogen`) when Claude is not reachable |
 | County scout | "What is this county doing about lung cancer care right now?" Up to 6 dated findings with quotes. | same |
-| Read a report | A PDF, web page, web app or chart image into cited numbers. | Gemini (`gemini-4-hydrogen`) |
+| Read a report | A PDF, web page, web app or chart image into cited numbers. | Gemini: `gemini-4-carbon` for the stored reads done ahead of time, `gemini-4-hydrogen` in the app, where a person waits |
 
 ## Oxylabs: endpoints used and why
 
@@ -186,9 +186,13 @@ rarely carry a date, so `published` is often empty and `fetched_at` is the date 
 
 ## Gemini reader
 
-Model: `gemini-4-hydrogen`, chosen from the models the key lists (`client.models.list()`): the Gemini 4 models
-read the test chart equally well (mean error 0.06-0.09 points), hydrogen is the fastest of them (13 s against
-22-25 s) and the only one with 65k output tokens, which a 60-page report needs. `gemini-3.8-flash` was 10 times
+Two models, both from the list the key gives (`client.models.list()`). The stored reads the app runs on
+(`build_raw_reads.py`, `build_chart_read.py`: 1,628 rows, 1,607 found again in the source, 21 shown as unverified)
+use `gemini-4-carbon`, the strongest: nobody waits on them, and its re-read corrected one value the faster model
+had misread (drug therapy among women in Lapland, 15.3% on the page, read as 10.6%). Its 32k output limit means a
+60-page report is read in rounds. The "Read a report" box in the app uses `gemini-4-hydrogen`: the Gemini 4 models
+read the test chart equally well (mean error 0.06-0.09 points) and hydrogen is the fastest of them (13 s against
+22-25 s), which matters when a person is waiting. `gemini-3.8-flash` was 10 times
 less exact on the chart (mean 1.0, worst 4.4 points). `GEMINI_READER_MODEL` overrides.
 
 How a read works: PDFs go in as PDFs; web pages are rendered in Chrome (Playwright under Xvfb) into screenshots
@@ -234,6 +238,7 @@ python -m integrations.verify sbrt_pathway 21 [--out f.json]       # one check, 
 python -m integrations.scout 21 [--out f.json]
 python -m integrations.prerun [--areas 21,10] [--dry]              # fill the store: funded measures x counties, scouts
 python -m integrations.gemini_reader <url-or-file> [--hint "..."] [--out f.json]
+python -m integrations.build_raw_reads   # the registry reports -> data/raw/gemini/*.json (gemini-4-carbon, about 40 minutes)
 python -m integrations.build_chart_read  # Kuva 13 -> rows + accuracy file (about 1 minute)
 python -m integrations.syoparekisteri_app [--view N] [--append]    # the registry statistics app, all areas
 PYTHONPATH=. python integrations/build_extracted.py                # rebuild data/processed/gemini_extracted.jsonl

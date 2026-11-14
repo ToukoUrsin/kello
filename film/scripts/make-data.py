@@ -135,7 +135,7 @@ def main():
     Pi = facts["pilot"]
     assert (Pi["months"], Pi["now"], Pi["after"], Pi["by_year"], Pi["patients"], Pi["reviews"]) == (6, 18.5, 20.5, 2028, 71, 64), Pi
     assert set(Pi["actions"]) == {"surgeon_second_opinion", "sbrt_pathway"}, Pi
-    assert facts["read"]["count"] == 966 == r["count"], facts["read"]
+    assert facts["read"]["count"] == 1628 == r["count"], facts["read"]
     out = {"map": m, "read": r, "facts": facts}
     p = FILM / "src/data/film.json"
     p.parent.mkdir(parents=True, exist_ok=True)

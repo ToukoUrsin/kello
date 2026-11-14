@@ -267,13 +267,13 @@ export function eur(n: number | null | undefined): string {
   if (Math.abs(n) >= 1e3) return `€${nf0.format(Math.round(n / 1e3))}k`;
   return `€${nf0.format(n)}`;
 }
-/** Exact euros below a million, as the optimiser counts them: €211,500. Millions are short: €1M, €1.43M. */
+/** Exact euros below a million, as the optimiser counts them: €211,500. Millions are short: €1M, €1.42M. */
 export function eurx(n: number | null | undefined): string {
   if (n == null || Number.isNaN(n)) return "–";
-  // From a million up, money is shown to three figures at most: €1.43M, €17.4M, never €1,426,060.
+  // From a million up, money is shown to three figures at most: €1.42M, €17.4M, never €1,418,060.
   return Math.abs(n) >= 1e6 ? eur(n) : `€${nf0.format(Math.round(n))}`;
 }
-/** Millions in server-written text read like the rest of the page: €1,426,060 -> €1.43M. */
+/** Millions in server-written text read like the rest of the page: €1,418,060 -> €1.42M. */
 /** A cost per patient or per death rests on an estimated effect, so it is said in thousands. */
 export const eurAbout = (n: number | null | undefined) => (n == null ? "–" : `about ${eurx(Math.round(n / 1000) * 1000)}`);
 export const plainMoney = (t?: string | null) => (t ?? "").replace(/€(\d{1,3}(?:,\d{3}){2,})(?![\d,])/g, (_m, d: string) => eurx(Number(d.replace(/,/g, ""))));

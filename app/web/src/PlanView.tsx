@@ -149,7 +149,7 @@ const plainAreas = (t: string) => t
   .replace(/collaborative area/g, "university hospital area")
   .replace(/\bOYS\b/g, "Oulu university hospital");
 
-/** Millions in the stored text read like the rest of the page: €1,426,060 -> €1.43M, 17 418 643 € -> 17,4 milj. €. The stored text is not changed. */
+/** Millions in the stored text read like the rest of the page: €1,418,060 -> €1.42M, 17 418 643 € -> 17,4 milj. €. The stored text is not changed. */
 const plainMoneyFi = (t: string) => t.replace(/(?<![\d\u00a0 ])(\d{1,3}(?:[\u00a0 ]\d{3}){2,})[\u00a0 ]?€/g, (_m, d: string) => eurFi(Number(d.replace(/[\u00a0 ]/g, ""))));
 
 interface Props { scope: string; budget: number; setBudget: (n: number) => void; lang: Lang; setLang: (l: Lang) => void; objective: string | null; without: string[]; areas: AreaMeta[]; openCounty: () => void; openMonday?: () => void; fromNational?: boolean }

@@ -1,0 +1,526 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Lapin hyvinvointialue: 5,2 keuhkosyöpäpotilasta lisää parantavaan hoitoon vuodessa, 211 500 € vuodessa",
+ "markdown": "# Lapin hyvinvointialue: 5,2 keuhkosyöpäpotilasta lisää parantavaan hoitoon vuodessa, 211 500 € vuodessa\n\n> Kuroo umpeen 5,2 vuosittain puuttuvasta 12,1 potilaasta (43 %) · 211 500 € / 2 milj. € · 1,79 milj. € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää\n\n## Ero\n\nLapin hyvinvointialueella sadasta keuhkosyöpäpotilaasta 18 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero on noin 12 potilasta vuodessa. [^care_curative] Parhaaseen neljännekseen alueista verrattuna parantavaan pyrkivästä hoidosta puuttuu 16,8 potilasta vuodessa (vaihteluväli 12,6–20,8). [^model] Koko maahan verrattuna leikataan 7,2 potilasta vähemmän, ja parantavaan pyrkivää sädehoitoa saa 4,9 vähemmän. [^model] Pohjois-Suomen yhteistyöalueella diagnoosista hoidon alkuun kuluu 31,2 päivää, koko maassa 36,9. [^care_time_to_treatment] Yhteistyöalueen odotus ei ole koko maata pidempi, mutta Lapissa parantavaan pyrkivää hoitoa saa harvempi. [^care_time_to_treatment] [^care_curative] Osuus jää myös alle asukkaiden ikärakenteen perusteella odotetun 24,6 %:n. [^model] Osa erosta voi olla annettua mutta kirjaamatonta hoitoa. [^care_no_record]\n\n## Tavoite\n\nParantavaan pyrkivää hoitoa saavien keuhkosyöpäpotilaiden osuus nostetaan 18,5 %:sta 22,2 %:iin vuoteen 2028 mennessä: 5,2 potilasta lisää vuodessa (vaihteluväli 0,0–7,7), kustannus 211 500 € vuodessa eli noin 40 000 € lisäpotilasta kohti. [^care_curative][^model] Se kuroo umpeen 43 % mitatusta erosta koko maahan (12,1 potilasta vuodessa). [^model]\n\n## Rahoitettavat toimet\n\n| # | Toimi ja vastuutaho | Kustannus vuodessa | Potilaita lisää parantavaan hoitoon vuodessa (vaihteluväli) | Ensimmäinen askel tällä viikolla | Mittari: nyt → tavoite |\n|---|---|---|---|---|---|\n| | **Vaihe nolla: kirjaukset kuntoon (ei suoraa vaikutusta)** | | | | |\n| 0 | **Tarkista niiden potilaiden kertomukset, joilla ei ole hoitokirjausta**[^ev_recording_audit_1]. Syöpätautien ylilääkäri ja tietohallinnon kirjaamisvastaava | 8 000 € | 0,0 | Poimitaan 50 vuonna 2023 todettua potilasta, joilta hoitotieto puuttuu, ja tarkistetaan heidän potilaskertomuksensa tämän kuun aikana. | Potilaat, joilta hoitotieto puuttuu, osuus: 33,8 % → 27,5 % vuoteen 2027 mennessä |\n| | **Hyvinvointialue voi aloittaa maanantaina** | | | | |\n| 1 | **Stereotaktinen sädehoito varhaisvaiheen potilaille, joita ei voida leikata**[^ev_sbrt_pathway_1]. Syöpätautien ylilääkäri; yliopistosairaalan sädehoidon ylilääkäri | 30 400 € | 1,1 (0,0–2,3) | Kirjataan lähettämisen sääntö: jokainen I-asteen potilas, jota ei hyväksytä leikkaukseen, lähetetään samalla viikolla stereotaktiseen sädehoitoon. | Parantavaan hoitoon ohjautuneiden osuus: 18,5 % → 19,3 % vuoteen 2028 mennessä |\n| 2 | **Matkat ja majoitus maksetaan kaukana yliopistosairaalasta asuville**[^ev_travel_accommodation_support_1]. Syöpätautien ylilääkäri ja sosiaalityö; yliopistosairaalan potilashotelli | 43 600 € | 0,7 (0,0–0,7) | Nimetään yhteyshenkilö, joka varaa potilashotellin ja kuljetuksen jokaiselle parantavaan hoitoon yliopistosairaalaan lähetettävälle. | Parantavaan hoitoon ohjautuneiden osuus: 18,5 % → 19,0 % vuoteen 2028 mennessä |\n| 3 | **Kuntotesti ja esikuntoutus ennen kuin ketään pidetään liian huonokuntoisena parantavaan hoitoon**[^ev_prehab_fitness_assessment_1]. Keuhkosairauksien ylilääkäri; kuntoutuksen ja geriatrian vastuulääkärit | 37 500 € | 0,3 (0,0–0,3) | Päätetään, ettei yhtäkään I–III-asteen potilasta kirjata hoitoon soveltumattomaksi ilman rasituskoetta, ja varataan fysioterapiaryhmä. | Parantavaan hoitoon ohjautuneiden osuus: 18,5 % → 18,7 % vuoteen 2028 mennessä |\n| | **Vaatii yhteistyöalueen (yliopistosairaalan)** | | | | |\n| 4 | **Thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta**[^ev_surgeon_second_opinion_1]. Keuhkosairauksien ylilääkäri; yliopistosairaalan thoraxkirurgian ylilääkäri | 41 000 € | 1,7 (0,0–3,4) | Sovitaan yliopistosairaalan kanssa, että thoraxkirurgi osallistuu viikoittaiseen keuhkosyöpäkokoukseen, ja lähetetään viime neljänneksen leikkaamatta jääneet I–II-asteen potilaat uuteen arvioon. | Leikattujen osuus: 9,8 % → 11,0 % vuoteen 2028 mennessä |\n| 5 | **Viikoittainen etäkokous, jossa yliopistosairaalan erikoislääkärit käyvät läpi jokaisen I–III-asteen potilaan**[^ev_video_mdt_stage1_3_1]. Keuhkosairauksien ylilääkäri; yliopistosairaalan keuhkosyövän MDT-vastaava | 51 000 € | 1,4 (0,0–1,6) | Pyydetään yliopistosairaalalta kiinteä viikoittainen etäkokousaika ja listataan viime kuussa todetut I–III-asteen potilaat, joita siellä ei käsitelty. | Parantavaan hoitoon ohjautuneiden osuus: 18,5 % → 19,5 % vuoteen 2028 mennessä |\n| | **Yhteensä** | **211 500 €** | **5,2 (0,0–7,7)** | | |\n\nNäitä vaikutuksia ei ole mitattu yhdessäkään tutkimuksessa; jokaisen vaihteluvälin alaraja on nolla. Vaihteluvälit eivät summaudu kokonaisvälin suuruisiksi, koska toimilla on yhteinen yläraja. Kustannukset ovat oletuksia. [^model]\n\n## Vaatii kansallisen päätöksen (ei sisälly tähän budjettiin)\n\n- **Matala-annos-TT-seulonta pitkään tupakoineille**[^ev_ldct_screening_1]: STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus). 548 645 € vuodessa; arviolta 0,9 kuolemaa vähemmän vuodessa (0,2–2,4). Ei sisälly tähän budjettiin. Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi. [^model]\n\n## Mitä mitataan maanantaista alkaen\n\n- Parantavaan pyrkivää hoitoa saavien osuus: 18,5 % (2019–2023, mitattu) → 22,2 % vuoteen 2028 mennessä. [^care_curative][^model]\n- Potilaat, joilta hoitotieto puuttuu, osuus: 33,8 % → 27,5 % vuoteen 2027 mennessä. [^care_no_record][^model]\n- Leikattujen osuus: 9,8 % → 11,0 % vuoteen 2028 mennessä. [^care_surgery][^model]\n- Syöpärekisterin julkiset luvut kattavat vuodet 2019–2023; näitä seurataan kuukausittain alueen omista tiedoista. [^care_curative]\n\n## Mitä lisärahalla saa ja mitä ei\n\nKaikki tähän tavoitteeseen vaikuttavat toimet maksavat 211 500 €, eikä loput 1 788 500 € tuo mallissa yhtään lisäpotilasta parantavaan pyrkivään hoitoon: toimia rajoittaa tavoitettavissa oleva osa mitatusta erosta, ei raha. [^model] Matala-annos-TT-seulonta pitkään tupakoineille vaatii kansallisen päätöksen. [^model] Rahan muut käyttötavat näkyvät, kun toimet järjestetään vältettyjen kuolemien mukaan. [^model] Lapissa kuolee keuhkosyöpään noin 110 ihmistä vuodessa, ja tämän suunnitelman arvioidaan välttävän niistä 0,8 (vaihteluväli 0,0–2,3). [^deaths] [^model]\n\n## Pilottiehdotus\n\nKuusi kuukautta Lapin hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio. [^model]\n\n## Rajoitteet\n\n- Vaikutukset ovat oletuksia, eivät mittauksia. Vaihteluväli on pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä ala- ja ylärajalleen. [^model]\n- Osuuksia ei ole vakioitu levinneisyyden, toimintakyvyn, muiden sairauksien, kudostyypin, löytötavan, tupakoinnin, muualla annetun hoidon eikä kirjausten kattavuuden mukaan. Aluetason luvut eivät osoita syytä. [^model]\n- 33,8 %:lla potilaista ei ole hoitotietoa (koko maa 27,5 %). Osa voi olla kirjaamatonta hoitoa, joten kirjaukset kannattaa tarkistaa ennen johtopäätöksiä. [^care_no_record]",
+ "claims": [
+  {
+   "text": "Lapin hyvinvointialueella sadasta keuhkosyöpäpotilaasta 18 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero on noin 12 potilasta vuodessa.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Parhaaseen neljännekseen alueista verrattuna parantavaan pyrkivästä hoidosta puuttuu 16,8 potilasta vuodessa (vaihteluväli 12,6–20,8).",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Koko maahan verrattuna leikataan 7,2 potilasta vähemmän, ja parantavaan pyrkivää sädehoitoa saa 4,9 vähemmän.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Pohjois-Suomen yhteistyöalueella diagnoosista hoidon alkuun kuluu 31,2 päivää, koko maassa 36,9.",
+   "source_ids": [
+    "care_time_to_treatment"
+   ]
+  },
+  {
+   "text": "Yhteistyöalueen odotus ei ole koko maata pidempi, mutta Lapissa parantavaan pyrkivää hoitoa saa harvempi.",
+   "source_ids": [
+    "care_time_to_treatment",
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Osuus jää myös alle asukkaiden ikärakenteen perusteella odotetun 24,6 %:n.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Osa erosta voi olla annettua mutta kirjaamatonta hoitoa.",
+   "source_ids": [
+    "care_no_record"
+   ]
+  },
+  {
+   "text": "Parantavaan pyrkivää hoitoa saavien keuhkosyöpäpotilaiden osuus nostetaan 18,5 %:sta 22,2 %:iin vuoteen 2028 mennessä: 5,2 potilasta lisää vuodessa (vaihteluväli 0,0–7,7), kustannus 211 500 € vuodessa eli noin 40 000 € lisäpotilasta kohti.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Se kuroo umpeen 43 % mitatusta erosta koko maahan (12,1 potilasta vuodessa).",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Tarkista niiden potilaiden kertomukset, joilla ei ole hoitokirjausta**. Syöpätautien ylilääkäri ja tietohallinnon kirjaamisvastaava",
+   "source_ids": [
+    "ev_recording_audit_1"
+   ]
+  },
+  {
+   "text": "Stereotaktinen sädehoito varhaisvaiheen potilaille, joita ei voida leikata**. Syöpätautien ylilääkäri; yliopistosairaalan sädehoidon ylilääkäri",
+   "source_ids": [
+    "ev_sbrt_pathway_1"
+   ]
+  },
+  {
+   "text": "Matkat ja majoitus maksetaan kaukana yliopistosairaalasta asuville**. Syöpätautien ylilääkäri ja sosiaalityö; yliopistosairaalan potilashotelli",
+   "source_ids": [
+    "ev_travel_accommodation_support_1"
+   ]
+  },
+  {
+   "text": "Kuntotesti ja esikuntoutus ennen kuin ketään pidetään liian huonokuntoisena parantavaan hoitoon**. Keuhkosairauksien ylilääkäri; kuntoutuksen ja geriatrian vastuulääkärit",
+   "source_ids": [
+    "ev_prehab_fitness_assessment_1"
+   ]
+  },
+  {
+   "text": "Thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta**. Keuhkosairauksien ylilääkäri; yliopistosairaalan thoraxkirurgian ylilääkäri",
+   "source_ids": [
+    "ev_surgeon_second_opinion_1"
+   ]
+  },
+  {
+   "text": "Viikoittainen etäkokous, jossa yliopistosairaalan erikoislääkärit käyvät läpi jokaisen I–III-asteen potilaan**. Keuhkosairauksien ylilääkäri; yliopistosairaalan keuhkosyövän MDT-vastaava",
+   "source_ids": [
+    "ev_video_mdt_stage1_3_1"
+   ]
+  },
+  {
+   "text": "Näitä vaikutuksia ei ole mitattu yhdessäkään tutkimuksessa; jokaisen vaihteluvälin alaraja on nolla. Vaihteluvälit eivät summaudu kokonaisvälin suuruisiksi, koska toimilla on yhteinen yläraja. Kustannukset ovat oletuksia.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Matala-annos-TT-seulonta pitkään tupakoineille**: STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus). 548 645 € vuodessa; arviolta 0,9 kuolemaa vähemmän vuodessa (0,2–2,4). Ei sisälly tähän budjettiin. Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Parantavaan pyrkivää hoitoa saavien osuus: 18,5 % (2019–2023, mitattu) → 22,2 % vuoteen 2028 mennessä.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Potilaat, joilta hoitotieto puuttuu, osuus: 33,8 % → 27,5 % vuoteen 2027 mennessä.",
+   "source_ids": [
+    "care_no_record",
+    "model"
+   ]
+  },
+  {
+   "text": "Leikattujen osuus: 9,8 % → 11,0 % vuoteen 2028 mennessä.",
+   "source_ids": [
+    "care_surgery",
+    "model"
+   ]
+  },
+  {
+   "text": "Syöpärekisterin julkiset luvut kattavat vuodet 2019–2023; näitä seurataan kuukausittain alueen omista tiedoista.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Kaikki tähän tavoitteeseen vaikuttavat toimet maksavat 211 500 €, eikä loput 1 788 500 € tuo mallissa yhtään lisäpotilasta parantavaan pyrkivään hoitoon: toimia rajoittaa tavoitettavissa oleva osa mitatusta erosta, ei raha.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Matala-annos-TT-seulonta pitkään tupakoineille vaatii kansallisen päätöksen.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Rahan muut käyttötavat näkyvät, kun toimet järjestetään vältettyjen kuolemien mukaan.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Lapissa kuolee keuhkosyöpään noin 110 ihmistä vuodessa, ja tämän suunnitelman arvioidaan välttävän niistä 0,8 (vaihteluväli 0,0–2,3).",
+   "source_ids": [
+    "deaths",
+    "model"
+   ]
+  },
+  {
+   "text": "Kuusi kuukautta Lapin hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Vaikutukset ovat oletuksia, eivät mittauksia. Vaihteluväli on pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä ala- ja ylärajalleen.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Osuuksia ei ole vakioitu levinneisyyden, toimintakyvyn, muiden sairauksien, kudostyypin, löytötavan, tupakoinnin, muualla annetun hoidon eikä kirjausten kattavuuden mukaan. Aluetason luvut eivät osoita syytä.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "33,8 %:lla potilaista ei ole hoitotietoa (koko maa 27,5 %). Osa voi olla kirjaamatonta hoitoa, joten kirjaukset kannattaa tarkistaa ennen johtopäätöksiä.",
+   "source_ids": [
+    "care_no_record"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "Lisää voisi tuoda matala-annos-TT-seulonta pitkään tupakoineille, mutta se vaatii kansallisen päätöksen.",
+    "reason": "Clause 'Lisää voisi tuoda' cut: the source gives no figure showing screening would add curative-treatment patients; it only lists the measure as needing a national decision. Kept as 'Matala-annos-TT-seulonta pitkään tupakoineille vaatii kansallisen päätöksen.'"
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "Odotus ei ole pidempi, mutta parantavaan pyrkivää hoitoa saa harvempi.",
+    "reason": "The wait figure is published for the Pohjois-Suomen collaborative area, not the county; the sentence read as if it described Lapland. Rewritten to attribute the wait to the collaborative area and the curative share to Lapland."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Parantava hoito (mitattu; 2019–2023; lukenut Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), s. 14",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kellon malli: optimointi ja sen kirjatut oletukset (arvio; ks. Lähteet ja menetelmä)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "care_time_to_treatment": {
+   "title": "Päivät diagnoosista hoidon alkuun (arvio; 1.1.2018-30.6.2022; julkaistu yhteistyöalueelle; lukenut Gemini). Suomen Syöpärekisterin keuhkosyöpäraportti, s. 28",
+   "publisher": null,
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": null,
+   "kind": "estimated"
+  },
+  "care_no_record": {
+   "title": "Ei hoitotietoa (mitattu; 2019–2023; lukenut Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), s. 14",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "ev_recording_audit_1": {
+   "title": "The registry itself says part of the regional differences comes from recording practice.",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "year": 2026,
+   "design": "national registry quality report, Finland 2019-2023",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_sbrt_pathway_1": {
+   "title": "Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged.",
+   "url": "https://europepmc.org/article/MED/22553198",
+   "year": 2012,
+   "design": "population registry, Netherlands, elderly stage I patients",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_travel_accommodation_support_1": {
+   "title": "England: longer travel-time contrasts were associated with lower surgery odds; the first contrast was 0.88 (95% CI 0.70–1.11), not significant.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "year": 2009,
+   "design": "cancer registry cohort, Northern England",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_prehab_fitness_assessment_1": {
+   "title": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "year": 2025,
+   "design": "retrospective five-hospital cohort, Finland",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_surgeon_second_opinion_1": {
+   "title": "Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %.",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "year": 2013,
+   "design": "retrospective observational study, national audit linked to surgeon workforce data, England 2008-2009",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_video_mdt_stage1_3_1": {
+   "title": "A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative).",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "year": 2004,
+   "design": "before-after study, one district general hospital, England",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "care_surgery": {
+   "title": "Leikkaushoito (mitattu; 1.1.2018-30.6.2022; lukenut Gemini). Suomen Syöpärekisterin keuhkosyöpäraportti, s. 25-26",
+   "publisher": null,
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": null,
+   "kind": "measured"
+  },
+  "deaths": {
+   "title": "Keuhkosyöpäkuolemat ja ikävakioitu kuolleisuus alueittain, 2020-2024 (mitattu). Suomen Syöpärekisterin tilastot",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "21",
+ "budget_eur": 2000000.0,
+ "lang": "fi",
+ "objective": "curative",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 0,
+   "id": "recording_audit",
+   "name": "Tarkista niiden potilaiden kertomukset, joilla ei ole hoitokirjausta",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "33.8% of Lapland's patients have no treatment on record, 27.5% in Finland. Until those charts are checked, nobody knows how much of the gap is care."
+  },
+  {
+   "n": 1,
+   "id": "sbrt_pathway",
+   "name": "Stereotaktinen sädehoito varhaisvaiheen potilaille, joita ei voida leikata",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "21.8 of 100 patients get radiotherapy here, 28.8 in Finland. A patient who cannot be operated can still be cured this way, if someone refers them."
+  },
+  {
+   "n": 2,
+   "id": "travel_accommodation_support",
+   "name": "Matkat ja majoitus maksetaan kaukana yliopistosairaalasta asuville",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "People in Lapland live on average about 250 km from the university hospital, and curative radiotherapy means weeks of visits there."
+  },
+  {
+   "n": 3,
+   "id": "prehab_fitness_assessment",
+   "name": "Kuntotesti ja esikuntoutus ennen kuin ketään pidetään liian huonokuntoisena parantavaan hoitoon",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "18.5% are treated to cure here; Lapland's age structure predicts 24.6%. A fitness test makes sure 'too frail' is measured, not assumed."
+  },
+  {
+   "n": 4,
+   "id": "surgeon_second_opinion",
+   "name": "Thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "9.8 of 100 patients are operated here, 14.9 in Finland. That is about 7 patients a year."
+  },
+  {
+   "n": 5,
+   "id": "video_mdt_stage1_3",
+   "name": "Viikoittainen etäkokous, jossa yliopistosairaalan erikoislääkärit käyvät läpi jokaisen I–III-asteen potilaan",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "The specialists who decide on surgery and radiotherapy are 250 km away. A fixed weekly slot puts every Lapland patient in front of them."
+  }
+ ],
+ "pilot": {
+  "months": 6,
+  "actions": [
+   "surgeon_second_opinion",
+   "sbrt_pathway"
+  ],
+  "ask_first": [
+   {
+    "intervention_id": "surgeon_second_opinion",
+    "question_en": "Is every stage I–II patient from Lapland who is not accepted for surgery already reviewed by a chest surgeon?",
+    "question_fi": "Onko jokainen leikkauksesta hylätty I–II-asteen potilas jo thoraxkirurgin uudelleenarvioinnissa?",
+    "advice": "check_first",
+    "checked_at": "2026-11-14T01:05:32+00:00"
+   },
+   {
+    "intervention_id": "sbrt_pathway",
+    "question_en": "Is every stage I patient from Lapland who is not accepted for surgery already referred for precise radiotherapy?",
+    "question_fi": "Lähetetäänkö jokainen leikkauksesta hylätty I-asteen potilas jo täsmäsädehoidon arvioon?",
+    "advice": "narrow",
+    "checked_at": "2026-11-14T10:19:46+00:00"
+   },
+   {
+    "intervention_id": "video_mdt_stage1_3",
+    "question_en": "Is every stage I–III patient from Lapland discussed with the university hospital team before a curative decision?",
+    "question_fi": "Käsitelläänkö jokainen I–III-asteen potilas jo yliopistosairaalan työryhmässä ennen parantavasta hoidosta luopumista?",
+    "advice": "check_first",
+    "checked_at": "2026-11-14T01:06:43+00:00"
+   },
+   {
+    "intervention_id": "travel_accommodation_support",
+    "question_en": "Does the university hospital book transport, accommodation and a named contact for Lapland patients who travel for curative treatment?",
+    "question_fi": "Varaako yliopistosairaala jo kuljetuksen, majoituksen ja yhteyshenkilön kauas matkustaville potilaille?",
+    "advice": "narrow",
+    "checked_at": "2026-11-14T01:06:06+00:00"
+   }
+  ],
+  "audit": {
+   "weeks": 8,
+   "charts": 50,
+   "cost_eur": 8000,
+   "fields_en": [
+    "stage",
+    "fitness",
+    "biomarker tested",
+    "why no curative treatment",
+    "where treated"
+   ],
+   "fields_fi": [
+    "levinneisyysaste",
+    "toimintakyky",
+    "biomarkkeri tutkittu",
+    "miksi parantavaa hoitoa ei annettu",
+    "missä hoito annettiin"
+   ]
+  },
+  "comparison_en": "Vantaa and Kerava is the comparison because it has Finland's highest recorded curative share (35.6%): a reachable level, not a causal control.",
+  "comparison_fi": "Vantaa ja Kerava on vertailu, koska siellä kirjattu parantavan hoidon osuus on Suomen korkein (35,6 %): tavoiteltava taso, ei kausaalinen verrokki.",
+  "targets_en": "Start the two actions the audit says are new: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
+  "targets_fi": "Käynnistetään ne kaksi toimea, jotka tarkistus osoittaa uusiksi: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
+  "success": {
+   "charts_audited": 50,
+   "decisions_not_to_operate_reviewed": 22,
+   "decisions_changed": "count",
+   "referrals_made": "count",
+   "patients_moved": {
+    "model_estimate": 1.4,
+    "lo": 0,
+    "hi": 2.8,
+    "kind": "estimated"
+   }
+  },
+  "effect": {
+   "extra_curative_patients_per_year": {
+    "median": 2.84,
+    "lo": 0.0,
+    "hi": 5.68
+   },
+   "curative_share_now_pct": 18.5,
+   "curative_share_after_pct": 20.5,
+   "by_year": 2028,
+   "kind": "estimated"
+  },
+  "text_en": "Six months with Lapland and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+  "text_fi": "Kuusi kuukautta Lapin hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
+  "six_months": {
+   "patients_seen": {
+    "expected": 71.0,
+    "baseline": 71.0,
+    "comparison": 59.5,
+    "unit": "patients"
+   },
+   "no_surgery_decisions_reviewed": {
+    "expected": 22,
+    "baseline": 0,
+    "comparison": 15.6,
+    "unit": "decisions",
+    "not_operated": 64,
+    "stage_iv_share_pct": 59,
+    "basis_en": "64 patients are not operated in six months. Stage is not published by county; with Finland's stage mix (59% found at stage IV) about 22 of them have cancer that has not spread to other organs. Those are the decisions reviewed. The chart audit gives the county's own number."
+   },
+   "decisions_changed": {
+    "expected": 0.8,
+    "baseline": 0,
+    "comparison": null,
+    "unit": "decisions"
+   },
+   "referrals_made": {
+    "expected": 0.6,
+    "baseline": 0,
+    "comparison": null,
+    "unit": "referrals"
+   },
+   "comparison_area_id": "04",
+   "comparison_area_en": "Vantaa and Kerava"
+  },
+  "cannot_show_en": "20.5% is the model's estimate for these two actions by 2028, not a measurement. The pilot is judged on the work counted, not on a promised change in the county's share.",
+  "cannot_show_fi": "20,5 % on mallin arvio näistä kahdesta toimesta vuoteen 2028 mennessä, ei mittaus. Pilottia arvioidaan lasketun työn perusteella, ei luvatun osuuden muutoksen perusteella."
+ },
+ "action_studies": [
+  {
+   "id": "recording_audit",
+   "study_line_en": "Evidence: The registry itself says part of the regional differences comes from recording practice. (2026) · https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "why_here_en": "33.8% of Lapland's patients have no treatment on record, 27.5% in Finland. Until those charts are checked, nobody knows how much of the gap is care."
+  },
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "21.8 of 100 patients get radiotherapy here, 28.8 in Finland. A patient who cannot be operated can still be cured this way, if someone refers them."
+  },
+  {
+   "id": "travel_accommodation_support",
+   "study_line_en": "Evidence: England: each longer travel-time contrast had lower surgery odds; the first was 0.88 (95% CI 0.70–1.11), not significant (2009) · https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "why_here_en": "People in Lapland live on average about 250 km from the university hospital, and curative radiotherapy means weeks of visits there."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "18.5% are treated to cure here; Lapland's age structure predicts 24.6%. A fitness test makes sure 'too frail' is measured, not assumed."
+  },
+  {
+   "id": "surgeon_second_opinion",
+   "study_line_en": "Evidence: Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013) · https://europepmc.org/article/MED/23242439",
+   "why_here_en": "9.8 of 100 patients are operated here, 14.9 in Finland. That is about 7 patients a year."
+  },
+  {
+   "id": "video_mdt_stage1_3",
+   "study_line_en": "Evidence: A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004) · https://europepmc.org/article/MED/15237512",
+   "why_here_en": "The specialists who decide on surgery and radiotherapy are 250 km away. A fixed weekly slot puts every Lapland patient in front of them."
+  }
+ ],
+ "strip": {
+  "closes": 5.2,
+  "of": 12.1,
+  "pct": 43,
+  "deaths": null,
+  "spent": 211500.0,
+  "budget": 2000000.0,
+  "left": 1788500.0,
+  "saturated": true,
+  "lead_en": "Closes 5.2 of 12.1 missing patients a year (43%)",
+  "lead_fi": "Kuroo umpeen 5,2 vuosittain puuttuvasta 12,1 potilaasta (43 %)",
+  "money_en": "€211,500 of €2.00M",
+  "money_fi": "211 500 € / 2 milj. €",
+  "left_en": "€1.79M left: nothing else pays off at these assumptions",
+  "left_fi": "1,79 milj. € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää",
+  "text_en": "Closes 5.2 of 12.1 missing patients a year (43%) · €211,500 of €2.00M · €1.79M left: nothing else pays off at these assumptions",
+  "text_fi": "Kuroo umpeen 5,2 vuosittain puuttuvasta 12,1 potilaasta (43 %) · 211 500 € / 2 milj. € · 1,79 milj. € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää"
+ },
+ "written_sections": [
+  "Ero",
+  "Mitä lisärahalla saa ja mitä ei",
+  "Rajoitteet"
+ ],
+ "generated_at": "2026-11-14T11:10:59+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## Ero\nLapin hyvinvointialueella sadasta keuhkosyöpäpotilaasta 18 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero on noin 12 potilasta vuodessa. [^care_curative] Parhaaseen neljännekseen alueista verrattuna parantavaan pyrkivästä hoidosta puuttuu 16,8 potilasta vuodessa (vaihteluväli 12,6–20,8). [^model] Koko maahan verrattuna leikataan 7,2 potilasta vähemmän, ja parantavaan pyrkivää sädehoitoa saa 4,9 vähemmän. [^model] Pohjois-Suomen yhteistyöalueella diagnoosista hoidon alkuun kuluu 31,2 päivää, koko maassa 36,9. [^care_time_to_treatment] Odotus ei ole pidempi, mutta parantavaan pyrkivää hoitoa saa harvempi. [^care_time_to_treatment] [^care_curative] Osuus jää myös alle asukkaiden ikärakenteen perusteella odotetun 24,6 %:n. [^model] Osa erosta voi olla annettua mutta kirjaamatonta hoitoa. [^care_no_record]\n\n## Mitä lisärahalla saa ja mitä ei\nKaikki tähän tavoitteeseen vaikuttavat toimet maksavat 211 500 €, eikä loput 1 788 500 € tuo mallissa yhtään lisäpotilasta parantavaan pyrkivään hoitoon: toimia rajoittaa tavoitettavissa oleva osa mitatusta erosta, ei raha. [^model] Lisää voisi tuoda matala-annos-TT-seulonta pitkään tupakoineille, mutta se vaatii kansallisen päätöksen. [^model] Rahan muut käyttötavat näkyvät, kun toimet järjestetään vältettyjen kuolemien mukaan. [^model] Lapissa kuolee keuhkosyöpään noin 110 ihmistä vuodessa, ja tämän suunnitelman arvioidaan välttävän niistä 0,8 (vaihteluväli 0,0–2,3). [^deaths] [^model]\n\n## Rajoitteet\n- Vaikutukset ovat oletuksia, eivät mittauksia. Vaihteluväli on pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä ala- ja ylärajalleen. [^model]\n- Osuuksia ei ole vakioitu levinneisyyden, toimintakyvyn, muiden sairauksien, kudostyypin, löytötavan, tupakoinnin, muualla annetun hoidon eikä kirjausten kattavuuden mukaan. Aluetason luvut eivät osoita syytä. [^model]\n- 33,8 %:lla potilaista ei ole hoitotietoa (koko maa 27,5 %). Osa voi olla kirjaamatonta hoitoa, joten kirjaukset kannattaa tarkistaa ennen johtopäätöksiä. [^care_no_record]"
+}

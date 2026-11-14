@@ -297,7 +297,7 @@ function Lead({ data, funnel, funnelLoading = false, funnelRetry, onPick, openPl
         {data.national_lead && <div className="nationalresult" role="note">
           <span className="eyebrow">Finland, the result</span>
           <p>About <b className="num">{int(data.national_lead.patients_short_per_year)}</b> patients a year miss treatment that aims to cure; <b className="num">{int(data.national_lead.patients_short_in_seven_counties)}</b> are in seven counties.</p>
-          <p><a href="#/plan/FI?budget=5000000&objective=gap">A national plan</a> spends <b className="num">€1.43M</b> a year and reaches about <b className="num">{int(data.national_lead.plan_extra_curative_patients_per_year)}</b> patients (modelled).</p>
+          <p><a href="#/plan/FI?budget=5000000&objective=gap">A national plan</a> spends <b className="num">{eurx(data.national_lead.plan_spent_eur)}</b> a year and reaches about <b className="num">{int(data.national_lead.plan_extra_curative_patients_per_year)}</b> patients (modelled).</p>
         </div>}
         {data.pathway?.note_en && <p className="heroline pathwayline"><b>Where public data points:</b> treatment is the clearest county gap; Finland does not publish county stage-at-diagnosis or lung-cancer referral-to-specialist times.</p>}
         {r && r.chosen.length > 0 ? (

@@ -1,0 +1,220 @@
+{
+ "version": "v3-care-path-4",
+ "title": "North Savo: 1.5 more lung cancer patients a year treated to cure, for €61,690 a year",
+ "markdown": "# North Savo: 1.5 more lung cancer patients a year treated to cure, for €61,690 a year\n\n> Closes 1.5 of 3.2 missing patients a year (46%) · €61,690 of €1.00M · €938,310 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in North Savo, 24 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, 7.5 patients a year are missing from treatment that aims to cure (range 3.0 to 11.7) [^care_curative] [^model]. Against Finland as a whole, the shortfall of 3.2 patients a year is 3.2 fewer operated and 0.0 fewer given radiotherapy that aims to cure [^care_curative] [^model].\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 24.5% to 25.6% by 2028: 1.5 more patients a year (range 0.0–2.4), for €61,690 a year, about €42,000 per extra patient. [^care_curative][^model] That closes 46% of the measured shortfall against Finland as a whole (3.2 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €27,640 | 1.0 (0.0–1.0) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 24.5% → 25.3% by 2028 |\n| 2 | **Fitness test and training before anyone is ruled too frail for curative treatment**[^ev_prehab_fitness_assessment_1]. Chief physician of pulmonology; leads of rehabilitation and geriatrics | €34,050 | 0.5 (0.0–1.4) | Decide that no stage I-III patient is recorded as \"not fit\" without an exercise test, and book the physiotherapy group. | Share of patients who get treatment that aims to cure: 24.5% → 24.9% by 2028 |\n| | **Total** | **€61,690** | **1.5 (0.0–2.4)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €765,536 a year; modelled to avoid 1.3 deaths a year (0.3–3.4). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 24.5% (2019–2023, measured) → 25.6% by 2028. [^care_curative][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nThe remaining €938,310 buys nothing more in the model [^model]. The limit is the reachable part of the measured shortfall, not money [^model]. More would need a national decision on low-dose CT screening for long-term heavy smokers, or ranking measures by deaths avoided [^model]. Lung cancer causes about 93 deaths a year in North Savo, and this plan is modelled to avoid 0.2 of them (range 0.0–0.7) [^deaths] [^model].\n\n## Limits\n\n- Effect ranges are not probabilities. They run from every assumption at its lowest to every assumption at its highest, and the main figure uses published or central values [^model].\n- The expected county share is adjusted only for residents' age, not for stage at diagnosis, fitness, other illness, histology, smoking or recording completeness [^model]. County figures cannot show cause [^model].\n- A check found 0 of 3 measured outcomes moving with the estimated symptom-to-treatment clock beyond chance [^model].",
+ "claims": [
+  {
+   "text": "Of 100 lung cancer patients in North Savo, 24 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Compared with the best quarter of counties, 7.5 patients a year are missing from treatment that aims to cure (range 3.0 to 11.7) . Against Finland as a whole, the shortfall of 3.2 patients a year is 3.2 fewer operated and 0.0 fewer given radiotherapy that aims to cure .",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Raise the share of lung cancer patients treated to cure from 24.5% to 25.6% by 2028: 1.5 more patients a year (range 0.0–2.4), for €61,690 a year, about €42,000 per extra patient.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "That closes 46% of the measured shortfall against Finland as a whole (3.2 patients a year).",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**. Chief physician of oncology; chief of radiotherapy at the university hospital",
+   "source_ids": [
+    "ev_sbrt_pathway_1"
+   ]
+  },
+  {
+   "text": "Fitness test and training before anyone is ruled too frail for curative treatment**. Chief physician of pulmonology; leads of rehabilitation and geriatrics",
+   "source_ids": [
+    "ev_prehab_fitness_assessment_1"
+   ]
+  },
+  {
+   "text": "No trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Low-dose CT screening for long-term heavy smokers**: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €765,536 a year; modelled to avoid 1.3 deaths a year (0.3–3.4). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Share of patients treated to cure: 24.5% (2019–2023, measured) → 25.6% by 2028.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "The registry's public figures cover 2019–2023; count these each month from the county's own records.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "The remaining €938,310 buys nothing more in the model . The limit is the reachable part of the measured shortfall, not money . More would need a national decision on low-dose CT screening for long-term heavy smokers, or ranking measures by deaths avoided . Lung cancer causes about 93 deaths a year in North Savo, and this plan is modelled to avoid 0.2 of them (range 0.0–0.7) .",
+   "source_ids": [
+    "model",
+    "deaths"
+   ]
+  },
+  {
+   "text": "Effect ranges are not probabilities. They run from every assumption at its lowest to every assumption at its highest, and the main figure uses published or central values .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The expected county share is adjusted only for residents' age, not for stage at diagnosis, fitness, other illness, histology, smoking or recording completeness . County figures cannot show cause .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "A check found 0 of 3 measured outcomes moving with the estimated symptom-to-treatment clock beyond chance .",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "The estimated symptom-to-treatment clock is not used in this plan.",
+    "reason": "Not stated in the source; the material only calls the clock a secondary view and says days saved is not a headline number. The following sentence was minimally reworded to name the clock so it still reads on its own."
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "The remaining €938,310 buys nothing more in the model.",
+    "reason": "Carried a figure without a source marker. The supporting id is plainly the model (plan saturation note), so [^model] was added."
+   },
+   {
+    "sentence": "County shares are adjusted only for residents' age, not for stage at diagnosis, fitness, other illness, histology, smoking or recording completeness.",
+    "reason": "The measured county share is not adjusted. Only the expected share is adjusted for age, so the sentence was reworded to say that. It also lacked a source marker, so [^model] was added."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Treatment that aims to cure (measured; 2019–2023; read by Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), p. 14",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kello model: the optimiser and its stated assumptions (estimated; see Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "ev_sbrt_pathway_1": {
+   "title": "Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged.",
+   "url": "https://europepmc.org/article/MED/22553198",
+   "year": 2012,
+   "design": "population registry, Netherlands, elderly stage I patients",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_prehab_fitness_assessment_1": {
+   "title": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "year": 2025,
+   "design": "retrospective five-hospital cohort, Finland",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "deaths": {
+   "title": "Lung cancer deaths and age-standardised mortality by area, 2020-2024 (measured). Finnish Cancer Registry statistics",
+   "publisher": "Finnish Cancer Registry",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "13",
+ "budget_eur": 1000000.0,
+ "lang": "en",
+ "objective": "curative",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "sbrt_pathway",
+   "name": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "46.9 of 100 patients get radiotherapy here, 28.8 in Finland. A patient who cannot be operated can still be cured this way, if someone refers them."
+  },
+  {
+   "n": 2,
+   "id": "prehab_fitness_assessment",
+   "name": "Fitness test and training before anyone is ruled too frail for curative treatment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "24.5 of 100 patients are treated to cure in North Savo, 27.0 in Finland."
+  }
+ ],
+ "pilot": null,
+ "action_studies": [
+  {
+   "id": "sbrt_pathway",
+   "study_line_en": "Evidence: Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012) · https://europepmc.org/article/MED/22553198",
+   "why_here_en": "46.9 of 100 patients get radiotherapy here, 28.8 in Finland. A patient who cannot be operated can still be cured this way, if someone refers them."
+  },
+  {
+   "id": "prehab_fitness_assessment",
+   "study_line_en": "Evidence: Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025) · https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "why_here_en": "24.5 of 100 patients are treated to cure in North Savo, 27.0 in Finland."
+  }
+ ],
+ "strip": {
+  "closes": 1.5,
+  "of": 3.2,
+  "pct": 46,
+  "deaths": null,
+  "spent": 61690.0,
+  "budget": 1000000.0,
+  "left": 938310.0,
+  "saturated": true,
+  "lead_en": "Closes 1.5 of 3.2 missing patients a year (46%)",
+  "lead_fi": "Kuroo umpeen 1,5 vuosittain puuttuvasta 3,2 potilaasta (46 %)",
+  "money_en": "€61,690 of €1.00M",
+  "money_fi": "61 690 € / 1 milj. €",
+  "left_en": "€938,310 left: nothing else pays off at these assumptions",
+  "left_fi": "938 310 € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää",
+  "text_en": "Closes 1.5 of 3.2 missing patients a year (46%) · €61,690 of €1.00M · €938,310 left: nothing else pays off at these assumptions",
+  "text_fi": "Kuroo umpeen 1,5 vuosittain puuttuvasta 3,2 potilaasta (46 %) · 61 690 € / 1 milj. € · 938 310 € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää"
+ },
+ "written_sections": [
+  "The gap",
+  "What more money buys, and what it cannot",
+  "Limits"
+ ],
+ "generated_at": "2026-11-14T11:00:04+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in North Savo, 24 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, 7.5 patients a year are missing from treatment that aims to cure (range 3.0 to 11.7) [^care_curative] [^model]. Against Finland as a whole, the shortfall of 3.2 patients a year is 3.2 fewer operated and 0.0 fewer given radiotherapy that aims to cure [^care_curative] [^model].\n\n## What more money buys, and what it cannot\nThe remaining €938,310 buys nothing more in the model. The limit is the reachable part of the measured shortfall, not money [^model]. More would need a national decision on low-dose CT screening for long-term heavy smokers, or ranking measures by deaths avoided [^model]. Lung cancer causes about 93 deaths a year in North Savo, and this plan is modelled to avoid 0.2 of them (range 0.0–0.7) [^deaths] [^model].\n\n## Limits\n- Effect ranges are not probabilities. They run from every assumption at its lowest to every assumption at its highest, and the main figure uses published or central values [^model].\n- County shares are adjusted only for residents' age, not for stage at diagnosis, fitness, other illness, histology, smoking or recording completeness. County figures cannot show cause [^model].\n- The estimated symptom-to-treatment clock is not used in this plan. A check found 0 of 3 measured outcomes moving with it beyond chance [^model]."
+}
