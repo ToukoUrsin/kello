@@ -1,0 +1,3073 @@
+{
+ "asthma_copd_reimbursement_pct": {
+  "label_en": "Entitled to special reimbursement for asthma/COPD medicines",
+  "label_fi": "Erityiskorvattaviin lääkkeisiin kroonisen keuhkoastman ja sitä läheisesti muistuttavien kroonisten obstruktiivisten keuhkosairauksien vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 5085: Entitled to special refunds on medicines for chronic bronchial asthma and chronic obstructive pulmonary diseases closely resembling it on 31 December, as age-standardised % of total population",
+  "direction": "context",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_5085"
+  ]
+ },
+ "breast_5y_survival_pct": {
+  "label_en": "Breast cancer 5-year relative survival",
+  "label_fi": "Rintasyövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3625: Five-year relative survival rate of breast cancer patients, %",
+  "direction": "higher_is_better",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3625"
+  ]
+ },
+ "breast_deaths_n": {
+  "label_en": "Deaths, breast cancer (C50)",
+  "label_fi": "Kuolleet, rintasyöpä (C50)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause breast cancer (C50). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "breast_deaths_per_100k": {
+  "label_en": "Crude death rate, breast cancer (C50)",
+  "label_fi": "Yleinen kuolleisuusluku, rintasyöpä (C50) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause breast cancer (C50). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "breast_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, breast cancer (C50)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, rintasyöpä (C50) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (breast cancer (C50), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "breast_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, breast cancer (C50)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, rintasyöpä (C50)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (breast cancer (C50)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "breast_screening_participation_pct": {
+  "label_en": "Breast cancer screening participation",
+  "label_fi": "Rintasyövän seulontaan (mammografia) osallistuneiden osuus kutsutuista, %",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3621: Proportion of women invited to breast cancer screening (mammography) who attended, %",
+  "direction": "higher_is_better",
+  "pathway_step": "patient",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_3621"
+  ]
+ },
+ "cancer_deaths_n": {
+  "label_en": "Deaths, all cancers (C00-C97)",
+  "label_fi": "Kuolleet, syövät (C00-C97)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause all cancers (C00-C97). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "cancer_deaths_per_100k": {
+  "label_en": "Crude death rate, all cancers (C00-C97)",
+  "label_fi": "Yleinen kuolleisuusluku, syövät (C00-C97) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause all cancers (C00-C97). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "cancer_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, all cancers (C00-C97)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, syövät (C00-C97) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (all cancers (C00-C97), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "cancer_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, all cancers (C00-C97)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, syövät (C00-C97)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (all cancers (C00-C97)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "cancer_drug_reimbursement_index": {
+  "label_en": "Entitled to special reimbursement for cancer medicines (age-standardised)",
+  "label_fi": "Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",
+  "unit": "index",
+  "definition_en": "Sotkanet indicator 5093: Entitled to special refunds on medicines for cancer 31.12., age-standardised population share(%)",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_5093"
+  ]
+ },
+ "cancer_index_age_std": {
+  "label_en": "THL cancer morbidity index, age-standardised",
+  "label_fi": "Syöpäindeksi, ikävakioitu",
+  "unit": "index (FI=100)",
+  "definition_en": "Sotkanet indicator 5643: Cancer index, age-standardised",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_5643"
+  ]
+ },
+ "cervical_screening_participation_pct": {
+  "label_en": "Cervical cancer screening participation",
+  "label_fi": "Kohdunkaulasyövän seulontaan (papa) osallistuneiden osuus kutsutuista, %",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3620: Proportion of women invited to cervical cancer screening (smear test) who attended, %",
+  "direction": "higher_is_better",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3620"
+  ]
+ },
+ "cervix_5y_survival_pct": {
+  "label_en": "Cervical cancer 5-year relative survival",
+  "label_fi": "Kohdunkaulan syövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3626: Five-year relative survival rate of cervical cancer patients, %",
+  "direction": "higher_is_better",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3626"
+  ]
+ },
+ "colon_5y_survival_pct": {
+  "label_en": "Colon cancer 5-year relative survival",
+  "label_fi": "Paksunsuolen syövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3627: Five-year relative survival rate of bowel cancer patients, %",
+  "direction": "higher_is_better",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3627"
+  ]
+ },
+ "colon_deaths_n": {
+  "label_en": "Deaths, colon cancer (C18-C19)",
+  "label_fi": "Kuolleet, koolonin syöpä (C18, C19)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause colon cancer (C18-C19). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "colon_deaths_per_100k": {
+  "label_en": "Crude death rate, colon cancer (C18-C19)",
+  "label_fi": "Yleinen kuolleisuusluku, koolonin syöpä (C18, C19) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause colon cancer (C18-C19). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "colon_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, colon cancer (C18-C19)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, koolonin syöpä (C18, C19) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (colon cancer (C18-C19), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "colon_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, colon cancer (C18-C19)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, koolonin syöpä (C18, C19)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (colon cancer (C18-C19)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "continuity_of_care_coci": {
+  "label_en": "Continuity of care (COCI) in primary care physician visits",
+  "label_fi": "Hoidon jatkuvuus (COCI) perusterveydenhuollon avosairaanhoidon lääkärikäynneillä",
+  "unit": "index",
+  "definition_en": "Sotkanet indicator 5502: Continuity of care (COCI) in professional outpatient visits (doctor) in primary health care",
+  "direction": "higher_is_better",
+  "pathway_step": "primary",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_5502"
+  ]
+ },
+ "copd_deaths_n": {
+  "label_en": "Deaths, bronchitis and emphysema / COPD (J40-J44, J47)",
+  "label_fi": "Kuolleet, keuhkoputkentulehdus ja keuhkolaajentuma (J40-J44, J47)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause bronchitis and emphysema / COPD (J40-J44, J47). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "copd_deaths_per_100k": {
+  "label_en": "Crude death rate, bronchitis and emphysema / COPD (J40-J44, J47)",
+  "label_fi": "Yleinen kuolleisuusluku, keuhkoputkentulehdus ja keuhkolaajentuma (J40-J44, J47) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause bronchitis and emphysema / COPD (J40-J44, J47). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "copd_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, bronchitis and emphysema / COPD (J40-J44, J47)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, keuhkoputkentulehdus ja keuhkolaajentuma (J40-J44, J47) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (bronchitis and emphysema / COPD (J40-J44, J47), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "copd_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, bronchitis and emphysema / COPD (J40-J44, J47)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, keuhkoputkentulehdus ja keuhkolaajentuma (J40-J44, J47)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (bronchitis and emphysema / COPD (J40-J44, J47)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "copd_hospitalisations_per_100k": {
+  "label_en": "Hospital inpatient periods for COPD, age 15+, per 100,000, standardised",
+  "label_fi": "15 vuotta täyttäneiden hoitojaksot sairaalan vuodeosastolla keuhkoahtaumataudin vuoksi / 100 000 asukasta, vakioitu",
+  "unit": "per 100,000",
+  "definition_en": "Sotkanet indicator 5047: Treatment period for children 15 years and older admitted to a bed ward for the treatment of chronic airflow obstruction per 100,000 inhabitants, adjusted",
+  "direction": "higher_is_worse",
+  "pathway_step": "patient",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_5047"
+  ]
+ },
+ "copd_share_of_gp_visit_reasons_pct": {
+  "label_en": "COPD as reason for primary care physician visit, % of recorded reasons",
+  "label_fi": "Keuhkoahtaumatauti perusterveydenhuollon lääkärin avosairaanhoidon vastaanoton käyntisyynä, % kirjatuista käyntisyistä",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 5018: Chronic airflow obstruction as the reason for outpatient visit to primary health care physician, % of recorded reasons for visits",
+  "direction": "context",
+  "pathway_step": "primary",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_5018"
+  ]
+ },
+ "crc_screening_participation_pct": {
+  "label_en": "Colorectal cancer screening participation",
+  "label_fi": "Suolistosyövän seulontaan osallistuneiden osuus kutsutuista, %",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 6103: Proportion of invited to colorectal cancer screening who attended, %",
+  "direction": "higher_is_better",
+  "pathway_step": "patient",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_6103"
+  ]
+ },
+ "daily_smokers_65plus_pct": {
+  "label_en": "Daily smokers, aged 65+",
+  "label_fi": "Päivittäin tupakoivien osuus (%), 65 vuotta täyttäneet",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 4406: Daily smokers (%), age 65 and over",
+  "direction": "higher_is_worse",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2022",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_4406"
+  ]
+ },
+ "daily_smokers_low_education_pct": {
+  "label_en": "Daily smokers, low education",
+  "label_fi": "Päivittäin tupakoivien osuus (%), matala koulutus",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 4408: Daily smokers (%), low-level education",
+  "direction": "higher_is_worse",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2022",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_4408"
+  ]
+ },
+ "daily_smokers_pct": {
+  "label_en": "Daily smokers, adults",
+  "label_fi": "Päivittäin tupakoivien osuus (%)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 4404: Daily smokers (%)",
+  "direction": "higher_is_worse",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2022",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_4404"
+  ]
+ },
+ "education_level_index": {
+  "label_en": "Measure of educational level",
+  "label_fi": "Koulutustasomittain",
+  "unit": "index",
+  "definition_en": "Sotkanet indicator 180: Measure of educational level",
+  "direction": "context",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_180"
+  ]
+ },
+ "forgone_care_due_to_money_pct": {
+  "label_en": "Had to cut back on food, medicines or doctor visits for lack of money",
+  "label_fi": "Rahanpuutteen vuoksi ruoasta, lääkkeistä tai lääkärikäynneistä tinkimään joutuneiden osuus (%)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 4263: Going short of food, medicines or physician visits because of lack of money (%)",
+  "direction": "higher_is_worse",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2022",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_4263"
+  ]
+ },
+ "gp_access_15_30d_pct": {
+  "label_en": "GP outpatient visits realised in 15-30 days of first contact",
+  "label_fi": "Avosairaanhoidon lääkärikäynnit, odotusaika 15-30 vrk varhaisimmasta aikaleimasta, % hoitoonpääsykäynneistä",
+  "unit": "%",
+  "definition_en": "THL Avohilmo cube 'Hoitoonpääsy perusterveydenhuollossa varhaisimmasta aikaleimasta toteutuneeseen käyntiin': share of access-to-care visits (physician, outpatient medical care) by waiting-time band, measured from the earliest recorded timestamp (contact / assessment of need) to the realised visit.",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026 (year to date)",
+  "periods": [
+   "2025",
+   "2026 (year to date)"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_avohpaasy_gp_2025_pct",
+   "thl_avohpaasy_gp_2026_pct"
+  ]
+ },
+ "gp_access_31_90d_pct": {
+  "label_en": "GP outpatient visits realised in 31-90 days of first contact",
+  "label_fi": "Avosairaanhoidon lääkärikäynnit, odotusaika 31-90 vrk varhaisimmasta aikaleimasta, % hoitoonpääsykäynneistä",
+  "unit": "%",
+  "definition_en": "THL Avohilmo cube 'Hoitoonpääsy perusterveydenhuollossa varhaisimmasta aikaleimasta toteutuneeseen käyntiin': share of access-to-care visits (physician, outpatient medical care) by waiting-time band, measured from the earliest recorded timestamp (contact / assessment of need) to the realised visit.",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026 (year to date)",
+  "periods": [
+   "2025",
+   "2026 (year to date)"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_avohpaasy_gp_2025_pct",
+   "thl_avohpaasy_gp_2026_pct"
+  ]
+ },
+ "gp_access_8_14d_pct": {
+  "label_en": "GP outpatient visits realised in 8-14 days of first contact",
+  "label_fi": "Avosairaanhoidon lääkärikäynnit, odotusaika 8-14 vrk varhaisimmasta aikaleimasta, % hoitoonpääsykäynneistä",
+  "unit": "%",
+  "definition_en": "THL Avohilmo cube 'Hoitoonpääsy perusterveydenhuollossa varhaisimmasta aikaleimasta toteutuneeseen käyntiin': share of access-to-care visits (physician, outpatient medical care) by waiting-time band, measured from the earliest recorded timestamp (contact / assessment of need) to the realised visit.",
+  "direction": "context",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026 (year to date)",
+  "periods": [
+   "2025",
+   "2026 (year to date)"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_avohpaasy_gp_2025_pct",
+   "thl_avohpaasy_gp_2026_pct"
+  ]
+ },
+ "gp_access_over_90d_pct": {
+  "label_en": "GP outpatient visits realised after more than 90 days of first contact",
+  "label_fi": "Avosairaanhoidon lääkärikäynnit, odotusaika yli 90 vrk varhaisimmasta aikaleimasta, % hoitoonpääsykäynneistä",
+  "unit": "%",
+  "definition_en": "THL Avohilmo cube 'Hoitoonpääsy perusterveydenhuollossa varhaisimmasta aikaleimasta toteutuneeseen käyntiin': share of access-to-care visits (physician, outpatient medical care) by waiting-time band, measured from the earliest recorded timestamp (contact / assessment of need) to the realised visit.",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026 (year to date)",
+  "periods": [
+   "2025",
+   "2026 (year to date)"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_avohpaasy_gp_2025_pct",
+   "thl_avohpaasy_gp_2026_pct"
+  ]
+ },
+ "gp_access_visits_n": {
+  "label_en": "GP access-to-care visits with a recorded waiting time",
+  "label_fi": "Avosairaanhoidon lääkärin hoitoonpääsykäynnit, joille odotusaika kirjattu",
+  "unit": "visits",
+  "definition_en": "Denominator of the gp_access_* shares (all realised visits with a waiting time, physicians, outpatient medical care).",
+  "direction": "context",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026 (year to date)",
+  "periods": [
+   "2025",
+   "2026 (year to date)"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_avohpaasy_gp_2025_n",
+   "thl_avohpaasy_gp_2026_n"
+  ]
+ },
+ "gp_access_within_7d_pct": {
+  "label_en": "GP outpatient visits realised within 7 days of first contact",
+  "label_fi": "Avosairaanhoidon lääkärikäynnit, odotusaika 0-7 vrk varhaisimmasta aikaleimasta, % hoitoonpääsykäynneistä",
+  "unit": "%",
+  "definition_en": "THL Avohilmo cube 'Hoitoonpääsy perusterveydenhuollossa varhaisimmasta aikaleimasta toteutuneeseen käyntiin': share of access-to-care visits (physician, outpatient medical care) by waiting-time band, measured from the earliest recorded timestamp (contact / assessment of need) to the realised visit.",
+  "direction": "higher_is_better",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026 (year to date)",
+  "periods": [
+   "2025",
+   "2026 (year to date)"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_avohpaasy_gp_2025_pct",
+   "thl_avohpaasy_gp_2026_pct"
+  ]
+ },
+ "kela_new_entitlements_breast_n": {
+  "label_en": "New special reimbursement entitlements, breast cancer",
+  "label_fi": "Alkaneet erityiskorvausoikeudet, rintasyöpä (115)",
+  "unit": "persons",
+  "definition_en": "Kela entitlement code 115: number of special reimbursement entitlements for medicines that started during the year.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_breast_per_100k": {
+  "label_en": "New special reimbursement entitlements per 100,000, breast cancer",
+  "label_fi": "Alkaneet erityiskorvausoikeudet / 100 000 as., rintasyöpä (115)",
+  "unit": "per 100,000",
+  "definition_en": "Kela code 115 new entitlements / year-end population (Statistics Finland 11ra) x 100,000. Crude; computed by the pipeline.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_gynaecological_n": {
+  "label_en": "New special reimbursement entitlements, gynaecological cancers",
+  "label_fi": "Alkaneet erityiskorvausoikeudet, gynekologiset syövät (128)",
+  "unit": "persons",
+  "definition_en": "Kela entitlement code 128: number of special reimbursement entitlements for medicines that started during the year.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_gynaecological_per_100k": {
+  "label_en": "New special reimbursement entitlements per 100,000, gynaecological cancers",
+  "label_fi": "Alkaneet erityiskorvausoikeudet / 100 000 as., gynekologiset syövät (128)",
+  "unit": "per 100,000",
+  "definition_en": "Kela code 128 new entitlements / year-end population (Statistics Finland 11ra) x 100,000. Crude; computed by the pipeline.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_haematological_n": {
+  "label_en": "New special reimbursement entitlements, leukaemias and other malignant blood diseases",
+  "label_fi": "Alkaneet erityiskorvausoikeudet, pahanlaatuiset veritaudit (117)",
+  "unit": "persons",
+  "definition_en": "Kela entitlement code 117: number of special reimbursement entitlements for medicines that started during the year.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_haematological_per_100k": {
+  "label_en": "New special reimbursement entitlements per 100,000, leukaemias and other malignant blood diseases",
+  "label_fi": "Alkaneet erityiskorvausoikeudet / 100 000 as., pahanlaatuiset veritaudit (117)",
+  "unit": "per 100,000",
+  "definition_en": "Kela code 117 new entitlements / year-end population (Statistics Finland 11ra) x 100,000. Crude; computed by the pipeline.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_other_malignant_n": {
+  "label_en": "New special reimbursement entitlements, other malignant tumours (includes lung cancer)",
+  "label_fi": "Alkaneet erityiskorvausoikeudet, muut pahanlaatuiset kasvaimet (130)",
+  "unit": "persons",
+  "definition_en": "Kela entitlement code 130: number of special reimbursement entitlements for medicines that started during the year.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_other_malignant_per_100k": {
+  "label_en": "New special reimbursement entitlements per 100,000, other malignant tumours (includes lung cancer)",
+  "label_fi": "Alkaneet erityiskorvausoikeudet / 100 000 as., muut pahanlaatuiset kasvaimet (130)",
+  "unit": "per 100,000",
+  "definition_en": "Kela code 130 new entitlements / year-end population (Statistics Finland 11ra) x 100,000. Crude; computed by the pipeline.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_prostate_n": {
+  "label_en": "New special reimbursement entitlements, prostate cancer",
+  "label_fi": "Alkaneet erityiskorvausoikeudet, eturauhassyöpä (116)",
+  "unit": "persons",
+  "definition_en": "Kela entitlement code 116: number of special reimbursement entitlements for medicines that started during the year.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "kela_new_entitlements_prostate_per_100k": {
+  "label_en": "New special reimbursement entitlements per 100,000, prostate cancer",
+  "label_fi": "Alkaneet erityiskorvausoikeudet / 100 000 as., eturauhassyöpä (116)",
+  "unit": "per 100,000",
+  "definition_en": "Kela code 116 new entitlements / year-end population (Statistics Finland 11ra) x 100,000. Crude; computed by the pipeline.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "kela_special_reimbursement"
+  ]
+ },
+ "km_to_university_hospital": {
+  "label_en": "Distance to nearest university hospital (population-weighted, approx. road km)",
+  "label_fi": "Etäisyys lähimpään yliopistosairaalaan (väestöpainotettu, arvioitu tiekilometri)",
+  "unit": "km",
+  "definition_en": "Population-weighted mean over municipalities of great-circle distance from municipality polygon centroid to the nearest of the five university hospitals (HUS Meilahti, TYKS, TAYS, KYS, OYS), x 1.3 road factor; population 31 Dec 2025. Geometric approximation, not routed travel distance.",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "osm_nominatim_university_hospitals"
+  ]
+ },
+ "liver_deaths_n": {
+  "label_en": "Deaths, primary liver cancer (C22)",
+  "label_fi": "Kuolleet, primaarinen maksasyöpä (C22)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause primary liver cancer (C22). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "liver_deaths_per_100k": {
+  "label_en": "Crude death rate, primary liver cancer (C22)",
+  "label_fi": "Yleinen kuolleisuusluku, primaarinen maksasyöpä (C22) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause primary liver cancer (C22). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "liver_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, primary liver cancer (C22)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, primaarinen maksasyöpä (C22) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (primary liver cancer (C22), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "liver_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, primary liver cancer (C22)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, primaarinen maksasyöpä (C22)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (primary liver cancer (C22)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "low_income_rate_pct": {
+  "label_en": "At-risk-of-poverty rate",
+  "label_fi": "Kunnan yleinen pienituloisuusaste",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3099: General at-risk-of-poverty rate for the municipality",
+  "direction": "context",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3099"
+  ]
+ },
+ "lung_5y_survival_pct": {
+  "label_en": "Lung cancer 5-year relative survival",
+  "label_fi": "Keuhkosyövän 5 vuoden suhteellinen elossaololuku",
+  "unit": "%",
+  "definition_en": "NORDCAN age-standardised 5-year relative survival, lung (incl. trachea), latest 5-year period. National only.",
+  "direction": "higher_is_better",
+  "pathway_step": "outcome",
+  "n_areas": 0,
+  "has_national": true,
+  "latest_period": "2020-2024",
+  "periods": [
+   "2020-2024"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "nordcan_survival"
+  ]
+ },
+ "lung_cases_5y_n": {
+  "label_en": "New lung cancer cases 2019-2023",
+  "label_fi": "Uudet keuhkosyövät 2019-2023",
+  "unit": "cases",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report: number of new lung cancers diagnosed 2019-2023 (denominator of the treatment shares).",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_cases_n": {
+  "label_en": "New lung cancer cases per year",
+  "label_fi": "Uudet keuhkosyöpätapaukset vuodessa",
+  "unit": "cases",
+  "definition_en": "NORDCAN incidence count (API field total), lung. National only.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 0,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2023"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "nordcan_rates"
+  ]
+ },
+ "lung_curative_intent_pct": {
+  "label_en": "Lung cancer patients who received curative-intent treatment",
+  "label_fi": "Parantavaan hoitoon ohjautuneet keuhkosyöpäpotilaat",
+  "unit": "%",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report: share of new lung cancer patients diagnosed 2019-2023 in treatment category 'Parantava' (first-line treatment modality within 12 months, from the hospital care register HILMO), by county of residence. Crude share, not age- or stage-adjusted.",
+  "direction": "higher_is_better",
+  "pathway_step": "treatment",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_deaths_n": {
+  "label_en": "Deaths, cancer of larynx, trachea and lung (C32-C34)",
+  "label_fi": "Kuolleet, kurkunpään, henkitorven ja keuhkon syöpä (C32-C34)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause cancer of larynx, trachea and lung (C32-C34). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "lung_deaths_per_100k": {
+  "label_en": "Crude death rate, cancer of larynx, trachea and lung (C32-C34)",
+  "label_fi": "Yleinen kuolleisuusluku, kurkunpään, henkitorven ja keuhkon syöpä (C32-C34) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause cancer of larynx, trachea and lung (C32-C34). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "lung_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, cancer of larynx, trachea and lung (C32-C34)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, kurkunpään, henkitorven ja keuhkon syöpä (C32-C34) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (cancer of larynx, trachea and lung (C32-C34), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "lung_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, cancer of larynx, trachea and lung (C32-C34)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, kurkunpään, henkitorven ja keuhkon syöpä (C32-C34)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (cancer of larynx, trachea and lung (C32-C34)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "lung_disease_index_age_std": {
+  "label_en": "THL chronic lung disease morbidity index, age-standardised",
+  "label_fi": "Keuhkosairausindeksi, ikävakioitu",
+  "unit": "index (FI=100)",
+  "definition_en": "Sotkanet indicator 5657: Lung diseases index, age-standardised",
+  "direction": "context",
+  "pathway_step": "patient",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_5657"
+  ]
+ },
+ "lung_disease_pyll_per_100k": {
+  "label_en": "Potential years of life lost (ages 25-80) due to lung diseases per 100,000",
+  "label_fi": "Keuhkosairauksien vuoksi menetetyt elinvuodet (PYLL) ikävälillä 25 - 80 vuotta / 100 000 vastaavan ikäistä",
+  "unit": "per 100,000",
+  "definition_en": "Sotkanet indicator 4193: Potential years of life lost (PYLL) due to pulmonary diseases for people aged 25 to 80 per 100 000 persons of the same age",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_4193"
+  ]
+ },
+ "lung_incidence_asr_per_100k": {
+  "label_en": "Lung cancer incidence, age-standardised (Nordic)",
+  "label_fi": "Keuhkosyövän ilmaantuvuus, ikävakioitu (Pohjoismaat)",
+  "unit": "per 100,000",
+  "definition_en": "NORDCAN incidence rate, API field asr_n. National only; county-level incidence is published by the Finnish Cancer Registry.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 0,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2023"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "nordcan_rates"
+  ]
+ },
+ "lung_incidence_per_100k": {
+  "label_en": "Lung cancer incidence, crude, 2019-2023",
+  "label_fi": "Keuhkosyövän ilmaantuvuus 2019-2023, vakioimaton",
+  "unit": "per 100,000 per year",
+  "definition_en": "New lung cancers 2019-2023 (Finnish Cancer Registry quality report) / sum of year-end populations 2019-2023 (Statistics Finland 11ra) x 100,000. Crude; computed by the pipeline from two measured sources.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_life_prolonging_treatment_pct": {
+  "label_en": "Lung cancer patients whose first treatment was life-prolonging (non-curative) oncological treatment",
+  "label_fi": "Jarruttavaa hoitoa saaneet keuhkosyöpäpotilaat",
+  "unit": "%",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report: share of new lung cancer patients diagnosed 2019-2023 in treatment category 'Jarruttava' (first-line treatment modality within 12 months, from the hospital care register HILMO), by county of residence. Crude share, not age- or stage-adjusted.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_mdt_recorded_pct": {
+  "label_en": "Lung cancer patients with a recorded multidisciplinary team (MDT) meeting",
+  "label_fi": "Keuhkosyöpäpotilaat, joilla kirjattu MDT-käsittely",
+  "unit": "%",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report: share of new lung cancer patients diagnosed 2019-2023 in treatment category 'MDT-käsittely' (first-line treatment modality within 12 months, from the hospital care register HILMO), by county of residence. Crude share, not age- or stage-adjusted.",
+  "direction": "higher_is_better",
+  "pathway_step": "diagnosis",
+  "n_areas": 18,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "11",
+   "14",
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_mortality_asr_per_100k": {
+  "label_en": "Lung cancer mortality, age-standardised (Nordic)",
+  "label_fi": "Keuhkosyöpäkuolleisuus, ikävakioitu (Pohjoismaat)",
+  "unit": "per 100,000",
+  "definition_en": "NORDCAN mortality rate, API field asr_n. National only.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 0,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2023"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "nordcan_rates"
+  ]
+ },
+ "lung_no_treatment_record_pct": {
+  "label_en": "Lung cancer patients with no treatment information in the care register",
+  "label_fi": "Keuhkosyöpäpotilaat, joilla ei hoitotietoa",
+  "unit": "%",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report: share of new lung cancer patients diagnosed 2019-2023 in treatment category 'Ei hoitotietoa' (first-line treatment modality within 12 months, from the hospital care register HILMO), by county of residence. Crude share, not age- or stage-adjusted.",
+  "direction": "higher_is_worse",
+  "pathway_step": "treatment",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_stage_known_pct": {
+  "label_en": "Lung cancers with stage information recorded",
+  "label_fi": "Keuhkosyövät, joilla levinneisyystieto",
+  "unit": "%",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report, stage coverage table: 100 minus the share with 'Ei tietoa' (no stage information), new cases 2019-2023. National only in table form.",
+  "direction": "higher_is_better",
+  "pathway_step": "diagnosis",
+  "n_areas": 0,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "lung_symptomatic_care_only_pct": {
+  "label_en": "Lung cancer patients with symptomatic (palliative) care as treatment modality",
+  "label_fi": "Oireenmukaista hoitoa saaneet keuhkosyöpäpotilaat",
+  "unit": "%",
+  "definition_en": "Finnish Cancer Registry lung cancer quality report: share of new lung cancer patients diagnosed 2019-2023 in treatment category 'Oireenmukainen' (first-line treatment modality within 12 months, from the hospital care register HILMO), by county of residence. Crude share, not age- or stage-adjusted.",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2019-2023",
+  "periods": [
+   "2019-2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "fcr_lung_quality_report"
+  ]
+ },
+ "mean_age_years": {
+  "label_en": "Mean age of population",
+  "label_fi": "Keski-ikä, molemmat sukupuolet",
+  "unit": "years",
+  "definition_en": "Statistics Finland table 11ra, content 'Keski-ikä, molemmat sukupuolet', by wellbeing services county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_11ra"
+  ]
+ },
+ "nurse_wait_over_7d_pct": {
+  "label_en": "Non-urgent nurse visits with a wait over 7 days",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon sairaan-/terveydenhoitajan kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 6412: Waiting time for elective outpatient medical visit (nurses and health care nurses) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_6412"
+  ]
+ },
+ "nurse_wait_over_7d_pct_oct": {
+  "label_en": "Non-urgent nurse visits with a wait over 7 days (October snapshot, older series)",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon sairaan-/terveydenhoitajan kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä (lokakuun tilanne) (-2023)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 5499: Waiting time for elective outpatient medical visit (nurses and health care nurses) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept (October) (up to 2023)",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_5499"
+  ]
+ },
+ "oncology_assessment_over_180d_pct": {
+  "label_en": "Waiting for assessment of need for care over 180 days (oncology)",
+  "label_fi": "Yli 180 vrk hoidon tarpeen arviointia odottaneet, % (syöpätaudit)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Yli 180 vrk hoidon tarpeen arviointia odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "treatment",
+  "n_areas": 16,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2025-10-31",
+   "2026-04-30",
+   "2026-05-31",
+   "2026-07-31",
+   "2026-08-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "10",
+   "11",
+   "12",
+   "15",
+   "18",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_assessment_over_180d_pct"
+  ]
+ },
+ "oncology_assessment_over_90d_pct": {
+  "label_en": "Waiting for assessment of need for care over 90 days (oncology)",
+  "label_fi": "Yli 90 vrk hoidon tarpeen arviointia odottaneet, % (syöpätaudit)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Yli 90 vrk hoidon tarpeen arviointia odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "treatment",
+  "n_areas": 17,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2025-10-31",
+   "2026-04-30",
+   "2026-05-31",
+   "2026-07-31",
+   "2026-08-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "10",
+   "11",
+   "12",
+   "18",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_assessment_over_90d_pct"
+  ]
+ },
+ "oncology_assessment_waiting_n": {
+  "label_en": "Patients waiting for assessment of need for care (first specialist visit) (oncology)",
+  "label_fi": "Hoidon tarpeen arviointia odottaneet (syöpätaudit)",
+  "unit": "patients",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Hoidon tarpeen arviointia odottaneet'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 17,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2025-10-31",
+   "2026-04-30",
+   "2026-05-31",
+   "2026-07-31",
+   "2026-08-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "10",
+   "11",
+   "12",
+   "18",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_assessment_waiting_n"
+  ]
+ },
+ "oncology_outpatient_visits": {
+  "label_en": "Specialist outpatient visits, oncology and radiotherapy",
+  "label_fi": "Erikoissairaanhoidon avohoitokäynnit, syöpätaudit ja sädehoito",
+  "unit": "visits",
+  "definition_en": "Sotkanet indicator 2475: Outpatient visits in specialised health care, oncology and radiotherapy",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_2475"
+  ]
+ },
+ "oncology_queue_over_180d_pct": {
+  "label_en": "Waiting for treatment over 180 days (oncology)",
+  "label_fi": "Yli 180 vrk hoitoa odottaneet, % (syöpätaudit)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Yli 180 vrk hoitoa odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "treatment",
+  "n_areas": 20,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-06-30",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "08",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_queue_over_180d_pct"
+  ]
+ },
+ "oncology_queue_over_90d_pct": {
+  "label_en": "Waiting for treatment over 90 days (oncology)",
+  "label_fi": "Yli 90 vrk hoitoa odottaneet, % (syöpätaudit)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Yli 90 vrk hoitoa odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "treatment",
+  "n_areas": 20,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-06-30",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "08",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_queue_over_90d_pct"
+  ]
+ },
+ "oncology_queue_waiting_n": {
+  "label_en": "Patients waiting for treatment (oncology)",
+  "label_fi": "Hoitoa odottaneet (syöpätaudit)",
+  "unit": "patients",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Hoitoa odottaneet'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 20,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-06-30",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "08",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_queue_waiting_n"
+  ]
+ },
+ "oncology_referrals_handled_over_21d_pct": {
+  "label_en": "Referrals processed in more than 21 days (oncology)",
+  "label_fi": "Lähete käsitelty yli 21 vrk:ssa, % (syöpätaudit)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Lähete käsitelty yli 21 vrk:ssa, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "treatment",
+  "n_areas": 21,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_referrals_handled_over_21d_pct"
+  ]
+ },
+ "oncology_referrals_per_1000": {
+  "label_en": "Referrals since start of year per 1,000 inhabitants (oncology)",
+  "label_fi": "Lähetteet yhteensä / 1000 as (syöpätaudit)",
+  "unit": "per 1,000",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Lähetteet yhteensä / 1000 as'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 7,
+  "has_national": true,
+  "latest_period": "2025-09-30",
+  "periods": [
+   "2024-11-30",
+   "2025-06-30",
+   "2025-09-30"
+  ],
+  "missing_areas": [
+   "05",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_referrals_per_1000"
+  ]
+ },
+ "oncology_referrals_ytd_n": {
+  "label_en": "Referrals received since start of year (oncology)",
+  "label_fi": "Lähetteet yhteensä (vuoden alusta) (syöpätaudit)",
+  "unit": "referrals",
+  "definition_en": "THL specialist care waiting-time cube, specialty 65 Syöpätaudit, measure 'Lähetteet yhteensä (vuoden alusta)'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "treatment",
+  "n_areas": 21,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_oncology_referrals_ytd_n"
+  ]
+ },
+ "pancreas_deaths_n": {
+  "label_en": "Deaths, pancreatic cancer (C25)",
+  "label_fi": "Kuolleet, haimasyöpä (C25)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause pancreatic cancer (C25). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "pancreas_deaths_per_100k": {
+  "label_en": "Crude death rate, pancreatic cancer (C25)",
+  "label_fi": "Yleinen kuolleisuusluku, haimasyöpä (C25) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause pancreatic cancer (C25). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "pancreas_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, pancreatic cancer (C25)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, haimasyöpä (C25) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (pancreatic cancer (C25), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "pancreas_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, pancreatic cancer (C25)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, haimasyöpä (C25)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (pancreatic cancer (C25)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "pop_65plus_2030_proj": {
+  "label_en": "Population aged 65+ in 2030 (official projection)",
+  "label_fi": "65 vuotta täyttäneet 2030 (väestöennuste 2024)",
+  "unit": "persons",
+  "definition_en": "Statistics Finland population projection 2024, persons aged 65+ on 31 Dec 2030, municipalities summed to county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2030",
+  "periods": [
+   "2030"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_14wx"
+  ]
+ },
+ "pop_65plus_2035_proj": {
+  "label_en": "Population aged 65+ in 2035 (official projection)",
+  "label_fi": "65 vuotta täyttäneet 2035 (väestöennuste 2024)",
+  "unit": "persons",
+  "definition_en": "Statistics Finland population projection 2024, persons aged 65+ on 31 Dec 2035, municipalities summed to county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2035",
+  "periods": [
+   "2035"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_14wx"
+  ]
+ },
+ "pop_65plus_2040_proj": {
+  "label_en": "Population aged 65+ in 2040 (official projection)",
+  "label_fi": "65 vuotta täyttäneet 2040 (väestöennuste 2024)",
+  "unit": "persons",
+  "definition_en": "Statistics Finland population projection 2024, persons aged 65+ on 31 Dec 2040, municipalities summed to county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2040",
+  "periods": [
+   "2040"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_14wx"
+  ]
+ },
+ "pop_65plus_change_2025_2035_pct": {
+  "label_en": "Change in population aged 65+, 2025 to 2035 (official projection)",
+  "label_fi": "65 vuotta täyttäneiden määrän muutos 2025-2035 (väestöennuste 2024)",
+  "unit": "%",
+  "definition_en": "(65+ in 2035 / 65+ in 2025 - 1) x 100, both from the 2024 projection.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025-2035",
+  "periods": [
+   "2025-2035"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_14wx"
+  ]
+ },
+ "pop_65plus_pct": {
+  "label_en": "Share of population aged 65 or over",
+  "label_fi": "65 vuotta täyttäneiden osuus, %",
+  "unit": "%",
+  "definition_en": "Statistics Finland table 11ra, content '65 vuotta täyttäneiden osuus, %', by wellbeing services county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_11ra"
+  ]
+ },
+ "pop_65plus_pct_2030_proj": {
+  "label_en": "Population aged 65+, % of population, projection 2030",
+  "label_fi": "65 vuotta täyttäneet, % väestöstä, väestöennuste 2030 (laskettu 2024)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 749: Population aged 65 and over as % of total population, projection for 2030 (calculated 2024)",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_749"
+  ]
+ },
+ "pop_65plus_pct_2035_proj": {
+  "label_en": "Share aged 65+ in 2035 (official projection)",
+  "label_fi": "65 vuotta täyttäneiden osuus 2035 (väestöennuste 2024)",
+  "unit": "%",
+  "definition_en": "Projected 65+ population / projected total population, 2035.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2035",
+  "periods": [
+   "2035"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_14wx"
+  ]
+ },
+ "pop_65plus_pct_2040_proj": {
+  "label_en": "Population aged 65+, % of population, projection 2040",
+  "label_fi": "65 vuotta täyttäneet, % väestöstä, väestöennuste 2040 (laskettu 2024)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 760: Population aged 65 and over as % of total population, projection for 2040 (calculated 2024)",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_760"
+  ]
+ },
+ "pop_density_per_km2": {
+  "label_en": "Population density",
+  "label_fi": "Väestöntiheys",
+  "unit": "per km2",
+  "definition_en": "Statistics Finland table 11ra, content 'Väestöntiheys', by wellbeing services county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_11ra"
+  ]
+ },
+ "pop_over_100km_from_university_hospital_pct": {
+  "label_en": "Population living over 100 km (approx. road) from a university hospital",
+  "label_fi": "Yli 100 km päässä yliopistosairaalasta asuvan väestön osuus (arvio)",
+  "unit": "%",
+  "definition_en": "Share of county population in municipalities whose centroid is more than 100 km (great-circle x 1.3) from the nearest university hospital.",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "osm_nominatim_university_hospitals"
+  ]
+ },
+ "pop_total": {
+  "label_en": "Population on 31 Dec",
+  "label_fi": "Väestö 31.12.",
+  "unit": "persons",
+  "definition_en": "Statistics Finland table 11ra, content 'Väestö 31.12.', by wellbeing services county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_11ra"
+  ]
+ },
+ "primary_care_doctor_visits_per_1000": {
+  "label_en": "Primary care outpatient physician visits per 1,000 inhabitants",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon lääkärikäynnit yhteensä / 1 000 asukasta",
+  "unit": "per 1,000",
+  "definition_en": "Sotkanet indicator 4123: Outpatient medical visits (physicians) in primary health care per 1000 inhabitants",
+  "direction": "context",
+  "pathway_step": "primary",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_4123"
+  ]
+ },
+ "primary_care_wait_over_3m_pct": {
+  "label_en": "Non-urgent GP visits with a wait over 3 months",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 3 kk hoidon tarpeen arvioinnista, % toteutuneista käynneistä",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 6410: Waiting time of over 3 months since assessment of the need for treatment for a non-emergency appointment with a primary health care doctor in outpatient care, % of completed appointments",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_6410"
+  ]
+ },
+ "primary_care_wait_over_3m_pct_oct": {
+  "label_en": "Non-urgent GP visits with a wait over 3 months (October snapshot, older series)",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 3 kk hoidon tarpeen arvioinnista, % toteutuneista käynneistä (lokakuun tilanne) (-2023)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3176: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 3 months from assessment of the need for treatment, % appointments kept (October) (up to 2023)",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2023",
+  "periods": [
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_3176"
+  ]
+ },
+ "primary_care_wait_over_7d_pct": {
+  "label_en": "Non-urgent GP visits with a wait over 7 days from assessment of need",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 6411: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_6411"
+  ]
+ },
+ "primary_care_wait_over_7d_pct_march": {
+  "label_en": "Non-urgent GP visits with a wait over 7 days (March snapshot, older series)",
+  "label_fi": "Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä (maaliskuun tilanne) (-2024)",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 2676: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept (March) (up to 2024)",
+  "direction": "higher_is_worse",
+  "pathway_step": "primary",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_2676"
+  ]
+ },
+ "prostate_deaths_n": {
+  "label_en": "Deaths, prostate cancer (C61)",
+  "label_fi": "Kuolleet, eturauhasen syöpä (C61)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause prostate cancer (C61). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "prostate_deaths_per_100k": {
+  "label_en": "Crude death rate, prostate cancer (C61)",
+  "label_fi": "Yleinen kuolleisuusluku, eturauhasen syöpä (C61) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause prostate cancer (C61). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "prostate_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, prostate cancer (C61)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, eturauhasen syöpä (C61) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (prostate cancer (C61), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "prostate_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, prostate cancer (C61)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, eturauhasen syöpä (C61)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (prostate cancer (C61)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "pulmonology_assessment_over_180d_pct": {
+  "label_en": "Waiting for assessment of need for care over 180 days (pulmonary diseases)",
+  "label_fi": "Yli 180 vrk hoidon tarpeen arviointia odottaneet, % (keuhkosairaudet)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Yli 180 vrk hoidon tarpeen arviointia odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 17,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-04-30",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "06",
+   "10",
+   "12",
+   "18",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_assessment_over_180d_pct"
+  ]
+ },
+ "pulmonology_assessment_over_90d_pct": {
+  "label_en": "Waiting for assessment of need for care over 90 days (pulmonary diseases)",
+  "label_fi": "Yli 90 vrk hoidon tarpeen arviointia odottaneet, % (keuhkosairaudet)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Yli 90 vrk hoidon tarpeen arviointia odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 18,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-04-30",
+   "2026-07-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "10",
+   "12",
+   "18",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_assessment_over_90d_pct"
+  ]
+ },
+ "pulmonology_assessment_waiting_n": {
+  "label_en": "Patients waiting for assessment of need for care (first specialist visit) (pulmonary diseases)",
+  "label_fi": "Hoidon tarpeen arviointia odottaneet (keuhkosairaudet)",
+  "unit": "patients",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Hoidon tarpeen arviointia odottaneet'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "referral",
+  "n_areas": 18,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-04-30",
+   "2026-07-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "10",
+   "12",
+   "18",
+   "20",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_assessment_waiting_n"
+  ]
+ },
+ "pulmonology_outpatient_visits": {
+  "label_en": "Specialist outpatient visits, pulmonary diseases",
+  "label_fi": "Erikoissairaanhoidon avohoitokäynnit, keuhkosairaudet",
+  "unit": "visits",
+  "definition_en": "Sotkanet indicator 2478: Outpatient visits in specialised health care, lung diseases",
+  "direction": "context",
+  "pathway_step": "diagnosis",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_2478"
+  ]
+ },
+ "pulmonology_queue_over_180d_pct": {
+  "label_en": "Waiting for treatment over 180 days (pulmonary diseases)",
+  "label_fi": "Yli 180 vrk hoitoa odottaneet, % (keuhkosairaudet)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Yli 180 vrk hoitoa odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "diagnosis",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-08-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_queue_over_180d_pct"
+  ]
+ },
+ "pulmonology_queue_over_90d_pct": {
+  "label_en": "Waiting for treatment over 90 days (pulmonary diseases)",
+  "label_fi": "Yli 90 vrk hoitoa odottaneet, % (keuhkosairaudet)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Yli 90 vrk hoitoa odottaneet, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "diagnosis",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-08-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_queue_over_90d_pct"
+  ]
+ },
+ "pulmonology_queue_waiting_n": {
+  "label_en": "Patients waiting for treatment (pulmonary diseases)",
+  "label_fi": "Hoitoa odottaneet (keuhkosairaudet)",
+  "unit": "patients",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Hoitoa odottaneet'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "diagnosis",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-08-31",
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_queue_waiting_n"
+  ]
+ },
+ "pulmonology_referrals_handled_over_21d_pct": {
+  "label_en": "Referrals processed in more than 21 days (pulmonary diseases)",
+  "label_fi": "Lähete käsitelty yli 21 vrk:ssa, % (keuhkosairaudet)",
+  "unit": "%",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Lähete käsitelty yli 21 vrk:ssa, %'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_referrals_handled_over_21d_pct"
+  ]
+ },
+ "pulmonology_referrals_per_1000": {
+  "label_en": "Referrals since start of year per 1,000 inhabitants (pulmonary diseases)",
+  "label_fi": "Lähetteet yhteensä / 1000 as (keuhkosairaudet)",
+  "unit": "per 1,000",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Lähetteet yhteensä / 1000 as'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "referral",
+  "n_areas": 2,
+  "has_national": true,
+  "latest_period": "2026-01-31",
+  "periods": [
+   "2025-08-31",
+   "2026-01-31"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "19",
+   "20",
+   "21",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_referrals_per_1000"
+  ]
+ },
+ "pulmonology_referrals_ytd_n": {
+  "label_en": "Referrals received since start of year (pulmonary diseases)",
+  "label_fi": "Lähetteet yhteensä (vuoden alusta) (keuhkosairaudet)",
+  "unit": "referrals",
+  "definition_en": "THL specialist care waiting-time cube, specialty 80 Keuhkosairaudet, measure 'Lähetteet yhteensä (vuoden alusta)'. Snapshot at the stated date, by service provider (hospital organisation).",
+  "direction": "context",
+  "pathway_step": "referral",
+  "n_areas": 22,
+  "has_national": true,
+  "latest_period": "2026-09-30",
+  "periods": [
+   "2026-09-30"
+  ],
+  "missing_areas": [
+   "91"
+  ],
+  "source_ids": [
+   "thl_eshjono_pulmonology_referrals_ytd_n"
+  ]
+ },
+ "pyll_per_100k": {
+  "label_en": "Potential years of life lost (ages 0-80) per 100,000",
+  "label_fi": "Menetetyt elinvuodet (PYLL) ikävälillä 0 - 80 vuotta / 100 000 asukasta",
+  "unit": "per 100,000",
+  "definition_en": "Sotkanet indicator 3138: Potential years of life lost (PYLL) at ages 0-80 per 100 000 inhabitants",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3138"
+  ]
+ },
+ "rectum_deaths_n": {
+  "label_en": "Deaths, cancer of rectum and anus (C20-C21)",
+  "label_fi": "Kuolleet, peräsuolen ja peräaukon syöpä (C20-C21)",
+  "unit": "deaths",
+  "definition_en": "Number of deaths per year, underlying cause cancer of rectum and anus (C20-C21). Statistics Finland 13u5.",
+  "direction": "context",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "rectum_deaths_per_100k": {
+  "label_en": "Crude death rate, cancer of rectum and anus (C20-C21)",
+  "label_fi": "Yleinen kuolleisuusluku, peräsuolen ja peräaukon syöpä (C20-C21) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Crude deaths per 100,000 population, underlying cause cancer of rectum and anus (C20-C21). Not age-standardised: older counties score higher for demographic reasons alone.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "rectum_deaths_per_100k_5y": {
+  "label_en": "Crude death rate 2021-2025 pooled, cancer of rectum and anus (C20-C21)",
+  "label_fi": "Kuolleisuus 2021-2025 yhteensä, peräsuolen ja peräaukon syöpä (C20-C21) (1/100 000)",
+  "unit": "per 100,000",
+  "definition_en": "Sum of deaths 2021-2025 (cancer of rectum and anus (C20-C21), table 13u5) divided by the sum of year-end populations 2021-2025 (table 11ra), x 100,000. Pooled to reduce small-number noise. Crude.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "rectum_deaths_per_100k_65plus_5y": {
+  "label_en": "Deaths per 100,000 residents aged 65+, 2021-2025 pooled, cancer of rectum and anus (C20-C21)",
+  "label_fi": "Kuolleet 100 000:ta 65 vuotta täyttänyttä kohti 2021-2025, peräsuolen ja peräaukon syöpä (C20-C21)",
+  "unit": "per 100,000 aged 65+",
+  "definition_en": "Sum of deaths at all ages 2021-2025 (cancer of rectum and anus (C20-C21)) divided by the sum of year-end population aged 65+ (population x share aged 65+, table 11ra), x 100,000. A rough age-structure adjustment, not a standardised rate.",
+  "direction": "higher_is_worse",
+  "pathway_step": "outcome",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2021-2025",
+  "periods": [
+   "2021-2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_13u5"
+  ]
+ },
+ "referrals_handled_over_21d_pct": {
+  "label_en": "Referrals to specialist care processed in more than 21 days (all specialties)",
+  "label_fi": "Erikoissairaanhoitoon saapuneet yli 21 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 5033: Referrals for specialised health care received after processing for more than 21 days, % of the referrals received",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 18,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_5033"
+  ]
+ },
+ "referrals_handled_within_3d_pct": {
+  "label_en": "Referrals to specialist care processed within 3 days (all specialties)",
+  "label_fi": "Erikoissairaanhoitoon saapuneet 3 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 13: Referrals for specialised health care received processed within 3 days, % of referrals received",
+  "direction": "higher_is_better",
+  "pathway_step": "referral",
+  "n_areas": 18,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_13"
+  ]
+ },
+ "referrals_per_1000": {
+  "label_en": "Referrals received by specialist care per 1,000 inhabitants",
+  "label_fi": "Erikoissairaanhoitoon saapuvat lähetteet / 1 000 asukasta",
+  "unit": "per 1,000",
+  "definition_en": "Sotkanet indicator 5073: Referrals received for specialised health care per 1000 inhabitants",
+  "direction": "context",
+  "pathway_step": "referral",
+  "n_areas": 17,
+  "has_national": true,
+  "latest_period": "2024",
+  "periods": [
+   "2023",
+   "2024"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "90",
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_5073"
+  ]
+ },
+ "rural_pop_pct": {
+  "label_en": "Share living in rural areas (urban-rural classification)",
+  "label_fi": "Maaseutualueella asuvien osuus, %",
+  "unit": "%",
+  "definition_en": "Statistics Finland table 11ra, content 'Maaseutualueella asuvien osuus, %', by wellbeing services county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_11ra"
+  ]
+ },
+ "sparse_rural_pop_pct": {
+  "label_en": "Share living in sparsely populated rural areas",
+  "label_fi": "Harvaan asutulla maaseudulla asuvien osuus, %",
+  "unit": "%",
+  "definition_en": "Statistics Finland table 11ra, content 'Harvaan asutulla maaseudulla asuvien osuus, %', by wellbeing services county.",
+  "direction": "context",
+  "pathway_step": null,
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "statfin_11ra"
+  ]
+ },
+ "specialist_arrivals_without_referral_pct": {
+  "label_en": "Arrived at specialist care without a referral",
+  "label_fi": "Ilman lähetettä erikoissairaanhoitoon tulleet, % kaikista päättyneistä erikoissairaanhoidon hoitojaksoista",
+  "unit": "%",
+  "definition_en": "Sotkanet indicator 3055: Patients admitted to specialised health care without referral, as % of all completed periods of care in specialised health care",
+  "direction": "context",
+  "pathway_step": "referral",
+  "n_areas": 23,
+  "has_national": true,
+  "latest_period": "2022",
+  "periods": [
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022"
+  ],
+  "missing_areas": [],
+  "source_ids": [
+   "sotkanet_3055"
+  ]
+ },
+ "specialist_wait_over_6m_per_10k": {
+  "label_en": "Waited over 6 months for specialist care, per 10,000 inhabitants",
+  "label_fi": "Erikoissairaanhoitoa yli 6 kk odottaneet vuoden aikana / 10 000 asukasta",
+  "unit": "per 10,000",
+  "definition_en": "Sotkanet indicator 3336: Patients waiting over 6 months during the year for access to specialised health care per 10 000 inhabitants",
+  "direction": "higher_is_worse",
+  "pathway_step": "referral",
+  "n_areas": 18,
+  "has_national": true,
+  "latest_period": "2025",
+  "periods": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "missing_areas": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "91"
+  ],
+  "source_ids": [
+   "sotkanet_3336"
+  ]
+ }
+}

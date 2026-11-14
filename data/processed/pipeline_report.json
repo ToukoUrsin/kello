@@ -1,0 +1,18 @@
+{
+ "generated_at": "2026-11-13T20:00:22Z",
+ "rows": 11405,
+ "indicators": 132,
+ "sources": 74,
+ "unverified_sources": [
+  "fcr_cancer_in_finland_2023",
+  "fcr_lung_quality_report_pdf"
+ ],
+ "problems": [
+  "sotkanet 3892 gp_vacancy_pct: no county-level values 2015-2026",
+  "sotkanet 5083 specialist_wait_median_days: no county-level values 2015-2026",
+  "fcr fcr_lung_quality_report: county tables parsed; figures (time to treatment, stage by county, survival by county) not parsed - need a chart reader",
+  "fcr fcr_lung_quality_report_pdf: downloaded but not parsed (4675207 bytes)",
+  "fcr fcr_cancer_in_finland_2023: downloaded but not parsed (4968504 bytes)",
+  "distance: nearest radiotherapy unit not computed (no citable public list of radiotherapy units located in the time available)"
+ ]
+}

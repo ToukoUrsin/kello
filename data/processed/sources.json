@@ -1,0 +1,842 @@
+{
+ "fcr_cancer_in_finland_2023": {
+  "title": "Cancer in Finland 2023 (factsheet)",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/cancer_in_finland_2023.html",
+  "api_call": "GET https://syoparekisteri.fi/assets/themes/ssy3/factsheets/cancer_in_finland_2023.html (browser User-Agent)",
+  "retrieved_at": "2026-11-13T20:00:02Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Downloaded 4968504 bytes to data/raw/fcr/ (1 embedded data blocks) but NOT parsed into indicators. County-level lung cancer incidence, stage distribution, share with known stage, share treated with curative intent and time from diagnosis to treatment are expected here (indicators lung_incidence_per_100k, lung_stage_known_pct, lung_curative_intent_pct).",
+  "verified": false
+ },
+ "fcr_lung_quality_report": {
+  "title": "Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet)",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+  "api_call": "GET https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html (browser User-Agent)",
+  "retrieved_at": "2026-11-13T19:59:59Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Downloaded 8256218 bytes; 112 values parsed from the HTML tables (treatment modality by county, stage coverage). New cases 2019-2023, treatment from HILMO within 12 months. Stage distribution, time from diagnosis to treatment and survival by county are shown only as figures (embedded images / plotly) and are NOT parsed here.",
+  "verified": true
+ },
+ "fcr_lung_quality_report_pdf": {
+  "title": "Keuhkosyöpä Suomessa (lung cancer in Finland, PDF report, Dec 2024)",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+  "api_call": "GET https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf (browser User-Agent)",
+  "retrieved_at": "2026-11-13T20:00:00Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Downloaded 4675207 bytes to data/raw/fcr/ (0 embedded data blocks) but NOT parsed into indicators. County-level lung cancer incidence, stage distribution, share with known stage, share treated with curative intent and time from diagnosis to treatment are expected here (indicators lung_incidence_per_100k, lung_stage_known_pct, lung_curative_intent_pct).",
+  "verified": false
+ },
+ "kela_special_reimbursement": {
+  "title": "Kela: entitlements to special reimbursement of medicines by wellbeing services county, age, sex and entitlement code",
+  "publisher": "Kela (Social Insurance Institution of Finland)",
+  "url": "https://avoindata.suomi.fi/data/dataset/70832958-f7b6-4e09-8350-615362e6ee30",
+  "api_call": "GET https://avoindata.suomi.fi/data/dataset/70832958-f7b6-4e09-8350-615362e6ee30/resource/cc74cc46-2b92-42b5-9a52-55adb3df512f/download/data.csv",
+  "retrieved_at": "2026-11-13T19:28:58Z",
+  "licence": "CC BY 4.0",
+  "notes": "File downloaded earlier to /tmp/kela_lko.csv (file time used as retrieval time). Column alkanut_lkm (entitlements that started during the year) summed over age groups and sexes; rows with area code outside the 23 counties are only in the national sum. Lung cancer has no own code: it falls under 130 'other malignant tumours'. National value = sum of all rows.",
+  "verified": true
+ },
+ "nordcan_rates": {
+  "title": "NORDCAN incidence and mortality by country, sex, cancer and year",
+  "publisher": "NORDCAN (IARC, Association of the Nordic Cancer Registries)",
+  "url": "https://nordcan.iarc.fr/",
+  "api_call": "GET https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246_752_578_208/160/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246_752_578_208/160/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246_752_578_208/160/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246_752_578_208/160/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246_752_578_208/130/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246_752_578_208/130/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246_752_578_208/130/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246_752_578_208/130/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246_752_578_208/110/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246_752_578_208/110/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246_752_578_208/110/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246_752_578_208/110/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246_752_578_208/520/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246_752_578_208/520/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246_752_578_208/520/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246_752_578_208/520/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246_752_578_208/180/?year_start=2000&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246_752_578_208/180/?year_start=2000&year_end=2023",
+  "retrieved_at": "2026-11-13T19:59:56Z",
+  "licence": "NORDCAN terms of use (free with citation)",
+  "notes": "API fields: total (cases/deaths), crude_rate, asr, asr_e, asr_n per 100,000. The pipeline reads asr as World standard, asr_e as European and asr_n as Nordic (2000) standard from the field names; the API response does not spell this out (verified: field names only).",
+  "verified": true
+ },
+ "nordcan_survival": {
+  "title": "NORDCAN 5-year relative survival by country, sex and cancer, 5-year periods",
+  "publisher": "NORDCAN (IARC, Association of the Nordic Cancer Registries)",
+  "url": "https://nordcan.iarc.fr/",
+  "api_call": "GET https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/130/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/130/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/110/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/110/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/520/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/520/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/180/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023",
+  "retrieved_at": "2026-11-13T19:59:56Z",
+  "licence": "NORDCAN terms of use (free with citation)",
+  "notes": "Age-standardised 5-year relative survival (%), with 95% CI, as returned by the API field 'survival'.",
+  "verified": true
+ },
+ "osm_nominatim_university_hospitals": {
+  "title": "Coordinates of the five Finnish university hospitals (OpenStreetMap Nominatim geocoder)",
+  "publisher": "OpenStreetMap contributors",
+  "url": "https://nominatim.openstreetmap.org/",
+  "api_call": "GET https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=fi&q=Meilahden+tornisairaala,+Helsinki ; https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=fi&q=Turun+yliopistollinen+keskussairaala,+Turku ; https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=fi&q=Tampereen+yliopistollinen+sairaala,+Tampere ; https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=fi&q=Kuopion+yliopistollinen+sairaala,+Kuopio ; https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=fi&q=Oulun+yliopistollinen+sairaala,+Oulu",
+  "retrieved_at": "2026-11-13T20:00:16Z",
+  "licence": "ODbL 1.0",
+  "notes": "HUS: 60.1882,24.9064 (Meilahden tornisairaala, 4, Haartmaninkatu, Meilahti, Läntinen suurpiiri, Helsinki, Helsingin seutukunta, Uusimaa, Manner-Suomi, 00290, Suomi / Finland); TYKS: 60.4534,22.2926 (Turun yliopistollinen keskussairaala, 4-8, Kiinamyllynkatu, Ylioppilastalot, I, Keskusta, Turku, Turun seutukunta, Varsinais-Suomi, Manner-Suomi, 20520, Suomi / Finland); TAYS: 61.5048,23.8192 (TAYS Ha-rakennus, 6, Teiskontie, Hipposkylä, Kissanmaa, Keskustan suuralue, Tampere, Tampereen seutukunta, Pirkanmaa, Manner-Suomi, 33520, Suomi / Finland); KYS: 62.8978,27.6480 (Kuopion yliopistollinen sairaala, 2, Puijonlaaksontie, Puijonlaakso, Kuopio, Kuopion seutukunta, Pohjois-Savo, Manner-Suomi, 70210, Suomi / Finland); OYS: 65.0076,25.5181 (Oulun yliopistollinen sairaala, 50, Kajaanintie, Peltola, Oulunsuu, Oulu, Oulun seutukunta, Pohjois-Pohjanmaa, Manner-Suomi, 90220, Suomi / Finland)",
+  "verified": true
+ },
+ "sotkanet_13": {
+  "title": "Sotkanet indicator 13: Referrals for specialised health care received processed within 3 days, % of referrals received",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/13",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=13&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:29Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erikoissairaanhoitoon saapuneet 3 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_180": {
+  "title": "Sotkanet indicator 180: Measure of educational level",
+  "publisher": "THL Sotkanet; data owner: Statistics Finland",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/180",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=180&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:47Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Koulutustasomittain. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_2475": {
+  "title": "Sotkanet indicator 2475: Outpatient visits in specialised health care, oncology and radiotherapy",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/2475",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=2475&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:35Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erikoissairaanhoidon avohoitokäynnit, syöpätaudit ja sädehoito. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_2478": {
+  "title": "Sotkanet indicator 2478: Outpatient visits in specialised health care, lung diseases",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/2478",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=2478&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:34Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erikoissairaanhoidon avohoitokäynnit, keuhkosairaudet. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_2676": {
+  "title": "Sotkanet indicator 2676: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept (March) (up to 2024)",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/2676",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=2676&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:16Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä (maaliskuun tilanne) (-2024). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3055": {
+  "title": "Sotkanet indicator 3055: Patients admitted to specialised health care without referral, as % of all completed periods of care in specialised health care",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3055",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3055&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:27Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Ilman lähetettä erikoissairaanhoitoon tulleet, % kaikista päättyneistä erikoissairaanhoidon hoitojaksoista. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3099": {
+  "title": "Sotkanet indicator 3099: General at-risk-of-poverty rate for the municipality",
+  "publisher": "THL Sotkanet; data owner: Statistics Finland",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3099",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3099&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:48Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Kunnan yleinen pienituloisuusaste. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3138": {
+  "title": "Sotkanet indicator 3138: Potential years of life lost (PYLL) at ages 0-80 per 100 000 inhabitants",
+  "publisher": "THL Sotkanet; data owner: Statistics Finland",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3138",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3138&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:54Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Menetetyt elinvuodet (PYLL) ikävälillä 0 - 80 vuotta / 100 000 asukasta. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3176": {
+  "title": "Sotkanet indicator 3176: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 3 months from assessment of the need for treatment, % appointments kept (October) (up to 2023)",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3176",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3176&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:18Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 3 kk hoidon tarpeen arvioinnista, % toteutuneista käynneistä (lokakuun tilanne) (-2023). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3336": {
+  "title": "Sotkanet indicator 3336: Patients waiting over 6 months during the year for access to specialised health care per 10 000 inhabitants",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3336",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3336&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:32Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erikoissairaanhoitoa yli 6 kk odottaneet vuoden aikana / 10 000 asukasta. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3620": {
+  "title": "Sotkanet indicator 3620: Proportion of women invited to cervical cancer screening (smear test) who attended, %",
+  "publisher": "THL Sotkanet; data owner: Finnish Cancer Registry",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3620",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3620&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:38Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Kohdunkaulasyövän seulontaan (papa) osallistuneiden osuus kutsutuista, %. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3621": {
+  "title": "Sotkanet indicator 3621: Proportion of women invited to breast cancer screening (mammography) who attended, %",
+  "publisher": "THL Sotkanet; data owner: Finnish Cancer Registry",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3621",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3621&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:37Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Rintasyövän seulontaan (mammografia) osallistuneiden osuus kutsutuista, %. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3625": {
+  "title": "Sotkanet indicator 3625: Five-year relative survival rate of breast cancer patients, %",
+  "publisher": "THL Sotkanet; data owner: Finnish Cancer Registry",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3625",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3625&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:40Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Rintasyövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3626": {
+  "title": "Sotkanet indicator 3626: Five-year relative survival rate of cervical cancer patients, %",
+  "publisher": "THL Sotkanet; data owner: Finnish Cancer Registry",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3626",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3626&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:40Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Kohdunkaulan syövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_3627": {
+  "title": "Sotkanet indicator 3627: Five-year relative survival rate of bowel cancer patients, %",
+  "publisher": "THL Sotkanet; data owner: Finnish Cancer Registry",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/3627",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=3627&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:42Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Paksunsuolen syövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_4123": {
+  "title": "Sotkanet indicator 4123: Outpatient medical visits (physicians) in primary health care per 1000 inhabitants",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4123",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=4123&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:23Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärikäynnit yhteensä / 1 000 asukasta. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_4193": {
+  "title": "Sotkanet indicator 4193: Potential years of life lost (PYLL) due to pulmonary diseases for people aged 25 to 80 per 100 000 persons of the same age",
+  "publisher": "THL Sotkanet; data owner: Statistics Finland",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4193",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=4193&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:53Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Keuhkosairauksien vuoksi menetetyt elinvuodet (PYLL) ikävälillä 25 - 80 vuotta / 100 000 vastaavan ikäistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_4263": {
+  "title": "Sotkanet indicator 4263: Going short of food, medicines or physician visits because of lack of money (%)",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4263",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=4263&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:25Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Rahanpuutteen vuoksi ruoasta, lääkkeistä tai lääkärikäynneistä tinkimään joutuneiden osuus (%). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_4404": {
+  "title": "Sotkanet indicator 4404: Daily smokers (%)",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4404",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=4404&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:43Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Päivittäin tupakoivien osuus (%). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_4406": {
+  "title": "Sotkanet indicator 4406: Daily smokers (%), age 65 and over",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4406",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=4406&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:44Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Päivittäin tupakoivien osuus (%), 65 vuotta täyttäneet. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_4408": {
+  "title": "Sotkanet indicator 4408: Daily smokers (%), low-level education",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4408",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=4408&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:45Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Päivittäin tupakoivien osuus (%), matala koulutus. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5018": {
+  "title": "Sotkanet indicator 5018: Chronic airflow obstruction as the reason for outpatient visit to primary health care physician, % of recorded reasons for visits",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5018",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5018&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:55Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Keuhkoahtaumatauti perusterveydenhuollon lääkärin avosairaanhoidon vastaanoton käyntisyynä, % kirjatuista käyntisyistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5033": {
+  "title": "Sotkanet indicator 5033: Referrals for specialised health care received after processing for more than 21 days, % of the referrals received",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5033",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5033&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:28Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erikoissairaanhoitoon saapuneet yli 21 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5047": {
+  "title": "Sotkanet indicator 5047: Treatment period for children 15 years and older admitted to a bed ward for the treatment of chronic airflow obstruction per 100,000 inhabitants, adjusted",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5047",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5047&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:55Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: 15 vuotta täyttäneiden hoitojaksot sairaalan vuodeosastolla keuhkoahtaumataudin vuoksi / 100 000 asukasta, vakioitu. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5073": {
+  "title": "Sotkanet indicator 5073: Referrals received for specialised health care per 1000 inhabitants",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5073",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5073&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:30Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erikoissairaanhoitoon saapuvat lähetteet / 1 000 asukasta. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5085": {
+  "title": "Sotkanet indicator 5085: Entitled to special refunds on medicines for chronic bronchial asthma and chronic obstructive pulmonary diseases closely resembling it on 31 December, as age-standardised % of total population",
+  "publisher": "THL Sotkanet; data owner: Social Insurance Institution of Finland (Kela)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5085",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5085&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:56Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erityiskorvattaviin lääkkeisiin kroonisen keuhkoastman ja sitä läheisesti muistuttavien kroonisten obstruktiivisten keuhkosairauksien vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5093": {
+  "title": "Sotkanet indicator 5093: Entitled to special refunds on medicines for cancer 31.12., age-standardised population share(%)",
+  "publisher": "THL Sotkanet; data owner: Social Insurance Institution of Finland (Kela)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5093",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5093&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:36Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5499": {
+  "title": "Sotkanet indicator 5499: Waiting time for elective outpatient medical visit (nurses and health care nurses) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept (October) (up to 2023)",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5499",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5499&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:21Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon sairaan-/terveydenhoitajan kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä (lokakuun tilanne) (-2023). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5502": {
+  "title": "Sotkanet indicator 5502: Continuity of care (COCI) in professional outpatient visits (doctor) in primary health care",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5502",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5502&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:24Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Hoidon jatkuvuus (COCI) perusterveydenhuollon avosairaanhoidon lääkärikäynneillä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5643": {
+  "title": "Sotkanet indicator 5643: Cancer index, age-standardised",
+  "publisher": "THL Sotkanet; data owner: Kela and Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5643",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5643&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:51Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Syöpäindeksi, ikävakioitu. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_5657": {
+  "title": "Sotkanet indicator 5657: Lung diseases index, age-standardised",
+  "publisher": "THL Sotkanet; data owner: Kela and Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/5657",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=5657&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:52Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Keuhkosairausindeksi, ikävakioitu. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_6103": {
+  "title": "Sotkanet indicator 6103: Proportion of invited to colorectal cancer screening who attended, %",
+  "publisher": "THL Sotkanet; data owner: Finnish Cancer Registry",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6103",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=6103&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:39Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Suolistosyövän seulontaan osallistuneiden osuus kutsutuista, %. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_6410": {
+  "title": "Sotkanet indicator 6410: Waiting time of over 3 months since assessment of the need for treatment for a non-emergency appointment with a primary health care doctor in outpatient care, % of completed appointments",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6410",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=6410&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:17Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 3 kk hoidon tarpeen arvioinnista, % toteutuneista käynneistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_6411": {
+  "title": "Sotkanet indicator 6411: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6411",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=6411&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:15Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_6412": {
+  "title": "Sotkanet indicator 6412: Waiting time for elective outpatient medical visit (nurses and health care nurses) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept",
+  "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6412",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=6412&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:19Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: Perusterveydenhuollon avosairaanhoidon sairaan-/terveydenhoitajan kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä. Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_749": {
+  "title": "Sotkanet indicator 749: Population aged 65 and over as % of total population, projection for 2030 (calculated 2024)",
+  "publisher": "THL Sotkanet; data owner: Statistics Finland",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/749",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=749&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:49Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: 65 vuotta täyttäneet, % väestöstä, väestöennuste 2030 (laskettu 2024). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_760": {
+  "title": "Sotkanet indicator 760: Population aged 65 and over as % of total population, projection for 2040 (calculated 2024)",
+  "publisher": "THL Sotkanet; data owner: Statistics Finland",
+  "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/760",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/json?indicator=760&years=2015&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&years=2026&genders=total&genders=female&genders=male",
+  "retrieved_at": "2026-11-13T19:58:51Z",
+  "licence": "CC BY 4.0",
+  "notes": "Finnish title: 65 vuotta täyttäneet, % väestöstä, väestöennuste 2040 (laskettu 2024). Latest 5 years with county-level data kept.",
+  "verified": true
+ },
+ "sotkanet_regions": {
+  "title": "Sotkanet region classification",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sotkanet.fi/rest/1.1/regions",
+  "api_call": "GET https://sotkanet.fi/rest/1.1/regions",
+  "retrieved_at": "2026-11-13T19:58:14Z",
+  "licence": "CC BY 4.0",
+  "notes": "Used to map Sotkanet region ids to wellbeing services county codes and to verify the collaborative area (YTA) of each county.",
+  "verified": true
+ },
+ "statfin_11ra": {
+  "title": "11ra -- Key figures on population by region, 1990-2025",
+  "publisher": "Statistics Finland",
+  "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11ra.px/",
+  "api_call": "POST https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaerak/11ra.px body={\"query\": [{\"code\": \"alue_23_20260101\", \"selection\": {\"filter\": \"item\", \"values\": [\"SSS\", \"HVA01\", \"HVA02\", \"HVA03\", \"HVA04\", \"HVA05\", \"HVA06\", \"HVA07\", \"HVA08\", \"HVA09\", \"HVA10\", \"HVA11\", \"HVA12\", \"HVA13\", \"HVA14\", \"HVA15\", \"HVA16\", \"HVA17\", \"HVA18\", \"HVA19\", \"HVA20\", \"HVA21\", \"HVA90\", \"HVA91\"]}}, {\"code\": \"contentscode\", \"selection\": {\"filter\": \"item\", \"values\": [\"vaerak-vaesto\", \"vaesto_yli64_p\", \"vaerak-vaesto_maa_pa\", \"vaesto_ms_p\", \"vaesto_m7_p\", \"vaesto_keski_ika\"]}}, {\"code\": \"timeperiod_y\", \"selection\": {\"filter\": \"item\", \"values\": [\"2016\", \"2017\", \"2018\", \"2019\", \"2020\", \"2021\", \"2022\", \"2023\", \"2024\", \"2025\"]}}], \"response\": {\"format\": \"json-stat2\"}}",
+  "retrieved_at": "2026-11-13T19:59:20Z",
+  "licence": "CC BY 4.0",
+  "notes": "Wellbeing services county rows (HVAxx) and whole country (SSS); 2026 regional division.",
+  "verified": true
+ },
+ "statfin_11ra_municipal_pop": {
+  "title": "11ra -- Population 31 Dec 2025 by municipality",
+  "publisher": "Statistics Finland",
+  "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11ra.px/",
+  "api_call": "POST https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaerak/11ra.px (all KUxxx areas, contentscode=vaerak-vaesto, year=2025; body in data/raw/statfin/11ra_kunta_pop.json.meta.json)",
+  "retrieved_at": "2026-11-13T20:00:22Z",
+  "licence": "CC BY 4.0",
+  "notes": "Population weights for the distance indicator.",
+  "verified": true
+ },
+ "statfin_13u5": {
+  "title": "13u5 -- Deaths by underlying cause of death (time series classification) and wellbeing services county, 1969-2025",
+  "publisher": "Statistics Finland",
+  "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__ksyyt/statfin_ksyyt_pxt_13u5.px/",
+  "api_call": "POST https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/ksyyt/13u5.px body={\"query\": [{\"code\": \"alue_23_20260101\", \"selection\": {\"filter\": \"item\", \"values\": [\"SSS\", \"HVA01\", \"HVA02\", \"HVA03\", \"HVA04\", \"HVA05\", \"HVA06\", \"HVA07\", \"HVA08\", \"HVA09\", \"HVA10\", \"HVA11\", \"HVA12\", \"HVA13\", \"HVA14\", \"HVA15\", \"HVA16\", \"HVA17\", \"HVA18\", \"HVA19\", \"HVA20\", \"HVA21\", \"HVA90\", \"HVA91\"]}}, {\"code\": \"kuolinsyyt_1_20210101\", \"selection\": {\"filter\": \"item\", \"values\": [\"04-21\", \"11\", \"10\", \"09\", \"07\", \"08\", \"13\", \"17\", \"33\"]}}, {\"code\": \"timeperiod_y\", \"selection\": {\"filter\": \"item\", \"values\": [\"2016\", \"2017\", \"2018\", \"2019\", \"2020\", \"2021\", \"2022\", \"2023\", \"2024\", \"2025\"]}}, {\"code\": \"contentscode\", \"selection\": {\"filter\": \"item\", \"values\": [\"ksyylkm\", \"ksyycdr\"]}}], \"response\": {\"format\": \"json-stat2\"}}",
+  "retrieved_at": "2026-11-13T19:59:21Z",
+  "licence": "CC BY 4.0",
+  "notes": "Counts and crude death rate per 100,000 mean population. The 'lung' group is C32-C34 (larynx, trachea and lung). Crude rates are not age-standardised.",
+  "verified": true
+ },
+ "statfin_14wx": {
+  "title": "14wx -- Population projection 2024: population by age and sex by area, 2024-2045",
+  "publisher": "Statistics Finland",
+  "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaenn/statfin_vaenn_pxt_14wx.px/",
+  "api_call": "POST https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaenn/14wx.px body={\"query\": [{\"code\": \"alue_23_20240101\", \"selection\": {\"filter\": \"item\", \"values\": [\"SSS\", \"KU020\", \"KU005\", \"KU009\", \"KU010\", \"KU016\", \"KU018\", \"KU019\", \"KU035\", \"KU043\", \"KU046\", \"KU047\", \"KU049\", \"KU050\", \"KU051\", \"KU052\", \"KU060\", \"KU061\", \"KU062\", \"KU065\", \"KU069\", \"KU071\", \"KU072\", \"KU074\", \"KU075\", \"KU076\", \"KU077\", \"KU078\", \"KU079\", \"KU081\", \"KU082\", \"KU086\", \"KU111\", \"KU090\", \"KU091\", \"KU097\", \"KU098\", \"KU102\", \"KU103\", \"KU105\", \"KU106\", \"KU108\", \"KU109\", \"KU139\", \"KU140\", \"KU142\", \"KU143\", \"KU145\", \"KU146\", \"KU153\", \"KU148\", \"KU149\", \"KU151\", \"KU152\", \"KU165\", \"KU167\", \"KU169\", \"KU170\", \"KU171\", \"KU172\", \"KU176\", \"KU177\", \"KU178\", \"KU179\", \"KU181\", \"KU182\", \"KU186\", \"KU202\", \"KU204\", \"KU205\", \"KU208\", \"KU211\", \"KU213\", \"KU214\", \"KU216\", \"KU217\", \"KU218\", \"KU224\", \"KU226\", \"KU230\", \"KU231\", \"KU232\", \"KU233\", \"KU235\", \"KU236\", \"KU239\", \"KU240\", \"KU320\", \"KU241\", \"KU322\", \"KU244\", \"KU245\", \"KU249\", \"KU250\", \"KU256\", \"KU257\", \"KU260\", \"KU261\", \"KU263\", \"KU265\", \"KU271\", \"KU272\", \"KU273\", \"KU275\", \"KU276\", \"KU280\", \"KU284\", \"KU285\", \"KU286\", \"KU287\", \"KU288\", \"KU290\", \"KU291\", \"KU295\", \"KU297\", \"KU300\", \"KU301\", \"KU304\", \"KU305\", \"KU312\", \"KU316\", \"KU317\", \"KU318\", \"KU398\", \"KU399\", \"KU400\", \"KU407\", \"KU402\", \"KU403\", \"KU405\", \"KU408\", \"KU410\", \"KU416\", \"KU417\", \"KU418\", \"KU420\", \"KU421\", \"KU422\", \"KU423\", \"KU425\", \"KU426\", \"KU444\", \"KU430\", \"KU433\", \"KU434\", \"KU435\", \"KU436\", \"KU438\", \"KU440\", \"KU441\" ...(truncated; full body in data/raw/statfin/14wx_65plus.json.meta.json)",
+  "retrieved_at": "2026-11-13T19:59:26Z",
+  "licence": "CC BY 4.0",
+  "notes": "Municipal projection (trend calculation by Statistics Finland, 2024 base) summed to counties with the 2024 municipality-county key. A projection published by the source, not an estimate by this project.",
+  "verified": true
+ },
+ "statfin_geo_kunta4500k_2026": {
+  "title": "Municipal boundaries 2026, 1:4,500,000 (WFS)",
+  "publisher": "Statistics Finland",
+  "url": "https://geo.stat.fi/geoserver/tilastointialueet/wfs",
+  "api_call": "GET https://geo.stat.fi/geoserver/tilastointialueet/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=tilastointialueet:kunta4500k_2026&outputFormat=application/json&srsName=EPSG:4326",
+  "retrieved_at": "2026-11-13T20:00:19Z",
+  "licence": "CC BY 4.0",
+  "notes": "Polygon centroids used as municipality locations.",
+  "verified": true
+ },
+ "statfin_kunta_hva_2024": {
+  "title": "Correspondence table: municipalities 2024 - wellbeing services counties 2024",
+  "publisher": "Statistics Finland",
+  "url": "https://stat.fi/en/luokitukset/corrmaps/kunta_1_20240101%23hyvinvointialue_1_20240101",
+  "api_call": "GET https://data.stat.fi/api/classifications/v2/correspondenceTables/kunta_1_20240101%23hyvinvointialue_1_20240101/maps?content=data&meta=max&lang=fi&format=json",
+  "retrieved_at": "2026-11-13T19:59:23Z",
+  "licence": "CC BY 4.0",
+  "notes": "Used to aggregate municipal projections to counties.",
+  "verified": true
+ },
+ "statfin_kunta_hva_2026": {
+  "title": "Correspondence table: municipalities 2026 - wellbeing services counties 2026",
+  "publisher": "Statistics Finland",
+  "url": "https://stat.fi/en/luokitukset/corrmaps/kunta_1_20260101%23hyvinvointialue_1_20260101",
+  "api_call": "GET https://data.stat.fi/api/classifications/v2/correspondenceTables/kunta_1_20260101%23hyvinvointialue_1_20260101/maps?content=data&meta=max&lang=fi&format=json",
+  "retrieved_at": "2026-11-13T20:00:20Z",
+  "licence": "CC BY 4.0",
+  "notes": "",
+  "verified": true
+ },
+ "thl_avohpaasy_gp_2025_n": {
+  "title": "Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2025 (n)",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02.json?row=palveluntuottaja-26624.484750.485469.483862.483161.485916.484539.483627.848987.851042.850127.851850.483846.484400.848632.486022.482972.482457.485724.483559.482525.849143.482735.1211518.&column=odotusaika-25575&filter=ammatti-110048&filter=palvelumuoto-121032&filter=aika-1154745&filter=measure-25618",
+  "retrieved_at": "2026-11-13T19:59:16Z",
+  "licence": "CC BY 4.0",
+  "notes": "By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube.",
+  "verified": true
+ },
+ "thl_avohpaasy_gp_2025_pct": {
+  "title": "Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2025 (pct)",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02.json?row=palveluntuottaja-26624.484750.485469.483862.483161.485916.484539.483627.848987.851042.850127.851850.483846.484400.848632.486022.482972.482457.485724.483559.482525.849143.482735.1211518.&column=odotusaika-25575&filter=ammatti-110048&filter=palvelumuoto-121032&filter=aika-1154745&filter=measure-486013",
+  "retrieved_at": "2026-11-13T19:59:16Z",
+  "licence": "CC BY 4.0",
+  "notes": "By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube.",
+  "verified": true
+ },
+ "thl_avohpaasy_gp_2026_n": {
+  "title": "Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2026 (n)",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02.json?row=palveluntuottaja-26624.484750.485469.483862.483161.485916.484539.483627.848987.851042.850127.851850.483846.484400.848632.486022.482972.482457.485724.483559.482525.849143.482735.1211518.&column=odotusaika-25575&filter=ammatti-110048&filter=palvelumuoto-121032&filter=aika-1209256&filter=measure-25618",
+  "retrieved_at": "2026-11-13T19:59:18Z",
+  "licence": "CC BY 4.0",
+  "notes": "By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube.",
+  "verified": true
+ },
+ "thl_avohpaasy_gp_2026_pct": {
+  "title": "Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2026 (pct)",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02.json?row=palveluntuottaja-26624.484750.485469.483862.483161.485916.484539.483627.848987.851042.850127.851850.483846.484400.848632.486022.482972.482457.485724.483559.482525.849143.482735.1211518.&column=odotusaika-25575&filter=ammatti-110048&filter=palvelumuoto-121032&filter=aika-1209256&filter=measure-486013",
+  "retrieved_at": "2026-11-13T19:59:17Z",
+  "licence": "CC BY 4.0",
+  "notes": "By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_assessment_over_180d_pct": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Yli 180 vrk hoidon tarpeen arviointia odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-738225",
+  "retrieved_at": "2026-11-13T19:59:11Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_assessment_over_90d_pct": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Yli 90 vrk hoidon tarpeen arviointia odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-738228",
+  "retrieved_at": "2026-11-13T19:59:10Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_assessment_waiting_n": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Hoidon tarpeen arviointia odottaneet",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-738222",
+  "retrieved_at": "2026-11-13T19:59:09Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_queue_over_180d_pct": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Yli 180 vrk hoitoa odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-738217",
+  "retrieved_at": "2026-11-13T19:59:08Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_queue_over_90d_pct": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Yli 90 vrk hoitoa odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-738220",
+  "retrieved_at": "2026-11-13T19:59:07Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_queue_waiting_n": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Hoitoa odottaneet",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-738214",
+  "retrieved_at": "2026-11-13T19:59:06Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_referrals_handled_over_21d_pct": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Lähete käsitelty yli 21 vrk:ssa, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-980629",
+  "retrieved_at": "2026-11-13T19:59:12Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_referrals_per_1000": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Lähetteet yhteensä / 1000 as",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-1121175",
+  "retrieved_at": "2026-11-13T19:59:13Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_oncology_referrals_ytd_n": {
+  "title": "Specialist care waiting times: 65 Syöpätaudit - Lähetteet yhteensä (vuoden alusta)",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862186&filter=measure-980631",
+  "retrieved_at": "2026-11-13T19:59:12Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_assessment_over_180d_pct": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Yli 180 vrk hoidon tarpeen arviointia odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-738225",
+  "retrieved_at": "2026-11-13T19:59:02Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_assessment_over_90d_pct": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Yli 90 vrk hoidon tarpeen arviointia odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-738228",
+  "retrieved_at": "2026-11-13T19:59:01Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_assessment_waiting_n": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Hoidon tarpeen arviointia odottaneet",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-738222",
+  "retrieved_at": "2026-11-13T19:59:00Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_queue_over_180d_pct": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Yli 180 vrk hoitoa odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-738217",
+  "retrieved_at": "2026-11-13T19:58:59Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_queue_over_90d_pct": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Yli 90 vrk hoitoa odottaneet, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-738220",
+  "retrieved_at": "2026-11-13T19:58:59Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_queue_waiting_n": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Hoitoa odottaneet",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-738214",
+  "retrieved_at": "2026-11-13T19:58:58Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_referrals_handled_over_21d_pct": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Lähete käsitelty yli 21 vrk:ssa, %",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-980629",
+  "retrieved_at": "2026-11-13T19:59:04Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_referrals_per_1000": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Lähetteet yhteensä / 1000 as",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-1121175",
+  "retrieved_at": "2026-11-13T19:59:04Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "thl_eshjono_pulmonology_referrals_ytd_n": {
+  "title": "Specialist care waiting times: 80 Keuhkosairaudet - Lähetteet yhteensä (vuoden alusta)",
+  "publisher": "THL (Finnish Institute for Health and Welfare)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne.json?row=tuottaja-976329&column=ajankohta-976319&filter=erikoisala-862301&filter=measure-980631",
+  "retrieved_at": "2026-11-13T19:59:03Z",
+  "licence": "CC BY 4.0",
+  "notes": "Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) is not mapped.",
+  "verified": true
+ },
+ "fcr_stats_app_mortality_latest5": {
+  "title": "Cancer statistics application: cancer deaths and mortality rates by area, latest 5-year period (Viimeisin 5-vuotisjakso (2020-2024))",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+  "api_call": "GET https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22 in a headless browser, then the app's '.csv' download button (session download link); saved as data/raw/goal3/fcr_mortality_latest5.csv",
+  "retrieved_at": "2026-11-13T22:14:05Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 348 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland 2014 and World standard populations).",
+  "verified": true
+ },
+ "fcr_stats_app_survival": {
+  "title": "Cancer statistics application: age-standardised relative survival 1-5 years from diagnosis, by collaborative area (Vuosia toteamisesta (2022-2024))",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22r.e2.as%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_surv%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22surv%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210200L%22,%2210300L%22,%2210400L%22,%2210500L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+  "api_call": "GET https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22r.e2.as%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_surv%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22surv%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210200L%22,%2210300L%22,%2210400L%22,%2210500L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22 in a headless browser, then the app's '.csv' download button (session download link); saved as data/raw/goal3/fcr_survival.csv",
+  "retrieved_at": "2026-11-13T22:14:14Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Survival is published for the whole country, the five collaborative areas and Åland only, not by wellbeing services county. 311 table rows with 95 % CI.",
+  "verified": true
+ },
+ "fcr_stats_app_mortality_by_year": {
+  "title": "Cancer statistics application: cancer deaths and mortality rates by year, whole country (Vuosi (1953-2024))",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22",
+  "api_call": "GET https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22 in a headless browser, then the app's '.csv' download button (session download link); saved as data/raw/goal3/fcr_mortality_by_year.csv",
+  "retrieved_at": "2026-11-13T22:14:23Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 864 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland 2014 and World standard populations).",
+  "verified": true
+ },
+ "fcr_stats_app_incidence_by_year": {
+  "title": "Cancer statistics application: new cancer cases and incidence rates by year, whole country (Vuosi (1953-2024))",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22",
+  "api_call": "GET https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22 in a headless browser, then the app's '.csv' download button (session download link); saved as data/raw/goal3/fcr_incidence_by_year.csv",
+  "retrieved_at": "2026-11-13T22:14:32Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 864 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland 2014 and World standard populations).",
+  "verified": true
+ },
+ "fcr_stats_app_incidence_latest5": {
+  "title": "Cancer statistics application: new cancer cases and incidence rates by area, latest 5-year period (Viimeisin 5-vuotisjakso (2020-2024))",
+  "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+  "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+  "api_call": "GET https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22 in a headless browser, then the app's '.csv' download button (session download link); saved as data/raw/goal3/fcr_incidence_latest5.csv",
+  "retrieved_at": "2026-11-13T22:13:56Z",
+  "licence": "Finnish Cancer Registry, open statistics (cite source)",
+  "notes": "Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 348 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland 2014 and World standard populations).",
+  "verified": true
+ },
+ "nordcan_goal3_fi_counts": {
+  "title": "NORDCAN: Finland, new cases and deaths 2020-2024, lung / pancreas / liver / all sites, by sex",
+  "publisher": "NORDCAN (IARC, Association of the Nordic Cancer Registries)",
+  "url": "https://nordcan.iarc.fr/",
+  "api_call": "GET https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/0/246/160/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246/160/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246/160/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/0/246/130/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246/130/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246/130/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/0/246/110/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246/110/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246/110/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/0/246/980/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/1/246/980/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/0/2/246/980/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/0/246/160/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246/160/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246/160/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/0/246/130/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246/130/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246/130/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/0/246/110/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246/110/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246/110/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/0/246/980/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/1/246/980/?year_start=2020&year_end=2024 ; https://canapi.iarc.who.int/api/nordcan/v2/961/data/population/1/2/246/980/?year_start=2020&year_end=2024",
+  "retrieved_at": "2026-11-13T22:14:44Z",
+  "licence": "NORDCAN terms of use (free with citation)",
+  "notes": "Used only as a second source for the national counts taken from the Finnish Cancer Registry application (NORDCAN 'All sites' = id 980). API field total summed over 2020-2024.",
+  "verified": true
+ },
+ "statfin_13u5_goal3_check": {
+  "title": "13u5 -- Deaths by underlying cause of death (time series classification) and wellbeing services county, 2020-2024",
+  "publisher": "Statistics Finland",
+  "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__ksyyt/statfin_ksyyt_pxt_13u5.px/",
+  "api_call": "POST https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/ksyyt/13u5.px body={\"query\": [{\"code\": \"alue_23_20260101\", \"selection\": {\"filter\": \"item\", \"values\": [\"SSS\", \"HVA01\", \"HVA02\", \"HVA03\", \"HVA04\", \"HVA05\", \"HVA06\", \"HVA07\", \"HVA08\", \"HVA09\", \"HVA10\", \"HVA11\", \"HVA12\", \"HVA13\", \"HVA14\", \"HVA15\", \"HVA16\", \"HVA17\", \"HVA18\", \"HVA19\", \"HVA20\", \"HVA21\", \"HVA90\", \"HVA91\"]}}, {\"code\": \"kuolinsyyt_1_20210101\", \"selection\": {\"filter\": \"item\", \"values\": [\"04-21\", \"09\", \"10\", \"11\"]}}, {\"code\": \"timeperiod_y\", \"selection\": {\"filter\": \"item\", \"values\": [\"2020\", \"2021\", \"2022\", \"2023\", \"2024\"]}}, {\"code\": \"contentscode\", \"selection\": {\"filter\": \"item\", \"values\": [\"ksyylkm\"]}}], \"response\": {\"format\": \"json-stat2\"}}",
+  "retrieved_at": "2026-11-13T22:14:46Z",
+  "licence": "CC BY 4.0",
+  "notes": "Second source for the registry's death counts by county. Causes: 04-21 all cancers (C00-C97), 09 primary liver cancer (C22), 10 pancreatic cancer (C25), 11 larynx, trachea and lung (C32-C34; includes larynx, unlike the registry's C33-34).",
+  "verified": true
+ },
+ "nordcan_goal3_survival": {
+  "title": "NORDCAN 5-year relative survival, Finland / Sweden / Norway / Denmark, lung, pancreas and liver, by sex",
+  "publisher": "NORDCAN (IARC, Association of the Nordic Cancer Registries)",
+  "url": "https://nordcan.iarc.fr/",
+  "api_call": "GET https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/130/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/130/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/110/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023 ; https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/2/246_752_578_208/110/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023",
+  "retrieved_at": "2026-11-13T22:14:49Z",
+  "licence": "NORDCAN terms of use (free with citation)",
+  "notes": "Age-standardised 5-year relative survival (%), 5-year periods, API field 'survival'. NORDCAN publishes survival by sex only (no both-sexes figure) and for countries only (not for the Finnish regions). Gap, lag and trend are derived in science/out/nordic_gap/artifacts/nordcan_gap_summary.csv and re-checked against this download by pipeline/p08_goal3.py.",
+  "verified": true
+ },
+ "thl_ohjaus_21_2016": {
+  "title": "Hoitoonpääsyn seuranta syövän hoidossa: määrittelyt ja ohjeistus (THL Ohjaus 21/2016, in force from 1 Jan 2017)",
+  "publisher": "Finnish Institute for Health and Welfare (THL)",
+  "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+  "api_call": "GET https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content (PDF; text via pdftotext)",
+  "retrieved_at": "2026-11-13T22:14:51Z",
+  "licence": "THL publication (Julkari open repository)",
+  "notes": "The target-time definition the strategy's indicator 'patients are treated within target times' points to. Quote checked in the downloaded PDF: 'Syöpään sairastuneiden hoidon osalta tiedot toteutuneista odotusajoista löytyvät THL.fi-sivustolta, heti kun aineiston laatu saadaan hyväksyttävälle tasolle.' (reporting chapter): found. Target quote 'ensimmäiseen hoitoon (leikkaus, lääke- tai sädehoito) on 6 viikkoa' (6 weeks from referral to first treatment): found.",
+  "verified": true
+ },
+ "thl_eshjono_report_list": {
+  "title": "THL specialist care access (hoitoonpääsy erikoissairaanhoidossa): list of open reports and cubes",
+  "publisher": "Finnish Institute for Health and Welfare (THL)",
+  "url": "https://sampo.thl.fi/pivot/prod/fi/eshjono/",
+  "api_call": "GET https://sampo.thl.fi/pivot/prod/fi/eshjono/",
+  "retrieved_at": "2026-11-13T22:14:52Z",
+  "licence": "CC BY 4.0",
+  "notes": "16 report titles read: Aikasarja | Erikoisalajakauma | Hoitoa ja hoidon tarpeen arviointia odottavat erikoisaloittain | Hoitoa ja hoidon tarpeen arviointia odottavat erikoisaloittain, saavutettava tiiviste | Hoitoa ja hoidon tarpeen arviointia odottavat ja lähetteet | Hyvinvointialueiden vertailu erikoisaloittain | Hyvinvointialueiden vertailu jonoryhmittäin | Hyvinvointialueiden vertailu lasten ja nuorten mielenterveyspalveluissa (alle 23-vuotiaat) | Jonoryhmät | Lasten ja nuorten mielenterveyspalvelut (alle 23-vuotiaat) | Lähetteet erikoisaloittain | Lähetteet erikoisaloittain, saavutettava tiiviste | Psykiatrista hoitoa ja hoidon tarpeen arviointia odottavat lapset ja nuoret (alle 23-vuotiaat) | Psykiatrista hoitoa ja hoidon tarpeen arviointia odottavat lapset ja nuoret (alle 23-vuotiaat), saavutettava tiiviste | Toimenpidettä odottavat ja odotusajat jonoryhmittäin | Toimenpidettä odottavat ja odotusajat jonoryhmittäin, saavutettava tiiviste. None is by cancer diagnosis or reports time from referral to first cancer treatment; the breakdowns are specialty and procedure queue group. THL's own web pages (thl.fi) answered scripted and headless-browser requests with a bot challenge (HTTP 403) on 13 Nov 2026 and could not be read.",
+  "verified": true
+ }
+}
