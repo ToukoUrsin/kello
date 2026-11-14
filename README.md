@@ -117,7 +117,7 @@ starts; on the public site the answer on screen is pinned, so without this a vis
 No personal data is stored: only public pages and the checks themselves. Code: `app/server/integrations/mongo_store.py`;
 routes `GET /api/evidence/search`, `/api/evidence/stats`, `/api/verify/history`.
 
-**Film mode.** `/film.html` plays the Run and the what-if on a fixed two-minute timeline, with every tap shown.
+**Film mode.** `/film.html` plays the Run, the search over the quoted sentences and the what-if on a fixed two-minute timeline, with every tap shown.
 "Show my lines" opens the narration in a small always-on-top window on the same computer, in step with the demo; a
 recording of the Kello window or tab does not contain it. `/film.html?read` shows the same lines on a phone.
 `?open=...` adds the speaker's own first sentence. The windows share only a start time (`/api/film/{room}`).
