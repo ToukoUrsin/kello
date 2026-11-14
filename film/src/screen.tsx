@@ -10,13 +10,14 @@ import plan from './data/captures/plan.json';
 import source from './data/captures/source.json';
 import home from './data/captures/home.json';
 import gap from './data/captures/gap.json';
+import ask from './data/captures/ask.json';
 import {C, clamp, ease} from './theme';
 
 export type Box = [number, number, number, number];
 type Mark = {name: string; t: number; box?: number[]};
 export type Cap = {id: string; file: string; duration: number; viewport: number[]; cursor: number[][]; clicks: number[]; marks: Mark[]; api: Record<string, {t: number; json: any}>};
 
-const CAPS: Record<string, Cap> = {home, dots, top, gap, card, plan, source} as any;
+const CAPS: Record<string, Cap> = {home, dots, top, gap, card, plan, source, ask} as any;
 export const cap = (id: string) => {
 	const c = CAPS[id];
 	if (!c) throw new Error(`no capture ${id}`);

@@ -11,11 +11,11 @@
    "speed": 1.05
   }
  },
- "_say": "\"say\" is what the voice is sent (phonetic spellings of Finnish names); \"text\" is the caption. Same number of words in both.",
+ "_say": "\"say_map\" swaps a word for the spelling the voice is sent (Finnish names; checked with whisper: \"Kel lo\" keeps the double l, \"Oh-oo-loo\" is heard as Oulu); captions keep the written word.",
  "say_map": {
-  "Kello": "Kel-lo",
-  "Kello's": "Kel-lo's",
-  "Oulu": "Oh-loo"
+  "Kello": "Kel lo",
+  "Kello's": "Kel lo's",
+  "Oulu": "Oh-oo-loo"
  },
  "gap": 0.3,
  "scenes": [

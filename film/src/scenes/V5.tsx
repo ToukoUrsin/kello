@@ -5,7 +5,7 @@ import React from 'react';
 import film from '../data/film.json';
 import {at, scene, word} from '../timeline';
 import {C, MONO, SANS, ease, fi, pop, ramp, span} from '../theme';
-import {Fill, Num, Wordmark, useT} from '../ui';
+import {Fill, Wordmark, useT} from '../ui';
 import {FRAME, Screen, cropW, grow, mark, sync, union} from '../screen';
 
 const F = film.facts as any;
@@ -43,13 +43,13 @@ const Pill: React.FC<{children: React.ReactNode; tone?: string; bg?: string}> = 
 );
 
 /** A ring with a big number tag that sticks to a box of the capture (follows the camera). */
-const Tag: React.FC<{b: [number, number, number, number]; a: number; label: React.ReactNode; color: string}> = ({b, a, label, color}) => {
+const Tag: React.FC<{b: [number, number, number, number]; a: number; label: React.ReactNode; color: string; below?: boolean; ring?: boolean}> = ({b, a, label, color, below = false, ring = true}) => {
 	const [x, y, w, h] = b;
 	const s = 0.9 + 0.1 * a;
 	return (
 		<div style={{opacity: a}}>
-			<div style={{position: 'absolute', left: x - 10, top: y - 10, width: w + 20, height: h + 20, border: `5px solid ${color}`, borderRadius: 16}} />
-			<div style={{position: 'absolute', left: x + w / 2, top: y - 16, transform: `translate(-50%, -100%) scale(${s})`, transformOrigin: '50% 100%', background: color, color: '#fff', fontFamily: SANS, fontWeight: 800, fontSize: 44, padding: '6px 20px', borderRadius: 12, whiteSpace: 'nowrap', letterSpacing: -0.8}}>{label}</div>
+			{ring ? <div style={{position: 'absolute', left: x - 10, top: y - 10, width: w + 20, height: h + 20, border: `5px solid ${color}`, borderRadius: 16}} /> : null}
+			<div style={{position: 'absolute', left: below ? x : x + w / 2, top: below ? y + h + 16 : y - 16, transform: below ? `scale(${s})` : `translate(-50%, -100%) scale(${s})`, transformOrigin: below ? '0% 0%' : '50% 100%', background: color, color: '#fff', fontFamily: SANS, fontWeight: 800, fontSize: 44, padding: '6px 20px', borderRadius: 12, whiteSpace: 'nowrap', letterSpacing: -0.8}}>{label}</div>
 		</div>
 	);
 };
@@ -84,7 +84,7 @@ export const Hook: React.FC = () => {
 					{t: 0, box: union(head.box, chart.box), pad: 24},
 					{t: tL, box: grow(lap.box, 8, 4), pad: 70, max: 2.2, d: 1.0},
 					{t: tV, box: grow(best.box, 8, 4), pad: 70, max: 2.2, d: 0.8},
-					{t: tSame, box: grow(chart.box, 0, 20), pad: 40, d: 0.9},
+					{t: tSame, box: union(head.box, chart.box), pad: 24, d: 0.9},
 				]}
 				overlay={(S) => (
 					<>
@@ -190,52 +190,58 @@ export const Real: React.FC = () => {
 	);
 };
 
-// ---------------------------------------------------------------- switch: the dots move into "treated to cure"
+// ---------------------------------------------------------------- switch: the hero moment, patients move into "treated to cure"
 export const Switch: React.FC = () => {
 	const t = useT();
 	const sw = mark('dots', 'switch');
+	const settled = mark('dots', 'settled');
 	const lapA = mark('dots', 'lap_after');
 	const toggle = mark('dots', 'toggle');
 	const chart = mark('dots', 'chart');
 	const miss = mark('dots', 'miss');
 	const tClick = word('s1', 'plan') + 0.05;
-	const tMiss = at('s2') + 1.2;
-	const scrollStart = miss.t - 1.15;
-	// under: the pointer travels to "With the plan" and the Today frame holds; over: the settled plan frame,
-	// faded in like the app fades its dots, then the scroll down to the missing-patients bar
-	const under = [
-		{t: 0, c: Math.max(0, sw.t - tClick), rate: 1},
-		{t: tClick, c: sw.t - 0.02, rate: 0},
+	// the capture recorded the ~1 s motion at 1/8 speed; it plays here over HERO seconds (a little slower than live)
+	const HERO = 1.6;
+	const flown = settled.t > sw.t ? settled.t : sw.t + 1.8;
+	const tMiss = at('s2') + 1.3;
+	const segs = [
+		{t: 0, c: Math.max(0, sw.t - 0.05 - tClick), rate: 1},
+		{t: tClick, c: sw.t - 0.05, rate: (flown - sw.t + 0.05) / HERO},
+		{t: tClick + HERO, c: lapA.t, rate: 0},
+		{t: tMiss, c: miss.t - 1.15, rate: 1},
+		{t: tMiss + 1.15, c: miss.t, rate: 0},
 	];
-	const over = sync([
-		[0, sw.t + 1.8],
-		[tMiss, sw.t + 1.8],
-		[tMiss + 1.15, miss.t],
-	]).map((x, i) => (i === 0 ? {...x, rate: 0} : x));
-	const fade = ramp(t, tClick + 0.35, tClick + 1.0, ease.inOut);
 	const dur = scene('switch').dur;
 	const keys = [
 		{t: 0, box: union(toggle.box, lapA.box), pad: 30, max: 2.2},
-		{t: tClick + 0.25, box: grow(lapA.box, 10, 4), pad: 36, max: 2.3, d: 1.0},
-		{t: tMiss - 0.3, box: chart.box, pad: 30, d: 0.6},
+		{t: tClick + 0.05, box: grow(lapA.box, 6, 4), pad: 34, max: 2.8, d: 0.7},
+		{t: tClick + HERO + 0.6, box: chart.box, pad: 34, d: 0.8},
+		{t: tMiss - 0.2, box: union(chart.box, miss.box), pad: 24, d: 0.6},
 		{t: tMiss + 1.0, box: miss.box, pad: 30, max: 2.2, d: 0.6},
 	];
 	return (
 		<Fill>
 			<Band
 				t={t}
-				kicker="Kello's plan for Lapland, switched on · modelled"
+				kicker="Kello's plan for Lapland, switched on · each orange dot is a patient the plan moves · modelled"
 				title={
 					<Swap
 						t={t}
 						when={tMiss}
-						a={<Swap t={t} when={tClick + 1.1} a={<>Switch on the plan</>} b={<><span style={{color: ORANGE}}>Orange: +{fi(F.plan.moved_of100, 1)} of 100</span> move into "treated to cure"</>} />}
+						a={<Swap t={t} when={tClick + HERO} a={<>Switch on the plan</>} b={<><span style={{color: ORANGE}}>+{fi(F.plan.moved_of100, 1)} of 100</span> move into "treated to cure"</>} />}
 						b={<>{F.plan.n_actions} actions, <span style={{color: ORANGE}}>{eur(F.plan.eur)}</span> a year: {fi(F.plan.extra, 1)} of {fi(F.plan.shortfall, 1)} patients</>}
 					/>
 				}
 			/>
-			{fade < 1 ? <Screen id="dots" t={t} segs={under} {...FRAME.full} keys={keys} /> : null}
-			{fade > 0 ? <Screen id="dots" t={t} segs={over} {...FRAME.full} keys={keys} opacity={fade} cursor={false} hl={[{t0: tMiss + 1.4, t1: dur + 1, box: miss.box}]} /> : null}
+			<Screen
+				id="dots"
+				t={t}
+				segs={segs}
+				{...FRAME.full}
+				keys={keys}
+				cursor={t < tClick + 0.6}
+				hl={[{t0: tMiss + 1.4, t1: dur + 1, box: miss.box}]}
+			/>
 		</Fill>
 	);
 };
@@ -425,7 +431,7 @@ export const Verify: React.FC = () => {
 					{t: 0, box: union(pre, click.box), pad: 40, max: 2.2},
 					{t: tClick + 0.2, box: cropW(live.box, 700), pad: 30, max: 2.4, d: 1.0},
 					{t: tClick + 3.5, box: cropW(trace.box, 700), pad: 30, max: 2.4, d: 1.2},
-					{t: tDone + 0.1, box: vd.box ?? union(was.box, now.box), pad: 50, max: 2.4, d: 0.8},
+					{t: tDone + 0.1, box: cropW(union(was.box, now.box), 560), pad: 60, max: 2.4, d: 0.8},
 					{t: tOulu - 0.9, box: cropW(ask.box, 840), pad: 30, max: 2.4, d: 0.9},
 				]}
 				hl={[
@@ -436,7 +442,7 @@ export const Verify: React.FC = () => {
 					was.box && now.box ? (
 						<>
 							<Tag b={S(was.box)} a={span(t, tMorning - 0.1, tOulu - 0.6)} label="BEFORE · this morning" color={C.ink} />
-							<Tag b={S(now.box)} a={span(t, tLive, tOulu - 0.6)} label="AFTER · live, just now" color={C.blue} />
+							<Tag b={S(now.box)} a={span(t, tLive, tOulu - 0.6)} label="AFTER · live, just now" color={C.blue} below />
 						</>
 					) : null
 				}
@@ -528,49 +534,52 @@ export const Sources: React.FC = () => {
 	);
 };
 
-// ---------------------------------------------------------------- ask: the pilot
+// ---------------------------------------------------------------- ask: the pilot, as Lapland's page shows it
 export const Ask: React.FC = () => {
 	const t = useT();
 	const Pi = F.pilot;
-	const tA1 = word('a2', 'chest') - 0.3;
-	const tA2 = word('a2', 'those') - 0.3;
-	const tGoal = word('a3', 'eighteen') - 0.3;
-	const tTo = word('a3', 'twenty') - 0.3;
+	const box = mark('ask', 'ask');
+	const lead = mark('ask', 'lead');
+	const acts = mark('ask', 'acts');
+	const figs = mark('ask', 'figs');
+	const f = [0, 1, 2, 3].map((n) => mark('ask', `f${n}`).box);
+	const tA1 = word('a2', 'chest') - 0.4;
+	const tGoal = word('a3', 'eighteen') - 0.4;
 	const dur = scene('ask').dur;
-	const g = ramp(t, tTo, tTo + 0.6);
-	const row = (n: number, a: number, text: React.ReactNode) => (
-		<div style={{display: 'flex', alignItems: 'baseline', gap: 22, opacity: a, translate: `${(1 - a) * 24}px 0px`}}>
-			<span style={{fontFamily: SANS, fontSize: 34, fontWeight: 800, color: '#fff', background: ORANGE, borderRadius: 999, width: 52, height: 52, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flex: 'none', translate: '0px 6px'}}>{n}</span>
-			<span style={{fontFamily: SANS, fontSize: 44, fontWeight: 650, color: C.ink, letterSpacing: -0.8}}>{text}</span>
-		</div>
-	);
+	const tEnd = Math.max(tGoal + 2.6, dur - 2.4);
 	return (
 		<Fill>
-			<div style={{position: 'absolute', left: 160, top: 84, opacity: ramp(t, 0.1, 0.7)}}>
-				<Wordmark size={56} p={ramp(t, 0.1, 1.2)} />
-			</div>
-			<div style={{position: 'absolute', left: 160, top: 196, width: 1640}}>
-				<div style={{fontFamily: SANS, fontSize: 26, fontWeight: 650, letterSpacing: 2, color: C.dim, textTransform: 'uppercase', opacity: ramp(t, 0.3, 0.8)}}>The ask</div>
-				<div style={{fontFamily: SANS, fontSize: 68, fontWeight: 800, color: C.ink, letterSpacing: -2.2, lineHeight: 1.06, marginTop: 12, opacity: ramp(t, 0.5, 1.0)}}>
-					A {Pi.months}-month pilot: Lapland and the Oulu university hospital area
-				</div>
-				<div style={{display: 'flex', flexDirection: 'column', gap: 18, marginTop: 40}}>
-					{row(1, ramp(t, tA1, tA1 + 0.5), <>A chest surgeon reviews every decision not to operate</>)}
-					{row(2, ramp(t, tA2, tA2 + 0.5), <>Patients who cannot be operated are referred for precise radiotherapy</>)}
-				</div>
-				<div style={{display: 'flex', alignItems: 'baseline', gap: 26, marginTop: 46, opacity: ramp(t, tGoal, tGoal + 0.5)}}>
-					<Num size={124} color={C.ink}>{fi(Pi.now, 1)}%</Num>
-					<span style={{fontFamily: SANS, fontSize: 80, color: C.faint, fontWeight: 300}}>→</span>
-					<Num size={124} color={ORANGE} style={{opacity: g}}>{fi(Pi.after, 1)}%</Num>
-					<span style={{fontFamily: SANS, fontSize: 42, fontWeight: 650, color: C.ink, marginLeft: 10}}>treated to cure by {Pi.by_year}</span>
-				</div>
-				<div style={{fontFamily: SANS, fontSize: 38, fontWeight: 550, color: C.dim, marginTop: 26, opacity: ramp(t, tTo + 1.0, tTo + 1.6)}}>
-					In six months: about <b style={{color: C.ink}}>{Pi.patients} patients</b> seen, <b style={{color: C.ink}}>{Pi.reviews} decisions</b> not to operate reviewed
-				</div>
-			</div>
-			<div style={{position: 'absolute', left: 160, top: 930, fontFamily: SANS, fontSize: 26, color: C.dim, opacity: ramp(t, dur - 3.0, dur - 2.3)}}>
-				Kello · Junction 2026 · AstraZeneca challenge "Equal Care Across Finland" · pilot target modelled by Kello, compared with Vantaa and Kerava
-			</div>
+			<Band
+				t={t}
+				kicker={<>The ask · Lapland's page in Kello · pilot effect modelled, counted against Vantaa and Kerava</>}
+				title={
+					<Swap
+						t={t}
+						when={tGoal}
+						a={<>A {Pi.months}-month pilot of two actions</>}
+						b={<>{fi(Pi.now, 1)}% → <span style={{color: '#9A5B00'}}>{fi(Pi.after, 1)}%</span> treated to cure by {Pi.by_year}</>}
+					/>
+				}
+				right={<div style={{opacity: ramp(t, 0.2, 0.8)}}><Wordmark size={46} p={ramp(t, 0.2, 1.4)} /></div>}
+			/>
+			<Screen
+				id="ask"
+				t={t}
+				segs={[{t: 0, c: 1.0, rate: 0}]}
+				{...FRAME.full}
+				cursor={false}
+				keys={[
+					{t: 0, box: box.box, pad: 16},
+					{t: tA1, box: lead.box, pad: 30, max: 2.4, d: 0.9},
+					{t: tGoal, box: f[3] ? grow(f[3], 10, 10) : figs.box, pad: 40, max: 1.7, d: 0.9},
+					{t: tEnd, box: figs.box ? union(figs.box, lead.box) : box.box, pad: 24, d: 1.1},
+				]}
+				hl={[
+					{t0: tA1 + 0.5, t1: tGoal, box: lead.box},
+					{t0: tGoal + 0.4, t1: tEnd, box: f[3]},
+					{t0: tEnd + 0.6, t1: dur + 1, box: figs.box},
+				]}
+			/>
 		</Fill>
 	);
 };

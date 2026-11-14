@@ -4,13 +4,14 @@
 # in-flight video-frame requests whenever a docker interface comes or goes (ERR_NETWORK_CHANGED), which kills a render.
 # Skips a capture whose frames are newer than its mp4.
 set -euo pipefail
-OUT=${KELLO_FILM_OUT:-out}
+FILM=$(cd "$(dirname "$0")/.." && pwd)
+OUT=$(cd "$FILM" && mkdir -p "${KELLO_FILM_OUT:-out}" && cd "${KELLO_FILM_OUT:-out}" && pwd)
 cd "$OUT/public/captures"
 for mp4 in *.mp4; do
 	id=${mp4%.mp4}
 	d="$OUT/public/frames/$id"
 	[[ -f "$d/.done" && "$d/.done" -nt "$mp4" ]] && continue
-	[[ -f "$(dirname "$0")/../src/data/captures/$id.json" ]] || continue
+	[[ -f "$FILM/src/data/captures/$id.json" ]] || continue
 	mkdir -p "$d"
 	find "$d" -name 'f*.jpg' -delete
 	nice -n 10 ffmpeg -nostdin -loglevel error -i "$mp4" -vf fps=30 -q:v 2 "$d/f%05d.jpg"

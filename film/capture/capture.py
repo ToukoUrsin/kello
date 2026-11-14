@@ -26,6 +26,13 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 
+SLOWMO_JS = """(r) => { const w = window;
+  if (!w.__film_pn) { w.__film_pn = performance.now.bind(performance); w.__film_raf = w.requestAnimationFrame.bind(w);
+    w.__film_seg = {real: w.__film_pn(), virt: w.__film_pn(), r: 1};
+    performance.now = () => { const s = w.__film_seg; return s.virt + (w.__film_pn() - s.real) * s.r; };
+    w.requestAnimationFrame = (cb) => w.__film_raf(() => cb(performance.now())); }
+  const v = performance.now(); w.__film_seg = {real: w.__film_pn(), virt: v, r}; }"""
+
 FILM = Path(__file__).resolve().parent.parent
 OUT = Path(os.environ["KELLO_FILM_OUT"]) if os.environ.get("KELLO_FILM_OUT") else FILM / "out"
 CAP = OUT / "public" / "captures"
@@ -52,6 +59,8 @@ class Shot:
         self.skew = 0.0
         self.stepping = False
         self.last_step_t = -1.0
+        self.slow = []  # [film t, playback rate]: slow-motion stretches (the film plays them back faster)
+        self.recording = False
 
     def now(self):
         # film time: wall time minus the extra wall time that frame-by-frame scrolls took (0 before recording starts,
@@ -210,6 +219,16 @@ class Shot:
             await self.page.evaluate("(h) => { location.hash = h }", st["goto"])
         elif "eval" in st:
             await self.page.evaluate(st["eval"])
+        elif "slowmo" in st:
+            # Slow the page's clock so a short animation is recorded with many frames on a busy machine: CSS
+            # animations and transitions via CDP, requestAnimationFrame / performance.now by a virtual clock.
+            # The capture stores the stretch (meta "slowmo"); the film maps it back to real speed with marks.
+            rate = float(st["slowmo"])
+            await self.cdp.send("Animation.enable")
+            await self.cdp.send("Animation.setPlaybackRate", {"playbackRate": rate})
+            await self.page.evaluate(SLOWMO_JS, rate)
+            if self.t0 is not None:
+                self.slow.append([round(self.now(), 3), rate])
         elif "expect" in st:
             loc = await self.find(st["expect"], st.get("timeout", 8000))
             txt = " ".join((await loc.inner_text()).split())
@@ -246,6 +265,24 @@ class Shot:
             return
         self.save(t, ev["data"])
 
+    async def poll(self):
+        """The screencast sends frames only when the page repaints, and on a loaded machine sometimes none for
+        seconds: fill any gap over 0.25 s with a screenshot, so a still page and a slow animation both have frames."""
+        while self.recording:
+            await asyncio.sleep(0.08)
+            if self.stepping or not self.recording:
+                continue
+            t = self.now()
+            last = max([f[0] for f in self.frames[-3:]], default=-1.0)
+            if t - last < 0.25 or t <= self.last_step_t:
+                continue
+            try:
+                shot = await self.cdp.send("Page.captureScreenshot", {"format": "jpeg", "quality": self.cfg.get("jpeg_quality", 90)})
+            except Exception:
+                continue
+            if not self.stepping and t > self.last_step_t:
+                self.save(t, shot["data"])
+
     def save(self, t, b64):
         p = self.dir / f"f{self.n:06d}.jpg"
         self.n += 1
@@ -279,8 +316,14 @@ class Shot:
         self.cursor.append([0, *self.pos])
         # nudge so the first frame is delivered even on a still page
         await self.page.evaluate("() => { const d = document.createElement('i'); d.style.cssText='position:fixed;left:0;top:0;width:1px;height:1px;opacity:.01'; document.body.appendChild(d); let k = 0; setInterval(() => { d.style.opacity = (k++ % 2) ? '.01' : '.02' }, 250); }")
-        for st in sp["steps"]:
-            await self.run_step(st)
+        self.recording = True
+        poller = asyncio.ensure_future(self.poll())
+        try:
+            for st in sp["steps"]:
+                await self.run_step(st)
+        finally:
+            self.recording = False
+            await poller
         dur = self.now()
         await asyncio.sleep(0.3)
         await self.cdp.send("Page.stopScreencast")
@@ -311,7 +354,7 @@ class Shot:
             "id": sp["id"], "file": f"captures/{sp['id']}.mp4", "duration": round(dur, 3), "fps": fps,
             "viewport": cfg["viewport"], "scale": cfg.get("scale", 1), "base": cfg["base"], "captured_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
             "source_frames": len(fr), "source_fps_mean": round(len(fr) / dur, 1),
-            "cursor": self.cursor, "clicks": self.clicks, "marks": self.marks, "api": self.api, "texts": self.texts,
+            "cursor": self.cursor, "clicks": self.clicks, "marks": self.marks, "slowmo": self.slow, "api": self.api, "texts": self.texts,
         }
         (CAP / f"{sp['id']}.json").write_text(json.dumps(meta, ensure_ascii=False))
         # the film imports the metadata (text, small) from the repo; the video stays outside it

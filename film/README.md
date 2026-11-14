@@ -26,7 +26,7 @@ Heavy outputs go to the ignored repo-relative **`film/out/`** by default (overri
 ```sh
 cd <repo>
 # 1. edit film/shots.json if selectors changed (put the new UI's target first in each "any" list; keep the mark names)
-nice -n 10 .venv/bin/python film/capture/capture.py                 # all six shots (plan waits for the Finnish plan, up to 5 min)
+nice -n 10 .venv/bin/python film/capture/capture.py                 # all eight shots (plan waits for the Finnish plan, up to 5 min)
 nice -n 10 .venv/bin/python film/capture/capture.py path verify     # or only some
 KELLO_BASE=http://127.0.0.1:8743 .venv/bin/python film/capture/capture.py   # against a test server
 # 2. render
@@ -34,11 +34,14 @@ cd film && ./render.sh v2            # -> out/kello-demo-v2.mp4 (+ review-v2/)
 ./render.sh v2 --fast                # half-size check render, ~4 min
 ```
 
-Shots that are screen captures: `pick`, `path`, `actions`, `verify`, `plan`, `source`. The scenes find their zoom
-targets by mark name (`first/pick/county`, `top/curative/surgery/norecord`, `actions/card/owner/owner_open`,
-`card/click/done/result/result_box`, `en/fi/ready/end`, `chip/drawer/focus`); a missing mark falls back to the whole page.
-The verify scene reads the live check's answer (`queries`, `pages_read`, `sources`, `timings_s`, or v3's `trace`,
-`in_use_here`, `effect_check`) from the capture, so a new run shows its own trace.
+Shots that are screen captures (v5): `home`, `dots`, `top`, `gap`, `card`, `plan`, `source`, `ask`. The scenes
+(`src/scenes/V5.tsx`) find their zoom targets by mark name (`home/lap/best/chart/head`, `dots/switch/settled/lap_after/miss`,
+`gap/head/strip/c0-c4`, `card/askpre/title/cost/first/owner/click/live_box/trace/done/vdiff/was/now/ask/quote`,
+`plan/row/note/fi/title_fi`, `source/chip/focus/quote/read`, `ask/lead/acts/figs/f0-f3`); a missing mark falls back to the
+whole page. `dots` records the plan's dot motion at 1/8 speed (`"slowmo": 0.125` step; the capture's meta `slowmo`
+lists the stretch) and the Switch scene plays it back over 1.6 s. Voice: `script.json` `say_map` sends phonetic
+spellings of Finnish names ("Kel lo", "Oh-oo-loo"); captions keep the written word.
+One command re-records and renders: `KELLO_FILM_OUT=... ./recapture.sh v6`.
 
 Music: a bed made for this film with ElevenLabs Music (`scripts/make-music.mjs`, prompt in `src/data/music.json`), ducked
 under each voice line in `Film.tsx`. `KELLO_MUSIC=0 ./render.sh v3-nomusic` renders without it; `scripts/remux-nomusic.sh v3` makes a voice-only

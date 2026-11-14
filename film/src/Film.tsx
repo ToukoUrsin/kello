@@ -60,6 +60,8 @@ const musicVol = (f: number) => {
 	return fade * (0.26 - 0.16 * duck);
 };
 
+const MUSIC_FROM = Math.max(0, TOTAL - Math.round(((music as any).duration ?? 112.04) * FPS));
+
 export const Film: React.FC<{audio: boolean; captions: boolean; music?: boolean}> = ({audio, captions, music: withMusic = true}) => (
 	<AbsoluteFill style={{background: C.bg}}>
 		{SCENES.map((s) => {
@@ -82,7 +84,12 @@ export const Film: React.FC<{audio: boolean; captions: boolean; music?: boolean}
 					)),
 				)
 			: null}
-		{audio && withMusic && music.file ? <Audio src={staticFile(music.file)} volume={musicVol} /> : null}
+		{audio && withMusic && music.file ? (
+			// the bed's final chord lands on the film's last frame (the bed is a little shorter than the film)
+			<Sequence from={MUSIC_FROM} name="music">
+				<Audio src={staticFile(music.file)} volume={(f) => musicVol(f + MUSIC_FROM)} />
+			</Sequence>
+		) : null}
 		{captions ? <Captions /> : null}
 	</AbsoluteFill>
 );

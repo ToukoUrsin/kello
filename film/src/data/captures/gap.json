@@ -1,0 +1,111 @@
+{
+ "id": "gap",
+ "file": "captures/gap.mp4",
+ "duration": 13.581,
+ "fps": 30,
+ "viewport": [
+  1024,
+  576
+ ],
+ "scale": 3,
+ "base": "http://127.0.0.1:8742",
+ "captured_at": "2026-11-14T06:48:20+0000",
+ "source_frames": 73,
+ "source_fps_mean": 5.4,
+ "cursor": [
+  [
+   0,
+   563.2,
+   345.59999999999997
+  ]
+ ],
+ "clicks": [],
+ "marks": [
+  {
+   "name": "head",
+   "t": 0.338,
+   "box": [
+    49,
+    151,
+    918,
+    44
+   ]
+  },
+  {
+   "name": "strip",
+   "t": 0.422,
+   "box": [
+    49,
+    206,
+    926,
+    93
+   ]
+  },
+  {
+   "name": "wrap",
+   "t": 0.512,
+   "box": [
+    25,
+    134,
+    974,
+    204
+   ]
+  },
+  {
+   "name": "c0",
+   "t": 0.546,
+   "box": [
+    49,
+    207,
+    185,
+    92
+   ]
+  },
+  {
+   "name": "c1",
+   "t": 0.567,
+   "box": [
+    234,
+    207,
+    185,
+    92
+   ]
+  },
+  {
+   "name": "c2",
+   "t": 0.617,
+   "box": [
+    419,
+    207,
+    185,
+    92
+   ]
+  },
+  {
+   "name": "c3",
+   "t": 0.679,
+   "box": [
+    605,
+    207,
+    185,
+    92
+   ]
+  },
+  {
+   "name": "c4",
+   "t": 0.71,
+   "box": [
+    790,
+    207,
+    185,
+    92
+   ]
+  }
+ ],
+ "slowmo": [],
+ "api": {},
+ "texts": {
+  "head": "Is this gap real? Four of five checks say the gap is real. Stage at diagnosis is the one public data cannot answer; the records audit (8 weeks, €8,000) settles it.",
+  "strip": "Could it be chance? No: less than once in 500. Is it because patients there are older? No: still lower after age adjustment. Are cancers found later there? Cannot tell: not published by county. Is it just missing records? Mostly not: about 8 of 12 remain. Do deaths and survival point the same way? Yes, slightly: more deaths per case."
+ }
+}

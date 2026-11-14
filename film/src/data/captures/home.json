@@ -1,0 +1,81 @@
+{
+ "id": "home",
+ "file": "captures/home.mp4",
+ "duration": 16.445,
+ "fps": 30,
+ "viewport": [
+  1024,
+  576
+ ],
+ "scale": 3,
+ "base": "http://127.0.0.1:8742",
+ "captured_at": "2026-11-14T06:44:36+0000",
+ "source_frames": 78,
+ "source_fps_mean": 4.7,
+ "cursor": [
+  [
+   0,
+   563.2,
+   345.59999999999997
+  ]
+ ],
+ "clicks": [],
+ "marks": [
+  {
+   "name": "head",
+   "t": 0.318,
+   "box": [
+    24,
+    84,
+    570,
+    130
+   ]
+  },
+  {
+   "name": "chart",
+   "t": 1.313,
+   "box": [
+    24,
+    246,
+    976,
+    292
+   ]
+  },
+  {
+   "name": "lap",
+   "t": 1.329,
+   "box": [
+    24,
+    246,
+    307,
+    292
+   ]
+  },
+  {
+   "name": "fin",
+   "t": 1.348,
+   "box": [
+    359,
+    246,
+    307,
+    292
+   ]
+  },
+  {
+   "name": "best",
+   "t": 1.372,
+   "box": [
+    693,
+    246,
+    307,
+    292
+   ]
+  }
+ ],
+ "slowmo": [],
+ "api": {},
+ "texts": {
+  "head": "In Lapland, 18 of 100 lung cancer patients get treatment that aims to cure. In Vantaa and Kerava, 36.",
+  "chart": "Lapland 18.5 of 100 Finland 27.0 of 100 Vantaa and Kerava 35.6 of 100highest county"
+ }
+}

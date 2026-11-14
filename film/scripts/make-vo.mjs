@@ -64,9 +64,15 @@ for (let i = 0; i < flat.length; i++) {
 		});
 		if (cur) ws.push(cur);
 		// captions show the written words, not the phonetic ones
+		// (a phonetic spelling may be several spoken words, e.g. "Kel lo": merge them back into one caption word)
 		const cap = l.text.split(/\s+/).filter(Boolean);
-		if (cap.length === ws.length) cap.forEach((w, k) => (ws[k].w = w));
-		else console.warn(`vo ${l.id}: ${ws.length} spoken words vs ${cap.length} caption words`);
+		const n = cap.map((w) => say(w).split(/\s+/).length);
+		if (n.reduce((a, b) => a + b, 0) === ws.length) {
+			let k = 0;
+			const merged = cap.map((w, i) => { const g = ws.slice(k, k + n[i]); k += n[i]; return {w, s: g[0].s, e: g.at(-1).e}; });
+			ws.length = 0;
+			ws.push(...merged);
+		} else console.warn(`vo ${l.id}: ${ws.length} spoken words vs ${cap.length} caption words`);
 		m = {sig, text: l.text, dur: al.character_end_times_seconds.at(-1), words: ws.map((w) => ({w: w.w, s: +w.s.toFixed(3), e: +w.e.toFixed(3)}))};
 		fs.writeFileSync(metaF, JSON.stringify(m));
 		spent += l.text.length;

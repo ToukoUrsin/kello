@@ -1,17 +1,17 @@
 {
  "id": "top",
  "file": "captures/top.mp4",
- "duration": 9.489,
- "fps": 60,
+ "duration": 8.554,
+ "fps": 30,
  "viewport": [
   1024,
   576
  ],
  "scale": 3,
  "base": "http://127.0.0.1:8742",
- "captured_at": "2026-11-14T02:17:48+0000",
- "source_frames": 6,
- "source_fps_mean": 0.6,
+ "captured_at": "2026-11-14T06:46:47+0000",
+ "source_frames": 46,
+ "source_fps_mean": 5.4,
  "cursor": [
   [
    0,
@@ -23,38 +23,39 @@
  "marks": [
   {
    "name": "head",
-   "t": 0.387,
+   "t": 0.32,
    "box": [
     24,
-    99,
-    714,
-    50
+    88,
+    803,
+    66
    ]
   },
   {
    "name": "wait",
-   "t": 1.399,
+   "t": 0.406,
    "box": [
     24,
-    155,
-    739,
+    166,
+    803,
     69
    ]
   },
   {
    "name": "strip",
-   "t": 2.296,
+   "t": 1.061,
    "box": [
-    24,
-    240,
-    976,
-    95
+    49,
+    1062,
+    926,
+    67
    ]
   }
  ],
+ "slowmo": [],
  "api": {},
  "texts": {
   "head": "Of 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year.",
-  "wait": "Lapland's patients do not wait longer: 31.2 days from diagnosis to treatment in the OYS area, 36.9 in Finland. Fewer are treated to cure. Measured · Cancer Registry 2018–mid 2022 · p. 28 · read by Gemini · Published for the collaborative area, not for the county."
+  "wait": "Lapland wellbeing services county, 142 new lung cancer patients a year. Lapland's patients do not wait longer: 31.2 days from diagnosis to treatment in the Oulu university hospital area, 36.9 in Finland. Fewer are treated to cure. Estimated"
  }
 }

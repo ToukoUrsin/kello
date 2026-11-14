@@ -132,7 +132,7 @@
   {
    "id": "dots",
    "scene": "hook, switch",
-   "what": "Lapland's dot chart on Today; hold; switch on the plan; the dots move; scroll to the missing-patients bar.",
+   "what": "Lapland's dot chart on Today; hold; switch on the plan: each moved patient flies into 'treated to cure' (recorded at 1/8 speed, meta 'slowmo'); scroll to the missing-patients bar.",
    "url": "#/county/21",
    "before": [
     {
@@ -283,6 +283,9 @@
      "wait": 5500
     },
     {
+     "slowmo": 0.125
+    },
+    {
      "click": {
       "role": "button",
       "name": "With the plan"
@@ -291,7 +294,14 @@
      "mark": "switch"
     },
     {
-     "wait": 450,
+     "wait": 8200,
+     "mark": "settled"
+    },
+    {
+     "slowmo": 1
+    },
+    {
+     "wait": 200,
      "mark": "lap_after",
      "box": {
       "any": [
@@ -666,6 +676,9 @@
      "box": {
       "any": [
        {
+        "css": "article.card:has-text('Precise radiotherapy') .askpill"
+       },
+       {
         "css": "article.card:has-text('Precise radiotherapy') .askfirst"
        }
       ]
@@ -852,27 +865,23 @@
         "css": "article.card:has-text('Precise radiotherapy') .vdiff"
        },
        {
-        "text": "Stored answer, 14 Nov"
+        "css": "article.card:has-text('Precise radiotherapy') p:has-text('Previous stored answer')"
        }
       ]
      },
-     "block": 0.35,
+     "block": 0.4,
      "ms": 1000,
-     "mark": "vdiff"
-    },
-    {
-     "expect": {
+     "mark": "vdiff",
+     "box": {
       "any": [
        {
         "css": "article.card:has-text('Precise radiotherapy') .vdiff"
+       },
+       {
+        "css": "article.card:has-text('Precise radiotherapy') p:has-text('Previous stored answer')"
        }
       ]
-     },
-     "contains": [
-      "Stored answer",
-      "This run"
-     ],
-     "as": "vdiff"
+     }
     },
     {
      "mark": "was",
@@ -880,6 +889,9 @@
       "any": [
        {
         "css": "article.card:has-text('Precise radiotherapy') .vdiff .was"
+       },
+       {
+        "css": "article.card:has-text('Precise radiotherapy') p:has-text('Previous stored answer')"
        }
       ]
      }
@@ -890,6 +902,12 @@
       "any": [
        {
         "css": "article.card:has-text('Precise radiotherapy') .vdiff .now"
+       },
+       {
+        "css": "article.card:has-text('Precise radiotherapy') p:has-text('New run')"
+       },
+       {
+        "css": "article.card:has-text('Precise radiotherapy') p:has-text('Previous stored answer')"
        }
       ]
      }
@@ -1191,6 +1209,164 @@
     },
     {
      "wait": 3500
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "scene": "ask",
+   "what": "The ask at the bottom of Lapland's page: the two-action pilot, about 71 patients, 64 decisions reviewed, Vantaa and Kerava as comparison, 18.5% -> 20.5% by 2028. A still.",
+   "url": "#/county/21",
+   "before": [
+    {
+     "wait_for": {
+      "any": [
+       {
+        "css": "#sec-ask .pfigs"
+       }
+      ]
+     },
+     "timeout": 60000
+    },
+    {
+     "scroll": {
+      "any": [
+       {
+        "css": "#sec-ask"
+       }
+      ]
+     },
+     "block": 0.5,
+     "ms": 100
+    },
+    {
+     "wait": 1000
+    }
+   ],
+   "steps": [
+    {
+     "wait": 300,
+     "mark": "ask",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask"
+       }
+      ]
+     }
+    },
+    {
+     "expect": {
+      "any": [
+       {
+        "css": "#sec-ask"
+       }
+      ]
+     },
+     "contains": [
+      "six-month pilot of two actions",
+      "about 71",
+      "64",
+      "Vantaa and Kerava",
+      "18.5%",
+      "20.5%",
+      "2028"
+     ],
+     "as": "ask"
+    },
+    {
+     "mark": "lead",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .asklead"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "acts",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .askacts"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "figs",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .pfigs"
+       }
+      ]
+     }
+    },
+    {
+     "mark": "f0",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .pfigs > div",
+        "nth": 0
+       }
+      ]
+     }
+    },
+    {
+     "mark": "f1",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .pfigs > div",
+        "nth": 1
+       }
+      ]
+     }
+    },
+    {
+     "mark": "f2",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .pfigs > div",
+        "nth": 2
+       }
+      ]
+     }
+    },
+    {
+     "mark": "f3",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask .pfigs > div",
+        "nth": 3
+       }
+      ]
+     }
+    },
+    {
+     "mark": "head",
+     "box": {
+      "any": [
+       {
+        "css": "#sec-ask h2"
+       },
+       {
+        "css": "#sec-ask h3"
+       },
+       {
+        "text": "The ask",
+        "exact": true
+       }
+      ]
+     }
+    },
+    {
+     "wait": 12000
     }
    ]
   }

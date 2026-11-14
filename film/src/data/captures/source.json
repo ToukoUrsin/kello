@@ -1,7 +1,7 @@
 {
  "id": "source",
  "file": "captures/source.mp4",
- "duration": 15.607,
+ "duration": 21.17,
  "fps": 30,
  "viewport": [
   1024,
@@ -9,9 +9,9 @@
  ],
  "scale": 3,
  "base": "http://127.0.0.1:8742",
- "captured_at": "2026-11-14T06:40:36+0000",
- "source_frames": 13,
- "source_fps_mean": 0.8,
+ "captured_at": "2026-11-14T06:56:05+0000",
+ "source_frames": 103,
+ "source_fps_mean": 4.9,
  "cursor": [
   [
    0,
@@ -19,428 +19,428 @@
    345.59999999999997
   ],
   [
-   0.431,
+   1.003,
    563.2,
    345.6
   ],
   [
-   0.475,
+   1.098,
    563.3,
    345.4
   ],
   [
-   0.493,
+   1.116,
    563.6,
    344.9
   ],
   [
-   0.519,
+   1.321,
    564.3,
    343.9
   ],
   [
-   0.577,
+   1.353,
    565.3,
    342.4
   ],
   [
-   0.6,
+   1.374,
    566.8,
    340.0
   ],
   [
-   0.62,
+   1.404,
    568.9,
    336.7
   ],
   [
-   0.673,
+   1.603,
    571.8,
    332.4
   ],
   [
-   0.692,
+   1.652,
    575.6,
    327.0
   ],
   [
-   0.712,
+   1.7,
    580.6,
    320.5
   ],
   [
-   0.747,
+   1.743,
    587.2,
    313.0
   ],
   [
-   0.771,
+   2.06,
    594.3,
    305.9
   ],
   [
-   0.796,
+   2.078,
    600.4,
    300.5
   ],
   [
-   0.874,
+   2.31,
    605.6,
    296.3
   ],
   [
-   0.94,
+   2.508,
    609.7,
    293.2
   ],
   [
-   1.016,
+   2.775,
    612.8,
    290.8
   ],
   [
-   1.113,
+   2.824,
    615.1,
    289.2
   ],
   [
-   1.285,
+   2.894,
    616.6,
    288.1
   ],
   [
-   1.482,
+   2.928,
    617.5,
    287.4
   ],
   [
-   1.576,
+   2.952,
    618.0,
    287.1
   ],
   [
-   1.6,
+   2.988,
    618.1,
    286.9
   ],
   [
-   1.676,
+   3.193,
    618.2,
    286.9
   ],
   [
-   3.485,
+   5.173,
    618.2,
    286.9
   ],
   [
-   3.981,
+   5.583,
    618.3,
    286.7
   ],
   [
-   4.31,
+   5.607,
    618.7,
    286.3
   ],
   [
-   4.431,
+   5.626,
    619.4,
    285.5
   ],
   [
-   4.479,
+   5.652,
    620.6,
    284.2
   ],
   [
-   4.514,
+   5.713,
    622.4,
    282.2
   ],
   [
-   4.575,
+   5.943,
    624.9,
    279.5
   ],
   [
-   4.597,
+   5.995,
    628.4,
    276.0
   ],
   [
-   4.677,
+   6.028,
    633.0,
    271.6
   ],
   [
-   4.772,
+   6.1,
    639.0,
    266.6
   ],
   [
-   4.796,
+   6.858,
    645.4,
    262.1
   ],
   [
-   4.874,
+   6.899,
    650.7,
    258.8
   ],
   [
-   4.892,
+   6.941,
    655.1,
    256.4
   ],
   [
-   4.98,
+   7.517,
    658.3,
    254.7
   ],
   [
-   5.0,
+   7.556,
    660.7,
    253.5
   ],
   [
-   5.08,
+   7.578,
    662.3,
    252.7
   ],
   [
-   5.193,
+   7.714,
    663.3,
    252.2
   ],
   [
-   5.283,
+   7.814,
    663.8,
    251.9
   ],
   [
-   5.371,
+   8.057,
    664.0,
    251.9
   ],
   [
-   5.407,
+   8.076,
    664.0,
    251.8
   ],
   [
-   9.085,
+   13.125,
    664.0,
    251.9
   ],
   [
-   9.175,
+   13.306,
    663.9,
    252.0
   ],
   [
-   9.195,
+   13.42,
    663.7,
    252.2
   ],
   [
-   9.278,
+   13.453,
    663.4,
    252.8
   ],
   [
-   9.311,
+   13.477,
    662.8,
    253.7
   ],
   [
-   9.373,
+   13.501,
    661.8,
    255.0
   ],
   [
-   9.392,
+   13.7,
    660.6,
    256.9
   ],
   [
-   9.478,
+   13.758,
    658.9,
    259.4
   ],
   [
-   9.499,
+   13.998,
    656.7,
    262.5
   ],
   [
-   9.579,
+   14.244,
    654.0,
    266.5
   ],
   [
-   9.599,
+   14.318,
    650.7,
    271.4
   ],
   [
-   9.617,
+   14.397,
    646.7,
    277.2
   ],
   [
-   9.674,
+   14.659,
    641.9,
    284.0
   ],
   [
-   9.696,
+   14.716,
    636.4,
    291.9
   ],
   [
-   9.734,
+   14.744,
    629.8,
    301.0
   ],
   [
-   9.772,
+   15.103,
    622.3,
    311.2
   ],
   [
-   9.795,
+   15.133,
    613.5,
    322.6
   ],
   [
-   9.813,
+   15.199,
    603.4,
    335.1
   ],
   [
-   9.879,
+   15.398,
    591.7,
    348.8
   ],
   [
-   9.909,
+   15.448,
    578.2,
    363.5
   ],
   [
-   9.975,
+   15.511,
    563.1,
    378.7
   ],
   [
-   9.998,
+   15.726,
    548.5,
    392.3
   ],
   [
-   10.078,
+   15.747,
    534.9,
    404.0
   ],
   [
-   10.173,
+   15.803,
    522.4,
    414.2
   ],
   [
-   10.385,
+   15.898,
    511.0,
    423.0
   ],
   [
-   10.507,
+   15.945,
    500.8,
    430.6
   ],
   [
-   10.593,
+   16.226,
    491.8,
    437.2
   ],
   [
-   10.68,
+   16.252,
    483.9,
    442.8
   ],
   [
-   10.7,
+   16.277,
    477.1,
    447.6
   ],
   [
-   10.781,
+   16.302,
    471.3,
    451.7
   ],
   [
-   10.872,
+   16.467,
    466.5,
    455.0
   ],
   [
-   10.892,
+   16.501,
    462.6,
    457.7
   ],
   [
-   10.912,
+   16.535,
    459.4,
    459.9
   ],
   [
-   10.978,
+   16.601,
    456.9,
    461.6
   ],
   [
-   11.073,
+   16.641,
    455.0,
    462.9
   ],
   [
-   11.095,
+   16.844,
    453.7,
    463.8
   ],
   [
-   11.175,
+   16.917,
    452.8,
    464.4
   ],
   [
-   11.195,
+   17.125,
    452.3,
    464.8
   ],
   [
-   11.303,
+   17.153,
    452.0,
    465.0
   ],
   [
-   11.379,
+   17.19,
    451.9,
    465.1
   ],
   [
-   11.412,
+   17.215,
    451.9,
    465.1
   ]
  ],
  "clicks": [
-  1.974
+  3.616
  ],
  "marks": [
   {
    "name": "chipzone",
-   "t": 0.387,
+   "t": 0.318,
    "box": [
     523,
     276,
@@ -450,7 +450,7 @@
   },
   {
    "name": "chip",
-   "t": 2.187,
+   "t": 3.869,
    "box": [
     523,
     276,
@@ -460,9 +460,9 @@
   },
   {
    "name": "drawer",
-   "t": 2.401,
+   "t": 4.125,
    "box": [
-    304,
+    336,
     0,
     720,
     576
@@ -470,7 +470,7 @@
   },
   {
    "name": "focus",
-   "t": 5.423,
+   "t": 8.092,
    "box": [
     304,
     73,
@@ -480,7 +480,7 @@
   },
   {
    "name": "quote",
-   "t": 5.692,
+   "t": 8.128,
    "box": [
     324,
     224,
@@ -490,7 +490,7 @@
   },
   {
    "name": "read",
-   "t": 11.428,
+   "t": 17.233,
    "box": [
     324,
     454,
@@ -499,6 +499,7 @@
    ]
   }
  ],
+ "slowmo": [],
  "api": {},
  "texts": {
   "drawer": "Sources & method Close Measured · Cancer Registry 2019–2023 · p. 14 · read by Gemini Treatment that aims to cure, Lapland: 18.5% Patients with surgery, stereotactic radiotherapy or chemoradiotherapy within 12 months of diagnosis, of all patients diagnosed 2019-2023. Not adjusted for age, stage or other illness. “Lapin hyvinvointialue | 131 | 710 | 18.5” Verbatim from the source, page 14; read by Gemini Source Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), Finnish Cancer Registry (Syöpärekisteri) Period 2019–2023 Page 14 Read by Gemini, gemini-4-hydrogen; number and quote checked against the page https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html gemini-4-hydrogen read 966 values from registry PDFs and charts, each with page and quote; 946 re-confirmed in the source, 20 flagged and shown as unverified. What you are looking at Kello shows where each wellbeing services county loses lung cancer patients between diagnosis and treatment that aims to cure, and what closes that gap. The care path comes from the Finnish Cancer Registry's own county figures. The plan is Kello's: a list of actions with an owner, a cost, a first step and a measure, chosen by stated rules. Public aggregate data only; no patient-level data. Three kinds of number Measured. Taken directly from a public source. Estimated. Produced by the model, shown with an interval. Assumption. Set by hand where no data exists; editable. An estimate is never shown as a measurement. Every estimate carries a range, written like 0–7.7. Every number on screen has a chip that opens this panel at its source. How Kello reads reports The Finnish Cancer Registry publishes county results as PDF reports and interactive pages with no API. Gemini reads each document page by page and returns every number with its page and a verbatim quote. A second pass looks for each number again on its page. Not verified means the second pass did not find the number again in the same words, usually because the page shows it in a chart or a rounded table cell. Those values stay in Kello, marked as unverified wherever they appear. Document read by Gemini Values read Re-confirmed Not verified Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), Finnish Cancer Registry (Syöpärekisteri) https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html 528 513 15 Keuhkosyöpä Suomessa (lung cancer in Finland, PDF report, Dec 2024), Finnish Cancer Registry (Syöpärekisteri) https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf 250 250 0 Cancer Dashboard for Finland, IHE - The Swedish Institute for Health Economics https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf 98 98 0 Suomen Syöpärekisteri - Uudet syöpätapaukset (ilmaantuvuus): Keuhkot, henkitorvi (C33-34), Suomen Syöpärekisteri (cancerregistry.fi) https://tilastot.syoparekisteri.fi/syovat/ 90 85 5 All four 966 946 20 These are values read by Gemini. The “Values in Kello” column further down counts everything Kello takes from a source, including tables that could be read directly. Numbers read off a chart Stage classification by wellbeing services county, published only as a stacked bar chart without numbers. Gemini read the 110 values off the bars (Kuva 13). To see how accurate that is, we took a chart of the same design whose numbers are printed, painted the numbers out and let Gemini read it: 17 values, off by 0.1 percentage points on average and 0.2 at most. Each county value was also measured from the colours of the picture itself: 110 values, 0.2 points apart on average, 0.7 at most. Values read off an axis stay marked as unverified. Added by you, unverified Nothing yet. In the Plan view, “Read a report” lets you read any report and add single values to Kello; they are listed here. Method, in plain language The care path. For each county the registry publishes how many lung cancer patients were staged, discussed by a team, treated to cure, operated, given other treatment or have no treatment on record. Kello shows each share with its 95% range, next to Finland and the best county. Beyond chance. A small county's share moves a lot from one period to the next. Kello draws the range that chance alone gives a county of each size around the national share, and only calls a county lower or higher when it is outside that range. Missing patients. The county's share against the national share, times its patients a year. It is arithmetic on registry shares: it does not say which patients could have been treated to cure. Expected share. What the county's share would be if only the age of its residents mattered. Stage, fitness and other illness are not published by county and cannot be adjusted for. Actions. Each action has an assumed effect with a low and a high end, taken from published studies in other health systems, a cost assumption and an owner. No trial has measured the access effects in Finland, so their low end is zero. The plan. For a budget, Kello chooses the actions that add the most patients treated to cure per euro, within stated rules. Every rule is listed on the county page under “How this was chosen”. The estimated clock, and a check that did not confirm it Kello also estimates the days from first symptom to treatment by county. Only diagnosis to treatment is measured, and only for the five university hospital areas; the earlier steps are national figures scaled by public county indicators with assumed weights. It is kept as a secondary view (“Time (estimated)”) and is not used in the plan. The check. Spearman rank correlation, across counties, between the estimated days from first symptom to diagnosis (steps 1-4) and three measured outcomes. 0 of 3 outcomes correlate with the estimated clock in the expected direction beyond chance. This is a check, not a validation: it is county-level, with about 22 points, and confounded by age, smoking and stage at diagnosis. The priors were not tuned to improve it. Expected direction: counties with a longer estimated wait have lower share treated with curative intent, moderately (rho -0.30, n 22, permutation p 0.17; could be chance). No relationship: counties with a longer estimated wait do not differ in one-year survival (rho -0.04, n 22). No relationship: counties with a longer estimated wait do not differ in age-standardised lung cancer mortality (rho +0.10, n 23). Reproducible analyses Run with Claude Science from a script. Each one keeps its figures, data, code and every permission it was given, so the result can be re-run. County differences in curative-intent treatment are far larger than chance If every county treated at the national rate of 27.0%, chance alone would put about one county outside the 95% limits. Twelve of 22 are outside. Lapland, South Karelia and Kymenlaakso are below even the 99.8% limits. The seven counties below the limits are together about 50 patients a year short of the national share. This is not adjusted for stage or age, because those are not published per county, so it shows where to look, not why. Full answer, code and data Finland is about ten years behind Sweden and Norway in lung cancer survival, and the gap is growing Men diagnosed with lung cancer in Finland in 2020–2024 have a 5-year relative survival of 17.9%. The Sweden/Norway average passed that level about 10 years ago and is now 31.1%. The gap was close to zero in the 1990s and has widened by about 4 percentage points per decade (95% interval 2.2 to 5.7). For women the gap is 7.9 points, about 6 years. Pancreas and liver show the same pattern. Source: NORDCAN, fetched live by the analysis. Full answer, code and data Limits County-level aggregates cannot show cause. A county with a low share treated to cure is a place to look, not proof of worse care. County shares are not adjusted for stage, fitness or other illness: the registry does not publish those by county. Part of a gap can be treatment that was given but not recorded. Where the registry's own figures suggest that, the county is flagged. Days from diagnosis to treatment are published for the five university hospital areas, not for each county. Effects come from studies in other health systems. No trial has measured them in a Finnish county, and the low end of the access effects is zero. Costs are assumptions and should be replaced with the county's own figures. Åland has too few patients for the registry to publish its care path. Nothing here predicts the course of an individual patient. Three passages of the plan are written by a language model from these numbers, then checked by a second pass that removes any sentence without a source. The table, the targets and the totals are filled in by code. Data sources Opened: we read the number on this page. Listed: we downloaded it but took no number from it. Sources that Kello takes numbers from come first. Source Values in Kello Retrieved Status Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), Finnish Cancer Registry (Syöpärekisteri) https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html New cases 2019-2023, treatment from HILMO within 12 months. 686 2026-11-13 Opened 13u5 -- Deaths by underlying cause of death (time series classification) and wellbeing services county, 1969-2025, Statistics Finland https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__ksyyt/statfin_ksyyt_pxt_13u5.px/ Counts and crude death rate per 100,000 mean population. The 'lung' group is C32-C34 (larynx, trachea and lung). Crude rates are not age-standardised. 4752 2026-11-13 Opened Kela: entitlements to special reimbursement of medicines by wellbeing services county, age, sex and entitlement code, Kela (Social Insurance Institution of Finland) https://avoindata.suomi.fi/data/dataset/70832958-f7b6-4e09-8350-615362e6ee30 Entitlements that started during the year summed over age groups and sexes; rows with area code outside the 23 counties are only in the national sum. Lung cancer has no own code: it falls under 130 'other malignant tumours'. National value = sum of all rows. 1200 2026-11-13 Opened 11ra -- Key figures on population by region, 1990-2025, Statistics Finland https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11ra.px/ Wellbeing services county rows (HVAxx) and whole country (SSS); 2026 regional division. 720 2026-11-13 Opened Cancer statistics application: cancer deaths and mortality rates by area, latest 5-year period (Viimeisin 5-vuotisjakso (2020-2024)), Finnish Cancer Registry (Syöpärekisteri) https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22 Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 348 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland … 696 2026-11-13 Opened Cancer statistics application: new cancer cases and incidence rates by area, latest 5-year period (Viimeisin 5-vuotisjakso (2020-2024)), Finnish Cancer Registry (Syöpärekisteri) https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22 Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 348 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland … 696 2026-11-13 Opened Cancer statistics application: age-standardised relative survival 1-5 years from diagnosis, by collaborative area (Vuosia toteamisesta (2022-2024)), Finnish Cancer Registry (Syöpärekisteri) https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22r.e2.as%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_surv%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22surv%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210200L%22,%2210300L%22,%2210400L%22,%2210500L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22 Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Survival is published for the whole country, the five collaborative areas and Åland only, not by wellbeing services county. 311 table rows with 95 % CI. 486 2026-11-13 Opened Keuhkosyöpä Suomessa (lung cancer in Finland, PDF report, Dec 2024), Finnish Cancer Registry (Syöpärekisteri) https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf 250 2026-11-13 Opened Sotkanet indicator 180: Measure of educational level, THL Sotkanet; data owner: Statistics Finland https://sotkanet.fi/sotkanet/en/metadata/indicators/180 Finnish title: Koulutustasomittain. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 2475: Outpatient visits in specialised health care, oncology and radiotherapy, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/2475 Finnish title: Erikoissairaanhoidon avohoitokäynnit, syöpätaudit ja sädehoito. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 2478: Outpatient visits in specialised health care, lung diseases, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/2478 Finnish title: Erikoissairaanhoidon avohoitokäynnit, keuhkosairaudet. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3055: Patients admitted to specialised health care without referral, as % of all completed periods of care in specialised health care, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/3055 Finnish title: Ilman lähetettä erikoissairaanhoitoon tulleet, % kaikista päättyneistä erikoissairaanhoidon hoitojaksoista. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3099: General at-risk-of-poverty rate for the municipality, THL Sotkanet; data owner: Statistics Finland https://sotkanet.fi/sotkanet/en/metadata/indicators/3099 Finnish title: Kunnan yleinen pienituloisuusaste. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3138: Potential years of life lost (PYLL) at ages 0-80 per 100 000 inhabitants, THL Sotkanet; data owner: Statistics Finland https://sotkanet.fi/sotkanet/en/metadata/indicators/3138 Finnish title: Menetetyt elinvuodet (PYLL) ikävälillä 0 - 80 vuotta / 100 000 asukasta. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3620: Proportion of women invited to cervical cancer screening (smear test) who attended, %, THL Sotkanet; data owner: Finnish Cancer Registry https://sotkanet.fi/sotkanet/en/metadata/indicators/3620 Finnish title: Kohdunkaulasyövän seulontaan (papa) osallistuneiden osuus kutsutuista, %. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3625: Five-year relative survival rate of breast cancer patients, %, THL Sotkanet; data owner: Finnish Cancer Registry https://sotkanet.fi/sotkanet/en/metadata/indicators/3625 Finnish title: Rintasyövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3626: Five-year relative survival rate of cervical cancer patients, %, THL Sotkanet; data owner: Finnish Cancer Registry https://sotkanet.fi/sotkanet/en/metadata/indicators/3626 Finnish title: Kohdunkaulan syövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 3627: Five-year relative survival rate of bowel cancer patients, %, THL Sotkanet; data owner: Finnish Cancer Registry https://sotkanet.fi/sotkanet/en/metadata/indicators/3627 Finnish title: Paksunsuolen syövän sairastaneiden viiden vuoden suhteellinen elossaololuku, %. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 4123: Outpatient medical visits (physicians) in primary health care per 1000 inhabitants, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/4123 Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärikäynnit yhteensä / 1 000 asukasta. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 5018: Chronic airflow obstruction as the reason for outpatient visit to primary health care physician, % of recorded reasons for visits, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5018 Finnish title: Keuhkoahtaumatauti perusterveydenhuollon lääkärin avosairaanhoidon vastaanoton käyntisyynä, % kirjatuista käyntisyistä. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 5085: Entitled to special refunds on medicines for chronic bronchial asthma and chronic obstructive pulmonary diseases closely resembling it on 31 December, as age-standardised % of total population, THL Sotkanet; data owner: Social Insurance Institution of Finland (Kela) https://sotkanet.fi/sotkanet/en/metadata/indicators/5085 Finnish title: Erityiskorvattaviin lääkkeisiin kroonisen keuhkoastman ja sitä läheisesti muistuttavien kroonisten obstruktiivisten keuhkosairauksien vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%). Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 5093: Entitled to special refunds on medicines for cancer 31.12., age-standardised population share(%), THL Sotkanet; data owner: Social Insurance Institution of Finland (Kela) https://sotkanet.fi/sotkanet/en/metadata/indicators/5093 Finnish title: Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%). Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 5643: Cancer index, age-standardised, THL Sotkanet; data owner: Kela and Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5643 Finnish title: Syöpäindeksi, ikävakioitu. Latest 5 years with county-level data kept. 120 2026-11-13 Opened Sotkanet indicator 5657: Lung diseases index, age-standardised, THL Sotkanet; data owner: Kela and Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5657 Finnish title: Keuhkosairausindeksi, ikävakioitu. Latest 5 years with county-level data kept. 120 2026-11-13 Opened 14wx -- Population projection 2024: population by age and sex by area, 2024-2045, Statistics Finland https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaenn/statfin_vaenn_pxt_14wx.px/ Municipal projection (trend calculation by Statistics Finland, 2024 base) summed to counties with the 2024 municipality-county key. A projection published by the source, not an estimate by this project. 120 2026-11-13 Opened Sotkanet indicator 4193: Potential years of life lost (PYLL) due to pulmonary diseases for people aged 25 to 80 per 100 000 persons of the same age, THL Sotkanet; data owner: Statistics Finland https://sotkanet.fi/sotkanet/en/metadata/indicators/4193 Finnish title: Keuhkosairauksien vuoksi menetetyt elinvuodet (PYLL) ikävälillä 25 - 80 vuotta / 100 000 vastaavan ikäistä. Latest 5 years with county-level data kept. 118 2026-11-13 Opened Sotkanet indicator 2676: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept (March) (up to 2024), THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/2676 Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä (maaliskuun tilanne) (-2024). Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 3176: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 3 months from assessment of the need for treatment, % appointments kept (October) (up to 2023), THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/3176 Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 3 kk hoidon tarpeen arvioinnista, % toteutuneista käynneistä (lokakuun tilanne) (-2023). Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 3621: Proportion of women invited to breast cancer screening (mammography) who attended, %, THL Sotkanet; data owner: Finnish Cancer Registry https://sotkanet.fi/sotkanet/en/metadata/indicators/3621 Finnish title: Rintasyövän seulontaan (mammografia) osallistuneiden osuus kutsutuista, %. Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 5047: Treatment period for children 15 years and older admitted to a bed ward for the treatment of chronic airflow obstruction per 100,000 inhabitants, adjusted, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5047 Finnish title: 15 vuotta täyttäneiden hoitojaksot sairaalan vuodeosastolla keuhkoahtaumataudin vuoksi / 100 000 asukasta, vakioitu. Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 5499: Waiting time for elective outpatient medical visit (nurses and health care nurses) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept (October) (up to 2023), THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5499 Finnish title: Perusterveydenhuollon avosairaanhoidon sairaan-/terveydenhoitajan kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä (lokakuun tilanne) (-2023). Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 6410: Waiting time of over 3 months since assessment of the need for treatment for a non-emergency appointment with a primary health care doctor in outpatient care, % of completed appointments, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/6410 Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 3 kk hoidon tarpeen arvioinnista, % toteutuneista käynneistä. Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 6411: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/6411 Finnish title: Perusterveydenhuollon avosairaanhoidon lääkärin kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä. Latest 5 years with county-level data kept. 115 2026-11-13 Opened Sotkanet indicator 6412: Waiting time for elective outpatient medical visit (nurses and health care nurses) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/6412 Finnish title: Perusterveydenhuollon avosairaanhoidon sairaan-/terveydenhoitajan kiireettömän käynnin odotusaika yli 7 pv hoidon tarpeen arvioinnista, % toteutuneista käynneistä. Latest 5 years with county-level data kept. 115 2026-11-13 Opened Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2025 (pct), THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02 By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube. 115 2026-11-13 Opened Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2026 (pct), THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02 By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube. 115 2026-11-13 Opened Sotkanet indicator 5502: Continuity of care (COCI) in professional outpatient visits (doctor) in primary health care, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5502 Finnish title: Hoidon jatkuvuus (COCI) perusterveydenhuollon avosairaanhoidon lääkärikäynneillä. Latest 5 years with county-level data kept. 114 2026-11-13 Opened Sotkanet indicator 3336: Patients waiting over 6 months during the year for access to specialised health care per 10 000 inhabitants, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/3336 Finnish title: Erikoissairaanhoitoa yli 6 kk odottaneet vuoden aikana / 10 000 asukasta. Latest 5 years with county-level data kept. 92 2026-11-13 Opened Sotkanet indicator 13: Referrals for specialised health care received processed within 3 days, % of referrals received, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/13 Finnish title: Erikoissairaanhoitoon saapuneet 3 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä. Latest 5 years with county-level data kept. 90 2026-11-13 Opened Sotkanet indicator 5033: Referrals for specialised health care received after processing for more than 21 days, % of the referrals received, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5033 Finnish title: Erikoissairaanhoitoon saapuneet yli 21 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä. Latest 5 years with county-level data kept. 90 2026-11-13 Opened Sotkanet indicator 4263: Going short of food, medicines or physician visits because of lack of money (%), THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/4263 Finnish title: Rahanpuutteen vuoksi ruoasta, lääkkeistä tai lääkärikäynneistä tinkimään joutuneiden osuus (%). Latest 5 years with county-level data kept. 71 2026-11-13 Opened Sotkanet indicator 4404: Daily smokers (%), THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/4404 Finnish title: Päivittäin tupakoivien osuus (%). Latest 5 years with county-level data kept. 71 2026-11-13 Opened Sotkanet indicator 4406: Daily smokers (%), age 65 and over, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/4406 Finnish title: Päivittäin tupakoivien osuus (%), 65 vuotta täyttäneet. Latest 5 years with county-level data kept. 71 2026-11-13 Opened Sotkanet indicator 4408: Daily smokers (%), low-level education, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/4408 Finnish title: Päivittäin tupakoivien osuus (%), matala koulutus. Latest 5 years with county-level data kept. 71 2026-11-13 Opened Sotkanet indicator 6103: Proportion of invited to colorectal cancer screening who attended, %, THL Sotkanet; data owner: Finnish Cancer Registry https://sotkanet.fi/sotkanet/en/metadata/indicators/6103 Finnish title: Suolistosyövän seulontaan osallistuneiden osuus kutsutuista, %. Latest 5 years with county-level data kept. 69 2026-11-13 Opened Coordinates of the five Finnish university hospitals (OpenStreetMap Nominatim geocoder), OpenStreetMap contributors https://nominatim.openstreetmap.org/ HUS: 60.1882,24.9064 (Meilahden tornisairaala, 4, Haartmaninkatu, Meilahti, Läntinen suurpiiri, Helsinki, Helsingin seutukunta, Uusimaa, Manner-Suomi, 00290, Suomi / Finland); TYKS: 60.4534,22.2926 (Turun yliopistollinen keskussairaala, 4-8, Kiinamyllynkatu, Ylioppilastalot, I, Keskusta, Turku, … 48 2026-11-13 Opened Sotkanet indicator 5073: Referrals received for specialised health care per 1000 inhabitants, THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL) https://sotkanet.fi/sotkanet/en/metadata/indicators/5073 Finnish title: Erikoissairaanhoitoon saapuvat lähetteet / 1 000 asukasta. Latest 5 years with county-level data kept. 36 2026-11-13 Opened Cancer statistics application: cancer deaths and mortality rates by year, whole country (Vuosi (1953-2024)), Finnish Cancer Registry (Syöpärekisteri) https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22 Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 864 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland … 25 2026-11-13 Opened Sotkanet indicator 749: Population aged 65 and over as % of total population, projection for 2030 (calculated 2024), THL Sotkanet; data owner: Statistics Finland https://sotkanet.fi/sotkanet/en/metadata/indicators/749 Finnish title: 65 vuotta täyttäneet, % väestöstä, väestöennuste 2030 (laskettu 2024). Latest 5 years with county-level data kept. 24 2026-11-13 Opened Sotkanet indicator 760: Population aged 65 and over as % of total population, projection for 2040 (calculated 2024), THL Sotkanet; data owner: Statistics Finland https://sotkanet.fi/sotkanet/en/metadata/indicators/760 Finnish title: 65 vuotta täyttäneet, % väestöstä, väestöennuste 2040 (laskettu 2024). Latest 5 years with county-level data kept. 24 2026-11-13 Opened Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2025 (n), THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02 By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube. 23 2026-11-13 Opened Avohilmo: access to primary care from earliest timestamp to realised visit, physicians, outpatient care, 2026 (n), THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/avohpaasy/pthjono02/fact_ahil_pthjono02 By wellbeing services county of the provider. 2026 is year-to-date. Åland is not in the cube. 23 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Yli 180 vrk hoitoa odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 23 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Yli 90 vrk hoitoa odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 23 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Hoitoa odottaneet, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 23 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Lähete käsitelty yli 21 vrk:ssa, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 23 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Lähetteet yhteensä (vuoden alusta), THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 23 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Lähete käsitelty yli 21 vrk:ssa, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 22 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Lähetteet yhteensä (vuoden alusta), THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 22 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Yli 180 vrk hoitoa odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 21 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Yli 90 vrk hoitoa odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 21 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Hoitoa odottaneet, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 21 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Yli 90 vrk hoidon tarpeen arviointia odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 19 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Hoidon tarpeen arviointia odottaneet, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 19 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Yli 90 vrk hoidon tarpeen arviointia odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 18 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Hoidon tarpeen arviointia odottaneet, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 18 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Yli 180 vrk hoidon tarpeen arviointia odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 18 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Yli 180 vrk hoidon tarpeen arviointia odottaneet, %, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 17 2026-11-13 Opened Specialist care waiting times: 65 Syöpätaudit - Lähetteet yhteensä / 1000 as, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 8 2026-11-13 Opened NORDCAN incidence and mortality by country, sex, cancer and year, NORDCAN (IARC, Association of the Nordic Cancer Registries) https://nordcan.iarc.fr/ 6 2026-11-13 Opened NORDCAN 5-year relative survival, Finland / Sweden / Norway / Denmark, lung, pancreas and liver, by sex, NORDCAN (IARC, Association of the Nordic Cancer Registries) https://nordcan.iarc.fr/ NORDCAN publishes survival by sex only (no both-sexes figure) and for countries only (not for the Finnish regions). 6 2026-11-13 Opened Specialist care waiting times: 80 Keuhkosairaudet - Lähetteet yhteensä / 1000 as, THL (Finnish Institute for Health and Welfare) https://sampo.thl.fi/pivot/prod/fi/eshjono/jonotilanne/fact_eshjono_jonotilanne Values are by provider. HUS is one provider for East, Central and West Uusimaa, Vantaa-Kerava and Helsinki: its value is written to each of those five areas with note 'HUS-wide value'. Åland is not in the cube. The provider 'Helsingin sosiaali-, terveys- ja pelastustoimi' (city-run specialist care) … 3 2026-11-13 Opened NORDCAN 5-year relative survival by country, sex and cancer, 5-year periods, NORDCAN (IARC, Association of the Nordic Cancer Registries) https://nordcan.iarc.fr/ 2 2026-11-13 Opened Hoitoonpääsyn seuranta syövän hoidossa: määrittelyt ja ohjeistus (THL Ohjaus 21/2016, in force from 1 Jan 2017), Finnish Institute for Health and Welfare (THL) https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content The target-time definition the strategy's indicator 'patients are treated within target times' points to. Quote checked in the downloaded PDF: 'Syöpään sairastuneiden hoidon osalta tiedot toteutuneista odotusajoista löytyvät THL.fi-sivustolta, heti kun aineiston laatu saadaan hyväksyttävälle … – 2026-11-13 Listed THL specialist care access (hoitoonpääsy erikoissairaanhoidossa): list of open reports and cubes, Finnish Institute for Health and Welfare (THL) https://sampo.thl.fi/pivot/prod/fi/eshjono/ 16 report titles read: Aikasarja | Erikoisalajakauma | Hoitoa ja hoidon tarpeen arviointia odottavat erikoisaloittain | Hoitoa ja hoidon tarpeen arviointia odottavat erikoisaloittain, saavutettava tiiviste | Hoitoa ja hoidon tarpeen arviointia odottavat ja lähetteet | Hyvinvointialueiden vertailu … – 2026-11-13 Listed Cancer in Finland 2023 (factsheet), Finnish Cancer Registry (Syöpärekisteri) https://syoparekisteri.fi/assets/themes/ssy3/factsheets/cancer_in_finland_2023.html – 2026-11-13 Listed Sotkanet region classification, THL (Finnish Institute for Health and Welfare) https://sotkanet.fi/rest/1.1/regions Used to map Sotkanet region ids to wellbeing services county codes and to verify the collaborative area (YTA) of each county. – 2026-11-13 Listed 11ra -- Population 31 Dec 2025 by municipality, Statistics Finland https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11ra.px/ Population weights for the distance indicator. – 2026-11-13 Listed Municipal boundaries 2026, 1:4,500,000 (WFS), Statistics Finland https://geo.stat.fi/geoserver/tilastointialueet/wfs Polygon centroids used as municipality locations. – 2026-11-13 Listed Correspondence table: municipalities 2024 - wellbeing services counties 2024, Statistics Finland https://stat.fi/en/luokitukset/corrmaps/kunta_1_20240101%23hyvinvointialue_1_20240101 Used to aggregate municipal projections to counties. – 2026-11-13 Listed Correspondence table: municipalities 2026 - wellbeing services counties 2026, Statistics Finland https://stat.fi/en/luokitukset/corrmaps/kunta_1_20260101%23hyvinvointialue_1_20260101 – 2026-11-13 Listed Cancer statistics application: new cancer cases and incidence rates by year, whole country (Vuosi (1953-2024)), Finnish Cancer Registry (Syöpärekisteri) https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22 Interactive R Shiny application embedded at https://cancerregistry.fi/statistics/cancer-statistics/ (no API). Sites: all cancers, liver C22, pancreas C25, lung and trachea C33-34; both sexes, men, women. 864 table rows. Value types in the export: counts, crude rate, age-standardised rate (Finland … – 2026-11-13 Listed NORDCAN: Finland, new cases and deaths 2020-2024, lung / pancreas / liver / all sites, by sex, NORDCAN (IARC, Association of the Nordic Cancer Registries) https://nordcan.iarc.fr/ Used only as a second source for the national counts taken from the Finnish Cancer Registry application (NORDCAN 'All sites' = id 980). – 2026-11-13 Listed 13u5 -- Deaths by underlying cause of death (time series classification) and wellbeing services county, 2020-2024, Statistics Finland https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__ksyyt/statfin_ksyyt_pxt_13u5.px/ Second source for the registry's death counts by county. Causes: 04-21 all cancers (C00-C97), 09 primary liver cancer (C22), 10 pancreatic cancer (C25), 11 larynx, trachea and lung (C32-C34; includes larynx, unlike the registry's C33-34). – 2026-11-13 Listed Evidence behind the actions Opened: we read the page and the quoted words are on it. Not verified: the claim is listed with its link, but we have not confirmed the wording on the page ourselves. Action Claim Status Standardised lung cancer pathway with booked slots Three-year relative survival for symptomatic cancer patients diagnosed via primary care rose from 45 % to 54 % after Danish cancer patient pathways were introduced. (2017, before-during-after cohort, Denmark) https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/ Opened Standardised lung cancer pathway with booked slots Sweden: 72 % of lung cancer patients were diagnosed through the pathway. (2023, registry cohort, one Swedish region, 2018) https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/ Opened Standardised lung cancer pathway with booked slots Finland is the only Nordic country without national standardised care pathways. (2026, policy report summary (IHE)) https://ihe.se/en/new-cancer-dashboard-for-finland/ Opened Standardised lung cancer pathway with booked slots No effect found: Sweden: only 30 % of lung cancer pathway patients started treatment within the 30-44 day lead time; a pathway on paper does not deliver the time by itself. (2023) https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/ Not verified Standardised lung cancer pathway with booked slots No effect found: Danish authors note the survival gain may partly reflect lead-time bias and selection bias. (2017) https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/ Not verified Same-day chest X-ray report with immediate CT Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis. (2023, randomised controlled trial (radioX), single London hospital) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/ Opened Same-day chest X-ray report with immediate CT Finnish specialist care loses time waiting for imaging and reports. (2026, journalism citing unpublished four-city study) https://yle.fi/a/74-20242733 Opened Same-day chest X-ray report with immediate CT No effect found: In the same trial, mean days to diagnosis did not differ (54.4 vs 50.3); the effect is on the median and rests on 49 cancers. (2023) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/ Not verified GP direct access to low-dose CT Danish cluster-randomised trial: direct CT access gave a non-significant 8-day shorter diagnostic interval and no stage shift. (2015, cluster-randomised controlled trial, Aarhus, 119 practices) https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/ Opened GP direct access to low-dose CT Finland has the lowest access to CT from primary care and the longest primary care waits in the Nordics. (2025, survey + expert workshops) https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/ Opened GP direct access to low-dose CT The lead investigator of the Finnish delay study recommends direct CT ordering from primary care. (2026, expert opinion) https://yle.fi/a/74-20242733 Opened GP direct access to low-dose CT No effect found: Direct low-dose CT from primary care did not statistically significantly decrease time to diagnosis or change stage at diagnosis. (2015) https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/ Not verified AI chest X-ray triage without added capacity Randomised trial of 93 326 chest X-rays: AI prioritisation changed neither time to CT nor time to diagnosis. (2026, prospective multicentre randomised controlled trial (LungIMPACT), UK) https://www.nature.com/articles/s41591-026-04253-5 Opened AI chest X-ray triage without added capacity Authors conclude AI worklist prioritisation should not be deployed for this purpose. (2026, randomised controlled trial) https://www.nature.com/articles/s41591-026-04253-5 Opened AI chest X-ray triage without added capacity No effect found: Time to CT 53 vs 53 days; ratio of geometric means 0.97 (0.93-1.02), P=0.31. (2026) https://www.nature.com/articles/s41591-026-04253-5 Not verified AI chest X-ray triage without added capacity No effect found: No difference in time to referral (14 vs 15 days), time to treatment (76 vs 72.5 days) or stage at diagnosis (P=0.34). (2026) https://www.nature.com/articles/s41591-026-04253-5 Not verified EBUS as first test, with enough bronchoscopy capacity Randomised trial: EBUS as initial investigation halved time to treatment decision. (2015, open-label multicentre randomised controlled trial (Lung-BOOST), six UK centres) https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/ Opened EBUS as first test, with enough bronchoscopy capacity Finnish target: tissue sample within a week of the request. (2016, national guidance (THL Ohjaus 21/2016)) https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content Opened Reflex molecular testing ordered by pathology Resected EGFR-mutated NSCLC: 89 % vs 52 % alive and disease-free at 24 months with adjuvant osimertinib, so EGFR status is needed after surgery. (2020, randomised controlled trial (ADAURA)) https://europepmc.org/article/MED/32955177 Opened Reflex molecular testing ordered by pathology Resected ALK-positive NSCLC: 93.8 % vs 63.0 % alive and disease-free at 2 years with adjuvant alectinib. (2024, randomised controlled trial (ALINA)) https://europepmc.org/article/MED/38598794 Opened Reflex molecular testing ordered by pathology Stage III EGFR-mutated NSCLC after chemoradiotherapy: median progression-free survival 39.1 vs 5.6 months with osimertinib. (2024, randomised controlled trial (LAURA)) https://europepmc.org/article/MED/38828946 Opened Reflex molecular testing ordered by pathology Stage III NSCLC after chemoradiotherapy: durvalumab lengthened progression-free survival, so PD-L1 and EGFR status are needed before consolidation. (2017, randomised controlled trial (PACIFIC)) https://europepmc.org/article/MED/28885881 Opened Reflex molecular testing ordered by pathology Reflex protocol cut time to initiation of molecular testing from about 27 weekdays to under 1. (2023, retrospective review of three workflows, single US institution) https://doi.org/10.1093/jalm/jfad104 Opened Reflex molecular testing ordered by pathology Reflex testing also reduced care given without biomarker information. (2023, retrospective review) https://doi.org/10.1093/jalm/jfad104 Opened Reflex molecular testing ordered by pathology IHE lists suboptimal use of advanced biomarker testing among Finnish gaps. (2026, policy report summary (IHE)) https://ihe.se/en/new-cancer-dashboard-for-finland/ Opened Reflex molecular testing ordered by pathology No effect found: Reporting time itself did not change (11.1, 11.9, 11.4 weekdays); the gain is only in when the test starts. (2023) https://doi.org/10.1093/jalm/jfad104 Not verified Plasma ctDNA test before tissue diagnosis Plasma-first genotyping was associated with 23 days shorter time to treatment. (2023, single-group non-randomised trial with reference cohort, Toronto) https://pmc.ncbi.nlm.nih.gov/articles/PMC10369925/ Opened Plasma ctDNA test before tissue diagnosis No effect found: Single-centre, non-randomised; reference cohort is historical standard care, so part of the difference may be confounded. (2023) https://pmc.ncbi.nlm.nih.gov/articles/PMC10369925/ Not verified Nurse navigator for every suspected lung cancer Scoping review of 13 studies: navigation shortened diagnosis-to-treatment waits. (2026, scoping review, 13 studies, several cancers including lung) https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/ Opened Nurse navigator for every suspected lung cancer No effect found: No pooled effect size; included studies are mostly retrospective cohorts in other health systems. (2026) https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/ Not verified Low-dose CT screening for long-term heavy smokers Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening. (2021, randomised trial (UKLS) + random-effects meta-analysis of 9 trials) https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/ Opened Low-dose CT screening for long-term heavy smokers NELSON control arm: 3.30 lung cancer deaths per 1 000 person-years among unscreened heavy smokers (the baseline risk used here). (2020, randomised controlled trial, Netherlands and Belgium) https://doi.org/10.1056/NEJMoa1911793 Opened Low-dose CT screening for long-term heavy smokers NELSON: 24 % lower lung cancer mortality in men at 10 years. (2020, randomised controlled trial, Netherlands and Belgium) https://doi.org/10.1056/NEJMoa1911793 Opened Low-dose CT screening for long-term heavy smokers Finnish Oulu pilot: 5 of 6 screen-detected cancers were stage I. (2026, pilot study (LDCT-SC-FI, Oulu, 200 participants) as cited by IHE) https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf Opened Low-dose CT screening for long-term heavy smokers Finnish national pilot: 1 200 long-term smokers from five regions. (2026, news report on national pilot) https://yle.fi/a/74-20205604 Opened Low-dose CT screening for long-term heavy smokers NHS targeted lung health checks: about 76 % of cancers found at stage I-II. (2024, programme statistics (NHS England press release)) https://www.england.nhs.uk/2024/11/thousands-of-cancers-caught-early-through-nhs-lung-checks/ Not verified Low-dose CT screening for long-term heavy smokers No effect found: UKLS alone did not reach significance: relative rate 0.65 (0.41-1.02), p=0.062. (2021) https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/ Not verified Symptom awareness campaign (cough over three weeks) English national lung campaign: stage I share of NSCLC +3.1 percentage points. (2015, before-after evaluation of national campaign, England) https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/ Opened Symptom awareness campaign (cough over three weeks) The patient interval is the longest single step in Finland. (2026, journalism citing unpublished four-city study) https://yle.fi/a/74-20242733 Opened Symptom awareness campaign (cough over three weeks) Stated reasons for late presentation: cost and fear. (2026, survey by cancer organisations as reported by Yle) https://yle.fi/a/74-20242733 Opened Symptom awareness campaign (cough over three weeks) The stage effect faded within months of the campaign. (2015, before-after evaluation of national campaign, England) https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/ Opened Symptom awareness campaign (cough over three weeks) The campaign raised GP chest X-ray requests by 20 %: the downstream workload is the main cost. (2015, regional pilot evaluation, England) https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/ Opened Symptom awareness campaign (cough over three weeks) No effect found: Stage shift in the regional pilot did not reach significance; effect is a before-after comparison and faded some months after the campaign. (2015) https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/ Not verified Symptom awareness campaign (cough over three weeks) Per 100 000 residents per year. Advertising: 7 100 EUR (roadmap measure 1.3.2 budgets 400 000 EUR nationally; 400 000 / 5.6 million x 100 000). Extra health-care use during and after the campaign, our assumption: 300 extra GP visits x 125 EUR = 37 500; 250 extra chest X-rays x 60 EUR = 15 000; 50 extra CT scans x 200 EUR = 10 000. Total 69 600 EUR, repeated every year because the effect fades. Only the advertising figure comes from a source. res/roadmap/r.txt#L1644 Not verified Rapid diagnostic centre for non-specific symptoms Danish diagnostic centre: 8 % of referrals with non-specific symptoms had cancer. (2024, prospective descriptive study, one Danish diagnostic centre) https://pmc.ncbi.nlm.nih.gov/articles/PMC10773629/ Opened Rapid diagnostic centre for non-specific symptoms Lancet Primary Care 2025 evaluation of rapid diagnostic centres. (2025, not opened (HTTP 403)) https://www.thelancet.com/journals/lanprc/article/PIIS3050-5143(25)00019-6/fulltext Not verified Rapid diagnostic centre for non-specific symptoms No effect found: 81 % of referrals had no serious new condition; no evidence opened on days saved or stage shift. (2024) https://pmc.ncbi.nlm.nih.gov/articles/PMC10773629/ Not verified Faster access to a doctor in primary care, with pulmonologist e-consultation Appointment wait 14 days in Finland vs 2-7 days in other Nordics. (2025, survey of healthcare professionals + expert workshops) https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/ Opened Faster access to a doctor in primary care, with pulmonologist e-consultation National data: 35 % waited over 14 days for a primary care doctor in 2023. (2025, national statistics cited in paper) https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/ Opened Faster access to a doctor in primary care, with pulmonologist e-consultation Only 40-60 % of Finnish patients meet a doctor at first contact. (2025, survey) https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/ Opened Faster access to a doctor in primary care, with pulmonologist e-consultation No effect found: Nordic experts in the same study agreed that a few weeks difference in waiting times does not explain the survival difference. (2025) https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/ Not verified Weekly video review of every stage I-III patient with the university hospital's specialists A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative). (2004, before-after study, one district general hospital, England) https://europepmc.org/article/MED/15237512 Opened Weekly video review of every stage I-III patient with the university hospital's specialists Same study: time from clinic to surgery fell from 69 to 54 days. (2004, before-after study, one district general hospital, England) https://europepmc.org/article/MED/15237512 Opened Weekly video review of every stage I-III patient with the university hospital's specialists MDT discussion doubled the share who got radiotherapy (66 % vs 33 %) but not surgery. (2011, cohort, South Western Sydney, Australia) https://europepmc.org/article/MED/21523766 Opened Weekly video review of every stage I-III patient with the university hospital's specialists After a thoracic multidisciplinary conference started, guideline-concordant treatment rose from 81 % to 97 % and days to treatment fell from 29 to 17. (2010, before-after study, one US centre (535 patients before, 687 after)) https://europepmc.org/article/MED/20206544 Opened Weekly video review of every stage I-III patient with the university hospital's specialists Whether Finnish patients are discussed in an MDT cannot be measured from national registers today. (2026, registry report press release) https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/ Opened Weekly video review of every stage I-III patient with the university hospital's specialists No effect found: MDT discussion did not change the share operated (12 % vs 13 %) and did not influence survival (Boxer 2011). (2011) https://europepmc.org/article/MED/21523766 Not verified Weekly video review of every stage I-III patient with the university hospital's specialists No effect found: Systematic review: MDT meetings change management plans, but there is little evidence that they improve clinical outcomes (Pillay 2016). (2016) https://europepmc.org/article/MED/26643552 Not verified A chest surgeon reviews every decision not to operate Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %. (2013, retrospective observational study, national audit linked to surgeon workforce data, England 2008-2009) https://europepmc.org/article/MED/23242439 Opened A chest surgeon reviews every decision not to operate Units that added specialist thoracic surgeons raised their resection rate more (relative rise 66 % vs 19 %). (2013, national survey linked to audit data, England) https://europepmc.org/article/MED/23242439 Opened A chest surgeon reviews every decision not to operate Patients first seen in a thoracic surgical centre were 51 % more likely to be operated (17 % vs 13 %). (2011, national audit cohort, England) https://europepmc.org/article/MED/21785158 Opened A chest surgeon reviews every decision not to operate Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025, retrospective five-hospital cohort, Finland) https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/ Opened A chest surgeon reviews every decision not to operate No effect found: Observational comparisons of hospitals: units where surgeons attend differ in other ways too. In an Australian cohort, patients discussed in an MDT were not operated more often than others (12 % vs 13 %, Boxer 2011). (2011) https://europepmc.org/article/MED/21523766 Not verified Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged. (2012, population registry, Netherlands, elderly stage I patients) https://europepmc.org/article/MED/22553198 Opened Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated North Holland: radiotherapy use in elderly stage I patients rose 16 points and fewer went untreated. (2010, population registry, North Holland, patients aged 75+) https://europepmc.org/article/MED/21041709 Opened Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated Medically inoperable stage I patients treated with stereotactic radiotherapy: 40 % alive at five years. (2018, single-arm phase 2 trial (RTOG 0236)) https://pmc.ncbi.nlm.nih.gov/articles/PMC6117101/ Opened Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated Untreated stage I patients: 6 % alive at five years. (2007, population registry, California) https://europepmc.org/article/MED/17505036 Opened Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated No effect found: No randomised comparison of stereotactic radiotherapy with no treatment exists; the Dutch figures are before-after changes in a registry, and the patients in the trial were selected. (2012) https://europepmc.org/article/MED/22553198 Not verified Fitness test and training before anyone is ruled too frail for curative treatment Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025, retrospective five-hospital cohort, Finland) https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/ Opened Fitness test and training before anyone is ruled too frail for curative treatment Exercise training before lung surgery more than halves lung complications after it. (2022, Cochrane systematic review, 10 randomised trials) https://europepmc.org/article/MED/36170564 Opened Fitness test and training before anyone is ruled too frail for curative treatment Geriatric assessment in lung cancer patients changed treatment decisions. (2016, systematic review, 18 studies) https://europepmc.org/article/MED/27349507 Opened Fitness test and training before anyone is ruled too frail for curative treatment No effect found: The Cochrane review measures complications and exercise capacity in patients already accepted for surgery; it does not show that more patients get operated. (2022) https://europepmc.org/article/MED/36170564 Not verified Travel and hotel paid for patients far from the university hospital England: longer travel-time contrasts were associated with lower surgery odds; the first contrast was 0.88 (95% CI 0.70–1.11), not significant. (2009, cancer registry cohort, Northern England) https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/ Opened Travel and hotel paid for patients far from the university hospital Patients living further from a thoracic surgery hospital were less likely to be operated. (2008, cancer registry cohort, Northern England) https://europepmc.org/article/MED/18375117 Opened Travel and hotel paid for patients far from the university hospital Ostrobothnia: patients living over 50 km from the hospital had higher 12-month mortality. (2024, population-based single-hospital cohort, Vaasa 2016-2020) https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/ Opened Travel and hotel paid for patients far from the university hospital Curative treatment is delivered less often in Eastern and Northern Finland. (2026, news report citing the Finnish Cancer Registry) https://yle.fi/a/74-20250979 Opened Travel and hotel paid for patients far from the university hospital No effect found: No intervention study: every figure here is an association between distance and treatment, not the effect of paying for travel. (2009) https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/ Not verified Travel and hotel paid for patients far from the university hospital No effect found: The Ostrobothnia paper notes that an Australian and a Polish study found no association between distance and survival. (2024) https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/ Not verified Check the charts of patients with no treatment on record The registry itself says part of the regional differences comes from recording practice. (2026, national registry quality report, Finland 2019-2023) https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html Opened Check the charts of patients with no treatment on record Treatment data linked to a lung cancer visit was found for 72.5 % of patients nationally. (2026, national registry quality report, Finland 2019-2023) https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html Opened Check the charts of patients with no treatment on record Stage was missing for nearly half of patients, which the registry attributes to gaps in clinical cancer notifications. (2026, registry report press release) https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/ Opened Check the charts of patients with no treatment on record Denmark: a national lung cancer registry with quarterly reports and yearly audit went together with rising resection rates and survival. (2013, national clinical registry report, Denmark, 2000-2012) https://europepmc.org/article/MED/24457234 Opened Check the charts of patients with no treatment on record No effect found: An audit by itself changes no treatment. The Danish improvements happened alongside pathways and centralisation, so they cannot be credited to the registry alone. (2013) https://europepmc.org/article/MED/24457234 Not verified Smoking cessation started at the first specialist visit Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC. (2021, prospective cohort, Moscow) https://doi.org/10.7326/M21-0252 Opened Smoking cessation started at the first specialist visit Half of potentially operable Finnish patients are not operated, often for lung or heart function. (2025, retrospective five-hospital cohort, Finland) https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/ Opened Smoking cessation started at the first specialist visit No effect found: Observational, single country (Russia); patients who manage to quit may differ from those who do not. (2021) https://doi.org/10.7326/M21-0252 Not verified"

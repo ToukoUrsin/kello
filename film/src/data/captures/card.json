@@ -1,17 +1,17 @@
 {
  "id": "card",
  "file": "captures/card.mp4",
- "duration": 56.228,
- "fps": 60,
+ "duration": 69.282,
+ "fps": 30,
  "viewport": [
   1024,
   576
  ],
  "scale": 3,
  "base": "http://127.0.0.1:8742",
- "captured_at": "2026-11-14T02:38:13+0000",
- "source_frames": 256,
- "source_fps_mean": 4.6,
+ "captured_at": "2026-11-14T06:52:38+0000",
+ "source_frames": 410,
+ "source_fps_mean": 5.9,
  "cursor": [
   [
    0,
@@ -19,970 +19,1251 @@
    345.59999999999997
   ],
   [
-   1.671,
+   1.082,
    563.2,
    345.6
   ],
   [
-   1.767,
+   1.121,
    563.1,
-   345.5
+   345.6
   ],
   [
-   1.854,
-   562.8,
+   1.141,
+   562.9,
    345.4
   ],
   [
-   1.904,
-   562.3,
-   345.0
+   1.169,
+   562.4,
+   345.2
   ],
   [
-   1.948,
-   561.5,
-   344.5
+   1.189,
+   561.7,
+   344.9
   ],
   [
-   2.046,
-   560.3,
-   343.7
+   1.659,
+   560.6,
+   344.3
   ],
   [
-   2.195,
-   558.6,
+   1.767,
+   559.1,
+   343.6
+  ],
+  [
+   2.027,
+   557.1,
    342.6
   ],
   [
-   2.387,
-   556.3,
-   341.2
+   2.081,
+   554.6,
+   341.3
   ],
   [
-   2.497,
-   553.4,
-   339.3
+   2.122,
+   551.4,
+   339.7
   ],
   [
-   2.648,
-   549.8,
-   336.9
+   2.143,
+   547.5,
+   337.8
   ],
   [
-   2.757,
-   545.3,
-   334.0
+   2.368,
+   542.8,
+   335.4
   ],
   [
-   2.807,
-   540.0,
-   330.6
+   2.388,
+   537.2,
+   332.6
   ],
   [
-   2.832,
-   533.7,
-   326.5
+   2.495,
+   530.8,
+   329.4
   ],
   [
-   2.852,
-   526.5,
-   321.6
+   2.979,
+   523.4,
+   325.6
   ],
   [
-   2.87,
-   518.1,
-   316.0
+   3.278,
+   514.9,
+   321.3
   ],
   [
-   2.892,
-   508.6,
-   309.5
+   3.298,
+   505.4,
+   316.3
   ],
   [
-   2.928,
-   498.0,
-   302.1
+   3.385,
+   494.7,
+   310.6
   ],
   [
-   2.947,
-   486.2,
-   293.5
+   3.672,
+   482.9,
+   304.1
   ],
   [
-   2.972,
-   473.3,
-   283.7
+   3.703,
+   469.9,
+   296.7
   ],
   [
-   2.995,
-   459.2,
-   272.5
-  ],
-  [
-   3.03,
-   444.1,
-   259.6
-  ],
-  [
-   3.05,
-   428.0,
-   244.9
-  ],
-  [
-   3.075,
-   412.5,
-   229.6
-  ],
-  [
-   3.11,
-   398.8,
-   215.2
-  ],
-  [
-   3.136,
-   386.9,
-   201.7
-  ],
-  [
-   3.155,
-   376.4,
-   189.3
-  ],
-  [
-   3.202,
-   367.3,
-   177.9
-  ],
-  [
-   3.223,
-   359.2,
-   167.7
-  ],
-  [
-   3.339,
-   352.3,
-   158.6
-  ],
-  [
-   3.451,
-   346.2,
-   150.5
-  ],
-  [
-   3.493,
-   341.1,
-   143.5
-  ],
-  [
-   3.512,
-   336.6,
-   137.5
-  ],
-  [
-   3.549,
-   332.9,
-   132.4
-  ],
-  [
-   3.579,
-   329.8,
-   128.1
-  ],
-  [
-   3.61,
-   327.2,
-   124.6
-  ],
-  [
-   3.641,
-   325.2,
-   121.7
-  ],
-  [
-   3.689,
-   323.6,
-   119.6
-  ],
-  [
-   3.708,
-   322.4,
-   117.9
-  ],
-  [
-   3.771,
-   321.6,
-   116.7
-  ],
-  [
-   3.794,
-   321.0,
-   115.9
-  ],
-  [
-   3.87,
-   320.7,
-   115.5
-  ],
-  [
-   3.91,
-   320.5,
-   115.2
-  ],
-  [
-   3.929,
-   320.4,
-   115.1
-  ],
-  [
-   3.947,
-   320.4,
-   115.1
-  ],
-  [
-   5.862,
-   320.4,
-   115.1
-  ],
-  [
-   5.891,
-   320.3,
-   115.2
-  ],
-  [
-   6.089,
-   320.0,
-   115.5
-  ],
-  [
-   6.153,
-   319.5,
-   115.9
-  ],
-  [
-   6.194,
-   318.5,
-   116.7
-  ],
-  [
-   6.22,
-   317.2,
-   117.9
-  ],
-  [
-   6.269,
-   315.3,
-   119.6
-  ],
-  [
-   6.34,
-   312.8,
-   121.7
-  ],
-  [
-   6.4,
-   309.5,
-   124.6
-  ],
-  [
-   6.424,
-   305.5,
-   128.1
-  ],
-  [
-   6.48,
-   300.5,
-   132.3
-  ],
-  [
-   6.509,
-   294.5,
-   137.4
-  ],
-  [
-   6.534,
-   287.4,
-   143.3
-  ],
-  [
-   6.555,
-   279.1,
-   150.2
-  ],
-  [
-   6.635,
-   269.4,
-   157.9
-  ],
-  [
-   6.693,
-   258.2,
-   166.5
-  ],
-  [
-   6.778,
-   245.2,
-   175.8
-  ],
-  [
-   6.902,
-   230.3,
-   185.8
-  ],
-  [
-   7.056,
-   213.3,
-   196.3
-  ],
-  [
-   7.124,
-   195.9,
-   206.0
-  ],
-  [
-   7.253,
-   179.9,
-   214.0
-  ],
-  [
-   7.339,
-   165.4,
-   220.7
-  ],
-  [
-   7.386,
-   152.4,
-   226.3
-  ],
-  [
-   7.452,
-   140.9,
-   231.0
-  ],
-  [
-   7.494,
-   130.9,
-   234.9
-  ],
-  [
-   7.53,
-   122.2,
-   238.2
-  ],
-  [
-   7.551,
-   114.9,
-   240.9
-  ],
-  [
-   7.576,
-   108.7,
-   243.1
-  ],
-  [
-   7.603,
-   103.7,
-   244.9
-  ],
-  [
-   7.643,
-   99.6,
-   246.4
-  ],
-  [
-   7.67,
-   96.5,
-   247.5
-  ],
-  [
-   7.703,
-   94.1,
-   248.4
-  ],
-  [
-   7.722,
-   92.4,
-   249.0
-  ],
-  [
-   7.784,
-   91.3,
-   249.4
-  ],
-  [
-   7.803,
-   90.6,
-   249.6
-  ],
-  [
-   7.827,
-   90.2,
-   249.7
-  ],
-  [
-   7.874,
-   90.1,
-   249.8
-  ],
-  [
-   7.908,
-   90.1,
-   249.8
-  ],
-  [
-   10.153,
-   90.1,
-   249.8
-  ],
-  [
-   10.184,
-   90.1,
-   250.0
-  ],
-  [
-   10.209,
-   90.3,
-   250.4
-  ],
-  [
-   10.232,
-   90.6,
-   251.2
-  ],
-  [
-   10.254,
-   91.0,
-   252.6
-  ],
-  [
-   10.291,
-   91.7,
-   254.6
-  ],
-  [
-   10.317,
-   92.6,
-   257.4
-  ],
-  [
-   10.341,
-   93.8,
-   261.2
-  ],
-  [
-   10.383,
-   95.4,
-   266.0
-  ],
-  [
-   10.414,
-   97.3,
-   272.1
-  ],
-  [
-   10.739,
-   99.6,
-   279.4
-  ],
-  [
-   10.76,
-   102.2,
+   3.726,
+   455.7,
    288.3
   ],
   [
-   10.799,
-   105.1,
-   298.8
+   3.758,
+   440.4,
+   278.8
   ],
   [
-   10.819,
-   108.2,
-   311.1
+   3.978,
+   423.9,
+   267.9
   ],
   [
-   10.907,
-   111.1,
-   325.4
+   4.037,
+   406.3,
+   255.5
   ],
   [
-   10.931,
-   113.7,
-   341.8
+   4.411,
+   388.0,
+   241.7
   ],
   [
-   10.989,
-   115.5,
-   358.3
+   4.485,
+   371.3,
+   228.1
   ],
   [
-   11.073,
-   116.3,
-   372.9
+   4.553,
+   356.3,
+   215.2
   ],
   [
-   11.124,
-   116.6,
-   385.6
+   4.633,
+   342.9,
+   203.0
   ],
   [
-   11.168,
-   116.6,
-   396.5
+   4.992,
+   331.0,
+   191.7
   ],
   [
-   11.187,
-   116.4,
-   405.7
+   5.017,
+   320.4,
+   181.2
   ],
   [
-   11.212,
-   116.1,
-   413.4
+   5.042,
+   310.9,
+   171.6
   ],
   [
-   11.233,
-   115.8,
-   419.8
+   5.062,
+   302.5,
+   162.9
   ],
   [
-   11.349,
-   115.6,
-   424.8
+   5.364,
+   295.1,
+   155.0
   ],
   [
-   11.465,
-   115.4,
-   428.8
+   5.469,
+   288.7,
+   148.1
   ],
   [
-   11.67,
-   115.2,
-   431.8
+   5.495,
+   283.0,
+   142.0
   ],
   [
-   11.733,
-   115.1,
-   433.9
+   5.518,
+   278.1,
+   136.7
   ],
   [
-   11.756,
-   115.0,
-   435.3
+   5.543,
+   273.9,
+   132.1
   ],
   [
-   11.778,
-   115.0,
-   436.2
+   6.044,
+   270.4,
+   128.2
   ],
   [
-   11.802,
-   114.9,
-   436.6
+   6.166,
+   267.5,
+   125.0
   ],
   [
-   11.903,
-   114.9,
-   436.8
+   6.188,
+   265.1,
+   122.3
   ],
   [
-   12.109,
-   114.9,
-   436.8
+   6.227,
+   263.1,
+   120.2
   ],
   [
-   17.009,
-   114.9,
-   436.8
+   6.274,
+   261.6,
+   118.6
   ],
   [
-   17.045,
-   114.8,
-   436.7
+   6.445,
+   260.5,
+   117.3
   ],
   [
-   17.092,
-   114.7,
-   436.3
+   6.488,
+   259.7,
+   116.4
   ],
   [
-   17.152,
-   114.4,
-   435.5
+   6.533,
+   259.1,
+   115.8
   ],
   [
-   17.173,
-   113.8,
-   434.2
+   6.562,
+   258.8,
+   115.5
   ],
   [
-   17.201,
-   113.0,
-   432.3
+   6.582,
+   258.6,
+   115.3
   ],
   [
-   17.29,
-   111.9,
-   429.7
+   6.611,
+   258.6,
+   115.2
   ],
   [
-   17.361,
-   110.4,
-   426.2
+   6.684,
+   258.6,
+   115.2
   ],
   [
-   17.38,
-   108.5,
-   421.7
+   8.525,
+   258.6,
+   115.2
   ],
   [
-   17.452,
-   106.1,
-   416.0
+   8.543,
+   258.8,
+   115.2
   ],
   [
-   17.751,
-   103.3,
-   409.1
+   8.564,
+   259.3,
+   115.1
   ],
   [
-   17.783,
-   100.0,
-   400.8
+   8.733,
+   260.2,
+   114.9
   ],
   [
-   17.845,
-   96.3,
-   390.9
+   8.781,
+   261.7,
+   114.7
   ],
   [
-   17.865,
-   92.2,
-   379.4
+   8.809,
+   264.0,
+   114.3
   ],
   [
-   17.903,
-   88.0,
-   366.0
+   8.838,
+   267.2,
+   113.7
   ],
   [
-   18.055,
-   83.8,
-   350.5
+   8.875,
+   271.5,
+   113.0
   ],
   [
-   18.075,
-   80.0,
-   333.3
+   8.897,
+   277.0,
+   112.1
   ],
   [
-   18.215,
-   77.3,
-   317.5
+   9.076,
+   283.8,
+   110.9
   ],
   [
-   18.461,
-   75.6,
-   303.5
+   9.113,
+   292.1,
+   109.5
   ],
   [
-   18.559,
-   74.4,
-   291.4
+   9.141,
+   302.2,
+   107.8
   ],
   [
-   18.779,
-   73.6,
-   280.9
+   9.161,
+   314.0,
+   105.9
   ],
   [
-   19.089,
-   73.1,
-   271.9
+   9.181,
+   327.8,
+   103.7
   ],
   [
-   19.16,
-   72.8,
-   264.5
+   9.209,
+   343.7,
+   101.3
   ],
   [
-   19.203,
-   72.6,
-   258.4
+   9.241,
+   361.9,
+   98.8
   ],
   [
-   19.247,
-   72.4,
-   253.5
+   9.538,
+   382.5,
+   96.1
   ],
   [
-   19.346,
-   72.3,
-   249.7
+   9.573,
+   405.6,
+   93.6
   ],
   [
-   19.364,
-   72.2,
-   246.8
+   9.78,
+   431.5,
+   91.4
   ],
   [
-   19.394,
-   72.1,
-   244.7
+   9.857,
+   460.2,
+   89.8
   ],
   [
-   19.445,
-   72.1,
-   243.4
+   9.877,
+   491.9,
+   89.1
   ],
   [
-   19.485,
-   72.0,
-   242.5
+   10.054,
+   526.0,
+   89.6
   ],
   [
-   19.544,
-   72.0,
-   242.1
+   10.082,
+   557.7,
+   91.3
   ],
   [
-   19.59,
-   72.0,
-   241.9
+   10.139,
+   586.4,
+   93.9
   ],
   [
-   19.693,
-   72.0,
-   241.9
+   10.39,
+   612.2,
+   96.9
   ],
   [
-   23.514,
-   72.1,
-   241.9
+   10.44,
+   635.2,
+   100.1
   ],
   [
-   23.657,
-   72.2,
-   242.0
+   10.48,
+   655.7,
+   103.4
   ],
   [
-   23.732,
-   72.7,
-   242.3
+   10.678,
+   673.8,
+   106.5
   ],
   [
-   23.823,
-   73.5,
-   242.8
+   10.709,
+   689.6,
+   109.4
   ],
   [
-   23.917,
-   74.9,
-   243.6
+   10.735,
+   703.4,
+   112.0
   ],
   [
-   23.952,
-   77.0,
-   244.8
+   10.947,
+   715.1,
+   114.3
   ],
   [
-   24.1,
-   79.9,
-   246.6
+   10.98,
+   725.1,
+   116.3
   ],
   [
-   24.274,
-   83.7,
-   249.0
+   11.008,
+   733.4,
+   118.0
   ],
   [
-   24.46,
-   88.5,
-   252.3
+   11.046,
+   740.2,
+   119.4
   ],
   [
-   24.618,
-   94.1,
-   256.8
+   11.312,
+   745.6,
+   120.5
   ],
   [
-   24.754,
-   99.3,
-   261.7
+   11.404,
+   749.8,
+   121.3
   ],
   [
-   24.907,
-   103.2,
-   265.9
+   11.599,
+   753.0,
+   122.0
   ],
   [
-   25.449,
-   106.2,
-   269.3
+   11.641,
+   755.3,
+   122.5
   ],
   [
-   25.469,
-   108.3,
-   271.9
+   11.669,
+   756.8,
+   122.8
   ],
   [
-   25.511,
+   11.859,
+   757.8,
+   123.0
+  ],
+  [
+   11.879,
+   758.2,
+   123.1
+  ],
+  [
+   11.925,
+   758.4,
+   123.1
+  ],
+  [
+   12.282,
+   758.4,
+   123.1
+  ],
+  [
+   14.236,
+   758.4,
+   123.1
+  ],
+  [
+   14.329,
+   758.3,
+   123.2
+  ],
+  [
+   14.683,
+   757.9,
+   123.3
+  ],
+  [
+   14.705,
+   757.2,
+   123.5
+  ],
+  [
+   14.778,
+   756.0,
+   123.8
+  ],
+  [
+   15.142,
+   754.3,
+   124.4
+  ],
+  [
+   15.175,
+   751.8,
+   125.1
+  ],
+  [
+   15.195,
+   748.6,
+   126.1
+  ],
+  [
+   15.231,
+   744.4,
+   127.4
+  ],
+  [
+   15.25,
+   739.2,
+   128.9
+  ],
+  [
+   15.281,
+   732.8,
+   130.8
+  ],
+  [
+   15.757,
+   725.2,
+   133.1
+  ],
+  [
+   15.792,
+   716.2,
+   135.8
+  ],
+  [
+   15.814,
+   705.7,
+   139.0
+  ],
+  [
+   15.843,
+   693.5,
+   142.5
+  ],
+  [
+   16.076,
+   679.6,
+   146.5
+  ],
+  [
+   16.178,
+   663.9,
+   151.0
+  ],
+  [
+   16.423,
+   646.2,
+   155.9
+  ],
+  [
+   16.442,
+   626.4,
+   161.1
+  ],
+  [
+   16.461,
+   604.3,
+   166.6
+  ],
+  [
+   16.48,
+   579.9,
+   172.3
+  ],
+  [
+   16.505,
+   553.0,
+   178.0
+  ],
+  [
+   16.546,
+   523.4,
+   183.6
+  ],
+  [
+   16.895,
+   491.0,
+   188.7
+  ],
+  [
+   16.919,
+   455.8,
+   193.1
+  ],
+  [
+   17.021,
+   420.3,
+   196.3
+  ],
+  [
+   17.202,
+   387.7,
+   198.3
+  ],
+  [
+   17.343,
+   357.6,
+   199.2
+  ],
+  [
+   17.414,
+   330.1,
+   199.4
+  ],
+  [
+   17.478,
+   305.0,
+   199.0
+  ],
+  [
+   17.572,
+   282.3,
+   198.3
+  ],
+  [
+   17.798,
+   261.8,
+   197.5
+  ],
+  [
+   17.826,
+   243.4,
+   196.5
+  ],
+  [
+   17.874,
+   227.1,
+   195.5
+  ],
+  [
+   18.09,
+   212.7,
+   194.6
+  ],
+  [
+   18.129,
+   200.0,
+   193.7
+  ],
+  [
+   18.19,
+   189.1,
+   192.9
+  ],
+  [
+   18.394,
+   179.7,
+   192.2
+  ],
+  [
+   18.414,
+   171.8,
+   191.6
+  ],
+  [
+   18.436,
+   165.1,
+   191.1
+  ],
+  [
+   18.496,
+   159.7,
+   190.7
+  ],
+  [
+   19.009,
+   155.4,
+   190.3
+  ],
+  [
+   19.03,
+   152.0,
+   190.1
+  ],
+  [
+   19.095,
+   149.4,
+   189.9
+  ],
+  [
+   19.708,
+   147.6,
+   189.7
+  ],
+  [
+   20.102,
+   146.4,
+   189.6
+  ],
+  [
+   20.249,
+   145.7,
+   189.6
+  ],
+  [
+   20.333,
+   145.3,
+   189.5
+  ],
+  [
+   20.468,
+   145.1,
+   189.5
+  ],
+  [
+   20.491,
+   145.1,
+   189.5
+  ],
+  [
+   22.863,
+   145.1,
+   189.5
+  ],
+  [
+   22.891,
+   145.0,
+   189.7
+  ],
+  [
+   23.482,
+   144.7,
+   190.1
+  ],
+  [
+   23.545,
+   144.2,
+   191.0
+  ],
+  [
+   23.606,
+   143.3,
+   192.4
+  ],
+  [
+   23.995,
+   141.9,
+   194.5
+  ],
+  [
+   24.027,
+   140.0,
+   197.4
+  ],
+  [
+   24.06,
+   137.4,
+   201.1
+  ],
+  [
+   24.085,
+   133.9,
+   205.9
+  ],
+  [
+   24.381,
+   129.3,
+   211.5
+  ],
+  [
+   24.866,
+   123.5,
+   217.7
+  ],
+  [
+   24.887,
+   118.1,
+   222.6
+  ],
+  [
+   24.943,
+   113.5,
+   226.3
+  ],
+  [
+   24.996,
    109.9,
-   273.8
+   229.1
   ],
   [
-   25.53,
-   110.9,
-   275.1
+   25.426,
+   107.1,
+   231.2
   ],
   [
-   25.548,
-   111.5,
-   275.9
+   25.447,
+   105.1,
+   232.7
   ],
   [
-   25.576,
-   111.8,
-   276.3
+   25.479,
+   103.7,
+   233.7
   ],
   [
-   25.596,
-   111.9,
-   276.4
+   25.509,
+   102.9,
+   234.2
   ],
   [
-   25.614,
-   112.0,
-   276.4
+   25.772,
+   102.5,
+   234.5
+  ],
+  [
+   25.833,
+   102.3,
+   234.7
+  ],
+  [
+   25.875,
+   102.3,
+   234.7
+  ],
+  [
+   27.988,
+   102.4,
+   234.7
+  ],
+  [
+   28.116,
+   102.5,
+   234.6
+  ],
+  [
+   28.188,
+   103.0,
+   234.5
+  ],
+  [
+   28.584,
+   103.9,
+   234.2
+  ],
+  [
+   28.621,
+   105.4,
+   233.8
+  ],
+  [
+   28.69,
+   107.6,
+   233.2
+  ],
+  [
+   29.014,
+   110.7,
+   232.3
+  ],
+  [
+   29.041,
+   114.9,
+   231.1
+  ],
+  [
+   29.081,
+   120.2,
+   229.6
+  ],
+  [
+   29.385,
+   126.9,
+   227.8
+  ],
+  [
+   29.403,
+   135.0,
+   225.5
+  ],
+  [
+   29.442,
+   144.8,
+   222.8
+  ],
+  [
+   29.467,
+   156.3,
+   219.6
+  ],
+  [
+   30.049,
+   169.7,
+   215.9
+  ],
+  [
+   30.274,
+   185.2,
+   211.7
+  ],
+  [
+   31.181,
+   202.9,
+   206.9
+  ],
+  [
+   31.249,
+   223.0,
+   201.7
+  ],
+  [
+   31.32,
+   245.7,
+   195.9
+  ],
+  [
+   31.575,
+   271.0,
+   189.8
+  ],
+  [
+   31.639,
+   299.1,
+   183.3
+  ],
+  [
+   31.929,
+   330.2,
+   176.7
+  ],
+  [
+   32.031,
+   364.6,
+   170.1
+  ],
+  [
+   32.276,
+   402.2,
+   163.8
+  ],
+  [
+   32.297,
+   443.4,
+   158.2
+  ],
+  [
+   32.333,
+   488.3,
+   153.4
+  ],
+  [
+   32.36,
+   533.4,
+   150.2
+  ],
+  [
+   32.682,
+   574.9,
+   148.6
+  ],
+  [
+   32.755,
+   613.1,
+   148.2
+  ],
+  [
+   33.186,
+   648.0,
+   148.7
+  ],
+  [
+   33.227,
+   679.9,
+   149.7
+  ],
+  [
+   33.257,
+   708.7,
+   151.1
+  ],
+  [
+   33.528,
+   734.7,
+   152.8
+  ],
+  [
+   33.846,
+   758.0,
+   154.4
+  ],
+  [
+   33.876,
+   778.7,
+   156.1
+  ],
+  [
+   34.005,
+   796.9,
+   157.7
+  ],
+  [
+   34.209,
+   812.9,
+   159.1
+  ],
+  [
+   34.332,
+   826.8,
+   160.4
+  ],
+  [
+   35.724,
+   838.7,
+   161.5
+  ],
+  [
+   35.885,
+   848.8,
+   162.5
+  ],
+  [
+   36.275,
+   857.2,
+   163.3
+  ],
+  [
+   36.685,
+   864.1,
+   164.0
+  ],
+  [
+   36.774,
+   869.6,
+   164.5
+  ],
+  [
+   36.932,
+   873.9,
+   164.9
+  ],
+  [
+   37.284,
+   877.1,
+   165.3
+  ],
+  [
+   37.493,
+   879.4,
+   165.5
+  ],
+  [
+   37.78,
+   881.0,
+   165.6
+  ],
+  [
+   37.809,
+   881.9,
+   165.7
+  ],
+  [
+   37.879,
+   882.4,
+   165.8
+  ],
+  [
+   38.14,
+   882.6,
+   165.8
+  ],
+  [
+   38.288,
+   882.6,
+   165.8
   ]
  ],
  "clicks": [
-  25.937
+  38.589
  ],
  "marks": [
   {
    "name": "card",
-   "t": 0.346,
+   "t": 0.33,
    "box": [
     25,
-    83,
+    90,
     974,
-    540
+    189
+   ]
+  },
+  {
+   "name": "askpre",
+   "t": 0.677,
+   "box": [
+    81,
+    129,
+    64,
+    22
    ]
   },
   {
    "name": "title",
-   "t": 3.964,
+   "t": 6.703,
    "box": [
-    80,
+    81,
     104,
-    801,
-    21
+    592,
+    22
    ]
   },
   {
    "name": "cost",
-   "t": 7.925,
+   "t": 12.298,
    "box": [
-    48,
-    207,
-    931,
-    68
+    723,
+    104,
+    252,
+    37
    ]
   },
   {
    "name": "first",
-   "t": 12.125,
+   "t": 20.507,
    "box": [
-    48,
-    426,
-    931,
+    81,
+    179,
+    602,
     42
    ]
   },
   {
-   "name": "owner",
-   "t": 19.71,
+   "name": "owner_scrolled",
+   "t": 22.484,
    "box": [
-    48,
-    231,
-    931,
-    21
+    81,
+    227,
+    43,
+    15
+   ]
+  },
+  {
+   "name": "owner",
+   "t": 25.892,
+   "box": [
+    81,
+    225,
+    345,
+    39
    ]
   },
   {
    "name": "click",
-   "t": 26.364,
+   "t": 38.687,
    "box": [
-    48,
-    262,
+    819,
+    152,
     128,
     28
    ]
   },
   {
    "name": "live",
-   "t": 26.767,
+   "t": 38.895,
    "box": [
-    48,
-    300,
-    931,
-    180
+    81,
+    276,
+    894,
+    197
    ]
   },
   {
    "name": "live_box",
-   "t": 26.854,
+   "t": 39.328,
    "box": [
-    48,
-    300,
-    931,
-    180
+    81,
+    276,
+    894,
+    197
    ]
   },
   {
    "name": "trace",
-   "t": 33.027,
+   "t": 45.385,
    "box": [
-    48,
-    300,
-    931,
-    232
+    81,
+    276,
+    894,
+    267
    ]
   },
   {
    "name": "done",
-   "t": 47.542
+   "t": 60.257
+  },
+  {
+   "name": "vdiff",
+   "t": 60.528,
+   "box": [
+    98,
+    378,
+    860,
+    19
+   ]
+  },
+  {
+   "name": "was",
+   "t": 60.569,
+   "box": [
+    98,
+    378,
+    860,
+    19
+   ]
+  },
+  {
+   "name": "now",
+   "t": 60.607,
+   "box": [
+    98,
+    397,
+    860,
+    19
+   ]
   },
   {
    "name": "ask",
-   "t": 49.913,
+   "t": 63.317,
    "box": [
-    48,
-    173,
-    931,
-    138
+    81,
+    73,
+    602,
+    145
    ]
   },
   {
    "name": "quote",
-   "t": 50.088,
+   "t": 63.638,
    "box": [
-    61,
-    251,
-    905,
-    50
+    81,
+    161,
+    602,
+    57
    ]
   },
   {
    "name": "then",
-   "t": 50.144,
+   "t": 63.667,
    "box": [
-    48,
-    315,
-    931,
+    81,
+    245,
+    602,
     42
    ]
   }
  ],
+ "slowmo": [],
  "api": {
   "/api/verify/latest": {
    "t": 0,
@@ -992,13 +1273,13 @@
     "checks": [
      {
       "schema": 4,
-      "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated. Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
+      "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated. Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
       "area_id": "21",
       "verdict": "mixed",
       "effect_check": "weaker",
-      "effect_summary_en": "In the Netherlands, 7% fewer elderly stage I patients went untreated once stereotactic radiotherapy was fully available (2001-2003 vs 2007-2009); the effect on the share of all lung cancer patients was not measured.",
-      "supported_en": "A Netherlands Cancer Registry study (Annals of Oncology 2012) found 7% fewer elderly stage I patients untreated after stereotactic radiotherapy became available.",
-      "not_supported_en": "The pages do not show the assumed 0.8-point rise in the share of all lung cancer patients treated with curative intent.",
+      "effect_summary_en": "In the Netherlands, 7% fewer elderly stage I patients went untreated once stereotactic radiotherapy became available. That is a share of one subgroup, so it supports roughly 0.6 points of all patients only through our own 8% assumption.",
+      "supported_en": "A Netherlands registry study (Haasbeek et al., Annals of Oncology 2012) found 7% fewer untreated elderly stage I patients once the treatment was available.",
+      "not_supported_en": "No page shows the effect on the share of all lung cancer patients, or any Finnish or Lapland-specific gap.",
       "in_use_here": "partly",
       "in_use_scope": "collaborative_area",
       "in_use_quote": "Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.",
@@ -1008,10 +1289,10 @@
        "published": "2025-09-17T07:00:17+00:00",
        "fetched_at": "2026-11-14T00:46:15+00:00"
       },
-      "in_use_summary_en": "The OYS lung cancer care pathway (page dated 2025-09) says stereotactic radiotherapy can be given to local disease when surgery is not possible, and that the university hospital holds the multidisciplinary lung cancer meetings and gives the surgery and radiotherapy.",
-      "missing_en": "No page shows a rule that every inoperable stage I patient, including those from Lapland, is referred to OYS for stereotactic radiotherapy.",
-      "summary_en": "OYS's lung cancer care pathway says patients who cannot be operated can get stereotactic radiotherapy (\"täsmäsädehoito\"). It also says the university hospital runs the multidisciplinary lung cancer meetings and gives all lung cancer surgery and radiotherapy. No page says every frail stage I patient from Lapland must be referred. Dutch registry data (Annals of Oncology 2012) show 7% fewer untreated elderly stage I patients once the treatment was available, which supports the direction of the assumed effect but not its size.",
-      "unanswered_en": "I found no Lapha page and no OYS page that sets a written rule to refer every inoperable stage I patient for stereotactic radiotherapy.",
+      "in_use_summary_en": "OYS's lung cancer care pathway says stereotactic radiotherapy can be given when surgery is not possible, and that the university hospital runs the multidisciplinary lung cancer meetings and gives the surgery and radiotherapy for the area.",
+      "missing_en": "No page shows a rule that every frail stage I patient from Lapland is referred for stereotactic radiotherapy.",
+      "summary_en": "OYS's lung cancer care pathway says stereotactic radiotherapy can be given to patients who cannot be operated, and that OYS runs the multidisciplinary meetings and gives the radiotherapy. No page shows a rule that refers every eligible patient. A Netherlands registry study (Annals of Oncology 2012) found 7% fewer untreated elderly stage I patients once the treatment was available. That supports the direction of the effect, but the share of all patients rests on our own assumption.",
+      "unanswered_en": "I found no Lapha (Lapland county) or OYS page with a referral rule, and no figure on how many inoperable stage I patients in Lapland go untreated.",
       "sources": [
        {
         "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
@@ -1039,6 +1320,15 @@
         "published": "2012-05-02",
         "fetched_at": "2026-11-14T00:14:16+00:00",
         "from_cache": true
+       },
+       {
+        "url": "https://www.duodecimlehti.fi/duo13049",
+        "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa",
+        "quote": "Tämänhetkisten suositusten mukaisesti stereotaktinen sädehoito\n on paikallista ei-pienisoluista keuhkosyöpää sairastavien, leikkaukseen soveltumattomien\n potilaiden standardihoitoa.",
+        "about": "context",
+        "published": null,
+        "fetched_at": "2026-11-14T06:15:42+00:00",
+        "from_cache": false
        }
       ],
       "trace": [
@@ -1053,8 +1343,8 @@
         "why": "the university hospital's lung cancer pathway page",
         "status": "done",
         "t_s": 0.0,
-        "result_en": "6 results: oys.fi, hyvaks.fi, syovanhoitokeskus.pshyvinvointialue.fi",
-        "ms": 1734,
+        "result_en": "6 results: oys.fi, hyvaks.fi",
+        "ms": 2242,
         "results": [
          {
           "url": "https://oys.fi/palvelumme/syopataudit/",
@@ -1065,8 +1355,8 @@
           "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
          },
          {
-          "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
-          "title": "Keuhkosyöpäpotilaan hoitoketju"
+          "url": "https://oys.fi/palvelumme/syopataudit/rintasyopapotilaan-hoitopolku/",
+          "title": "Rintasyöpäpotilaan hoitopolku"
          },
          {
           "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
@@ -1093,16 +1383,12 @@
         "why": "the measure on the county's own pages",
         "status": "done",
         "t_s": 0.0,
-        "result_en": "6 results: duodecimlehti.fi, docrates.mehilainen.fi, keuhkosyopa.fi",
-        "ms": 2793,
+        "result_en": "6 results: duodecimlehti.fi, keuhkosyopa.fi, docrates.mehilainen.fi, tamamatka.fi",
+        "ms": 1655,
         "results": [
          {
           "url": "https://www.duodecimlehti.fi/duo13049",
           "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
-         },
-         {
-          "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito-etapesakkeiden-hoidossa/",
-          "title": "Hypofraktioitu stereotaktinen sädehoito ja etäpesäkkeet - Docrates Mehiläinen"
          },
          {
           "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/sadehoito/",
@@ -1117,8 +1403,12 @@
           "title": "Stereotaktinen sädehoito aivoihin - Kun lääkkeet menettävät tehonsa - TÄMÄ MATKA"
          },
          {
-          "url": "https://terveytta.net/kaikki-mita-sinun-tarvitsee-tietaa-keuhkosyovan-sadehoidosta",
-          "title": "Kaikki mitä sinun tarvitsee tietää keuhkosyövän sädehoidosta"
+          "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito-etapesakkeiden-hoidossa/",
+          "title": "Hypofraktioitu stereotaktinen sädehoito ja etäpesäkkeet - Docrates Mehiläinen"
+         },
+         {
+          "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito/",
+          "title": "Tehokas hypofraktioitu stereotaktinen sädehoito - Docrates Mehiläinen"
          }
         ]
        },
@@ -1133,20 +1423,20 @@
         "why": "the measure at the university hospital",
         "status": "done",
         "t_s": 0.0,
-        "result_en": "6 results: terveyskyla.fi, oys.fi, keuhkosyopa.fi",
-        "ms": 1832,
+        "result_en": "6 results: terveyskyla.fi, oys.fi, docrates.mehilainen.fi, keuhkosyopa.fi",
+        "ms": 2785,
         "results": [
          {
           "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
           "title": "Keuhkosyövän hoitomuodot ja ennuste"
          },
          {
-          "url": "https://oys.fi/palvelumme/syopataudit/",
-          "title": "Syöpätautien hoito - OYS"
+          "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+          "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
          },
          {
-          "url": "https://oys.fi/palvelut/syopa-ja-veritautien-hoito-sairaalassa/",
-          "title": "Syöpä- ja veritautien hoito sairaalassa - OYS"
+          "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+          "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
          },
          {
           "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/tasmahoidot/",
@@ -1174,7 +1464,7 @@
         "status": "done",
         "t_s": 0.0,
         "result_en": "6 results: lapha.fi, suomi.fi, rovaniemi.fi",
-        "ms": 2190,
+        "ms": 1931,
         "results": [
          {
           "url": "https://lapha.fi/sairaalapalvelut",
@@ -1185,12 +1475,12 @@
           "title": "Lapin keskussairaala - Lapin hyvinvointialue - Suomi.fi"
          },
          {
-          "url": "https://www.rovaniemi.fi/Asiointikanavat/Lapin-keskussairaala/e6fe45b2-c2c1-441b-b12e-7d707ec5384d",
-          "title": "Lapin keskussairaala - Asiointikanavat - Rovaniemi - Arktinen pääkaupunki"
-         },
-         {
           "url": "https://lapha.fi/yhteystiedot",
           "title": "Yhteystiedot - Lapin hyvinvointialue"
+         },
+         {
+          "url": "https://www.rovaniemi.fi/Asiointikanavat/Lapin-keskussairaala/e6fe45b2-c2c1-441b-b12e-7d707ec5384d",
+          "title": "Lapin keskussairaala - Asiointikanavat - Rovaniemi - Arktinen pääkaupunki"
          },
          {
           "url": "https://lapha.fi/keskussairaalat",
@@ -1212,8 +1502,8 @@
         "model": "claude-opus-5-5",
         "status": "done",
         "t_s": 2.8,
-        "result_en": "2 reads: B: OYS pathway radiotherapy; A: effect size",
-        "ms": 4296
+        "result_en": "3 reads: B: OYS pathway radiotherapy for inoperable; A: effect size; context national standard",
+        "ms": 5171
        },
        {
         "step": 6,
@@ -1222,12 +1512,12 @@
         "input": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
         "endpoint": "POST /v1/scrape",
         "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
-        "focus": "sädehoito stereotaktinen leikkaukseen soveltumaton hoitokokous",
-        "why": "B: OYS pathway radiotherapy",
+        "focus": "sädehoito stereotaktinen leikkaus hoitokokous",
+        "why": "B: OYS pathway radiotherapy for inoperable",
         "status": "done",
-        "t_s": 7.1,
+        "t_s": 8.0,
         "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - OYS\" · 19 914 chars · 7 of 31 passages kept · from cache",
-        "ms": 4,
+        "ms": 3,
         "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
         "chars": 19914,
         "from_cache": true,
@@ -1246,9 +1536,9 @@
         "focus": "untreated stereotactic radiotherapy elderly stage I",
         "why": "A: effect size",
         "status": "done",
-        "t_s": 7.1,
+        "t_s": 8.0,
         "result_en": "\"Early-stage lung cancer in elderly patients: a population-based study \" · 1 280 chars · from cache",
-        "ms": 6,
+        "ms": 4,
         "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
         "chars": 1280,
         "from_cache": true,
@@ -1260,15 +1550,36 @@
        {
         "step": 8,
         "round": 1,
+        "tool": "oxylabs /v1/scrape",
+        "input": "https://www.duodecimlehti.fi/duo13049",
+        "endpoint": "POST /v1/scrape",
+        "url": "https://www.duodecimlehti.fi/duo13049",
+        "focus": "leikkaukseen soveltumattomien standardihoito",
+        "why": "context national standard",
+        "status": "done",
+        "t_s": 8.0,
+        "result_en": "\"Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoi\" · 16 899 chars · 6 of 26 passages kept",
+        "ms": 11453,
+        "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa",
+        "chars": 16899,
+        "from_cache": false,
+        "kind": "html",
+        "page_url": "https://www.duodecimlehti.fi/duo13049",
+        "published": null,
+        "js_render": true
+       },
+       {
+        "step": 9,
+        "round": 1,
         "tool": "claude",
         "input": "decide the next step",
         "endpoint": "model",
         "url": null,
         "model": "claude-opus-5-5",
         "status": "done",
-        "t_s": 7.1,
+        "t_s": 19.4,
         "result_en": "writes the answer",
-        "ms": 13290
+        "ms": 13474
        }
       ],
       "rounds": 1,
@@ -1293,6 +1604,16 @@
         "fetched_at": "2026-11-14T00:14:16+00:00",
         "published": "2012-05-02",
         "js_render": false
+       },
+       {
+        "url": "https://www.duodecimlehti.fi/duo13049",
+        "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa",
+        "chars": 16899,
+        "kind": "html",
+        "from_cache": false,
+        "fetched_at": "2026-11-14T06:15:42+00:00",
+        "published": null,
+        "js_render": true
        }
       ],
       "quotes_dropped": 0,
@@ -1304,12 +1625,12 @@
       "budget_s": 75.0,
       "zero_effect": false,
       "from_cache": false,
-      "checked_at": "2026-11-14T01:56:43+00:00",
+      "checked_at": "2026-11-14T06:15:55+00:00",
       "stopped": "finished",
       "advice": "check_first",
-      "model_reason_en": "Ask OYS and Lapha's lung clinics first whether every inoperable stage I patient is already discussed in the OYS lung cancer meeting and referred for stereotactic radiotherapy, because OYS's pathway page already offers the treatment and runs those meetings.",
-      "seconds": 20.4,
-      "searched_en": "Searched 4 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha stereotaktinen sädehoito keuhkosyöpä\"; \"OYS täsmäsädehoito keuhkosyöpä\"; \"Lapin keskussairaala SBRT\") and read 2 pages on oys.fi, europepmc.org.",
+      "model_reason_en": "Ask OYS's lung cancer multidisciplinary team first whether every frail stage I patient from Lapland is already referred for stereotactic radiotherapy. OYS's own care pathway says it already offers the treatment to patients who cannot be operated, so only the referral rule may be missing.",
+      "seconds": 32.9,
+      "searched_en": "Searched 4 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha stereotaktinen sädehoito keuhkosyöpä\"; \"OYS täsmäsädehoito keuhkosyöpä\"; \"Lapin keskussairaala SBRT\") and read 3 pages on oys.fi, europepmc.org, duodecimlehti.fi.",
       "queries": [
        "OYS keuhkosyöpäpotilaan hoitopolku",
        "Lapha stereotaktinen sädehoito keuhkosyöpä",
@@ -1327,21 +1648,29 @@
        {
         "endpoint": "POST /v1/scrape",
         "api": "Oxylabs Web API",
-        "calls": 2,
+        "calls": 3,
         "failed": 0,
         "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
-        "js_render": 0,
+        "js_render": 1,
         "from_cache": 2
        }
       ],
       "plan_effect": "flag",
-      "plan_effect_reason_en": "Ask OYS and Lapha's lung clinics first whether every inoperable stage I patient is already discussed in the OYS lung cancer meeting and referred for stereotactic radiotherapy, because OYS's pathway page already offers the treatment and runs those meetings.",
-      "verdict_en": "Partly in place in the OYS university hospital area, which treats Lapland's patients. Missing: No page shows a rule that every inoperable stage I patient, including those from Lapland, is referred to OYS for stereotactic radiotherapy. Evidence supports that it works, but not the size of effect we assume. Supported: A Netherlands Cancer Registry study (Annals of Oncology 2012) found 7% fewer elderly stage I patients untreated after stereotactic radiotherapy became available. Not supported: The pages do not show the assumed 0.8-point rise in the share of all lung cancer patients treated with curative intent.",
+      "plan_effect_reason_en": "Ask OYS's lung cancer multidisciplinary team first whether every frail stage I patient from Lapland is already referred for stereotactic radiotherapy. OYS's own care pathway says it already offers the treatment to patients who cannot be operated, so only the referral rule may be missing.",
+      "verdict_en": "Partly in place in the OYS university hospital area, which treats Lapland's patients. Missing: No page shows a rule that every frail stage I patient from Lapland is referred for stereotactic radiotherapy. Evidence supports that it works, but not the size of effect we assume. Supported: A Netherlands registry study (Haasbeek et al., Annals of Oncology 2012) found 7% fewer untreated elderly stage I patients once the treatment was available. Not supported: No page shows the effect on the share of all lung cancer patients, or any Finnish or Lapland-specific gap.",
       "in_use_label_en": "Partly in place",
       "effect_label_en": "Works, size not shown",
       "intervention_id": "sbrt_pathway",
-      "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
-      "area_name_en": "Lapland wellbeing services county"
+      "intervention_name_en": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+      "area_name_en": "Lapland wellbeing services county",
+      "previous": {
+       "verdict": "mixed",
+       "effect_check": "weaker",
+       "in_use_here": "partly",
+       "plan_effect": "flag",
+       "advice": "check_first",
+       "checked_at": "2026-11-14T06:08:34+00:00"
+      }
      },
      {
       "schema": 4,
@@ -6203,7 +6532,7 @@
   }
  },
  "texts": {
-  "card": "1 Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated In the plan Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule. Because Lapland's share for “any radiotherapy” is 21.8% against 28.9% in Finland. Cost a year €30,400 More patients treated to cure a year 1.1 (0–2.3) Cost per extra patient €26,667 Ask first (web check, 14 Nov). Ask OYS and Lapha's lung clinics first whether every inoperable stage I patient is already discussed in the OYS lung cancer meeting and referred for stereotactic radiotherapy, because OYS's pathway page already offers the treatment and runs those meetings. “Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.” Keuhkosyöpäpotilaan hoitopolku - OYS Then, the first step. Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. Measure. Share of patients who get treatment that aims to cure: 18.5% → 19.3% by 2028 (county share today plus the points this measure is expected to add; never above the best county) Owner. Chief physician of oncology; chief of radiotherapy at the university hospital Check on the web Partly in place assumed effect: works, size not shown checked 14 Nov 2026, 03:56 · show the check Owner, roadmap measure and evidence",
-  "ask": "Ask first (web check, 14 Nov). Ask OYS lung cancer team first whether every frail stage I patient from Lapland is already discussed and referred for precision radiotherapy, because OYS already gives this treatment and holds the case meetings, so only a missing referral rule would need paying for. “Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.” Keuhkosyöpäpotilaan hoitopolku - OYS"
+  "card": "1 Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated Ask first 21.8 of 100 patients get radiotherapy here, 28.9 in Finland. Then, the first step. Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. Owner. Chief physician of oncology; chief of radiotherapy at the university hospital Why, and the evidence open the study Cost a year €30,400 a year More patients treated to cure a year 1.1 (0–2.3) more treated to cure a year In the plan Check on the web Partly in place checked 14 Nov · show",
+  "ask": "Ask first (web check, 14 Nov): Ask OYS's lung cancer multidisciplinary team first whether every frail stage I patient from Lapland is already referred for stereotactic radiotherapy. OYS's own care pathway says it already offers the treatment to patients who cannot be operated, so only the referral rule may be missing. “Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.” Keuhkosyöpäpotilaan hoitopolku - OYS"
  }
 }

@@ -1,0 +1,120 @@
+{
+ "id": "ask",
+ "file": "captures/ask.mp4",
+ "duration": 12.955,
+ "fps": 30,
+ "viewport": [
+  1024,
+  576
+ ],
+ "scale": 3,
+ "base": "http://127.0.0.1:8742",
+ "captured_at": "2026-11-14T06:56:30+0000",
+ "source_frames": 68,
+ "source_fps_mean": 5.2,
+ "cursor": [
+  [
+   0,
+   563.2,
+   345.59999999999997
+  ]
+ ],
+ "clicks": [],
+ "marks": [
+  {
+   "name": "ask",
+   "t": 0.307,
+   "box": [
+    24,
+    71,
+    976,
+    434
+   ]
+  },
+  {
+   "name": "lead",
+   "t": 0.497,
+   "box": [
+    49,
+    138,
+    761,
+    53
+   ]
+  },
+  {
+   "name": "acts",
+   "t": 0.523,
+   "box": [
+    49,
+    201,
+    926,
+    47
+   ]
+  },
+  {
+   "name": "figs",
+   "t": 0.54,
+   "box": [
+    49,
+    264,
+    926,
+    116
+   ]
+  },
+  {
+   "name": "f0",
+   "t": 0.555,
+   "box": [
+    49,
+    265,
+    232,
+    114
+   ]
+  },
+  {
+   "name": "f1",
+   "t": 0.568,
+   "box": [
+    280,
+    265,
+    232,
+    114
+   ]
+  },
+  {
+   "name": "f2",
+   "t": 0.646,
+   "box": [
+    512,
+    265,
+    232,
+    114
+   ]
+  },
+  {
+   "name": "f3",
+   "t": 0.7,
+   "box": [
+    744,
+    265,
+    232,
+    114
+   ]
+  },
+  {
+   "name": "head",
+   "t": 0.718,
+   "box": [
+    49,
+    98,
+    61,
+    22
+   ]
+  }
+ ],
+ "slowmo": [],
+ "api": {},
+ "texts": {
+  "ask": "The ask Open the plan A six-month pilot of two actions: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy. 4 A chest surgeon reviews every decision not to operate 1 Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated new patients in six months about 71 new patients in six months decisions not to operate, reviewed 64 decisions not to operate, reviewed cmp Vantaa and Kerava counted against: 59.5 patients and 50.7 decisions in the same six months treated to cure by 2028, estimated 18.5% → 20.5% treated to cure by 2028, estimated If our assumptions hold, about 1 of them (0 to 3) move to treatment that aims to cure in that time, and the share rises from 18.5% to 20.5% by 2028. The pilot replaces those assumptions with a count. Six months is too short to show the county's share moving. It is long enough to count reviews done, decisions changed and referrals made, against the same six months a year earlier."
+ }
+}
