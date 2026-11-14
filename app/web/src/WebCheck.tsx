@@ -146,8 +146,13 @@ export function WebCheckResult({ v, areaName, children, fresh = false, lead = tr
           <span className="muted small num">{v.from_cache ? `stored result from ${when(v.checked_at)}` : when(v.checked_at)}{v.model ? ` · ${v.model}` : ""}</span>
         </div>
         {lead && v.plan_effect_reason_en && <p className={"vadvice" + (fresh ? " new" : "")}>{advice ? <b>{advice}. </b> : null}{v.plan_effect_reason_en}</p>}
-        {v.previous && <p className="small muted">Previous stored answer: <b>{v.previous.verdict ?? v.previous.plan_effect ?? "unchanged"}</b>{v.stability === "kept_previous_less_evidence" ? " · kept because this run found no more evidence" : ""}.</p>}
-        {v.live_candidate && <p className="small muted">New run: <b>{v.live_candidate.verdict ?? v.live_candidate.plan_effect ?? "unchanged"}</b> · stored answer kept until a run brings more evidence.</p>}
+        {v.previous && !v.live_candidate && (() => {
+          const before = ADVICE[v.previous.advice ?? ""] ?? null;
+          const day = v.previous.checked_at ? when(v.previous.checked_at) : "the stored check";
+          if (before && advice && before !== advice) return <p className="small beforeafter"><span>Before, {day}: <b>{before}</b></span><span>Now: <b>{advice}</b></span></p>;
+          return <p className="small muted">Same answer as the stored check of {day}{advice ? <>: <b>{advice}</b></> : null}. The plan stays as it is.</p>;
+        })()}
+        {v.live_candidate && <p className="small muted">This run found less than the stored check, so the stored answer stays.</p>}
         <p className="vsum">{v.verdict_en}</p>
         {lead && v.in_use_quote && <blockquote>“{v.in_use_quote}”{v.in_use_source?.url ? <> <a href={v.in_use_source.url} target="_blank" rel="noreferrer">{v.in_use_source.title ?? host(v.in_use_source.url)}</a></> : null}</blockquote>}
         {children}

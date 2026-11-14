@@ -1878,3 +1878,6 @@ section[aria-label="What the county is already doing"] .scoutbody { padding: 16p
   .pfigs > div { padding-right: 10px; }
   .pfigs > div + div { padding-left: 12px; }
 }
+
+.verify .beforeafter { display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--ink-2); }
+.verify .beforeafter span + span b { color: var(--ink); }
