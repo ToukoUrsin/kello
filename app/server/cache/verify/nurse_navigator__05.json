@@ -1,0 +1,540 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how much?\nMeasure: Nurse navigator for every suspected lung cancer. A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A 2026 scoping review of 13 studies found that navigation was consistently linked to faster first treatment, but its abstract gives no pooled difference in days, so our assumed 15% cannot be checked.",
+ "supported_en": "The 2026 scoping review of 13 studies (Japan Journal of Nursing Science) links navigation to faster first treatment.",
+ "not_supported_en": "No source read shows how much navigation cuts the wait, so the assumed 15% (0–30%) is not shown.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: Tyks's pages say lung cancer diagnosis is centralised at its lung disease clinic and a multidisciplinary team meets weekly. They report average waits of 9 days from referral to first contact and 35 days from referral to chemotherapy (January–June 2025), but describe no nurse navigator. A: A 2026 scoping review of 13 studies says navigation is consistently linked to faster first treatment, but the abstract gives no size of effect.",
+ "unanswered_en": "Searches for a lung cancer coordinator, contact nurse or coordinator project at Varha or Tyks found none; one result was a lung cancer screening pilot at Tyks, which is a different measure.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Keuhkosyövän diagnostiikka on keskitetty Tyksin keuhkosairauksien poliklinikalle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Tyksissä kokoontuu viikoittain moniammatillinen työryhmä, joka tarvittaessa käsittelee tutkimustulokset ja suunnittelee hoitolinjauksesi.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "quote": "Keuhkosyövässä seurataan seuraavia hoitoonpääsyaikoja lähetteen saapumisesta Tyksin keuhkovastuualueelle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "quote": "CPN interventions were consistently associated with accelerated initiation of first treatment among patients with cancer.",
+   "about": "effect",
+   "published": "2026-07-01",
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi, hyvaks.fi",
+   "ms": 1231,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha syöpähoitaja koordinaattori",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, testi.varha.fi, kaikkisyovasta.fi",
+   "ms": 1835,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/yhteystiedot",
+     "title": "Yhteystiedot"
+    },
+    {
+     "url": "https://testi.varha.fi/fi/asiointikanavat/ikaantyneiden-perhehoidon-koordinaattorit",
+     "title": "Ikääntyneiden perhehoidon koordinaattorit | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/vammaisten-perhehoito",
+     "title": "Vammaisten perhehoito | Varha"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/vuoden-syopasairaanhoitaja-jennifer-bjorkqvist-on-osaston-sielu/",
+     "title": "Vuoden syöpähoitaja Jennifer Björkqvist on osaston sielu - Kaikki syövästä"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palveluhakemisto/tyokykykoordinaattoripalvelut",
+     "title": "Työkykykoordinaattoripalvelut | Varha"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/ikaantyneiden-perhehoidon-koordinaattorit-varsinais-suomen-hyvinvointialue/2ded6d4e-571e-4dfe-83df-7b70bebe4784",
+     "title": "Ikääntyneiden perhehoidon koordinaattorit - Varsinais-Suomen ..."
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks hoitokoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, testi.tyks.fi",
+   "ms": 2163,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhko-ja-reumasairauksien-osasto",
+     "title": "Keuhko- ja reumasairauksien osasto | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhko-ja-reumasairauksien-osasto-tyks-a-sairaala-turku-turun-yliopistollinen-keskussairaala-tyks/89a6d200-e288-4d47-9df1-6ed164c7a9e5",
+     "title": "Keuhko- ja reumasairauksien osasto, Tyks A-sairaala, Turku"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen keuhkosyöpähoitaja keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, syoparekisteri.fi, syopajarjestot.fi",
+   "ms": 1870,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/",
+     "title": "Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.2,
+   "result_en": "4 reads: B: pathway, navigator nurse; B context: waiting times; B: named nurse; A: effect size",
+   "ms": 6732
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "hoitaja yhteyshenkilö koordinaattori moniammatillinen meeting",
+   "why": "B: pathway, navigator nurse",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 8 of 30 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "focus": "hoitoonpääsyajat päivää lähete hoito",
+   "why": "B context: waiting times",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Keuhkosyövän hoitoonpääsyajat\" · 806 chars · from cache",
+   "ms": 11,
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+   "focus": "sairaanhoitaja keuhkosyöpähoitaja yhteydenotto",
+   "why": "B: named nurse",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Keuhkosairauksien poliklinikka, A-sairaala\" · 1 464 chars",
+   "ms": 4346,
+   "title": "Keuhkosairauksien poliklinikka, A-sairaala",
+   "chars": 1464,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "focus": "navigation time to treatment days reduced",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Cancer patient navigation interventions improving timeliness from diag\" · 1 510 chars · from cache",
+   "ms": 14,
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.3,
+   "result_en": "1 search: B: named nurse contact for lung cancer",
+   "ms": 3052
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpä yhteyshoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: named nurse contact for lung cancer",
+   "status": "done",
+   "t_s": 16.3,
+   "result_en": "6 results: tyks.fi, testi.tyks.fi",
+   "ms": 2601,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.9,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Varha / Tyks / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 10714
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.6,
+   "result_en": "1 search: B: coordinator project or plan",
+   "ms": 3630
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha syöpäkoordinaattori hanke keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: coordinator project or plan",
+   "status": "done",
+   "t_s": 33.3,
+   "result_en": "6 results: filha.fi, tyks.fi, fican.fi, syopa-alueelliset.s3.eu-west-1.amazonaws.com",
+   "ms": 1271,
+   "results": [
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma - Filha ry"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://fican.fi/keuhkosyovan-valtakunnallinen-seulontapilotti-on-nyt-kaynnistynyt-tyksissa/",
+     "title": "Keuhkosyövän valtakunnallinen seulontapilotti on nyt käynnistynyt Tyksissä – FICAN"
+    },
+    {
+     "url": "https://syopa-alueelliset.s3.eu-west-1.amazonaws.com/sites/271/2016/10/13122739/keuhkosyopa_web_120522.pdf",
+     "title": "Keuhkosyöpä - Potilaan opas"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.apollohospitals.com/fi/diseases-and-conditions/lung-cancer",
+     "title": "Keuhkosyöpä - oireet, syyt, riskitekijät, diagnoosi ja hoito"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.5,
+   "result_en": "writes the answer",
+   "ms": 10528
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+   "title": "Keuhkosairauksien poliklinikka, A-sairaala",
+   "chars": 1464,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:43:35+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:44:07+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: Tyks pages describe a central lung clinic and a weekly multidisciplinary meeting, but no named nurse who books and chases every test for each suspected lung cancer.",
+ "seconds": 45.1,
+ "searched_en": "Searched 6 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha syöpähoitaja koordinaattori\"; \"Tyks hoitokoordinaattori keuhkosyöpä\"; \"Varsinais-Suomen keuhkosyöpähoitaja keuhkosyöpä\", ...) and read 4 pages on tyks.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha syöpähoitaja koordinaattori",
+  "Tyks hoitokoordinaattori keuhkosyöpä",
+  "Varsinais-Suomen keuhkosyöpähoitaja keuhkosyöpä",
+  "Tyks keuhkosyöpä yhteyshoitaja",
+  "Varha syöpäkoordinaattori hanke keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: Tyks pages describe a central lung clinic and a weekly multidisciplinary meeting, but no named nurse who books and chases every test for each suspected lung cancer.",
+ "verdict_en": "No public sign that it is running in Southwest Finland. Evidence supports that it works, but not the size of effect we assume. Supported: The 2026 scoping review of 13 studies (Japan Journal of Nursing Science) links navigation to faster first treatment. Not supported: No source read shows how much navigation cuts the wait, so the assumed 15% (0–30%) is not shown.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "nurse_navigator",
+ "intervention_name_en": "Nurse navigator for every suspected lung cancer",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

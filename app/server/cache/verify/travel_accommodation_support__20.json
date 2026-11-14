@@ -1,0 +1,393 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kainuu wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "20",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A 2009 registry study of 34,923 patients in northern England (British Journal of Cancer) found that patients with the longest travel time had 0.60 times the odds of lung cancer surgery.",
+ "not_supported_en": "No page shows that travel or accommodation support raises the share of patients treated with curative intent, so the assumed 1 percentage point is not measured.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Jos tulet pitkän matkan takaa eikä vointisi ole sellainen, että sinun tarvitsisi jäädä sairaalan vuodeosastolle, sinä ja läheisesi voitte majoittua sairaalan lähellä sijaitsevassa potilaskodissa.",
+ "in_use_source": {
+  "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+  "title": "Potilaskoti - OYS",
+  "published": "2026-04-20T05:51:31+00:00",
+  "fetched_at": "2026-11-14T00:51:22+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows organised transport or a named contact who books accommodation for the patient. Patients book the room themselves.",
+ "summary_en": "OYS runs a patient home in Oulu, 400–700 m from the hospital, with 32 + 31 beds at €41.98 per adult per night, and Kela pays back part of the cost. Kainuu's cancer care pathway pages tell radiotherapy patients to use it and to book it in advance, but patients book it themselves by phone, and no page shows organised transport or a named contact. For the effect, the only evidence is an association from England (odds of surgery 0.60 for the longest travel time); no study of a support measure was read.",
+ "unanswered_en": "I found no Kainuu or OYS page on organised transport or a named travel coordinator for cancer patients, and no study of how much travel support changes curative treatment rates.",
+ "sources": [
+  {
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "title": "Potilaskoti - OYS",
+   "quote": "Jos tulet pitkän matkan takaa eikä vointisi ole sellainen, että sinun tarvitsisi jäädä sairaalan vuodeosastolle, sinä ja läheisesi voitte majoittua sairaalan lähellä sijaitsevassa potilaskodissa.",
+   "about": "in_use",
+   "published": "2026-04-20T05:51:31+00:00",
+   "fetched_at": "2026-11-14T00:51:22+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "title": "Sädehoito ja hoitavat yksiköt",
+   "quote": "Potilaskoti sijaitsee osoitteessa Sairaalanrinne 4 A, 90220 Oulu. Majoitus täytyy varata etukäteen.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T01:27:17+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "title": "Potilaskoti - OYS",
+   "quote": "Kela korvaa osan maksusta korvaukseen oikeutetulle potilaalle. Asiakas hakee itse Kela-korvauksen maksetulla laskulla ja lääkärintodistuksella.",
+   "about": "context",
+   "published": "2026-04-20T05:51:31+00:00",
+   "fetched_at": "2026-11-14T00:51:22+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, hyvaks.fi",
+   "ms": 2150,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuun hyvinvointialue potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvinvointialue.kainuu.fi, suomi.fi",
+   "ms": 3060,
+   "results": [
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/potilasasiavastaava",
+     "title": "Potilasasiavastaava | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/",
+     "title": "Terveyttä ja turvaa kaikille kainuulaisille! | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/potilasasiavastaava-kainuun-hyvinvointialue/d4f26b15-1290-40ae-a89d-91e79134e8ea",
+     "title": "Potilasasiavastaava - Kainuun hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/potilasasiavastaavan-asiointikanavat-kainuun-hyvinvointialue/e91feda8-2197-4628-9c51-8d8aa619b0ec",
+     "title": "Potilasasiavastaavan asiointikanavat - Kainuun hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipaikat/potilasasiavastaavan-asiointikanavat",
+     "title": "Potilasasiavastaavan asiointikanavat | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/potilasasiavastaava",
+     "title": "Potilasasiavastaava | Kainuun hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, oys2030.fi",
+   "ms": 3061,
+   "results": [
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+     "title": "Potilaskoti - OYS"
+    },
+    {
+     "url": "https://oys.fi/wp-content/uploads/2026/04/Potilaskoti-tiedote-2_2026.pdf",
+     "title": "OYS potilaskoti tiedote (PDF)"
+    },
+    {
+     "url": "https://oys2030.fi/potilashotelli/",
+     "title": "Potilashotelli - Oys 2030"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/opastus-kartat-ja-pysakointi/",
+     "title": "Opastus, kartat ja pysäköinti - OYS"
+    },
+    {
+     "url": "https://oys.fi/",
+     "title": "Etusivu - OYS"
+    },
+    {
+     "url": "https://www.hs.fi/suomi/art-2000009887140.html",
+     "title": "Majoitus | ”Salahotelli” paljastui keskeltä Oulua"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuun keskussairaala majoitus sädehoidon ajaksi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: palveluketjut.kainuu.fi, hyvinvointialue.kainuu.fi, suomi.fi",
+   "ms": 1835,
+   "results": [
+    {
+     "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+     "title": "Sädehoito ja hoitavat yksiköt - Kainuu Palveluketjut"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/palvelut/keskussairaala",
+     "title": "Keskussairaala | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipaikat/kainuun-keskussairaala",
+     "title": "Kainuun keskussairaala | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/kainuun-keskussairaala-kainuun-hyvinvointialue/d6fc307a-a52e-4e3a-8134-cd30bd38cd47",
+     "title": "Kainuun keskussairaala - Kainuun hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/vierailijoille-ja-laheisille",
+     "title": "Vierailijoille ja läheisille | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+     "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: Kainuu radiotherapy accommodation; B: OYS patient home; A: effect size",
+   "ms": 4792
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "focus": "potilaskoti majoitus matka Oulu sädehoito",
+   "why": "B: Kainuu radiotherapy accommodation",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Sädehoito ja hoitavat yksiköt\" · 4 846 chars · 6 of 7 passages kept · from cache",
+   "ms": 4,
+   "title": "Sädehoito ja hoitavat yksiköt",
+   "chars": 4846,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "focus": "potilaskoti majapaikka varaus hinta",
+   "why": "B: OYS patient home",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Potilaskoti - OYS\" · 4 574 chars · 8 of 8 passages kept · from cache",
+   "ms": 1,
+   "title": "Potilaskoti - OYS",
+   "chars": 4574,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "published": "2026-04-20T05:51:31+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time odds surgery 0.60",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 6,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "writes the answer",
+   "ms": 12124
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "title": "Potilaskoti - OYS",
+   "chars": 4574,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:51:22+00:00",
+   "published": "2026-04-20T05:51:31+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "title": "Sädehoito ja hoitavat yksiköt",
+   "chars": 4846,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:27:17+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:27:47+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to organised transport and a named contact who books the stay, because OYS already runs a 63-bed patient home near the hospital that Kainuu's cancer pathway pages point patients to.",
+ "seconds": 20.0,
+ "searched_en": "Searched 4 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Kainuun hyvinvointialue potilashotelli\"; \"OYS potilaskoti\"; \"Kainuun keskussairaala majoitus sädehoidon ajaksi\") and read 3 pages on palveluketjut.kainuu.fi, oys.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Kainuun hyvinvointialue potilashotelli",
+  "OYS potilaskoti",
+  "Kainuun keskussairaala majoitus sädehoidon ajaksi"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to organised transport and a named contact who books the stay, because OYS already runs a 63-bed patient home near the hospital that Kainuu's cancer pathway pages point patients to.",
+ "verdict_en": "Partly in place in the OYS university hospital area, which treats Kainuu's patients. Missing: No page shows organised transport or a named contact who books accommodation for the patient. Patients book the room themselves. Evidence supports that it works, but not the size of effect we assume. Supported: A 2009 registry study of 34,923 patients in northern England (British Journal of Cancer) found that patients with the longest travel time had 0.60 times the odds of lung cancer surgery. Not supported: No page shows that travel or accommodation support raises the share of patients treated with curative intent, so the assumed 1 percentage point is not measured.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "travel_accommodation_support",
+ "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
+ "area_name_en": "Kainuu wellbeing services county"
+}

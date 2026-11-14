@@ -1,0 +1,565 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Standardised lung cancer pathway with booked slots. A lung cancer pathway on the Danish/Swedish/Norwegian model: fixed referral criteria, pre-booked CT, PET-CT, bronchoscopy and MDT slots, a named pathway owner, and published time limits for each step.",
+ "area_id": "10",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A Swedish 2023 study gives a lung cancer pathway lead time of 30–44 days, met by only 30 % of patients; it does not report how many days the pathway saved.",
+ "supported_en": "Sweden's lung cancer pathway sets a lead time of 30–44 days, and 30 % of patients started treatment within it (Scientific Reports 2023).",
+ "not_supported_en": "None of the pages read report how many days a lung cancer pathway saves, so the 14-day (5–23) figure is not confirmed.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: I found no public sign that the standardised pathway is running. The Kymenlaakso wellbeing services county pages say the lung clinic orders CT and tests case by case and that a county lung team meeting makes treatment recommendations. HUS says surgery decisions are made at Meilahti and describes ordinary referral handling, with no time limits or pre-booked slots. A: A 2023 Swedish study in Scientific Reports gives the lung cancer pathway a lead time of 30–44 days and says only 30 % of patients met it, so the 14-day saving remains an assumption.",
+ "unanswered_en": "I found no Kymenhva or HUS decision, pilot or published lung cancer time limits; the HUS cancer access-times page (syovan-hoitoonpaasy) did not load.",
+ "sources": [
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "quote": "Keuhkosairauksien yksikössä ohjelmoidaan tietokonetomografiatutkimus, laboratoriokokeita ja keuhkojen puhalluskokeet.",
+   "about": "context",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "quote": "Leikkauspäätös ja leikkaus tehdään Meilahden sairaalassa Helsingissä.",
+   "about": "context",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "quote": "Hoitosuositukset tehdään Kymenlaakson hyvinvointialueen moniammatillisessa keuhkokokouksessa.",
+   "about": "context",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Kun lähete saapuu meille HUSiin, lääkäri perehtyy tietoihisi ja suunnittelee sinulle tarvittavat lisätutkimukset ja jatkokäynnit.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "quote": "Lung cancer | 30–44 | 30",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:55:50+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2482,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva keuhkosyövän hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, hus.fi, suomi.fi",
+   "ms": 2205,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/digitaaliset-palvelut/kymenhva-hoitopolut/",
+     "title": "KymenHVA hoitopolut - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+     "title": "Keuhkosyöpä ja keuhkopussn msotelioom - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/verkkoasiointi/digitaaliset-hoitopolut-kymenlaakson-hyvinvointialue/abd24cba-d558-40cb-b3bf-d824f69ee65e",
+     "title": "Digitaaliset hoitopolut - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/uutiset/keuhkoahtaumataudin-hoito-ottaa-digiaskeleen-eteenpain-uusi-hoitopolku-oma-kymenlaaksoon/",
+     "title": "Keuhkoahtaumataudin hoito ottaa digiaskeleen eteenpäin – uusi hoitopolku Oma Kymenlaaksoon - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/digitaaliset-palvelut/oma-kymenlaakso/",
+     "title": "Oma Kymenlaakso - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyövän hoitoketju",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1061,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala hoitoonpääsy määräajat keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi",
+   "ms": 2137,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/meilla-asiakkaana/asiakkaan-oikeudet/odotusajat-ja-palveluun-paasy/hoitoonpaasy/",
+     "title": "Hoitoon pääsy ja hoitotakuu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/meilla-asiakkaana/asiakkaan-oikeudet/odotusajat-ja-palveluun-paasy/",
+     "title": "Odotusajat ja palveluun pääsy - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+     "title": "Keuhkosyöpä ja keuhkopussn msotelioom - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.5,
+   "result_en": "3 reads: B: HUS pathway time limits, booked slots; B: county lung cancer pathway; A: Swedish pathway time effect",
+   "ms": 6010
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "lähete, tutkimukset, viikkoa, keuhkokokous, aika, tavoite",
+   "why": "B: HUS pathway time limits, booked slots",
+   "status": "done",
+   "t_s": 8.5,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "focus": "keuhkosyöpä epäily lähete tutkimukset keuhkokokous viikkoa",
+   "why": "B: county lung cancer pathway",
+   "status": "done",
+   "t_s": 8.5,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin mesoteliooma\" · 4 499 chars · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "focus": "lung cancer days median time pathway lead time",
+   "why": "A: Swedish pathway time effect",
+   "status": "done",
+   "t_s": 8.5,
+   "result_en": "\"Performance of standardized cancer patient pathways in Sweden visualiz\" · 47 327 chars · 6 of 64 passages kept · from cache",
+   "ms": 13,
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "chars": 47327,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.5,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Kymenhva / Kymenlaakson keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision docume",
+   "ms": 13640
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.2,
+   "result_en": "2 searches: B: county fast-track lung cancer pathway; B: HUS time limits for pathway steps",
+   "ms": 3938
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakso syöpäepäily nopea diagnostiikka keuhkosyöpä viive",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county fast-track lung cancer pathway",
+   "status": "done",
+   "t_s": 26.1,
+   "result_en": "6 results: kymenhva.fi, hus.fi, terveyskyla.fi, suomenseniorihoiva.fi",
+   "ms": 1679,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-toteaminen",
+     "title": "Keuhkosyövän toteaminen"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/syopadiagnooseissa-on-viiveita-tiettyjen-oireiden-kohdalla-on-poissuljettava-syovan-mahdollisuus/9345888",
+     "title": "Jos lääkäriin ei pääse, syöpä voi löytyä viiveellä | MTV Uutiset"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpäpotilaan hoitoon pääsyn tavoiteajat keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS time limits for pathway steps",
+   "status": "done",
+   "t_s": 26.1,
+   "result_en": "6 results: hus.fi, syovanhoitokeskus.pshyvinvointialue.fi, tyks.fi",
+   "ms": 2176,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+     "title": "Syövän hoitoonpääsy | HUS"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/hoitoviive-heikentaa-syopien-ennustetta/",
+     "title": "Hoitoviive heikentää syöpien ennustetta - Lääkärilehti"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 28.3,
+   "result_en": "2 reads: B: HUS lung cancer time limits; B: county cancer pathway",
+   "ms": 4344
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+   "focus": "keuhkosyöpä hoitoon pääsy vuorokautta viikkoa lähete",
+   "why": "B: HUS lung cancer time limits",
+   "status": "done",
+   "t_s": 32.6,
+   "result_en": "no answer in 20 s; skipped",
+   "ms": 20000,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "focus": "hoitopolku keuhkosyöpä hoitoon pääsy",
+   "why": "B: county cancer pathway",
+   "status": "done",
+   "t_s": 32.6,
+   "result_en": "\"Syöpä\" · 4 029 chars · from cache",
+   "ms": 4,
+   "title": "Syöpä",
+   "chars": 4029,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 52.6,
+   "result_en": "writes the answer",
+   "ms": 11600
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "chars": 47327,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:55:50+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "title": "Syöpä",
+   "chars": 4029,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:54:05+00:00",
+   "published": "8.1.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:42:27+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because neither the Kymenlaakso wellbeing services county pages nor the HUS pages describe pre-booked slots, a named pathway owner or published time limits for each step, though the evidence for the 14-day saving is indirect.",
+ "seconds": 64.2,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva keuhkosyövän hoitopolku\"; \"HUS keuhkosyövän hoitoketju\"; \"Kymenlaakson keskussairaala hoitoonpääsy määräajat keuhkosyöpä\", ...) and read 4 pages on hus.fi, kymenhva.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva keuhkosyövän hoitopolku",
+  "HUS keuhkosyövän hoitoketju",
+  "Kymenlaakson keskussairaala hoitoonpääsy määräajat keuhkosyöpä",
+  "Kymenlaakso syöpäepäily nopea diagnostiikka keuhkosyöpä viive",
+  "HUS syöpäpotilaan hoitoon pääsyn tavoiteajat keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because neither the Kymenlaakso wellbeing services county pages nor the HUS pages describe pre-booked slots, a named pathway owner or published time limits for each step, though the evidence for the 14-day saving is indirect.",
+ "verdict_en": "No public sign that it is running in Kymenlaakso. Evidence supports that it works, but not the size of effect we assume. Supported: Sweden's lung cancer pathway sets a lead time of 30–44 days, and 30 % of patients started treatment within it (Scientific Reports 2023). Not supported: None of the pages read report how many days a lung cancer pathway saves, so the 14-day (5–23) figure is not confirmed.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "cpp_pathway",
+ "intervention_name_en": "Standardised lung cancer pathway with booked slots",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}

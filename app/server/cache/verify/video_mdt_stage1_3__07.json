@@ -1,0 +1,602 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kanta-Häme wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "07",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "One small English before-after study from 2004 found that the yearly resection rate rose by 30% after video MDT meetings with a thoracic surgeon began. It did not measure the share of all patients who got curative treatment.",
+ "supported_en": "A 2004 Southend–London study (Journal of Telemedicine and Telecare) reports a 30% relative rise in the yearly resection rate after telemedicine MDT meetings began (62 patients in one year).",
+ "not_supported_en": "The pages do not show the assumed gain of 1.5 percentage points in the curative share, and they include no recent or Finnish data.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that every stage I–III lung cancer patient from Kanta-Häme is discussed by video with the Tays lung team before curative treatment is ruled out. Pages only describe general multidisciplinary meetings and cooperation with Tays.",
+ "missing_en": "",
+ "summary_en": "B: Tays Cancer Centre says weekly multidisciplinary meetings (MDT meetings) draw up treatment recommendations, and says Kanta-Häme Central Hospital works closely with Tays, including in multidisciplinary meetings. No page read says that every stage I–III lung cancer patient from Kanta-Häme is reviewed by video with the Tays lung team. A: The only effect evidence is a 2004 English before-after study, where the yearly resection rate rose by 30% after video MDT meetings began.",
+ "unanswered_en": "No page read said whether Kanta-Häme lung cancer patients are routinely presented to the Tays lung cancer MDT by video; an old page on the former Kanta-Häme hospital district site (khshp.fi) about doctors' meetings with Tays was found but not read, and no Finnish data on the effect were found.",
+ "sources": [
+  {
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "quote": "Yhteistyö on tiivistä sairaalan muiden erikoisalojen kanssa (mm. moniammatilliset hoitokokoukset), mutta myös muiden hyvinvointialueiden ja yliopistosairaaloiden (erityisesti Tays Syöpäkeskuksen) kanssa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:15:54+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+   "title": "Tays Syöpäkeskuksessa syövän hoitaminen nojaa ainutlaatuiseen syöpätiimimalliin ja vahvaan potilaslähtöisyyteen – TAYS Syöpäkeskus",
+   "quote": "Yksittäisten potilaiden hoitosuositusten laatimisesta puolestaan vastaavat viikoittain kokoontuvat moniammatilliset hoitokokoukset eli MDT-kokoukset",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:15:59+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, tays.fi",
+   "ms": 1344,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Oma Häme moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: omahame.fi, tyks.fi, syoparekisteri.fi",
+   "ms": 3059,
+   "results": [
+    {
+     "url": "https://omahame.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Oma Häme"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://omahame.fi/",
+     "title": "Etusivu - Oma Häme"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, pirha.fi, tays.fi, harso.fi",
+   "ms": 1857,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset - laadukkaan syövänhoidon kultastandardi"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/syopa/syovan-hoito",
+     "title": "Syövän hoito - pirha.fi"
+    },
+    {
+     "url": "https://www.tays.fi/fi-fi/Koulutus/Meetingohjelmat",
+     "title": "Pirha"
+    },
+    {
+     "url": "https://harso.fi/tapahtumat/tays-aluetapaaminen/",
+     "title": "TAYS-aluetapaaminen, mukana potilas- ja sosiaaliasiavastaava - HARSO ry"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/sairaalat-ja-hoitoyksikot/tays-keskussairaala/tayskartta",
+     "title": "Tayskartta - pirha.fi"
+    },
+    {
+     "url": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+     "title": "Tays Syöpäkeskuksessa syövän hoitaminen nojaa ainutlaatuiseen syöpätiimimalliin ja vahvaan potilaslähtöisyyteen – TAYS Syöpäkeskus"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kanta-Hämeen keskussairaala keuhkomeeting videoyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "5 results: omahame.fi, sydansairaala.fi, suomi.fi",
+   "ms": 1687,
+   "results": [
+    {
+     "url": "https://omahame.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Oma Häme"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/wp-content/uploads/ss_hml_kartta_PRINT_071118.pdf",
+     "title": "Kanta-Hämeen keskussairaala erikoissairaanhoidon ja ..."
+    },
+    {
+     "url": "https://omahame.fi/sovellus",
+     "title": "Oma Häme -sovellus - Oma Häme"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-kanta-hameen-hyvinvointialue/397868bd-c928-422b-b6af-6a4e0f7b7384",
+     "title": "Keuhkosairaudet - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://omahame.fi/kanta-hameen-keskussairaala",
+     "title": "Ahveniston sairaala eli Assi - Oma Häme"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "4 reads: B: who decides treatment, MDT; B: regional MDT with county hospitals; B: county lung cancer practice; A: effect size",
+   "ms": 6609
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "hoitokokous moniammatillinen Kanta-Häme videoyhteys",
+   "why": "B: who decides treatment, MDT",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+   "focus": "hoitokokoukset alue keskussairaalat etäyhteys",
+   "why": "B: regional MDT with county hospitals",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Tays Syöpäkeskuksessa syövän hoitaminen nojaa ainutlaatuiseen syöpätii\" · 13 450 chars · 6 of 20 passages kept",
+   "ms": 6794,
+   "title": "Tays Syöpäkeskuksessa syövän hoitaminen nojaa ainutlaatuiseen syöpätiimimalliin ja vahvaan potilaslähtöisyyteen – TAYS Syöpäkeskus",
+   "chars": 13450,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://omahame.fi/keuhkosairaudet",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://omahame.fi/keuhkosairaudet",
+   "focus": "keuhkosyöpä hoitokokous Tays",
+   "why": "B: county lung cancer practice",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Keuhkosairaudet - Oma Häme\" · 11 518 chars · 6 of 22 passages kept · from cache",
+   "ms": 9,
+   "title": "Keuhkosairaudet - Oma Häme",
+   "chars": 11518,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://omahame.fi/keuhkosairaudet",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video multidisciplinary",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 12,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.5,
+   "result_en": "1 search: B: county patients in Tays lung MDT by video",
+   "ms": 3795
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kanta-Häme keuhkosyöpä Tays hoitokokous etäyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county patients in Tays lung MDT by video",
+   "status": "done",
+   "t_s": 20.3,
+   "result_en": "6 results: suomi.fi, khshp.fi, tays-cancer-centre.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-kanta-hameen-hyvinvointialue/dffe4aa7-157d-4045-986a-a9d3834cb355",
+     "title": "Syöpätaudit - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.khshp.fi/palvelut/poliklinikat/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka – Kanta-Hämeen sairaanhoitopiirin kuntayhtymä"
+    },
+    {
+     "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+     "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-kanta-hameen-hyvinvointialue/397868bd-c928-422b-b6af-6a4e0f7b7384",
+     "title": "Keuhkosairaudet - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.ficanmid.fi/potilaalle/",
+     "title": "Syöpäpotilaan hoito | Sisä-Suomen syöpäkeskus - FICAN Mid | Tampereen korkeakouluyhteisö"
+    },
+    {
+     "url": "https://omahame.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Oma Häme"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 23.3,
+   "result_en": "2 reads: B: regional MDT with Kanta-Häme; B: regional pathway",
+   "ms": 4612
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "focus": "Kanta-Häme moniammatilliset hoitokokoukset etäyhteys keuhkosyöpä",
+   "why": "B: regional MDT with Kanta-Häme",
+   "status": "done",
+   "t_s": 27.9,
+   "result_en": "\"Alueellinen syöpäkeskus – TAYS Syöpäkeskus\" · 4 404 chars · from cache",
+   "ms": 0,
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "chars": 4404,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ficanmid.fi/potilaalle/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ficanmid.fi/potilaalle/",
+   "focus": "Kanta-Hämeen keskussairaala hoitokokous Tays",
+   "why": "B: regional pathway",
+   "status": "done",
+   "t_s": 27.9,
+   "result_en": "\"Syöpäpotilaan hoito | Sisä-Suomen syöpäkeskus - FICAN Mid | Tampereen \" · 3 506 chars",
+   "ms": 4187,
+   "title": "Syöpäpotilaan hoito | Sisä-Suomen syöpäkeskus - FICAN Mid | Tampereen korkeakouluyhteisö",
+   "chars": 3506,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.ficanmid.fi/potilaalle/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 32.1,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Oma Häme / Kanta-Hämeen keskussairaala / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision docum",
+   "ms": 14393
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 46.5,
+   "result_en": "1 search: B: video lung MDT Kanta-Häme with Tays",
+   "ms": 2796
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "keuhkosyöpä MDT Tays Hämeenlinna etäyhteys meeting",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: video lung MDT Kanta-Häme with Tays",
+   "status": "done",
+   "t_s": 49.3,
+   "result_en": "6 results: pirha.fi, suomi.fi, khshp.fi, tays-cancer-centre.fi",
+   "ms": 2330,
+   "results": [
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/syopa/syovan-hoito",
+     "title": "Syövän hoito - pirha.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-kanta-hameen-hyvinvointialue/dffe4aa7-157d-4045-986a-a9d3834cb355",
+     "title": "Syöpätaudit - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.khshp.fi/ammattilainen/laakari-meeting/",
+     "title": "Lääkäri-meeting – Kanta-Hämeen sairaanhoitopiirin kuntayhtymä"
+    },
+    {
+     "url": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+     "title": "Tays Syöpäkeskuksessa syövän hoitaminen nojaa ainutlaatuiseen syöpätiimimalliin ja vahvaan potilaslähtöisyyteen – TAYS Syöpäkeskus"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/tutkituta-keuhkot/varaa-aika/",
+     "title": "Varaa aika – Parempaa elämää ­– Apua keuhkosyöpään"
+    },
+    {
+     "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+     "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 51.6,
+   "result_en": "writes the answer",
+   "ms": 10647
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://omahame.fi/keuhkosairaudet",
+   "title": "Keuhkosairaudet - Oma Häme",
+   "chars": 11518,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:26+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://tays-cancer-centre.fi/syovan-hoitaminen-nojaa-ainutlaatuiseen-syopatiimimalliin-ja-vahvaan-potilaslahtoisyyteen-tampereen-yliopistollisessa-sairaalassa/",
+   "title": "Tays Syöpäkeskuksessa syövän hoitaminen nojaa ainutlaatuiseen syöpätiimimalliin ja vahvaan potilaslähtöisyyteen – TAYS Syöpäkeskus",
+   "chars": 13450,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:15:59+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "chars": 4404,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:54+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.ficanmid.fi/potilaalle/",
+   "title": "Syöpäpotilaan hoito | Sisä-Suomen syöpäkeskus - FICAN Mid | Tampereen korkeakouluyhteisö",
+   "chars": 3506,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:16:15+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:16:45+00:00",
+ "stopped": "finished",
+ "advice": null,
+ "model_reason_en": "Keep this line: no Kanta-Häme or Tays page shows a required video review of stage I–III patients, but the effect size is a guess based on one small study from 2004.",
+ "seconds": 62.3,
+ "searched_en": "Searched 6 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Oma Häme moniammatillinen kokous keuhkosyöpä\"; \"Tays MDT-kokous etäyhteydellä\"; \"Kanta-Hämeen keskussairaala keuhkomeeting videoyhteys\", ...) and read 6 pages on pirha.fi, tays-cancer-centre.fi, omahame.fi, europepmc.org, ficanmid.fi.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Oma Häme moniammatillinen kokous keuhkosyöpä",
+  "Tays MDT-kokous etäyhteydellä",
+  "Kanta-Hämeen keskussairaala keuhkomeeting videoyhteys",
+  "Kanta-Häme keuhkosyöpä Tays hoitokokous etäyhteys",
+  "keuhkosyöpä MDT Tays Hämeenlinna etäyhteys meeting"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no Kanta-Häme or Tays page shows a required video review of stage I–III patients, but the effect size is a guess based on one small study from 2004.",
+ "verdict_en": "No public sign that it is running in Kanta-Häme. Evidence supports that it works, but not the size of effect we assume. Supported: A 2004 Southend–London study (Journal of Telemedicine and Telecare) reports a 30% relative rise in the yearly resection rate after telemedicine MDT meetings began (62 patients in one year). Not supported: The pages do not show the assumed gain of 1.5 percentage points in the curative share, and they include no recent or Finnish data.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "Kanta-Häme wellbeing services county"
+}

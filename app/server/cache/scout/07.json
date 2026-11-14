@@ -1,0 +1,417 @@
+{
+ "area_id": "07",
+ "area_name_en": "Kanta-Häme wellbeing services county",
+ "area_name_fi": "Kanta-Hämeen hyvinvointialue",
+ "question": "What is Kanta-Häme wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-10-14",
+   "what_en": "Oma Häme has begun setting local priorities from the national cancer strategy; collaboration with primary-care geriatricians, started in spring 2026, is meant to give more precise assessment of cancer patients' functional capacity.",
+   "what_fi": "Oma Häme on aloittanut kansallisen syöpästrategian painopisteiden määrittelyn; keväällä 2026 alkanut yhteistyö perusterveydenhuollon geriatrien kanssa tarkentaa potilaan toimintakyvyn arviota.",
+   "quote": "Esimerkiksi keväällä 2026 alkanut yhteistyö perusterveydenhuollon geriatrien kanssa mahdollistaa jatkossa tarkemman arvion potilaan yksilöllisestä toimintakyvystä.",
+   "url": "https://www.sttinfo.fi/tiedote/72411413/kansallinen-syopastrategia-korostaa-ehkaisya-ja-varhaista-toteamista-myos-kanta-hameessa-asukkaan-omilla-valinnoilla-ja-ajoissa-toimimisella-on-merkitysta?lang=fi",
+   "title": "Kansallinen syöpästrategia korostaa ehkäisyä ja varhaista toteamista – myös Kanta-Hämeessä asukkaan omilla valinnoilla ja ajoissa toimimisella on merkitystä | Assi sairaala",
+   "relates_to": "prehab_fitness_assessment",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:13+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "In Kanta-Häme, lung cancer treatment is planned in the pulmonology specialty, not in the oncology unit.",
+   "what_fi": "Kanta-Hämeessä keuhkosyövän hoito suunnitellaan keuhkosairauksien erikoisalalla eikä syöpätautien yksikössä.",
+   "quote": "Jos sinulla on todettu keuhkosyöpä tai naistentautien syöpä, hoitosi suunnitellaan kyseisellä erikoisalalla.",
+   "url": "https://omahame.fi/syopataudit",
+   "title": "Syöpätaudit - Oma Häme",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:15+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "The oncology clinic in Hämeenlinna has four specialists, one trainee doctor and four nurses, and sees just under 500 patients a year for drug-therapy assessment, out of about 1,300 new cancers a year in the county.",
+   "what_fi": "Hämeenlinnan syöpätautien poliklinikalla on neljä erikoislääkäriä, yksi erikoistuva lääkäri ja neljä sairaanhoitajaa; lääkehoitoarvioon ohjautuu vuosittain vajaa 500 potilasta noin 1300 uudesta syöpätapauksesta.",
+   "quote": "Syöpätautien poliklinikalla Hämeenlinnassa on töissä neljä erikoislääkäriä ja yksi erikoistuva lääkäri. Sairaanhoitajia poliklinikalla on neljä.",
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "relates_to": "drug_therapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:15:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Kanta-Häme works with Tays mainly on radiotherapy and on centralising the most demanding cancer surgery to university hospitals, and holds multidisciplinary care meetings.",
+   "what_fi": "Kanta-Häme tekee Taysin kanssa yhteistyötä erityisesti sädehoidossa ja vaativimman syöpäkirurgian keskittämisessä yliopistosairaaloihin, ja sairaalassa pidetään moniammatillisia hoitokokouksia.",
+   "quote": "Merkittävin yhteistyö liittyy syöpäpotilaiden sädehoitoon sekä vaativimpien syöpäkirurgisten leikkausten keskittämiseen yliopistosairaaloihin.",
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:15:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Kanta-Häme gives cancer drug therapy as a local service in Forssa and Riihimäki hospitals as well as in Hämeenlinna.",
+   "what_fi": "Kanta-Häme antaa syöpien lääkehoitoja lähipalveluna Hämeenlinnan lisäksi Forssan ja Riihimäen sairaaloissa.",
+   "quote": "Yksikkö toteuttaa laaja-alaisesti yleisimpien syöpäsairauksien lääkehoitoja lähipalveluna maakunnassa Hämeenlinnan lisäksi myös Forssan ja Riihimäen sairaaloissa.",
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "relates_to": "travel_accommodation_support",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:15:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "The pulmonology outpatient clinic treats lung cancer and runs in Hämeenlinna and in Riihimäki, where a doctor sees patients three days a week and a nurse every weekday.",
+   "what_fi": "Keuhkosairauksien poliklinikka hoitaa myös keuhkosyöpää, ja se toimii Hämeenlinnassa ja Riihimäellä, jossa lääkärin vastaanotto on kolmesti viikossa ja hoitajan vastaanotto joka arkipäivä.",
+   "quote": "Riihimäellä lääkärivastaanotto on kolmesti viikossa (maanantai, keskiviikko ja perjantai), mutta hoitajavastaanottoa pidetään kaikkina arkipäivinä.",
+   "url": "https://omahame.fi/keuhkosairaudet",
+   "title": "Keuhkosairaudet - Oma Häme",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:15:26+00:00",
+   "from_cache": true
+  }
+ ],
+ "summary_en": "Lung cancer in Kanta-Häme (Oma Häme) is handled by the pulmonology clinic, which works in Hämeenlinna and Riihimäki. Cancer drug therapy is given in Hämeenlinna, Forssa and Riihimäki, while radiotherapy and the most demanding surgery go through Tays. Since spring 2026 the county has been working with primary-care geriatricians to assess patients' functional capacity better, and in October 2026 it said it had started setting local priorities from the national cancer strategy. I found no lung-cancer-specific pathway, waiting-time figures or decision documents.",
+ "not_found_en": "I found nothing on a lung cancer pathway, waiting times, EBUS or bronchoscopy capacity, molecular testing, screening pilots, nurse navigators or regional council decisions; time ran out after one search round, so I did not do targeted searches for these.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own site; hospital pathway; decisions; local news",
+   "ms": 4758
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Oma Häme keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own site",
+   "status": "done",
+   "t_s": 4.8,
+   "result_en": "6 results: omahame.fi, docrates.mehilainen.fi, suomi.fi",
+   "ms": 3083,
+   "results": [
+    {
+     "url": "https://omahame.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Oma Häme"
+    },
+    {
+     "url": "https://omahame.fi/syopataudit",
+     "title": "Syöpätaudit - Oma Häme"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-kanta-hameen-hyvinvointialue/dffe4aa7-157d-4045-986a-a9d3834cb355",
+     "title": "Syöpätaudit - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kanta-Hämeen keskussairaala syöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "hospital pathway",
+   "status": "done",
+   "t_s": 4.8,
+   "result_en": "6 results: omahame.fi, suomi.fi, khshp.fi",
+   "ms": 1599,
+   "results": [
+    {
+     "url": "https://omahame.fi/syopataudit",
+     "title": "Syöpätaudit - Oma Häme"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-ahveniston-sairaala-kanta-hameen-hyvinvointialue/f8f0b0f6-0901-406f-8a88-abfacc967f52",
+     "title": "Syöpätautien poliklinikka, Ahveniston sairaala - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-kanta-hameen-hyvinvointialue/dffe4aa7-157d-4045-986a-a9d3834cb355",
+     "title": "Syöpätaudit - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.khshp.fi/palvelut/poliklinikat/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka – Kanta-Hämeen sairaanhoitopiirin kuntayhtymä"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-keskussairaala-kanta-hameen-hyvinvointialue/f8f0b0f6-0901-406f-8a88-abfacc967f52",
+     "title": "Syöpätautien poliklinikka, keskussairaala - Kanta-Hämeen ..."
+    },
+    {
+     "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+     "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Oma Häme aluehallitus syöpähoito sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.8,
+   "result_en": "6 results: omahame.fi, suomi.fi",
+   "ms": 1563,
+   "results": [
+    {
+     "url": "https://omahame.fi/syopataudit",
+     "title": "Syöpätaudit - Oma Häme"
+    },
+    {
+     "url": "https://omahame.fi/aluehallitus",
+     "title": "Aluehallitus - Oma Häme"
+    },
+    {
+     "url": "https://omahame.fi/",
+     "title": "Etusivu - Oma Häme"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-kanta-hameen-hyvinvointialue/dffe4aa7-157d-4045-986a-a9d3834cb355",
+     "title": "Syöpätaudit - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://yle.fi/a/74-20123035",
+     "title": "Päijät-Hämeen hyvinvointialue haluaa syöpähoidot kokonaan omiin käsiin | Päijät-Häme | Yle"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/sadehoitoyksikko-paijat-hameen-hyvinvointialue/cd23f590-e602-419e-9bab-2ce9ded851f2",
+     "title": "Sädehoitoyksikkö - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kanta-Häme keuhkosyöpä 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 4.8,
+   "result_en": "6 results: omahame.fi, filha.fi, suomi.fi",
+   "ms": 1092,
+   "results": [
+    {
+     "url": "https://omahame.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Oma Häme"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma - Filha ry"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-kanta-hameen-hyvinvointialue/dffe4aa7-157d-4045-986a-a9d3834cb355",
+     "title": "Syöpätaudit - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-kanta-hameen-hyvinvointialue/397868bd-c928-422b-b6af-6a4e0f7b7384",
+     "title": "Keuhkosairaudet - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72411413/kansallinen-syopastrategia-korostaa-ehkaisya-ja-varhaista-toteamista-myos-kanta-hameessa-asukkaan-omilla-valinnoilla-ja-ajoissa-toimimisella-on-merkitysta?lang=fi",
+     "title": "Kansallinen syöpästrategia korostaa ehkäisyä ja varhaista toteamista – myös Kanta-Hämeessä asukkaan omilla valinnoilla ja ajoissa toimimisella on merkitystä | Assi sairaala"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-ahveniston-sairaala-kanta-hameen-hyvinvointialue/37253a10-6e05-44a5-82b5-ced3140c95bc",
+     "title": "Keuhkosairauksien poliklinikka, Ahveniston sairaala - Kanta-Hämeen hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "4 reads: lung pathway local; regional staffing, radiotherapy; county news; oncology unit",
+   "ms": 6488
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://omahame.fi/keuhkosairaudet",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://omahame.fi/keuhkosairaudet",
+   "focus": "keuhkosyöpä bronkoskopia hoitaja",
+   "why": "lung pathway local",
+   "status": "done",
+   "t_s": 14.3,
+   "result_en": "\"Keuhkosairaudet - Oma Häme\" · 11 518 chars · 6 of 22 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosairaudet - Oma Häme",
+   "chars": 11518,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://omahame.fi/keuhkosairaudet",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "focus": "Hämeenlinna keuhkosyöpä sädehoito erikoislääkäri",
+   "why": "regional staffing, radiotherapy",
+   "status": "done",
+   "t_s": 14.3,
+   "result_en": "\"Alueellinen syöpäkeskus – TAYS Syöpäkeskus\" · 4 404 chars · from cache",
+   "ms": 8,
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "chars": 4404,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.sttinfo.fi/tiedote/72411413/kansallinen-syopastrategia-korostaa-ehkaisya-ja-varhaista-toteamista-myos-kanta-hameessa-asukkaan-omilla-valinnoilla-ja-ajoissa-toimimisella-on-merkitysta?lang=fi",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.sttinfo.fi/tiedote/72411413/kansallinen-syopastrategia-korostaa-ehkaisya-ja-varhaista-toteamista-myos-kanta-hameessa-asukkaan-omilla-valinnoilla-ja-ajoissa-toimimisella-on-merkitysta?lang=fi",
+   "focus": "keuhkosyöpä varhainen toteaminen yskä",
+   "why": "county news",
+   "status": "done",
+   "t_s": 14.3,
+   "result_en": "\"Kansallinen syöpästrategia korostaa ehkäisyä ja varhaista toteamista –\" · 6 803 chars · 8 of 14 passages kept",
+   "ms": 2165,
+   "title": "Kansallinen syöpästrategia korostaa ehkäisyä ja varhaista toteamista – myös Kanta-Hämeessä asukkaan omilla valinnoilla ja ajoissa toimimisella on merkitystä | Assi sairaala",
+   "chars": 6803,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.sttinfo.fi/tiedote/72411413/kansallinen-syopastrategia-korostaa-ehkaisya-ja-varhaista-toteamista-myos-kanta-hameessa-asukkaan-omilla-valinnoilla-ja-ajoissa-toimimisella-on-merkitysta?lang=fi",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://omahame.fi/syopataudit",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://omahame.fi/syopataudit",
+   "focus": "keuhkosyöpä sädehoito Tays hoitaja",
+   "why": "oncology unit",
+   "status": "done",
+   "t_s": 14.3,
+   "result_en": "\"Syöpätaudit - Oma Häme\" · 7 959 chars · 8 of 15 passages kept",
+   "ms": 4225,
+   "title": "Syöpätaudit - Oma Häme",
+   "chars": 7959,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://omahame.fi/syopataudit",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 11,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.6,
+   "result_en": "writes the answer",
+   "ms": 19212
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://omahame.fi/keuhkosairaudet",
+   "title": "Keuhkosairaudet - Oma Häme",
+   "chars": 11518,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:26+00:00"
+  },
+  {
+   "url": "https://tays-cancer-centre.fi/alueellinen-syopakeskus/",
+   "title": "Alueellinen syöpäkeskus – TAYS Syöpäkeskus",
+   "chars": 4404,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:54+00:00"
+  },
+  {
+   "url": "https://www.sttinfo.fi/tiedote/72411413/kansallinen-syopastrategia-korostaa-ehkaisya-ja-varhaista-toteamista-myos-kanta-hameessa-asukkaan-omilla-valinnoilla-ja-ajoissa-toimimisella-on-merkitysta?lang=fi",
+   "title": "Kansallinen syöpästrategia korostaa ehkäisyä ja varhaista toteamista – myös Kanta-Hämeessä asukkaan omilla valinnoilla ja ajoissa toimimisella on merkitystä | Assi sairaala",
+   "chars": 6803,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:13+00:00"
+  },
+  {
+   "url": "https://omahame.fi/syopataudit",
+   "title": "Syöpätaudit - Oma Häme",
+   "chars": 7959,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:15+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:33:34+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 37.8
+}

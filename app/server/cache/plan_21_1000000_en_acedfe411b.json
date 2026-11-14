@@ -1,0 +1,256 @@
+{
+ "title": "Lapland: what EUR 1,000,000 a year should buy first in lung cancer care",
+ "markdown": "# Lapland: what EUR 1,000,000 a year should buy first in lung cancer care\n\n## The gap in one sentence\nLapland had 227.0 lung cancer deaths per 100,000 residents aged 65+ in 2021–2025, against 178.6 nationally, the highest of 23 counties [^statfin_13u5]. Only 18.5% of its lung cancer patients got curative-intent treatment in 2019–2023, against 27.0% nationally, the lowest of 22 counties [^fcr_lung_quality_report]. The gap to the top-quartile county rate is about 16.8 patients a year, arithmetic on registry shares rather than a causal estimate [^fcr_lung_quality_report]. The model estimates 155 days (142–168) from first symptom to treatment start [^model].\n\n## Where the days are lost\nThe step furthest above the national value is first symptom to first primary care contact, estimated at 63 days (53–74) against 56 nationally [^model]. Two of the model's drivers are higher smoking (11.4% daily smokers vs 9.1% nationally) [^sotkanet_4404] and a much larger sparsely populated rural share (28.6% vs 4.4%) [^statfin_11ra]. The only measured step is diagnosis to treatment start [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28]. It is 29.6 days, measured for the Northern Finland (OYS) collaborative area and weighted by Lapland's treatment mix, against 36.9 nationally [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n\n## Three actions\n1. **What:** A symptom awareness campaign telling people with a cough lasting over three weeks to see a doctor. **Owner:** FICAN and the Cancer Society nationally, with county communications and primary care delivering locally. **Cost:** EUR 13,931 a year, scaled from the roadmap budget, with yearly repetition assumed [^model][^roadmap_1.3.2]. **Expected effect:** No days saved, and an estimated 0.58 deaths avoided a year (0.25–0.88) [^model]. **Evidence:** [^ev_symptom_campaign_1][^ev_symptom_campaign_2][^ev_symptom_campaign_3] **Roadmap:** 1.3.2, a national communication plan on cancer symptoms [^roadmap_1.3.2].\n2. **What:** Low-dose CT screening, with smoking cessation support, for long-term heavy smokers aged 50–74. **Owner:** The Ministry of Social Affairs and Health and Palko decide, the Finnish Cancer Registry steers and the county delivers. **Cost:** EUR 548,645 a year, an assumption [^model]. **Expected effect:** No days saved, and an estimated 4.38 deaths avoided a year (3.21–5.56), with benefits arriving only after years [^model]. **Evidence:** [^ev_ldct_screening_1][^ev_ldct_screening_2][^ev_ldct_screening_3][^ev_ldct_screening_4] **Roadmap:** 2.3.4, new national screening programmes [^roadmap_2.3.4].\n3. **What:** Cessation medication and counselling for every current smoker at the first specialist visit. **Owner:** The chief physician and head nurse of pulmonology. **Cost:** EUR 57,800 a year, an assumption [^model]. **Expected effect:** No days saved, and an estimated 0.45 deaths avoided a year (0.31–0.58) [^model]. **Evidence:** [^ev_smoking_cessation_at_diagnosis_1][^ev_smoking_cessation_at_diagnosis_2] **Roadmap:** 3.1.2, cancer-specific care pathway descriptions [^roadmap_3.1.2].\n\n## What to measure from Monday\n- Record the date of the first symptom and of the first primary care contact for each lung cancer patient [^model].\n- Record the days from referral to the first pulmonology visit for suspected lung cancer [^model].\n- Record the days from the first specialist visit to diagnosis by hospital, and from diagnosis to treatment start for the county itself [^model].\n- Record stage at diagnosis for every lung cancer [^model].\n\n## Limits of this analysis\nThe first four step days are county-level estimates built from assumed priors, not measurements of individual pathways [^model]. As a check, not a validation, none of three measured outcomes correlated with the estimated clock beyond chance [^model]. The closest was the curative-intent share (rho −0.30, permutation p 0.17) [^model]. The national 155-day total was reported by Yle in 2026 from an unpublished four-city Finnish study, and two of the five step figures are residuals rather than measurements [^model].",
+ "claims": [
+  {
+   "text": "Lapland had 227.0 lung cancer deaths per 100,000 residents aged 65+ in 2021–2025, against 178.6 nationally, the highest of 23 counties . Only 18.5% of its lung cancer patients got curative-intent treatment in 2019–2023, against 27.0% nationally, the lowest of 22 counties . The gap to the top-quartile county rate is about 16.8 patients a year, arithmetic on registry shares rather than a causal estimate . The model estimates 155 days (142–168) from first symptom to treatment start .",
+   "source_ids": [
+    "statfin_13u5",
+    "fcr_lung_quality_report",
+    "model"
+   ]
+  },
+  {
+   "text": "The step furthest above the national value is first symptom to first primary care contact, estimated at 63 days (53–74) against 56 nationally . Two of the model's drivers are higher smoking (11.4% daily smokers vs 9.1% nationally) and a much larger sparsely populated rural share (28.6% vs 4.4%) . The only measured step is diagnosis to treatment start . It is 29.6 days, measured for the Northern Finland (OYS) collaborative area and weighted by Lapland's treatment mix, against 36.9 nationally .",
+   "source_ids": [
+    "model",
+    "sotkanet_4404",
+    "statfin_11ra",
+    "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28"
+   ]
+  },
+  {
+   "text": "1. **What:** A symptom awareness campaign telling people with a cough lasting over three weeks to see a doctor. **Owner:** FICAN and the Cancer Society nationally, with county communications and primary care delivering locally. **Cost:** EUR 13,931 a year, scaled from the roadmap budget, with yearly repetition assumed . **Expected effect:** No days saved, and an estimated 0.58 deaths avoided a year (0.25–0.88) . **Evidence:",
+   "source_ids": [
+    "model",
+    "roadmap_1.3.2",
+    "ev_symptom_campaign_1",
+    "ev_symptom_campaign_2",
+    "ev_symptom_campaign_3"
+   ]
+  },
+  {
+   "text": "Roadmap:** 1.3.2, a national communication plan on cancer symptoms .",
+   "source_ids": [
+    "roadmap_1.3.2"
+   ]
+  },
+  {
+   "text": "2. **What:** Low-dose CT screening, with smoking cessation support, for long-term heavy smokers aged 50–74. **Owner:** The Ministry of Social Affairs and Health and Palko decide, the Finnish Cancer Registry steers and the county delivers. **Cost:** EUR 548,645 a year, an assumption . **Expected effect:** No days saved, and an estimated 4.38 deaths avoided a year (3.21–5.56), with benefits arriving only after years . **Evidence:",
+   "source_ids": [
+    "model",
+    "ev_ldct_screening_1",
+    "ev_ldct_screening_2",
+    "ev_ldct_screening_3",
+    "ev_ldct_screening_4"
+   ]
+  },
+  {
+   "text": "Roadmap:** 2.3.4, new national screening programmes .",
+   "source_ids": [
+    "roadmap_2.3.4"
+   ]
+  },
+  {
+   "text": "3. **What:** Cessation medication and counselling for every current smoker at the first specialist visit. **Owner:** The chief physician and head nurse of pulmonology. **Cost:** EUR 57,800 a year, an assumption . **Expected effect:** No days saved, and an estimated 0.45 deaths avoided a year (0.31–0.58) . **Evidence:",
+   "source_ids": [
+    "model",
+    "ev_smoking_cessation_at_diagnosis_1",
+    "ev_smoking_cessation_at_diagnosis_2"
+   ]
+  },
+  {
+   "text": "Roadmap:** 3.1.2, cancer-specific care pathway descriptions .",
+   "source_ids": [
+    "roadmap_3.1.2"
+   ]
+  },
+  {
+   "text": "Record the date of the first symptom and of the first primary care contact for each lung cancer patient .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Record the days from referral to the first pulmonology visit for suspected lung cancer .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Record the days from the first specialist visit to diagnosis by hospital, and from diagnosis to treatment start for the county itself .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Record stage at diagnosis for every lung cancer .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The first four step days are county-level estimates built from assumed priors, not measurements of individual pathways . As a check, not a validation, none of three measured outcomes correlated with the estimated clock beyond chance . The closest was the curative-intent share (rho −0.30, permutation p 0.17) . The national 155-day total was reported by Yle in 2026 from an unpublished four-city Finnish study, and two of the five step figures are residuals rather than measurements .",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [],
+  "flagged": [
+   {
+    "sentence": "At the top-quartile county rate, about 16.8 more patients a year would get curative-intent treatment [^fcr_lung_quality_report].",
+    "reason": "Presented an arithmetic gap on registry shares as a causal counterfactual; the source says it is not a causal estimate. Rewritten as 'The gap to the top-quartile county rate is about 16.8 patients a year, arithmetic on registry shares rather than a causal estimate'."
+   },
+   {
+    "sentence": "**Cost:** EUR 13,931 a year, sourced from the roadmap budget [^model][^roadmap_1.3.2].",
+    "reason": "Only the one-off national budget is sourced; the per-county scaling and yearly repetition are assumptions. Rewritten as 'scaled from the roadmap budget, with yearly repetition assumed'."
+   },
+   {
+    "sentence": "The step days are county-level estimates built from assumed priors, not measurements of individual pathways [^model].",
+    "reason": "The diagnosis-to-treatment step is measured, not estimated from priors. Changed 'The step days' to 'The first four step days'."
+   },
+   {
+    "sentence": "The only measured step is diagnosis to treatment start.",
+    "reason": "Factual claim had no citation marker. Added [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28]."
+   },
+   {
+    "sentence": "As a check, not a validation, none of three measured outcomes correlated with the estimated clock beyond chance.",
+    "reason": "Factual claim had no citation marker. Added [^model] (consistency check result)."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "statfin_13u5": {
+   "title": "13u5 -- Deaths by underlying cause of death (time series classification) and wellbeing services county, 1969-2025",
+   "publisher": "Statistics Finland",
+   "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__ksyyt/statfin_ksyyt_pxt_13u5.px/",
+   "retrieved_at": "2026-11-13T19:59:21Z"
+  },
+  "fcr_lung_quality_report": {
+   "title": "Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet)",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z"
+  },
+  "model": {
+   "title": "Kello pathway simulation (estimated; method in Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "sotkanet_4404": {
+   "title": "Sotkanet indicator 4404: Daily smokers (%)",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4404",
+   "retrieved_at": "2026-11-13T19:58:43Z"
+  },
+  "statfin_11ra": {
+   "title": "11ra -- Key figures on population by region, 1990-2025",
+   "publisher": "Statistics Finland",
+   "url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11ra.px/",
+   "retrieved_at": "2026-11-13T19:59:20Z"
+  },
+  "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28": {
+   "title": "Keuhkosyöpä Suomessa (lung cancer in Finland, PDF report, Dec 2024), p. 28 (measured, 1.1.2018-30.6.2022; read by Gemini)",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": "2026-11-13T20:00:00Z",
+   "kind": "measured"
+  },
+  "roadmap_1.3.2": {
+   "title": "National cancer roadmap, measure 1.3.2: Promote early presentation with a national communication plan that raises awareness of cancer symptoms",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "ev_symptom_campaign_1": {
+   "title": "English national lung campaign: stage I share of NSCLC +3.1 percentage points.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "year": 2015,
+   "design": "before-after evaluation of national campaign, England",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_symptom_campaign_2": {
+   "title": "The patient interval is the longest single step in Finland.",
+   "url": "https://yle.fi/a/74-20242733",
+   "year": 2026,
+   "design": "journalism citing unpublished four-city study",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_symptom_campaign_3": {
+   "title": "Stated reasons for late presentation: cost and fear.",
+   "url": "https://yle.fi/a/74-20242733",
+   "year": 2026,
+   "design": "survey by cancer organisations as reported by Yle",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_2": {
+   "title": "NELSON: 24 % lower lung cancer mortality in men at 10 years.",
+   "url": "https://doi.org/10.1056/NEJMoa1911793",
+   "year": 2020,
+   "design": "randomised controlled trial, Netherlands and Belgium",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_3": {
+   "title": "Finnish Oulu pilot: 5 of 6 screen-detected cancers were stage I.",
+   "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+   "year": 2026,
+   "design": "pilot study (LDCT-SC-FI, Oulu, 200 participants) as cited by IHE",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_4": {
+   "title": "Finnish national pilot: 1 200 long-term smokers from five regions.",
+   "url": "https://yle.fi/a/74-20205604",
+   "year": 2026,
+   "design": "news report on national pilot",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_2.3.4": {
+   "title": "National cancer roadmap, measure 2.3.4: Establish new national screening programmes and adapt existing ones based on research and EU recommendations",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "ev_smoking_cessation_at_diagnosis_1": {
+   "title": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "year": 2021,
+   "design": "prospective cohort, Moscow",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_smoking_cessation_at_diagnosis_2": {
+   "title": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "year": 2025,
+   "design": "retrospective five-hospital cohort, Finland",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_3.1.2": {
+   "title": "National cancer roadmap, measure 3.1.2: Write cancer-specific care pathway descriptions, regional pathways based on them, and a mechanism to maintain them",
+   "url": null,
+   "kind": "roadmap"
+  }
+ },
+ "area_id": "21",
+ "budget_eur": 1000000.0,
+ "lang": "en",
+ "generated_at": "2026-11-13T21:48:27+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "# Lapland: what EUR 1,000,000 a year should buy first in lung cancer care\n\n## The gap in one sentence\nLapland had 227.0 lung cancer deaths per 100,000 residents aged 65+ in 2021–2025, against 178.6 nationally, the highest of 23 counties [^statfin_13u5]. Only 18.5% of its lung cancer patients got curative-intent treatment in 2019–2023, against 27.0% nationally, the lowest of 22 counties [^fcr_lung_quality_report]. At the top-quartile county rate, about 16.8 more patients a year would get curative-intent treatment [^fcr_lung_quality_report]. The model estimates 155 days (142–168) from first symptom to treatment start [^model].\n\n## Where the days are lost\nThe step furthest above the national value is first symptom to first primary care contact, estimated at 63 days (53–74) against 56 nationally [^model]. Two of the model's drivers are higher smoking (11.4% daily smokers vs 9.1% nationally) [^sotkanet_4404] and a much larger sparsely populated rural share (28.6% vs 4.4%) [^statfin_11ra]. The only measured step is diagnosis to treatment start. It is 29.6 days, measured for the Northern Finland (OYS) collaborative area and weighted by Lapland's treatment mix, against 36.9 nationally [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n\n## Three actions\n1. **What:** A symptom awareness campaign telling people with a cough lasting over three weeks to see a doctor. **Owner:** FICAN and the Cancer Society nationally, with county communications and primary care delivering locally. **Cost:** EUR 13,931 a year, sourced from the roadmap budget [^model][^roadmap_1.3.2]. **Expected effect:** No days saved, and an estimated 0.58 deaths avoided a year (0.25–0.88) [^model]. **Evidence:** [^ev_symptom_campaign_1][^ev_symptom_campaign_2][^ev_symptom_campaign_3] **Roadmap:** 1.3.2, a national communication plan on cancer symptoms [^roadmap_1.3.2].\n2. **What:** Low-dose CT screening, with smoking cessation support, for long-term heavy smokers aged 50–74. **Owner:** The Ministry of Social Affairs and Health and Palko decide, the Finnish Cancer Registry steers and the county delivers. **Cost:** EUR 548,645 a year, an assumption [^model]. **Expected effect:** No days saved, and an estimated 4.38 deaths avoided a year (3.21–5.56), with benefits arriving only after years [^model]. **Evidence:** [^ev_ldct_screening_1][^ev_ldct_screening_2][^ev_ldct_screening_3][^ev_ldct_screening_4] **Roadmap:** 2.3.4, new national screening programmes [^roadmap_2.3.4].\n3. **What:** Cessation medication and counselling for every current smoker at the first specialist visit. **Owner:** The chief physician and head nurse of pulmonology. **Cost:** EUR 57,800 a year, an assumption [^model]. **Expected effect:** No days saved, and an estimated 0.45 deaths avoided a year (0.31–0.58) [^model]. **Evidence:** [^ev_smoking_cessation_at_diagnosis_1][^ev_smoking_cessation_at_diagnosis_2] **Roadmap:** 3.1.2, cancer-specific care pathway descriptions [^roadmap_3.1.2].\n\n## What to measure from Monday\n- Record the date of the first symptom and of the first primary care contact for each lung cancer patient [^model].\n- Record the days from referral to the first pulmonology visit for suspected lung cancer [^model].\n- Record the days from the first specialist visit to diagnosis by hospital, and from diagnosis to treatment start for the county itself [^model].\n- Record stage at diagnosis for every lung cancer [^model].\n\n## Limits of this analysis\nThe step days are county-level estimates built from assumed priors, not measurements of individual pathways [^model]. As a check, not a validation, none of three measured outcomes correlated with the estimated clock beyond chance. The closest was the curative-intent share (rho −0.30, permutation p 0.17) [^model]. The national 155-day total was reported by Yle in 2026 from an unpublished four-city Finnish study, and two of the five step figures are residuals rather than measurements [^model]."
+}

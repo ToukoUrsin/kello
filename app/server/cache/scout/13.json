@@ -1,0 +1,524 @@
+{
+ "area_id": "13",
+ "area_name_en": "North Savo wellbeing services county",
+ "area_name_fi": "Pohjois-Savon hyvinvointialue",
+ "question": "What is North Savo wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-11-02",
+   "what_en": "KYS became the first hospital in Finland to use adaptive radiotherapy, which updates the treatment plan from a CBCT scan just before each session. The first patient was treated in late October 2026; that patient has prostate cancer, not lung cancer.",
+   "what_fi": "KYS otti ensimmäisenä Suomessa käyttöön adaptiivisen sädehoidon, jossa hoitosuunnitelma päivitetään ennen hoitokertaa; ensimmäinen potilas hoidettiin lokakuun 2026 lopussa.",
+   "quote": "Kuopion yliopistollinen sairaala on ottanut ensimmäisenä Suomessa käyttöön uudenlaisen sädehoidon.",
+   "url": "https://www.savonsanomat.fi/paikalliset/9920565",
+   "title": "KYS: Uusi syöpähoito",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:36:22+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026",
+   "what_en": "From spring 2026 the KYS Cancer Centre's patient panel starts a new term with the North Savo Cancer Society, to develop care at all stages of the care pathway.",
+   "what_fi": "KYS syövänhoitokeskuksen asiakasraati aloittaa uuden toimintakauden keväällä 2026 Pohjois-Savon syöpäyhdistyksen kanssa.",
+   "quote": "KYS syövänhoitokeskuksen asiakasraati aloittaa uuden toimintakautensa yhteistyössä Pohjois-Savon syöpäyhdistyksen kanssa keväällä 2026.",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+   "title": "Kansallinen syöpästrategiatyö käynnistyy",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:53+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025",
+   "what_en": "The KYS Cancer Centre's 2025 annual report describes its work on developing multidisciplinary treatment-planning meetings and the Syöpätietopöytä (cancer data dashboard) project.",
+   "what_fi": "KYS Syövänhoitokeskuksen vuosikertomus 2025 kertoo moniammatillisten hoidonsuunnittelukokousten kehittämisestä ja Syöpätietopöytä-hankkeesta.",
+   "quote": "Syövänhoitokeskuksen vuosikertomuksesta pääset lukemaan poimintoja toiminnasta vuonna 2025 – mm. Syöpätietopöytä-hankkeesta, moniammatillisten hoidonsuunnittelukokousten kehittämisestä",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+   "title": "Kansallinen syöpästrategiatyö käynnistyy",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:53+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2021-10-22",
+   "what_en": "At KYS a multidisciplinary lung cancer meeting meets weekly. Every lung cancer patient is discussed there at least once, and the treatment decision is recorded.",
+   "what_fi": "KYS:n moniammatillinen keuhkosyöpämeeting kokoontuu viikoittain ja jokainen potilas käsitellään vähintään kerran.",
+   "quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä. Jokaisen keuhkosyöpäpotilaan tilanne käsitellään ainakin kertaalleen kokouksessa, jossa tehdään hoitopäätös.",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "KYS and the county have published a lung cancer care pathway (version 1.2). Cancer pathway work began as a lung cancer pilot developed with MSD.",
+   "what_fi": "KYS/PSHVA:lla on keuhkosyöpäpotilaan hoitoketju (versio 1.2); työ alkoi keuhkosyöpäpilotilla MSD:n kanssa.",
+   "quote": "Syöpätautien hoitoketjutyöskentely käynnistyi ponnekkaasti keuhkosyöpä pilotilla, jota työstettiin yhteistyössä eri erikoisalojen sekä MSD:n kanssa.",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+   "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo",
+   "relates_to": "cpp_pathway",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:54+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "North Savo/KYS already has a lung cancer care pathway (version 1.2, 2024) with a weekly multidisciplinary meeting that reviews every patient. In 2025 it worked on improving those meetings and on a cancer data dashboard, and in late October 2026 KYS started adaptive radiotherapy, a first in Finland (the first patient has prostate cancer, not lung cancer). I found no lung-cancer-specific investment decision, waiting-time figures, screening pilot, nurse navigator or reflex molecular testing.",
+ "not_found_en": "I found no lung-cancer-specific decision by the regional board or council (aluehallitus/aluevaltuusto), no investment or project, and no published waiting-time or quality figures for North Savo.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 4176
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon hyvinvointialue keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: pshyvinvointialue.fi, suomi.fi",
+   "ms": 1773,
+   "results": [
+    {
+     "url": "https://pshyvinvointialue.fi/",
+     "title": "Pohjois-Savon hyvinvointialue - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-palvelut-pohjois-savon-hyvinvointialue/16a8dd89-7ba6-43a5-b3f1-400d9d7258ad",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-poliklinikka-pohjois-savon-hyvinvointialue/482912ea-a372-40b4-b315-206c947c9e5e",
+     "title": "Keuhkosairauksien poliklinikka - Pohjois-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-pohjois-savon-hyvinvointialue/73b55781-80d5-4211-93f2-c3143cfb5a36",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savon hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hus.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitopalvelut",
+     "title": "Hoitopalvelut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku - HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon aluehallitus syöpä investointi sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: pshyvinvointialue.fi",
+   "ms": 2260,
+   "results": [
+    {
+     "url": "https://pshyvinvointialue.fi/aluehallitus",
+     "title": "Aluehallitus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/sadehoito",
+     "title": "Sädehoito - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/fi/w/aluehallitus-k%C3%A4sittelee-investointisuunnitelmia",
+     "title": "Aluehallitus käsittelee investointisuunnitelmia - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/fi/w/aluehallitus-k%C3%A4sitteli-hyvinvointialueen-strategiaa-ja-investointisuunnitelmaa",
+     "title": "Aluehallitus käsitteli hyvinvointialueen strategiaa ja investointisuunnitelmaa - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpä 2025 uutinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, mtvuutiset.fi",
+   "ms": 2850,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/tupakoimattomien-keuhkosyovat-lisaantyneet-taustalla-erityisesti-yksi-syy/9130500",
+     "title": "Tupakoimattomien keuhkosyöpien taustalla ilmansaasteet | MTV Uutiset"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/kys-sy%C3%B6v%C3%A4nhoitokeskuksen-vuosikertomus-2025",
+     "title": "KYS Syövänhoitokeskuksen vuosikertomus 2025"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/ajankohtaiset",
+     "title": "Ajankohtaiset - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/kys-kuopion-yliopistollinen-sairaala",
+     "title": "KYS Kuopion yliopistollinen sairaala - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.2,
+   "result_en": "3 reads: pathway details; pathway pilot; strategy",
+   "ms": 5358
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "kokous, viive, vuorokautta, molekyylipatologia, bronkoskopia, tupakointi",
+   "why": "pathway details",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 6 of 29 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+   "focus": "keuhkosyöpä pilotti hoitoketju",
+   "why": "pathway pilot",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo\" · 1 373 chars",
+   "ms": 3668,
+   "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo",
+   "chars": 1373,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+   "focus": "syöpästrategia 2025",
+   "why": "strategy",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Kansallinen syöpästrategiatyö käynnistyy\" · 17 304 chars · 7 of 26 passages kept",
+   "ms": 2544,
+   "title": "Kansallinen syöpästrategiatyö käynnistyy",
+   "chars": 17304,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.3,
+   "result_en": "draft answer, still open: all 5 findings come from one site (syovanhoitokeskus.pshyvinvointialue.fi), so they describe the service as it is, not what is changing. Search for a decision, a project, an investment, a waiting-time figure or dated local news (aluehallitus, hanke, investointi, uutinen, th",
+   "ms": 16655
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 32.9,
+   "result_en": "2 searches: waiting times/decisions; local news",
+   "ms": 3296
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon hyvinvointialue syöpähoito hoitoonpääsy 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "waiting times/decisions",
+   "status": "done",
+   "t_s": 36.2,
+   "result_en": "6 results: pshyvinvointialue.fi, syovanhoitokeskus.pshyvinvointialue.fi, suomi.fi",
+   "ms": 2811,
+   "results": [
+    {
+     "url": "https://pshyvinvointialue.fi/",
+     "title": "Pohjois-Savon hyvinvointialue - Pohjois-Savo"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/ajanvaraukset",
+     "title": "Ajanvaraukset - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-pohjois-savon-hyvinvointialue/73b55781-80d5-4211-93f2-c3143cfb5a36",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/sy%C3%B6p%C3%A4hoidot",
+     "title": "Syöpähoidot - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Savon Sanomat KYS keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 36.2,
+   "result_en": "6 results: savonsanomat.fi, pshyvinvointialue.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 3094,
+   "results": [
+    {
+     "url": "https://www.savonsanomat.fi/paikalliset/9920565",
+     "title": "KYS: Uusi syöpähoito | Savo | Savon Sanomat"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.savonsanomat.fi/aihe/Sy%C3%B6p%C3%A4hoidot",
+     "title": "Syöpähoidot | Savon Sanomat"
+    },
+    {
+     "url": "https://www.savonsanomat.fi/aihe/Kuopion_yliopistollinen_sairaala_KYS_",
+     "title": "Kuopion yliopistollinen sairaala (KYS) | Savon Sanomat"
+    },
+    {
+     "url": "https://www.savonsanomat.fi/paakirjoitus-mielipide/9933583",
+     "title": "Mielipide | Liikkuva sairaalan potilas: \"Sain sairastaa ja toipua omassa kodissani, omassa sängyssäni\" | Pääkirjoitus & mielipide | Savon Sanomat"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 39.3,
+   "result_en": "1 read: new radiotherapy method news",
+   "ms": 2776
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.savonsanomat.fi/paikalliset/9920565",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.savonsanomat.fi/paikalliset/9920565",
+   "focus": "sädehoito uusi menetelmä KYS",
+   "why": "new radiotherapy method news",
+   "status": "done",
+   "t_s": 42.1,
+   "result_en": "\"KYS: Uusi syöpähoito\" · 2 449 chars",
+   "ms": 1933,
+   "title": "KYS: Uusi syöpähoito",
+   "chars": 2449,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.savonsanomat.fi/paikalliset/9920565",
+   "published": "2026-11-02T16:30:00+02:00",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 44.0,
+   "result_en": "writes the answer",
+   "ms": 15474
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00"
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+   "title": "Kansallinen syöpästrategiatyö käynnistyy",
+   "chars": 17304,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:53+00:00"
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+   "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo",
+   "chars": 1373,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:54+00:00"
+  },
+  {
+   "url": "https://www.savonsanomat.fi/paikalliset/9920565",
+   "title": "KYS: Uusi syöpähoito",
+   "chars": 2449,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:36:22+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:36:38+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 59.5
+}

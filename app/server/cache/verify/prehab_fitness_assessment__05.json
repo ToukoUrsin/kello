@@ -1,0 +1,553 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Fitness assessment and prehabilitation before deciding against curative treatment. Before a stage I-III patient is judged too frail, they get an exercise test, a geriatric assessment if over 75, and four weeks of supervised exercise, breathing training and help to stop smoking. Then the decision is made again.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A Cochrane review (2022, 10 RCTs, 636 participants) found preoperative exercise cut postoperative lung complications (RR 0.45), but did not measure how many more patients became eligible for curative treatment.",
+ "supported_en": "Cochrane (Granger & Cavalheri, 2022) found preoperative exercise training lowers the risk of postoperative lung complications (RR 0.45) and shortens hospital stay by about 2.2 days.",
+ "not_supported_en": "No page measures how many more patients get curative-intent treatment after prehabilitation, so the assumed 0.5 percentage points (range 0–1.5) is untested.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "Tyks's lung cancer pathway page says fitness affects whether surgery is possible, but no Tyks or Varha page read mentions prehabilitation, a geriatric assessment for lung cancer patients, or reassessment before curative treatment is ruled out.",
+ "missing_en": "",
+ "summary_en": "The Tyks lung cancer pathway page says fitness and lung function decide whether surgery is possible, and that surgery is possible in about 20–25% of cases. No page read shows an exercise test, geriatric assessment or prehabilitation at Tyks or Varha. A similar preoperative model has been described only for Pirkanmaa and the Tays area. A 2022 Cochrane review found exercise before lung surgery cuts lung complications (RR 0.45), but it does not show that more patients become eligible for curative treatment.",
+ "unanswered_en": "I found no Varha or Tyks page on prehabilitation or geriatric assessment for lung cancer, and no study measuring the rise in curative-intent treatment.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Soveltuvuutesi keuhkosyövän leikkaushoitoon selviää kasvaimen mikroskooppisen tyypin, levinneisyyden ja yleiskuntosi perusteella.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Leikkaushoito on mahdollinen noin 20–25 % keuhkosyöpätapauksista.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "quote": "Preoperative exercise training results in a large reduction in the risk of developing a postoperative pulmonary complication compared to no preoperative exercise training (risk ratio (RR) 0.45, 95% CI 0.33 to 0.61",
+   "about": "effect",
+   "published": "2022-09-28",
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+   "title": "Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - Fysioterapia & kuntoutus",
+   "quote": "Tehdyn kehittämistyön tavoitteena oli kehittää ja yhtenäistää keuhkoleikkauksiin tulevien potilaiden toimintakyvyn arviointia ja fysioterapeuttista ohjausta Pirkanmaan hyvinvointialueella ja TAYSn erityisvastuualueella.",
+   "about": "context",
+   "published": "2024-09-27T05:20:45+00:00",
+   "fetched_at": "2026-11-14T01:08:56+00:00",
+   "from_cache": false
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, tyks.fi, suomi.fi",
+   "ms": 1760,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/verkkoasiointi/tyks-syopapotilaan-digihoitopolku-varsinais-suomen-hyvinvointialue/3655f8ca-09c4-484d-9b06-bc94862c2d17",
+     "title": "Tyks Syöpäpotilaan digihoitopolku - Varsinais-Suomen ..."
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha prehabilitaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: fican.fi, varha.fi",
+   "ms": 3057,
+   "results": [
+    {
+     "url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+     "title": "Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä ja jatkuva kuntoutuminen keskiössä – FICAN"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palveluhakemisto/paihde-ja-riippuvuussairauksien-hoito-ja-kuntoutus",
+     "title": "Päihde- ja riippuvuussairauksien hoito ja kuntoutus | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sv/serviceguide/rehabiliterande-arbetsverksamhet",
+     "title": "Rehabiliterande arbetsverksamhet | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sv/serviceguide/rehabilitering-hemma",
+     "title": "Rehabilitering hemma | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sv/servicekanaler/hemrehabilitering-abo",
+     "title": "Hemrehabilitering, Åbo | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sv/serviceguide/rehabilitering-och-bedomning-aldre",
+     "title": "Rehabilitering och bedömning för äldre | Varha"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks esikuntoutus syöpäleikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1726,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/rintasyopa",
+     "title": "Rintasyöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syopapotilaan-hyvinvointi-kuntoutuminen-ja-tukipalvelut",
+     "title": "Syöpäpotilaan hyvinvointi, kuntoutuminen ja tukipalvelut | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/tyks-syopakeskus",
+     "title": "Tyks Syöpäkeskus | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/tulosryhmat/tyks-operatiivinen-toiminta-ja-syopataudit",
+     "title": "Tyks Syöpäklinikka ja Pääkeskus | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/syopapotilaiden-hoitoonpaasy-tyksissa",
+     "title": "Syöpäpotilaiden hoitoonpääsy Tyksissä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen leikkausta edeltävä kuntoutus keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: keuhkosyopa.fi, tyks.fi, kaypahoito.fi, sydansairaala.fi",
+   "ms": 1925,
+   "results": [
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/leikkaushoito/",
+     "title": "Leikkaushoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/xmedia/hoi/hoi50066.pdf",
+     "title": "1 Leikkausta edeltävä arviointi 2769 Vastuun rajaus"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: Tyks lung cancer pathway prehab; B: FICAN prehab project location; A: effect size",
+   "ms": 5386
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "kuntoutus leikkaus toimintakyky tupakointi fysioterapeutti",
+   "why": "B: Tyks lung cancer pathway prehab",
+   "status": "done",
+   "t_s": 8.4,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 7,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "focus": "Tyks Varsinais-Suomi prehabilitaatio keuhkosyöpä",
+   "why": "B: FICAN prehab project location",
+   "status": "done",
+   "t_s": 8.4,
+   "result_en": "\"Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä \" · 6 162 chars · 6 of 10 passages kept · from cache",
+   "ms": 2,
+   "title": "Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä ja jatkuva kuntoutuminen keskiössä – FICAN",
+   "chars": 6162,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/36170564",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/36170564",
+   "focus": "pulmonary complications risk ratio",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.4,
+   "result_en": "\"Preoperative exercise training for people with non-small cell lung can\" · 4 109 chars · from cache",
+   "ms": 11,
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/36170564",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.5,
+   "result_en": "1 search: B: preop exercise at Tyks thoracic surgery",
+   "ms": 3659
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkoleikkaus fysioterapia ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: preop exercise at Tyks thoracic surgery",
+   "status": "done",
+   "t_s": 12.1,
+   "result_en": "6 results: sydansairaala.fi, tyks.fi, fysioterapiamessut.expomark.fi, fysiokipina.fi",
+   "ms": 2525,
+   "results": [
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/keuhkoleikkauspotilaan-fysioterapia/",
+     "title": "Keuhkoleikkauspotilaan fysioterapia - Sydänsairaala"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/fysioterapia",
+     "title": "Fysioterapia | Tyks"
+    },
+    {
+     "url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+     "title": "Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - Fysioterapia & kuntoutus"
+    },
+    {
+     "url": "https://fysiokipina.fi/fysioterapiapalvelut/pre-ja-postoperatiivinen-kuntoutus/ennen-leikkausta/",
+     "title": "Ennen leikkausta - Fysiokipinä"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/leikkaukseen/ennen-leikkausta",
+     "title": "Ennen leikkausta - Terveyskylä.fi"
+    },
+    {
+     "url": "https://www.aava.fi/palvelut/fysioterapia/pre-ja-postoperatiivinen-fysioterapia/",
+     "title": "Pre- ja postoperatiivinen fysioterapia | Lääkärikeskus Aava"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.6,
+   "result_en": "1 read: B: which hospital runs preop assessment",
+   "ms": 3510
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+   "focus": "Tyks Turku sairaala toimintakykyarvio fysioterapeutti",
+   "why": "B: which hospital runs preop assessment",
+   "status": "done",
+   "t_s": 18.2,
+   "result_en": "\"Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - Fysioterapia\" · 3 270 chars",
+   "ms": 2344,
+   "title": "Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - Fysioterapia & kuntoutus",
+   "chars": 3270,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+   "published": "2024-09-27T05:20:45+00:00",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 20.5,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Varha / Tyks / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 13017
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 33.5,
+   "result_en": "1 search: B: Tyks geriatric assessment or prehab",
+   "ms": 2345
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks geriatrinen arvio syöpäpotilas prehabilitaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: Tyks geriatric assessment or prehab",
+   "status": "done",
+   "t_s": 35.9,
+   "result_en": "6 results: tyks.fi, potilaanlaakarilehti.fi, kaikkisyovasta.fi, oamkjournal.oamk.fi",
+   "ms": 1694,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-mantymaen-sairaala/geriatrinen-paivystysosasto",
+     "title": "Geriatrinen päivystysosasto | Tyks"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/iakkaiden-syopapotilaiden-kokonaisvaltainen-geriatrinen-arvio-kannattaa/",
+     "title": "Iäkkäiden syöpäpotilaiden kokonaisvaltainen geriatrinen arvio kannattaa - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/geriatrinen-arvio-turvaa-ikaihmiselle-sopivaa-syopahoitoa/",
+     "title": "Geriatrinen arvio turvaa ikäihmiselle sopivaa syöpähoitoa - Kaikki syövästä"
+    },
+    {
+     "url": "https://oamkjournal.oamk.fi/2024/geriatrinen-arviointi-osaksi-syopahoitojen-suunnittelua/",
+     "title": "Geriatrinen arviointi osaksi syöpähoitojen suunnittelua – Oamk Journal"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/tieteessa/alkuperaistutkimukset/geriatriset-oireyhtymat-ovat-yleisia-iakkailla-syopapotilailla/",
+     "title": "Geriatriset oireyhtymät ovat yleisiä iäkkäillä syöpäpotilailla - Lääkärilehti"
+    },
+    {
+     "url": "https://tays-cancer-centre.fi/iakkaat-syopapotilaat-hyotyvat-hoitopaatosten-tueksi-tehtavasta-kokonaisvaltaisesta-geriatrisonkologisesta-arvioinnista/",
+     "title": "Iäkkäät syöpäpotilaat hyötyvät hoitopäätösten tueksi tehtävästä kokonaisvaltaisesta geriatrisonkologisesta arvioinnista – TAYS Syöpäkeskus"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 37.6,
+   "result_en": "writes the answer",
+   "ms": 12271
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "title": "Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä ja jatkuva kuntoutuminen keskiössä – FICAN",
+   "chars": 6162,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:51:08+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+   "title": "Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - Fysioterapia & kuntoutus",
+   "chars": 3270,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:56+00:00",
+   "published": "2024-09-27T05:20:45+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:09:25+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because no Tyks or Varha page shows prehabilitation or a structured fitness reassessment for lung cancer patients judged too frail. The size of the gain in curative treatment is still an assumption.",
+ "seconds": 49.8,
+ "searched_en": "Searched 6 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha prehabilitaatio\"; \"Tyks esikuntoutus syöpäleikkaus\"; \"Varsinais-Suomen leikkausta edeltävä kuntoutus keuhkosyöpä\", ...) and read 4 pages on tyks.fi, fican.fi, europepmc.org, fysioterapiamessut.expomark.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha prehabilitaatio",
+  "Tyks esikuntoutus syöpäleikkaus",
+  "Varsinais-Suomen leikkausta edeltävä kuntoutus keuhkosyöpä",
+  "Tyks keuhkoleikkaus fysioterapia ennen leikkausta",
+  "Tyks geriatrinen arvio syöpäpotilas prehabilitaatio"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because no Tyks or Varha page shows prehabilitation or a structured fitness reassessment for lung cancer patients judged too frail. The size of the gain in curative treatment is still an assumption.",
+ "verdict_en": "No public sign that it is running in Southwest Finland. Evidence supports that it works, but not the size of effect we assume. Supported: Cochrane (Granger & Cavalheri, 2022) found preoperative exercise training lowers the risk of postoperative lung complications (RR 0.45) and shortens hospital stay by about 2.2 days. Not supported: No page measures how many more patients get curative-intent treatment after prehabilitation, so the assumed 0.5 percentage points (range 0–1.5) is untested.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "prehab_fitness_assessment",
+ "intervention_name_en": "Fitness assessment and prehabilitation before deciding against curative treatment",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

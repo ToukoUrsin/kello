@@ -1,0 +1,500 @@
+{
+ "area_id": "04",
+ "area_name_en": "Vantaa and Kerava wellbeing services county",
+ "area_name_fi": "Vantaan ja Keravan hyvinvointialue",
+ "question": "What is Vantaa and Kerava wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-06-15",
+   "what_en": "HUS has a published lung cancer pathway: when lung cancer is suspected, the doctor refers the patient to the HUS pulmonary clinic.",
+   "what_fi": "HUSilla on julkaistu keuhkosyövän hoitopolku, jossa keuhkosyöpäepäilystä tehdään lähete HUSin keuhkosairauksien vastaanotolle.",
+   "quote": "Jos epäillään keuhkosyöpää, lääkäri tekee lähetteen HUSin keuhkosairauksien vastaanotolle.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "cpp_pathway",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "When needed, a HUS multidisciplinary lung cancer team of specialists assesses the case and gives a treatment recommendation.",
+   "what_fi": "HUSin moniammatillinen keuhkosyöpätyöryhmä arvioi tarvittaessa tilanteen ja antaa hoitosuosituksen.",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "mdt",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "In the HUS pathway, some patients who cannot have surgery are offered high-dose stereotactic radiotherapy instead.",
+   "what_fi": "HUSin hoitopolussa osa leikkaukseen soveltumattomista potilaista hoidetaan täsmäsädehoidolla.",
+   "quote": "Jos leikkaus ole mahdollinen, hoitomuoto voi olla korkea-annoksinen niin sanottu täsmäsädehoito osassa tapauksia.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "sbrt_pathway",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025-01-22",
+   "what_en": "The HUS Cancer Center is taking part in the Nordic VALO pilot, which compares the quality of care for metastatic non-small cell lung cancer using hospital data.",
+   "what_fi": "HUSin Syöpäkeskus osallistuu pohjoismaiseen VALO-pilottiin, jossa verrataan metastaattisen ei-pienisoluisen keuhkosyövän hoidon laatua.",
+   "quote": "HUSin Syöpäkeskus ja Tietohallinto ovat mukana Pohjoismaiden yhteisessä VALO-pilotissa.",
+   "url": "https://www.hus.fi/ajankohtaista/hus-mukana-uudessa-pohjoismaisessa-pilottitutkimuksessa-terveystietokaytantojen-ja",
+   "title": "HUS on mukana uudessa pohjoismaisessa pilottitutkimuksessa terveystietokäytäntöjen ja potilashoidon parantamiseksi",
+   "relates_to": null,
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:32:23+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2024-03-04",
+   "what_en": "On 4 March 2024, a member of the Vantaa and Kerava regional council filed an initiative asking that cancer screenings also be carried out at sites in Vantaa and Kerava.",
+   "what_fi": "Vantaan ja Keravan aluevaltuustossa tehtiin 4.3.2024 aloite syöpäseulontojen järjestämisestä myös Vantaan ja Keravan toimipisteissä.",
+   "quote": "Vaula Norrenan valtuustoaloite \"Syöpäseulonnat on toteutettava myös Vantaan/ Keravan toimipisteissä\"",
+   "url": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluevaltuusto",
+   "title": "Aluevaltuusto",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:32:38+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Lung cancer care for Vantaa and Kerava runs through HUS. HUS has a published pathway that includes a multidisciplinary team meeting and stereotactic radiotherapy, it is a site in the national low-dose CT screening pilot that started in January 2026, and it takes part in the Nordic VALO quality-data pilot. On its own site, the county shows only a 2024 council initiative on cancer screening sites in Vantaa and Kerava, plus a link to the HUS smoking-cessation self-help programme.",
+ "not_found_en": "I found no decisions, projects, investments or waiting-time figures from Vantaa and Kerava or Peijas Hospital about lung cancer diagnostics such as CT access, EBUS or nurse navigators, and no local news.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "3 searches: county site; university pathway; news/screening",
+   "ms": 3339
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "vakehyva keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county site",
+   "status": "done",
+   "t_s": 3.3,
+   "result_en": "6 results: terveyskirjasto.fi, docrates.mehilainen.fi, apollohospitals.com, terveyskyla.fi",
+   "ms": 2764,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.apollohospitals.com/fi/diseases-and-conditions/lung-cancer",
+     "title": "Keuhkosyöpä - oireet, syyt, riskitekijät, diagnoosi ja hoito"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.iltalehti.fi/syopa/a/a2a6aa6e-40a5-4fa5-9cd0-a3f54c65ad1d",
+     "title": "Syötkö näitä? Saatat altistaa itsesi Suomen tappavimmalle syövälle"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä hoitopolku hoitoonpääsy",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "university pathway",
+   "status": "done",
+   "t_s": 3.3,
+   "result_en": "6 results: hus.fi, potilaanlaakarilehti.fi",
+   "ms": 2469,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+     "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä seulonta pilotti 2025",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news/screening",
+   "status": "done",
+   "t_s": 3.3,
+   "result_en": "6 results: syopajarjestot.fi, yle.fi, seura.fi, hus.fi",
+   "ms": 1985,
+   "results": [
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://yle.fi/a/74-20205604",
+     "title": "Suomessa alkaa laaja pilotti, jossa seulotaan keuhkosyöpää | Kotimaa | Yle"
+    },
+    {
+     "url": "https://seura.fi/asiat/ajankohtaista/keuhkosyopa-voi-kuulua-kansalliseen-seulontaohjelmaan/",
+     "title": "Keuhkosyöpä on yleisin syöpäkuolemien aiheuttaja – Seulontapilotti tukee ensikerran suomalaisia riskiryhmäläisiä, tulokset maailmalta rohkaisevia"
+    },
+    {
+     "url": "https://www.hus.fi/ajankohtaista/hus-mukana-uudessa-pohjoismaisessa-pilottitutkimuksessa-terveystietokaytantojen-ja",
+     "title": "HUS on mukana uudessa pohjoismaisessa pilottitutkimuksessa terveystietokäytäntöjen ja potilashoidon parantamiseksi | HUS"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/pitkaan-tupakoineita-etsitaan-keuhkosyovan-seulontapilottiin/",
+     "title": "Pitkään tupakoineita etsitään keuhkosyövän seulontapilottiin - Lääkärilehti"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/71749366/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita?publisherId=69820264&lang=fi",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.1,
+   "result_en": "3 reads: HUS pathway; screening pilot; HUS data",
+   "ms": 5323
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous, bronkoskopia, molekyyli, sädehoito, leikkaus",
+   "why": "HUS pathway",
+   "status": "done",
+   "t_s": 11.4,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 9,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "focus": "HUS Uusimaa sairaala",
+   "why": "screening pilot",
+   "status": "done",
+   "t_s": 11.4,
+   "result_en": "\"Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupa\" · 4 547 chars · 7 of 8 passages kept",
+   "ms": 3080,
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "chars": 4547,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "published": "2026-01-21T07:57:26+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/ajankohtaista/hus-mukana-uudessa-pohjoismaisessa-pilottitutkimuksessa-terveystietokaytantojen-ja",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/ajankohtaista/hus-mukana-uudessa-pohjoismaisessa-pilottitutkimuksessa-terveystietokaytantojen-ja",
+   "focus": "keuhkosyöpä pilotti",
+   "why": "HUS data",
+   "status": "done",
+   "t_s": 11.4,
+   "result_en": "\"HUS on mukana uudessa pohjoismaisessa pilottitutkimuksessa terveystiet\" · 3 139 chars",
+   "ms": 4458,
+   "title": "HUS on mukana uudessa pohjoismaisessa pilottitutkimuksessa terveystietokäytäntöjen ja potilashoidon parantamiseksi",
+   "chars": 3139,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/ajankohtaista/hus-mukana-uudessa-pohjoismaisessa-pilottitutkimuksessa-terveystietokaytantojen-ja",
+   "published": "22.1.2025",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.9,
+   "result_en": "2 searches: county decisions; county smoking cessation",
+   "ms": 3893
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Vantaan ja Keravan hyvinvointialue syöpä aluehallitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county decisions",
+   "status": "done",
+   "t_s": 19.8,
+   "result_en": "6 results: vakehyva.fi, vakehyva.cloudnc.fi",
+   "ms": 2121,
+   "results": [
+    {
+     "url": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluehallitus",
+     "title": "Aluehallitus"
+    },
+    {
+     "url": "https://vakehyva.cloudnc.fi/fi-fi/toimielimet/Aluehallitus",
+     "title": "Aluehallitus | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluevaltuusto",
+     "title": "Aluevaltuusto | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluehallitus",
+     "title": "Aluehallitus | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://vakehyva.cloudnc.fi/fi-FI/Toimielimet/Aluehallitus",
+     "title": "Aluehallitus - Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Vantaan_ja_Keravan_hyvinvointialue",
+     "title": "Vantaan ja Keravan hyvinvointialue – Wikipedia"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "vakehyva.fi tupakasta vieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county smoking cessation",
+   "status": "done",
+   "t_s": 19.8,
+   "result_en": "6 results: kaypahoito.fi, vakehyva.fi, terveyskirjasto.fi",
+   "ms": 2285,
+   "results": [
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.vakehyva.fi/fi/palveluhakemisto/palvelu/vieroitushoitopalvelut",
+     "title": "Vieroitushoitopalvelut | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.vakehyva.fi/fi/hyvinvointitarjotin/irti-tupakasta-ja-nikotiinista-itsehoito-ohjelma",
+     "title": "Irti tupakasta ja nikotiinista -itsehoito-ohjelma"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/khp00042",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk01067",
+     "title": "Tupakoinnin lopettaminen - reseptilääkkeet - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.1,
+   "result_en": "2 reads: county initiative on screening; county smoking cessation",
+   "ms": 6282
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluevaltuusto",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluevaltuusto",
+   "focus": "Syöpäseulonnat valtuustoaloite",
+   "why": "county initiative on screening",
+   "status": "done",
+   "t_s": 28.4,
+   "result_en": "\"Aluevaltuusto\" · 25 313 chars · 5 of 34 passages kept",
+   "ms": 2398,
+   "title": "Aluevaltuusto",
+   "chars": 25313,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluevaltuusto",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.vakehyva.fi/fi/hyvinvointitarjotin/irti-tupakasta-ja-nikotiinista-itsehoito-ohjelma",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.vakehyva.fi/fi/hyvinvointitarjotin/irti-tupakasta-ja-nikotiinista-itsehoito-ohjelma",
+   "focus": "tupakoinnin lopettaminen ohjelma",
+   "why": "county smoking cessation",
+   "status": "done",
+   "t_s": 28.4,
+   "result_en": "\"Irti tupakasta ja nikotiinista -itsehoito-ohjelma\" · 1 030 chars · from cache",
+   "ms": 1,
+   "title": "Irti tupakasta ja nikotiinista -itsehoito-ohjelma",
+   "chars": 1030,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.vakehyva.fi/fi/hyvinvointitarjotin/irti-tupakasta-ja-nikotiinista-itsehoito-ohjelma",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.8,
+   "result_en": "writes the answer",
+   "ms": 18117
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00"
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "chars": 4547,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:32:22+00:00"
+  },
+  {
+   "url": "https://www.hus.fi/ajankohtaista/hus-mukana-uudessa-pohjoismaisessa-pilottitutkimuksessa-terveystietokaytantojen-ja",
+   "title": "HUS on mukana uudessa pohjoismaisessa pilottitutkimuksessa terveystietokäytäntöjen ja potilashoidon parantamiseksi",
+   "chars": 3139,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:32:23+00:00"
+  },
+  {
+   "url": "https://www.vakehyva.fi/fi/hyvinvointitarjotin/irti-tupakasta-ja-nikotiinista-itsehoito-ohjelma",
+   "title": "Irti tupakasta ja nikotiinista -itsehoito-ohjelma",
+   "chars": 1030,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:13:13+00:00"
+  },
+  {
+   "url": "https://www.vakehyva.fi/fi/tietoa-meista/paatoksenteko-ja-organisaatio/aluevaltuusto",
+   "title": "Aluevaltuusto",
+   "chars": 25313,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:32:38+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:32:56+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 1
+ },
+ "seconds": 48.9
+}

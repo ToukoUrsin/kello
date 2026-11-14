@@ -1,0 +1,544 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Vantaa and Kerava wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Our model assumes no direct effect on patients for this measure. Instead: does a source you read document the problem it fixes?\nMeasure: Audit of treatment records (\"no treatment on record\"). Take 50 patients with no treatment on record and check the charts: were they untreated, or was drug treatment or radiotherapy given and not coded? Fix the coding. It treats no extra patient, but until it is done the county cannot tell a care gap from a recording gap.",
+ "area_id": "04",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "The Cancer Registry's lung cancer report documents recording gaps: stage at diagnosis was missing for 48 % of patients, and team-meeting records were found only now and then outside one region; no page reports a direct patient effect, which matches the model's zero.",
+ "supported_en": "The Cancer Registry's lung cancer report (2019–2023 cases) finds stage at diagnosis missing for 48 % of patients, so the registry data on these patients has gaps.",
+ "not_supported_en": "I found no figure for this county's share of patients with no treatment on record, and no measured gain from fixing the coding.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that VAKE or HUS checks charts of patients with no treatment on record; a search of VAKE's site found nothing on this, and HUS's Cancer Centre gives all external radiotherapy in Uusimaa.",
+ "missing_en": "",
+ "summary_en": "No public sign was found that Vantaa and Kerava or HUS checks the charts of lung cancer patients with no treatment on record; HUS's Cancer Centre gives all radiotherapy in Uusimaa. The Cancer Registry's lung cancer report shows that records are incomplete: stage at diagnosis was missing for 48 % of patients, and team-meeting records were found only now and then outside one region. The model assumes no direct patient effect, and no page I read measures one.",
+ "unanswered_en": "I found no HUS or VAKE page on checking cancer treatment records and no county figure for patients with no treatment on record; I did not open the HUS lung cancer pathway page.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+   "title": "Syöpäkeskus",
+   "quote": "Syöpäkeskuksen sädehoitoyksikössä vastaamme kaikesta Uudenmaan alueella annettavasta ulkoisesta sädehoidosta.",
+   "about": "context",
+   "published": "08.10.2026",
+   "fetched_at": "2026-11-14T01:01:46+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "Syövän toteamisvaiheen levinneisyystiedot puuttuivat noin puolelta potilaita (48 %).",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "MDT-kirjauksia löytyi pääsääntöisesti vain Sisä-Suomen yhteistyöalueelta (33 %:lle potilaita), muilla alueilla kirjauksia löytyi vain satunnaisesti.",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1760,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "VAKE hoitoilmoitus kirjaaminen syöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, julkari.fi, blogi.thl.fi",
+   "ms": 1213,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://julkari.fi/bitstream/handle/10024/131630/Hoitoonp%C3%A4%C3%A4syn%20seuranta%20sy%C3%B6v%C3%A4n%20hoidossa_p%C3%A4ivitys170225.pdf?isAllowed=y&sequence=6",
+     "title": "OHJAUS Hoitoonpääsyn seuranta syövän hoidossa Määrittelyt ja ohjeistus"
+    },
+    {
+     "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+     "title": "Syöpien ilmoittamisen haasteisiin vastataan - THL-blogi"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tietoa-syoparekisterista/tietosuojailmoitus/",
+     "title": "Tietosuojailmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+     "title": "Yhteistyö toi parannusta syöpärekisteri-ilmoituksiin - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.if.fi/yritysasiakkaat/ilmoita-vahingosta/henkilovahinko/sairaus-tai-tapaturma",
+     "title": "Ilmoita sairaudesta tai vapaa-ajan tapaturmasta | If"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpärekisteri hoitotietojen ilmoittaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi",
+   "ms": 2039,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tiedonkeruu/",
+     "title": "Tiedonkeruu"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tilastot/tilastokuvaus-ja-laatuselosteet/",
+     "title": "Tilastokuvaukset ja laatuselosteet - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/seulonta/seulontatietojen-ilmoittaminen/",
+     "title": "Seulontatietojen ilmoittaminen - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tilastot/kliinisten-ilmoitusten-tilasto/",
+     "title": "Kliinisten ilmoitusten tilasto - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana",
+     "title": "Oikeutesi potilaana | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Peijaksen sairaala kirjaamisen laatu syöpähoidot",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, sairaanrakaselama.blogspot.com, keskustelu.suomi24.fi",
+   "ms": 1683,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala",
+     "title": "Peijaksen sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala/toimipisteet",
+     "title": "Peijaksen sairaala - Toimipisteet"
+    },
+    {
+     "url": "http://sairaanrakaselama.blogspot.com/2014/04/kokemuksia-eri-sairaaloista.html",
+     "title": "Sairaan rakas elämä: Kokemuksia eri sairaaloista"
+    },
+    {
+     "url": "https://keskustelu.suomi24.fi/t/12064268/peijaksen-sairaalan-uskomattomat-laiminlyonnit",
+     "title": "Peijaksen Sairaalan uskomattomat laiminlyönnit | Suomi24"
+    },
+    {
+     "url": "https://vakehyva.fi/fi/ohjeita-ja-infoa",
+     "title": "Ohjeita ja infoa sairaalapalveluista | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/peijaksen-sairaala-hus-helsingin-yliopistollinen-sairaala/1b6a51b9-cbe9-444c-b479-636c15cb2f62",
+     "title": "Peijaksen sairaala - HUS Helsingin yliopistollinen sairaala - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.0,
+   "result_en": "2 reads: A: documented recording gap; B: recording improvement efforts",
+   "ms": 4285
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "focus": "kirjaamiskäytäntö hoitotieto 72,5 alueelliset erot",
+   "why": "A: documented recording gap",
+   "status": "done",
+   "t_s": 6.3,
+   "result_en": "\"keuhkosyoparaportti\" · 44 558 chars · 6 of 46 passages kept · from cache",
+   "ms": 10,
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+   "focus": "HUS Vantaa kirjaaminen ilmoitukset",
+   "why": "B: recording improvement efforts",
+   "status": "done",
+   "t_s": 6.3,
+   "result_en": "\"Yhteistyö toi parannusta syöpärekisteri-ilmoituksiin - Syöpärekisteri\" · 3 887 chars",
+   "ms": 4041,
+   "title": "Yhteistyö toi parannusta syöpärekisteri-ilmoituksiin - Syöpärekisteri",
+   "chars": 3887,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+   "published": "2025-06-26T13:18:56+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "1 search: B: HUS recording audit running?",
+   "ms": 4235
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpäkeskus kirjaamisen auditointi syöpärekisteri-ilmoitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS recording audit running?",
+   "status": "done",
+   "t_s": 14.6,
+   "result_en": "6 results: syoparekisteri.fi, hus.fi, fican.fi",
+   "ms": 2407,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+     "title": "Syöpäkeskus | HUS"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tiedonkeruu/",
+     "title": "Tiedonkeruu"
+    },
+    {
+     "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syoparekisteri/",
+     "title": "Syöpärekisteri – FICAN"
+    },
+    {
+     "url": "https://www.hus.fi/tutkimus-ja-opetus/tieteelliset-tutkimukset/syopatutkimukset",
+     "title": "Syöpätutkimukset | HUS"
+    },
+    {
+     "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+     "title": "Syöpien ilmoittamisen haasteisiin vastataan - THL-blogi"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.0,
+   "result_en": "2 reads: B/A: national recording fix context; B: context where treatment given",
+   "ms": 4007
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "focus": "hoitoilmoitus puutteet kirjaaminen HUS",
+   "why": "B/A: national recording fix context",
+   "status": "done",
+   "t_s": 21.0,
+   "result_en": "\"Syöpien ilmoittamisen haasteisiin vastataan\" · 4 283 chars · from cache",
+   "ms": 1,
+   "title": "Syöpien ilmoittamisen haasteisiin vastataan",
+   "chars": 4283,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "published": "2019-01-23T08:26:23+00:00",
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+   "focus": "sädehoito lääkehoito Uudenmaan alueella",
+   "why": "B: context where treatment given",
+   "status": "done",
+   "t_s": 21.0,
+   "result_en": "\"Syöpäkeskus\" · 8 178 chars · 13 of 23 passages kept · from cache",
+   "ms": 3,
+   "title": "Syöpäkeskus",
+   "chars": 8178,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+   "published": "08.10.2026",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 21.0,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in VAKE / Peijaksen sairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 19945
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 41.0,
+   "result_en": "1 search: B: VAKE record audit",
+   "ms": 2560
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "vakehyva.fi kirjaamisen laatu auditointi syöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: VAKE record audit",
+   "status": "done",
+   "t_s": 43.5,
+   "result_en": "6 results: vakehyva.fi, lamkpub.fi, erepo.uef.fi, theseus.fi",
+   "ms": 1689,
+   "results": [
+    {
+     "url": "https://www.vakehyva.fi/fi/tietopyynnot",
+     "title": "Tietopyynnöt | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "http://www.lamkpub.fi/2018/01/17/laatua-hoitotyon-kirjaamiseen/",
+     "title": "Laatua hoitotyön kirjaamiseen |"
+    },
+    {
+     "url": "https://erepo.uef.fi/server/api/core/bitstreams/9c8d9762-af8e-4e46-b4cd-26bc9ab0b794/content",
+     "title": "HOITOTYÖN KIRJAAMISEN LAATU"
+    },
+    {
+     "url": "https://www.theseus.fi/server/api/core/bitstreams/21fdbe1e-16a0-4aff-8676-6d576e7d91fa/content",
+     "title": "1 T E K I J Ä : Virpi Hukkanen KIRJAAMISEN AUDITOINTI KUOPION ÄITIYS-"
+    },
+    {
+     "url": "https://www.vakehyva.fi/sites/default/files/document/VALIDIA-Ryhm%C3%A4koti%20Jatko.pdf",
+     "title": "1 (20) Validia Oy Mannerheimintie 107, 00280 Helsinki www.validia.fi"
+    },
+    {
+     "url": "https://www.theseus.fi/items/eaaece16-f45f-4343-8d0c-7585540e0954",
+     "title": "Hoitotyön rakenteisen, sähköisen kirjaamisen sisäinen ..."
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 45.2,
+   "result_en": "writes the answer",
+   "ms": 10668
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+   "title": "Yhteistyö toi parannusta syöpärekisteri-ilmoituksiin - Syöpärekisteri",
+   "chars": 3887,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:11:53+00:00",
+   "published": "2025-06-26T13:18:56+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "title": "Syöpien ilmoittamisen haasteisiin vastataan",
+   "chars": 4283,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:56:36+00:00",
+   "published": "2019-01-23T08:26:23+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+   "title": "Syöpäkeskus",
+   "chars": 8178,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:01:46+00:00",
+   "published": "08.10.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": true,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:12:38+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no HUS or VAKE page shows such a check of records running, and the Cancer Registry's own report shows that its lung cancer data has gaps.",
+ "seconds": 55.9,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"VAKE hoitoilmoitus kirjaaminen syöpä\"; \"HUS syöpärekisteri hoitotietojen ilmoittaminen\"; \"Peijaksen sairaala kirjaamisen laatu syöpähoidot\", ...) and read 4 pages on syoparekisteri.fi, blogi.thl.fi, hus.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "VAKE hoitoilmoitus kirjaaminen syöpä",
+  "HUS syöpärekisteri hoitotietojen ilmoittaminen",
+  "Peijaksen sairaala kirjaamisen laatu syöpähoidot",
+  "HUS syöpäkeskus kirjaamisen auditointi syöpärekisteri-ilmoitus",
+  "vakehyva.fi kirjaamisen laatu auditointi syöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no HUS or VAKE page shows such a check of records running, and the Cancer Registry's own report shows that its lung cancer data has gaps.",
+ "verdict_en": "No public sign that it is running in Vantaa and Kerava. The problem it fixes is documented. The Cancer Registry's lung cancer report (2019–2023 cases) finds stage at diagnosis missing for 48 % of patients, so the registry data on these patients has gaps.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Problem documented",
+ "intervention_id": "recording_audit",
+ "intervention_name_en": "Audit of treatment records (\"no treatment on record\")",
+ "area_name_en": "Vantaa and Kerava wellbeing services county"
+}

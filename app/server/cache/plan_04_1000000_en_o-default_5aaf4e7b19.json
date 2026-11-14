@@ -1,0 +1,254 @@
+{
+ "title": "Vantaa and Kerava: what to buy first with €1,000,000 a year in lung cancer care",
+ "markdown": "# Vantaa and Kerava: what to buy first with €1,000,000 a year in lung cancer care\n\n## The gap in one sentence\nNon-urgent GP visits that waited over 7 days were 85.4% in Vantaa and Kerava against 54.7% nationally in 2025, the worst of 22 counties (measured) [^sotkanet_6411]. Curative-intent treatment is not a gap: at 35.6% against 27.0% nationally (2019–2023), the county has the highest share in Finland and is above the top-quarter rate of 30.4%, so the gap arithmetic gives 0.0 patients a year [^fcr_lung_quality_report]. The model estimates 177 days (161–197) from first symptom to treatment start, the longest of 23 counties [^model].\n\n## Where the days are lost\nThe model estimates the largest excess before the first GP contact: 67 days (58–79) against 56 nationally [^model]. It associates this excess with these drivers:\n- daily smoking of 12.5% against 9.1% [^sotkanet_4404];\n- 25.4% cutting back on care for lack of money against 22.9% [^sotkanet_4263].\n\nThe model estimates 51 days (38–66) from first GP contact to referral, against 41 nationally [^model]. In the model this estimate is driven largely by the GP queue: 10.7% of visits wait over 3 months, against 1.7% nationally [^sotkanet_6410].\n\nDiagnosis to treatment start is the one measured step. It is 39.4 days against 36.9 nationally (1.1.2018–30.6.2022), and it is published for the HUS collaborative area, not for the county [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n\n## Three actions\n1. **What:** Audit 50 patients with no treatment on record and fix the coding. **Owner:** Chief physician of oncology and the head of clinical coding. **Cost:** €8,000 a year (assumption) [^model]. **Expected effect:** 0 days and 0 deaths. Its value is telling a care gap from a recording gap, since 28.9% of patients have no treatment on record against 27.5% nationally [^fcr_lung_quality_report]. **Evidence:** [^ev_recording_audit_1][^ev_recording_audit_2][^ev_recording_audit_4]. **Roadmap:** 3.2.2, peer-development processes for quality register data [^roadmap_3.2.2].\n2. **What:** Every smoker with suspected lung cancer gets cessation medicine and counselling at the first specialist visit. **Owner:** Chief physician and head nurse of pulmonology. **Cost:** €48,600 a year (assumption) [^model]. **Expected effect:** 0 days, and 0.38 deaths avoided a year (0.08–0.83), estimated [^model]. **Evidence:** observational [^ev_smoking_cessation_at_diagnosis_1][^ev_smoking_cessation_at_diagnosis_2]. **Roadmap:** 3.1.2, cancer-specific pathway descriptions and regional pathways [^roadmap_3.1.2].\n3. **What:** Report primary-care chest X-rays the same day and do CT immediately, with the referral triggered by radiology. **Owner:** Chief radiologist with the chief physician of primary care. **Cost:** €109,000 a year (assumption) [^model]. **Expected effect:** 26 days saved per patient (0–37), and 0.48 deaths avoided a year (range −0.03 to 1.9), estimated; no benefit cannot be ruled out [^model]. **Evidence:** [^ev_same_day_cxr_ct_1][^ev_same_day_cxr_ct_2]. **Roadmap:** 2.5.2, standard referral criteria for fast diagnostic tests [^roadmap_2.5.2].\n\n## What to measure from Monday\n- Date of first symptom and of first primary-care contact for every lung cancer patient [^model].\n- Days from referral to first pulmonology visit for suspected lung cancer [^model].\n- Diagnosis to treatment start for the county itself, which today is published only for the collaborative area [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n- The reason when no treatment is on record [^model].\n\n## Limits of this analysis\n- **Step days are estimates.** They are county-level estimates built from national medians and assumed, unfitted elasticities, not measurements of individual pathways [^model].\n- **The national total is reported, not measured.** It is held at 155 days, as reported by Yle in 2026 from an unpublished four-city Finnish study [^src_yle_fi_a_74_20250979].\n- **The consistency check is not validation.** None of 3 measured outcomes correlated with the estimated clock beyond chance; the curative share had rho −0.30, p 0.17 [^model].",
+ "claims": [
+  {
+   "text": "Non-urgent GP visits that waited over 7 days were 85.4% in Vantaa and Kerava against 54.7% nationally in 2025, the worst of 22 counties (measured) . Curative-intent treatment is not a gap: at 35.6% against 27.0% nationally (2019–2023), the county has the highest share in Finland and is above the top-quarter rate of 30.4%, so the gap arithmetic gives 0.0 patients a year . The model estimates 177 days (161–197) from first symptom to treatment start, the longest of 23 counties .",
+   "source_ids": [
+    "sotkanet_6411",
+    "fcr_lung_quality_report",
+    "model"
+   ]
+  },
+  {
+   "text": "The model estimates the largest excess before the first GP contact: 67 days (58–79) against 56 nationally . It associates this excess with these drivers:",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "daily smoking of 12.5% against 9.1% ;",
+   "source_ids": [
+    "sotkanet_4404"
+   ]
+  },
+  {
+   "text": "25.4% cutting back on care for lack of money against 22.9% .",
+   "source_ids": [
+    "sotkanet_4263"
+   ]
+  },
+  {
+   "text": "The model estimates 51 days (38–66) from first GP contact to referral, against 41 nationally . In the model this estimate is driven largely by the GP queue: 10.7% of visits wait over 3 months, against 1.7% nationally .",
+   "source_ids": [
+    "model",
+    "sotkanet_6410"
+   ]
+  },
+  {
+   "text": "Diagnosis to treatment start is the one measured step. It is 39.4 days against 36.9 nationally (1.1.2018–30.6.2022), and it is published for the HUS collaborative area, not for the county .",
+   "source_ids": [
+    "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28"
+   ]
+  },
+  {
+   "text": "1. **What:** Audit 50 patients with no treatment on record and fix the coding. **Owner:** Chief physician of oncology and the head of clinical coding. **Cost:** €8,000 a year (assumption) . **Expected effect:** 0 days and 0 deaths. Its value is telling a care gap from a recording gap, since 28.9% of patients have no treatment on record against 27.5% nationally . **Evidence:** . **Roadmap:** 3.2.2, peer-development processes for quality register data .",
+   "source_ids": [
+    "model",
+    "fcr_lung_quality_report",
+    "ev_recording_audit_1",
+    "ev_recording_audit_2",
+    "ev_recording_audit_4",
+    "roadmap_3.2.2"
+   ]
+  },
+  {
+   "text": "2. **What:** Every smoker with suspected lung cancer gets cessation medicine and counselling at the first specialist visit. **Owner:** Chief physician and head nurse of pulmonology. **Cost:** €48,600 a year (assumption) . **Expected effect:** 0 days, and 0.38 deaths avoided a year (0.08–0.83), estimated . **Evidence:** observational . **Roadmap:** 3.1.2, cancer-specific pathway descriptions and regional pathways .",
+   "source_ids": [
+    "model",
+    "ev_smoking_cessation_at_diagnosis_1",
+    "ev_smoking_cessation_at_diagnosis_2",
+    "roadmap_3.1.2"
+   ]
+  },
+  {
+   "text": "3. **What:** Report primary-care chest X-rays the same day and do CT immediately, with the referral triggered by radiology. **Owner:** Chief radiologist with the chief physician of primary care. **Cost:** €109,000 a year (assumption) . **Expected effect:** 26 days saved per patient (0–37), and 0.48 deaths avoided a year (range −0.03 to 1.9), estimated; no benefit cannot be ruled out . **Evidence:** . **Roadmap:** 2.5.2, standard referral criteria for fast diagnostic tests .",
+   "source_ids": [
+    "model",
+    "ev_same_day_cxr_ct_1",
+    "ev_same_day_cxr_ct_2",
+    "roadmap_2.5.2"
+   ]
+  },
+  {
+   "text": "Date of first symptom and of first primary-care contact for every lung cancer patient .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Days from referral to first pulmonology visit for suspected lung cancer .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Diagnosis to treatment start for the county itself, which today is published only for the collaborative area .",
+   "source_ids": [
+    "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28"
+   ]
+  },
+  {
+   "text": "The reason when no treatment is on record .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Step days are estimates.** They are county-level estimates built from national medians and assumed, unfitted elasticities, not measurements of individual pathways .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The national total is reported, not measured.** It is held at 155 days, as reported by Yle in 2026 from an unpublished four-city Finnish study .",
+   "source_ids": [
+    "src_yle_fi_a_74_20250979"
+   ]
+  },
+  {
+   "text": "The consistency check is not validation.** None of 3 measured outcomes correlated with the estimated clock beyond chance; the curative share had rho −0.30, p 0.17 .",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [],
+  "flagged": [
+   {
+    "sentence": "This step tracks the GP queue: 10.7% of visits wait over 3 months, against 1.7% nationally [^sotkanet_6410].",
+    "reason": "The primary-care step is a model estimate built from GP-queue indicators with assumed elasticities; 'tracks' read as an observed relationship. Rewritten to 'In the model this estimate is driven largely by the GP queue' so the estimate is not presented as measured."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "sotkanet_6411": {
+   "title": "Sotkanet indicator 6411: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6411",
+   "retrieved_at": "2026-11-13T19:58:15Z"
+  },
+  "fcr_lung_quality_report": {
+   "title": "Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet)",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z"
+  },
+  "model": {
+   "title": "Kello pathway simulation (estimated; method in Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "sotkanet_4404": {
+   "title": "Sotkanet indicator 4404: Daily smokers (%)",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4404",
+   "retrieved_at": "2026-11-13T19:58:43Z"
+  },
+  "sotkanet_4263": {
+   "title": "Sotkanet indicator 4263: Going short of food, medicines or physician visits because of lack of money (%)",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4263",
+   "retrieved_at": "2026-11-13T19:58:25Z"
+  },
+  "sotkanet_6410": {
+   "title": "Sotkanet indicator 6410: Waiting time of over 3 months since assessment of the need for treatment for a non-emergency appointment with a primary health care doctor in outpatient care, % of completed appointments",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6410",
+   "retrieved_at": "2026-11-13T19:58:17Z"
+  },
+  "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28": {
+   "title": "Keuhkosyöpä Suomessa (lung cancer in Finland, PDF report, Dec 2024), p. 28 (measured, 1.1.2018-30.6.2022; read by Gemini)",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": "2026-11-13T20:00:00Z",
+   "kind": "measured"
+  },
+  "ev_recording_audit_1": {
+   "title": "The registry itself says part of the regional differences comes from recording practice.",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "year": 2026,
+   "design": "national registry quality report, Finland 2019-2023",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_recording_audit_2": {
+   "title": "Treatment data linked to a lung cancer visit was found for 72.5 % of patients nationally.",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "year": 2026,
+   "design": "national registry quality report, Finland 2019-2023",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_recording_audit_4": {
+   "title": "Denmark: a national lung cancer registry with quarterly reports and yearly audit went together with rising resection rates and survival.",
+   "url": "https://europepmc.org/article/MED/24457234",
+   "year": 2013,
+   "design": "national clinical registry report, Denmark, 2000-2012",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_3.2.2": {
+   "title": "National cancer roadmap, measure 3.2.2: Define and start peer-development processes in which quality register data are compared and reviewed systematically",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "ev_smoking_cessation_at_diagnosis_1": {
+   "title": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "year": 2021,
+   "design": "prospective cohort, Moscow",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_smoking_cessation_at_diagnosis_2": {
+   "title": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "year": 2025,
+   "design": "retrospective five-hospital cohort, Finland",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_3.1.2": {
+   "title": "National cancer roadmap, measure 3.1.2: Write cancer-specific care pathway descriptions, regional pathways based on them, and a mechanism to maintain them",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "ev_same_day_cxr_ct_1": {
+   "title": "Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis.",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "year": 2023,
+   "design": "randomised controlled trial (radioX), single London hospital",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_same_day_cxr_ct_2": {
+   "title": "Finnish specialist care loses time waiting for imaging and reports.",
+   "url": "https://yle.fi/a/74-20242733",
+   "year": 2026,
+   "design": "journalism citing unpublished four-city study",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_2.5.2": {
+   "title": "National cancer roadmap, measure 2.5.2: Support smooth transfer to specialist care by defining standard referral criteria in the national pathways, so patients with possible cancer symptoms are sent quickly to diagnostic tests",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "src_yle_fi_a_74_20250979": {
+   "title": "Published Nordic comparison: first symptom to treatment start, lung cancer, as reported by Yle MOT (method of the Swedish and Danish figures is not described in the article)",
+   "publisher": null,
+   "url": "https://yle.fi/a/74-20250979",
+   "verified": true
+  }
+ },
+ "area_id": "04",
+ "budget_eur": 1000000.0,
+ "lang": "en",
+ "generated_at": "2026-11-13T23:44:52+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "# Vantaa and Kerava: what to buy first with €1,000,000 a year in lung cancer care\n\n## The gap in one sentence\nNon-urgent GP visits that waited over 7 days were 85.4% in Vantaa and Kerava against 54.7% nationally in 2025, the worst of 22 counties (measured) [^sotkanet_6411]. Curative-intent treatment is not a gap: at 35.6% against 27.0% nationally (2019–2023), the county has the highest share in Finland and is above the top-quarter rate of 30.4%, so the gap arithmetic gives 0.0 patients a year [^fcr_lung_quality_report]. The model estimates 177 days (161–197) from first symptom to treatment start, the longest of 23 counties [^model].\n\n## Where the days are lost\nThe model estimates the largest excess before the first GP contact: 67 days (58–79) against 56 nationally [^model]. It associates this excess with these drivers:\n- daily smoking of 12.5% against 9.1% [^sotkanet_4404];\n- 25.4% cutting back on care for lack of money against 22.9% [^sotkanet_4263].\n\nThe model estimates 51 days (38–66) from first GP contact to referral, against 41 nationally [^model]. This step tracks the GP queue: 10.7% of visits wait over 3 months, against 1.7% nationally [^sotkanet_6410].\n\nDiagnosis to treatment start is the one measured step. It is 39.4 days against 36.9 nationally (1.1.2018–30.6.2022), and it is published for the HUS collaborative area, not for the county [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n\n## Three actions\n1. **What:** Audit 50 patients with no treatment on record and fix the coding. **Owner:** Chief physician of oncology and the head of clinical coding. **Cost:** €8,000 a year (assumption) [^model]. **Expected effect:** 0 days and 0 deaths. Its value is telling a care gap from a recording gap, since 28.9% of patients have no treatment on record against 27.5% nationally [^fcr_lung_quality_report]. **Evidence:** [^ev_recording_audit_1][^ev_recording_audit_2][^ev_recording_audit_4]. **Roadmap:** 3.2.2, peer-development processes for quality register data [^roadmap_3.2.2].\n2. **What:** Every smoker with suspected lung cancer gets cessation medicine and counselling at the first specialist visit. **Owner:** Chief physician and head nurse of pulmonology. **Cost:** €48,600 a year (assumption) [^model]. **Expected effect:** 0 days, and 0.38 deaths avoided a year (0.08–0.83), estimated [^model]. **Evidence:** observational [^ev_smoking_cessation_at_diagnosis_1][^ev_smoking_cessation_at_diagnosis_2]. **Roadmap:** 3.1.2, cancer-specific pathway descriptions and regional pathways [^roadmap_3.1.2].\n3. **What:** Report primary-care chest X-rays the same day and do CT immediately, with the referral triggered by radiology. **Owner:** Chief radiologist with the chief physician of primary care. **Cost:** €109,000 a year (assumption) [^model]. **Expected effect:** 26 days saved per patient (0–37), and 0.48 deaths avoided a year (range −0.03 to 1.9), estimated; no benefit cannot be ruled out [^model]. **Evidence:** [^ev_same_day_cxr_ct_1][^ev_same_day_cxr_ct_2]. **Roadmap:** 2.5.2, standard referral criteria for fast diagnostic tests [^roadmap_2.5.2].\n\n## What to measure from Monday\n- Date of first symptom and of first primary-care contact for every lung cancer patient [^model].\n- Days from referral to first pulmonology visit for suspected lung cancer [^model].\n- Diagnosis to treatment start for the county itself, which today is published only for the collaborative area [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n- The reason when no treatment is on record [^model].\n\n## Limits of this analysis\n- **Step days are estimates.** They are county-level estimates built from national medians and assumed, unfitted elasticities, not measurements of individual pathways [^model].\n- **The national total is reported, not measured.** It is held at 155 days, as reported by Yle in 2026 from an unpublished four-city Finnish study [^src_yle_fi_a_74_20250979].\n- **The consistency check is not validation.** None of 3 measured outcomes correlated with the estimated clock beyond chance; the curative share had rho −0.30, p 0.17 [^model].",
+ "objective": "default"
+}

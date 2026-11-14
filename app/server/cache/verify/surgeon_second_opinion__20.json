@@ -1,0 +1,543 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kainuu wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Thoracic surgeon reviews every decision not to operate. A thoracic surgeon from the university hospital sits in the county lung meeting every week and gives a second opinion before a stage I-II patient is refused surgery. Counties without their own thoracic surgeon decide about surgery without one today.",
+ "area_id": "20",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "The Lau 2013 English audit study reports resection rates of 20.0% at hospitals where surgeons were based against 11.6% at peripheral hospitals, with the largest gains in units that added thoracic surgeons.",
+ "not_supported_en": "The pages read do not measure the gain in curative-intent treatment from a surgeon second opinion alone, so the assumed 1.2 points is not confirmed.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Erikoislääkärit (keuhkolääkäri, syöpälääkäri, keuhkokirurgi, patologi ja radiologi) suunnittelevat hoidon juuri sinun tilanteeseen sopivaksi eli tekevät yksilöllisen hoitosuunnitelman.",
+ "in_use_source": {
+  "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+  "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+  "published": "2025-09-17T07:00:17+00:00",
+  "fetched_at": "2026-11-14T00:46:15+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows that a thoracic surgeon reviews every Kainuu decision not to operate, either at a weekly county meeting or by checking that all Kainuu stage I-II patients go to the OYS meeting.",
+ "summary_en": "The OYS lung cancer care-pathway page says the university hospital is responsible for lung cancer team meetings. In these meetings a lung surgeon, a lung physician, an oncologist, a pathologist and a radiologist make each patient's treatment plan. The same page says OYS gives the surgery and radiotherapy, and Kainuu's own site lists thoracic surgery among its specialties. The English audit study we already hold (Lau 2013) found resection rates of 20.0% at hospitals where surgeons were based against 11.6% at peripheral hospitals, and the largest gains in units that added thoracic surgeons. It is observational and does not measure the effect of a surgeon second opinion on its own.",
+ "unanswered_en": "I found no Kainuu or OYS page saying whether Kainuu holds its own lung cancer meeting or whether a thoracic surgeon attends it.",
+ "sources": [
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Erikoislääkärit (keuhkolääkäri, syöpälääkäri, keuhkokirurgi, patologi ja radiologi) suunnittelevat hoidon juuri sinun tilanteeseen sopivaksi eli tekevät yksilöllisen hoitosuunnitelman.",
+   "about": "in_use",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Hoitosuunnitelma tehdään potilasasiakirjojen ja tutkimustulosten perusteella moniammatillisessa kokouksessa.",
+   "about": "in_use",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/yleista-kirurgiasta",
+   "title": "Yleistä kirurgiasta | Kainuun hyvinvointialue",
+   "quote": "Erikoisaloina ovat gastroenterologia, urologia, ortopedia, verisuoni- ja thoraxkirurgia.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:27:59+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "The greatest improvement in the resection rate was in units with expansion of specialist thoracic surgeons.",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "with a higher resection rate in hospitals where surgeons were based (base hospitals) than in peripheral hospitals (20.0% versus 11.6%",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, pirha.fi",
+   "ms": 1515,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://oys.fi/tietoameista/syopakeskus/",
+     "title": "Syöpäkeskus - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuun hyvinvointialue thoraxkirurgin konsultaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvinvointialue.kainuu.fi, suomi.fi",
+   "ms": 3056,
+   "results": [
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/",
+     "title": "Kainuun hyvinvointialue: Terveyttä ja turvaa kaikille ..."
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/kainuun-hyvinvointialueen-yhteystiedot",
+     "title": "Kainuun hyvinvointialueen yhteystiedot"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/yleista-kirurgiasta",
+     "title": "Yleistä kirurgiasta | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/kirurgian-erikoisalapalvelut-kainuun-hyvinvointialue/6f3a1da6-ccf2-4cfd-82c3-cb7ac84e8a8e",
+     "title": "Kirurgian erikoisalapalvelut - Kainuun hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipaikat/kirurgian-poliklinikka",
+     "title": "Kirurgian poliklinikka | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/kirurgian-erikoisalapalvelut",
+     "title": "Kirurgian erikoisalapalvelut | Kainuun hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkokirurgi leikkausarvio keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: sttinfo.fi, sydansairaala.fi, oys.fi",
+   "ms": 2334,
+   "results": [
+    {
+     "url": "https://www.sttinfo.fi/tiedote/69952738/oys-robottikirurgia-laajeni-keuhkoleikkauksiin?publisherId=69817636",
+     "title": "OYS robottikirurgia laajeni keuhkoleikkauksiin | Pohjois-Pohjanmaan hyvinvointialue Pohde"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/sisataudit-ja-keuhkosairaudet/",
+     "title": "Sisätaudit ja keuhkosairaudet - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuun keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kainuunsanomat.fi, hyvinvointialue.kainuu.fi, ku.fi",
+   "ms": 2155,
+   "results": [
+    {
+     "url": "https://www.kainuunsanomat.fi/artikkeli/rintasyopaleikkauksien-keskittaminen-poistui-yta-neuvottelujen-poydalta-jos-alueet-itse-haluavat",
+     "title": "Rintasyöpäleikkauksien keskittäminen poistui YTA-neuvottelujen pöydältä – ”Jos alueet itse haluavat ja niillä rahaa riittää, niin antaa mennä vaan” | Kainuun Sanomat"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/keuhkosairauksien-poliklinikka",
+     "title": "Keuhkosairauksien poliklinikka | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/palvelut/keskussairaala",
+     "title": "Keskussairaala | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://www.ku.fi/artikkeli/5446511-mielipide-rintasyopapotilas-maksaa-hinnan-keskustan-keskittamispolitiikasta",
+     "title": "Mielipide: Rintasyöpäpotilas maksaa hinnan keskustan keskittämispolitiikasta – KU"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipaikat/kainuun-keskussairaala",
+     "title": "Kainuun keskussairaala | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20226551?origin=rss",
+     "title": "Kainuun poliittiset puolueet vetoavat rintasyöpäleikkausten puolesta – huoli koko sairaalan tulevaisuudesta | Kainuu | Yle"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B pathway; B local thoracic surgery; A effect",
+   "ms": 4741
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/syopakeskus/hoitopolut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/syopakeskus/hoitopolut/",
+   "focus": "keuhkosyöpä moniammatillinen kokous thoraxkirurgi leikkaus",
+   "why": "B pathway",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2443,
+   "error": true
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://hyvinvointialue.kainuu.fi/toimipisteet/yleista-kirurgiasta",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/yleista-kirurgiasta",
+   "focus": "thoraxkirurgia",
+   "why": "B local thoracic surgery",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Yleistä kirurgiasta | Kainuun hyvinvointialue\" · 659 chars",
+   "ms": 4041,
+   "title": "Yleistä kirurgiasta | Kainuun hyvinvointialue",
+   "chars": 659,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://hyvinvointialue.kainuu.fi/toimipisteet/yleista-kirurgiasta",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/23242439",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "focus": "14.4% 12.0% two-thirds MDT resection rate",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"The effects of increased provision of thoracic surgical specialists on\" · 1 323 chars · from cache",
+   "ms": 5,
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/23242439",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.8,
+   "result_en": "1 search: B: surgeon in regional lung MDT",
+   "ms": 3952
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpä hoitokokous etäyhteys keskussairaalat thoraxkirurgi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: surgeon in regional lung MDT",
+   "status": "done",
+   "t_s": 15.8,
+   "result_en": "6 results: oys.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1945,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/sisataudit-ja-keuhkosairaudet/",
+     "title": "Sisätaudit ja keuhkosairaudet - OYS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://oys.fi/palvelut/syopa-ja-veritautien-hoito-sairaalassa/",
+     "title": "Syöpä- ja veritautien hoito sairaalassa - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.8,
+   "result_en": "2 reads: B pathway MDT",
+   "ms": 3290
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "focus": "hoitokokous thoraxkirurgi leikkaus moniammatillinen",
+   "why": "B pathway MDT",
+   "status": "done",
+   "t_s": 21.0,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2349,
+   "error": true
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/palvelumme/syopataudit/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelumme/syopataudit/",
+   "focus": "keuhkosyöpä hoitokokous kirurgi",
+   "why": "B pathway MDT",
+   "status": "done",
+   "t_s": 21.0,
+   "result_en": "\"Syöpätautien hoito - OYS\" · 22 190 chars · 7 of 34 passages kept · from cache",
+   "ms": 5,
+   "title": "Syöpätautien hoito - OYS",
+   "chars": 22190,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelumme/syopataudit/",
+   "published": "2026-08-20T08:23:06+00:00",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 23.4,
+   "result_en": "1 read: B pathway MDT",
+   "ms": 2963
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "focus": "hoitokokous thoraxkirurgi leikkaus moniammatillinen keskussairaala",
+   "why": "B pathway MDT",
+   "status": "done",
+   "t_s": 26.4,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - OYS\" · 19 914 chars · 7 of 31 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 26.4,
+   "result_en": "writes the answer",
+   "ms": 14416
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/yleista-kirurgiasta",
+   "title": "Yleistä kirurgiasta | Kainuun hyvinvointialue",
+   "chars": 659,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:27:59+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/",
+   "title": "Syöpätautien hoito - OYS",
+   "chars": 22190,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:45:27+00:00",
+   "published": "2026-08-20T08:23:06+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:28:28+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask OYS (Pohde) first whether every Kainuu stage I-II lung cancer patient already goes through the OYS lung cancer team meeting that includes a lung surgeon, because OYS's care-pathway page says such meetings, with a lung surgeon present, plan treatment for the area.",
+ "seconds": 40.8,
+ "searched_en": "Searched 5 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Kainuun hyvinvointialue thoraxkirurgin konsultaatio\"; \"OYS keuhkokirurgi leikkausarvio keuhkosyöpä\"; \"Kainuun keskussairaala keuhkosyöpäleikkaukset keskittäminen\", ...) and read 4 pages on hyvinvointialue.kainuu.fi, europepmc.org, oys.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Kainuun hyvinvointialue thoraxkirurgin konsultaatio",
+  "OYS keuhkokirurgi leikkausarvio keuhkosyöpä",
+  "Kainuun keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+  "OYS keuhkosyöpä hoitokokous etäyhteys keskussairaalat thoraxkirurgi"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 2,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask OYS (Pohde) first whether every Kainuu stage I-II lung cancer patient already goes through the OYS lung cancer team meeting that includes a lung surgeon, because OYS's care-pathway page says such meetings, with a lung surgeon present, plan treatment for the area.",
+ "verdict_en": "Partly in place in the OYS university hospital area, which treats Kainuu's patients. Missing: No page shows that a thoracic surgeon reviews every Kainuu decision not to operate, either at a weekly county meeting or by checking that all Kainuu stage I-II patients go to the OYS meeting. Evidence supports that it works, but not the size of effect we assume. Supported: The Lau 2013 English audit study reports resection rates of 20.0% at hospitals where surgeons were based against 11.6% at peripheral hospitals, with the largest gains in units that added thoracic surgeons. Not supported: The pages read do not measure the gain in curative-intent treatment from a surgeon second opinion alone, so the assumed 1.2 points is not confirmed.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "surgeon_second_opinion",
+ "intervention_name_en": "Thoracic surgeon reviews every decision not to operate",
+ "area_name_en": "Kainuu wellbeing services county"
+}

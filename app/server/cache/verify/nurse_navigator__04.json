@@ -1,0 +1,522 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Vantaa and Kerava wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how much?\nMeasure: Nurse navigator for every suspected lung cancer. A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+ "area_id": "04",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "The 2026 scoping review of 13 studies (Japan Journal of Nursing Science) links cancer patient navigation to an earlier start of first treatment.",
+ "not_supported_en": "No page shows a measured reduction compared with usual care, or the 15% (0–30%) we assume for lung cancer.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: I found no public sign of a nurse navigator for suspected lung cancer in Vantaa and Kerava or at HUS. HUS's pathway page says a doctor plans the further tests, appointments come by letter, and patients meet a nurse at the first visit for guidance. The pages do not say that a named nurse books every test, follows up on each step or prepares the multidisciplinary team meeting. A: The 2026 scoping review of 13 studies (Japan Journal of Nursing Science) says navigation was consistently linked to faster first treatment, but its abstract gives no difference against usual care. That means the assumed 15% is not confirmed.",
+ "unanswered_en": "Three searches found no page from the county (vakehyva.fi) or from HUS on a named lung cancer coordinator nurse or a pilot of one, and no comparative number for the effect.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Ensikäynnillä tapaat myös sairaanhoitajan. Sairaanhoitajan vastaanotolla saat ohjausta ja neuvontaa.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Kun lähete saapuu meille HUSiin, lääkäri perehtyy tietoihisi ja suunnittelee sinulle tarvittavat lisätutkimukset ja jatkokäynnit.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "title": "Keuhkosyövän lisätutkimukset",
+   "quote": "Kudosnäytteiden patologisten ja molekyyligeneettisten määritysten kesto laboratorioissa on yleensä 2–3 viikkoa.",
+   "about": "context",
+   "published": "04.06.2026",
+   "fetched_at": "2026-11-14T00:59:39+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "quote": "CPN interventions were consistently associated with accelerated initiation of first treatment among patients with cancer.",
+   "about": "effect",
+   "published": "2026-07-01",
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1901,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "VAKE syöpähoitaja koordinaattori",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: vakehyva.fi, syoparekisteri.fi, kaikkisyovasta.fi",
+   "ms": 1999,
+   "results": [
+    {
+     "url": "https://www.vakehyva.fi/fi/sairaanhoitajat",
+     "title": "Sairaanhoitajat | Vantaan ja Keravan hyvinvointialue"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tietoa-syoparekisterista/yhteystiedot/",
+     "title": "Yhteystiedot - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.vakehyva.fi/fi/tyopaikat",
+     "title": "Työpaikat"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/vuoden-syopasairaanhoitaja-jennifer-bjorkqvist-on-osaston-sielu/",
+     "title": "Vuoden syöpähoitaja Jennifer Björkqvist on osaston sielu - Kaikki syövästä"
+    },
+    {
+     "url": "https://vakehyva.cloudnc.fi/fi-FI/Toimielimet/Vanhusneuvosto/Kokous_19112026",
+     "title": "Vanhusneuvosto, kokous 19.11.2026 | Vantaan ja Keravan..."
+    },
+    {
+     "url": "https://syopasaatio.fi/vuoden-syopalaakari-ja-vuoden-syopahoitaja-2024-valittu/",
+     "title": "Vuoden 2024 syöpälääkäri ja syöpähoitaja valittu - Syöpäsäätiö"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS hoitokoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, filha.fi",
+   "ms": 1596,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha ry"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Peijaksen sairaala keuhkosyöpähoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, vakehyva.fi, hengitysyhdistys.fi",
+   "ms": 1124,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala/sisatautien-osasto-s2-ja-sisatautien-ja",
+     "title": "Sisätautien osasto S2 ja sisätautien ja keuhkosairauksien osasto S3, Peijaksen sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala",
+     "title": "Peijaksen sairaala | HUS"
+    },
+    {
+     "url": "https://www.vakehyva.fi/fi/palveluhakemisto/toimipiste/peijaksen-toimipiste-akuuttihoidon-osasto-1",
+     "title": "Peijaksen toimipiste, Akuuttihoidon osasto 1 - Vantaan ja Keravan..."
+    },
+    {
+     "url": "https://www.hengitysyhdistys.fi/vantaa/peijaksen-sairaalan-keuhko-osaston-toiminnan-lopettaminen/",
+     "title": "Peijaksen sairaalan keuhko-osaston toiminnan lopettaminen - Vantaan Hengitysyhdistys"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala/medisiiniset-vastaanotot-ja-sisatautien",
+     "title": "Medisiiniset vastaanotot ja Sisätautien päiväyksikkö, Peijaksen sairaala | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/urologian-poliklinikka-ja-endoskopiayksikko-peijaksen-sairaala-hus-helsingin-yliopistollinen-sairaala/253c6aac-8960-4fc2-b399-619cef43c09e",
+     "title": "Urologian poliklinikka ja endoskopiayksikkö, Peijaksen sairaala"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.0,
+   "result_en": "2 reads: B: HUS pathway nurse coordinator; A: effect size",
+   "ms": 4603
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "hoitaja yhteyshenkilö koordinaattori tutkimukset ajanvaraus moniammatillinen kokous",
+   "why": "B: HUS pathway nurse coordinator",
+   "status": "done",
+   "t_s": 6.6,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 7 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "focus": "navigation time to treatment days reduction",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 6.6,
+   "result_en": "\"Cancer patient navigation interventions improving timeliness from diag\" · 1 510 chars · from cache",
+   "ms": 4,
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.6,
+   "result_en": "1 search: B: named navigator nurse at HUS",
+   "ms": 3096
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä koordinoiva sairaanhoitaja diagnostiikka",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: named navigator nurse at HUS",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "6 results: hus.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+     "title": "Keuhkosyövän lisätutkimukset | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+     "title": "Keuhkosairauksien vastaanotto, Hyvinkään sairaala | HUS"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "1 read: B: coordinator nurse",
+   "ms": 3096
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "focus": "sairaanhoitaja yhteyshenkilö koordinoi ajat",
+   "why": "B: coordinator nurse",
+   "status": "done",
+   "t_s": 15.9,
+   "result_en": "\"Keuhkosyövän lisätutkimukset\" · 1 461 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyövän lisätutkimukset",
+   "chars": 1461,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "published": "04.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.9,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in VAKE / Peijaksen sairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 13111
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.0,
+   "result_en": "1 search: B: named coordinator at HUS",
+   "ms": 3079
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpäkoordinaattori keuhkosyöpäepäily nopea diagnostiikka",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: named coordinator at HUS",
+   "status": "done",
+   "t_s": 32.1,
+   "result_en": "6 results: hus.fi, syovanhoitokeskus.pshyvinvointialue.fi, diagnostiikka.hus.fi",
+   "ms": 1873,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+     "title": "Keuhkosyövän lisätutkimukset | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://diagnostiikka.hus.fi/",
+     "title": "Diagnostiikkakeskus - Ammattilaisen sivusto"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo15505",
+     "title": "Keuhkosyöpä"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 33.9,
+   "result_en": "writes the answer",
+   "ms": 10143
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "title": "Keuhkosyövän lisätutkimukset",
+   "chars": 1461,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:59:39+00:00",
+   "published": "04.06.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:14:10+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: HUS's lung cancer pathway pages describe a nurse at the first visit who gives guidance and a doctor who plans the tests, but no named nurse who books and chases every step for each suspected case.",
+ "seconds": 44.1,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"VAKE syöpähoitaja koordinaattori\"; \"HUS hoitokoordinaattori keuhkosyöpä\"; \"Peijaksen sairaala keuhkosyöpähoitaja\", ...) and read 3 pages on hus.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "VAKE syöpähoitaja koordinaattori",
+  "HUS hoitokoordinaattori keuhkosyöpä",
+  "Peijaksen sairaala keuhkosyöpähoitaja",
+  "HUS keuhkosyöpä koordinoiva sairaanhoitaja diagnostiikka",
+  "HUS syöpäkoordinaattori keuhkosyöpäepäily nopea diagnostiikka"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: HUS's lung cancer pathway pages describe a nurse at the first visit who gives guidance and a doctor who plans the tests, but no named nurse who books and chases every step for each suspected case.",
+ "verdict_en": "No public sign that it is running in Vantaa and Kerava. Evidence supports that it works, but not the size of effect we assume. Supported: The 2026 scoping review of 13 studies (Japan Journal of Nursing Science) links cancer patient navigation to an earlier start of first treatment. Not supported: No page shows a measured reduction compared with usual care, or the 15% (0–30%) we assume for lung cancer.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "nurse_navigator",
+ "intervention_name_en": "Nurse navigator for every suspected lung cancer",
+ "area_name_en": "Vantaa and Kerava wellbeing services county"
+}

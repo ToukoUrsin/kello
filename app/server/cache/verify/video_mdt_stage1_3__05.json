@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "One before-after study from a single English district hospital (62 patients presented in a year) reports that the yearly resection rate rose by 30% after the video meetings started. It reports no curative share in percentage points.",
+ "supported_en": "A 2004 study in the Journal of Telemedicine and Telecare reports that the resection rate rose by 30% after video team meetings began in Southend.",
+ "not_supported_en": "The pages do not show a gain of 1.5 percentage points in the curative share, and they do not show the effect in a Finnish setting where a team meeting already runs.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Kokouksessa on läsnä keuhkosairauksien erikoislääkäreitä sekä kirurgian, sädehoidon, patologian ja radiologian erikoislääkärit. Satasairaalan lääkärit osallistuvat kokouksiin etäyhteydellä.",
+ "in_use_source": {
+  "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+  "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+  "published": null,
+  "fetched_at": "2026-11-14T00:55:05+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page says that every stage I–III patient must be discussed before anyone decides against curative treatment.",
+ "summary_en": "Tyks says on its lung cancer page that a team of specialists meets every week, including lung, surgery, radiotherapy, pathology and radiology doctors, and that Satasairaala doctors take part by video. The same page says not every cancer case needs to go to the meeting, so discussing every stage I–III patient is not shown as a rule. For the effect, a 2004 English before-after study reports a 30% rise in the resection rate after video meetings started.",
+ "unanswered_en": "I found nothing saying whether Varha's own smaller hospitals send their stage I–III patients to the Tyks meeting.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Kokouksessa on läsnä keuhkosairauksien erikoislääkäreitä sekä kirurgian, sädehoidon, patologian ja radiologian erikoislääkärit. Satasairaalan lääkärit osallistuvat kokouksiin etäyhteydellä.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Kaikkia syöpätapauksia ei ole tarpeellista käsitellä kokouksessa, vaan hoitosuunnitelma laaditaan kansalliseen hoitosuositukseen perustuen.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi, hyvaks.fi",
+   "ms": 2360,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, duodecimlehti.fi, terveyskirjasto.fi, varha.fi",
+   "ms": 2609,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset - laadukkaan syövänhoidon kultastandardi"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/esityslistat-poytakirjat-ja-viranhaltijapaatokset",
+     "title": "Esityslistat, pöytäkirjat ja viranhaltijapäätökset | Varha"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kiinteistoliitto.fi, duodecimlehti.fi, tyks.fi, kotiseutuliitto.fi",
+   "ms": 2852,
+   "results": [
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/etayhteysteknisellavalineella/",
+     "title": "Yhtiökokoukseen osallistuminen teknisen välineen avulla"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset ..."
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/hallinto-ja-paatoksenteko",
+     "title": "Hallinto ja päätöksenteko | Tyks"
+    },
+    {
+     "url": "https://kotiseutuliitto.fi/tietopankki/yhdistystoiminta/yhdistyksen-sahkoinen-kokous/",
+     "title": "Yhdistyksen sähköinen kokous - Suomen Kotiseutuliitto"
+    },
+    {
+     "url": "https://www.tyks.fi/",
+     "title": "Etusivu | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/ajankohtaista/sairaanhoitopiiri-ottaa-kayttoon-etakokoukset",
+     "title": "Sairaanhoitopiiri ottaa käyttöön etäkokoukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen keuhkomeeting videoyhteys keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: ssl.eventilla.com, duodecimlehti.fi, syoparekisteri.fi",
+   "ms": 2973,
+   "results": [
+    {
+     "url": "https://ssl.eventilla.com/event/d4Y6A",
+     "title": "Keuhkosyöpäkoulutus hoitotyön ammattilaisille"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/xmedia/duo/duo12032.pdf",
+     "title": "69 Eija-Riitta Salomaa ja Maija Walta | ALKUPERÄISTUTKIMUS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo12032",
+     "title": "Keuhkosyövän ennuste pysyy edelleen huonona."
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/kuulutko-keuhkosyovan-riskiryhmaan/",
+     "title": "Kuulutko keuhkosyövän riskiryhmään? - Kaikki syövästä"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.0,
+   "result_en": "2 reads: B: Tyks MDT; A effect",
+   "ms": 4918
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "moniammatillinen työryhmä viikoittain kirurgian sädehoidon",
+   "why": "B: Tyks MDT",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 8 of 30 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 1,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "writes the answer",
+   "ms": 12778
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:53:11+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to a rule that every stage I–III patient is discussed at the existing Tyks lung team meeting, because Tyks already holds that meeting every week with surgery and radiotherapy doctors but says not every cancer case is discussed.",
+ "seconds": 20.7,
+ "searched_en": "Searched 4 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha moniammatillinen kokous keuhkosyöpä\"; \"Tyks MDT-kokous etäyhteydellä\"; \"Varsinais-Suomen keuhkomeeting videoyhteys keuhkosyöpä\") and read 2 pages on tyks.fi, europepmc.org.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha moniammatillinen kokous keuhkosyöpä",
+  "Tyks MDT-kokous etäyhteydellä",
+  "Varsinais-Suomen keuhkomeeting videoyhteys keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to a rule that every stage I–III patient is discussed at the existing Tyks lung team meeting, because Tyks already holds that meeting every week with surgery and radiotherapy doctors but says not every cancer case is discussed.",
+ "verdict_en": "Partly in place in the Tyks university hospital area, which treats Southwest Finland's patients. Missing: No page says that every stage I–III patient must be discussed before anyone decides against curative treatment. Evidence supports that it works, but not the size of effect we assume. Supported: A 2004 study in the Journal of Telemedicine and Telecare reports that the resection rate rose by 30% after video team meetings began in Southend. Not supported: The pages do not show a gain of 1.5 percentage points in the curative share, and they do not show the effect in a Finnish setting where a team meeting already runs.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

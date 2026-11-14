@@ -1,0 +1,388 @@
+{
+ "area_id": "01",
+ "area_name_en": "East Uusimaa wellbeing services county",
+ "area_name_fi": "Itä-Uudenmaan hyvinvointialue",
+ "question": "What is East Uusimaa wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-06-15",
+   "what_en": "HUS reviews lung cancer cases in a multidisciplinary specialist team that gives treatment recommendations.",
+   "what_fi": "HUS arvioi keuhkosyöpätapaukset moniammatillisessa erikoislääkärityöryhmässä, joka antaa hoitosuosituksen.",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "mdt",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "HUS has a published lung cancer pathway: when lung cancer is suspected, the doctor refers the patient to the HUS pulmonology clinic.",
+   "what_fi": "HUSilla on julkaistu keuhkosyövän hoitopolku: kun keuhkosyöpää epäillään, lääkäri lähettää potilaan HUSin keuhkosairauksien vastaanotolle.",
+   "quote": "Jos epäillään keuhkosyöpää, lääkäri tekee lähetteen HUSin keuhkosairauksien vastaanotolle.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "cpp_pathway",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "The HUS pathway offers stereotactic radiotherapy to some patients who cannot have surgery.",
+   "what_fi": "HUSin hoitopolussa osa potilaista, joita ei voida leikata, saa täsmäsädehoitoa.",
+   "quote": "Jos leikkaus ole mahdollinen, hoitomuoto voi olla korkea-annoksinen niin sanottu täsmäsädehoito osassa tapauksia.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "sbrt_pathway",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "At HUS, lung cancer patients meet a nurse for guidance at their first visit.",
+   "what_fi": "HUSissa keuhkosyöpäpotilas tapaa ensikäynnillä sairaanhoitajan, joka antaa ohjausta.",
+   "quote": "Ensikäynnillä tapaat myös sairaanhoitajan. Sairaanhoitajan vastaanotolla saat ohjausta ja neuvontaa.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "nurse_navigator",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025-11-22",
+   "what_en": "HUS has put a €120 million new building and renovation of Porvoo hospital into its investment programme.",
+   "what_fi": "HUS on lisännyt Porvoon sairaalan 120 miljoonan euron uudisrakennuksen ja peruskorjauksen investointiohjelmaansa.",
+   "quote": "HUS-yhtymän tuoreen taloussuunnitelman investointiohjelmaan se on nyt painettu: Porvoon sairaalan uudisrakennus ja peruskorjaus 120 miljoonaa euroa.",
+   "url": "https://www.uusimaa.fi/paikalliset/9020610",
+   "title": "Porvoon uusi sairaala pääsi vihdoin HUS:n investointiputkeen: Yli 200 miljoonan euron jättihanke voi toteutua 2030-luvun alussa",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:31:18+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "East Uusimaa runs a palliative outpatient clinic at Porvoo hospital that treats cancer patients, plus a home hospital service.",
+   "what_fi": "Itä-Uudenmaan hyvinvointialue ylläpitää Porvoon sairaalassa palliatiivista poliklinikkaa syöpäpotilaille sekä kotisairaalaa.",
+   "quote": "Palliatiivisella poliklinikalla hoidamme syöpään sairastuneita potilaita sekä muita palliatiivisia potilaita.",
+   "url": "https://itauusimaa.fi/terveys/palliatiivinen-keskus/",
+   "title": "Palliatiivinen keskus",
+   "relates_to": "symptomatic_only",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:31:18+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Specialist lung cancer care for East Uusimaa is given in HUS's published pathway. That pathway includes referral to the HUS pulmonology clinic, a multidisciplinary team meeting, a nurse visit at the first appointment, and stereotactic radiotherapy for some patients who cannot have surgery. The county itself runs palliative and home hospital care at Porvoo, and HUS has put a €120 million new building and renovation of Porvoo hospital into its investment programme. I found no lung cancer decisions, projects or waiting-time figures specific to East Uusimaa.",
+ "not_found_en": "The budget allowed only one search round, so I did not check the county's decision papers for lung cancer or look for screening pilots, smoking-cessation projects or waiting-time figures for East Uusimaa.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; university hospital pathway; decisions; local news",
+   "ms": 4231
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Itä-Uudenmaan hyvinvointialue keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: itauusimaa.fi, ajanvaraus.iuhva.mediatri.fi",
+   "ms": 3052,
+   "results": [
+    {
+     "url": "https://itauusimaa.fi/terveys/syopaseulonnat-2/",
+     "title": "Syöpäseulonnat - Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://ajanvaraus.iuhva.mediatri.fi/",
+     "title": "Sähköinen ajanvaraus Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://itauusimaa.fi/",
+     "title": "Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://itauusimaa.fi/terveys/",
+     "title": "Terveys - Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/arviointi-ja-kuntoutusyksikko-ita-uudenmaan-hyvinvointialue/1f4ca99c-c573-4968-89df-156fdb015d0e",
+     "title": "Arviointi-ja kuntoutusyksikkö - Itä-Uudenmaan hyvinvointialue -..."
+    },
+    {
+     "url": "https://stm.fi/hyvinvointialueet-kartalla",
+     "title": "Hyvinvointialueet kartalla - Sosiaali- ja terveysministeriö"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä hoitopolku hoitoonpääsy",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "university hospital pathway",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: hus.fi, potilaanlaakarilehti.fi, hyvaks.fi",
+   "ms": 2186,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+     "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Porvoon sairaala syöpä aluehallitus investointi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: yle.fi, uusimaa.fi, itavayla.fi, digi.itavayla.fi",
+   "ms": 2190,
+   "results": [
+    {
+     "url": "https://yle.fi/a/74-20187003",
+     "title": "Porvoon uuden sairaalan ja sote-keskuksen rakentaminen viivästyy: valmista aikaisintaan 2032 | Uusimaa | Yle"
+    },
+    {
+     "url": "https://www.uusimaa.fi/paikalliset/9020610",
+     "title": "Porvoon uusi sairaala pääsi vihdoin HUS:n investointiputkeen: Yli 200 miljoonan euron jättihanke voi toteutua 2030-luvun alussa | Paikalliset | Uusimaa"
+    },
+    {
+     "url": "https://www.itavayla.fi/uutiset/aikaa-ei-ole-hukattavaksi--husyhtymassa-porvoon-sairaalan-uudisrakennukselle-vahva-tahtotila-6.2.83150.01420b8270",
+     "title": "Aikaa ei ole hukattavaksi – HUS-yhtymässä Porvoon sairaalan uudisrakennukselle vahva tahtotila | Itäväylä"
+    },
+    {
+     "url": "https://digi.itavayla.fi/p/liitteet/sinituuli/a/tavoitteena-uusi-porvoon-sairaala/5075/1112419/43850601",
+     "title": "Tavoitteena uusi Porvoon sairaala - Liitteet"
+    },
+    {
+     "url": "https://www.loviisansanomat.fi/paakirjoitus-mielipide/5900813",
+     "title": "Mielipide | Ensimmäiset askeleet Porvoon sairaalan toiminnan varmistamiseksi ja suunnittelussa otetaan nyt | Pääkirjoitus & mielipide | Loviisan Sanomat"
+    },
+    {
+     "url": "https://www.uusimaa.fi/paikalliset/9873957",
+     "title": "Porvoon uuden sairaalan hankesuunnittelu alkamassa | Paikalliset | Uusimaa"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Porvoon sairaala syöpähoito 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: hus.fi, itavayla.fi, suomi.fi, itauusimaa.fi",
+   "ms": 2811,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/porvoon-sairaala",
+     "title": "Porvoon sairaala | HUS"
+    },
+    {
+     "url": "https://www.itavayla.fi/uutiset/aikaa-ei-ole-hukattavaksi--husyhtymassa-porvoon-sairaalan-uudisrakennukselle-vahva-tahtotila-6.2.83150.01420b8270",
+     "title": "HUS-yhtymässä Porvoon sairaalan uudisrakennukselle ..."
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/porvoon-sairaala-hus-helsingin-yliopistollinen-sairaala/f6a3b48b-f42f-4e96-9d8a-69bf26c3856f",
+     "title": "Porvoon sairaala - HUS Helsingin yliopistollinen sairaala - Suomi.fi"
+    },
+    {
+     "url": "https://itauusimaa.fi/terveys/palliatiivinen-keskus/",
+     "title": "Palliatiivinen keskus - Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/porvoon-sairaala/kirurgian-vastaanotot-porvoon-sairaala",
+     "title": "Kirurgian vastaanotot, Porvoon sairaala - HUS"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.3,
+   "result_en": "3 reads: pathway facts; county cancer service; investment decision",
+   "ms": 4748
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous, bronkoskopia, molekyyli, sädehoito, leikkaus",
+   "why": "pathway facts",
+   "status": "done",
+   "t_s": 12.0,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://itauusimaa.fi/terveys/palliatiivinen-keskus/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://itauusimaa.fi/terveys/palliatiivinen-keskus/",
+   "focus": "syöpä palliatiivinen poliklinikka",
+   "why": "county cancer service",
+   "status": "done",
+   "t_s": 12.0,
+   "result_en": "\"Palliatiivinen keskus\" · 3 495 chars",
+   "ms": 2379,
+   "title": "Palliatiivinen keskus",
+   "chars": 3495,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://itauusimaa.fi/terveys/palliatiivinen-keskus/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.uusimaa.fi/paikalliset/9020610",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.uusimaa.fi/paikalliset/9020610",
+   "focus": "Porvoon sairaala investointi miljoonaa",
+   "why": "investment decision",
+   "status": "done",
+   "t_s": 12.0,
+   "result_en": "\"Porvoon uusi sairaala pääsi vihdoin HUS:n investointiputkeen: Yli 200 \" · 654 chars",
+   "ms": 2134,
+   "title": "Porvoon uusi sairaala pääsi vihdoin HUS:n investointiputkeen: Yli 200 miljoonan euron jättihanke voi toteutua 2030-luvun alussa",
+   "chars": 654,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.uusimaa.fi/paikalliset/9020610",
+   "published": "2025-11-22T08:00:00+02:00",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.4,
+   "result_en": "writes the answer",
+   "ms": 15885
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00"
+  },
+  {
+   "url": "https://www.uusimaa.fi/paikalliset/9020610",
+   "title": "Porvoon uusi sairaala pääsi vihdoin HUS:n investointiputkeen: Yli 200 miljoonan euron jättihanke voi toteutua 2030-luvun alussa",
+   "chars": 654,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:31:18+00:00"
+  },
+  {
+   "url": "https://itauusimaa.fi/terveys/palliatiivinen-keskus/",
+   "title": "Palliatiivinen keskus",
+   "chars": 3495,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:31:18+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:31:34+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 30.3
+}

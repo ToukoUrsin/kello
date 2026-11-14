@@ -1,0 +1,469 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Karelia wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "14",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A single English before-after study (62 patients in one year) found the yearly resection rate rose by 30% after video MDT meetings with a thoracic surgeon began; it did not measure the curative-treatment share.",
+ "supported_en": "A 2004 study in the Journal of Telemedicine and Telecare reports a 30% relative rise in the yearly resection rate at one English district hospital after video MDT meetings began.",
+ "not_supported_en": "No page shows the assumed gain of 1.5 points in the curative-treatment share, or any effect in a Finnish setting.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Myös Joensuusta osallistutaan etänä useisiin MDT-kokouksiin ja lisäksi molemmissa keskussairaaloissa kokoontuu useita syöpäkohtaisia MDT-ryhmiä.",
+ "in_use_source": {
+  "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+  "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+  "published": null,
+  "fetched_at": "2026-11-14T01:20:41+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page says that Joensuu's remote MDT links include the KYS lung meeting, or that every stage I–III patient is discussed there before curative treatment is ruled out.",
+ "summary_en": "FICAN reports that doctors in Joensuu take part remotely in several KYS MDT meetings, but its page does not say whether the lung meeting is one of them. The KYS lung cancer care-pathway document says that every lung cancer patient is discussed at least once at its weekly meeting, where a thoracic surgeon and an oncologist are present; the document does not say whether this covers North Karelia patients. On the effect, one small English before-after study reports a 30% relative rise in the resection rate, which is consistent with the model's assumption but does not prove its size.",
+ "unanswered_en": "No page says whether North Karelia's stage I–III lung cancer patients are routinely discussed at the KYS lung MDT.",
+ "sources": [
+  {
+   "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+   "quote": "Myös Joensuusta osallistutaan etänä useisiin MDT-kokouksiin ja lisäksi molemmissa keskussairaaloissa kokoontuu useita syöpäkohtaisia MDT-ryhmiä.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T01:20:41+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä.",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hyvaks.fi",
+   "ms": 1819,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: siunsote.fi, filha.fi",
+   "ms": 2062,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+     "title": "Keuhkosairaudet - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://www.filha.fi/koulutus/siunsoten-alueellinen-keuhko-ja-allergiapaiva/",
+     "title": "SiunSoten alueellinen keuhko- ja allergiapäivä - Filha ry"
+    },
+    {
+     "url": "https://www.siunsote.fi/ajankohtaista/kuulutukset/",
+     "title": "Kuulutukset - Siun sote"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset ..."
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, fican.fi, kotiseutuliitto.fi, researchgate.net",
+   "ms": 1545,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset - laadukkaan syövänhoidon kultastandardi"
+    },
+    {
+     "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+     "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN"
+    },
+    {
+     "url": "https://kotiseutuliitto.fi/tietopankki/yhdistystoiminta/yhdistyksen-sahkoinen-kokous/",
+     "title": "Yhdistyksen sähköinen kokous - Suomen Kotiseutuliitto"
+    },
+    {
+     "url": "https://www.researchgate.net/publication/379481713_duo17212",
+     "title": "(PDF) duo17212"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/etayhteysteknisellavalineella/",
+     "title": "Yhtiökokoukseen osallistuminen teknisen välineen avulla"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/taloyhtio/yhtiokokous/etaosallistuminen/",
+     "title": "Kiinteistöliitto - Etäosallistuminen yhtiökokoukseen: Ohjeet ja suositukset"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Karjalan keskussairaala keuhkomeeting videoyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: siunsote.fi, yle.fi, suomi.fi",
+   "ms": 2215,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/asiointikanava/pohjois-karjalan-keskussairaala/",
+     "title": "Pohjois-Karjalan keskussairaala - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+     "title": "Keuhkosairaudet - Siun sote"
+    },
+    {
+     "url": "https://yle.fi/a/3-6889453",
+     "title": "Ylä-Karjalassa voi käydä keskussairaalan videovastaanotolla | Yle"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/pohjois-karjalan-keskussairaala-pohjois-karjalan-hyvinvointialue-siun-sote/1b493b79-c81b-4524-9e2a-88b2c44cbc3e",
+     "title": "Pohjois-Karjalan keskussairaala - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.potilas.com/sairaalat/pohjois-karjalan-keskussairaala/",
+     "title": "Pohjois-Karjalan keskussairaala – yhteystiedot | Potilas.com"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-pohjois-karjalan-hyvinvointialue-siun-sote/fa4ca00c-3253-48bd-afff-c4bc3ac421d5",
+     "title": "Keuhkosairaudet - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.2,
+   "result_en": "3 reads: B: KYS MDT covers North Karelia?; A effect; B county",
+   "ms": 5186
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "meeting etäyhteys keskussairaala Joensuu jokaisen keuhkosyöpäpotilaan",
+   "why": "B: KYS MDT covers North Karelia?",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 3,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "focus": "keuhkosyöpä hoitokokous KYS",
+   "why": "B county",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Keuhkosairaudet - Siun sote\" · 2 766 chars",
+   "ms": 3473,
+   "title": "Keuhkosairaudet - Siun sote",
+   "chars": 2766,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "published": "2026-06-23T07:01:58+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 10.9,
+   "result_en": "1 search + 1 read: B: North Karelia joining KYS lung MDT by video; B: video MDT links in KYS area",
+   "ms": 4416
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote KYS keuhkosyöpä etäyhteys meeting",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: North Karelia joining KYS lung MDT by video",
+   "status": "done",
+   "t_s": 15.3,
+   "result_en": "6 results: siunsote.fi, siunsote.suomisote.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 2232,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://siunsote.suomisote.fi/",
+     "title": "Siun sote"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.siunsote.fi/asiakkaan-opas/nain-voit-asioida/etakaynti/",
+     "title": "Etäkäynti - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/syopakeskus-pohjois-karjalan-hyvinvointialue-siun-sote/4f19552a-0ae6-45c9-93c9-25696afc1f93",
+     "title": "Syöpäkeskus - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "focus": "Joensuu Pohjois-Karjala keuhko etäyhteydellä KYSin MDT",
+   "why": "B: video MDT links in KYS area",
+   "status": "done",
+   "t_s": 15.3,
+   "result_en": "\"Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhte\" · 2 109 chars · from cache",
+   "ms": 0,
+   "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+   "chars": 2109,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.5,
+   "result_en": "writes the answer",
+   "ms": 12321
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "title": "Keuhkosairaudet - Siun sote",
+   "chars": 2766,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:22:32+00:00",
+   "published": "2026-06-23T07:01:58+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+   "chars": 2109,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:20:41+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:22:51+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask the KYS Cancer Centre (KYS Syövänhoitokeskus) and the Siun sote cancer centre first whether Joensuu already joins the weekly KYS lung MDT by video, because FICAN reports that Joensuu takes part remotely in several KYS MDT meetings; if it does, narrow this line to making the review mandatory for every stage I–III patient.",
+ "seconds": 29.9,
+ "searched_en": "Searched 5 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Siun sote moniammatillinen kokous keuhkosyöpä\"; \"KYS MDT-kokous etäyhteydellä\"; \"Pohjois-Karjalan keskussairaala keuhkomeeting videoyhteys\", ...) and read 4 pages on syovanhoitokeskus.pshyvinvointialue.fi, europepmc.org, siunsote.fi, fican.fi.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Siun sote moniammatillinen kokous keuhkosyöpä",
+  "KYS MDT-kokous etäyhteydellä",
+  "Pohjois-Karjalan keskussairaala keuhkomeeting videoyhteys",
+  "Siun sote KYS keuhkosyöpä etäyhteys meeting"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask the KYS Cancer Centre (KYS Syövänhoitokeskus) and the Siun sote cancer centre first whether Joensuu already joins the weekly KYS lung MDT by video, because FICAN reports that Joensuu takes part remotely in several KYS MDT meetings; if it does, narrow this line to making the review mandatory for every stage I–III patient.",
+ "verdict_en": "Partly in place in North Karelia. Missing: No page says that Joensuu's remote MDT links include the KYS lung meeting, or that every stage I–III patient is discussed there before curative treatment is ruled out. Evidence supports that it works, but not the size of effect we assume. Supported: A 2004 study in the Journal of Telemedicine and Telecare reports a 30% relative rise in the yearly resection rate at one English district hospital after video MDT meetings began. Not supported: No page shows the assumed gain of 1.5 points in the curative-treatment share, or any effect in a Finnish setting.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "North Karelia wellbeing services county"
+}

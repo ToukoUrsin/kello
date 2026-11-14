@@ -1,0 +1,505 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Karelia wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Thoracic surgeon reviews every decision not to operate. A thoracic surgeon from the university hospital sits in the county lung meeting every week and gives a second opinion before a stage I-II patient is refused surgery. Counties without their own thoracic surgeon decide about surgery without one today.",
+ "area_id": "14",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "An English observational study (Lau et al. 2013) found a 20.0% resection rate in hospitals where surgeons were based against 11.6% in peripheral hospitals; the abstract read does not show the 14.4% vs 12.0% figure for surgeon attendance at lung meetings.",
+ "supported_en": "Lau et al. 2013 (Journal of Thoracic Oncology) found a higher resection rate where thoracic surgeons were based than in peripheral hospitals (20.0% vs 11.6%) in England in 2008.",
+ "not_supported_en": "The pages read do not show how big the effect of a surgeon's second opinion is (our assumption: 1.2 points), nor whether it would hold in Finland.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "The KYS lung cancer care pathway (dated 2021) says a thoracic surgeon attends the weekly KYS lung meeting, but no Siun sote or KYS page says a thoracic surgeon sits in North Karelia's lung meeting or reviews its decisions not to operate.",
+ "missing_en": "",
+ "summary_en": "The KYS cancer centre's lung cancer care pathway (2021) describes a weekly meeting with a thoracic surgeon that decides treatment for every lung cancer patient in the KYS pathway, but no page read shows this covers North Karelia (Siun sote); Siun sote's cancer and chest surgery pages say nothing about such a meeting. An English observational study (Lau 2013) found resection rates of 20.0% where surgeons were based vs 11.6% in peripheral hospitals, which points the same way as our assumed effect but does not confirm its size.",
+ "unanswered_en": "I found no page on how North Karelia's lung meeting is run or whether its patients are discussed in the KYS meeting; Siun sote's lung disease page returned an error (404).",
+ "sources": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä.",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+   "title": "Rintaelin- ja verisuonikirurgia - Siun sote",
+   "quote": "Tutkimme ja hoidamme potilaita, joilla on keuhkojen tai muiden rintakehän sisäisten elinten sairauksia tai vammoja",
+   "about": "context",
+   "published": "2026-10-09T11:21:49+00:00",
+   "fetched_at": "2026-11-14T01:22:04+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "with a higher resection rate in hospitals where surgeons were based (base hospitals) than in peripheral hospitals (20.0% versus 11.6%",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, hyvaks.fi, pshyvinvointialue.fi",
+   "ms": 848,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/kys-kuopion-yliopistollinen-sairaala",
+     "title": "KYS Kuopion yliopistollinen sairaala - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote thoraxkirurgin konsultaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, siunsote.fi, verkkoajanvarauspth.siunsote.fi",
+   "ms": 2225,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/kirurgian-poliklinikka-pohjois-karjalan-hyvinvointialue-siun-sote/4c51937b-1905-48bd-85dd-ef2048e3a1f2",
+     "title": "Kirurgian poliklinikka - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/",
+     "title": "Siun sote: Etusivu"
+    },
+    {
+     "url": "https://verkkoajanvarauspth.siunsote.fi/",
+     "title": "siunsote.fi - Verkkoajanvaraus - Ajanvaraus"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/ortopedian-ja-kasikirurgian-palvelut/",
+     "title": "Ortopedia ja käsikirurgia - Siun sote"
+    },
+    {
+     "url": "https://siunsote.suomisote.fi/",
+     "title": "Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+     "title": "Rintaelin- ja verisuonikirurgia - Siun sote"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkokirurgi leikkausarvio keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, sydansairaala.fi, pshyvinvointialue.fi",
+   "ms": 2507,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Karjalan keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: siunsote.fi, suomi.fi",
+   "ms": 1711,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/asiointikanava/pohjois-karjalan-keskussairaala/",
+     "title": "Pohjois-Karjalan keskussairaala - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/pohjois-karjalan-keskussairaala-pohjois-karjalan-hyvinvointialue-siun-sote/1b493b79-c81b-4524-9e2a-88b2c44cbc3e",
+     "title": "Pohjois-Karjalan keskussairaala - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-pohjois-karjalan-hyvinvointialue-siun-sote/fa4ca00c-3253-48bd-afff-c4bc3ac421d5",
+     "title": "Keuhkosairaudet - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+     "title": "Keuhkosairaudet - Siun sote"
+    },
+    {
+     "url": "https://ilkkapohjalainen.fi/arkisto/risikko-liika-keskittaminen-pahasta-1.2054917",
+     "title": "Risikko: Liika keskittäminen pahasta | Ilkka-Pohjalainen"
+    },
+    {
+     "url": "https://yle.fi/a/74-20102462",
+     "title": "Röntgeniin ja leikkaukseen saapuvien potilaiden kulkureitit muuttuvat Pohjois-Karjalan keskussairaalassa | Pohjois-Karjala | Yle"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.5,
+   "result_en": "3 reads: B: surgeon in MDT meetings; B: local thoracic surgery; A effect size",
+   "ms": 5342
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "thoraxkirurgi kokous hoitopäätös Joensuu keskussairaala leikkaus",
+   "why": "B: surgeon in MDT meetings",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 6 of 29 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+   "focus": "keuhkosyöpä leikkaus thoraxkirurgi KYS",
+   "why": "B: local thoracic surgery",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"Rintaelin- ja verisuonikirurgia - Siun sote\" · 3 710 chars",
+   "ms": 3802,
+   "title": "Rintaelin- ja verisuonikirurgia - Siun sote",
+   "chars": 3710,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+   "published": "2026-10-09T11:21:49+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/23242439",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "focus": "surgeon attended MDT 14.4% 12.0% resection rate",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 7.9,
+   "result_en": "\"The effects of increased provision of thoracic surgical specialists on\" · 1 323 chars · from cache",
+   "ms": 5,
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/23242439",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.7,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Siun sote / Pohjois-Karjalan keskussairaala / KYS Kuopion yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision doc",
+   "ms": 15905
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 27.6,
+   "result_en": "1 search: B: surgeon in North Karelia lung meeting",
+   "ms": 3039
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote keuhkosyöpä moniammatillinen meeting thoraxkirurgi KYS",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: surgeon in North Karelia lung meeting",
+   "status": "done",
+   "t_s": 30.6,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, keuhkosyopa.fi, siunsote.fi",
+   "ms": 1858,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitotiimi-ja-valmistautuminen-vastaanotolle/",
+     "title": "Hoitotiimi ja valmistautuminen vastaanotolle – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+     "title": "Keuhkosairaudet - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+     "title": "Rintaelin- ja verisuonikirurgia - Siun sote"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 32.5,
+   "result_en": "2 reads: B: local lung meeting; B: local MDT",
+   "ms": 3840
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "focus": "keuhkosyöpä hoitopäätös meeting kirurgi KYS",
+   "why": "B: local lung meeting",
+   "status": "done",
+   "t_s": 36.3,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2967,
+   "error": true
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "focus": "keuhkosyöpä moniammatillinen kokous leikkaus KYS",
+   "why": "B: local MDT",
+   "status": "done",
+   "t_s": 36.3,
+   "result_en": "\"Syöpäsairaudet ja sädehoito - Siun sote\" · 3 252 chars · from cache",
+   "ms": 1,
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "chars": 3252,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "published": "2026-06-24T04:00:33+00:00",
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 39.3,
+   "result_en": "writes the answer",
+   "ms": 11929
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/rintaelin-ja-verisuonikirurgian-palvelut/",
+   "title": "Rintaelin- ja verisuonikirurgia - Siun sote",
+   "chars": 3710,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:22:04+00:00",
+   "published": "2026-10-09T11:21:49+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "chars": 3252,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:21:35+00:00",
+   "published": "2026-06-24T04:00:33+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:22:44+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: the KYS care pathway puts a thoracic surgeon in the KYS lung meeting, but no Siun sote or KYS page shows a surgeon reviewing North Karelia patients before surgery is refused.",
+ "seconds": 51.2,
+ "searched_en": "Searched 5 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Siun sote thoraxkirurgin konsultaatio\"; \"KYS keuhkokirurgi leikkausarvio keuhkosyöpä\"; \"Pohjois-Karjalan keskussairaala keuhkosyöpäleikkaukset keskittäminen\", ...) and read 4 pages on syovanhoitokeskus.pshyvinvointialue.fi, siunsote.fi, europepmc.org.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Siun sote thoraxkirurgin konsultaatio",
+  "KYS keuhkokirurgi leikkausarvio keuhkosyöpä",
+  "Pohjois-Karjalan keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+  "Siun sote keuhkosyöpä moniammatillinen meeting thoraxkirurgi KYS"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: the KYS care pathway puts a thoracic surgeon in the KYS lung meeting, but no Siun sote or KYS page shows a surgeon reviewing North Karelia patients before surgery is refused.",
+ "verdict_en": "No public sign that it is running in North Karelia. Evidence supports that it works, but not the size of effect we assume. Supported: Lau et al. 2013 (Journal of Thoracic Oncology) found a higher resection rate where thoracic surgeons were based than in peripheral hospitals (20.0% vs 11.6%) in England in 2008. Not supported: The pages read do not show how big the effect of a surgeon's second opinion is (our assumption: 1.2 points), nor whether it would hold in Finland.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "surgeon_second_opinion",
+ "intervention_name_en": "Thoracic surgeon reviews every decision not to operate",
+ "area_name_en": "North Karelia wellbeing services county"
+}

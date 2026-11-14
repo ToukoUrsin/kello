@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Savo wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated. Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
+ "area_id": "12",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A Dutch national registry study (Annals of Oncology, 2012) found a 7% absolute fall in untreated elderly stage I patients after precision radiotherapy became available.",
+ "not_supported_en": "Neither the 0.8-point gain across all lung cancer patients nor the 8% share of elderly stage I patients is shown, and nothing shows that a referral rule adds anything once KYS already offers the treatment.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Jos kyseessä on pieni keuhkotuumori eikä kasvain ole paikallisesti edennyt, voidaan antaa täsmäsädehoitoa mikäli potilaan yleistila tai muut sairaudet eivät salli operatiivista hoitoa.",
+ "in_use_source": {
+  "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+  "title": "Keuhkosyöpäpotilaan hoitoketju",
+  "published": "2021-10-22",
+  "fetched_at": "2026-11-14T01:19:09+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows a rule that every frail stage I patient is referred for precision radiotherapy, or any figures on how often this happens.",
+ "summary_en": "The KYS lung cancer care pathway (version from 2021) says that a small lung tumour that has not spread locally may be treated with precision radiotherapy when the patient's general health or other illnesses rule out surgery. It also says every lung cancer patient is discussed at least once in a meeting where the treatment decision is made. No page says that every eligible patient must be referred, and no South Savo (Eloisa) page on this was found. The Dutch national cancer registry study (Annals of Oncology, 2012) found 7% fewer untreated elderly stage I patients once this radiotherapy was fully available.",
+ "unanswered_en": "I found no South Savo (Eloisa) page or KYS figures showing whether all frail stage I patients are actually referred.",
+ "sources": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Jos kyseessä on pieni keuhkotuumori eikä kasvain ole paikallisesti edennyt, voidaan antaa täsmäsädehoitoa mikäli potilaan yleistila tai muut sairaudet eivät salli operatiivista hoitoa.",
+   "about": "in_use",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Jokaisen keuhkosyöpäpotilaan tilanne käsitellään ainakin kertaalleen kokouksessa, jossa tehdään hoitopäätös.",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "quote": "Between period A and C, there was a 7% absolute reduction in patients going untreated, corresponding to an 8-month improvement in median survival",
+   "about": "effect",
+   "published": "2012-05-02",
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hus.fi",
+   "ms": 2475,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Eloisa stereotaktinen sädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, docrates.mehilainen.fi, tamamatka.fi, keuhkosyopa.fi",
+   "ms": 1431,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13049",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito-etapesakkeiden-hoidossa/",
+     "title": "Hypofraktioitu stereotaktinen sädehoito ja etäpesäkkeet - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://tamamatka.fi/stereotaktinen-sadehoito-aivoihin-keuhkosyopa/",
+     "title": "Stereotaktinen sädehoito aivoihin - Kun lääkkeet menettävät tehonsa - TÄMÄ MATKA"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/sadehoito/",
+     "title": "Sädehoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/stereotaktinen-sadehoito/",
+     "title": "Stereotaktinen sädehoito - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://docplayer.fi/63706926-Stereotaktinen-sadehoito-paikallisen-ei-pienisoluisen-keuhkosyovan-hoidossa.html",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa - PDF Free Download"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS täsmäsädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, hus.fi, keuhkosyopa.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/tasmahoidot/",
+     "title": "Täsmähoidot – Keuhkosyöpä"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/",
+     "title": "Hoitovaihtoehdot – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Mikkelin keskussairaala SBRT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: etelasavonha.fi, suomi.fi, esairaala.fi",
+   "ms": 1427,
+   "results": [
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/sisataudit/",
+     "title": "Sisätautien erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/mikkelin-keskussairaala-etela-savon-hyvinvointialue/210a6334-6a89-41e6-8e76-02aaca9d825c",
+     "title": "Mikkelin keskussairaala - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://etelasavonha.fi/asiakkaan-opas/toimipisteet/mikkelin-keskussairaala/",
+     "title": "Mikkelin keskussairaala - Eloisa"
+    },
+    {
+     "url": "https://www.esairaala.fi/toimijat/eid/mikkelin-keskussairaala",
+     "title": "Esairaala"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Mikkelin_hyvinvointikeskus",
+     "title": "Mikkelin hyvinvointikeskus – Wikipedia"
+    },
+    {
+     "url": "https://say.fi/files/laine_mikkeli.pdf",
+     "title": "504 Finnanest `` Mikkelin keskussairaala sijaitsee"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "2 reads: B: KYS pathway SBRT for inoperable; A: effect size",
+   "ms": 4108
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "stereotaktinen sädehoito, leikkaukseen soveltumaton, Mikkeli, Etelä-Savo, sädehoito",
+   "why": "B: KYS pathway SBRT for inoperable",
+   "status": "done",
+   "t_s": 7.2,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/22553198",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/22553198",
+   "focus": "untreated, stereotactic, elderly stage I, percentage",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.2,
+   "result_en": "\"Early-stage lung cancer in elderly patients: a population-based study \" · 1 280 chars · from cache",
+   "ms": 0,
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/22553198",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.2,
+   "result_en": "writes the answer",
+   "ms": 13083
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:20:29+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Before paying, ask the KYS Cancer Centre (KYS Syövänhoitokeskus) whether patients from South Savo with stage I cancer who are too frail for surgery are already always sent for precision radiotherapy, because its care pathway already offers this treatment but does not say that every such patient is referred.",
+ "seconds": 20.3,
+ "searched_en": "Searched 4 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Eloisa stereotaktinen sädehoito keuhkosyöpä\"; \"KYS täsmäsädehoito keuhkosyöpä\"; \"Mikkelin keskussairaala SBRT\") and read 2 pages on syovanhoitokeskus.pshyvinvointialue.fi, europepmc.org.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Eloisa stereotaktinen sädehoito keuhkosyöpä",
+  "KYS täsmäsädehoito keuhkosyöpä",
+  "Mikkelin keskussairaala SBRT"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Before paying, ask the KYS Cancer Centre (KYS Syövänhoitokeskus) whether patients from South Savo with stage I cancer who are too frail for surgery are already always sent for precision radiotherapy, because its care pathway already offers this treatment but does not say that every such patient is referred.",
+ "verdict_en": "Partly in place in the KYS university hospital area, which treats South Savo's patients. Missing: No page shows a rule that every frail stage I patient is referred for precision radiotherapy, or any figures on how often this happens. Evidence supports that it works, but not the size of effect we assume. Supported: A Dutch national registry study (Annals of Oncology, 2012) found a 7% absolute fall in untreated elderly stage I patients after precision radiotherapy became available. Not supported: Neither the 0.8-point gain across all lung cancer patients nor the 8% share of elderly stage I patients is shown, and nothing shows that a referral rule adds anything once KYS already offers the treatment.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "sbrt_pathway",
+ "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
+ "area_name_en": "South Savo wellbeing services county"
+}

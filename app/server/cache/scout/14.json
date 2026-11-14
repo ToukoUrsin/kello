@@ -1,0 +1,528 @@
+{
+ "area_id": "14",
+ "area_name_en": "North Karelia wellbeing services county",
+ "area_name_fi": "Pohjois-Karjalan hyvinvointialue",
+ "question": "What is North Karelia wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-06-24",
+   "what_en": "Siun sote's cancer centre at Pohjois-Karjalan keskussairaala (drug therapy unit, oncology outpatient clinic, radiotherapy unit) gives drug therapy and radiotherapy without queueing, following the patient's treatment plan.",
+   "what_fi": "Siun soten syöpäkeskus Pohjois-Karjalan keskussairaalassa (lääkehoitoyksikkö, syöpätautien poliklinikka, sädehoitoyksikkö) antaa lääke- ja sädehoidon hoitosuunnitelman mukaan jonottamatta.",
+   "quote": "Syöpäsairauttasi hoidamme lääkehoidolla ja sädehoidolla, joihin pääset hoitosuunnitelmasi mukaisesti jonottamatta.",
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:21:35+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-24",
+   "what_en": "Siun sote has a cancer nurse who supports patients and their families, and it holds a first-information day for newly diagnosed patients three times a year.",
+   "what_fi": "Siun sotessa syöpäsairaanhoitaja tukee potilaita ja omaisia, ja ensitietopäivä järjestetään kolme kertaa vuodessa.",
+   "quote": "Sinun ja läheistesi tukena toimii syöpäsairaanhoitaja. Syöpään sairastuneille ja heidän omaisilleen järjestämme kolme kertaa vuodessa ensitietopäivän",
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "relates_to": "nurse_navigator",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:21:35+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-23",
+   "what_en": "The pulmonology outpatient clinic at Pohjois-Karjalan keskussairaala investigates suspected lung cancer with bronchoscopy, pulmonary function tests and X-rays; patients need a doctor's referral.",
+   "what_fi": "Pohjois-Karjalan keskussairaalan keuhkopoliklinikka tutkii keuhkosyöpäepäilyjä keuhkoputkien tähystyksellä, puhalluskokeilla ja röntgentutkimuksilla; vastaanotolle tarvitaan lääkärin lähete.",
+   "quote": "keuhkoputkien tähystys ja erilaiset puhalluskokeet",
+   "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "title": "Keuhkosairaudet - Siun sote",
+   "relates_to": "ebus_capacity",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:22:32+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2021-10-22",
+   "what_en": "In the KYS lung cancer care pathway, a weekly multidisciplinary meeting (thoracic surgeon, pathologist, radiologist, oncologist, pulmonologists) reviews every lung cancer patient at least once and records the treatment decision.",
+   "what_fi": "KYSin keuhkosyöpäpotilaan hoitoketjussa viikoittainen moniammatillinen meeting (thorax-kirurgi, patologi, radiologi, onkologi, keuhkolääkärit) käsittelee jokaisen potilaan vähintään kerran ja kirjaa hoitopäätöksen.",
+   "quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä. Jokaisen keuhkosyöpäpotilaan tilanne käsitellään ainakin kertaalleen kokouksessa, jossa tehdään hoitopäätös.",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "relates_to": "mdt",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  }
+ ],
+ "summary_en": "Siun sote treats lung cancer at Pohjois-Karjalan keskussairaala in Joensuu. Its cancer centre gives radiotherapy and drug therapy without queueing according to the treatment plan, a cancer nurse supports patients and families, and the pulmonology clinic does bronchoscopy. The KYS university hospital area has a lung cancer care pathway (2021) with a weekly multidisciplinary meeting that reviews every patient. I found no North Karelia-specific decisions, projects, waiting-time figures or screening pilots for lung cancer.",
+ "not_found_en": "I found no regional board or council decisions, investments, waiting-time figures, screening pilots, or recent local news about lung cancer care in North Karelia.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; local news",
+   "ms": 4411
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: siunsote.fi, suomi.fi, verkkoajanvarauspth.siunsote.fi",
+   "ms": 1988,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+     "title": "Keuhkosairaudet - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/syopakeskus-pohjois-karjalan-hyvinvointialue-siun-sote/4f19552a-0ae6-45c9-93c9-25696afc1f93",
+     "title": "Syöpäkeskus - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://verkkoajanvarauspth.siunsote.fi/",
+     "title": "Verkkoajanvaraus - Ajanvaraus"
+    },
+    {
+     "url": "https://www.siunsote.fi/",
+     "title": "Etusivu - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-pohjois-karjalan-hyvinvointialue-siun-sote/fa4ca00c-3253-48bd-afff-c4bc3ac421d5",
+     "title": "Keuhkosairaudet - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Karjalan keskussairaala keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: siunsote.fi, suomi.fi",
+   "ms": 2281,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+     "title": "Keuhkosairaudet - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/asiointikanava/pohjois-karjalan-keskussairaala/",
+     "title": "Pohjois-Karjalan keskussairaala - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-pohjois-karjalan-hyvinvointialue-siun-sote/fa4ca00c-3253-48bd-afff-c4bc3ac421d5",
+     "title": "Keuhkosairaudet - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-poliklinikan-palvelunumero-pohjois-karjalan-hyvinvointialue-siun-sote/7a72c58e-070e-4cba-9aa0-b914389f7b4a",
+     "title": "Keuhkosairauksien poliklinikan palvelunumero - Pohjois-Karjalan..."
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://www.potilas.com/sairaalat/pohjois-karjalan-keskussairaala/",
+     "title": "Pohjois-Karjalan keskussairaala – yhteystiedot | Potilas.com"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote aluehallitus syöpähoito sädehoito päätös",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: siunsote.fi, suomi.fi",
+   "ms": 2959,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/tietoa-meista/paatoksenteko/esityslistat-poytakirjat-ja-viranhaltijapaatokset/",
+     "title": "Esityslistat, pöytäkirjat ja viranhaltijapäätökset - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopasairaudet-ja-sadehoito-pohjois-karjalan-hyvinvointialue-siun-sote/24b32409-7f91-4cd8-9706-343dea884a99",
+     "title": "Syöpäsairaudet ja sädehoito - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/tietoa-meista/paatoksenteko/aluehallitus/",
+     "title": "Aluehallitus - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/syopakeskus-pohjois-karjalan-hyvinvointialue-siun-sote/4f19552a-0ae6-45c9-93c9-25696afc1f93",
+     "title": "Syöpäkeskus - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/tietoa-meista/paatoksenteko/",
+     "title": "Päätöksenteko - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Joensuu keuhkosyöpä 2026 uutinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: syopajarjestot.fi, satakunnanhyvinvointialue.fi, poliisi.fi, pohjois-karjalansyopayhdistys.fi",
+   "ms": 1828,
+   "results": [
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+     "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+     "title": "Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku"
+    },
+    {
+     "url": "https://poliisi.fi/-/parturi-kampaamoon-murtauduttu-joensuussa",
+     "title": "Parturi-kampaamoon murtauduttu Joensuussa - Poliisi"
+    },
+    {
+     "url": "https://pohjois-karjalansyopayhdistys.fi/tapahtuma/joensuu-cancer-meet-and-greet/",
+     "title": "JOENSUU: Cancer Meet and Greet - Pohjois-Karjalan Syöpäyhdistys"
+    },
+    {
+     "url": "https://yle.fi/a/74-20256577",
+     "title": "Joensuun kaupunki joutuu palauttamaan varhais­kasvatuksen..."
+    },
+    {
+     "url": "https://www.filha.fi/koulutus/pohjois-karjalan-alueellinen-keuhkosairauksien-ja-allergologian-koulutuspaiva/",
+     "title": "Pohjois-Karjalan alueellinen keuhkosairauksien ja allergologian koulutuspäivä, Joensuu - Filha"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "4 reads: diagnostics; treatment; quality figures; smoking cessation",
+   "ms": 6554
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "focus": "keuhkosyöpä bronkoskopia lähete tutkimukset",
+   "why": "diagnostics",
+   "status": "done",
+   "t_s": 13.9,
+   "result_en": "\"Keuhkosairaudet - Siun sote\" · 2 766 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosairaudet - Siun sote",
+   "chars": 2766,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "published": "2026-06-23T07:01:58+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "focus": "sädehoito lääkehoito syöpähoitaja keuhkosyöpä",
+   "why": "treatment",
+   "status": "done",
+   "t_s": 13.9,
+   "result_en": "\"Syöpäsairaudet ja sädehoito - Siun sote\" · 3 252 chars · from cache",
+   "ms": 2,
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "chars": 3252,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "published": "2026-06-24T04:00:33+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "focus": "Pohjois-Karjala levinneisyysaste hoito",
+   "why": "quality figures",
+   "status": "done",
+   "t_s": 13.9,
+   "result_en": "\"Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tieto\" · 5 861 chars · 6 of 10 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "published": "2026-04-23T06:06:09+00:00",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.filha.fi/koulutus/pohjois-karjalan-alueellinen-keuhkosairauksien-ja-allergologian-koulutuspaiva/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.filha.fi/koulutus/pohjois-karjalan-alueellinen-keuhkosairauksien-ja-allergologian-koulutuspaiva/",
+   "focus": "tupakoinnin lopetus keuhkosyöpä",
+   "why": "smoking cessation",
+   "status": "done",
+   "t_s": 13.9,
+   "result_en": "\"Pohjois-Karjalan alueellinen keuhkosairauksien ja allergologian koulut\" · 2 203 chars",
+   "ms": 2860,
+   "title": "Pohjois-Karjalan alueellinen keuhkosairauksien ja allergologian koulutuspäivä, Joensuu - Filha",
+   "chars": 2203,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.filha.fi/koulutus/pohjois-karjalan-alueellinen-keuhkosairauksien-ja-allergologian-koulutuspaiva/",
+   "published": "2026-02-04T07:40:17+00:00",
+   "js_render": false
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.8,
+   "result_en": "2 searches: equipment decisions; university hospital surgery role",
+   "ms": 3914
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote syöpäkeskus sädehoitolaite uusi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "equipment decisions",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "6 results: siunsote.fi, suomi.fi, pielisjokiseutu.fi",
+   "ms": 2104,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopasairaudet-ja-sadehoito-pohjois-karjalan-hyvinvointialue-siun-sote/24b32409-7f91-4cd8-9706-343dea884a99",
+     "title": "Syöpäsairaudet ja sädehoito - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/syopakeskus-pohjois-karjalan-hyvinvointialue-siun-sote/4f19552a-0ae6-45c9-93c9-25696afc1f93",
+     "title": "Syöpäkeskus - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.pielisjokiseutu.fi/paikalliset/9948095",
+     "title": "Miunpalvelut-asiointi päättyy Siun sotessa – Asiakkaan kannattaa..."
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/husin-suurin-sairaalahanke-siltasairaala-avaa-ovensa/",
+     "title": "Husin suurin sairaalahanke Siltasairaala avaa ovensa - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://verkkoajanvarauspth.siunsote.fi/",
+     "title": "siunsote.fi - Verkkoajanvaraus - Ajanvaraus"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS erva keuhkosyöpä leikkaus Pohjois-Karjala",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "university hospital surgery role",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, sydansairaala.fi, fi.wikipedia.org, keuhkosyopa.fi",
+   "ms": 2899,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Yliopistosairaaloiden_erityisvastuualueet",
+     "title": "Yliopistosairaaloiden erityisvastuualueet – Wikipedia"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/leikkaushoito/",
+     "title": "Leikkaushoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitopalvelut",
+     "title": "Hoitopalvelut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 23.6,
+   "result_en": "1 read: KYS pathway MDT",
+   "ms": 4104
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "hoitokokous Pohjois-Karjala Joensuu leikkaus lähete viive",
+   "why": "KYS pathway MDT",
+   "status": "done",
+   "t_s": 27.7,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 27.7,
+   "result_en": "writes the answer",
+   "ms": 14911
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.siunsote.fi/palvelu/keuhkosairauksien-palvelut/",
+   "title": "Keuhkosairaudet - Siun sote",
+   "chars": 2766,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:22:32+00:00"
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "chars": 3252,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:21:35+00:00"
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:26+00:00"
+  },
+  {
+   "url": "https://www.filha.fi/koulutus/pohjois-karjalan-alueellinen-keuhkosairauksien-ja-allergologian-koulutuspaiva/",
+   "title": "Pohjois-Karjalan alueellinen keuhkosairauksien ja allergologian koulutuspäivä, Joensuu - Filha",
+   "chars": 2203,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:56+00:00"
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:36:21+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 42.6
+}

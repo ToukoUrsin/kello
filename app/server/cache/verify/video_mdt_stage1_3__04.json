@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Vantaa and Kerava wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "04",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "One UK before-after study (62 patients in one year) found that the annual resection rate rose by 30% (relative) after video MDT meetings started; it reports no change in the share of all patients who got curative treatment.",
+ "supported_en": "A 2004 UK study (Davison et al., J Telemed Telecare) reports a 30% relative rise in resections after video MDT meetings started.",
+ "not_supported_en": "The pages do not show the assumed 1.5-point rise in the curative share, or any effect in a setting like HUS, where the lung team is already in the same organisation.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+ "in_use_source": {
+  "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+  "title": "Keuhkosyövän hoitopolku",
+  "published": "15.06.2026",
+  "fetched_at": "2026-11-14T00:52:24+00:00"
+ },
+ "in_use_summary_en": "HUS, which runs Peijas hospital and treats patients from Vantaa and Kerava, says its lung cancer pathway has a multidisciplinary specialist team that reviews cases and gives a treatment recommendation \"when needed\" (page updated 15.06.2026).",
+ "missing_en": "No page shows that every stage I–III patient must be reviewed by the HUS lung team before curative treatment is ruled out.",
+ "summary_en": "HUS, which treats Vantaa and Kerava lung cancer patients, says its multidisciplinary lung cancer specialist team reviews cases and gives a treatment recommendation when needed. No page says every stage I–III patient must be reviewed. The only effect evidence read is one UK before-after study, which found a 30% relative rise in resections after video MDT meetings started; this is weaker than the assumed effect and comes from a different setting.",
+ "unanswered_en": "I found nothing showing whether HUS reviews every stage I–III patient, or how many patients decided at Peijas go without the team's review.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "about": "in_use",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Jos epäillään keuhkosyöpää, lääkäri tekee lähetteen HUSin keuhkosairauksien vastaanotolle.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1588,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "VAKE moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, tyks.fi, mtvuutiset.fi, keuhkosyopa.fi",
+   "ms": 3281,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/kaikki-voisi-olla-toisin-jaakon-vaimo-kuoli-keuhkosyopaan-joka-loydettiin-liian-myohaan/9373770",
+     "title": "Outi-Marian keuhkosyöpä löydettiin liian myöhään | MTV Uutiset"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitotiimi-ja-valmistautuminen-vastaanotolle/",
+     "title": "Hoitotiimi ja valmistautuminen vastaanotolle – Keuhkosyöpä"
+    },
+    {
+     "url": "https://syopa-alueelliset.s3.eu-west-1.amazonaws.com/sites/271/2016/10/13122739/keuhkosyopa_web_120522.pdf",
+     "title": "Keuhkosyöpä - Potilaan opas"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, duodecimlehti.fi, kiinteistoliitto.fi",
+   "ms": 2426,
+   "results": [
+    {
+     "url": "https://www.hus.fi/tietoa-meista/hallinto-ja-paatoksenteko/yhtymakokous-yhtymahallitus-ja-konsernijaosto",
+     "title": "Yhtymäkokous, yhtymähallitus ja konsernijaosto | HUS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/etayhteysteknisellavalineella/",
+     "title": "Yhtiökokoukseen osallistuminen teknisen välineen avulla"
+    },
+    {
+     "url": "https://www.hus.fi/ajankohtaista/yhtymakokous-jarjestetaan-verkkokokouksena-18122025-klo-10",
+     "title": "Yhtymäkokous järjestetään verkkokokouksena 18.12.2025 klo 10 | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/sites/default/files/2025-06/Luottamushenkil%C3%B6iden%20taloudelliset%20etuudet%20%28Yhtym%C3%A4kokous%2018.6.2025%20%C2%A7%2016%29.pdf",
+     "title": "Luottamushenkilöiden taloudelliset etuudet"
+    },
+    {
+     "url": "https://kotiseutuliitto.fi/tietopankki/yhdistystoiminta/yhdistyksen-sahkoinen-kokous/",
+     "title": "Yhdistyksen sähköinen kokous - Suomen Kotiseutuliitto"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Peijaksen sairaala keuhkomeeting videoyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hengitysyhdistys.fi",
+   "ms": 1759,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala",
+     "title": "Peijaksen sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala/sisatautien-osasto-s2-ja-sisatautien-ja",
+     "title": "Sisätautien osasto S2 ja sisätautien ja keuhkosairauksien osasto S3, Peijaksen sairaala | HUS"
+    },
+    {
+     "url": "https://www.hengitysyhdistys.fi/vantaa/peijaksen-sairaalan-keuhko-osaston-toiminnan-lopettaminen/",
+     "title": "Peijaksen sairaalan keuhko-osaston toiminnan lopettaminen - Vantaan Hengitysyhdistys"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://palvelukartta.hel.fi/fi/unit/16115",
+     "title": "Peijaksen sairaala"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/peijaksen-sairaala/peijaksen-sairaalan-rontgen",
+     "title": "Peijaksen sairaalan röntgen | HUS"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.3,
+   "result_en": "2 reads: B: HUS MDT for all patients; A effect size",
+   "ms": 5514
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous hoitopäätös leikkaus sädehoito Peijas",
+   "why": "B: HUS MDT for all patients",
+   "status": "done",
+   "t_s": 8.8,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video multidisciplinary",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 8.8,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 1,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.8,
+   "result_en": "writes the answer",
+   "ms": 13152
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:53:33+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to a rule that every stage I–III patient is reviewed by the HUS lung team before curative treatment is ruled out, because HUS says its team already reviews cases when needed.",
+ "seconds": 22.0,
+ "searched_en": "Searched 4 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"VAKE moniammatillinen kokous keuhkosyöpä\"; \"HUS MDT-kokous etäyhteydellä\"; \"Peijaksen sairaala keuhkomeeting videoyhteys\") and read 2 pages on hus.fi, europepmc.org.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "VAKE moniammatillinen kokous keuhkosyöpä",
+  "HUS MDT-kokous etäyhteydellä",
+  "Peijaksen sairaala keuhkomeeting videoyhteys"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to a rule that every stage I–III patient is reviewed by the HUS lung team before curative treatment is ruled out, because HUS says its team already reviews cases when needed.",
+ "verdict_en": "Partly in place in the HUS university hospital area, which treats Vantaa and Kerava's patients. Missing: No page shows that every stage I–III patient must be reviewed by the HUS lung team before curative treatment is ruled out. Evidence supports that it works, but not the size of effect we assume. Supported: A 2004 UK study (Davison et al., J Telemed Telecare) reports a 30% relative rise in resections after video MDT meetings started. Not supported: The pages do not show the assumed 1.5-point rise in the curative share, or any effect in a setting like HUS, where the lung team is already in the same organisation.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "Vantaa and Kerava wellbeing services county"
+}

@@ -1,0 +1,566 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Päijät-Häme wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Thoracic surgeon reviews every decision not to operate. A thoracic surgeon from the university hospital sits in the county lung meeting every week and gives a second opinion before a stage I-II patient is refused surgery. Counties without their own thoracic surgeon decide about surgery without one today.",
+ "area_id": "09",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "England's national lung cancer audit (Lau et al., 2013): 20.0% of patients were operated on in hospitals with thoracic surgeons, against 11.6% in other hospitals.",
+ "not_supported_en": "The effect of a surgeon joining the lung meeting is not isolated, so the assumed 1.2 points is not confirmed.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "HUS says it does its lung surgery at Meilahti Tower Hospital and that its multidisciplinary lung cancer team gives recommendations \"when needed\". No HUS or Päijät-Häme page we read says that a thoracic surgeon reviews Päijät-Häme's decisions not to operate. A study of England's national lung cancer audit (Lau et al., 2013) found that 20.0% of patients were operated on in hospitals with resident thoracic surgeons, against 11.6% in other hospitals; the study is observational.",
+ "unanswered_en": "We found no public page describing Päijät-Häme's lung cancer meeting or a surgeon's part in it.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia",
+   "quote": "Aikuispotilaiden keuhko-, välikarsina- ja ruokatorvikirurgian diagnostiset tutkimukset ja leikkaukset olemme keskittäneet HUSin alueella Meilahden tornisairaalaan.",
+   "about": "context",
+   "published": "2026-10-02T01:31:21+03:00",
+   "fetched_at": "2026-11-14T00:58:12+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "with a higher resection rate in hospitals where surgeons were based (base hospitals) than in peripheral hospitals (20.0% versus 11.6%, p",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "The greatest improvement in the resection rate was in units with expansion of specialist thoracic surgeons.",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1449,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Hämeen hyvinvointialue thoraxkirurgin konsultaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: paijatha.fi, suomi.fi",
+   "ms": 1101,
+   "results": [
+    {
+     "url": "https://paijatha.fi/",
+     "title": "Etusivu - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/kirurgian-osastot-paijat-hameen-hyvinvointialue/d15a7610-4167-43ca-9547-a00762b19503",
+     "title": "Kirurgian osastot - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://paijatha.fi/tietoa-meista/kumppanit-ja-hankinnat/palveluntuottajille/yksityiset-palveluntuottajat/",
+     "title": "Yksityiset palveluntuottajat - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/kirurgian-osastot/",
+     "title": "Kirurgian osastot - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointiopas.paijatha.fi/palveluhakemisto/asiakas-ja-potilastiedon-arkisto/",
+     "title": "Asiakas- ja potilastiedon arkisto - Päijät-Hämeen hyvinvointialue..."
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/kirurgian-poliklinikka/",
+     "title": "Kirurgian poliklinikka - Päijät-Hämeen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkokirurgi leikkausarvio keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, sydansairaala.fi",
+   "ms": 2339,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+     "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia | HUS"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/hoito/",
+     "title": "Keuhkosyövän hoito – hoitomuodot – muistilista vastaanotolle"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Hämeen keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: paijatha.fi",
+   "ms": 1421,
+   "results": [
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/leikkausyksikko/",
+     "title": "Leikkausyksikkö - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/kirurgian-osastot/",
+     "title": "Kirurgian osastot - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-vuodeosasto-paijat-hameen-hyvinvointialue/edf7fa60-a60d-40d4-8ef1-5153998c1494",
+     "title": "Keuhkosairauksien vuodeosasto - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://projektiuutiset.fi/paijat-hameen-keskussairaalan-rv7/",
+     "title": "Päijät-Hämeen keskussairaalan RV7 – Rakennusalan trendit"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.3,
+   "result_en": "2 reads: B: who decides surgery; A effect size",
+   "ms": 4311
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous thoraxkirurgi leikkaus keskussairaala Päijät-Häme",
+   "why": "B: who decides surgery",
+   "status": "done",
+   "t_s": 6.7,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/23242439",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "focus": "surgeon attended MDT resection rate 14.4% 12.0%",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 6.7,
+   "result_en": "\"The effects of increased provision of thoracic surgical specialists on\" · 1 323 chars · from cache",
+   "ms": 2,
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/23242439",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.7,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Päijät-Hämeen hyvinvointialue / Päijät-Hämeen keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page",
+   "ms": 11757
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.4,
+   "result_en": "1 search: B: surgeon in county lung meeting",
+   "ms": 3064
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Häme keuhkosyöpä moniammatillinen kokous thoraxkirurgi HUS",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: surgeon in county lung meeting",
+   "status": "done",
+   "t_s": 21.5,
+   "result_en": "6 results: hus.fi, suomi.fi",
+   "ms": 2262,
+   "results": [
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio/sydan-ja-keuhkokeskus",
+     "title": "Sydän- ja keuhkokeskus | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/meilahden-tornisairaala/keuhko-ja-ruokatorvikirurgian-osasto",
+     "title": "Keuhko- ja ruokatorvikirurgian osasto M11, Meilahden tornisairaala | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/kirurgian-osastot/",
+     "title": "Kirurgian osastot - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+     "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia | HUS"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 23.7,
+   "result_en": "2 reads: B: HUS surgery for region; B: county lung team",
+   "ms": 4555
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "focus": "keuhkosyöpä leikkaus lähete keskussairaala Päijät-Häme meeting",
+   "why": "B: HUS surgery for region",
+   "status": "done",
+   "t_s": 28.3,
+   "result_en": "\"Keuhko-, välikarsina- ja ruokatorvikirurgia\" · 4 098 chars · from cache",
+   "ms": 0,
+   "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia",
+   "chars": 4098,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "published": "2026-10-02T01:31:21+03:00",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+   "focus": "keuhkosyöpä moniammatillinen",
+   "why": "B: county lung team",
+   "status": "done",
+   "t_s": 28.3,
+   "result_en": "\"Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue - Suomi.fi\" · 1 143 chars",
+   "ms": 1323,
+   "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue - Suomi.fi",
+   "chars": 1143,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+   "published": "27.11.2025",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.6,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Päijät-Hämeen hyvinvointialue / Päijät-Hämeen keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page",
+   "ms": 11446
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 41.1,
+   "result_en": "1 search: B: surgical review arrangement",
+   "ms": 2766
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "leikkauskelpoisuus keuhkosyöpä Päijät-Häme HUS yhteistyö",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: surgical review arrangement",
+   "status": "done",
+   "t_s": 43.8,
+   "result_en": "6 results: hus.fi, syoparekisteri.fi, hyvaks.fi",
+   "ms": 2752,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/leikkausyksikko/",
+     "title": "Leikkausyksikkö - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92223",
+     "title": "Keuhkosyövän hoitosuositus"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 46.6,
+   "result_en": "writes the answer",
+   "ms": 9854
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia",
+   "chars": 4098,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:58:12+00:00",
+   "published": "2026-10-02T01:31:21+03:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+   "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue - Suomi.fi",
+   "chars": 1143,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:18:31+00:00",
+   "published": "27.11.2025",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:18:58+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: none of the HUS or Päijät-Häme pages we read shows a thoracic surgeon reviewing the county's decisions not to operate, and data from England support the direction of the effect.",
+ "seconds": 56.5,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Päijät-Hämeen hyvinvointialue thoraxkirurgin konsultaatio\"; \"HUS keuhkokirurgi leikkausarvio keuhkosyöpä\"; \"Päijät-Hämeen keskussairaala keuhkosyöpäleikkaukset keskittäminen\", ...) and read 4 pages on hus.fi, europepmc.org, suomi.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Päijät-Hämeen hyvinvointialue thoraxkirurgin konsultaatio",
+  "HUS keuhkokirurgi leikkausarvio keuhkosyöpä",
+  "Päijät-Hämeen keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+  "Päijät-Häme keuhkosyöpä moniammatillinen kokous thoraxkirurgi HUS",
+  "leikkauskelpoisuus keuhkosyöpä Päijät-Häme HUS yhteistyö"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: none of the HUS or Päijät-Häme pages we read shows a thoracic surgeon reviewing the county's decisions not to operate, and data from England support the direction of the effect.",
+ "verdict_en": "No public sign that it is running in Päijät-Häme. Evidence supports that it works, but not the size of effect we assume. Supported: England's national lung cancer audit (Lau et al., 2013): 20.0% of patients were operated on in hospitals with thoracic surgeons, against 11.6% in other hospitals. Not supported: The effect of a surgeon joining the lung meeting is not isolated, so the assumed 1.2 points is not confirmed.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "surgeon_second_opinion",
+ "intervention_name_en": "Thoracic surgeon reviews every decision not to operate",
+ "area_name_en": "Päijät-Häme wellbeing services county"
+}

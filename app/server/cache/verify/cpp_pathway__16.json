@@ -1,0 +1,554 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Ostrobothnia wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Standardised lung cancer pathway with booked slots. A lung cancer pathway on the Danish/Swedish/Norwegian model: fixed referral criteria, pre-booked CT, PET-CT, bronchoscopy and MDT slots, a named pathway owner, and published time limits for each step.",
+ "area_id": "16",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A Swedish national study (Scientific Reports 2023) gives the lung cancer pathway a lead time of 30–44 days, but only 30 % of patients started treatment within it, and it reports no days saved.",
+ "supported_en": "Sweden's lung cancer pathway has a lead time of 30–44 days, and 30 % of patients met it (Scientific Reports 2023).",
+ "not_supported_en": "None of the pages read shows how many days a pathway saves between first symptom and treatment, so the assumed 14 days (range 5–23) is not confirmed.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "After three search rounds I found no public sign of a standardised lung cancer pathway with pre-booked slots, a named pathway owner or published time limits for each step at Hyvaep or Tays. Pirha's pathway page gives only typical waiting times.",
+ "missing_en": "",
+ "summary_en": "Hyvaep's lung clinic page says the clinic investigates suspected lung cancer at Seinäjoki Central Hospital and that lung cancer found there is treated elsewhere case by case. It does not describe a standardised pathway with booked slots or time limits. Pirha's (Tays) pathway page only gives typical times, such as the CT scan usually being done within a week of handling the referral, and does not say whether it covers South Ostrobothnia's patients. The Swedish study shows a lead time of 30–44 days that only 30 % of lung pathway patients met, and it gives no number of days saved.",
+ "unanswered_en": "I found no decision, project or published time limits for a standardised lung cancer pathway from Hyvaep or Tays, and no study reporting how many days such a pathway saves.",
+ "sources": [
+  {
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "title": "Keuhkosairaudet",
+   "quote": "Poliklinikalla todettu keuhkosyöpä hoidetaan tapauskohtaisesti muualla.",
+   "about": "context",
+   "published": "2026-11-13T01:37:10+00:00",
+   "fetched_at": "2026-11-14T01:23:48+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Tutkimukset aloitetaan yleensä keuhkojen ja ylävatsan tietokonekerroskuvauksella, joka suoritetaan useimmiten viikon sisällä lähetteen käsittelystä.",
+   "about": "context",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "quote": "Among the 27 CPPs that have specified lead times, five met the target of at least 80% of the patients.",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:55:50+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi",
+   "ms": 1847,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvaep keuhkosyövän hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaep.fi, hyvaks.fi",
+   "ms": 2241,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku - HUS"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/",
+     "title": "Etelä-Pohjanmaan hyvinvointialue - Etelä-Pohjanmaan..."
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste - Terveyskylä.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyövän hoitoketju",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1692,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/web/hoito-ja-palveluketjut/rintasyopapotilaan-hoitoketju",
+     "title": "Rintasyöpäpotilaan hoitoketju - Hoito- ja palveluketjut -..."
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/keuhko-ja-ihosairauksien-vuodeosasto-tays-keskussairaala",
+     "title": "Keuhko- ja ihosairauksien vuodeosasto, Tays Keskussairaala"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhko-ja-ihosairauksien-vuodeosasto-tays-keskussairaala-pirkanmaan-hyvinvointialue/9c7d7647-4bee-4d14-b343-6b064417b0e3",
+     "title": "Keuhko- ja ihosairauksien vuodeosasto, Tays Keskussairaala"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Seinäjoen keskussairaala hoitoonpääsy määräajat keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvaep.fi, tyks.fi, suomi.fi",
+   "ms": 2297,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/toimipiste/seinajoen-keskussairaala/",
+     "title": "Seinäjoen keskussairaala - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-palvelut-etela-pohjanmaan-hyvinvointialue/2759fa61-0e65-414f-b424-543f5be9e339",
+     "title": "Syöpätautien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+     "title": "Syöpätaudit - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-palvelut-etela-pohjanmaan-hyvinvointialue/21ee2120-4e95-484e-a849-65ca429ee9cc",
+     "title": "Keuhkosairauksien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.3,
+   "result_en": "3 reads: B: Tays pathway time limits; B: county lung clinic; A: effect size",
+   "ms": 5129
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "lähete viikon kuluessa aika tutkimukset hoitoneuvottelu",
+   "why": "B: Tays pathway time limits",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 25,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "focus": "keuhkosyöpä lähete tutkimus bronkoskopia",
+   "why": "B: county lung clinic",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Keuhkosairaudet\" · 4 038 chars",
+   "ms": 1855,
+   "title": "Keuhkosairaudet",
+   "chars": 4038,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "published": "2026-11-13T01:37:10+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "focus": "lung cancer days lead time median",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Performance of standardized cancer patient pathways in Sweden visualiz\" · 47 327 chars · 6 of 64 passages kept · from cache",
+   "ms": 40,
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "chars": 47327,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.3,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Hyvaep / Seinäjoen keskussairaala / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 14812
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 24.1,
+   "result_en": "2 searches: B: county lung cancer pathway; B: collaborative area pathway time limits",
+   "ms": 3916
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Pohjanmaa syöpäpotilaan hoitoketju keuhkosyöpä viive",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county lung cancer pathway",
+   "status": "done",
+   "t_s": 28.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, hyvaep.fi, syopapotilaat.fi",
+   "ms": 2453,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+     "title": "Syöpätaudit - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-palvelut-etela-pohjanmaan-hyvinvointialue/2759fa61-0e65-414f-b424-543f5be9e339",
+     "title": "Syöpätautien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Länsi-Suomen syöpäkeskus keuhkosyöpä hoitoonpääsy tavoiteajat",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: collaborative area pathway time limits",
+   "status": "done",
+   "t_s": 28.0,
+   "result_en": "6 results: tyks.fi, hus.fi, syoparekisteri.fi",
+   "ms": 1620,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/syopapotilaiden-hoitoonpaasy-tyksissa",
+     "title": "Syöpäpotilaiden hoitoonpääsy Tyksissä | Tyks"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://fican.fi/lantinen-syopakeskus/syovan-hoito/syopaa-hoitavat-yksikot/",
+     "title": "Syöpää hoitavat yksiköt – FICAN"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.5,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Hyvaep / Seinäjoen keskussairaala / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 10458
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.9,
+   "result_en": "1 search: B: county fast-track pilot",
+   "ms": 2458
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvaep syöpäepäily nopea diagnostiikka hanke",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county fast-track pilot",
+   "status": "done",
+   "t_s": 43.4,
+   "result_en": "6 results: hyvaep.fi, pirha.fi, docrates.mehilainen.fi, is.fi",
+   "ms": 1819,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+     "title": "Syöpätaudit - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+     "title": "Syöpäepäily ja -diagnoosi - pirha.fi"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/eturauhassyopa/",
+     "title": "Eturauhassyöpä | Oireet, diagnostiikka ja hoito - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.is.fi/terveys/art-2000010999826.html",
+     "title": "Nämä oireet voivat johtua syövästä - Ilta-Sanomat"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/miten-syopa-loytyy-ajoissa/",
+     "title": "Miten syöpä löytyy ajoissa? - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/syopalaakari-on-lahellasi/",
+     "title": "Kun syöpäepäily herää, viiveetön diagnoosi ja tuki on tärkeää – Syöpälääkäri on lähelläsi - Docrates Mehiläinen"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 45.2,
+   "result_en": "writes the answer",
+   "ms": 9997
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "chars": 47327,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:55:50+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "title": "Keuhkosairaudet",
+   "chars": 4038,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:23:48+00:00",
+   "published": "2026-11-13T01:37:10+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:24:33+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no page from Hyvaep or Pirha shows booked slots, a pathway owner or step-by-step time limits for lung cancer, but treat the 14-day gain as an unproven assumption, because in Sweden only 30 % of lung pathway patients met the time limit.",
+ "seconds": 55.2,
+ "searched_en": "Searched 7 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Hyvaep keuhkosyövän hoitopolku\"; \"Tays keuhkosyövän hoitoketju\"; \"Seinäjoen keskussairaala hoitoonpääsy määräajat keuhkosyöpä\", ...) and read 3 pages on pirha.fi, hyvaep.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Hyvaep keuhkosyövän hoitopolku",
+  "Tays keuhkosyövän hoitoketju",
+  "Seinäjoen keskussairaala hoitoonpääsy määräajat keuhkosyöpä",
+  "Etelä-Pohjanmaa syöpäpotilaan hoitoketju keuhkosyöpä viive",
+  "Länsi-Suomen syöpäkeskus keuhkosyöpä hoitoonpääsy tavoiteajat",
+  "Hyvaep syöpäepäily nopea diagnostiikka hanke"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no page from Hyvaep or Pirha shows booked slots, a pathway owner or step-by-step time limits for lung cancer, but treat the 14-day gain as an unproven assumption, because in Sweden only 30 % of lung pathway patients met the time limit.",
+ "verdict_en": "No public sign that it is running in South Ostrobothnia. Evidence supports that it works, but not the size of effect we assume. Supported: Sweden's lung cancer pathway has a lead time of 30–44 days, and 30 % of patients met it (Scientific Reports 2023). Not supported: None of the pages read shows how many days a pathway saves between first symptom and treatment, so the assumed 14 days (range 5–23) is not confirmed.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "cpp_pathway",
+ "intervention_name_en": "Standardised lung cancer pathway with booked slots",
+ "area_name_en": "South Ostrobothnia wellbeing services county"
+}

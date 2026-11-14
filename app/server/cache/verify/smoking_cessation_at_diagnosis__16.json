@@ -1,0 +1,437 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Ostrobothnia wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Smoking cessation started at the first specialist visit. Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+ "area_id": "16",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "A 2021 Moscow cohort of 517 early-stage (IA-IIIA) NSCLC smokers found that quitting after diagnosis was linked to lower all-cause mortality (adjusted HR 0.67, 95% CI 0.53–0.85).",
+ "supported_en": "Annals of Internal Medicine 2021: HR 0.67 (0.53–0.85) for all-cause mortality among early-stage NSCLC patients who quit after diagnosis compared with those who kept smoking.",
+ "not_supported_en": "The study is observational and does not test a first-visit programme, so it does not show how many extra patients such a programme would get to quit.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Tarkennetut mallit käytössä: tupakoimatomana leikkaukseen- ja lasta odottavan perheen toimintamallit.",
+ "in_use_source": {
+  "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+  "title": "1719–2010-H 15.2.2023",
+  "published": "2023-04-12",
+  "fetched_at": "2026-11-14T01:23:24+00:00"
+ },
+ "in_use_summary_en": "Since 15.2.2023 the county has had a cessation model for all of its care: the doctor diagnoses nicotine dependence and prescribes cessation medication, a nurse gives counselling, and a 'tupakoimattomana leikkaukseen' (smoke-free surgery) model is in use; Tays's lung cancer pathway records smoking at the specialist visit.",
+ "missing_en": "No page shows a standing order that gives every smoker with suspected lung cancer medication and counselling at the first lung clinic visit.",
+ "summary_en": "Since February 2023, Hyvaep's cessation model has told doctors to prescribe cessation medication and nurses to give counselling, and it has a smoke-free-surgery model in use; Tays's lung cancer pathway only says smoking is asked about at the specialist visit. No page shows a first-visit standing order for smokers with suspected lung cancer. A 2021 Annals of Internal Medicine cohort found quitting after diagnosis linked to an adjusted mortality HR of 0.67 (0.53–0.85) in early-stage NSCLC, which matches the size the model assumes.",
+ "unanswered_en": "I found no Hyvaep or Tays lung clinic page saying that cessation treatment is started for every smoker at the first visit.",
+ "sources": [
+  {
+   "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+   "title": "1719–2010-H 15.2.2023",
+   "quote": "Tarkennetut mallit käytössä: tupakoimatomana leikkaukseen- ja lasta odottavan perheen toimintamallit.",
+   "about": "in_use",
+   "published": "2023-04-12",
+   "fetched_at": "2026-11-14T01:23:24+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+   "title": "1719–2010-H 15.2.2023",
+   "quote": "Erikoissairaanhoidosta tulee ohjata potilas jatkohoitoon terveyskeskukseen tai työterveyshuoltoon.",
+   "about": "in_use",
+   "published": "2023-04-12",
+   "fetched_at": "2026-11-14T01:23:24+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Samalla kartoitetaan tupakointia, työhistoriaa, asbestialtistusta ja mahdollisia ammattitauteja.",
+   "about": "context",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "quote": "After adjustments, smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85])",
+   "about": "effect",
+   "published": "2021-07-27",
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi",
+   "ms": 1332,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvaep tupakasta vieroitus keuhkosyöpäpotilas",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: palveluketjut.hyvaep.fi, duodecimlehti.fi",
+   "ms": 2847,
+   "results": [
+    {
+     "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+     "title": "JA NIKOTIINITUOTTEISTA VIEROITUKSEN TOIMINTAMALLI"
+    },
+    {
+     "url": "https://palveluketjut.hyvaep.fi/kasikirja/elintapaohjauksen-kasikirja/tupakka/",
+     "title": "Tupakka - Etelä-Pohjanmaan hyvinvointialueen hoito- ja palveluketjut"
+    },
+    {
+     "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/11/Potilasohje-tupakoinnin-lopettamiseen-yleisohje.pdf",
+     "title": "Potilasohje 1722-2010-P 1 (8) 2.2.2023 Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10283",
+     "title": "Tupakointi ja syöpä - mitä hyötyä lopettamisesta?"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://palveluketjut.hyvaep.fi/kasikirja/elintapaohjauksen-kasikirja/tupakka/yhteistyo/",
+     "title": "Yhteistyö - Etelä-Pohjanmaan hyvinvointialueen hoito- ja palveluketjut"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays tupakkavieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: yle.fi, terveyskirjasto.fi, pirha.fi, asiakas.kotisivukone.com",
+   "ms": 1597,
+   "results": [
+    {
+     "url": "https://yle.fi/a/3-8887910",
+     "title": "Tays alkaa vierottaa leikkauspotilaita tupakasta – tupakointi voi perua toimenpiteen | Yle"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/potilaalle-ja-laheiselle/potilaana-taysissa/savuton-sairaala",
+     "title": "Savuton sairaala - pirha.fi"
+    },
+    {
+     "url": "https://asiakas.kotisivukone.com/files/stesotesti.kotisivukone.com/Steso_Verkostopaiva_140324_Tuija_Ylitormanen.pdf",
+     "title": "Finnish Institute for Health and Welfare Tupakasta ja nikotiinista vieroitus"
+    },
+    {
+     "url": "https://www.theseus.fi/bitstream/handle/10024/753741/Vaisanen_Tiia.pdf;jsessionid=FE947223C76DABB5D9A014735FB92BFE?sequence=2",
+     "title": "Tiia Väisänen TUPAKKATUOTTEISTA VIEROITTAMINEN SUUN TERVEYDENHUOLLOSSA"
+    },
+    {
+     "url": "https://www.theseus.fi/bitstream/handle/10024/152238/Makela_Ari_Numminen_Jaska.pdf?sequence=1&isAllowed=y",
+     "title": "SAVUTON SAIRAALASSA Tupakoimattomana leikkaukseen –toimintamallin"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Seinäjoen keskussairaala savuton leikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvaep.fi, suomi.fi",
+   "ms": 1776,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/leikkaus-ja-anestesia/",
+     "title": "Leikkaus ja anestesia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/hyva-tietaa-asiakkaana/kaytannon-asioita/",
+     "title": "Käytännön asioita - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/toimipiste/seinajoen-keskussairaala/",
+     "title": "Seinäjoen keskussairaala - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/leikkaus-ja-anestesiapalvelut-etela-pohjanmaan-hyvinvointialue/de2da210-cf67-4dde-a30c-70daab0139a8",
+     "title": "Leikkaus- ja anestesiapalvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/ortopedia/",
+     "title": "Ortopedia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/kirurgia/",
+     "title": "Kirurgia - Etelä-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.8,
+   "result_en": "3 reads: effect size; Tays pathway smoking cessation; county cessation model",
+   "ms": 4673
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://doi.org/10.7326/M21-0252",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "focus": "hazard ratio all-cause mortality quit",
+   "why": "effect size",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progr\" · 2 162 chars · from cache",
+   "ms": 6,
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://doi.org/10.7326/M21-0252",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "tupakointi lopettaminen vieroitus",
+   "why": "Tays pathway smoking cessation",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://palveluketjut.hyvaep.fi/kasikirja/elintapaohjauksen-kasikirja/tupakka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://palveluketjut.hyvaep.fi/kasikirja/elintapaohjauksen-kasikirja/tupakka/",
+   "focus": "erikoissairaanhoito vieroitus leikkaus syöpä",
+   "why": "county cessation model",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Tupakka\" · 1 621 chars",
+   "ms": 2568,
+   "title": "Tupakka",
+   "chars": 1621,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://palveluketjut.hyvaep.fi/kasikirja/elintapaohjauksen-kasikirja/tupakka/",
+   "published": "2021-10-20T04:53:58+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 10.1,
+   "result_en": "1 read: county cessation in specialist care",
+   "ms": 4032
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+   "focus": "erikoissairaanhoito poliklinikka ensikäynti vieroituslääke leikkaus",
+   "why": "county cessation in specialist care",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "\"1719–2010-H 15.2.2023\" · 2 656 chars · PDF 1 p.",
+   "ms": 2962,
+   "title": "1719–2010-H 15.2.2023",
+   "chars": 2656,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+   "published": "2023-04-12",
+   "js_render": false
+  },
+  {
+   "step": 11,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.1,
+   "result_en": "writes the answer",
+   "ms": 14061
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "url": "https://palveluketjut.hyvaep.fi/kasikirja/elintapaohjauksen-kasikirja/tupakka/",
+   "title": "Tupakka",
+   "chars": 1621,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:23:17+00:00",
+   "published": "2021-10-20T04:53:58+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/04/Tupakka_ja-nikotiinituotteista-vieroittamisen-toimintamalli-2022-HYVAEP-1.pdf",
+   "title": "1719–2010-H 15.2.2023",
+   "chars": 2656,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:23:24+00:00",
+   "published": "2023-04-12",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:23:38+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to a standing order for lung clinic first visits: Hyvaep already runs a cessation model with prescriptions, counselling and a smoke-free-surgery model, but no page shows that every smoker with suspected lung cancer is treated at the first visit.",
+ "seconds": 31.2,
+ "searched_en": "Searched 4 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Hyvaep tupakasta vieroitus keuhkosyöpäpotilas\"; \"Tays tupakkavieroitus\"; \"Seinäjoen keskussairaala savuton leikkaus\") and read 4 pages on doi.org, pirha.fi, palveluketjut.hyvaep.fi.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Hyvaep tupakasta vieroitus keuhkosyöpäpotilas",
+  "Tays tupakkavieroitus",
+  "Seinäjoen keskussairaala savuton leikkaus"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to a standing order for lung clinic first visits: Hyvaep already runs a cessation model with prescriptions, counselling and a smoke-free-surgery model, but no page shows that every smoker with suspected lung cancer is treated at the first visit.",
+ "verdict_en": "Partly in place in South Ostrobothnia. Missing: No page shows a standing order that gives every smoker with suspected lung cancer medication and counselling at the first lung clinic visit. Recent evidence supports the size of effect we assume. Annals of Internal Medicine 2021: HR 0.67 (0.53–0.85) for all-cause mortality among early-stage NSCLC patients who quit after diagnosis compared with those who kept smoking.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "smoking_cessation_at_diagnosis",
+ "intervention_name_en": "Smoking cessation started at the first specialist visit",
+ "area_name_en": "South Ostrobothnia wellbeing services county"
+}

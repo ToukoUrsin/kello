@@ -1,0 +1,462 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Ostrobothnia wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "17",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A registry study from northern England links the longest travel time to lower odds of lung cancer surgery (OR 0.60, 0.44–0.84). It did not test travel or accommodation support, so it cannot confirm the assumed +1 percentage point.",
+ "supported_en": "Crawford et al. (British Journal of Cancer, 2009) found that patients in the longest travel-time quartile had odds of surgery 0.60 times those of the nearest.",
+ "not_supported_en": "No study read measures the effect of travel or accommodation support on the share of patients treated with curative intent.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that Tyks or Ostrobothnia wellbeing services county provides booked accommodation, organised transport and a named contact for patients travelling to Turku. Ostrobothnia wellbeing services county says Vaasa has no hotel accommodation at present, only small-scale cooperation with a few local hotels, and that a patient hotel there could open in 2029–2030.",
+ "missing_en": "",
+ "summary_en": "Ostrobothnia wellbeing services county (31.8.2026) says the Vaasa central hospital area has no hotel accommodation at present, only small-scale cooperation with a few local hotels. A privately built patient hotel there could open in 2029–2030. The Tyks lung cancer page and a search for Tyks accommodation showed no patient hotel or travel support. The only effect evidence is an English association study (surgery OR 0.60 for the longest travel time), not a study of support measures.",
+ "unanswered_en": "Whether Tyks offers a patient hotel or booked accommodation for patients from Ostrobothnia was not found on any official page.",
+ "sources": [
+  {
+   "url": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+   "title": "Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuosikymmenellä",
+   "quote": "Vaasan keskussairaala-alueella ei tällä hetkellä ole hotellimajoitusta, vaan yhteistyötä tehdään pienimuotoisesti muutaman paikallisen hotellin kanssa.",
+   "about": "context",
+   "published": "2026-08-31T10:58:52+00:00",
+   "fetched_at": "2026-11-14T01:25:36+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+   "title": "Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuosikymmenellä",
+   "quote": "Arvion mukaan hotelli voitaisiin ottaa käyttöön 2029–2030.",
+   "about": "context",
+   "published": "2026-08-31T10:58:52+00:00",
+   "fetched_at": "2026-11-14T01:25:36+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, hyvaks.fi",
+   "ms": 1246,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjanmaan hyvinvointialue potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pohjanmaanhyvinvointi.fi, suomi.fi, sttinfo.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+     "title": "Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuosikymmenellä - Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/potilashotelli-keski-pohjanmaan-hyvinvointialue-soite/3a9f577c-e99b-4c80-96b8-0d2fcf132c6a",
+     "title": "Potilashotelli - Keski-Pohjanmaan hyvinvointialue Soite - Suomi.fi"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72276953/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella?lang=fi",
+     "title": "Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuosikymmenellä | Österbottens välfärdsområde – Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keskussairaalan-vartija-keski-pohjanmaan-hyvinvointialue-soite/36692a33-2420-44c6-b8e1-75a4e5fbc6e0",
+     "title": "Keskussairaalan vartija - Keski-Pohjanmaan hyvinvointialue Soite - Suomi.fi"
+    },
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/",
+     "title": "Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/potilashotelli-soite/3a9f577c-e99b-4c80-96b8-0d2fcf132c6a",
+     "title": "Potilashotelli - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1297,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/tulosryhmat/medisiinisen-yleislaaketieteen-ja-paivystyksen-tulosryhma/potilaskuljetuspalvelut",
+     "title": "Potilaskuljetuspalvelut | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille",
+     "title": "Potilaille ja läheisille | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/potilaan-oikeudet/potilastiedot-ja-asiakirjat",
+     "title": "Potilastiedot ja -asiakirjat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/",
+     "title": "Tyks: Etusivu"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/potilastiedustelut",
+     "title": "Potilastiedustelut | Tyks"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+     "title": "Potilaskoti - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Vaasan keskussairaala majoitus sädehoidon ajaksi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hoito-ohjeet.fi, pohjanmaanhyvinvointi.fi",
+   "ms": 1676,
+   "results": [
+    {
+     "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/S%C3%A4dehoitoon%20tulevalle.pdf",
+     "title": "Ohje hoitosuhteessa oleville potilaillemme"
+    },
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/palvelumme/terveys-ja-sairaanhoitopalvelut/sairaalapalvelut/tehohoidon-ja-valvonan-osasto/",
+     "title": "Tehohoidon ja -valvonnan osasto - Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/palvelumme/terveys-ja-sairaanhoitopalvelut/sairaalapalvelut/kasvain-ja-syopahoito/sadehoito-osasto/",
+     "title": "Sädehoito-osasto - Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/nain-toimimme/onko-sinulla-asiaa-meille-tai-kaynti-yksikossamme/asiointi-vaasan-keskussairaalassa/",
+     "title": "Asiointi Vaasan keskussairaalassa - Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.vaasankeskussairaala.fi/potilaille/sairaalaopas/saapuminen/potilashotellipalvelu/",
+     "title": "Potilashotellipalvelu - Vaasan Keskussairaala"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/sadehoito-osasto-pohjanmaan-hyvinvointialue/c34af95f-9303-4bcb-945e-f7c43d11de13",
+     "title": "Sädehoito-osasto - Pohjanmaan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "4 reads: B: pathway, accommodation; B: planned hotel; B: current hotel service; A: effect association",
+   "ms": 6103
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "majoitus potilashotelli matka sädehoito leikkaus Vaasa",
+   "why": "B: pathway, accommodation",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 6 of 30 passages kept · from cache",
+   "ms": 8,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+   "focus": "potilashotelli",
+   "why": "B: planned hotel",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuo\" · 2 965 chars",
+   "ms": 1503,
+   "title": "Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuosikymmenellä",
+   "chars": 2965,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+   "published": "2026-08-31T10:58:52+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.vaasankeskussairaala.fi/potilaille/sairaalaopas/saapuminen/potilashotellipalvelu/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.vaasankeskussairaala.fi/potilaille/sairaalaopas/saapuminen/potilashotellipalvelu/",
+   "focus": "potilashotellipalvelu sopimus hotelli",
+   "why": "B: current hotel service",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "no answer in 20 s; skipped",
+   "ms": 20008,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time odds surgery 0.60",
+   "why": "A: effect association",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 19,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Pohjanmaan hyvinvointialue / Vaasan keskussairaala / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a ",
+   "ms": 14223
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 43.4,
+   "result_en": "1 search: B: accommodation at Tyks",
+   "ms": 2462
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks majoitus potilaille Turku hotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: accommodation at Tyks",
+   "status": "done",
+   "t_s": 45.9,
+   "result_en": "6 results: turkulaiset.fi, tyks.fi, turku.perussuomalaiset.fi, booking.com",
+   "ms": 2363,
+   "results": [
+    {
+     "url": "https://www.turkulaiset.fi/hotellit/tyks.html",
+     "title": "Suositeltavat kolme hotellia TYKS:in lähellä"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille",
+     "title": "Potilaille ja läheisille | Tyks"
+    },
+    {
+     "url": "https://turku.perussuomalaiset.fi/kannanotto/tyks-tarvitsee-potilashotellin/",
+     "title": "TYKS tarvitsee potilashotellin - Turun Perussuomalaiset ry"
+    },
+    {
+     "url": "https://www.booking.com/landmark/fi/turku-university-hospital.fi.html",
+     "title": "10 parasta hotellia lähellä maamerkkiä Turun yliopistollinen ..."
+    },
+    {
+     "url": "https://visitturku.fi/majoitus",
+     "title": "Hotellit ja majoituspaikat Turussa"
+    },
+    {
+     "url": "https://www.westsidehotel.fi/fi/tyomajoitus.html",
+     "title": "Työntekijöiden majoitus Turku | West Side Hotel"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 48.2,
+   "result_en": "writes the answer",
+   "ms": 10997
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "url": "https://pohjanmaanhyvinvointi.fi/monitoimihotelli-asiakkaille-ja-potilaille-mahdollinen-viela-talla-vuosikymmenella/",
+   "title": "Monitoimihotelli asiakkaille ja potilaille mahdollinen vielä tällä vuosikymmenellä",
+   "chars": 2965,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:25:36+00:00",
+   "published": "2026-08-31T10:58:52+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:26:25+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because no page from Tyks or Ostrobothnia wellbeing services county shows organised travel, accommodation and a named contact for patients going to Turku. The county's own patient hotel is only a plan for Vaasa, from 2029–2030.",
+ "seconds": 59.2,
+ "searched_en": "Searched 5 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Pohjanmaan hyvinvointialue potilashotelli\"; \"Tyks potilaskoti\"; \"Vaasan keskussairaala majoitus sädehoidon ajaksi\", ...) and read 3 pages on tyks.fi, pohjanmaanhyvinvointi.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Pohjanmaan hyvinvointialue potilashotelli",
+  "Tyks potilaskoti",
+  "Vaasan keskussairaala majoitus sädehoidon ajaksi",
+  "Tyks majoitus potilaille Turku hotelli"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because no page from Tyks or Ostrobothnia wellbeing services county shows organised travel, accommodation and a named contact for patients going to Turku. The county's own patient hotel is only a plan for Vaasa, from 2029–2030.",
+ "verdict_en": "No public sign that it is running in Ostrobothnia. Evidence supports that it works, but not the size of effect we assume. Supported: Crawford et al. (British Journal of Cancer, 2009) found that patients in the longest travel-time quartile had odds of surgery 0.60 times those of the nearest. Not supported: No study read measures the effect of travel or accommodation support on the share of patients treated with curative intent.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "travel_accommodation_support",
+ "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
+ "area_name_en": "Ostrobothnia wellbeing services county"
+}

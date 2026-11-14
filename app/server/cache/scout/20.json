@@ -1,0 +1,433 @@
+{
+ "area_id": "20",
+ "area_name_en": "Kainuu wellbeing services county",
+ "area_name_fi": "Kainuun hyvinvointialue",
+ "question": "What is Kainuu wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": null,
+   "what_en": "Kainuu sends its cancer radiotherapy patients to Oulu or Kuopio, because it has no radiotherapy of its own.",
+   "what_fi": "Kainuu ohjaa syöpäpotilaiden sädehoidot Ouluun tai Kuopioon, koska omaa sädehoitoa ei ole.",
+   "quote": "Jos potilaan hoitoon liitetään sädehoidot, ne toteutetaan sädehoitoyksiköissä, pääasiallisesti Oulussa ja Kuopiossa.",
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:43+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Kainuu Central Hospital gives chemotherapy in its day hospital and starts oral cancer drug treatments at its oncology clinic.",
+   "what_fi": "Kainuun keskussairaala antaa solunsalpaajahoidot päiväsairaalassa ja aloittaa tablettihoidot syöpätautien poliklinikalla.",
+   "quote": "Tarvittavat solunsalpaajahoidot toteutetaan päiväsairaalassa. Mahdolliset tablettihoitojen aloitukset ja ohjaukset toteutetaan poliklinikalla.",
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue",
+   "relates_to": "drug_therapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:43+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Kainuu runs a palliative outpatient clinic that gives consultation help across the whole area on treatment limits and symptom care.",
+   "what_fi": "Kainuun palliatiivinen poliklinikka antaa koko alueelle konsultaatioapua hoitolinjauksissa ja oirehoidossa.",
+   "quote": "Palliatiivinen poliklinikka toimii ensikäyntipainotteisesti ja antaa konsultaatioapua koko sairaanhoitopiirin alueelle parantumatonta, etenevää syöpä- tai muuta sairautta sairastavan potilaan hoitolinjauksissa ja oirehoidossa.",
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue",
+   "relates_to": "symptomatic_only",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:43+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Kainuu's cancer care-chain pages send radiotherapy patients to the patient home in Oulu and a patient hotel in Kuopio; Kela pays back part of the cost.",
+   "what_fi": "Kainuun syöpäpalveluketju ohjaa sädehoitopotilaat OYS:n potilaskotiin ja Kuopion potilashotelliin; Kela korvaa osan kustannuksista.",
+   "quote": "Potilaskoti sijaitsee osoitteessa Sairaalanrinne 4 A, 90220 Oulu. Majoitus täytyy varata etukäteen.",
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "title": "Sädehoito ja hoitavat yksiköt",
+   "relates_to": "travel_accommodation_support",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:27:17+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Kainuu's pulmonology outpatient clinic at the central hospital treats lung cancer patients and takes them on a doctor's referral.",
+   "what_fi": "Kainuun keskussairaalan keuhkosairauksien poliklinikka hoitaa keuhkosyöpäpotilaita lääkärin lähetteellä.",
+   "quote": "Keuhkosairauksien asiakkaita ovat vaikeaa astmaa, uniapneaa, hengitysvajausta, keuhkoahtaumatautia, keuhkokudossairauksia, keuhkosyöpää ja tuberkuloosia sairastavat potilaat",
+   "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/keuhkosairauksien-erikoisalapalvelut",
+   "title": "Keuhkosairauksien erikoisalapalvelut | Kainuun hyvinvointialue",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:37+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Kainuu treats lung cancer at Kainuu Central Hospital. Its pulmonology clinic handles investigations, and its oncology clinic and day hospital give drug therapy. A palliative clinic serves the whole area. Radiotherapy happens in Oulu or Kuopio, and patients there can stay in the OYS patient home or a Kuopio patient hotel. I found no lung-cancer-specific decision, project, waiting-time figure, nurse navigator or screening pilot.",
+ "not_found_en": "I found no regional council or board decisions, investments, news items, waiting-time numbers or pathway documents for lung cancer in Kainuu, and the OYS lung cancer pathway referral page returned a 404 error.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 4224
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuun hyvinvointialue keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: hyvinvointialue.kainuu.fi, suomi.fi",
+   "ms": 3055,
+   "results": [
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/keuhkosairauksien-erikoisalapalvelut",
+     "title": "Keuhkosairauksien erikoisalapalvelut | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/keuhkosairauksien-poliklinikka",
+     "title": "Keuhkosairauksien poliklinikka | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/",
+     "title": "Terveyttä ja turvaa kaikille kainuulaisille! | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-erikoisalapalvelut-kainuun-hyvinvointialue/26f52a20-8aa6-4067-b226-c81c531af05a",
+     "title": "Keuhkosairauksien erikoisalapalvelut - Kainuun hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipaikat/kainuun-keskussairaala",
+     "title": "Kainuun keskussairaala | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+     "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: oys.fi",
+   "ms": 1465,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/sisataudit-ja-keuhkosairaudet/",
+     "title": "Sisätaudit ja keuhkosairaudet - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/rintasyopapotilaan-hoitopolku/",
+     "title": "Rintasyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuu aluehallitus syöpä hoito päätös",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: hyvinvointialue.kainuu.fi, palveluketjut.kainuu.fi, kainuunsanomat.fi",
+   "ms": 2055,
+   "results": [
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+     "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/syopatautien-hoito",
+     "title": "Syöpätautien hoito | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/elamaa-sairauden-kanssa-syopaii/",
+     "title": "Elämää syövän kanssa - Kainuu Palveluketjut"
+    },
+    {
+     "url": "https://www.kainuunsanomat.fi/artikkeli/kainuulaiset-varovaisen-tyytyvaisia-rintasyopaleikkauksien-sailymisesta-se-olisi-ollut-iso-menetys",
+     "title": "Kainuulaiset varovaisen tyytyväisiä rintasyöpäleikkauksien säilymisestä Kajaanissa: ”Se olisi ollut iso menetys” | Kainuun Sanomat"
+    },
+    {
+     "url": "https://yle.fi/a/74-20219312",
+     "title": "Ehdotus: keski­pohjalaiset rinta­syöpä­potilaat leikattaisiin Kajaanissa – aluehallituksen puheenjohtaja kiistää valmistelun | Kainuu | Yle"
+    },
+    {
+     "url": "https://kainuunhyvinvointialue.cloudnc.fi/download/noname/%7Be218222e-0318-4123-afc3-48bb79cc624f%7D/210539",
+     "title": "Kainuun hyvinvointialue Pöytäkirja 11/2025 1 ( ) 50 Aluehallitus 18.08.2025"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kainuun keskussairaala syöpä 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: hyvinvointialue.kainuu.fi, palveluketjut.kainuu.fi, yle.fi",
+   "ms": 1783,
+   "results": [
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+     "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/toimipaikat/kainuun-keskussairaala",
+     "title": "Kainuun keskussairaala | Kainuun hyvinvointialue"
+    },
+    {
+     "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/syopahoitoja-antavat-yksikot/",
+     "title": "Syöpähoitoja antavat yksiköt - Kainuu Palveluketjut"
+    },
+    {
+     "url": "https://yle.fi/a/74-20226551?origin=rss",
+     "title": "Kainuun poliittiset puolueet vetoavat rintasyöpäleikkausten puolesta – huoli koko sairaalan tulevaisuudesta | Kainuu | Yle"
+    },
+    {
+     "url": "https://kaihijono.fi/kainuu/",
+     "title": "Kaihileikkauksen jonotusaika Kajaanissa 2026"
+    },
+    {
+     "url": "https://hyvinvointialue.kainuu.fi/uutiset/kohdunkaulan-syovan-seulontatutkimukseen-kainuussa-muutoksia-ensi-vuonna-tarkea-kutsu-naisille",
+     "title": "Kohdunkaulan syövän seulontatutkimukseen Kainuussa muutoksia ensi vuonna – tärkeä kutsu naisille | Kainuun hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.3,
+   "result_en": "3 reads: county lung services; pathway; where treated",
+   "ms": 5368
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/keuhkosairauksien-erikoisalapalvelut",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/keuhkosairauksien-erikoisalapalvelut",
+   "focus": "keuhkosyöpä bronkoskopia tutkimukset hoitaja",
+   "why": "county lung services",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Keuhkosairauksien erikoisalapalvelut | Kainuun hyvinvointialue\" · 1 203 chars",
+   "ms": 3381,
+   "title": "Keuhkosairauksien erikoisalapalvelut | Kainuun hyvinvointialue",
+   "chars": 1203,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/keuhkosairauksien-erikoisalapalvelut",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "focus": "kiireellinen lähete keuhkosyöpäepäily viikkoa",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2490,
+   "error": true
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/syopahoitoja-antavat-yksikot/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/syopahoitoja-antavat-yksikot/",
+   "focus": "keuhkosyöpä sädehoito Oulu Kuopio",
+   "why": "where treated",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Syöpähoitoja antavat yksiköt\" · 4 574 chars · 6 of 6 passages kept",
+   "ms": 2052,
+   "title": "Syöpähoitoja antavat yksiköt",
+   "chars": 4574,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/syopahoitoja-antavat-yksikot/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.0,
+   "result_en": "2 reads: radiotherapy and travel; oncology clinic",
+   "ms": 4628
+  },
+  {
+   "step": 11,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "focus": "sädehoito Oulu Kuopio matka majoitus",
+   "why": "radiotherapy and travel",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "\"Sädehoito ja hoitavat yksiköt\" · 4 846 chars · 6 of 7 passages kept · from cache",
+   "ms": 2,
+   "title": "Sädehoito ja hoitavat yksiköt",
+   "chars": 4846,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "focus": "syöpätautien poliklinikka lääkehoito hoitaja",
+   "why": "oncology clinic",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "\"Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyv\" · 2 901 chars",
+   "ms": 1491,
+   "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue",
+   "chars": 2901,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.2,
+   "result_en": "writes the answer",
+   "ms": 14983
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/syopahoitoja-antavat-yksikot/",
+   "title": "Syöpähoitoja antavat yksiköt",
+   "chars": 4574,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:38:36+00:00"
+  },
+  {
+   "url": "https://hyvinvointialue.kainuu.fi/palvelutarjonta/keuhkosairauksien-erikoisalapalvelut",
+   "title": "Keuhkosairauksien erikoisalapalvelut | Kainuun hyvinvointialue",
+   "chars": 1203,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:38:37+00:00"
+  },
+  {
+   "url": "https://palveluketjut.kainuu.fi/syopapotilaan-hoito-ja-palveluketju/syopapotilaan-hoito-ja-seuranta/sadehoito/",
+   "title": "Sädehoito ja hoitavat yksiköt",
+   "chars": 4846,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:27:17+00:00"
+  },
+  {
+   "url": "https://hyvinvointialue.kainuu.fi/toimipisteet/syopatautien-poliklinikka-ja-palliatiivinen-poliklinikka",
+   "title": "Syöpätautien poliklinikka ja palliatiivinen poliklinikka | Kainuun hyvinvointialue",
+   "chars": 2901,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:38:43+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:38:58+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 37.1
+}

@@ -1,0 +1,522 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Karelia wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Our model assumes no direct effect on patients for this measure. Instead: does a source you read document the problem it fixes?\nMeasure: Audit of treatment records (\"no treatment on record\"). Take 50 patients with no treatment on record and check the charts: were they untreated, or was drug treatment or radiotherapy given and not coded? Fix the coding. It treats no extra patient, but until it is done the county cannot tell a care gap from a recording gap.",
+ "area_id": "11",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "",
+ "supported_en": "The Finnish Cancer Registry reports that stage at diagnosis is missing for nearly half of new lung cancer patients, and most often in the Eastern Finland area.",
+ "not_supported_en": "No page shows how many South Karelia patients with no treatment on record were actually treated but not coded.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "There is no public sign that Ekhva or HUS is running or planning a chart audit of lung cancer patients with no treatment on record. FICAN, THL and the Cancer Registry are running a national research project in 2024–2027 that tests how far national registries can show what cancer care was given. The Cancer Registry's lung cancer report says stage at diagnosis is missing for nearly half of new patients, and most often in Eastern Finland. That documents the recording problem this audit targets.",
+ "unanswered_en": "I found no Ekhva or HUS page about checking or fixing how cancer treatments are coded, and I did not read the HUS lung cancer care pathway page.",
+ "sources": [
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "Keuhkosyövän levinneisyys toteamishetkellä puuttuu lähes puolelta uusia potilaita",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "Alueittain tarkasteltuna levinneisyystieto puuttuu useimmiten Itä-Suomen alueelta",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/",
+   "title": "Syöpien laaturekisterit – FICAN",
+   "quote": "Tutkimushankkeen ensisijainen tavoite on selvittää, miten nykyisten kansallisten rekistereiden tiedoilla voidaan arvioida syövän hoidon toteutumista sekä hoitotuloksia Suomessa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:54:32+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+   "title": "Tee syöpäilmoitus - Syöpärekisteri",
+   "quote": "Hoitoilmoitus on kliinistä ilmoitusta täydentävää tietoa, ja ne saadaan tietotoimituksina terveydenhuollon organisaatioista tai kansallisesta rekisteristä (Hilmo).",
+   "about": "context",
+   "published": "2026-03-31T05:31:25+00:00",
+   "fetched_at": "2026-11-14T00:50:00+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1432,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ekhva hoitoilmoitus kirjaaminen syöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: ekhva.fi, syoparekisteri.fi, ekhva.suomisote.fi",
+   "ms": 1737,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.ekhva.fi/omaekhva/",
+     "title": "Oma Ekhva - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://ekhva.suomisote.fi/",
+     "title": "EKHVA"
+    },
+    {
+     "url": "https://www.ekhva.fi/asiakkuus-ja-osallisuus/ohjepankki/lomakkeet-ja-hakemukset/",
+     "title": "Lomakkeet ja hakemukset - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/asiakkuus-ja-osallisuus/asiakkaan-ja-potilaan-oikeudet/terveys-ja-hoitosuunnitelma/",
+     "title": "Terveys- ja hoitosuunnitelma - Etelä-Karjalan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpärekisteri hoitotietojen ilmoittaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi",
+   "ms": 1885,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tiedonkeruu/",
+     "title": "Tiedonkeruu"
+    },
+    {
+     "url": "https://syoparekisteri.fi/seulonta/seulontatietojen-ilmoittaminen/",
+     "title": "Seulontatietojen ilmoittaminen - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tilastot/tilastokuvaus-ja-laatuselosteet/",
+     "title": "Tilastokuvaukset ja laatuselosteet - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tilastot/kliinisten-ilmoitusten-tilasto/",
+     "title": "Kliinisten ilmoitusten tilasto - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana",
+     "title": "Oikeutesi potilaana | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjalan keskussairaala kirjaamisen laatu syöpähoidot",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: ekhva.fi, suomi.fi, fican.fi",
+   "ms": 2609,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopahoitoyksikko-etela-karjalan-hyvinvointialue/daa7a6d3-4b84-44be-82c3-b37a4364c530",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://fican.fi/etelainen-syopakeskus/potilaalle/",
+     "title": "Potilaalle – FICAN"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kliininen-fysiologia-ja-isotooppiyksikko-etela-karjalan",
+     "title": "Kliininen fysiologia ja isotooppiyksikkö, Etelä-Karjalan keskussairaala | HUS"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+     "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.6,
+   "result_en": "2 reads: A: documented recording gap; B context: treatment notification process",
+   "ms": 4284
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "focus": "kirjaamiskäytäntö hoitotieto alueelliset erot Etelä-Karjala",
+   "why": "A: documented recording gap",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"keuhkosyoparaportti\" · 44 558 chars · 5 of 46 passages kept · from cache",
+   "ms": 6,
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/ilmoituspalvelu/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+   "focus": "hoitoilmoitus tietotoimitus hyvinvointialue",
+   "why": "B context: treatment notification process",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Tee syöpäilmoitus - Syöpärekisteri\" · 4 683 chars · 7 of 8 passages kept · from cache",
+   "ms": 8,
+   "title": "Tee syöpäilmoitus - Syöpärekisteri",
+   "chars": 4683,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+   "published": "2026-03-31T05:31:25+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "1 search: B: any local coding audit",
+   "ms": 2728
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjala syöpähoitojen kirjaaminen auditointi hanke",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any local coding audit",
+   "status": "done",
+   "t_s": 9.6,
+   "result_en": "6 results: suomi.fi, liitto.ekarjala.fi, ekhva.fi, innokyla.fi",
+   "ms": 2176,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopahoitoyksikko-etela-karjalan-hyvinvointialue/daa7a6d3-4b84-44be-82c3-b37a4364c530",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://liitto.ekarjala.fi/rahoitus/kansallinen-rahoitus/rahoitetut-hankkeet-3/",
+     "title": "Rahoitetut hankkeet - Etelä-Karjalan liitto"
+    },
+    {
+     "url": "https://ekhva.fi/asiakkaalle/toimipisteet/etela-karjalan-keskussairaala/syopahoitoyksikko",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.innokyla.fi/sites/default/files/2026-01/Loppuraportti_RRP2_Suomen%20kest%C3%A4v%C3%A4n%20kasvun%20ohjelma_Happee2_Ekhva_30.1.2026_Innokyl%C3%A4%C3%A4n.pdf",
+     "title": "Suomen kestävän kasvun ohjelma Etelä-Karjalan alueen RRP2/”HAPPEE2”"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/syopahoitoyksikko-etela-karjalan-hyvinvointialue/b18aa5bb-9b27-4129-bea4-8022c630414c",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/osasto-k6-syopasairaudet-ja-palliatiivinen-keskus-etela-karjalan-hyvinvointialue/3ea84c9e-046b-4e7f-86f5-7ac70c0859d1",
+     "title": "Osasto K6, syöpäsairaudet ja palliatiivinen keskus - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.8,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Ekhva / Etelä-Karjalan keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision documen",
+   "ms": 9211
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 21.0,
+   "result_en": "1 search: B: HUS-area audit of treatment coding",
+   "ms": 2381
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpähoitojen laaturekisteri kirjaamisen tarkistus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS-area audit of treatment coding",
+   "status": "done",
+   "t_s": 23.4,
+   "result_en": "6 results: fican.fi, mielenterveystalo.fi, syoparekisteri.fi, hus.fi",
+   "ms": 2485,
+   "results": [
+    {
+     "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/",
+     "title": "Syöpien laaturekisterit – FICAN"
+    },
+    {
+     "url": "https://www.mielenterveystalo.fi/fi/terapia/husin-palvelusetelipsykoterapia",
+     "title": "HUSin palvelusetelipsykoterapia | Mielenterveystalo.fi"
+    },
+    {
+     "url": "https://syoparekisteri.fi/blogit/syopien-laaturekisteri-kansallista-tietoaukkoa-tayttamassa/",
+     "title": "Syöpien laaturekisteri – kansallista tietoaukkoa täyttämässä - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/yhteystiedot/kirjaamo-ja-arkistot",
+     "title": "Kirjaamo ja arkistot - HUS"
+    },
+    {
+     "url": "https://palse.fi/palveluseteli.dll/.pdf?page=docmgr&dh=svc.doc&inst=50000000&orgpalv=9&no=50000173&hash=7bde7b0489ce55d34d1c019e205c674a33d3253e6f0746b8f4264b01af5699aa",
+     "title": "Psykoterapian laaturekisterin käyttöohje psykoterapeutille"
+    },
+    {
+     "url": "https://www.uutispeili.fi/index.php/2026/04/21/kansanedustajalta-kirjallinen-kysymys-suomeen-perustettava-kansallinen-syovan-hoidon-laaturekisteri/",
+     "title": "Kansanedustajalta kirjallinen kysymys: Suomeen perustettava kansallinen syövän hoidon laaturekisteri"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.9,
+   "result_en": "1 read: B: national quality registry work, planned",
+   "ms": 2848
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/",
+   "focus": "esiselvitys laaturekisteri kirjaaminen hyvinvointialueet",
+   "why": "B: national quality registry work, planned",
+   "status": "done",
+   "t_s": 28.7,
+   "result_en": "\"Syöpien laaturekisterit – FICAN\" · 2 775 chars · from cache",
+   "ms": 0,
+   "title": "Syöpien laaturekisterit – FICAN",
+   "chars": 2775,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 28.7,
+   "result_en": "writes the answer",
+   "ms": 9441
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+   "title": "Tee syöpäilmoitus - Syöpärekisteri",
+   "chars": 4683,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:00+00:00",
+   "published": "2026-03-31T05:31:25+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/",
+   "title": "Syöpien laaturekisterit – FICAN",
+   "chars": 2775,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:54:32+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": true,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:18:58+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no Ekhva or HUS page shows a chart audit of \"no treatment on record\" patients. The national quality registry project run by FICAN, THL and the Cancer Registry measures care from national registry data and does not check local charts.",
+ "seconds": 38.2,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Ekhva hoitoilmoitus kirjaaminen syöpä\"; \"HUS syöpärekisteri hoitotietojen ilmoittaminen\"; \"Etelä-Karjalan keskussairaala kirjaamisen laatu syöpähoidot\", ...) and read 3 pages on syoparekisteri.fi, fican.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Ekhva hoitoilmoitus kirjaaminen syöpä",
+  "HUS syöpärekisteri hoitotietojen ilmoittaminen",
+  "Etelä-Karjalan keskussairaala kirjaamisen laatu syöpähoidot",
+  "Etelä-Karjala syöpähoitojen kirjaaminen auditointi hanke",
+  "HUS syöpähoitojen laaturekisteri kirjaamisen tarkistus"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no Ekhva or HUS page shows a chart audit of \"no treatment on record\" patients. The national quality registry project run by FICAN, THL and the Cancer Registry measures care from national registry data and does not check local charts.",
+ "verdict_en": "No public sign that it is running in South Karelia. The problem it fixes is documented. The Finnish Cancer Registry reports that stage at diagnosis is missing for nearly half of new lung cancer patients, and most often in the Eastern Finland area.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Problem documented",
+ "intervention_id": "recording_audit",
+ "intervention_name_en": "Audit of treatment records (\"no treatment on record\")",
+ "area_name_en": "South Karelia wellbeing services county"
+}

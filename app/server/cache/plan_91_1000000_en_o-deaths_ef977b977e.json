@@ -1,0 +1,267 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Åland: €14,350 a year, about 0.1 lung cancer deaths avoided a year (modelled)",
+ "markdown": "# Åland: €14,350 a year, about 0.1 lung cancer deaths avoided a year (modelled)\n\n> About 0.1 deaths avoided a year (modelled) · €14,350 of €1M · €985,650 left: nothing more pays off on today's evidence\n\n## The gap\n\nÅland has too few lung cancer patients to compare: its 93 patients in five years are in the registry's national totals, but the registry does not publish care-path shares for the area [^model]. This page therefore cannot say how many Åland patients a year are missing from treatment that aims to cure. Nor can it say whether fewer are operated on or given radiotherapy that aims to cure [^model]. Instead of counting extra patients treated to cure, the plan ranks measures by deaths avoided [^model].\n\n## The target\n\nThis plan is ranked by deaths avoided: about 0.1 a year (range 0.0–0.2), for €14,350 a year. [^model] Deaths avoided are modelled from stated assumptions, not observed. [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | Deaths avoided a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Smoking cessation started at the first specialist visit**[^ev_smoking_cessation_at_diagnosis_1]. Chief physician and head nurse of pulmonology | €7,800 | 0.1 (0.0–0.1) | Write the standing order: every smoker with suspected lung cancer leaves the first visit with cessation medicine and a nurse call booked. | Share of smoking patients given cessation medicine at the first visit: not published today → 90% by 2027 |\n| 2 | **Reflex molecular testing ordered by pathology**[^ev_reflex_molecular_1]. Chief pathologist together with the chief physician of oncology | €6,550 | 0.0 | The chief pathologist and the chief oncologist sign a standing order: every new non-small cell lung cancer sample goes to EGFR, ALK and PD-L1 testing the day it is diagnosed. | Days from tissue diagnosis to complete biomarker result; days to first drug treatment: not published today → 10 days by 2027 |\n| | **Total** | **€14,350** | **0.1 (0.0–0.2)** | | |\n\nEffects are modelled from published studies and stated assumptions, not observed here. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €112,508 a year; modelled to avoid 0.2 deaths a year (0.0–0.4). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of smoking patients given cessation medicine at the first visit: not published today → 90% by 2027. [^model]\n- Days from tissue diagnosis to complete biomarker result; days to first drug treatment: not published today → 10 days by 2027. [^model]\n\n## What more money buys, and what it cannot\n\nEUR 14,350 a year funds every measure that adds deaths avoided in Åland [^model]. The remaining EUR 985,650 buys nothing more [^model]. Low-dose CT screening for long-term heavy smokers needs a national decision [^model]. Lung cancer causes about 16 deaths a year in Åland [^deaths], and this plan is modelled to avoid 0.1 of them (range 0.01 to 0.19) [^model].\n\n## Pilot ask\n\nA six-month pilot of two actions: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy. In six months that is about 8 new patients and 8 decisions reviewed. If our assumptions hold, about 0 of them (0 to 0) move to treatment that aims to cure in that time, and the share rises from 0.0% to 0.0% by 2028. The pilot replaces those assumptions with a count. [^model]\n\n## Limits\n\n- Effects are a range, not a probability: the lowest and highest results when every assumed effect size moves together from its low to its high bound [^model].\n- No care-path shares are published for Åland [^model].\n- 0 of 3 outcomes matched the estimated symptom-to-treatment clock in the expected direction beyond chance [^model].",
+ "claims": [
+  {
+   "text": "Åland has too few lung cancer patients to compare: its 93 patients in five years are in the registry's national totals, but the registry does not publish care-path shares for the area . This page therefore cannot say how many Åland patients a year are missing from treatment that aims to cure. Nor can it say whether fewer are operated on or given radiotherapy that aims to cure . Instead of counting extra patients treated to cure, the plan ranks measures by deaths avoided .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "This plan is ranked by deaths avoided: about 0.1 a year (range 0.0–0.2), for €14,350 a year.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Deaths avoided are modelled from stated assumptions, not observed.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Smoking cessation started at the first specialist visit**. Chief physician and head nurse of pulmonology",
+   "source_ids": [
+    "ev_smoking_cessation_at_diagnosis_1"
+   ]
+  },
+  {
+   "text": "Reflex molecular testing ordered by pathology**. Chief pathologist together with the chief physician of oncology",
+   "source_ids": [
+    "ev_reflex_molecular_1"
+   ]
+  },
+  {
+   "text": "Effects are modelled from published studies and stated assumptions, not observed here. Costs are assumptions.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Low-dose CT screening for long-term heavy smokers**: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €112,508 a year; modelled to avoid 0.2 deaths a year (0.0–0.4). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Share of smoking patients given cessation medicine at the first visit: not published today → 90% by 2027.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Days from tissue diagnosis to complete biomarker result; days to first drug treatment: not published today → 10 days by 2027.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "EUR 14,350 a year funds every measure that adds deaths avoided in Åland . The remaining EUR 985,650 buys nothing more . Low-dose CT screening for long-term heavy smokers needs a national decision . Lung cancer causes about 16 deaths a year in Åland , and this plan is modelled to avoid 0.1 of them (range 0.01 to 0.19) .",
+   "source_ids": [
+    "model",
+    "deaths"
+   ]
+  },
+  {
+   "text": "A six-month pilot of two actions: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy. In six months that is about 8 new patients and 8 decisions reviewed. If our assumptions hold, about 0 of them (0 to 0) move to treatment that aims to cure in that time, and the share rises from 0.0% to 0.0% by 2028. The pilot replaces those assumptions with a count.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Effects are a range, not a probability: the lowest and highest results when every assumed effect size moves together from its low to its high bound .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "No care-path shares are published for Åland .",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "0 of 3 outcomes matched the estimated symptom-to-treatment clock in the expected direction beyond chance .",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "The remaining EUR 985,650 buys nothing more, because the 8 other measures cost more than the plan's limit of EUR 1,000,000 per death avoided a year [^model].",
+    "reason": "Clause cut: the material lists 17 measures not bought (8 poor value, 3 no effect, 1 national decision, 5 no shortfall), so 'the 8 other measures' as the reason misstates it. Kept: 'The remaining EUR 985,650 buys nothing more [^model].'"
+   },
+   {
+    "sentence": "No care-path shares are published for Åland, so nothing here is adjusted or compared, and county-level figures could not show cause in any case [^model].",
+    "reason": "Clauses cut: the material does not say that nothing is adjusted. It also does not make the general claim about county-level figures and cause in this context. Kept: 'No care-path shares are published for Åland [^model].'"
+   },
+   {
+    "sentence": "The plan does not use the estimated symptom-to-treatment clock: 0 of 3 measured outcomes matched it beyond chance [^model].",
+    "reason": "Clause cut: the material does not say the plan drops the clock because of this check. It calls the clock a secondary view and says the priors were not tuned to the check. Kept the supported result, reworded to match the source ('in the expected direction')."
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "EUR 14,350 a year funds every measure that adds deaths avoided in Åland.",
+    "reason": "The figure had no source marker. Added [^model]; the figure is supported by the plan's saturation note."
+   },
+   {
+    "sentence": "More would need a national decision on low-dose CT screening for long-term heavy smokers [^model].",
+    "reason": "'More' implies screening would add deaths avoided, but the material gives no effect for it here. Rewritten to: 'Low-dose CT screening for long-term heavy smokers needs a national decision [^model].'"
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "model": {
+   "title": "Kello model: the optimiser and its stated assumptions (estimated; see Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "ev_smoking_cessation_at_diagnosis_1": {
+   "title": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "year": 2021,
+   "design": "prospective cohort, Moscow",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_reflex_molecular_1": {
+   "title": "Resected EGFR-mutated NSCLC: 89 % vs 52 % alive and disease-free at 24 months with adjuvant osimertinib, so EGFR status is needed after surgery.",
+   "url": "https://europepmc.org/article/MED/32955177",
+   "year": 2020,
+   "design": "randomised controlled trial (ADAURA)",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "deaths": {
+   "title": "Lung cancer deaths and age-standardised mortality by area, 2020-2024 (measured). Finnish Cancer Registry statistics",
+   "publisher": "Finnish Cancer Registry",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "91",
+ "budget_eur": 1000000.0,
+ "lang": "en",
+ "objective": "deaths",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "smoking_cessation_at_diagnosis",
+   "name": "Smoking cessation started at the first specialist visit",
+   "study_line_en": "Evidence: Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC. (2021) · https://doi.org/10.7326/M21-0252",
+   "why_here_en": null
+  },
+  {
+   "n": 2,
+   "id": "reflex_molecular",
+   "name": "Reflex molecular testing ordered by pathology",
+   "study_line_en": "Evidence: Resected EGFR-mutated NSCLC: 89 % vs 52 % alive and disease-free at 24 months with adjuvant osimertinib, so EGFR status is needed after surgery. (2020) · https://europepmc.org/article/MED/32955177",
+   "why_here_en": "Time from biopsy to biomarker result is not published by county. Åland would start by counting it."
+  }
+ ],
+ "pilot": {
+  "months": 6,
+  "actions": [
+   "surgeon_second_opinion",
+   "sbrt_pathway"
+  ],
+  "effect": {
+   "extra_curative_patients_per_year": {
+    "median": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "curative_share_now_pct": 0.0,
+   "curative_share_after_pct": 0.0,
+   "by_year": 2028,
+   "kind": "estimated"
+  },
+  "text_en": "A six-month pilot of two actions: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy. In six months that is about 8 new patients and 8 decisions reviewed. If our assumptions hold, about 0 of them (0 to 0) move to treatment that aims to cure in that time, and the share rises from 0.0% to 0.0% by 2028. The pilot replaces those assumptions with a count.",
+  "text_fi": "Kuuden kuukauden pilotti kahdesta toimesta: rintakirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään stereotaktiseen sädehoitoon. Kuudessa kuukaudessa se tarkoittaa noin 8 uutta potilasta ja 8 arvioitua päätöstä. Jos oletuksemme pitävät, noin 0 heistä (0–0) siirtyy sinä aikana parantavaan hoitoon, ja osuus nousee 0,0 %:sta 0,0 %:iin vuoteen 2028 mennessä. Pilotti korvaa oletukset lasketuilla luvuilla.",
+  "six_months": {
+   "patients_seen": {
+    "expected": 8.5,
+    "baseline": 8.5,
+    "comparison": 59.5,
+    "unit": "patients"
+   },
+   "no_surgery_decisions_reviewed": {
+    "expected": 8.5,
+    "baseline": 0,
+    "comparison": 50.7,
+    "unit": "decisions"
+   },
+   "decisions_changed": {
+    "expected": 0.0,
+    "baseline": 0,
+    "comparison": null,
+    "unit": "decisions"
+   },
+   "referrals_made": {
+    "expected": 0.0,
+    "baseline": 0,
+    "comparison": null,
+    "unit": "referrals"
+   },
+   "comparison_area_id": "04",
+   "comparison_area_en": "Vantaa and Kerava"
+  },
+  "cannot_show_en": "Six months is too short to show the county's share moving. It is long enough to count reviews done, decisions changed and referrals made, against the same six months a year earlier.",
+  "cannot_show_fi": "Kuusi kuukautta on liian lyhyt aika osoittamaan alueen osuuden muutosta. Se riittää laskemaan tehdyt arviot, muuttuneet päätökset ja lähetteet ja vertaamaan niitä samaan jaksoon vuotta aiemmin."
+ },
+ "action_studies": [
+  {
+   "id": "smoking_cessation_at_diagnosis",
+   "study_line_en": "Evidence: Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC. (2021) · https://doi.org/10.7326/M21-0252",
+   "why_here_en": null
+  },
+  {
+   "id": "reflex_molecular",
+   "study_line_en": "Evidence: Resected EGFR-mutated NSCLC: 89 % vs 52 % alive and disease-free at 24 months with adjuvant osimertinib, so EGFR status is needed after surgery. (2020) · https://europepmc.org/article/MED/32955177",
+   "why_here_en": "Time from biopsy to biomarker result is not published by county. Åland would start by counting it."
+  }
+ ],
+ "strip": {
+  "closes": null,
+  "of": null,
+  "pct": null,
+  "deaths": 0.1,
+  "spent": 14350.0,
+  "budget": 1000000.0,
+  "left": 985650.0,
+  "saturated": true,
+  "lead_en": "About 0.1 deaths avoided a year (modelled)",
+  "lead_fi": "Arviolta 0,1 kuolemaa vähemmän vuodessa (mallinnettu)",
+  "money_en": "€14,350 of €1M",
+  "money_fi": "14 350 € / 1 milj. €",
+  "left_en": "€985,650 left: nothing more pays off on today's evidence",
+  "left_fi": "985 650 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää",
+  "text_en": "About 0.1 deaths avoided a year (modelled) · €14,350 of €1M · €985,650 left: nothing more pays off on today's evidence",
+  "text_fi": "Arviolta 0,1 kuolemaa vähemmän vuodessa (mallinnettu) · 14 350 € / 1 milj. € · 985 650 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää"
+ },
+ "written_sections": [
+  "The gap",
+  "What more money buys, and what it cannot",
+  "Limits"
+ ],
+ "generated_at": "2026-11-14T06:14:08+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## The gap\nÅland has too few lung cancer patients to compare: its 93 patients in five years are in the registry's national totals, but the registry does not publish care-path shares for the area [^model]. This page therefore cannot say how many Åland patients a year are missing from treatment that aims to cure. Nor can it say whether fewer are operated on or given radiotherapy that aims to cure [^model]. Instead of counting extra patients treated to cure, the plan ranks measures by deaths avoided [^model].\n\n## What more money buys, and what it cannot\nEUR 14,350 a year funds every measure that adds deaths avoided in Åland. The remaining EUR 985,650 buys nothing more, because the 8 other measures cost more than the plan's limit of EUR 1,000,000 per death avoided a year [^model]. More would need a national decision on low-dose CT screening for long-term heavy smokers [^model]. Lung cancer causes about 16 deaths a year in Åland [^deaths], and this plan is modelled to avoid 0.1 of them (range 0.01 to 0.19) [^model].\n\n## Limits\n- Effects are a range, not a probability: the lowest and highest results when every assumed effect size moves together from its low to its high bound [^model].\n- No care-path shares are published for Åland, so nothing here is adjusted or compared, and county-level figures could not show cause in any case [^model].\n- The plan does not use the estimated symptom-to-treatment clock: 0 of 3 measured outcomes matched it beyond chance [^model]."
+}

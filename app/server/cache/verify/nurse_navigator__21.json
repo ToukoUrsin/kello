@@ -1,0 +1,584 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how much?\nMeasure: Nurse navigator for every suspected lung cancer. A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+ "area_id": "21",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A 2026 scoping review of 13 studies found that navigation was consistently linked with a faster start of first treatment, but its abstract gives no pooled number of days saved compared with care without navigation.",
+ "supported_en": "The 2026 scoping review in the Japan Journal of Nursing Science (13 studies) says navigation sped up the start of first treatment through better scheduling and coordination.",
+ "not_supported_en": "The review does not show the 15% (0–30%) cut in waiting time that our model assumes.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found of a named nurse navigator for suspected lung cancer on Lapha's lung clinic page or on OYS's lung cancer care-pathway and cancer centre pages; OYS runs the multidisciplinary meetings and the Northern Cancer Centre coordinates cancer care in the region.",
+ "missing_en": "",
+ "summary_en": "Lapha's lung clinic page lists only ordinary doctor and nurse appointments. OYS's care-pathway page says the university hospital runs the lung cancer multidisciplinary meetings, and OYS's cancer centre page says the Northern Cancer Centre coordinates cancer care in the region; none of these pages describes a nurse navigator. A 2026 scoping review of 13 studies links navigation with a faster start of treatment but gives no pooled number of days saved.",
+ "unanswered_en": "I found no page that names a lung cancer coordinator nurse (syöpäkoordinaattori) or a navigation project in Lapha or OYS, and no study that measures how much time navigation saves for lung cancer.",
+ "sources": [
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Vastaa keuhkosyövän moniammatillisista kokouksista",
+   "about": "context",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/tietoameista/syopakeskus/",
+   "title": "Syöpäkeskus - OYS",
+   "quote": "Pohjoisen Syöpäkeskuksen tärkeimpiä tehtäviä ovat koordinoida ja kehittää Pohjois-Suomen alueella syövän diagnostiikka ja hoitoa",
+   "about": "context",
+   "published": "2026-08-20T09:23:22+00:00",
+   "fetched_at": "2026-11-14T01:50:13+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://lapha.fi/keuhkosairaudet",
+   "title": "Keuhkosairaudet - Lapin hyvinvointialue",
+   "quote": "Keuhkopoliklinikalla toimii lääkärin ja sairaanhoitajan sekä apuvälinehoitajan vastaanotto.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:46:07+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "quote": "CPN interventions were consistently associated with accelerated initiation of first treatment among patients with cancer.",
+   "about": "effect",
+   "published": "2026-07-01",
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, syovanhoitokeskus.pshyvinvointialue.fi, hyvaks.fi",
+   "ms": 2968,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha syöpähoitaja koordinaattori",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lapha.fi, hyvinvointilahete.fi",
+   "ms": 2285,
+   "results": [
+    {
+     "url": "https://lapha.fi/yhteystiedot",
+     "title": "Yhteystiedot"
+    },
+    {
+     "url": "https://lapha.fi/fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/fi/kuntoutusohjaus-ja-asiantuntijapalvelut",
+     "title": "Kuntoutusohjaus- ja asiantuntijapalvelut - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointilahete.fi/yhteystiedot/",
+     "title": "Yhteystiedot - Hyvinvointilähete"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/vuoden-syopasairaanhoitaja-jennifer-bjorkqvist-on-osaston-sielu/",
+     "title": "Vuoden syöpähoitaja Jennifer Björkqvist on osaston sielu - Kaikki syövästä"
+    },
+    {
+     "url": "https://www.kauppalehti.fi/lehdistotiedotteet/a/e05ff2ed-40ff-5dc0-b333-8ab1ffc0d08d",
+     "title": "Vuoden syöpälääkäri ja vuoden syöpähoitaja 2024 valittu | Kauppalehti"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS hoitokoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, filha.fi",
+   "ms": 3034,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelut/syopa-ja-veritautien-hoito-sairaalassa/",
+     "title": "Syöpä- ja veritautien hoito sairaalassa - OYS"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma - Filha ry"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/sisataudit-ja-keuhkosairaudet/",
+     "title": "Sisätaudit ja keuhkosairaudet - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/sisatautikeskus/keuhkosairaudet",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin keskussairaala keuhkosyöpähoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, lapha.fi",
+   "ms": 2777,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/e708fa9c-2ceb-4df3-9e63-dc6fe238d3f1",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-sisatauti-ja-keuhko-osasto-5-lapin-hyvinvointialue/1d4320e7-2162-4e2a-a612-a09b22e13800",
+     "title": "Lapin keskussairaalan sisätauti- ja keuhko-osasto 5 - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/Keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.0,
+   "result_en": "3 reads: B: navigator at OYS; A: effect size; B: Lapland lung clinic",
+   "ms": 6729
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "focus": "hoitaja koordinaattori yhteyshenkilö moniammatillinen kokous",
+   "why": "B: navigator at OYS",
+   "status": "done",
+   "t_s": 9.8,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - OYS\" · 19 914 chars · 7 of 31 passages kept · from cache",
+   "ms": 7,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "focus": "navigation time to treatment days reduction",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.8,
+   "result_en": "\"Cancer patient navigation interventions improving timeliness from diag\" · 1 510 chars · from cache",
+   "ms": 2,
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://lapha.fi/keuhkosairaudet",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://lapha.fi/keuhkosairaudet",
+   "focus": "keuhkosyöpä hoitaja yhteyshenkilö",
+   "why": "B: Lapland lung clinic",
+   "status": "done",
+   "t_s": 9.8,
+   "result_en": "\"Keuhkosairaudet - Lapin hyvinvointialue\" · 6 242 chars · 9 of 13 passages kept · from cache",
+   "ms": 8,
+   "title": "Keuhkosairaudet - Lapin hyvinvointialue",
+   "chars": 6242,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://lapha.fi/keuhkosairaudet",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.8,
+   "result_en": "1 search: B: navigator role in Lapland",
+   "ms": 3961
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin hyvinvointialue syöpäkoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: navigator role in Lapland",
+   "status": "done",
+   "t_s": 13.8,
+   "result_en": "6 results: suomi.fi, lapha.fi",
+   "ms": 1910,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-syopatautien-poliklinikka-lapin-hyvinvointialue/c1ca3a25-ad57-4aea-9084-9874828486b6",
+     "title": "Lapin keskussairaalan syöpätautien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaalan-syopatautien-poliklinikka-lapin-hyvinvointialue/b2c9ada1-b986-4999-b2ca-29c768c0c1ca",
+     "title": "Lapin keskussairaalan syöpätautien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/syopataudit",
+     "title": "Syöpätaudit"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopataudit-lapin-hyvinvointialue/9b61d8e0-29cc-40d1-9ed0-90b40a45370d",
+     "title": "Syöpätaudit - Lapin hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.7,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Lapha / Lapin keskussairaala / OYS Oulun yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11579
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 27.2,
+   "result_en": "1 search: B: navigator at OYS",
+   "ms": 5044
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS syöpäkeskus hoitokoordinaattori yhteyshenkilö keuhkosyöpäepäily",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: navigator at OYS",
+   "status": "done",
+   "t_s": 32.3,
+   "result_en": "6 results: oys.fi",
+   "ms": 2411,
+   "results": [
+    {
+     "url": "https://oys.fi/tietoameista/syopakeskus/",
+     "title": "Syöpäkeskus - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/henkilosto/",
+     "title": "Henkilöstö - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/yhteystiedot/",
+     "title": "Yhteystiedot - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/syopa-ja-veritautien-hoito-sairaalassa/?area=oulu",
+     "title": "Syöpä- ja veritautien hoito sairaalassa - OYS"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.7,
+   "result_en": "2 reads: B: navigator at OYS cancer centre; B: named navigator role",
+   "ms": 3985
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/tietoameista/syopakeskus/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/tietoameista/syopakeskus/",
+   "focus": "koordinaattori hoitaja keuhkosyöpä hoitoon pääsy",
+   "why": "B: navigator at OYS cancer centre",
+   "status": "done",
+   "t_s": 38.7,
+   "result_en": "\"Syöpäkeskus - OYS\" · 4 235 chars",
+   "ms": 2982,
+   "title": "Syöpäkeskus - OYS",
+   "chars": 4235,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://oys.fi/tietoameista/syopakeskus/",
+   "published": "2026-08-20T09:23:22+00:00",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/syopakeskus/henkilosto/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/",
+   "focus": "koordinaattori keuhkosyöpä hoitaja",
+   "why": "B: named navigator role",
+   "status": "done",
+   "t_s": 38.7,
+   "result_en": "\"Oulun yliopistollinen sairaala\" · 2 865 chars",
+   "ms": 3383,
+   "title": "Oulun yliopistollinen sairaala",
+   "chars": 2865,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://oys.fi/",
+   "published": "2026-06-25T08:52:41+00:00",
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 42.1,
+   "result_en": "writes the answer",
+   "ms": 10350
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://lapha.fi/keuhkosairaudet",
+   "title": "Keuhkosairaudet - Lapin hyvinvointialue",
+   "chars": 6242,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:07+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/tietoameista/syopakeskus/",
+   "title": "Syöpäkeskus - OYS",
+   "chars": 4235,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:50:13+00:00",
+   "published": "2026-08-20T09:23:22+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/",
+   "title": "Oulun yliopistollinen sairaala",
+   "chars": 2865,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:50:13+00:00",
+   "published": "2026-06-25T08:52:41+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:50:24+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: neither Lapha's nor OYS's pages show a named nurse who books and chases every test for suspected lung cancer, but treat the 15% time saving as a guess, because the evidence shows the direction of the effect and not its size.",
+ "seconds": 52.4,
+ "searched_en": "Searched 6 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha syöpähoitaja koordinaattori\"; \"OYS hoitokoordinaattori keuhkosyöpä\"; \"Lapin keskussairaala keuhkosyöpähoitaja\", ...) and read 5 pages on oys.fi, pmc.ncbi.nlm.nih.gov, lapha.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Lapha syöpähoitaja koordinaattori",
+  "OYS hoitokoordinaattori keuhkosyöpä",
+  "Lapin keskussairaala keuhkosyöpähoitaja",
+  "Lapin hyvinvointialue syöpäkoordinaattori keuhkosyöpä",
+  "OYS syöpäkeskus hoitokoordinaattori yhteyshenkilö keuhkosyöpäepäily"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: neither Lapha's nor OYS's pages show a named nurse who books and chases every test for suspected lung cancer, but treat the 15% time saving as a guess, because the evidence shows the direction of the effect and not its size.",
+ "verdict_en": "No public sign that it is running in Lapland. Evidence supports that it works, but not the size of effect we assume. Supported: The 2026 scoping review in the Japan Journal of Nursing Science (13 studies) says navigation sped up the start of first treatment through better scheduling and coordination. Not supported: The review does not show the 15% (0–30%) cut in waiting time that our model assumes.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "nurse_navigator",
+ "intervention_name_en": "Nurse navigator for every suspected lung cancer",
+ "area_name_en": "Lapland wellbeing services county"
+}

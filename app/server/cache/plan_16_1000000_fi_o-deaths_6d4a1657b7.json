@@ -1,0 +1,317 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Etelä-Pohjanmaan hyvinvointialue: 314 200 € vuodessa, arviolta 1,0 keuhkosyöpäkuolemaa vähemmän vuodessa (mallinnettu)",
+ "markdown": "# Etelä-Pohjanmaan hyvinvointialue: 314 200 € vuodessa, arviolta 1,0 keuhkosyöpäkuolemaa vähemmän vuodessa (mallinnettu)\n\n> Arviolta 1,0 kuolemaa vähemmän vuodessa (mallinnettu) · 314 200 € / 1 milj. € · 685 800 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää\n\n## Ero\n\nEtelä-Pohjanmaan hyvinvointialueella sadasta keuhkosyöpäpotilaasta 31 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero mahtuu tämän kokoisen alueen satunnaisvaihteluun. [^care_curative] Vajetta ei ole, sillä parantavaan pyrkivää hoitoa saavien osuus on vähintään parhaan maakuntaneljänneksen tasolla. [^model] Leikkaushoitoa alue antaa useammalle kuin Suomi keskimäärin: 21,6 % potilaista, kun koko maassa osuus on 15,0 %. [^care_surgery] Koska vajetta ei ole, suunnitelma ei tavoittele lisää parantavaan pyrkivää hoitoa saavia potilaita. [^model] Se asettaa toimet järjestykseen sen mukaan, kuinka monta keuhkosyöpäkuolemaa ne ehkäisevät. [^model]\n\n## Tavoite\n\nSuunnitelma on järjestetty vältettyjen kuolemien mukaan: arviolta 1,0 vuodessa (vaihteluväli −0,1 … 2,9), kustannus 314 200 € vuodessa. [^model] Vältetyt kuolemat on mallinnettu kirjatuista oletuksista, niitä ei ole havaittu. [^model] Vaihteluvälin alaraja on alle nollan: viiveen vaikutus keuhkosyöpäkuolleisuuteen ei ole tilastollisesti varma, joten hyödyttömyyttä ei voi sulkea pois. [^model]\n\n## Rahoitettavat toimet\n\n| # | Toimi ja vastuutaho | Kustannus vuodessa | Vältettyjä kuolemia vuodessa (vaihteluväli) | Ensimmäinen askel tällä viikolla | Mittari: nyt → tavoite |\n|---|---|---|---|---|---|\n| | **Hyvinvointialue voi aloittaa maanantaina** | | | | |\n| 1 | **Tupakkavieroitus aloitetaan ensikäynnillä**[^ev_smoking_cessation_at_diagnosis_1]. Keuhkosairauksien ylilääkäri ja osastonhoitaja | 44 200 € | 0,3 (0,1–0,8) | Kirjoitetaan pysyväismääräys: jokainen tupakoiva keuhkosyöpäepäilypotilas saa ensikäynnillä vieroituslääkkeen ja ajan hoitajan soittoon. | Vieroituslääkityksen ensikäynnillä saaneiden osuus tupakoivista: ei julkaista nyt → 90 % vuoteen 2027 mennessä |\n| 2 | **Thorax-kuvan lausunto samana päivänä ja välitön TT**[^ev_same_day_cxr_ct_1]. Kuvantamisen ylilääkäri yhdessä perusterveydenhuollon johtavan lääkärin kanssa | 109 000 € | 0,4 (−0,0 … 1,3) | Sovitaan kuvantamisen kanssa, että epäilyttävän keuhkokuvan jälkeen TT tehdään samana päivänä ilman uutta lähetettä. | Päivät epäilyttävästä keuhkokuvasta TT-kuvaukseen: ei julkaista nyt → 3 päivää vuoteen 2027 mennessä |\n| 3 | **Keuhkosyövän standardoitu hoitopolku ja varatut tutkimusajat**[^ev_cpp_pathway_1]. Keuhkosairauksien ylilääkäri (alueellinen polku); FICAN ja kansallinen keuhkosyöpäryhmä (kansallinen hoitoketjukuvaus) | 100 000 € | 0,2 (−0,1 … 0,9) | Nimetään hoitopolulle vastuuhenkilö ja varataan keuhkosyöpäepäilyille kiinteät viikoittaiset TT-, PET-TT-, bronkoskopia- ja MDT-ajat. | Päivät diagnoosista hoidon alkuun (mediaani): 38,7 päivää → 36,9 päivää vuoteen 2028 mennessä |\n| 4 | **Hoitajakoordinaattori jokaiselle keuhkosyöpäepäilylle**[^ev_nurse_navigator_1]. Keuhkosairauksien ja syöpätautien osastonhoitajat; ylihoitaja | 61 000 € | 0,1 (0,0–0,1) | Nimetään hoitaja, joka varaa jokaisen uuden keuhkosyöpäepäilyn tutkimukset ja ilmoittaa ajat potilaalle. | Päivät diagnoosista hoidon alkuun (mediaani): 38,7 päivää → 36,9 päivää vuoteen 2028 mennessä |\n| | **Yhteensä** | **314 200 €** | **1,0 (−0,1 … 2,9)** | | |\n\nVaikutukset on mallinnettu julkaistuista tutkimuksista ja kirjatuista oletuksista; niitä ei ole havaittu täällä. Kustannukset ovat oletuksia. [^model]\n\n## Vaatii kansallisen päätöksen (ei sisälly tähän budjettiin)\n\n- **Matala-annos-TT-seulonta pitkään tupakoineille**[^ev_ldct_screening_1]: STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus). 588 422 € vuodessa; arviolta 1,0 kuolemaa vähemmän vuodessa (0,2–2,6). Ei sisälly tähän budjettiin. Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi. [^model]\n\n## Mitä mitataan maanantaista alkaen\n\n- Vieroituslääkityksen ensikäynnillä saaneiden osuus tupakoivista: ei julkaista nyt → 90 % vuoteen 2027 mennessä. [^model]\n- Päivät epäilyttävästä keuhkokuvasta TT-kuvaukseen: ei julkaista nyt → 3 päivää vuoteen 2027 mennessä. [^model]\n- Päivät diagnoosista hoidon alkuun (mediaani): 38,7 päivää → 36,9 päivää vuoteen 2028 mennessä. [^care_time_to_treatment][^model]\n- Syöpärekisterin julkiset luvut kattavat vuodet 2019–2023; näitä seurataan kuukausittain alueen omista tiedoista. [^care_curative]\n\n## Mitä lisärahalla saa ja mitä ei\n\nSuunnitelma käyttää 314 200 € vuodessa. [^model] Sillä se ostaa kaikki toimet, jotka mallissa vähentävät kuolemia Etelä-Pohjanmaan hyvinvointialueella. [^model] Jäljelle jäävällä 685 800 €:lla ei mallissa saa mitään lisää, koska yksikään jäljellä oleva toimi ei vähennä kuolemia hyväksyttävällä hinnalla. [^model] Matala-annos-TT-seulonta pitkään tupakoineille vaatii kansallisen päätöksen, joten sitä ei osteta alueen budjetista. [^model] Alueella kuolee keuhkosyöpään 81,6 ihmistä vuodessa, ja suunnitelman mallinnetaan ehkäisevän niistä 1,0 vuodessa (vaihteluväli -0,08–2,9). [^deaths] [^model]\n\n## Rajoitteet\n\n- Vaikutukset ovat oletuksiin perustuvia arvioita. Vaihteluväli on pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä alarajalta ylärajalle. Se ei ole todennäköisyys. [^model]\n- Osuuksia ei ole vakioitu levinneisyydelle, toimintakyvylle, kudostyypille, tupakoinnille, löytötavalle eikä kirjausten kattavuudelle. Aluetason luvut eivät osoita syytä. [^model]\n- Arvioitu kello oireista hoitoon on vain toissijainen näkymä, koska se on arvioitu eikä mitattu: tuloksista 0/3 liittyi siihen odotettuun suuntaan selvemmin kuin sattuma selittää. [^model]",
+ "claims": [
+  {
+   "text": "Etelä-Pohjanmaan hyvinvointialueella sadasta keuhkosyöpäpotilaasta 31 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero mahtuu tämän kokoisen alueen satunnaisvaihteluun.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Vajetta ei ole, sillä parantavaan pyrkivää hoitoa saavien osuus on vähintään parhaan maakuntaneljänneksen tasolla.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Leikkaushoitoa alue antaa useammalle kuin Suomi keskimäärin: 21,6 % potilaista, kun koko maassa osuus on 15,0 %.",
+   "source_ids": [
+    "care_surgery"
+   ]
+  },
+  {
+   "text": "Koska vajetta ei ole, suunnitelma ei tavoittele lisää parantavaan pyrkivää hoitoa saavia potilaita.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Se asettaa toimet järjestykseen sen mukaan, kuinka monta keuhkosyöpäkuolemaa ne ehkäisevät.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Suunnitelma on järjestetty vältettyjen kuolemien mukaan: arviolta 1,0 vuodessa (vaihteluväli −0,1 … 2,9), kustannus 314 200 € vuodessa.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Vältetyt kuolemat on mallinnettu kirjatuista oletuksista, niitä ei ole havaittu.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Vaihteluvälin alaraja on alle nollan: viiveen vaikutus keuhkosyöpäkuolleisuuteen ei ole tilastollisesti varma, joten hyödyttömyyttä ei voi sulkea pois.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Tupakkavieroitus aloitetaan ensikäynnillä**. Keuhkosairauksien ylilääkäri ja osastonhoitaja",
+   "source_ids": [
+    "ev_smoking_cessation_at_diagnosis_1"
+   ]
+  },
+  {
+   "text": "Thorax-kuvan lausunto samana päivänä ja välitön TT**. Kuvantamisen ylilääkäri yhdessä perusterveydenhuollon johtavan lääkärin kanssa",
+   "source_ids": [
+    "ev_same_day_cxr_ct_1"
+   ]
+  },
+  {
+   "text": "Keuhkosyövän standardoitu hoitopolku ja varatut tutkimusajat**. Keuhkosairauksien ylilääkäri (alueellinen polku); FICAN ja kansallinen keuhkosyöpäryhmä (kansallinen hoitoketjukuvaus)",
+   "source_ids": [
+    "ev_cpp_pathway_1"
+   ]
+  },
+  {
+   "text": "Hoitajakoordinaattori jokaiselle keuhkosyöpäepäilylle**. Keuhkosairauksien ja syöpätautien osastonhoitajat; ylihoitaja",
+   "source_ids": [
+    "ev_nurse_navigator_1"
+   ]
+  },
+  {
+   "text": "Vaikutukset on mallinnettu julkaistuista tutkimuksista ja kirjatuista oletuksista; niitä ei ole havaittu täällä. Kustannukset ovat oletuksia.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Matala-annos-TT-seulonta pitkään tupakoineille**: STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus). 588 422 € vuodessa; arviolta 1,0 kuolemaa vähemmän vuodessa (0,2–2,6). Ei sisälly tähän budjettiin. Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Vieroituslääkityksen ensikäynnillä saaneiden osuus tupakoivista: ei julkaista nyt → 90 % vuoteen 2027 mennessä.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Päivät epäilyttävästä keuhkokuvasta TT-kuvaukseen: ei julkaista nyt → 3 päivää vuoteen 2027 mennessä.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Päivät diagnoosista hoidon alkuun (mediaani): 38,7 päivää → 36,9 päivää vuoteen 2028 mennessä.",
+   "source_ids": [
+    "care_time_to_treatment",
+    "model"
+   ]
+  },
+  {
+   "text": "Syöpärekisterin julkiset luvut kattavat vuodet 2019–2023; näitä seurataan kuukausittain alueen omista tiedoista.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Suunnitelma käyttää 314 200 € vuodessa.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Sillä se ostaa kaikki toimet, jotka mallissa vähentävät kuolemia Etelä-Pohjanmaan hyvinvointialueella.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Jäljelle jäävällä 685 800 €:lla ei mallissa saa mitään lisää, koska yksikään jäljellä oleva toimi ei vähennä kuolemia hyväksyttävällä hinnalla.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Matala-annos-TT-seulonta pitkään tupakoineille vaatii kansallisen päätöksen, joten sitä ei osteta alueen budjetista.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Alueella kuolee keuhkosyöpään 81,6 ihmistä vuodessa, ja suunnitelman mallinnetaan ehkäisevän niistä 1,0 vuodessa (vaihteluväli -0,08–2,9).",
+   "source_ids": [
+    "deaths",
+    "model"
+   ]
+  },
+  {
+   "text": "Vaikutukset ovat oletuksiin perustuvia arvioita. Vaihteluväli on pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä alarajalta ylärajalle. Se ei ole todennäköisyys.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Osuuksia ei ole vakioitu levinneisyydelle, toimintakyvylle, kudostyypille, tupakoinnille, löytötavalle eikä kirjausten kattavuudelle. Aluetason luvut eivät osoita syytä.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Arvioitu kello oireista hoitoon on vain toissijainen näkymä, koska se on arvioitu eikä mitattu: tuloksista 0/3 liittyi siihen odotettuun suuntaan selvemmin kuin sattuma selittää.",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "Lisää voisi saada matala-annos-TT-seulonnalla pitkään tupakoineille, mutta se vaatii kansallisen päätöksen. [^model]",
+    "reason": "Clause 'Lisää voisi saada' is unsupported: the material gives no modelled gain for screening in this county. Cut the clause and kept the supported part (needs a national decision, not bought from county budget)."
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "Siksi suunnitelma ei tavoittele lisää parantavaan pyrkivää hoitoa saavia potilaita.",
+    "reason": "'Siksi' followed the surgery sentence, implying surgery was the reason; the source gives the absence of a shortfall as the reason. Rewrote the link and added the missing [^model] marker."
+   },
+   {
+    "sentence": "Suunnitelma käyttää 314 200 € vuodessa.",
+    "reason": "Number without a source marker; the supporting id is obviously the plan (model), so [^model] was added."
+   },
+   {
+    "sentence": "Arvioitua kelloa oireista hoitoon ei käytetä, koska vertailu mitattuihin tuloksiin ei vahvistanut sitä: odotettuun suuntaan osui 0 tulosta 3:sta. [^model]",
+    "reason": "Misstated the source: the clock is a secondary view (not 'not used'), the check is not a validation, and '0 of 3' refers to correlation beyond chance, not direction alone. Rewritten in plain words."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Parantava hoito (mitattu; 2019–2023; lukenut Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), s. 14",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kellon malli: optimointi ja sen kirjatut oletukset (arvio; ks. Lähteet ja menetelmä)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "care_surgery": {
+   "title": "Leikkaushoito (mitattu; 1.1.2018-30.6.2022; lukenut Gemini). Suomen Syöpärekisterin keuhkosyöpäraportti, s. 25-26",
+   "publisher": null,
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": null,
+   "kind": "measured"
+  },
+  "ev_smoking_cessation_at_diagnosis_1": {
+   "title": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "year": 2021,
+   "design": "prospective cohort, Moscow",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_same_day_cxr_ct_1": {
+   "title": "Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis.",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "year": 2023,
+   "design": "randomised controlled trial (radioX), single London hospital",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_cpp_pathway_1": {
+   "title": "Three-year relative survival for symptomatic cancer patients diagnosed via primary care rose from 45 % to 54 % after Danish cancer patient pathways were introduced.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/",
+   "year": 2017,
+   "design": "before-during-after cohort, Denmark",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_nurse_navigator_1": {
+   "title": "Scoping review of 13 studies: navigation shortened diagnosis-to-treatment waits.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "year": 2026,
+   "design": "scoping review, 13 studies, several cancers including lung",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "care_time_to_treatment": {
+   "title": "Päivät diagnoosista hoidon alkuun (mitattu; 1.1.2018-30.6.2022; julkaistu yhteistyöalueelle; lukenut Gemini). Suomen Syöpärekisterin keuhkosyöpäraportti, s. 28",
+   "publisher": null,
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": null,
+   "kind": "measured"
+  },
+  "deaths": {
+   "title": "Keuhkosyöpäkuolemat ja ikävakioitu kuolleisuus alueittain, 2020-2024 (mitattu). Suomen Syöpärekisterin tilastot",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "16",
+ "budget_eur": 1000000.0,
+ "lang": "fi",
+ "objective": "deaths",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "smoking_cessation_at_diagnosis",
+   "name": "Tupakkavieroitus aloitetaan ensikäynnillä"
+  },
+  {
+   "n": 2,
+   "id": "same_day_cxr_ct",
+   "name": "Thorax-kuvan lausunto samana päivänä ja välitön TT"
+  },
+  {
+   "n": 3,
+   "id": "cpp_pathway",
+   "name": "Keuhkosyövän standardoitu hoitopolku ja varatut tutkimusajat"
+  },
+  {
+   "n": 4,
+   "id": "nurse_navigator",
+   "name": "Hoitajakoordinaattori jokaiselle keuhkosyöpäepäilylle"
+  }
+ ],
+ "strip": {
+  "closes": null,
+  "of": null,
+  "pct": null,
+  "deaths": 1.0,
+  "spent": 314200.0,
+  "budget": 1000000.0,
+  "left": 685800.0,
+  "saturated": true,
+  "lead_en": "About 1.0 deaths avoided a year (modelled)",
+  "lead_fi": "Arviolta 1,0 kuolemaa vähemmän vuodessa (mallinnettu)",
+  "money_en": "€314,200 of €1M",
+  "money_fi": "314 200 € / 1 milj. €",
+  "left_en": "€685,800 left: nothing more pays off on today's evidence",
+  "left_fi": "685 800 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää",
+  "text_en": "About 1.0 deaths avoided a year (modelled) · €314,200 of €1M · €685,800 left: nothing more pays off on today's evidence",
+  "text_fi": "Arviolta 1,0 kuolemaa vähemmän vuodessa (mallinnettu) · 314 200 € / 1 milj. € · 685 800 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää"
+ },
+ "written_sections": [
+  "Ero",
+  "Mitä lisärahalla saa ja mitä ei",
+  "Rajoitteet"
+ ],
+ "generated_at": "2026-11-14T01:17:52+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## Ero\nEtelä-Pohjanmaan hyvinvointialueella sadasta keuhkosyöpäpotilaasta 31 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero mahtuu tämän kokoisen alueen satunnaisvaihteluun. [^care_curative] Vajetta ei ole, sillä parantavaan pyrkivää hoitoa saavien osuus on vähintään parhaan maakuntaneljänneksen tasolla. [^model] Leikkaushoitoa alue antaa useammalle kuin Suomi keskimäärin: 21,6 % potilaista, kun koko maassa osuus on 15,0 %. [^care_surgery] Siksi suunnitelma ei tavoittele lisää parantavaan pyrkivää hoitoa saavia potilaita. Se asettaa toimet järjestykseen sen mukaan, kuinka monta keuhkosyöpäkuolemaa ne ehkäisevät. [^model]\n\n## Mitä lisärahalla saa ja mitä ei\nSuunnitelma käyttää 314 200 € vuodessa. Sillä se ostaa kaikki toimet, jotka mallissa vähentävät kuolemia Etelä-Pohjanmaan hyvinvointialueella. [^model] Jäljelle jäävällä 685 800 €:lla ei mallissa saa mitään lisää, koska yksikään jäljellä oleva toimi ei vähennä kuolemia hyväksyttävällä hinnalla. [^model] Lisää voisi saada matala-annos-TT-seulonnalla pitkään tupakoineille, mutta se vaatii kansallisen päätöksen. [^model] Alueella kuolee keuhkosyöpään 81,6 ihmistä vuodessa, ja suunnitelman mallinnetaan ehkäisevän niistä 1,0 vuodessa (vaihteluväli -0,08–2,9). [^deaths] [^model]\n\n## Rajoitteet\n- Vaikutukset ovat oletuksiin perustuvia arvioita. Vaihteluväli on pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä alarajalta ylärajalle. Se ei ole todennäköisyys. [^model]\n- Osuuksia ei ole vakioitu levinneisyydelle, toimintakyvylle, kudostyypille, tupakoinnille, löytötavalle eikä kirjausten kattavuudelle. Aluetason luvut eivät osoita syytä. [^model]\n- Arvioitua kelloa oireista hoitoon ei käytetä, koska vertailu mitattuihin tuloksiin ei vahvistanut sitä: odotettuun suuntaan osui 0 tulosta 3:sta. [^model]"
+}

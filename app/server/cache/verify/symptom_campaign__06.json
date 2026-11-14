@@ -1,0 +1,601 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure lead to lung cancer being found at an earlier stage, and by how much?\nMeasure: Symptom awareness campaign (cough over three weeks). A campaign on the English \"Be Clear on Cancer\" model telling people with a persistent cough to see a doctor. Weak evidence: in England the share found at stage I rose during the campaign months and faded within months, so it has to be repeated every year, and the extra GP visits and chest X-rays cost several times the advertising.",
+ "area_id": "06",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "British Journal of Cancer 2015: the English campaign raised GP visits for cough among people aged 50+ by 63% over the 8 weeks around the campaign.",
+ "not_supported_en": "The passages I read did not show the 3.1-point rise in stage I, or the 0.8-point yearly average we assume.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: I found no public sign of a cough awareness campaign. Satakunnan hyvinvointialue (11.11.2026) runs a pathway that lets health centres send people with symptoms such as a long-lasting cough, plus at least 20 pack-years of smoking, straight to chest CT; it started as a pilot in early 2022, became standard in 2024, and about 170 patients have been scanned. A: The British Journal of Cancer evaluation (2015) found the English campaign raised GP visits for cough among people aged 50+ by 63%, but the passages I read did not show the stage I figure.",
+ "unanswered_en": "Searches with several Finnish terms found no Satakunta or Tyks campaign page, and I did not reach the stage-shift figures in the article.",
+ "sources": [
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "quote": "Keskeisiä kriteereitä ovat vähintään 20 askivuoden tupakointihistoria sekä keuhkosyöpään viittaavat oireet, kuten pitkittynyt yskä.",
+   "about": "context",
+   "published": "2026-11-11T07:15:00+00:00",
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "quote": "Alkuvuodesta 2022 pilottina käynnistynyt toimintamalli vakiintui osaksi terveydenhuollon käytäntöjä vuonna 2024.",
+   "about": "context",
+   "published": "2026-11-11T07:15:00+00:00",
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "quote": "Presentations of patients aged 50+ with a cough increased by 63% for the 8 weeks around the campaign compared with the same weeks in 2011",
+   "about": "effect",
+   "published": "2015",
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, hyvaks.fi",
+   "ms": 1713,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue yskä yli kolme viikkoa kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, satakunnankansa.fi",
+   "ms": 2257,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/tietoa-meista/media-ja-viestinta/viestintapankki/",
+     "title": "Viestintäpankki - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2026/05/22/ala-valita-paihteita-nuorelle-hakematta-paras-kampanja/",
+     "title": "Älä välitä päihteitä nuorelle – Hakematta paras -kampanja - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20256297?origin=rss",
+     "title": "Sata-alue sai lisäaikaa alijäämänsä kattamiseen, mutta vuoden anottua vähemmän | Satakunta | Yle"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/tekstarit/art-2000012401469.html",
+     "title": "”Nyt hyvinvointialue vie loputkin uskoni” - Satakunnan Kansa"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyövän oireet kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, suomenseniorihoiva.fi, terveyskirjasto.fi, keuhkosyopakuukausi.fi",
+   "ms": 3094,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+     "title": "Kampanja – Keuhkosyöpäkuukausi"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/tietoa-keuhkosyovasta/keuhkosyovan-oireet/",
+     "title": "Keuhkosyövän oireet – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala pitkittynyt yskä tutkimuksiin",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: terveyskirjasto.fi, terveystalo.com, kliinisettutkimukset.fi, kotiliesi.fi",
+   "ms": 1755,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00102",
+     "title": "Yskä - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.terveystalo.com/fi/palvelut/pitkittyneen-yskan-tutkiminen-ja-hoito",
+     "title": "Pitkittyneen yskän tutkiminen ja hoito | Terveystalo"
+    },
+    {
+     "url": "https://kliinisettutkimukset.fi/sairaus/yska/yska-diagnostiikka/",
+     "title": "Yskä - Diagnostiikka – kliiniset tutkimukset ·..."
+    },
+    {
+     "url": "https://kotiliesi.fi/hyvinvointi/terveys/pitkittynyt-yska/",
+     "title": "Pitkittynyt yskä voi johtua ikävästä sairaudesta – näin hoidat..."
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/psykiatria/lastenpsykiatria/lastenpsykiatrian-poliklinikka/",
+     "title": "Lastenpsykiatrian poliklinikka, Satasairaala -..."
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/sisataudit/sisatautien-osasto-2/",
+     "title": "Sisätautien osasto 2, Satasairaala - Satakunnanhyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "2 reads: B: local lung pathway; A: effect size",
+   "ms": 3659
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "focus": "pitkittynyt yskä hoitopolku keuhkosyöpä kuvaus kampanja",
+   "why": "B: local lung pathway",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löyt\" · 2 090 chars · from cache",
+   "ms": 9,
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "focus": "stage I 14.1 17.3 campaign",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"An evaluation of the impact of large-scale interventions to raise publ\" · 36 791 chars · 6 of 54 passages kept · from cache",
+   "ms": 10,
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "1 read: A: stage shift number",
+   "ms": 2410
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "focus": "diagnosed at stage I increased October",
+   "why": "A: stage shift number",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"An evaluation of the impact of large-scale interventions to raise publ\" · 36 791 chars · 5 of 54 passages kept · from cache",
+   "ms": 9,
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Satakunnan hyvinvointialue / Satasairaala / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision ",
+   "ms": 10822
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 20.0,
+   "result_en": "2 searches: B: local cough awareness campaign; B: Tyks area campaign",
+   "ms": 3105
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Sata keuhkosyöpä oireet tiedotus kampanja yskä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: local cough awareness campaign",
+   "status": "done",
+   "t_s": 23.1,
+   "result_en": "6 results: kaikkisyovasta.fi, mynewsdesk.com, suomenseniorihoiva.fi, satakunnankansa.fi",
+   "ms": 2691,
+   "results": [
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+     "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa | MSD Finland Oy"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/oireet/",
+     "title": "Keuhkosyövän oireet ja riskitekijät - Parempaa Elämää"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/tietoa-keuhkosyovasta/keuhkosyovan-oireet/",
+     "title": "Keuhkosyövän oireet – Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha pitkittynyt yskä hakeudu lääkäriin keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: Tyks area campaign",
+   "status": "done",
+   "t_s": 23.1,
+   "result_en": "6 results: dokport.com, kotiliesi.fi, parempaaelamaa.fi, suomenseniorihoiva.fi",
+   "ms": 2548,
+   "results": [
+    {
+     "url": "https://www.dokport.com/fi-fi/artikkeli/pitkittynyt-yska-syyt-hoito-ja-milloin-laakariin/",
+     "title": "Pitkittynyt yskä: syyt, hoito ja milloin lääkäriin | Dokport"
+    },
+    {
+     "url": "https://kotiliesi.fi/hyvinvointi/terveys/pitkittynyt-yska/",
+     "title": "Köh köh! Mistä pitkittynyt yskä johtuu? Lääkäri listaa syyt ikävän vaivan takana ja neuvoo sopivat hoitokeinot"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/usein-kysyttya/",
+     "title": "Usein kysyttyä keuhkosyövästä – milloin mennä lääkäriin? - Parempaa Elämää"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.yliopistonapteekki.fi/ideat-ja-vinkit/pitkittynyt-yska",
+     "title": "Pitkittynyt yskä – miksi yskä ei lopu? | Yliopiston Apteekki"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/kuiva-yska-mista-se-johtuu/",
+     "title": "Kuiva yskä — mistä se johtuu? - Potilaan Lääkärilehti"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.8,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Satakunnan hyvinvointialue / Satasairaala / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision ",
+   "ms": 8834
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.6,
+   "result_en": "1 search: B: county page on early detection",
+   "ms": 2169
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "satakunnanhyvinvointialue.fi keuhkosyöpä varhainen toteaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county page on early detection",
+   "status": "done",
+   "t_s": 36.8,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi, satakunnankansa.fi, docrates.mehilainen.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/keuhkosyovan-riskikartoituksella-ja-varhaisen-vaiheen-tutkimuksilla-voi-olla-ratkaiseva-merkitys-potilaan-ennusteelle/",
+     "title": "Keuhkosyövän varhainen toteaminen parantaa ennustetta - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/syopa/syovan-toteaminen/",
+     "title": "Syövän toteaminen - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+     "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella ..."
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 39.9,
+   "result_en": "1 read: B: county page on pathway/campaign",
+   "ms": 3107
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "focus": "yskä kampanja tietoisuus oireet hakeutua",
+   "why": "B: county page on pathway/campaign",
+   "status": "done",
+   "t_s": 43.0,
+   "result_en": "\"Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettii\" · 5 089 chars · 6 of 7 passages kept · from cache",
+   "ms": 1,
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "chars": 5089,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "published": "2026-11-11T07:15:00+00:00",
+   "js_render": false
+  },
+  {
+   "step": 19,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 43.0,
+   "result_en": "writes the answer",
+   "ms": 9061
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "chars": 5089,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "published": "2026-11-11T07:15:00+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:45:16+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: Satakunta's own pages show no public campaign about coughs lasting over three weeks, and its direct-CT pathway from health centres can handle the extra patients a campaign would bring.",
+ "seconds": 52.0,
+ "searched_en": "Searched 7 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue yskä yli kolme viikkoa kampanja\"; \"Tyks keuhkosyövän oireet kampanja\"; \"Satasairaala pitkittynyt yskä tutkimuksiin\", ...) and read 4 pages on satakunnankansa.fi, pmc.ncbi.nlm.nih.gov, satakunnanhyvinvointialue.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue yskä yli kolme viikkoa kampanja",
+  "Tyks keuhkosyövän oireet kampanja",
+  "Satasairaala pitkittynyt yskä tutkimuksiin",
+  "Sata keuhkosyöpä oireet tiedotus kampanja yskä",
+  "Varha pitkittynyt yskä hakeudu lääkäriin keuhkosyöpä",
+  "satakunnanhyvinvointialue.fi keuhkosyöpä varhainen toteaminen"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: Satakunta's own pages show no public campaign about coughs lasting over three weeks, and its direct-CT pathway from health centres can handle the extra patients a campaign would bring.",
+ "verdict_en": "No public sign that it is running in Satakunta. Evidence supports that it works, but not the size of effect we assume. Supported: British Journal of Cancer 2015: the English campaign raised GP visits for cough among people aged 50+ by 63% over the 8 weeks around the campaign. Not supported: The passages I read did not show the 3.1-point rise in stage I, or the 0.8-point yearly average we assume.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "symptom_campaign",
+ "intervention_name_en": "Symptom awareness campaign (cough over three weeks)",
+ "area_name_en": "Satakunta wellbeing services county"
+}

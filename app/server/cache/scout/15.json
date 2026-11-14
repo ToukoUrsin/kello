@@ -1,0 +1,388 @@
+{
+ "area_id": "15",
+ "area_name_en": "Central Finland wellbeing services county",
+ "area_name_fi": "Keski-Suomen hyvinvointialue",
+ "question": "What is Central Finland wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-04-07",
+   "what_en": "In April 2026 a Finance Ministry evaluation group proposed moving Sairaala Nova's demanding specialist care to KYS in Kuopio; no final decision had been made.",
+   "what_fi": "Valtiovarainministeriön arviointiryhmä esitti huhtikuussa 2026 Sairaala Novan vaativan erikoissairaanhoidon siirtämistä KYSiin; lopullista päätöstä ei ollut tehty.",
+   "quote": "Valtiovarainministeriön arviointiryhmän mukaan Jyväskylässä sijaitsevan Sairaala Novan vaativia erikoissairaanhoidon toimintoja tulisi siirtää Kuopion yliopistolliseen sairaalaan, uutisoi Keskisuomalainen.",
+   "url": "https://www.maaseuduntulevaisuus.fi/uutiset/d38e1102-b58c-42db-9233-b9b89d8d7663",
+   "title": "KSML: Ministeriössä suunnitellaan Jyväskylän erikoissairaanhoidon alasajoa – aie herättää jyrkkää vastustusta",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:36:36+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Hyvaks discusses every new lung cancer patient in a multidisciplinary meeting with a pulmonologist, surgeon, oncologist and radiologist.",
+   "what_fi": "Hyvaks käsittelee jokaisen uuden keuhkosyöpäpotilaan moniammatillisessa kokouksessa.",
+   "quote": "Jokaisen uuden keuhkosyöpäpotilaan tapausta käsitellään tulosten valmistuttua myös moniammatillisessa kokouksessa, jossa ovat mukana keuhkolääkäri, kirurgi, syöpätautien erikoislääkäri sekä radiologi.",
+   "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:22:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Pathology results for lung tissue samples take about 1–2 weeks at Hyvaks.",
+   "what_fi": "Kudosnäytteiden patologian tulokset valmistuvat noin 1–2 viikossa.",
+   "quote": "Kudosnäytteet toimitetaan patologian laboratorioon ja tulokset tulevat noin 1-2 viikon kuluessa.",
+   "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku",
+   "relates_to": "time_to_treatment",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:22:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Bronchoscopy is done by a pulmonologist at the surgical outpatient clinic; samples may also be taken by image-guided core needle biopsy.",
+   "what_fi": "Bronkoskopian tekee keuhkolääkäri kirurgian poliklinikalla.",
+   "quote": "Bronkoskopia tehdään Kirurgian poliklinikalla keuhkolääkärin toimesta.",
+   "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku",
+   "relates_to": "ebus_capacity",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:22:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Surgical candidates get a surgical clinic appointment about 1–2 weeks after referral.",
+   "what_fi": "Leikkaukseen soveltuva potilas saa kirurgian poliklinikan ajan noin 1–2 viikossa lähetteestä.",
+   "quote": "Jos tutkimusten perusteella leikkaushoito on mahdollinen, saat ajan kirjeitse kirurgian poliklinikalle noin 1-2 viikon päästä lähetteen saapumisesta.",
+   "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku",
+   "relates_to": "surgery",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:22:54+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "Sairaala Nova's oncology unit provides all adult radiotherapy and cancer drug therapy for the county and some radiotherapy for South Savo.",
+   "what_fi": "Sairaala Novan syöpätautien ja sädehoidon vastuualue hoitaa kaikki alueen aikuisten säde- ja syöpälääkehoidot.",
+   "quote": "Sairaala Novan syöpätautien ja sädehoidon vastuualue vastaa kaikista Keski-Suomen hyvinvointialueen aikuispotilaiden säde- ja syöpälääkehoidoista sekä osasta Etelä-Savon potilaiden sädehoidosta.",
+   "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "title": "Syöpätaudit ja sädehoito",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:04+00:00",
+   "from_cache": true
+  }
+ ],
+ "summary_en": "I found six facts. Keski-Suomen hyvinvointialue (Hyvaks) publishes a lung cancer care pathway. Under it, every new patient is discussed at a multidisciplinary meeting, pathology results take about 1–2 weeks, and patients who can be operated on get a surgical clinic appointment about 1–2 weeks after referral. Sairaala Nova gives all radiotherapy and cancer drug therapy for the county's adults. The biggest open question is the Finance Ministry evaluation group's April 2026 proposal to move Nova's demanding specialist care to KYS in Kuopio. No final decision had been made at the time of that article, and I did not check later news. Before funding anything at Nova, check where that stands.",
+ "not_found_en": "I did not search specifically for screening pilots, nurse navigators, reflex molecular testing, video multidisciplinary meetings with KYS or published waiting-time figures, so their absence here is not evidence that they don't exist. Broad searches on the county site and for county board decisions brought up no lung cancer decision, project or investment.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; local news",
+   "ms": 4320
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvaks keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: hyvaks.fi, terveyskirjasto.fi, docrates.mehilainen.fi",
+   "ms": 1507,
+   "results": [
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaks.fi/palvelumme/keuhkosairaudet",
+     "title": "Keuhkosairaudet | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.jnjwithme.fi/fi-fi/keuhkosyopa/tietoa-keuhkosyovasta",
+     "title": "Tietoa keuhkosyövästä | Keuhkosyopa | Janssen With Me"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Sairaala Nova keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: suomi.fi, hyvaks.fi, hus.fi",
+   "ms": 2751,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/sairaala-novan-hoitokeskus-keski-suomen-hyvinvointialue/3e3f1122-bbe8-414e-a517-40e2618b42c5",
+     "title": "Sairaala Novan hoitokeskus - Keski-Suomen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/syopalaakehoitopolku",
+     "title": "Syöpälääkehoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiointi/sairaala-novan-yksikot",
+     "title": "Sairaala Novan osastot, poliklinikat ja yksiköt | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+     "title": "Syöpätaudit ja sädehoito | Keski-Suomen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Keski-Suomen hyvinvointialue syöpähoito aluehallitus päätös",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: hyvaks.fi, yle.fi, soite.fi",
+   "ms": 2537,
+   "results": [
+    {
+     "url": "https://www.hyvaks.fi/hyvinvointialue/paatoksenteko",
+     "title": "Päätöksenteko | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaks.fi/hyvinvointialue/paatoksenteko/aluehallitus",
+     "title": "Aluehallitus | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20256670?origin=rss",
+     "title": "”Tämä on kansallinen ongelma” – Keski-Suomen hyvinvointialue aikoo jälleen valittaa rahoituspäätöksestä | Keski-Suomi | Yle"
+    },
+    {
+     "url": "https://soite.fi/soite/paatoksenteko/hyvinvointialueen-hallinto-paatoksenteko/",
+     "title": "Hyvinvointialueen hallinto ja päätöksenteko - Soite"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Keski-Suomen_hyvinvointialue",
+     "title": "Keski-Suomen hyvinvointialue – Wikipedia"
+    },
+    {
+     "url": "https://www.hyvaks.fi/uutiset/keski-suomen-hyvinvointialue-hakee-muutosta-hallinto-oikeudelta-vuoden-2026-rahoitukseen",
+     "title": "Keski-Suomen hyvinvointialue hakee muutosta hallinto-oikeudelta vuoden 2026 rahoitukseen | Keski-Suomen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Nova keuhkosyöpä 2026 uutinen Jyväskylä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: maaseuduntulevaisuus.fi, hyvaks.fi, mtvuutiset.fi, filha.fi",
+   "ms": 2711,
+   "results": [
+    {
+     "url": "https://www.maaseuduntulevaisuus.fi/uutiset/d38e1102-b58c-42db-9233-b9b89d8d7663",
+     "title": "KSML: Ministeriössä suunnitellaan Jyväskylän erikoissairaanhoidon alasajoa – aie herättää jyrkkää vastustusta - Uutiset kotimaasta ja maailmalta - Maaseudun Tulevaisuus"
+    },
+    {
+     "url": "https://www.hyvaks.fi/sairaala-nova",
+     "title": "Sairaala Nova"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/keuhkosyopa-loytyy-usein-liian-myohaan-kahdella-kolmesta-tauti-on-ehtinyt-jo-levita/9417210",
+     "title": "Keuhkosyövän hoidossa etsitään apua immuunijärjestelmästä | MTV Uutiset"
+    },
+    {
+     "url": "https://www.filha.fi/en/uusi-ohje-terveydenhuollon-ammattilaisille-keuhkosyovan-diagnostiikasta-julkaistu/",
+     "title": "Uusi ohje terveydenhuollon ammattilaisille keuhkosyövän diagnostiikasta julkaistu"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Keski-Suomen_Sairaala_Nova",
+     "title": "Keski-Suomen Sairaala Nova – Wikipedia"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "3 reads: pathway facts; radiotherapy organisation; reorganisation",
+   "ms": 5495
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "bronkoskopia moniammatillinen meeting leikkaus Kuopio sädehoito tutkimukset",
+   "why": "pathway facts",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku\" · 21 981 chars · 6 of 35 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitopolku",
+   "chars": 21981,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "focus": "sädehoito syöpälääkehoito keuhkosyöpä",
+   "why": "radiotherapy organisation",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"Syöpätaudit ja sädehoito\" · 917 chars · from cache",
+   "ms": 0,
+   "title": "Syöpätaudit ja sädehoito",
+   "chars": 917,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.maaseuduntulevaisuus.fi/uutiset/d38e1102-b58c-42db-9233-b9b89d8d7663",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.maaseuduntulevaisuus.fi/uutiset/d38e1102-b58c-42db-9233-b9b89d8d7663",
+   "focus": "Nova Kuopio siirtää erikoissairaanhoito",
+   "why": "reorganisation",
+   "status": "done",
+   "t_s": 12.6,
+   "result_en": "\"KSML: Ministeriössä suunnitellaan Jyväskylän erikoissairaanhoidon alas\" · 3 827 chars",
+   "ms": 2217,
+   "title": "KSML: Ministeriössä suunnitellaan Jyväskylän erikoissairaanhoidon alasajoa – aie herättää jyrkkää vastustusta",
+   "chars": 3827,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.maaseuduntulevaisuus.fi/uutiset/d38e1102-b58c-42db-9233-b9b89d8d7663",
+   "published": "2026-04-07T11:40:59.000Z",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.8,
+   "result_en": "writes the answer",
+   "ms": 17571
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "title": "Syöpätaudit ja sädehoito",
+   "chars": 917,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:35:04+00:00"
+  },
+  {
+   "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku",
+   "chars": 21981,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:22:54+00:00"
+  },
+  {
+   "url": "https://www.maaseuduntulevaisuus.fi/uutiset/d38e1102-b58c-42db-9233-b9b89d8d7663",
+   "title": "KSML: Ministeriössä suunnitellaan Jyväskylän erikoissairaanhoidon alasajoa – aie herättää jyrkkää vastustusta",
+   "chars": 3827,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:36:36+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:36:54+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 32.4
+}

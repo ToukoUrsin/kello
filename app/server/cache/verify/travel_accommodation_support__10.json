@@ -1,0 +1,491 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "10",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A northern England registry study (British Journal of Cancer, 2009) found that the furthest-travel group had 0.60 times the odds of lung cancer surgery.",
+ "not_supported_en": "No study we read shows that travel or hotel support raises the curative-treatment share, let alone by the 1 percentage point we assume.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Hotellivarauksen on tehnyt sinua hoitava yksikkö.",
+ "in_use_source": {
+  "url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+  "title": "Potilasohje HUS www.hus.fi",
+  "published": "2025-01-22",
+  "fetched_at": "2026-11-14T00:54:38+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page we read shows organised transport or a named travel contact for Kymenlaakso lung cancer patients going to HUS.",
+ "summary_en": "HUS's patient leaflet (approved 21.07.2025) says the treating unit books the patient hotel at Scandic Meilahti and the patient pays nothing beyond the hospital fee. Kymenlaakso's own site says radiotherapy is given at Kymenlaakso Central Hospital in Kotka, so the travel problem is mainly surgery in Helsinki. The only effect evidence is an English registry study (Crawford 2009, British Journal of Cancer): patients with the longest travel time had 0.60 times the odds of lung cancer surgery, which is an association, not a test of travel support.",
+ "unanswered_en": "We did not check Kymenlaakso's or Kela's pages on taxi transport to HUS, or whether HUS gives a named contact to patients from other areas.",
+ "sources": [
+  {
+   "url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+   "title": "Potilasohje HUS www.hus.fi",
+   "quote": "Hotellivarauksen on tehnyt sinua hoitava yksikkö.",
+   "about": "in_use",
+   "published": "2025-01-22",
+   "fetched_at": "2026-11-14T00:54:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+   "title": "Potilasohje HUS www.hus.fi",
+   "quote": "Potilashotellin käytöstä ei aiheudu sinulle sairaalamaksun lisäksi muita kustannuksia.",
+   "about": "in_use",
+   "published": "2025-01-22",
+   "fetched_at": "2026-11-14T00:54:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+   "title": "Sädehoitoyksikkö",
+   "quote": "Kymenlaaksossa sädehoitoa annetaan Kymenlaakson keskussairaalassa.",
+   "about": "context",
+   "published": "29.5.2026",
+   "fetched_at": "2026-11-14T00:53:56+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2059,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, soite.fi",
+   "ms": 3059,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/",
+     "title": "Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/meilla-asiakkaana/sosiaaliasiavastaava-ja-potilasasiavastaava/",
+     "title": "Sosiaaliasiavastaava ja potilasasiavastaava - Kymenlaakson..."
+    },
+    {
+     "url": "https://soite.fi/asiointiopas/opas-keskussairaalaan-tulijalle/potilashotelli/",
+     "title": "Potilashotelli - Soite"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/digitaaliset-palvelut/kymenhva-hoitopolut/",
+     "title": "KymenHVA hoitopolut"
+    },
+    {
+     "url": "https://kymenhva.fi/tietoa-meista/opiskelijat/",
+     "title": "Opiskelijat"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/potilaalle-ja-laheiselle/potilashotelli",
+     "title": "Potilashotelli - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, hus.fi",
+   "ms": 1971,
+   "results": [
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+     "title": "Potilaskoti - OYS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle",
+     "title": "Potilaalle | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana/potilasasiavastaavat",
+     "title": "Potilasasiavastaavat | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio",
+     "title": "Potilashoidon organisaatio | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana",
+     "title": "Oikeutesi potilaana | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio/runkopalvelut",
+     "title": "Runkopalvelut | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala majoitus sädehoidon ajaksi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, suomi.fi",
+   "ms": 1492,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+     "title": "Sädehoitoyksikkö - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/",
+     "title": "Kymenlaakson keskussairaala - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-kymenlaakson-sosiaali-ja-terveyspalvelujen-kuntayhtyma/25d62192-6328-4b07-af6e-8fa620777964/asiointikanavat",
+     "title": "Syöpätautien ja sädehoidon palvelut, asiointikanavat - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/sadehoito-kymenlaakson-hyvinvointialue/b2d90739-a4c2-4445-9cad-76275c09a4e7",
+     "title": "Sädehoito - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/kymenlaakson-keskussairaala-kymenlaakson-hyvinvointialue/abb0490a-dda3-48cf-a6df-37c4d86fa61b",
+     "title": "Kymenlaakson keskussairaala - Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/medisiininen-osasto-p/",
+     "title": "Medisiininen osasto P - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: HUS pathway; B: local radiotherapy; A: effect size",
+   "ms": 6146
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "leikkaus sädehoito majoitus potilashotelli matka yhteyshenkilö",
+   "why": "B: HUS pathway",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 7 of 11 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+   "focus": "sädehoito Kymenlaakson keskussairaalassa majoitus matka",
+   "why": "B: local radiotherapy",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"Sädehoitoyksikkö\" · 818 chars · from cache",
+   "ms": 0,
+   "title": "Sädehoitoyksikkö",
+   "chars": 818,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+   "published": "29.5.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time odds of surgery 0.60",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 7,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.2,
+   "result_en": "1 search: B: patient hotel at HUS",
+   "ms": 2825
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS potilashotelli Meilahti majoitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: patient hotel at HUS",
+   "status": "done",
+   "t_s": 12.0,
+   "result_en": "6 results: hus.fi, assets.eu.ctfassets.net, yle.fi, sydanlapsetjaaikuiset.fi",
+   "ms": 1956,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/naistenklinikka/perhepesahotelli-meilahti",
+     "title": "Perhepesähotelli, Meilahti | HUS"
+    },
+    {
+     "url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+     "title": "POTILASHOTELLI – palvelun tuottaa Hotelli Scandic Meilahti ..."
+    },
+    {
+     "url": "https://yle.fi/a/3-7807227",
+     "title": "HUS vuokraa kokonaisen hotellikerroksen potilashotelliksi | Yle"
+    },
+    {
+     "url": "https://sydanlapsetjaaikuiset.fi/fakta/tietoa-majoitusvaihtoehdoista/",
+     "title": "Tietoa majoitusvaihtoehdoista - Sydänlapset ja -aikuiset ry"
+    },
+    {
+     "url": "https://explorefinland.org/hotelli/scandic-hotelli-meilahti-hinnat-palvelut/",
+     "title": "Scandic Hotelli Meilahti - Hinnat, Pysäköinti ja Aamiainen - Explore Finland"
+    },
+    {
+     "url": "https://sydanlapsetjaaikuiset.fi/uutinen/tietoa-majoitusvaihtoehdoista-helsingissa-sydanlasten-perheille-ja-sydanvikaisille-aikuisille/",
+     "title": "Tietoa majoitusvaihtoehdoista Helsingissä sydänlasten perheille ja sydänvikaisille aikuisille - Sydänlapset ja -aikuiset ry"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.0,
+   "result_en": "1 read: B: HUS patient hotel",
+   "ms": 3797
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+   "focus": "Hotellivarauksen on tehnyt sinua hoitava yksikkö maksu kuljetus",
+   "why": "B: HUS patient hotel",
+   "status": "done",
+   "t_s": 17.8,
+   "result_en": "\"Potilasohje HUS www.hus.fi\" · 4 383 chars · PDF 2 p. · from cache",
+   "ms": 0,
+   "title": "Potilasohje HUS www.hus.fi",
+   "chars": 4383,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+   "published": "2025-01-22",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.8,
+   "result_en": "writes the answer",
+   "ms": 12853
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+   "title": "Sädehoitoyksikkö",
+   "chars": 818,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:53:56+00:00",
+   "published": "29.5.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "url": "https://assets.eu.ctfassets.net/iikl9zq7hmux/7E9RLeb5oBnQzTbjnRy9oV/bde4d70e3e9fa1f98732c5a9ec7d681f/HUS_Potilashotelli_potilasohje_28062023.pdf",
+   "title": "Potilasohje HUS www.hus.fi",
+   "chars": 4383,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:54:38+00:00",
+   "published": "2025-01-22",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:07:24+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to organised transport and a named travel contact, because HUS already books a free patient hotel at Scandic Meilahti through the treating unit, and Kymenlaakso gives radiotherapy in Kotka, so the weeks of radiotherapy do not need lodging in Helsinki.",
+ "seconds": 30.7,
+ "searched_en": "Searched 5 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva potilashotelli\"; \"HUS potilaskoti\"; \"Kymenlaakson keskussairaala majoitus sädehoidon ajaksi\", ...) and read 4 pages on hus.fi, kymenhva.fi, pmc.ncbi.nlm.nih.gov, assets.eu.ctfassets.net.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva potilashotelli",
+  "HUS potilaskoti",
+  "Kymenlaakson keskussairaala majoitus sädehoidon ajaksi",
+  "HUS potilashotelli Meilahti majoitus"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to organised transport and a named travel contact, because HUS already books a free patient hotel at Scandic Meilahti through the treating unit, and Kymenlaakso gives radiotherapy in Kotka, so the weeks of radiotherapy do not need lodging in Helsinki.",
+ "verdict_en": "Partly in place in the HUS university hospital area, which treats Kymenlaakso's patients. Missing: No page we read shows organised transport or a named travel contact for Kymenlaakso lung cancer patients going to HUS. Evidence supports that it works, but not the size of effect we assume. Supported: A northern England registry study (British Journal of Cancer, 2009) found that the furthest-travel group had 0.60 times the odds of lung cancer surgery. Not supported: No study we read shows that travel or hotel support raises the curative-treatment share, let alone by the 1 percentage point we assume.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "travel_accommodation_support",
+ "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}

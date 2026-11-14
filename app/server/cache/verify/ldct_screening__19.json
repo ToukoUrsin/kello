@@ -1,0 +1,362 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Ostrobothnia wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Low-dose CT screening for long-term heavy smokers. Invite 50-74-year-old long-term heavy smokers to low-dose CT with smoking cessation support, so cancers are found before symptoms. Finland is piloting this in 2026-2028.",
+ "area_id": "19",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "Nine randomised trials pooled: lung cancer death rate ratio 0.84 (0.76–0.92), i.e. 16% fewer lung cancer deaths with LDCT screening.",
+ "supported_en": "The Lancet Regional Health – Europe meta-analysis (2021) shows RR 0.84 (0.76–0.92) for lung cancer death across nine trials.",
+ "not_supported_en": "The pages read don't show the baseline death rate of 3.30 per 1,000 person-years, or that people in a pilot people sign up for themselves would have the same risk as trial participants.",
+ "in_use_here": "planned",
+ "in_use_scope": "county",
+ "in_use_quote": "Tammikuussa käynnistyy keuhkosyövän seulontapilotti, josta vastaavat Suomen Syöpärekisteri yhdessä Oulun yliopistollisen sairaalan kanssa.",
+ "in_use_source": {
+  "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+  "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+  "published": "2026-01-21T08:18:42+00:00",
+  "fetched_at": "2026-11-14T01:49:46+00:00"
+ },
+ "in_use_summary_en": "OYS and the Finnish Cancer Registry have run a two-year national research pilot since January 2026, open to self-enrolled 50–74-year-old long-term smokers from North Ostrobothnia; it is not a routine screening service.",
+ "missing_en": "",
+ "summary_en": "Pohde says a lung cancer screening pilot started in January 2026, run by the Finnish Cancer Registry together with OYS. It covers people aged 50–74 who have smoked for more than 25 years, including people from North Ostrobothnia. It is a two-year research study looking for 1,200 participants in five regions: only some of them get low-dose CT, everyone is offered help to stop smoking, and people sign up themselves. A 2021 meta-analysis of nine randomised trials in The Lancet Regional Health – Europe found 16% lower lung cancer mortality (RR 0.84, 95% CI 0.76–0.92), which matches the effect our model assumes.",
+ "unanswered_en": "No page read says whether screening will continue as a routine programme after the pilot, or how many of the participants come from North Ostrobothnia.",
+ "sources": [
+  {
+   "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+   "quote": "Tammikuussa käynnistyy keuhkosyövän seulontapilotti, josta vastaavat Suomen Syöpärekisteri yhdessä Oulun yliopistollisen sairaalan kanssa.",
+   "about": "in_use",
+   "published": "2026-01-21T08:18:42+00:00",
+   "fetched_at": "2026-11-14T01:49:46+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+   "quote": "Käynnistyvä pilottitutkimus kohdistuu yli 25 vuotta tupakoineisiin 50–74-vuotiaisiin. Tutkimukseen haetaan 1 200 osallistujaa. Osalle tehdään matala-annoksinen keuhkokuvaus tutkimuksen alussa ja lopussa.",
+   "about": "in_use",
+   "published": "2026-01-21T08:18:42+00:00",
+   "fetched_at": "2026-11-14T01:49:46+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+   "quote": "Pitkäaikainen tupakointihistoria ei ole rekistereistä saatavilla, joten riskiryhmään kuuluvien tulee ilmoittautua tutkimukseen itse.",
+   "about": "context",
+   "published": "2026-01-21T08:18:42+00:00",
+   "fetched_at": "2026-11-14T01:49:46+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "title": "Lung cancer mortality reduction by LDCT screening: UKLS randomised trial results and international meta-analysis",
+   "quote": "The meta-analysis indicated a significant reduction in lung cancer mortality with a pooled overall relative rate of 0.84 (95% CI 0.76–0.92) from nine eligible trials.",
+   "about": "effect",
+   "published": "2021",
+   "fetched_at": "2026-11-13T23:49:42+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, syovanhoitokeskus.pshyvinvointialue.fi, hyvaks.fi",
+   "ms": 2893,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohde keuhkosyöpäseulonta pilotti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pohde.fi, yle.fi, sttinfo.fi, seura.fi",
+   "ms": 2829,
+   "results": [
+    {
+     "url": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+     "title": "Pilottitutkimus koskien keuhkosyövän seulontaa - Pohde"
+    },
+    {
+     "url": "https://yle.fi/a/74-20205604",
+     "title": "Suomessa alkaa laaja pilotti, jossa seulotaan keuhkosyöpää | Kotimaa | Yle"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/71750363/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista?publisherId=69817636&lang=fi",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista | Pohjois-Pohjanmaan hyvinvointialue Pohde"
+    },
+    {
+     "url": "https://seura.fi/asiat/ajankohtaista/keuhkosyopa-voi-kuulua-kansalliseen-seulontaohjelmaan/",
+     "title": "Keuhkosyöpä on yleisin syöpäkuolemien aiheuttaja – Seulontapilotti tukee ensikerran suomalaisia riskiryhmäläisiä, tulokset maailmalta rohkaisevia"
+    },
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa..."
+    },
+    {
+     "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena ..."
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS matala-annos-TT seulonta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, oulu.cris.fi, fi.iliveok.com",
+   "ms": 1915,
+   "results": [
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/rontgen-ja-kuvantaminen/",
+     "title": "Röntgen ja kuvantaminen - OYS"
+    },
+    {
+     "url": "https://oulu.cris.fi/en/publications/0072e551-3269-47a2-8a3f-6b0e839e8e28",
+     "title": "Keuhkosyövän seulonta matala-annos TT:llä tuo terveyshyötyjä ..."
+    },
+    {
+     "url": "https://fi.iliveok.com/health/keuhkojen-seulonta-kuka-tarvitsee-matala-annoksisen-tt-kuvauksen-ja-kuinka-usein-se-tulisi-tehda_139353i15989.html",
+     "title": "Keuhkojen seulonta: kuka tarvitsee matala-annoksisen TT-kuvauksen..."
+    },
+    {
+     "url": "https://continentalhospitals.com/fi/blog/low-dose-ct-scans-for-early-lung-cancer-detection/",
+     "title": "Matala-annoksiset TT-skannaukset keuhkosyövän varhaiseen havaitsemiseen"
+    },
+    {
+     "url": "https://pohde.fi/palvelut/rontgen-ja-kuvantaminen/?area=oulu",
+     "title": "Röntgen ja kuvantaminen - Pohjois-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Pohjanmaan keuhkosyövän seulontapilotti keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syopajarjestot.fi, yle.fi, laakarilehti.fi, sttinfo.fi",
+   "ms": 2379,
+   "results": [
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://yle.fi/a/74-20205604",
+     "title": "Suomessa alkaa laaja pilotti, jossa seulotaan keuhkosyöpää | Kotimaa | Yle"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/pitkaan-tupakoineita-etsitaan-keuhkosyovan-seulontapilottiin/",
+     "title": "Pitkään tupakoineita etsitään keuhkosyövän seulontapilottiin - Lääkärilehti"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/71750363/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista?lang=fi",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa..."
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/71765725/keuhkosyovan-seulontapilotin-osallistujamaara-tayttyi-ennatysvauhdissa?lang=fi",
+     "title": "Keuhkosyövän seulontapilotin osallistujamäärä täyttyi ennätysvauhdissa | Syöpäjärjestöt"
+    },
+    {
+     "url": "https://www.pirkanmaansyopayhdistys.fi/keuhkosyopa-seulonta/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy myös Pirkanmaalla | Pirkanmaan Syöpäyhdistys"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.9,
+   "result_en": "2 reads: B: pilot running at OYS; A: pooled effect",
+   "ms": 5153
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "focus": "pilotti 50–74-vuotiaat Pohjois-Pohjanmaa tupakoinnin lopettaminen",
+   "why": "B: pilot running at OYS",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudi\" · 2 751 chars",
+   "ms": 6406,
+   "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+   "chars": 2751,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "published": "2026-01-21T08:18:42+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "focus": "lung cancer mortality relative risk nine trials",
+   "why": "A: pooled effect",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Lung cancer mortality reduction by LDCT screening: UKLS randomised tri\" · 42 390 chars · 5 of 59 passages kept · from cache",
+   "ms": 6,
+   "title": "Lung cancer mortality reduction by LDCT screening: UKLS randomised trial results and international meta-analysis",
+   "chars": 42390,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "published": "2021",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.5,
+   "result_en": "writes the answer",
+   "ms": 14352
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "title": "Lung cancer mortality reduction by LDCT screening: UKLS randomised trial results and international meta-analysis",
+   "chars": 42390,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:49:42+00:00",
+   "published": "2021",
+   "js_render": false
+  },
+  {
+   "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+   "chars": 2751,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:49:46+00:00",
+   "published": "2026-01-21T08:18:42+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:50:00+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask the Finnish Cancer Registry and OYS first whether, and how, screening will continue after the 2026–2028 pilot, because a national two-year research pilot led from OYS is already running and the county cannot start screening on its own.",
+ "seconds": 28.8,
+ "searched_en": "Searched 4 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Pohde keuhkosyöpäseulonta pilotti\"; \"OYS matala-annos-TT seulonta\"; \"Pohjois-Pohjanmaan keuhkosyövän seulontapilotti keuhkosyöpä\") and read 2 pages on pohde.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Pohde keuhkosyöpäseulonta pilotti",
+  "OYS matala-annos-TT seulonta",
+  "Pohjois-Pohjanmaan keuhkosyövän seulontapilotti keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 1
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask the Finnish Cancer Registry and OYS first whether, and how, screening will continue after the 2026–2028 pilot, because a national two-year research pilot led from OYS is already running and the county cannot start screening on its own.",
+ "verdict_en": "Decided or being prepared in North Ostrobothnia, not running yet. Recent evidence supports the size of effect we assume. The Lancet Regional Health – Europe meta-analysis (2021) shows RR 0.84 (0.76–0.92) for lung cancer death across nine trials.",
+ "in_use_label_en": "Planned, not running yet",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "ldct_screening",
+ "intervention_name_en": "Low-dose CT screening for long-term heavy smokers",
+ "area_name_en": "North Ostrobothnia wellbeing services county"
+}

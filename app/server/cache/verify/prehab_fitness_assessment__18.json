@@ -1,0 +1,625 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Central Ostrobothnia wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Fitness assessment and prehabilitation before deciding against curative treatment. Before a stage I-III patient is judged too frail, they get an exercise test, a geriatric assessment if over 75, and four weeks of supervised exercise, breathing training and help to stop smoking. Then the decision is made again.",
+ "area_id": "18",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "Cochrane (2022) found that exercise training before lung cancer surgery lowers the risk of lung complications after surgery (RR 0.45) and shortens the hospital stay by about 2.2 days.",
+ "not_supported_en": "No page measured how many patients judged unfit become eligible for curative treatment, so the assumed 0.5 percentage points is not backed by any page.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "No public page from Soite or OYS shows that prehabilitation or a structured fitness reassessment is running or planned before lung cancer patients are judged unfit for curative treatment. The OYS pathway page only says that lung function and other illnesses are weighed when deciding on surgery, and that OYS does lung cancer surgery and radiotherapy for the area. A Cochrane review (2022, 10 trials, 636 patients) found that exercise before surgery cuts lung complications after surgery (RR 0.45), but no page measured how many more patients become eligible for curative treatment.",
+ "unanswered_en": "We looked for a prehabilitation service, a pilot or a decision for lung cancer patients at Soite or OYS and found none, and we found no study measuring the gain in the curative-treatment share.",
+ "sources": [
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Kirurgisen hoidon mahdollisuutta arvioitaessa huomioidaan paitsi taudin levinneisyys muun muassa potilaan keuhkojen toimintakyky ja mahdollinen muu sairastavuus, jotka voivat olla este leikkaushoidolle.",
+   "about": "context",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Vastaa keuhkosyövän leikkaus- ja sädehoidosta",
+   "about": "context",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "quote": "Preoperative exercise training results in a large reduction in the risk of developing a postoperative pulmonary complication compared to no preoperative exercise training (risk ratio (RR) 0.45, 95% CI 0.33 to 0.61",
+   "about": "effect",
+   "published": "2022-09-28",
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://fican.fi/pohjoismaiden-uudet-syopastrategiat-ja-hoitoketjujen-kehitys-esilla-goteborgissa-yhteiset-painotukset-korostuivat/",
+   "title": "Pohjoismaiden uudet syöpästrategiat ja hoitoketjujen kehitys esillä Göteborgissa – yhteiset painotukset korostuivat – FICAN",
+   "quote": "Prehabilitaation myönteisistä vaikutuksista syöpähoitojen jälkeiseen toipumiseen on jo olemassa selkeää näyttöä, ja sitä on integroitu osaksi hoitoketjuja muissa Pohjoismaissa, esimerkiksi kolorektaalisyövän hoidossa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:26:38+00:00",
+   "from_cache": false
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, hyvaks.fi",
+   "ms": 1933,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://www.pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Soite prehabilitaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: soite.fi, suomi.fi, fican.fi",
+   "ms": 1608,
+   "results": [
+    {
+     "url": "https://soite.fi/en/rehabilitation/",
+     "title": "Rehabilitation - Soite"
+    },
+    {
+     "url": "https://www.suomi.fi/service/rehabilitering-mellersta-osterbottens-valfardsomrade-soite/acbc0bc3-fe64-4655-b202-fe20c6f27871",
+     "title": "Rehabilitering - Mellersta Österbottens välfärdsområde Soite - Suomi.fi"
+    },
+    {
+     "url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+     "title": "Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä ja jatkuva kuntoutuminen keskiössä – FICAN"
+    },
+    {
+     "url": "https://www.suomi.fi/service/rehabiliteringsradgivning-mellersta-osterbottens-valfardsomrade-soite/48e44a25-a021-4388-b9c5-d31632c9c4e0",
+     "title": "Rehabiliteringsrådgivning - Mellersta Österbottens välfärdsområde Soite - Suomi.fi"
+    },
+    {
+     "url": "https://soite.fi/sv/service-och-kontakt/halso-och-sjukvardstjanster/rehabilitering/rehabilitering/",
+     "title": "Rehabilitering - Soite"
+    },
+    {
+     "url": "https://www.suomi.fi/service/rehabilitering-soite/acbc0bc3-fe64-4655-b202-fe20c6f27871",
+     "title": "Rehabilitering - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS esikuntoutus syöpäleikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kaleva.fi, oys.fi",
+   "ms": 1302,
+   "results": [
+    {
+     "url": "https://www.kaleva.fi/oysissa-tehtiin-huhtikuun-alussa-historiallinen-va/6355123",
+     "title": "OYSissa tehtiin huhtikuun alussa historiallinen vatsasyöpäoperaatio – Vaativa leikkaus Suomen ensimmäinen | Kaleva"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/tietoameista/syopakeskus/",
+     "title": "Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/rintasyopapotilaan-hoitopolku/",
+     "title": "Rintasyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/omapolku/digipolut/oys-lihavuusleikkaus",
+     "title": "OYS Lihavuusleikkaus - Terveyskylä.fi"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/",
+     "title": "Syöpäkeskus - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Keski-Pohjanmaan keskussairaala leikkausta edeltävä kuntoutus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: soite.fi, suomi.fi, yle.fi",
+   "ms": 1883,
+   "results": [
+    {
+     "url": "https://soite.fi/palvelut-ja-yhteys/terveys-ja-sairaanhoitopalvelut/keski-pohjanmaan-keskussairaala/anestesia-ja-leikkaustoiminta/",
+     "title": "Anestesia ja leikkaustoiminta - Soite"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keski-pohjanmaan-keskussairaala-keski-pohjanmaan-hyvinvointialue-soite/3f2589b2-a37a-42f2-b298-2a09869f782d",
+     "title": "Keski-Pohjanmaan keskussairaala - Keski-Pohjanmaan hyvinvointialue Soite - Suomi.fi"
+    },
+    {
+     "url": "https://yle.fi/a/3-11640328",
+     "title": "Keski-Pohjanmaan keskussairaalan leikkaussalit ..."
+    },
+    {
+     "url": "https://soite.fi/palvelut-ja-yhteys/terveys-ja-sairaanhoitopalvelut/keski-pohjanmaan-keskussairaala/",
+     "title": "Keski-Pohjanmaan keskussairaala - Soite"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/shp01082",
+     "title": "Lihavuusleikkaus: pre- ja postoperatiivinen hoitoketju (Keski ..."
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/leikkaus-ja-anestesia/",
+     "title": "Leikkaus ja anestesia - Etelä-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 1.9,
+   "result_en": "3 reads: B: OYS lung cancer pathway; B: prehab in FICAN North; A: effect size",
+   "ms": 5539
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "focus": "leikkauskelpoisuus kuntoutus fysioterapia tupakointi rasituskoe",
+   "why": "B: OYS lung cancer pathway",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - OYS\" · 19 914 chars · 7 of 31 passages kept · from cache",
+   "ms": 11,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "focus": "prehabilitaatio OYS Pohjois keuhkosyöpä",
+   "why": "B: prehab in FICAN North",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä \" · 6 162 chars · 6 of 10 passages kept · from cache",
+   "ms": 2,
+   "title": "Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä ja jatkuva kuntoutuminen keskiössä – FICAN",
+   "chars": 6162,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/36170564",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/36170564",
+   "focus": "pulmonary complications risk ratio resectability",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Preoperative exercise training for people with non-small cell lung can\" · 4 109 chars · from cache",
+   "ms": 0,
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/36170564",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "2 searches: B: OYS prehab for lung surgery; B: planned prehab in north area",
+   "ms": 3599
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpä prehabilitaatio leikkaus fysioterapia",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: OYS prehab for lung surgery",
+   "status": "done",
+   "t_s": 11.1,
+   "result_en": "6 results: terveyskyla.fi, pirha.fi, suomenseniorihoiva.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 2676,
+   "results": [
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-kuntoutus-ja-ennuste/",
+     "title": "Keuhkosyöpä kuntoutus ja ennuste | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/keuhkoleikkauspotilaan-fysioterapia/",
+     "title": "Keuhkoleikkauspotilaan fysioterapia - Sydänsairaala"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/hoito/",
+     "title": "Keuhkosyövän hoito – hoitomuodot – muistilista vastaanotolle"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjoinen syöpäkeskus prehabilitaatio hanke",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: planned prehab in north area",
+   "status": "done",
+   "t_s": 11.1,
+   "result_en": "6 results: fican.fi, oys.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1517,
+   "results": [
+    {
+     "url": "https://fican.fi/pohjoinen-syopakeskus/",
+     "title": "Pohjoinen syöpäkeskus – FICAN"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/pohjoinen-syopakeskus/",
+     "title": "Pohjoinen syöpäkeskus (FICAN North) - OYS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://oys.fi/tietoameista/syopakeskus/",
+     "title": "Syöpäkeskus - OYS"
+    },
+    {
+     "url": "https://fican.fi/pohjoismaiden-uudet-syopastrategiat-ja-hoitoketjujen-kehitys-esilla-goteborgissa-yhteiset-painotukset-korostuivat/",
+     "title": "Pohjoismaiden uudet syöpästrategiat ja hoitoketjujen kehitys esillä Göteborgissa – yhteiset painotukset korostuivat – FICAN"
+    },
+    {
+     "url": "https://pohde.fi/tietoa-meista/kehittaminen-ja-innovaatiot/kehittamishankkeet/",
+     "title": "Kehittämishankkeet - Pohde"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.8,
+   "result_en": "2 reads: B: national prehab status; B: FICAN North prehab",
+   "ms": 4512
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/pohjoismaiden-uudet-syopastrategiat-ja-hoitoketjujen-kehitys-esilla-goteborgissa-yhteiset-painotukset-korostuivat/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/pohjoismaiden-uudet-syopastrategiat-ja-hoitoketjujen-kehitys-esilla-goteborgissa-yhteiset-painotukset-korostuivat/",
+   "focus": "prehabilitaatio Suomi toimintakyky",
+   "why": "B: national prehab status",
+   "status": "done",
+   "t_s": 18.3,
+   "result_en": "\"Pohjoismaiden uudet syöpästrategiat ja hoitoketjujen kehitys esillä Gö\" · 5 166 chars · 7 of 9 passages kept",
+   "ms": 4259,
+   "title": "Pohjoismaiden uudet syöpästrategiat ja hoitoketjujen kehitys esillä Göteborgissa – yhteiset painotukset korostuivat – FICAN",
+   "chars": 5166,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://fican.fi/pohjoismaiden-uudet-syopastrategiat-ja-hoitoketjujen-kehitys-esilla-goteborgissa-yhteiset-painotukset-korostuivat/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/pohjoinen-syopakeskus/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/pohjoinen-syopakeskus/",
+   "focus": "prehabilitaatio kuntoutus hanke",
+   "why": "B: FICAN North prehab",
+   "status": "done",
+   "t_s": 18.3,
+   "result_en": "\"Pohjoinen syöpäkeskus (FICAN North) - OYS\" · 843 chars · from cache",
+   "ms": 1,
+   "title": "Pohjoinen syöpäkeskus (FICAN North) - OYS",
+   "chars": 843,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/pohjoinen-syopakeskus/",
+   "published": "2026-09-28T05:25:03+00:00",
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.5,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Soite / Keski-Pohjanmaan keskussairaala / OYS Oulun yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11936
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.5,
+   "result_en": "1 search: B: any Soite preop rehab for lung cancer",
+   "ms": 2602
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Soite keuhkosyöpä leikkaus fysioterapia tupakasta vieroitus ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any Soite preop rehab for lung cancer",
+   "status": "done",
+   "t_s": 37.1,
+   "result_en": "6 results: duodecimlehti.fi, kaypahoito.fi, say.fi",
+   "ms": 3062,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13819",
+     "title": "Potilas pitää vieroittaa tupakasta ennen kirurgisia toimenpiteitä"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/nak05711",
+     "title": "Ennen leikkaushoitoa toteutettu tupakoinnin vieroitushoito"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/xmedia/hoi/hoi50066.pdf",
+     "title": "1 Leikkausta edeltävä arviointi 2769 Vastuun rajaus"
+    },
+    {
+     "url": "https://say.fi/wp-content/uploads/2025/11/SAY_Leikkausta_edeltavan_arvioinnin_suositus_10_2025.pdf",
+     "title": "24.10.2025 Suomen Anestesiologiyhdistys 1 Leikkausta edeltävä arviointi"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.2,
+   "result_en": "writes the answer",
+   "ms": 10432
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "url": "https://fican.fi/yhteistyolla-vaikuttavampaa-hoitoa-syopapotilaan-leikkausta-edeltava-ja-jatkuva-kuntoutuminen-keskiossa/",
+   "title": "Yhteistyöllä vaikuttavampaa hoitoa: Syöpäpotilaan leikkausta edeltävä ja jatkuva kuntoutuminen keskiössä – FICAN",
+   "chars": 6162,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:51:08+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/pohjoinen-syopakeskus/",
+   "title": "Pohjoinen syöpäkeskus (FICAN North) - OYS",
+   "chars": 843,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:06:28+00:00",
+   "published": "2026-09-28T05:25:03+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://fican.fi/pohjoismaiden-uudet-syopastrategiat-ja-hoitoketjujen-kehitys-esilla-goteborgissa-yhteiset-painotukset-korostuivat/",
+   "title": "Pohjoismaiden uudet syöpästrategiat ja hoitoketjujen kehitys esillä Göteborgissa – yhteiset painotukset korostuivat – FICAN",
+   "chars": 5166,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:26:38+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:27:06+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: neither the OYS lung cancer care pathway page nor Soite's pages show a rule that frail patients get an exercise test, a geriatric assessment and four weeks of prehabilitation before curative treatment is ruled out, and the evidence on fewer complications supports the measure even though its effect on the curative share has not been measured.",
+ "seconds": 50.6,
+ "searched_en": "Searched 7 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Soite prehabilitaatio\"; \"OYS esikuntoutus syöpäleikkaus\"; \"Keski-Pohjanmaan keskussairaala leikkausta edeltävä kuntoutus\", ...) and read 5 pages on oys.fi, fican.fi, europepmc.org.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Soite prehabilitaatio",
+  "OYS esikuntoutus syöpäleikkaus",
+  "Keski-Pohjanmaan keskussairaala leikkausta edeltävä kuntoutus",
+  "OYS keuhkosyöpä prehabilitaatio leikkaus fysioterapia",
+  "Pohjoinen syöpäkeskus prehabilitaatio hanke",
+  "Soite keuhkosyöpä leikkaus fysioterapia tupakasta vieroitus ennen leikkausta"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: neither the OYS lung cancer care pathway page nor Soite's pages show a rule that frail patients get an exercise test, a geriatric assessment and four weeks of prehabilitation before curative treatment is ruled out, and the evidence on fewer complications supports the measure even though its effect on the curative share has not been measured.",
+ "verdict_en": "No public sign that it is running in Central Ostrobothnia. Evidence supports that it works, but not the size of effect we assume. Supported: Cochrane (2022) found that exercise training before lung cancer surgery lowers the risk of lung complications after surgery (RR 0.45) and shortens the hospital stay by about 2.2 days. Not supported: No page measured how many patients judged unfit become eligible for curative treatment, so the assumed 0.5 percentage points is not backed by any page.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "prehab_fitness_assessment",
+ "intervention_name_en": "Fitness assessment and prehabilitation before deciding against curative treatment",
+ "area_name_en": "Central Ostrobothnia wellbeing services county"
+}

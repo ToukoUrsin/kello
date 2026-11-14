@@ -1,0 +1,438 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Savo wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "12",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "One UK district hospital (62 patients, before-after, 2004) saw its annual resection rate rise by 30% (relative) after video MDT meetings began; this is a small, old study and does not measure a share of all patients.",
+ "supported_en": "A UK study (J Telemed Telecare 2004) reports the annual resection rate rose by 30% after telemedicine MDTs started.",
+ "not_supported_en": "The pages do not show the assumed gain of 1.5 percentage points in the curative share in a Finnish setting.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä. Jokaisen keuhkosyöpäpotilaan tilanne käsitellään ainakin kertaalleen kokouksessa, jossa tehdään hoitopäätös.",
+ "in_use_source": {
+  "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+  "title": "Keuhkosyöpäpotilaan hoitoketju",
+  "published": "2021-10-22",
+  "fetched_at": "2026-11-14T01:19:09+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows that Mikkeli or Savonlinna join the KYS lung cancer MDT by video, or that every stage I-III patient from South Savo is discussed there.",
+ "summary_en": "I found only part of this measure running. KYS Syövänhoitokeskus's lung cancer care pathway (2021) says a weekly meeting with a chest surgeon, pathologist, radiologist, oncologist and lung doctors discusses every lung cancer patient at least once to decide treatment. That pathway is a KYS document and does not say it covers South Savo's own hospitals. FICAN says Mikkeli already joins KYS's upper-GI and lower-GI cancer meetings by video, but it says nothing about a lung meeting. On effect, the only study I read is a small UK one from 2004: a district hospital's annual surgery rate rose by 30% after video meetings started. That points the right way but is weaker evidence than the size we assume.",
+ "unanswered_en": "I found no page saying that Mikkeli or Savonlinna join the KYS lung cancer meeting by video, or that every stage I-III patient from South Savo is discussed there.",
+ "sources": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä. Jokaisen keuhkosyöpäpotilaan tilanne käsitellään ainakin kertaalleen kokouksessa, jossa tehdään hoitopäätös.",
+   "about": "in_use",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+   "quote": "Mikkelissä mahdollisuus osallistua etäyhteydellä KYSin ylä-GI‑ ja ala-GI MDT-kokouksiin on sujuvoittanut potilaiden hoitoa ja vahvistanut yhteistyötä.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:20:41+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hus.fi",
+   "ms": 2518,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Eloisa moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, terveyskirjasto.fi, tyks.fi, docrates.mehilainen.fi",
+   "ms": 1714,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://syopa-alueelliset.s3.eu-west-1.amazonaws.com/sites/271/2016/10/13122739/keuhkosyopa_web_120522.pdf",
+     "title": "Keuhkosyöpä - Potilaan opas"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/moniammatilliset-kasvainryhm%C3%A4t",
+     "title": "Moniammatilliset kasvainryhmät - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, fican.fi, kotiseutuliitto.fi, researchgate.net",
+   "ms": 1956,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset - laadukkaan syövänhoidon kultastandardi"
+    },
+    {
+     "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+     "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN"
+    },
+    {
+     "url": "https://kotiseutuliitto.fi/tietopankki/yhdistystoiminta/yhdistyksen-sahkoinen-kokous/",
+     "title": "Yhdistyksen sähköinen kokous - Suomen Kotiseutuliitto"
+    },
+    {
+     "url": "https://www.researchgate.net/publication/379481713_duo17212",
+     "title": "(PDF) duo17212"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/etayhteysteknisellavalineella/",
+     "title": "Yhtiökokoukseen osallistuminen teknisen välineen avulla"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/taloyhtio/yhtiokokous/etaosallistuminen/",
+     "title": "Kiinteistöliitto - Etäosallistuminen yhtiökokoukseen: Ohjeet ja suositukset"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Mikkelin keskussairaala keuhkomeeting videoyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: etelasavonha.fi, suomi.fi",
+   "ms": 2398,
+   "results": [
+    {
+     "url": "https://etelasavonha.fi/asiakkaan-opas/toimipisteet/mikkelin-keskussairaala/",
+     "title": "Mikkelin keskussairaala - Eloisa"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-vastaanotto-mikkeli-etela-savon-hyvinvointialue/5aaf11c7-553a-46da-b17f-5b1a3d23c242",
+     "title": "Keuhkosairauksien vastaanotto, Mikkeli - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/mikkelin-keskussairaala-etela-savon-hyvinvointialue/210a6334-6a89-41e6-8e76-02aaca9d825c",
+     "title": "Mikkelin keskussairaala - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+     "title": "Keuhkosairauksien erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/kirurgia/",
+     "title": "Kirurgian erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://yle.fi/a/74-20226470",
+     "title": "Epäviralliset ravinto-opit levisivät Mikkelin keskussairaalassa – Yle löysi yhteyksiä adventtikirkkoon | Kotimaa | Yle"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.5,
+   "result_en": "3 reads: B: KYS pathway MDT for regional patients; B: Mikkeli remote MDT participation; A: effect size",
+   "ms": 5436
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "meeting etäyhteys keskussairaala Mikkeli Savonlinna hoitopäätös",
+   "why": "B: KYS pathway MDT for regional patients",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 6,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "focus": "Mikkeli etäyhteydellä MDT keuhko",
+   "why": "B: Mikkeli remote MDT participation",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhte\" · 2 109 chars",
+   "ms": 4496,
+   "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+   "chars": 2109,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video multidisciplinary",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 7,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "1 search: B: whether Mikkeli joins KYS lung MDT remotely",
+   "ms": 2552
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Savo keuhkosyöpä KYS meeting etänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: whether Mikkeli joins KYS lung MDT remotely",
+   "status": "done",
+   "t_s": 15.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi",
+   "ms": 1627,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/sms/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/en/ajankohtaiset",
+     "title": "Ajankohtaiset - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.pohjois-savonsyopayhdistys.fi/ajankohtaista/tapahtumat/kys-etayhteys-ensitietopaiva/",
+     "title": "KYS/etäyhteys: Ensitietopäivä | Pohjois-Savon Syöpäyhdistys"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.6,
+   "result_en": "writes the answer",
+   "ms": 12548
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://fican.fi/kehittamisiltapaivasta-vahvistusta-moniammatillisten-syopatiimien-yhteistyohon/",
+   "title": "Kehittämisiltapäivästä vahvistusta moniammatillisten syöpätiimien yhteistyöhön – FICAN",
+   "chars": 2109,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:20:41+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:20:58+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask KYS Syövänhoitokeskus first whether South Savo lung cancer patients are already discussed in its weekly lung MDT, because its care pathway says every lung cancer patient is reviewed there, and FICAN reports that Mikkeli already joins KYS gastro MDTs by video.",
+ "seconds": 29.2,
+ "searched_en": "Searched 5 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Eloisa moniammatillinen kokous keuhkosyöpä\"; \"KYS MDT-kokous etäyhteydellä\"; \"Mikkelin keskussairaala keuhkomeeting videoyhteys\", ...) and read 3 pages on syovanhoitokeskus.pshyvinvointialue.fi, fican.fi, europepmc.org.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Eloisa moniammatillinen kokous keuhkosyöpä",
+  "KYS MDT-kokous etäyhteydellä",
+  "Mikkelin keskussairaala keuhkomeeting videoyhteys",
+  "Etelä-Savo keuhkosyöpä KYS meeting etänä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask KYS Syövänhoitokeskus first whether South Savo lung cancer patients are already discussed in its weekly lung MDT, because its care pathway says every lung cancer patient is reviewed there, and FICAN reports that Mikkeli already joins KYS gastro MDTs by video.",
+ "verdict_en": "Partly in place in the KYS university hospital area, which treats South Savo's patients. Missing: No page shows that Mikkeli or Savonlinna join the KYS lung cancer MDT by video, or that every stage I-III patient from South Savo is discussed there. Evidence supports that it works, but not the size of effect we assume. Supported: A UK study (J Telemed Telecare 2004) reports the annual resection rate rose by 30% after telemedicine MDTs started. Not supported: The pages do not show the assumed gain of 1.5 percentage points in the curative share in a Finnish setting.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "South Savo wellbeing services county"
+}

@@ -1,0 +1,648 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure lead to lung cancer being found at an earlier stage, and by how much?\nMeasure: Symptom awareness campaign (cough over three weeks). A campaign on the English \"Be Clear on Cancer\" model telling people with a persistent cough to see a doctor. Weak evidence: in England the share found at stage I rose during the campaign months and faded within months, so it has to be repeated every year, and the extra GP visits and chest X-rays cost several times the advertising.",
+ "area_id": "10",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "England's national cough campaign raised the share of NSCLC found at stage I by 3.1 percentage points during the campaign; how long the effect lasted is not shown in what I read.",
+ "supported_en": "British Journal of Cancer (2015): during England's national campaign, the share of NSCLC found at stage I rose 3.1 points and resections rose 2.3 points.",
+ "not_supported_en": "The passages I read do not show how long the effect lasted, so the 0.8-point yearly average is not confirmed. The MSD campaign has no published effect in Finland.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "MSD's nationwide \"Hakeudu hoitoon\" lung symptom campaign has run every year since 2020 in November–December. Kymenhva's and HUS's pages show no campaign of their own.",
+ "missing_en": "",
+ "summary_en": "Neither Kymenhva's lung cancer page nor HUS's lung cancer care-pathway page shows its own campaign telling people with a cough lasting over three weeks to see a doctor. However, the drug company MSD says its nationwide \"Hakeudu hoitoon\" campaign has urged people with lung symptoms to see a doctor every November–December since 2020. The 2015 British Journal of Cancer evaluation of England's national campaign found a 3.1 percentage point rise in stage I NSCLC during the campaign and a 63% rise in GP visits for cough, but the passages I read do not show how long this lasted. Check: The page quoted for use does not name Kymenlaakso wellbeing services county or its university hospital area near the quote, so local use is reported as no public sign of it.",
+ "unanswered_en": "I found no Kymenhva or HUS decision on a cough campaign, and the passages I read do not say how long the English stage shift lasted.",
+ "sources": [
+  {
+   "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+   "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa",
+   "quote": "Koko Suomen kattava kampanja näkyy ja kuuluu marras- ja joulukuussa muun muassa ulkomainonnassa, radiossa ja sosiaalisessa mediassa.",
+   "about": "context",
+   "published": "2024-11-11 09:22:49",
+   "fetched_at": "2026-11-14T01:42:21+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+   "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa",
+   "quote": "MSD on toteuttanut Hakeudu hoitoon -kampanjan vuosittain alkaen vuodesta 2020.",
+   "about": "context",
+   "published": "2024-11-11 09:22:49",
+   "fetched_at": "2026-11-14T01:42:21+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "quote": "Hoitosuositukset tehdään Kymenlaakson hyvinvointialueen moniammatillisessa keuhkokokouksessa.",
+   "about": "context",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "quote": "there was a 3.1 percentage point increase ( P <0.001) in proportion of non-small cell lung cancer diagnosed at stage I and a 2.3 percentage point increase ( P <0.001) in resections for patients seen during the national campaign",
+   "about": "effect",
+   "published": "2015",
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "quote": "Presentations of patients aged 50+ with a cough increased by 63% for the 8 weeks around the campaign compared with the same weeks in 2011",
+   "about": "effect",
+   "published": "2015",
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1557,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva yskä yli kolme viikkoa kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: itsehoitoapteekki.fi, yliopistonapteekki.fi, hyvaterveys.fi",
+   "ms": 2255,
+   "results": [
+    {
+     "url": "https://www.itsehoitoapteekki.fi/flunssan-hoito/tietoa/pitkittyneen-yskan-syy-kannattaa-selvittaa/",
+     "title": "Pitkittyneen yskän syy kannattaa selvittää | Itsehoitoapteekki"
+    },
+    {
+     "url": "https://www.itsehoitoapteekki.fi/flunssan-hoito/tietoa/miksi-yolla-yskittaa/",
+     "title": "Miksi yöllä yskittää | Itsehoitoapteekki"
+    },
+    {
+     "url": "https://www.yliopistonapteekki.fi/ideat-ja-vinkit/pitkittynyt-yska",
+     "title": "Pitkittynyt yskä – miksi yskä ei lopu? | Yliopiston Apteekki"
+    },
+    {
+     "url": "https://www.hyvaterveys.fi/artikkeli/terveys/yska-vain-jatkuu-ja-jatkuu-naista-oireista-tunnistat-hinkuyskan",
+     "title": "Yskä vain jatkuu ja jatkuu? Näistä oireista tunnistat hinkuyskän | Hyvä Terveys"
+    },
+    {
+     "url": "https://www.itsehoitoapteekki.fi/flunssan-hoito/tietoa/kuiva-yska-limainen-yska--kuinka-helpottaa-arkea-haittaavaa-kohaa/",
+     "title": "Kuiva yskä, limainen yskä – kuinka helpottaa arkea haittaavaa köhää? | Itsehoitoapteekki"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00617",
+     "title": "Keuhkoputkitulehdus (bronkiitti) aikuisilla - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyövän oireet kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, keuhkosyopakuukausi.fi, keuhkosyopa.fi, suomenseniorihoiva.fi",
+   "ms": 1986,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+     "title": "Kampanja – Keuhkosyöpäkuukausi"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/tietoa-keuhkosyovasta/keuhkosyovan-oireet/",
+     "title": "Keuhkosyövän oireet – Keuhkosyöpä"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala pitkittynyt yskä tutkimuksiin",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, terveystalo.com, kymenhva.fi, kotka.fi",
+   "ms": 2250,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kliininen-neurofysiologia-kymenlaakson-keskussairaala",
+     "title": "Kliininen neurofysiologia, Kymenlaakson keskussairaala | HUS"
+    },
+    {
+     "url": "https://www.terveystalo.com/fi/palvelut/pitkittyneen-yskan-tutkiminen-ja-hoito",
+     "title": "Pitkittyneen yskän tutkiminen ja hoito | Terveystalo"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/",
+     "title": "Kymenlaakson keskussairaala"
+    },
+    {
+     "url": "https://www.kotka.fi/2024/03/kymenlaakson-hyvinvointialue-jatti-ministeriolle-selvityksensa-paivystysten-ja-keskussairaalan-puolesta/",
+     "title": "Kymenlaakson hyvinvointialue jätti ministeriölle selvityksensä päivystysten ja keskussairaalan puolesta | Kotkan kaupunki"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kymenlaakson-keskussairaalan-rontgen",
+     "title": "Kymenlaakson keskussairaalan röntgen | HUS"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00102",
+     "title": "Yskä - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.3,
+   "result_en": "3 reads: effect size; national awareness campaign; HUS symptom info",
+   "ms": 5110
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "focus": "stage I 14.1 17.3 campaign",
+   "why": "effect size",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"An evaluation of the impact of large-scale interventions to raise publ\" · 36 791 chars · 6 of 54 passages kept · from cache",
+   "ms": 8,
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://keuhkosyopakuukausi.fi/kampanja/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+   "focus": "kampanja yskä oireet lääkäriin",
+   "why": "national awareness campaign",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Kampanja – Keuhkosyöpäkuukausi\" · 14 277 chars · 8 of 28 passages kept",
+   "ms": 4144,
+   "title": "Kampanja – Keuhkosyöpäkuukausi",
+   "chars": 14277,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://keuhkosyopakuukausi.fi/kampanja/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "ensioireet yskä lääkäriin",
+   "why": "HUS symptom info",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 13,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.5,
+   "result_en": "1 search + 1 read: stage shift number; county campaign sign",
+   "ms": 4732
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "focus": "stage I diagnosed increase 14.1% 17.3% October",
+   "why": "stage shift number",
+   "status": "done",
+   "t_s": 16.3,
+   "result_en": "\"An evaluation of the impact of large-scale interventions to raise publ\" · 36 791 chars · 5 of 54 passages kept · from cache",
+   "ms": 10,
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva keuhkosyöpä varhainen toteaminen kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county campaign sign",
+   "status": "done",
+   "t_s": 16.3,
+   "result_en": "6 results: keuhkosyopakuukausi.fi, terveyskyla.fi, mynewsdesk.com, docrates.mehilainen.fi",
+   "ms": 2087,
+   "results": [
+    {
+     "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+     "title": "Kampanja – Keuhkosyöpäkuukausi"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-toteaminen",
+     "title": "Keuhkosyövän toteaminen"
+    },
+    {
+     "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+     "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa | MSD Finland Oy"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/keuhkosyovan-riskikartoituksella-ja-varhaisen-vaiheen-tutkimuksilla-voi-olla-ratkaiseva-merkitys-potilaan-ennusteelle/",
+     "title": "Keuhkosyövän varhainen toteaminen parantaa ennustetta - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/keuhkokuva-on-yha-avain-keuhkosyovan-varhaiseen-toteamiseen/",
+     "title": "Keuhkokuva on yhä avain keuhkosyövän varhaiseen toteamiseen - Lääkärilehti"
+    },
+    {
+     "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.4,
+   "result_en": "2 reads: national symptom campaign; stage shift number",
+   "ms": 6017
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+   "focus": "Hakeudu hoitoon kampanja yskä vuosittain",
+   "why": "national symptom campaign",
+   "status": "done",
+   "t_s": 24.4,
+   "result_en": "\"Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkitutta\" · 3 747 chars",
+   "ms": 3584,
+   "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa",
+   "chars": 3747,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+   "published": "2024-11-11 09:22:49",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "focus": "non-small cell stage I proportion national campaign results",
+   "why": "stage shift number",
+   "status": "done",
+   "t_s": 24.4,
+   "result_en": "\"An evaluation of the impact of large-scale interventions to raise publ\" · 36 791 chars · 5 of 54 passages kept · from cache",
+   "ms": 9,
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 28.0,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Kymenhva / Kymenlaakson keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision docume",
+   "ms": 16028
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 44.0,
+   "result_en": "1 search: county campaign B",
+   "ms": 2655
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson hyvinvointialue keuhkosyöpä yskä lääkäriin",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county campaign B",
+   "status": "done",
+   "t_s": 46.6,
+   "result_en": "6 results: kymenhva.fi, suomi.fi",
+   "ms": 1985,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/",
+     "title": "Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+     "title": "Keuhkosyöpä ja keuhkopussn msotelioom - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-poliklinikkapalvelut-kymenlaakson-hyvinvointialue/cb99ec3e-e5a7-4f46-8ab2-aeb9e585046f",
+     "title": "Keuhkosairauksien poliklinikkapalvelut - Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/yhteydenotto-terveysasemalle-kymenlaakson-hyvinvointialue/cf9521ff-c0f6-45b0-b2e0-10b7d5f67280",
+     "title": "Yhteydenotto terveysasemalle - Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-puhelinpalvelut-kymenlaakson-hyvinvointialue/23579cb9-c5cf-4762-b039-8e028bba8aa3",
+     "title": "Keuhkosairauksien puhelinpalvelut - Kymenlaakson hyvinvointialue..."
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 48.6,
+   "result_en": "1 read: county pathway context",
+   "ms": 3058
+  },
+  {
+   "step": 19,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "focus": "yskä oireet keuhkokokous",
+   "why": "county pathway context",
+   "status": "done",
+   "t_s": 51.7,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin mesoteliooma\" · 4 499 chars · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 20,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 51.7,
+   "result_en": "writes the answer",
+   "ms": 13097
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+   "title": "Kampanja – Keuhkosyöpäkuukausi",
+   "chars": 14277,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:42:04+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+   "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa",
+   "chars": 3747,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:42:21+00:00",
+   "published": "2024-11-11 09:22:49",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "published": "8.1.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:42:58+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "",
+ "seconds": 64.8,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva yskä yli kolme viikkoa kampanja\"; \"HUS keuhkosyövän oireet kampanja\"; \"Kymenlaakson keskussairaala pitkittynyt yskä tutkimuksiin\", ...) and read 7 pages on pmc.ncbi.nlm.nih.gov, keuhkosyopakuukausi.fi, hus.fi, mynewsdesk.com, kymenhva.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva yskä yli kolme viikkoa kampanja",
+  "HUS keuhkosyövän oireet kampanja",
+  "Kymenlaakson keskussairaala pitkittynyt yskä tutkimuksiin",
+  "Kymenhva keuhkosyöpä varhainen toteaminen kampanja",
+  "Kymenlaakson hyvinvointialue keuhkosyöpä yskä lääkäriin"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 5
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "No public sign that this is running in Kymenlaakso after 6 searches and 7 pages read: it stays in the plan.",
+ "verdict_en": "No public sign that it is running in Kymenlaakso. Evidence supports that it works, but not the size of effect we assume. Supported: British Journal of Cancer (2015): during England's national campaign, the share of NSCLC found at stage I rose 3.1 points and resections rose 2.3 points. Not supported: The passages I read do not show how long the effect lasted, so the 0.8-point yearly average is not confirmed. The MSD campaign has no published effect in Finland.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "symptom_campaign",
+ "intervention_name_en": "Symptom awareness campaign (cough over three weeks)",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}

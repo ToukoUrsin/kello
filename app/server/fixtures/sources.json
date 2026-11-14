@@ -1,0 +1,72 @@
+{
+ "fx_thl_sotkanet": {
+  "title": "Sotkanet indicator bank",
+  "publisher": "THL",
+  "url": "https://sotkanet.fi/",
+  "api_call": null,
+  "retrieved_at": null,
+  "licence": "CC BY 4.0",
+  "notes": "SAMPLE FIXTURE - placeholder value, not retrieved from the source",
+  "verified": false
+ },
+ "fx_thl_access": {
+  "title": "Access to care statistics (hoitoonpääsy)",
+  "publisher": "THL",
+  "url": "https://thl.fi/",
+  "api_call": null,
+  "retrieved_at": null,
+  "licence": "CC BY 4.0",
+  "notes": "SAMPLE FIXTURE - placeholder value, not retrieved from the source",
+  "verified": false
+ },
+ "fx_fcr": {
+  "title": "Finnish Cancer Registry statistics",
+  "publisher": "Finnish Cancer Registry",
+  "url": "https://cancerregistry.fi/",
+  "api_call": null,
+  "retrieved_at": null,
+  "licence": "CC BY 4.0",
+  "notes": "SAMPLE FIXTURE - placeholder value, not retrieved from the source",
+  "verified": false
+ },
+ "fx_nordcan": {
+  "title": "NORDCAN: cancer statistics for the Nordic countries",
+  "publisher": "IARC / ANCR",
+  "url": "https://nordcan.iarc.fr/",
+  "api_call": null,
+  "retrieved_at": null,
+  "licence": "see site",
+  "notes": "SAMPLE FIXTURE - placeholder value, not retrieved from the source",
+  "verified": false
+ },
+ "fx_statfi": {
+  "title": "Population structure by wellbeing services county",
+  "publisher": "Statistics Finland",
+  "url": "https://stat.fi/",
+  "api_call": null,
+  "retrieved_at": null,
+  "licence": "CC BY 4.0",
+  "notes": "SAMPLE FIXTURE - placeholder value, not retrieved from the source",
+  "verified": false
+ },
+ "fx_literature": {
+  "title": "Published pathway-interval studies (placeholder for the evidence table)",
+  "publisher": "various",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/",
+  "api_call": null,
+  "retrieved_at": null,
+  "licence": "n/a",
+  "notes": "SAMPLE FIXTURE - placeholder value, not retrieved from the source",
+  "verified": false
+ },
+ "fx_model": {
+  "title": "Kello pathway simulation (sample engine)",
+  "publisher": "Kello",
+  "url": null,
+  "api_call": null,
+  "retrieved_at": "2026-11-13",
+  "licence": "n/a",
+  "notes": "Sample engine in app/server/fixture_model.py; replaced by kello_model.",
+  "verified": false
+ }
+}

@@ -1,0 +1,584 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Smoking cessation started at the first specialist visit. Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+ "area_id": "10",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "A prospective cohort of 517 current smokers with early-stage NSCLC found that quitting after diagnosis was linked to lower all-cause mortality (adjusted HR 0.67, 95% CI 0.53–0.85).",
+ "supported_en": "Annals of Internal Medicine (2021) reports an adjusted HR of 0.67 (0.53–0.85) for all-cause death among patients who quit after diagnosis.",
+ "not_supported_en": "The study does not show the effect of offering medication at the first visit; it compares patients who quit with patients who kept smoking, it is observational, and it was done in Moscow.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "The HUS lung cancer pathway page stresses quitting and a nurse visit for guidance at the first visit, and the Kymenlaakso lung clinic pages describe follow-up of lung cancer, but no page shows cessation medication or counselling started at the first visit.",
+ "missing_en": "",
+ "summary_en": "B: HUS's lung cancer pathway page says quitting smoking is key and that patients see a nurse for guidance at the first visit, but it does not mention cessation medication or a cessation service. Kymenlaakso's lung clinic pages show no such service either; its lung surgery patients go to the university hospital. A: A 2021 Annals of Internal Medicine cohort (517 smokers with early-stage NSCLC) reports an adjusted HR of 0.67 (0.53–0.85) for all-cause death after quitting, which matches the assumed value.",
+ "unanswered_en": "I found no Kymenhva or HUS page saying that smokers with lung cancer get cessation medication or counselling at the first visit.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tupakoitsijoiden keuhkosyövissä keskeinen vointiin ja taudin ennusteeseen vaikuttava asia on tupakoinnin kokonaan lopettaminen.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Ensikäynnillä tapaat myös sairaanhoitajan. Sairaanhoitajan vastaanotolla saat ohjausta ja neuvontaa.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "title": "Keuhkosairauksien alkusivu",
+   "quote": "Keuhkojen alueen kirurgista hoitoa vaativat potilaat hoidetaan pääsääntöisesti yliopistosairaalan thorax-kirurgisessa yksikössä keuhkolääkärin lähetteellä.",
+   "about": "context",
+   "published": "29.1.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "quote": "After adjustments, smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85])",
+   "about": "effect",
+   "published": "2021-07-27",
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 704,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+     "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva tupakasta vieroitus keuhkosyöpäpotilas",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, kaypahoito.fi, terveyskyla.fi",
+   "ms": 2509,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo10283",
+     "title": "Tupakointi ja syöpä - mitä hyötyä lopettamisesta?"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/khp00012",
+     "title": "Keuhkoahtaumatauti – salaa etenevä kansantauti"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2024/04/80X_Syopa-ja-ravitsemus.pdf",
+     "title": "Potilasohje Keuhkosairaudet Sijainti: Keuhkosairauksien poliklinikka"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS tupakkavieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: terveyskirjasto.fi, kaypahoito.fi, filha.fi, thl.fi",
+   "ms": 1500,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.filha.fi/tupakka-ja-nikotiini/tupakkavieroitus/",
+     "title": "Tupakkavieroituksen tukimateriaalia - Filha ry"
+    },
+    {
+     "url": "https://thl.fi/aiheet/alkoholi-tupakka-ja-riippuvuudet/tupakka/vieroitusohjaus/kaytannon-toimintamalleja-tupakasta-vieroitukseen",
+     "title": "Käytännön toimintamalleja tupakasta vieroitukseen - THL"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/mielenterveys-ja-paihde/tupakkavieroitus/",
+     "title": "Tupakkavieroitus - Eloisa"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/nain-saat-apua",
+     "title": "Näin saat apua - HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala savuton leikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, suomi.fi",
+   "ms": 1849,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/leiko-yksikko/",
+     "title": "Leiko-yksikkö - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/leikkaukset/",
+     "title": "Leikkaukset - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/leikkauspalvelut-kymenlaakson-hyvinvointialue/6cfc6f9c-705f-4f04-a8f1-2e9ae5800774",
+     "title": "Leikkauspalvelut - Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/uutiset/talta-siella-nayttaa-keskussairaala-sai-kaksi-tuliteraa-leikkaussalia-ja-uuden-kirurgian-poliklinikan/",
+     "title": "Tältä siellä näyttää: keskussairaala sai kaksi tuliterää leikkaussalia ja uuden kirurgian poliklinikan - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://perhekeskus.kymenhva.fi/ajankohtaista/palveluhakemisto/leikkauspalvelut/",
+     "title": "Leikkauspalvelut - Kymenlaakson perhekeskus"
+    },
+    {
+     "url": "https://kymenhva.kuvat.fi/kuvat/Toimipisteet/Kymenlaakson+keskussairaala/Leikkaussalit/",
+     "title": "Leikkaussalit"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.5,
+   "result_en": "3 reads: B in use at HUS; A effect size; B county lung clinic",
+   "ms": 4544
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "tupakointi lopettaminen vieroitus",
+   "why": "B in use at HUS",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://doi.org/10.7326/M21-0252",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "focus": "hazard ratio mortality quit",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progr\" · 2 162 chars · from cache",
+   "ms": 1,
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://doi.org/10.7326/M21-0252",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/wp-content/uploads/2024/04/80X_Syopa-ja-ravitsemus.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/wp-content/uploads/2024/04/80X_Syopa-ja-ravitsemus.pdf",
+   "focus": "tupakointi",
+   "why": "B county lung clinic",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Potilasohje Keuhkosairaudet Sijainti: Keuhkosairauksien poliklinikka\" · 5 554 chars · PDF 3 p. · 5 of 6 passages kept",
+   "ms": 4642,
+   "title": "Potilasohje Keuhkosairaudet Sijainti: Keuhkosairauksien poliklinikka",
+   "chars": 5554,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://kymenhva.fi/wp-content/uploads/2024/04/80X_Syopa-ja-ravitsemus.pdf",
+   "published": "2024-04-29",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.7,
+   "result_en": "1 search: B county cessation service before surgery",
+   "ms": 2440
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva tupakoinnin lopettaminen ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B county cessation service before surgery",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "6 results: duodecimlehti.fi, potilasohjeet.pirha.fi, terveyskyla.fi",
+   "ms": 3052,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13819",
+     "title": "Potilas pitää vieroittaa tupakasta ennen kirurgisia toimenpiteitä"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/tupakkatuotteiden-kaytto-ja-leikkaukseen-valmistautuminen",
+     "title": "Tupakkatuotteiden käyttö ja leikkaukseen valmistautuminen - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/leikkaukseen/tietoa-leikkaushoidosta/tupakoinnin-ja-nikotiinituotteiden-lopettamisen-edut-ennen-leikkausta",
+     "title": "Tupakoinnin ja nikotiinituotteiden lopettamisen edut ennen leikkausta"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/tupakointi-ja-leikkaukseen-valmistautuminen",
+     "title": "Tupakointi ja leikkaukseen valmistautuminen - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/leikkaukseen/tietoa-leikkaushoidosta/tupakoinnin-ja-nikotiinituotteiden-lopettamisen-edut-ennen-leikkausta/miksi-tupakointi-kannattaa-lopettaa-jo-viikkoja-ennen-leikkausta",
+     "title": "Miksi tupakointi kannattaa lopettaa jo viikkoja ennen leikkausta?"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Tupakoimattomana_leikkaukseen",
+     "title": "Tupakoimattomana leikkaukseen – Wikipedia"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Kymenhva / Kymenlaakson keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision docume",
+   "ms": 10951
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 28.1,
+   "result_en": "1 search: B county cessation nurse",
+   "ms": 2339
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "vieroitushoitaja keuhkosairauksien poliklinikka Kymenlaakso",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B county cessation nurse",
+   "status": "done",
+   "t_s": 30.5,
+   "result_en": "6 results: kymenhva.fi, suomi.fi",
+   "ms": 1316,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+     "title": "Keuhkosairauksien poliklinikka Kotka - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-poliklinikkapalvelut-kymenlaakson-hyvinvointialue/cb99ec3e-e5a7-4f46-8ab2-aeb9e585046f",
+     "title": "Keuhkosairauksien poliklinikkapalvelut - Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-puhelinpalvelut-kymenlaakson-hyvinvointialue/23579cb9-c5cf-4762-b039-8e028bba8aa3",
+     "title": "Keuhkosairauksien puhelinpalvelut - Kymenlaakson hyvinvointialue..."
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-erikoisalapalvelut-kymenlaakson-hyvinvointialue/cb99ec3e-e5a7-4f46-8ab2-aeb9e585046f",
+     "title": "Keuhkosairauksien erikoisalapalvelut - Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://perhekeskus.kymenhva.fi/ajankohtaista/palveluhakemisto/suu-ja-leukasairauksien-poliklinikka/",
+     "title": "Suu- ja leukasairauksien poliklinikka - Kymenlaakson perhekeskus"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.8,
+   "result_en": "2 reads: B county clinic",
+   "ms": 4273
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "focus": "tupakka vieroitus keuhkosyöpä",
+   "why": "B county clinic",
+   "status": "done",
+   "t_s": 36.1,
+   "result_en": "\"Keuhkosairauksien poliklinikka Kotka\" · 1 376 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosairauksien poliklinikka Kotka",
+   "chars": 1376,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "published": "3.9.2026",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "focus": "tupakka vieroitus keuhkosyöpä",
+   "why": "B county clinic",
+   "status": "done",
+   "t_s": 36.1,
+   "result_en": "\"Keuhkosairauksien alkusivu\" · 3 647 chars · from cache",
+   "ms": 3,
+   "title": "Keuhkosairauksien alkusivu",
+   "chars": 3647,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "published": "29.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 36.1,
+   "result_en": "writes the answer",
+   "ms": 12086
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/wp-content/uploads/2024/04/80X_Syopa-ja-ravitsemus.pdf",
+   "title": "Potilasohje Keuhkosairaudet Sijainti: Keuhkosairauksien poliklinikka",
+   "chars": 5554,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:40:46+00:00",
+   "published": "2024-04-29",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "title": "Keuhkosairauksien poliklinikka Kotka",
+   "chars": 1376,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:53:24+00:00",
+   "published": "3.9.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "title": "Keuhkosairauksien alkusivu",
+   "chars": 3647,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "29.1.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:41:22+00:00",
+ "stopped": "finished",
+ "advice": null,
+ "model_reason_en": "Keep this line, because neither the HUS lung cancer pathway page nor the Kymenlaakso lung clinic pages show cessation treatment that starts at the first visit.",
+ "seconds": 48.2,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva tupakasta vieroitus keuhkosyöpäpotilas\"; \"HUS tupakkavieroitus\"; \"Kymenlaakson keskussairaala savuton leikkaus\", ...) and read 5 pages on hus.fi, doi.org, kymenhva.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva tupakasta vieroitus keuhkosyöpäpotilas",
+  "HUS tupakkavieroitus",
+  "Kymenlaakson keskussairaala savuton leikkaus",
+  "Kymenhva tupakoinnin lopettaminen ennen leikkausta",
+  "vieroitushoitaja keuhkosairauksien poliklinikka Kymenlaakso"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because neither the HUS lung cancer pathway page nor the Kymenlaakso lung clinic pages show cessation treatment that starts at the first visit.",
+ "verdict_en": "No public sign that it is running in Kymenlaakso. Recent evidence supports the size of effect we assume. Annals of Internal Medicine (2021) reports an adjusted HR of 0.67 (0.53–0.85) for all-cause death among patients who quit after diagnosis.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "smoking_cessation_at_diagnosis",
+ "intervention_name_en": "Smoking cessation started at the first specialist visit",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}

@@ -1,0 +1,393 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "21",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "Br J Cancer 2009 (northern England): patients with the longest travel time had odds of lung cancer surgery 0.60 times those of the nearest group.",
+ "not_supported_en": "No study read shows that travel or lodging support raises the curative share, or by how much; the assumed 1 percentage point is not tested.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Jos tulet pitkän matkan takaa eikä vointisi ole sellainen, että sinun tarvitsisi jäädä sairaalan vuodeosastolle, sinä ja läheisesi voitte majoittua sairaalan lähellä sijaitsevassa potilaskodissa.",
+ "in_use_source": {
+  "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+  "title": "Potilaskoti - OYS",
+  "published": "2026-04-20T05:51:31+00:00",
+  "fetched_at": "2026-11-14T00:51:22+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows organised transport, booking done by staff or a named contact for patients who must travel.",
+ "summary_en": "OYS runs a patient home with 63 beds 400–700 m from the hospital for patients who come from far away. The adult price is 41.98 euros a night, Kela pays part of it back, and patients book it themselves. Lapin keskussairaala also has a 5-bed patient hotel that patients book themselves. For the effect, the only study read is from northern England (Crawford et al., 2009). It links the longest travel time to lower odds of lung cancer surgery (OR 0.60), but it does not test any travel-support measure.",
+ "unanswered_en": "I found no page on organised transport or a named travel contact for Lapland lung cancer patients treated at OYS, and no study measuring the effect of travel support.",
+ "sources": [
+  {
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "title": "Potilaskoti - OYS",
+   "quote": "Jos tulet pitkän matkan takaa eikä vointisi ole sellainen, että sinun tarvitsisi jäädä sairaalan vuodeosastolle, sinä ja läheisesi voitte majoittua sairaalan lähellä sijaitsevassa potilaskodissa.",
+   "about": "in_use",
+   "published": "2026-04-20T05:51:31+00:00",
+   "fetched_at": "2026-11-14T00:51:22+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "title": "Potilaskoti - OYS",
+   "quote": "Kela korvaa osan maksusta korvaukseen oikeutetulle potilaalle. Asiakas hakee itse Kela-korvauksen maksetulla laskulla ja lääkärintodistuksella.",
+   "about": "in_use",
+   "published": "2026-04-20T05:51:31+00:00",
+   "fetched_at": "2026-11-14T00:51:22+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+   "title": "Lapin keskussairaalan potilasopas - Lapin hyvinvointialue",
+   "quote": "Vuodepaikkoja on yhteensä 5 kpl. Omaisia majoitamme yhden/potilas ja majoittuva asiakas varaa itse yösijan potilashotellista.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:51:19+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, hyvaks.fi",
+   "ms": 1557,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://www.pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lapha.fi, yle.fi, fonecta.fi, lshp.fi",
+   "ms": 2054,
+   "results": [
+    {
+     "url": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+     "title": "Lapin keskussairaalan potilasopas - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20206955",
+     "title": "Lapin keskussairaalan potilashotelli pienenee – tiloja tarvitaan muuhun käyttöön | Lappi | Yle"
+    },
+    {
+     "url": "https://www.fonecta.fi/profiili/potilashotelli/3670314",
+     "title": "Potilashotelli - Rovaniemi - Sairaala | Fonecta Caller"
+    },
+    {
+     "url": "https://www.lshp.fi/fi-fi/potilaille_ja_laheisille/Potilashotelli",
+     "title": "Potilashotelli | lshp.fi"
+    },
+    {
+     "url": "https://www.cylex.fi/yritys/potilashotelli-14050339.html",
+     "title": "▷ Potilashotelli | Varsinaiset sairaalapalvelut, Rovaniemi"
+    },
+    {
+     "url": "https://lapha.fi/fi/w/lapha-botti-palveluksessanne",
+     "title": "Lapha-botti palveluksessanne - Lapin hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, oys2030.fi, hs.fi",
+   "ms": 2234,
+   "results": [
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+     "title": "Potilaskoti - OYS"
+    },
+    {
+     "url": "https://oys.fi/wp-content/uploads/2026/04/Potilaskoti-tiedote-2_2026.pdf",
+     "title": "OYS potilaskoti tiedote (PDF)"
+    },
+    {
+     "url": "https://oys2030.fi/potilashotelli/",
+     "title": "Potilashotelli - Oys 2030"
+    },
+    {
+     "url": "https://www.hs.fi/suomi/art-2000009887140.html",
+     "title": "Majoitus | ”Salahotelli” paljastui keskeltä Oulua"
+    },
+    {
+     "url": "https://oys.fi/",
+     "title": "Etusivu - OYS"
+    },
+    {
+     "url": "http://cc.oulu.fi/~ttervo20/kartat/OYS_aluekartta.pdf",
+     "title": "M G K N S T L YHTEISPÄIVYSTYS EMERGENCY LASTEN PÄIVYSTYS CHILDREN’S EMERGENCY"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin keskussairaala majoitus sädehoidon ajaksi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lapha.fi, booking.com",
+   "ms": 2888,
+   "results": [
+    {
+     "url": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+     "title": "Lapin keskussairaalan potilasopas - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/sairaalapalvelut",
+     "title": "Sairaalapalvelut - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.booking.com/landmark/fi/lapland-hospital-district.fi.html",
+     "title": "10 parasta hotellia lähellä maamerkkiä Lapin sairaanhoitopiiri..."
+    },
+    {
+     "url": "https://lapha.fi/asiakas-ja-potilastiedot",
+     "title": "Asiakas- ja potilastiedot - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/fi/w/lapin-keskussairaalan-synnytysyksikon-kesa-sujui-hyvin-puolisoille-tarjolla-maksuton-majoitusvaihtoehto",
+     "title": "Lapin keskussairaalan synnytysyksikön kesä sujui hyvin – puolisoille tarjolla maksuton majoitusvaihtoehto - Lapin hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.9,
+   "result_en": "3 reads: B: OYS patient lodging; A: effect size; B: Lapland patient hotel",
+   "ms": 5984
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "focus": "potilaskoti majoitus potilaille hinta varaus",
+   "why": "B: OYS patient lodging",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Potilaskoti - OYS\" · 4 574 chars · 8 of 8 passages kept · from cache",
+   "ms": 6,
+   "title": "Potilaskoti - OYS",
+   "chars": 4574,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "published": "2026-04-20T05:51:31+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time odds of surgery 0.60",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 2,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+   "focus": "potilashotelli majoitusta kauempaa",
+   "why": "B: Lapland patient hotel",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "\"Lapin keskussairaalan potilasopas - Lapin hyvinvointialue\" · 10 922 chars · 7 of 17 passages kept · from cache",
+   "ms": 9,
+   "title": "Lapin keskussairaalan potilasopas - Lapin hyvinvointialue",
+   "chars": 10922,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.9,
+   "result_en": "writes the answer",
+   "ms": 12902
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+   "title": "Potilaskoti - OYS",
+   "chars": 4574,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:51:22+00:00",
+   "published": "2026-04-20T05:51:31+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://lapha.fi/lapin-keskussairaalan-potilasopas",
+   "title": "Lapin keskussairaalan potilasopas - Lapin hyvinvointialue",
+   "chars": 10922,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:51:19+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:06:06+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to organised transport, booking done for the patient and a named contact, because OYS already runs patient lodging (63 beds) near the hospital, and patients book it themselves and claim part of the cost back from Kela.",
+ "seconds": 21.8,
+ "searched_en": "Searched 4 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha potilashotelli\"; \"OYS potilaskoti\"; \"Lapin keskussairaala majoitus sädehoidon ajaksi\") and read 3 pages on oys.fi, pmc.ncbi.nlm.nih.gov, lapha.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Lapha potilashotelli",
+  "OYS potilaskoti",
+  "Lapin keskussairaala majoitus sädehoidon ajaksi"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to organised transport, booking done for the patient and a named contact, because OYS already runs patient lodging (63 beds) near the hospital, and patients book it themselves and claim part of the cost back from Kela.",
+ "verdict_en": "Partly in place in the OYS university hospital area, which treats Lapland's patients. Missing: No page shows organised transport, booking done by staff or a named contact for patients who must travel. Evidence supports that it works, but not the size of effect we assume. Supported: Br J Cancer 2009 (northern England): patients with the longest travel time had odds of lung cancer surgery 0.60 times those of the nearest group. Not supported: No study read shows that travel or lodging support raises the curative share, or by how much; the assumed 1 percentage point is not tested.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "travel_accommodation_support",
+ "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
+ "area_name_en": "Lapland wellbeing services county"
+}

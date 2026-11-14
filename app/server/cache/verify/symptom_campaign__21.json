@@ -1,0 +1,460 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure lead to lung cancer being found at an earlier stage, and by how much?\nMeasure: Symptom awareness campaign (cough over three weeks). A campaign on the English \"Be Clear on Cancer\" model telling people with a persistent cough to see a doctor. Weak evidence: in England the share found at stage I rose during the campaign months and faded within months, so it has to be repeated every year, and the extra GP visits and chest X-rays cost several times the advertising.",
+ "area_id": "21",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "The English national campaign raised GP visits for cough by people aged 50 and over by 63% over 8 weeks, but the parts of the paper read did not show the 3.1-point stage I rise.",
+ "supported_en": "British Journal of Cancer (2015): GP visits for cough rose 63%, and recognition of a 3-week cough as a warning sign rose from 18% to 33%.",
+ "not_supported_en": "The passages read do not show the stage I shift, how long it lasted, or the 0.8-point yearly average.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found of a persistent-cough awareness campaign by Lapha or OYS. OYS runs a low-dose CT screening pilot from January 2026, but it takes only people from North Ostrobothnia, not Lapland.",
+ "missing_en": "",
+ "summary_en": "No public sign was found that Lapha or OYS runs a persistent-cough awareness campaign; the OYS screening pilot (from January 2026) is a different measure and takes only North Ostrobothnia residents. A 2015 British Journal of Cancer paper reports a 63% rise in GP visits for cough by people aged 50 and over during England's campaign; the passages read did not show the stage shift.",
+ "unanswered_en": "No page from Lapha or OYS mentioning a cough campaign was found after three search rounds, and the paper's stage I figures (14.1% to 17.3%) and how long the effect lasted were not seen in the passages read.",
+ "sources": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "quote": "Presentations of patients aged 50+ with a cough increased by 63% for the 8 weeks around the campaign compared with the same weeks in 2011",
+   "about": "effect",
+   "published": "2015",
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "quote": "Pilottiin voivat hakea 50–74-vuotiaat pitkään tupakoineet henkilöt Pohjois-Pohjanmaalta sekä Uudenmaan, Pirkanmaan, Pohjanmaan ja Varsinais-Suomen alueilta.",
+   "about": "context",
+   "published": "2026-11-14T00:59:46+00:00",
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi",
+   "ms": 1301,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha yskä yli kolme viikkoa kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: yliopistonapteekki.fi, itsehoitoapteekki.fi, lapha.fi",
+   "ms": 1297,
+   "results": [
+    {
+     "url": "https://www.yliopistonapteekki.fi/ideat-ja-vinkit/pitkittynyt-yska",
+     "title": "Pitkittynyt yskä – miksi yskä ei lopu? | Yliopiston Apteekki"
+    },
+    {
+     "url": "https://www.itsehoitoapteekki.fi/flunssan-hoito/tietoa/pitkittyneen-yskan-syy-kannattaa-selvittaa/",
+     "title": "Pitkittyneen yskän syy kannattaa selvittää | Itsehoitoapteekki"
+    },
+    {
+     "url": "https://lapha.fi/fi/w/vie-vanhus-ulos-kampanja-kannustaa-yhteisiin-ulkoiluhetkiin-lapin-hyvinvointialue-mukana",
+     "title": "Vie vanhus ulos -kampanja kannustaa yhteisiin ulkoiluhetkiin –..."
+    },
+    {
+     "url": "https://lapha.fi/yhteystiedot",
+     "title": "Yhteystiedot - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00102",
+     "title": "Yskä - Terveyskirjasto"
+    },
+    {
+     "url": "https://ehyt.fi/ratkaisut/kampanjat/",
+     "title": "Kampanjat - EHYT ry"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyövän oireet kampanja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, keuhkosyopakuukausi.fi, terveyskirjasto.fi, kaikkisyovasta.fi",
+   "ms": 2922,
+   "results": [
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa"
+    },
+    {
+     "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+     "title": "Kampanja – Keuhkosyöpäkuukausi"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.mynewsdesk.com/fi/msd-finland-oy/pressreleases/keuhkosyoepae-loeytyy-usein-liian-myoehaeaen-kampanja-kannustaa-tutkituttamaan-oireet-ajoissa-3353391",
+     "title": "Keuhkosyöpä löytyy usein liian myöhään – kampanja kannustaa tutkituttamaan oireet ajoissa | MSD Finland Oy"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin keskussairaala pitkittynyt yskä tutkimuksiin",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lapha.fi, perusterveys.fi, terveystalo.com, dokport.com",
+   "ms": 3093,
+   "results": [
+    {
+     "url": "https://lapha.fi/sairaalapalvelut",
+     "title": "Sairaalapalvelut - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://perusterveys.fi/blogi/limainen-pitkittynyt-yska-miten-erottaa-vaaraton-jalkioire-ja-hoitoa-vaativa-pitkittynyt-limainen-yska/",
+     "title": "Limainen pitkittynyt yskä – milloin lääkäriin? | PerusTerveys"
+    },
+    {
+     "url": "https://www.terveystalo.com/fi/palvelut/pitkittyneen-yskan-tutkiminen-ja-hoito",
+     "title": "Pitkittyneen yskän tutkiminen ja hoito | Terveystalo"
+    },
+    {
+     "url": "https://www.dokport.com/fi-fi/oireet-ja-hoito/hengitystieinfektiot/yska/",
+     "title": "Yskä – yleisimmät syyt, hoito ja milloin lääkäriin | Dokport"
+    },
+    {
+     "url": "https://www.dokport.com/fi-fi/artikkeli/pitkittynyt-yska-syyt-hoito-ja-milloin-laakariin/",
+     "title": "Pitkittynyt yskä: syyt, hoito ja milloin lääkäriin | Dokport"
+    },
+    {
+     "url": "https://lapha.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "2 reads: effect size; local early detection activity",
+   "ms": 3957
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "focus": "stage I 14.1% 17.3% campaign",
+   "why": "effect size",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"An evaluation of the impact of large-scale interventions to raise publ\" · 36 791 chars · 6 of 54 passages kept",
+   "ms": 6203,
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "from_cache": false,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "focus": "oireet yskä hakeutua Lappi",
+   "why": "local early detection activity",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudi\" · 2 751 chars · from cache",
+   "ms": 5,
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "chars": 2751,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "published": "2026-11-14T00:59:46+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.3,
+   "result_en": "1 search: B: local awareness campaign",
+   "ms": 3006
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin hyvinvointialue keuhkosyöpä oireet tiedotus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: local awareness campaign",
+   "status": "done",
+   "t_s": 16.3,
+   "result_en": "6 results: suomenseniorihoiva.fi, suomi.fi, lapha.fi",
+   "ms": 2641,
+   "results": [
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-lapin-hyvinvointialue/6c3a0f92-b33b-4419-adad-148758fafd7b",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-sisatauti-ja-keuhko-osasto-5-lapin-hyvinvointialue/1d4320e7-2162-4e2a-a612-a09b22e13800",
+     "title": "Lapin keskussairaalan sisätauti- ja keuhko-osasto 5 - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.9,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Lapha / Lapin keskussairaala / OYS Oulun yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11144
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.1,
+   "result_en": "1 search: B: local cough campaign",
+   "ms": 2748
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha keuhkosyöpäkuukausi marraskuu yskä lääkäriin",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: local cough campaign",
+   "status": "done",
+   "t_s": 32.8,
+   "result_en": "6 results: keuhkosyopakuukausi.fi, parempaaelamaa.fi, lapha.fi",
+   "ms": 1702,
+   "results": [
+    {
+     "url": "https://keuhkosyopakuukausi.fi/",
+     "title": "Keuhkosyöpäkuukausi"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/usein-kysyttya/",
+     "title": "Usein kysyttyä keuhkosyövästä – milloin mennä lääkäriin? - Parempaa Elämää"
+    },
+    {
+     "url": "https://lapha.fi/",
+     "title": "Etusivu - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://keuhkosyopakuukausi.fi/kampanja/",
+     "title": "Kampanja – Keuhkosyöpäkuukausi"
+    },
+    {
+     "url": "https://www.oloapteekki.fi/blog/post/pitkittynyt-yska-flunssan-jalkeen-keuhkoputkentulehdus-vai-jalkiyska",
+     "title": "Pitkittynyt yskä flunssan jälkeen: keuhkoputkentulehdus vai jälkiyskä? | Olo-apteekki"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/e708fa9c-2ceb-4df3-9e63-dc6fe238d3f1",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.5,
+   "result_en": "writes the answer",
+   "ms": 9052
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "chars": 2751,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "published": "2026-11-14T00:59:46+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+   "title": "An evaluation of the impact of large-scale interventions to raise public awareness of a lung cancer symptom",
+   "chars": 36791,
+   "kind": "article",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:40:43+00:00",
+   "published": "2015",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:41:13+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because neither Lapha nor OYS shows a cough awareness campaign; the stage shift we assume still needs checking, since the paper read only shows more GP visits.",
+ "seconds": 43.6,
+ "searched_en": "Searched 6 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha yskä yli kolme viikkoa kampanja\"; \"OYS keuhkosyövän oireet kampanja\"; \"Lapin keskussairaala pitkittynyt yskä tutkimuksiin\", ...) and read 2 pages on pmc.ncbi.nlm.nih.gov, oys.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Lapha yskä yli kolme viikkoa kampanja",
+  "OYS keuhkosyövän oireet kampanja",
+  "Lapin keskussairaala pitkittynyt yskä tutkimuksiin",
+  "Lapin hyvinvointialue keuhkosyöpä oireet tiedotus",
+  "Lapha keuhkosyöpäkuukausi marraskuu yskä lääkäriin"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 1
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because neither Lapha nor OYS shows a cough awareness campaign; the stage shift we assume still needs checking, since the paper read only shows more GP visits.",
+ "verdict_en": "No public sign that it is running in Lapland. Evidence supports that it works, but not the size of effect we assume. Supported: British Journal of Cancer (2015): GP visits for cough rose 63%, and recognition of a 3-week cough as a warning sign rose from 18% to 33%. Not supported: The passages read do not show the stage I shift, how long it lasted, or the 0.8-point yearly average.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "symptom_campaign",
+ "intervention_name_en": "Symptom awareness campaign (cough over three weeks)",
+ "area_name_en": "Lapland wellbeing services county"
+}

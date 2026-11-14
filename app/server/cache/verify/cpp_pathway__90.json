@@ -1,0 +1,555 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in City of Helsinki (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Standardised lung cancer pathway with booked slots. A lung cancer pathway on the Danish/Swedish/Norwegian model: fixed referral criteria, pre-booked CT, PET-CT, bronchoscopy and MDT slots, a named pathway owner, and published time limits for each step.",
+ "area_id": "90",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "Swedish data give a lung cancer pathway lead time of 30–44 days, and only 30 % of patients met it; no page reports how many days a pathway saves.",
+ "supported_en": "A Swedish study in Scientific Reports (2023) reports a lung cancer pathway lead time of 30–44 days, met by 30 % of patients.",
+ "not_supported_en": "No page read shows the assumed 14 days saved from symptom or referral to treatment.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "HUS's lung cancer pathway pages (updated June 2026) describe referral, CT, PET in some cases, biopsy and a multidisciplinary team review when needed. They show no pre-booked slots, no named pathway owner and no published time limit for each step.",
+ "missing_en": "",
+ "summary_en": "HUS publishes lung cancer pathway pages for patients: referral to HUS pulmonology, CT, PET in some cases, biopsy, and a multidisciplinary team review when needed. HUS says tissue analysis usually takes 2–3 weeks. These pages show no pre-booked slots and no published time limits. A 2023 Swedish study in Scientific Reports sets the lung cancer pathway lead time at 30–44 days, met by only 30 % of patients; it does not report days saved.",
+ "unanswered_en": "The HUS cancer waiting-time page (syovan-hoitoonpaasy) did not load. No page showed booked test slots or step time limits at HUS or in Helsinki, and no study measured days saved by a lung cancer pathway.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "title": "Keuhkosyövän lisätutkimukset",
+   "quote": "Kudosnäytteiden patologisten ja molekyyligeneettisten määritysten kesto laboratorioissa on yleensä 2–3 viikkoa.",
+   "about": "context",
+   "published": "04.06.2026",
+   "fetched_at": "2026-11-14T00:59:39+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "quote": "Among the 27 CPPs that have specified lead times, five met the target of at least 80% of the patients. The average across CPPs was 47%.",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:55:50+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1037,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsingin kaupunki keuhkosyövän hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2363,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/eturauhassyopapotilaan-hoitopolku-hus-helsingin-yliopistollinen-sairaala/b5dc1fd0-8a60-4bac-8b5f-8c3b818bf2cb",
+     "title": "Eturauhassyöpäpotilaan hoitopolku - Suomi.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyövän hoitoketju",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 2271,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/ammattilaiselle/hoitoketjut",
+     "title": "Hoitoketjut | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsinki hoitoonpääsy määräajat keuhkosyöpä keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, hel.fi, tyks.fi, hus.fi",
+   "ms": 2609,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.hel.fi/fi/sosiaali-ja-terveyspalvelut/asiakkaan-tiedot-ja-oikeudet/odotusajat-ja-asiakaskokemus",
+     "title": "Odotusajat ja asiakaskokemus | Helsingin kaupunki"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.6,
+   "result_en": "2 reads: B: HUS pathway content; A: effect size",
+   "ms": 6640
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "lähete, tutkimukset, viikkoa, hoitokokous, tavoite, aika",
+   "why": "B: HUS pathway content",
+   "status": "done",
+   "t_s": 9.3,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 7,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "focus": "lung cancer days lead time pathway",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.3,
+   "result_en": "\"Performance of standardized cancer patient pathways in Sweden visualiz\" · 47 327 chars · 6 of 64 passages kept · from cache",
+   "ms": 11,
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "chars": 47327,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.3,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Helsingin kaupunki / HUS / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 13531
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.8,
+   "result_en": "1 search: B: booked slots or time limits at HUS",
+   "ms": 2681
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäepäily nopea diagnostiikka tutkimusajat",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: booked slots or time limits at HUS",
+   "status": "done",
+   "t_s": 25.5,
+   "result_en": "6 results: hus.fi, diagnostiikka.hus.fi, suomenseniorihoiva.fi",
+   "ms": 1523,
+   "results": [
+    {
+     "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+     "title": "Keuhkosyövän lisätutkimukset | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://diagnostiikka.hus.fi/",
+     "title": "Diagnostiikkakeskus - Ammattilaisen sivusto"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo15505",
+     "title": "Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 27.0,
+   "result_en": "1 read: B: slots or time limits",
+   "ms": 3005
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "focus": "aika, viikko, varattu, tavoite, hoitokokous",
+   "why": "B: slots or time limits",
+   "status": "done",
+   "t_s": 30.0,
+   "result_en": "\"Keuhkosyövän lisätutkimukset\" · 1 461 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyövän lisätutkimukset",
+   "chars": 1461,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "published": "04.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.0,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Helsingin kaupunki / HUS / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 10707
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.7,
+   "result_en": "1 search: B: published time limits at HUS",
+   "ms": 2403
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpäpotilaan hoitoonpääsyn tavoiteajat keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: published time limits at HUS",
+   "status": "done",
+   "t_s": 43.1,
+   "result_en": "6 results: hus.fi, tyks.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1437,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+     "title": "Syövän hoitoonpääsy | HUS"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/syopapotilaiden-hoitoonpaasy-tyksissa",
+     "title": "Syöpäpotilaiden hoitoonpääsy Tyksissä | Tyks"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 44.6,
+   "result_en": "1 read: B: HUS time limits for lung cancer",
+   "ms": 2960
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+   "focus": "keuhkosyöpä hoitoonpääsy päivää",
+   "why": "B: HUS time limits for lung cancer",
+   "status": "done",
+   "t_s": 47.5,
+   "result_en": "no answer in 11 s; skipped",
+   "ms": 11468,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 59.0,
+   "result_en": "writes the answer",
+   "ms": 10724
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+   "title": "Performance of standardized cancer patient pathways in Sweden visualized using observational data and a state-transition model",
+   "chars": 47327,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:55:50+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "title": "Keuhkosyövän lisätutkimukset",
+   "chars": 1461,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:59:39+00:00",
+   "published": "04.06.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:29:56+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because HUS's lung cancer pathway pages describe ordinary referral and tests with no booked slots or published step time limits.",
+ "seconds": 69.7,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Helsingin kaupunki keuhkosyövän hoitopolku\"; \"HUS keuhkosyövän hoitoketju\"; \"Helsinki hoitoonpääsy määräajat keuhkosyöpä keuhkosyöpä\", ...) and read 3 pages on hus.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Helsingin kaupunki keuhkosyövän hoitopolku",
+  "HUS keuhkosyövän hoitoketju",
+  "Helsinki hoitoonpääsy määräajat keuhkosyöpä keuhkosyöpä",
+  "HUS keuhkosyöpäepäily nopea diagnostiikka tutkimusajat",
+  "HUS syöpäpotilaan hoitoonpääsyn tavoiteajat keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because HUS's lung cancer pathway pages describe ordinary referral and tests with no booked slots or published step time limits.",
+ "verdict_en": "No public sign that it is running in Helsinki. Evidence supports that it works, but not the size of effect we assume. Supported: A Swedish study in Scientific Reports (2023) reports a lung cancer pathway lead time of 30–44 days, met by 30 % of patients. Not supported: No page read shows the assumed 14 days saved from symptom or referral to treatment.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "cpp_pathway",
+ "intervention_name_en": "Standardised lung cancer pathway with booked slots",
+ "area_name_en": "City of Helsinki"
+}

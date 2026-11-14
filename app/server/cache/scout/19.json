@@ -1,0 +1,416 @@
+{
+ "area_id": "19",
+ "area_name_en": "North Ostrobothnia wellbeing services county",
+ "area_name_fi": "Pohjois-Pohjanmaan hyvinvointialue",
+ "question": "What is North Ostrobothnia wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-05-07",
+   "what_en": "OYS and the Finnish Cancer Registry are running a lung cancer screening pilot that starts in January.",
+   "what_fi": "OYS ja Suomen Syöpärekisteri käynnistävät tammikuussa keuhkosyövän seulontapilotin.",
+   "quote": "Tammikuussa käynnistyy keuhkosyövän seulontapilotti, josta vastaavat Suomen Syöpärekisteri yhdessä Oulun yliopistollisen sairaalan kanssa.",
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "relates_to": "ldct_screening",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-05-07",
+   "what_en": "The pilot is recruiting 1,200 people aged 50–74 who have smoked for more than 25 years, including people from North Ostrobothnia.",
+   "what_fi": "Pilottiin haetaan 1 200 osallistujaa, jotka ovat 50–74-vuotiaita ja tupakoineet yli 25 vuotta, myös Pohjois-Pohjanmaalta.",
+   "quote": "Käynnistyvä pilottitutkimus kohdistuu yli 25 vuotta tupakoineisiin 50–74-vuotiaisiin. Tutkimukseen haetaan 1 200 osallistujaa.",
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "relates_to": "ldct_screening",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-05-07",
+   "what_en": "Every participant in the screening pilot is offered support to stop smoking. This is within the pilot, not at diagnosis.",
+   "what_fi": "Seulontapilotin kaikille osallistujille tarjotaan tukea tupakoinnin lopettamiseen. Tuki kuuluu pilottiin, ei diagnoosivaiheeseen.",
+   "quote": "Kaikille osallistujille tarjotaan tukea tupakoinnin lopettamiseen.",
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "relates_to": "smoking_cessation_at_diagnosis",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025-09-17",
+   "what_en": "Under the OYS lung cancer care pathway, the university hospital is responsible for the lung cancer multidisciplinary meetings.",
+   "what_fi": "OYS:n keuhkosyöpäpotilaan hoitopolun mukaan yliopistosairaala vastaa keuhkosyövän moniammatillisista kokouksista.",
+   "quote": "Vastaa keuhkosyövän moniammatillisista kokouksista",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025-09-17",
+   "what_en": "The OYS pathway offers stereotactic radiotherapy or chemoradiotherapy for local disease when surgery is not possible.",
+   "what_fi": "OYS:n hoitopolussa paikallisen taudin hoitona voidaan antaa täsmäsädehoitoa tai kemosädehoitoa, jos leikkaus ei ole mahdollinen.",
+   "quote": "Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "relates_to": "sbrt_pathway",
+   "scope": "county",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2023-02-28",
+   "what_en": "FICAN North at OYS started a low-dose CT screening pilot for smokers in autumn 2022.",
+   "what_fi": "OYS:n Pohjoinen syöpäkeskus (FICAN North) aloitti syksyllä 2022 tupakoitsijoiden matala-annos-TT-seulontapilotin.",
+   "quote": "Pohjoisessa syöpäkeskuksessa (FICAN North) käynnistyi syksyllä 2022 pilottitutkimus. Tutkimus käsittelee sitä, miten tupakoiville henkilöille tehtävä, keuhkosyövän seulonnan matala-annos tietokonekuvaus sopii suomalaiseen terveydenhuollon palveluvalikoimaan.",
+   "url": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+   "title": "Pilottitutkimus koskien keuhkosyövän seulontaa - Pohde",
+   "relates_to": "ldct_screening",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:21+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "The clearest activity is lung cancer screening. OYS and the Finnish Cancer Registry have a low-dose CT screening pilot starting in January, with stop-smoking support for every participant. It follows an earlier FICAN North pilot that began in autumn 2022. OYS also publishes a lung cancer care pathway: the university hospital runs the multidisciplinary meetings and does the surgery and radiotherapy, including stereotactic radiotherapy. I found no regional decisions, waiting-time figures, nurse navigators, or plans for EBUS or molecular testing capacity.",
+ "not_found_en": "I found no regional board decisions, investments or published waiting-time figures for lung cancer care. The OYS pathway page on referrals returned a \"page not found\" error, so I could not check its referral rules.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 4309
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohde keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: terveyskirjasto.fi, pohde.fi, oys.fi, kaikkisyovasta.fi",
+   "ms": 3094,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+     "title": "Pilottitutkimus koskien keuhkosyövän seulontaa - Pohde"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://pohde.fi/",
+     "title": "Pohjois-Pohjanmaan hyvinvointialue Pohde"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: oys.fi",
+   "ms": 2718,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/sisataudit-ja-keuhkosairaudet/",
+     "title": "Sisätaudit ja keuhkosairaudet - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/rintasyopapotilaan-hoitopolku/",
+     "title": "Rintasyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohde aluehallitus syöpä investointi sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: pohde.cloudnc.fi, pohde.fi",
+   "ms": 1834,
+   "results": [
+    {
+     "url": "https://pohde.cloudnc.fi/download/noname/%7B74bd815a-15ee-4d47-92ac-13fe1f6c23a8%7D/44851",
+     "title": "Pohjois-Pohjanmaan hyvinvointialue Pöytäkirja 19/2025 1 ( ) 76 Aluehallitus"
+    },
+    {
+     "url": "https://pohde.fi/wp-content/uploads/2025/12/Talousarvio-2026-ja-taloussuunnitelma-2026-2028.pdf",
+     "title": "Aluehallitus 2.12.2025 Aluevaltuusto 15.12.2025 Pohjois-Pohjanmaan"
+    },
+    {
+     "url": "https://pohde.cloudnc.fi/download/noname/%7B78e6d67a-2e4d-472f-9727-8a86fcdd22fb%7D/41589",
+     "title": "Pohjois-Pohjanmaan hyvinvointialue Pöytäkirja 4/2025 1 ( ) 55 Aluehallitus"
+    },
+    {
+     "url": "https://pohde.cloudnc.fi/download/noname/%7B31d29fd0-b51d-4f64-8ff2-9206e1290ed3%7D/46385",
+     "title": "Pohjois-Pohjanmaan hyvinvointialue Pöytäkirja 4/2026 1 ( ) 49 Aluehallitus"
+    },
+    {
+     "url": "https://pohde.fi/wp-content/uploads/2024/04/ppshp_tillinpaatos_2022_valmis.pdf",
+     "title": "Tilinpäätös 2022 Pohjois-Pohjanmaan hyvinvointialueen aluehallitus 28.3.2023"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+     "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpä uutinen 2025",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: terveyskirjasto.fi, oys.fi",
+   "ms": 1868,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/sisataudit-ja-keuhkosairaudet/",
+     "title": "Sisätaudit ja keuhkosairaudet - OYS"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+     "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella ..."
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "3 reads: screening pilot; pathway; pathway details",
+   "ms": 5074
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "focus": "seulontapilotti tammikuu osallistujat",
+   "why": "screening pilot",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "\"OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudi\" · 2 751 chars · from cache",
+   "ms": 1,
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "chars": 2751,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "published": "2026-11-14T00:59:46+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "focus": "kiireellinen lähete tutkimukset viikkoa",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2973,
+   "error": true
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "focus": "moniammatillinen meeting bronkoskopia hoitaja sädehoito leikkaus",
+   "why": "pathway details",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - OYS\" · 19 914 chars · 7 of 31 passages kept · from cache",
+   "ms": 6,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.5,
+   "result_en": "1 read: earlier screening plan",
+   "ms": 3196
+  },
+  {
+   "step": 11,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+   "focus": "pilotti OYS seulonta käynnistyy",
+   "why": "earlier screening plan",
+   "status": "done",
+   "t_s": 18.7,
+   "result_en": "\"Pilottitutkimus koskien keuhkosyövän seulontaa - Pohde\" · 1 075 chars",
+   "ms": 2523,
+   "title": "Pilottitutkimus koskien keuhkosyövän seulontaa - Pohde",
+   "chars": 1075,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+   "published": "2023-02-28T12:29:22+00:00",
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 21.2,
+   "result_en": "writes the answer",
+   "ms": 16715
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "chars": 2751,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:02:01+00:00"
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:15+00:00"
+  },
+  {
+   "url": "https://pohde.fi/ajankohtaista/uutiset/pilottitutkimus-koskien-keuhkosyovan-seulontaa/",
+   "title": "Pilottitutkimus koskien keuhkosyövän seulontaa - Pohde",
+   "chars": 1075,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:38:21+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:38:37+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 37.9
+}

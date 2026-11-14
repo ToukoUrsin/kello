@@ -1,0 +1,607 @@
+{
+ "area_id": "08",
+ "area_name_en": "Pirkanmaa wellbeing services county",
+ "area_name_fi": "Pirkanmaan hyvinvointialue",
+ "question": "What is Pirkanmaa wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-08-19",
+   "what_en": "Pirha's lung cancer pathway has a multidisciplinary team (pulmonologist, thoracic surgeon, oncologist, radiologist, pathologist, nurse) that writes an individual treatment recommendation for each patient.",
+   "what_fi": "Pirhan keuhkosyöpäpolulla moniammatillinen työryhmä laatii jokaiselle potilaalle yksilöllisen hoitosuosituksen.",
+   "quote": "Työryhmään kuuluvat keuhkosairauksien erikoislääkäri, rintaelinkirurgi, syöpätautien erikoislääkäri, radiologian erikoislääkäri, patologian erikoislääkäri ja sairaanhoitaja.",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-08-19",
+   "what_en": "Tays already offers stereotactic radiotherapy in a few sessions for small tumours when surgery is not possible.",
+   "what_fi": "Tays antaa pieniin kasvaimiin täsmäsädehoitoa, jos leikkaus ei ole mahdollinen.",
+   "quote": "Pieniin kasvaimiin voidaan antaa muutamalla hoitokerralla toteutettavaa täsmäsädehoitoa, johon yleensä liittyy hyvin vähän sivuvaikutuksia.",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "relates_to": "sbrt_pathway",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-05-29",
+   "what_en": "Pirha's primary-care pathway (updated 29.5.2026) tells GPs to take a chest X-ray for any new cough lasting 3–8 weeks. It mentions no direct CT access.",
+   "what_fi": "Pirhan perusterveydenhuollon hoitoketju ohjeistaa ottamaan keuhkokuvan, jos uusi yskä on kestänyt 3–8 viikkoa; suoraa TT-pääsyä ei mainita.",
+   "quote": "kaikilta, joilla uutena oireena alkanut yskä on kestänyt vähintään 3–8 viikkoa",
+   "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-tutkimukset-ja-laheteindikaatiot-avoterveydenhuollossa",
+   "title": "Keuhkosyövän tutkimukset ja läheteindikaatiot avoterveydenhuollossa - Hoito- ja palveluketjut - pirha.fi",
+   "relates_to": "same_day_cxr_ct",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:57+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-02-16",
+   "what_en": "On 16 February 2026 a member of the Pirha regional council proposed psychosocial support for cancer patients while they wait for treatment to start.",
+   "what_fi": "Pirhan aluevaltuutettu teki 16.2.2026 aloitteen syöpäpotilaiden psykososiaalisesta tuesta ennen hoitojen alkua.",
+   "quote": "on tehnyt valtuusto aloitteen aluevaltuuston kokouksessa 16. helmikuuta 2026 syöpää sairastavien psykososiaalisesta tuesta.",
+   "url": "https://timinsanomat.wordpress.com/2026/02/23/hameenkyrolainen-pirhan-aluevaltuutettu-katariina-pylsy-tehnyt-aluevaltuuston-kokouksessa-aloitteen-syopaa-sairastavien-tarvitsemasta-psykososiaalisesta-tuesta-ennen-hoitojen-alkamista/",
+   "title": "Hämeenkyröläinen Pirhan aluevaltuutettu Katariina Pylsy tehnyt aluevaltuuston kokouksessa aloitteen syöpää sairastavien tarvitsemasta psykososiaalisesta tuesta ennen hoitojen alkamista",
+   "relates_to": "time_to_treatment",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:30+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025-09-09",
+   "what_en": "When lung cancer is suspected, patients in Pirkanmaa are referred urgently to Tays for further tests.",
+   "what_fi": "Keuhkosyöpäepäilyssä potilas lähetetään kiireellisesti jatkotutkimuksiin Taysiin.",
+   "quote": "Jos oireiden tai röntgenkuvan perusteella on syytä epäillä keuhkosyöpää, lääkäri lähettää potilaan kiireellisesti jatkotutkimuksiin Taysiin.",
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "relates_to": "cpp_pathway",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:17:42+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025-08-27",
+   "what_en": "On 1 September 2025 Tays started a geriatric-oncology team that assesses older patients' fitness while cancer is still suspected. It was a five-month project with the pulmonary clinic, and follow-up funding was being sought.",
+   "what_fi": "Tays aloitti 1.9.2025 geriatris-onkologisen konsultaatiotiimin, joka arvioi iäkkäiden toimintakyvyn jo syöpäepäilyvaiheessa. Kyseessä oli viiden kuukauden hanke yhdessä keuhkosairauksien poliklinikan kanssa, ja sille haettiin jatkorahoitusta.",
+   "quote": "Taysissa aloittaakin 1. syyskuuta uusi geriatris-onkologinen konsultaatiotiimi, jossa työskentelee syöpälääkäri, syöpäsairaanhoitaja ja geriatri.",
+   "url": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+   "title": "Pirha aloittaa uuden kokeilun iäkkäille syöpäpotilaille",
+   "relates_to": "prehab_fitness_assessment",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:27+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Pirha has a lung cancer pathway, updated in 2026: GPs take a chest X-ray and send urgent referrals to Tays, a multidisciplinary team reviews each patient, and stereotactic radiotherapy is used for small tumours that cannot be operated on. Two changes are visible. In 2025 Tays ran a five-month geriatric-oncology fitness-assessment project with the pulmonary clinic, and follow-up funding was being sought. In February 2026 a regional councillor proposed psychosocial support for cancer patients while they wait for treatment. I found no waiting-time figures, investments or screening pilots specific to lung cancer.",
+ "not_found_en": "I found no Pirha lung cancer waiting-time figures, regional board investment decisions, screening pilot, nurse navigator, or rules on molecular testing or EBUS.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 3881
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 3.9,
+   "result_en": "6 results: pirha.fi, filha.fi, terveyskirjasto.fi",
+   "ms": 1211,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/keuhkojen-alueen-tietokonetomografiatutkimus-tt-",
+     "title": "Keuhkojen alueen tietokonetomografiatutkimus (TT) - Potilasohjeet"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-oireet",
+     "title": "Keuhkosyövän oireet - Hoito- ja palveluketjut - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpä hoitopolku hoitoonpääsy",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 3.9,
+   "result_en": "6 results: hus.fi, suomi.fi, tyks.fi, tays.fi",
+   "ms": 2682,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-tays-keskussairaala-pirkanmaan-hyvinvointialue/66476935-a726-429e-8ee4-3b4e149be85d",
+     "title": "Syöpätautien poliklinikka, Tays Keskussairaala - Pirkanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirkanmaan hyvinvointialue aluehallitus syöpä investointi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 3.9,
+   "result_en": "6 results: pirha.cloudnc.fi",
+   "ms": 2972,
+   "results": [
+    {
+     "url": "https://pirha.cloudnc.fi/fi-FI/Toimielimet/Aluehallitus/Kokous_11112024/Pirkanmaan_hyvinvointialueen_investointi(24240)",
+     "title": "Pirkanmaan hyvinvointialueen investointisuunnitelma 2025-2028 muuttaminen | Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/fi-FI/Toimielimet/Aluehallitus/Kokous_2942024/Pirkanmaan_hyvinvointialueen_investointi(19329)",
+     "title": "Pirkanmaan hyvinvointialueen investointisuunnitelma 2025-2028 | Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/fi-FI/Toimielimet/Aluehallitus/Kokous_20112023/Pirkanmaan_hyvinvointialueen_investointi(12984)",
+     "title": "Pirkanmaan hyvinvointialueen investointisuunnitelma 2025-2028 | Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/download/noname/%7Bf86a1279-d2ac-4c80-92f6-f41bf8fb766f%7D/58394",
+     "title": "1 (19) Pirkanmaan hyvinvointialue | PL 272, 33101 Tampere"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/download/noname/%7B70509f36-72b8-4f84-a047-f182dc3a7c17%7D/54331",
+     "title": "1 (20) Pirkanmaan hyvinvointialue | PL 272, 33101 Tampere"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/fi-FI/Toimielimet/Nuorisovaltuusto/Kokous_20112025/Pirkanmaan_hyvinvointialueen_investointi(36579)",
+     "title": "Pirkanmaan hyvinvointialueen investointisuunnitelman 2027-2030 esittely nuorisovaltuustolle | Pirkanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpä 2026 uutinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 3.9,
+   "result_en": "6 results: pirha.fi, sttinfo.fi, tamperelainen.fi, seura.fi",
+   "ms": 1447,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72314212/uusi-syopahoito-kayttoon-taysissa-tavoitteena-etta-yha-useampi-perasuolisyopapotilas-valttaa-leikkauksen-ja-avanteen?lang=fi",
+     "title": "Uusi syöpähoito käyttöön Taysissa – tavoitteena, että yhä useampi peräsuolisyöpäpotilas välttää leikkauksen ja avanteen | Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.tamperelainen.fi/paikalliset/9140960",
+     "title": "Taysissa käynnistyy uudenlainen syöpähoito – Soveltuu huonoennusteisille potilaille | Paikalliset | Tamperelainen"
+    },
+    {
+     "url": "https://seura.fi/asiat/ajankohtaista/keuhkosyopa-voi-kuulua-kansalliseen-seulontaohjelmaan/",
+     "title": "Keuhkosyöpä on yleisin syöpäkuolemien aiheuttaja – Seulontapilotti tukee ensikerran suomalaisia riskiryhmäläisiä, tulokset maailmalta rohkaisevia"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/keuhkosyopa-loytyy-usein-liian-myohaan-kahdella-kolmesta-tauti-on-ehtinyt-jo-levita/9417210",
+     "title": "Keuhkosyövän hoidossa etsitään apua immuunijärjestelmästä | MTV Uutiset"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "3 reads: pathway facts; primary care referral",
+   "ms": 5582
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "focus": "kiireellisesti, bronkoskopia, hoitokokous, sädehoito, leikkaus",
+   "why": "pathway facts",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "\"Keuhkosyöpä - pirha.fi\" · 2 467 chars · from cache",
+   "ms": 41,
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "moniammatillinen, leikkaus, sädehoito, viikkoa, tutkimukset",
+   "why": "pathway facts",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 22,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-oireet",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-oireet",
+   "focus": "lähete, thoraxkuva, TT, tupakointi, kiireellinen",
+   "why": "primary care referral",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "\"Keuhkosyövän oireet - Hoito- ja palveluketjut - pirha.fi\" · 1 083 chars",
+   "ms": 5592,
+   "title": "Keuhkosyövän oireet - Hoito- ja palveluketjut - pirha.fi",
+   "chars": 1083,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-oireet",
+   "published": "7.4.2026",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.1,
+   "result_en": "1 read: GP referral and imaging",
+   "ms": 3861
+  },
+  {
+   "step": 11,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-tutkimukset-ja-laheteindikaatiot-avoterveydenhuollossa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-tutkimukset-ja-laheteindikaatiot-avoterveydenhuollossa",
+   "focus": "thorax, TT, lähete, kiireellinen, keuhkopoliklinikka",
+   "why": "GP referral and imaging",
+   "status": "done",
+   "t_s": 21.9,
+   "result_en": "\"Keuhkosyövän tutkimukset ja läheteindikaatiot avoterveydenhuollossa - \" · 1 864 chars",
+   "ms": 6626,
+   "title": "Keuhkosyövän tutkimukset ja läheteindikaatiot avoterveydenhuollossa - Hoito- ja palveluketjut - pirha.fi",
+   "chars": 1864,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-tutkimukset-ja-laheteindikaatiot-avoterveydenhuollossa",
+   "published": "29.5.2026",
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 28.5,
+   "result_en": "draft answer, still open: all 6 findings come from one site (pirha.fi), so they describe the service as it is, not what is changing. Search for a decision, a project, an investment, a waiting-time figure or dated local news (aluehallitus, hanke, investointi, uutinen, this year) and read two or three",
+   "ms": 17216
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 45.8,
+   "result_en": "2 searches: waiting-time figure or news; decision or project",
+   "ms": 3040
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpä jonot odotusaika 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "waiting-time figure or news",
+   "status": "done",
+   "t_s": 48.8,
+   "result_en": "6 results: pirha.fi, yle.fi, forum.vau.fi",
+   "ms": 1434,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/asiakkaalle/hoitoon-paasy-ja-odotusajat",
+     "title": "Hoitoon pääsy ja odotusajat - pirha.fi"
+    },
+    {
+     "url": "https://yle.fi/a/74-20251865",
+     "title": "Viikon uutinen selkosuomeksi | lauantai 17.10.2026 | Selkouutiset | Yle"
+    },
+    {
+     "url": "https://yle.fi/a/74-20242733",
+     "title": "Syöpäpotilaan hoito voi viivästyä Suomessa kuukausia – Heidi Rintahaka kyllästyi odottamaan | MOT | Yle"
+    },
+    {
+     "url": "https://forum.vau.fi/threads/jonon-pituus.1607168/",
+     "title": "Jonon pituus? | Vau.fi keskustelu"
+    },
+    {
+     "url": "https://kaihijono.fi/pirkanmaa/",
+     "title": "Kaihileikkaus jonotusaika Tampereella (Pirkanmaa) 2026"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha syöpähoito hanke päätös 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decision or project",
+   "status": "done",
+   "t_s": 48.8,
+   "result_en": "6 results: pirha.cloudnc.fi, timinsanomat.wordpress.com",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://pirha.cloudnc.fi/download/noname/%7Bedeb5a23-935a-4ae2-8ae4-171f18c65421%7D/76161",
+     "title": "Pirkanmaan hyvinvointialue Ote viranhaltijapäätöksestä 1 (4 ..."
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/fi-FI/Viranhaltijat/Hankejohtaja",
+     "title": "Viranhaltijapäätökset - Hankejohtaja | Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/download/noname/%7B0d8f3858-3bae-4477-a094-828c3ce1633a%7D/75001",
+     "title": "17410/2026 - Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://timinsanomat.wordpress.com/2026/02/23/hameenkyrolainen-pirhan-aluevaltuutettu-katariina-pylsy-tehnyt-aluevaltuuston-kokouksessa-aloitteen-syopaa-sairastavien-tarvitsemasta-psykososiaalisesta-tuesta-ennen-hoitojen-alkamista/",
+     "title": "Hämeenkyröläinen Pirhan aluevaltuutettu Katariina Pylsy tehnyt aluevaltuuston kokouksessa aloitteen syöpää sairastavien tarvitsemasta psykososiaalisesta tuesta ennen hoitojen alkamista"
+    },
+    {
+     "url": "https://pirha.cloudnc.fi/download/noname/%7Bae39644c-d3c7-4a8b-8b94-7ac9fb662460%7D/74957",
+     "title": "5300/2026 - Pirkanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+     "title": "Pirha käynnistää hankkeen iäkkäiden syöpähoidon kehittämiseksi - Nokian Uutiset"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 51.9,
+   "result_en": "2 reads: council initiative; project",
+   "ms": 4439
+  },
+  {
+   "step": 17,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://timinsanomat.wordpress.com/2026/02/23/hameenkyrolainen-pirhan-aluevaltuutettu-katariina-pylsy-tehnyt-aluevaltuuston-kokouksessa-aloitteen-syopaa-sairastavien-tarvitsemasta-psykososiaalisesta-tuesta-ennen-hoitojen-alkamista/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://timinsanomat.wordpress.com/2026/02/23/hameenkyrolainen-pirhan-aluevaltuutettu-katariina-pylsy-tehnyt-aluevaltuuston-kokouksessa-aloitteen-syopaa-sairastavien-tarvitsemasta-psykososiaalisesta-tuesta-ennen-hoitojen-alkamista/",
+   "focus": "aloite syöpä psykososiaalinen tuki aluevaltuusto",
+   "why": "council initiative",
+   "status": "done",
+   "t_s": 56.3,
+   "result_en": "\"Hämeenkyröläinen Pirhan aluevaltuutettu Katariina Pylsy tehnyt alueval\" · 3 034 chars",
+   "ms": 4972,
+   "title": "Hämeenkyröläinen Pirhan aluevaltuutettu Katariina Pylsy tehnyt aluevaltuuston kokouksessa aloitteen syöpää sairastavien tarvitsemasta psykososiaalisesta tuesta ennen hoitojen alkamista",
+   "chars": 3034,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://timinsanomat.wordpress.com/2026/02/23/hameenkyrolainen-pirhan-aluevaltuutettu-katariina-pylsy-tehnyt-aluevaltuuston-kokouksessa-aloitteen-syopaa-sairastavien-tarvitsemasta-psykososiaalisesta-tuesta-ennen-hoitojen-alkamista/",
+   "published": "2026-02-23T20:13:58+00:00",
+   "js_render": false
+  },
+  {
+   "step": 18,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+   "focus": "hanke iäkkäiden syöpäpotilaiden hoito",
+   "why": "project",
+   "status": "done",
+   "t_s": 56.3,
+   "result_en": "\"Pirha aloittaa uuden kokeilun iäkkäille syöpäpotilaille\" · 3 658 chars",
+   "ms": 2038,
+   "title": "Pirha aloittaa uuden kokeilun iäkkäille syöpäpotilaille",
+   "chars": 3658,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+   "published": "2025-08-27T11:44:00.000+0",
+   "js_render": false
+  },
+  {
+   "step": 19,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 61.3,
+   "result_en": "writes the answer",
+   "ms": 18014
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00"
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:17:42+00:00"
+  },
+  {
+   "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-oireet",
+   "title": "Keuhkosyövän oireet - Hoito- ja palveluketjut - pirha.fi",
+   "chars": 1083,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:47+00:00"
+  },
+  {
+   "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-ennaltaehkaisy-ja-tutkiminen-avoterveydenhuollossa/keuhkosyovan-tutkimukset-ja-laheteindikaatiot-avoterveydenhuollossa",
+   "title": "Keuhkosyövän tutkimukset ja läheteindikaatiot avoterveydenhuollossa - Hoito- ja palveluketjut - pirha.fi",
+   "chars": 1864,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:57+00:00"
+  },
+  {
+   "url": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+   "title": "Pirha aloittaa uuden kokeilun iäkkäille syöpäpotilaille",
+   "chars": 3658,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:27+00:00"
+  },
+  {
+   "url": "https://timinsanomat.wordpress.com/2026/02/23/hameenkyrolainen-pirhan-aluevaltuutettu-katariina-pylsy-tehnyt-aluevaltuuston-kokouksessa-aloitteen-syopaa-sairastavien-tarvitsemasta-psykososiaalisesta-tuesta-ennen-hoitojen-alkamista/",
+   "title": "Hämeenkyröläinen Pirhan aluevaltuutettu Katariina Pylsy tehnyt aluevaltuuston kokouksessa aloitteen syöpää sairastavien tarvitsemasta psykososiaalisesta tuesta ennen hoitojen alkamista",
+   "chars": 3034,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:30+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:34:48+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 79.3
+}

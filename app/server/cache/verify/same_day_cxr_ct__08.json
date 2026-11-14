@@ -1,0 +1,585 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Pirkanmaa wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Same-day chest X-ray report with immediate CT. A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+ "area_id": "08",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "In a London randomised trial, reading chest X-rays immediately cut the median time from X-ray to lung cancer diagnosis from 63 to 32 days (a saving of 31 days, p=0.03, 49 cancers).",
+ "supported_en": "A Thorax 2023 randomised trial reports median X-ray to diagnosis of 32 days with immediate reporting vs 63 days with standard reporting.",
+ "not_supported_en": "The trial measured X-ray to diagnosis, not first symptom to treatment start, and comes from one London hospital.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign of same-day X-ray reports or radiology-triggered CT in Pirkanmaa: Pirha's pathway (updated 19.8.2026) has the GP send an urgent referral, a lung specialist handle it in 1–2 working days, and CT usually done within a week after that.",
+ "missing_en": "",
+ "summary_en": "Pirha's lung cancer pathway pages show no same-day chest X-ray reports and no CT triggered by radiology. Instead, the GP sends an urgent referral, a Tays lung specialist handles it in 1–2 working days, and CT usually follows within a week. A 2023 randomised trial in Thorax found that immediate reporting halved the median time from X-ray to diagnosis, from 63 to 32 days.",
+ "unanswered_en": "Searches for a Pirha pilot, decision or project on immediate X-ray reporting or reports by radiographers found nothing, and no evidence covered the time from first symptom to treatment start.",
+ "sources": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Keuhkosyöpäepäilyyn liittyvä lähete luokitellaan lähes poikkeuksetta kiireellisiksi. Keuhkosairauksien erikoislääkäri arvioi lähetteet ja suunnittelee jatkotutkimukset.",
+   "about": "context",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Tutkimukset aloitetaan yleensä keuhkojen ja ylävatsan tietokonekerroskuvauksella, joka suoritetaan useimmiten viikon sisällä lähetteen käsittelystä.",
+   "about": "context",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, hus.fi",
+   "ms": 1522,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha keuhkokuva lausunto samana päivänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: aamulehti.fi, pirha.fi, valkeakoskensanomat.fi, potilasohjeet.pirha.fi",
+   "ms": 1510,
+   "results": [
+    {
+     "url": "https://www.aamulehti.fi/talous/art-2000012103579.html",
+     "title": "Pirha ulkoisti ison alueen pörssiyhtiölle – irtisanomiset alkoivat samana päivänä: ”Toivoton olo”"
+    },
+    {
+     "url": "https://www.pirha.fi/web/hoito-ja-palveluketjut/keuhkoahtaumataudin-hoitoketju/keuhkoahtaumataudin-hoito/ajanvarausvastaanotto",
+     "title": "Ajanvarausvastaanotto - Hoito- ja palveluketjut - pirha.fi"
+    },
+    {
+     "url": "https://www.valkeakoskensanomat.fi/uutiset/art-2000012389948.html",
+     "title": "Viisi huonoa ja viisi hyvää uutista Pirhasta – näin asiakkaiden hätä näkyy nyt"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/keuhkoputkien-tahystys",
+     "title": "Keuhkoputkien tähystys - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/virtaustilavuusspirometria-ja-keuhkojen-diffuusiokapasiteetin-mittaus",
+     "title": "Virtaustilavuusspirometria ja keuhkojen diffuusiokapasiteetin..."
+    },
+    {
+     "url": "https://asiointi.pirha.fi/",
+     "title": "pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays thorax-röntgen päivystyslausunto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: synlab.fi, pirha.fi",
+   "ms": 1999,
+   "results": [
+    {
+     "url": "https://synlab.fi/thoraxin-rontgen-radiologinen-lausunto/",
+     "title": "Thoraxin röntgen, radiologinen lausunto - SYNLAB Suomi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/r-kuvantaminen-tays-keskussairaala",
+     "title": "R-kuvantaminen, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/laboratorio-ja-kuvantaminen/rontgentutkimukset",
+     "title": "Röntgentutkimukset - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/tays-valkeakosken-paivystyksen-laheteohjeet-ja-konsultaatiot",
+     "title": "Tays Valkeakosken päivystyksen läheteohjeet ja konsultaatiot - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/koulutus/laakarikoulutus/laaketieteen-opiskelijoiden-ja-laakareiden-harjoittelu/amanuenssipaikat-ja-viikko-ohjelmat/radiologia",
+     "title": "Radiologian harjoitteluohjelma amanuensseille Taysissa"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/keuhkotalo/tutkimus-ja-hoito/keuhkosairauksien-tutkimukset/keuhkojen-kuvantamistutkimukset",
+     "title": "Keuhkojen kuvantamistutkimukset"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirkanmaan keuhkokuvan jälkeen suoraan TT keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: docrates.mehilainen.fi, terveyskyla.fi, duodecimlehti.fi",
+   "ms": 1951,
+   "results": [
+    {
+     "url": "https://docrates.mehilainen.fi/uutiset/erittain-matala-annoksinen-tt-kuvaus/",
+     "title": "Keuhkosyövän varhaisvaiheen diagnostiikka: Erittäin matala-annoksinen TT-kuvaus kohonneen riskin henkilöille"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-varhaisen-toteamisen-palvelut/keuhkosyovan-riskikartoitus/",
+     "title": "Keuhkosyövän riskikartoitus - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-toteaminen",
+     "title": "Keuhkosyövän toteaminen"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo13979",
+     "title": "Keuhkojen ja rintakehän erittäin pieni-annoksisen TT:n ..."
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92960",
+     "title": "Keuhkosairauksien uusia kuvantamisstrategioita"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.0,
+   "result_en": "3 reads: B pathway; B; A effect",
+   "ms": 4892
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "röntgenkuva lähete tietokonetomografia kiireellinen",
+   "why": "B pathway",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 8,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "focus": "röntgenkuva kiireellisesti jatkotutkimuksiin",
+   "why": "B",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Keuhkosyöpä - pirha.fi\" · 2 467 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "focus": "median days diagnosis immediate reporting",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Impact of radiographer immediate reporting of X-rays of the chest from\" · 20 833 chars · 6 of 36 passages kept · from cache",
+   "ms": 14,
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "2 searches: B: direct CT from primary care; B: immediate reporting",
+   "ms": 4879
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha keuhkosyöpäepäily suora TT lähete terveyskeskus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: direct CT from primary care",
+   "status": "done",
+   "t_s": 11.8,
+   "result_en": "6 results: pirha.fi",
+   "ms": 1281,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+     "title": "Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/virtsarakkosyovan-laheteohjeet-ja-konsultaatiot",
+     "title": "Virtsarakkosyövän läheteohjeet ja konsultaatiot - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/keuhkot-iho-ja-allergia/keuhkosairaudet",
+     "title": "Keuhkosairaudet - pirha.fi"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/tutkituta-keuhkot/",
+     "title": "Tutkituta keuhkot – Parempaa elämää ­– Apua keuhkosyöpään"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/web/hoito-ja-palveluketjut/keuhkosyopapotilaan-hoitoketju/keuhkosyovan-tutkiminen-ja-hoidon-suunnittelu-erikoissairaanhoidossa/keuhkosyopadiagnoosin-kertominen-potilaalle",
+     "title": "Keuhkosyöpädiagnoosin kertominen potilaalle - Hoito- ja palveluketjut - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays radiologi lausuu keuhkokuvan potilaan odottaessa",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: immediate reporting",
+   "status": "done",
+   "t_s": 11.8,
+   "result_en": "6 results: terve.fi, potilasohjeet.pirha.fi, hyvaep.fi, terveyskirjasto.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://www.terve.fi/kysymykset/radiologin-lausunto",
+     "title": "Radiologin lausunto - 84190 | Terve.fi"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/keuhkojen-alueen-tietokonetomografiatutkimus-tt-",
+     "title": "Keuhkojen alueen tietokonetomografiatutkimus (TT) - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+     "title": "Radiologia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/ldk00164",
+     "title": "Rintakehän röntgenkuva eli thorax-kuva - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.hyvaks.fi/palvelumme/kuvantaminen",
+     "title": "Kuvantaminen | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo16215",
+     "title": "Radiologisen kuvantamisen perusteet"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.8,
+   "result_en": "1 read: B referral rules",
+   "ms": 3353
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "focus": "keuhkokuva TT lähete radiologi kiireellinen",
+   "why": "B referral rules",
+   "status": "done",
+   "t_s": 18.2,
+   "result_en": "\"Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi\" · 2 340 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi",
+   "chars": 2340,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "published": "7.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Pirha / Tays / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 12872
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.1,
+   "result_en": "1 search: B: reporting radiographer pilot",
+   "ms": 3144
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha röntgenhoitaja lausuu thoraxkuvat pilotti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: reporting radiographer pilot",
+   "status": "done",
+   "t_s": 34.2,
+   "result_en": "6 results: potilasohjeet.pirha.fi, pirha.fi, sry.fi",
+   "ms": 1828,
+   "results": [
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/hampaiston-ja-leuan-panoraamakuvaus",
+     "title": "Hampaiston- ja leuan panoraamakuvaus - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/laboratorio-ja-kuvantaminen/rontgentutkimukset",
+     "title": "Röntgentutkimukset - pirha.fi"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/mammografia",
+     "title": "Mammografia - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://sry.fi/app/uploads/sites/2/2024/03/Abstraktit-2023.pdf",
+     "title": "46. SÄDETURVAPÄIVÄT 2. – 3.11.2023 Tampere-Talo"
+    },
+    {
+     "url": "https://synlab.fi/rontgenkuvaus/",
+     "title": "Röntgenkuvaus"
+    },
+    {
+     "url": "https://www.pihlajalinna.fi/palvelut/kuvantaminen/rontgenkuvaus",
+     "title": "Röntgenkuvaus | Pihlajalinna"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 36.1,
+   "result_en": "writes the answer",
+   "ms": 10355
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:25+00:00",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "title": "Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi",
+   "chars": 2340,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:16:37+00:00",
+   "published": "7.8.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:18:02+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because Pirha's pathway pages show the usual GP referral, then specialist review, then CT within about a week, with no same-day reporting step. The 31-day saving should be capped at the days Pirkanmaa's referral and CT steps actually take.",
+ "seconds": 46.4,
+ "searched_en": "Searched 7 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Pirha keuhkokuva lausunto samana päivänä\"; \"Tays thorax-röntgen päivystyslausunto\"; \"Pirkanmaan keuhkokuvan jälkeen suoraan TT keuhkosyöpä\", ...) and read 4 pages on pirha.fi, ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Pirha keuhkokuva lausunto samana päivänä",
+  "Tays thorax-röntgen päivystyslausunto",
+  "Pirkanmaan keuhkokuvan jälkeen suoraan TT keuhkosyöpä",
+  "Pirha keuhkosyöpäepäily suora TT lähete terveyskeskus",
+  "Tays radiologi lausuu keuhkokuvan potilaan odottaessa",
+  "Pirha röntgenhoitaja lausuu thoraxkuvat pilotti"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because Pirha's pathway pages show the usual GP referral, then specialist review, then CT within about a week, with no same-day reporting step. The 31-day saving should be capped at the days Pirkanmaa's referral and CT steps actually take.",
+ "verdict_en": "No public sign that it is running in Pirkanmaa. Recent evidence supports the size of effect we assume. A Thorax 2023 randomised trial reports median X-ray to diagnosis of 32 days with immediate reporting vs 63 days with standard reporting.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "same_day_cxr_ct",
+ "intervention_name_en": "Same-day chest X-ray report with immediate CT",
+ "area_name_en": "Pirkanmaa wellbeing services county"
+}

@@ -1,0 +1,588 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in East Uusimaa wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Fitness assessment and prehabilitation before deciding against curative treatment. Before a stage I-III patient is judged too frail, they get an exercise test, a geriatric assessment if over 75, and four weeks of supervised exercise, breathing training and help to stop smoking. Then the decision is made again.",
+ "area_id": "01",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A 2022 Cochrane review (10 randomised trials, 636 patients) found that exercise before surgery cut lung complications after surgery (risk ratio 0.45) and shortened the hospital stay by about 2.2 days.",
+ "not_supported_en": "No page I read measures how many more patients receive curative-intent treatment after prehabilitation, so the assumed 0.5-point gain is not shown.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "The pages I read show no public sign of this measure in East Uusimaa or HUS. HUS's lung cancer care-pathway page says surgery is the first choice unless physical condition, other illnesses or lung function prevent it. HUS's Cancer Centre offers physiotherapy only when a doctor refers the patient, and no page describes a structured programme to build fitness before a treatment decision. For effect, a 2022 Cochrane review found that exercise before surgery cut lung complications after surgery (risk ratio 0.45). It did not measure any gain in the share of patients treated with curative intent.",
+ "unanswered_en": "I found no HUS, Porvoo Hospital or East Uusimaa page on exercise testing, geriatric assessment or prehabilitation before fitness decisions in lung cancer, and no study measuring a gain in curative-treatment share.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Leikkaus on ensisijainen paikallisten ja ei-pienisoluisten keuhkosyöpien hoito, ellei fyysinen kunto, muut sairaudet tai keuhkojen toimintakyky ole esteenä.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/tukea-syopaan-sairastuneelle-ja-syovasta-kuntoutuvalle",
+   "title": "Tukea syöpään sairastuneelle ja syövästä kuntoutuvalle",
+   "quote": "Lääkäri arvioi fysioterapian tarpeesi ja tekee tarvittaessa lähetteen fysioterapiaan.",
+   "about": "context",
+   "published": "2026-10-02T01:42:13+03:00",
+   "fetched_at": "2026-11-14T01:09:44+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "quote": "Preoperative exercise training results in a large reduction in the risk of developing a postoperative pulmonary complication compared to no preoperative exercise training (risk ratio (RR) 0.45, 95% CI 0.33 to 0.61",
+   "about": "effect",
+   "published": "2022-09-28",
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2376,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+     "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut - Potilaan Lääkärilehti"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Itä-Uudenmaan hyvinvointialue prehabilitaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: itauusimaa.fi, stm.fi, ajanvaraus.iuhva.mediatri.fi, suomi.fi",
+   "ms": 3057,
+   "results": [
+    {
+     "url": "https://itauusimaa.fi/",
+     "title": "Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://stm.fi/hyvinvointialueet-kartalla",
+     "title": "Hyvinvointialueet kartalla - Sosiaali- ja terveysministeriö"
+    },
+    {
+     "url": "https://ajanvaraus.iuhva.mediatri.fi/",
+     "title": "Sähköinen ajanvaraus Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/ita-uudenmaan-hyvinvointialue/8b33d570-43ad-490b-9923-49ac56a45235",
+     "title": "Itä-Uudenmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://en.itauusimaa.fi/home-rehabilitation/",
+     "title": "Home rehabilitation - Itä-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://itauusimaa.fi/wp-content/uploads/2024/02/Ita-Uudenmaan-hyvinvointialueen-alueellinen-hyvinvointikertomus-ja-suunnitelma-2023-2025.pdf",
+     "title": "Itä-Uudenmaan hyvinvointialueen alueellinen hyvinvointikertomus ja"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS esikuntoutus syöpäleikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi",
+   "ms": 1864,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+     "title": "Syövän hoitoonpääsy | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/rintasyopaleikkaus-ja-muut-rintojen-leikkaukset",
+     "title": "Rintasyöpäleikkaus ja muut rintojen leikkaukset | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/perasuolisyovan-hoitopolku/paikallisen-perasuolisyovan-hoito",
+     "title": "Paikallisen peräsuolisyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+     "title": "Syöpäkeskus | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Porvoon sairaala leikkausta edeltävä kuntoutus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, pihlajalinna.fi, fysioterapiaoiva.fi",
+   "ms": 1071,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/porvoon-sairaala/anestesia-ja-leikkausyksikko-porvoon-sairaala",
+     "title": "Anestesia- ja leikkausyksikkö, Porvoon sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/porvoon-sairaala",
+     "title": "Porvoon sairaala | HUS"
+    },
+    {
+     "url": "https://www.pihlajalinna.fi/palvelut/fysioterapia/leikkausta-edeltava-kuntoutus",
+     "title": "Leikkausta edeltävä kuntoutus"
+    },
+    {
+     "url": "https://www.fysioterapiaoiva.fi/palvelut/kuntoutus/",
+     "title": "Leikkausta edeltä fysioterapia. Meiltä toimenpiteet ennen ja..."
+    },
+    {
+     "url": "https://keskustelu.suomi24.fi/t/9416749/lonkkaleikkaus-porvoon-sairaalassa",
+     "title": "Lonkkaleikkaus Porvoon sairaalassa? - - Suomi24 Keskustelut"
+    },
+    {
+     "url": "https://itauusimaa.fi/terveys/kuntoutus-ja-apuvalineet/fysioterapia/",
+     "title": "Fysioterapia - Itä-Uudenmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "2 reads: B: HUS pathway prehab; A effect",
+   "ms": 3852
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "kuntoutus fysioterapia toimintakyky leikkauskelpoisuus tupakointi",
+   "why": "B: HUS pathway prehab",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 7 of 11 passages kept · from cache",
+   "ms": 1,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/36170564",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/36170564",
+   "focus": "pulmonary complications risk ratio",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Preoperative exercise training for people with non-small cell lung can\" · 4 109 chars · from cache",
+   "ms": 3,
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/36170564",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "1 search: B: HUS prehab programme",
+   "ms": 2683
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS prehabilitaatio keuhkoleikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS prehab programme",
+   "status": "done",
+   "t_s": 9.6,
+   "result_en": "6 results: hus.fi, terveyskyla.fi",
+   "ms": 2329,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+     "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia | HUS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/keuhkotalo/tutkimus-ja-hoito/keuhkosairauksien-hoito/keuhkon-ja-keuhkopussin-sairauksien-leikkaushoito/tietoa-keuhkojen-leikkaushoidosta",
+     "title": "Tietoa keuhkojen leikkaushoidosta | Keuhkotalo | Terveyskylä.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/lihavuuskirurgia",
+     "title": "Lihavuuskirurgia | HUS"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/keuhkoleikkauspotilaan-fysioterapia/",
+     "title": "Keuhkoleikkauspotilaan fysioterapia - Sydänsairaala"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.9,
+   "result_en": "1 read: B: HUS thoracic surgery prehab",
+   "ms": 2943
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "focus": "fysioterapia ennen leikkausta kuntoutus liikunta tupakointi",
+   "why": "B: HUS thoracic surgery prehab",
+   "status": "done",
+   "t_s": 14.9,
+   "result_en": "\"Keuhko-, välikarsina- ja ruokatorvikirurgia\" · 4 098 chars · from cache",
+   "ms": 0,
+   "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia",
+   "chars": 4098,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "published": "2026-10-02T01:31:21+03:00",
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.9,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Itä-Uudenmaan hyvinvointialue / Porvoon sairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decis",
+   "ms": 10240
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.1,
+   "result_en": "1 search: B: prehab at HUS",
+   "ms": 2229
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä esikuntoutus fysioterapeutti ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: prehab at HUS",
+   "status": "done",
+   "t_s": 27.4,
+   "result_en": "6 results: hus.fi, pirha.fi",
+   "ms": 1827,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/fysioterapeutit-syopakeskus",
+     "title": "Fysioterapeutit, Syöpäkeskus | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://hus.fi/potilaalle/hoidot-ja-tutkimukset/tukea-syopahoidoissa",
+     "title": "Tukea syöpään sairastuneelle ja syövästä kuntoutuvalle | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tekonivelleikkaus",
+     "title": "Tekonivelleikkaus | HUS"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.2,
+   "result_en": "2 reads: B: HUS cancer physio prehab; B: HUS support services prehab",
+   "ms": 4025
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/fysioterapeutit-syopakeskus",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/fysioterapeutit-syopakeskus",
+   "focus": "ennen leikkausta esikuntoutus keuhkosyöpä liikunta",
+   "why": "B: HUS cancer physio prehab",
+   "status": "done",
+   "t_s": 33.2,
+   "result_en": "\"Fysioterapeutit, Syöpäkeskus\" · 1 044 chars",
+   "ms": 2854,
+   "title": "Fysioterapeutit, Syöpäkeskus",
+   "chars": 1044,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/fysioterapeutit-syopakeskus",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://hus.fi/potilaalle/hoidot-ja-tutkimukset/tukea-syopahoidoissa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/tukea-syopaan-sairastuneelle-ja-syovasta-kuntoutuvalle",
+   "focus": "fysioterapeutti ennen leikkausta esikuntoutus liikunta",
+   "why": "B: HUS support services prehab",
+   "status": "done",
+   "t_s": 33.2,
+   "result_en": "\"Tukea syöpään sairastuneelle ja syövästä kuntoutuvalle\" · 11 474 chars · 7 of 19 passages kept",
+   "ms": 9061,
+   "title": "Tukea syöpään sairastuneelle ja syövästä kuntoutuvalle",
+   "chars": 11474,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/tukea-syopaan-sairastuneelle-ja-syovasta-kuntoutuvalle",
+   "published": "2026-10-02T01:42:13+03:00",
+   "js_render": false
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 42.3,
+   "result_en": "writes the answer",
+   "ms": 9649
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+   "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia",
+   "chars": 4098,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:58:12+00:00",
+   "published": "2026-10-02T01:31:21+03:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/fysioterapeutit-syopakeskus",
+   "title": "Fysioterapeutit, Syöpäkeskus",
+   "chars": 1044,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:09:38+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/tukea-syopaan-sairastuneelle-ja-syovasta-kuntoutuvalle",
+   "title": "Tukea syöpään sairastuneelle ja syövästä kuntoutuvalle",
+   "chars": 11474,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:09:44+00:00",
+   "published": "2026-10-02T01:42:13+03:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:09:54+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: HUS's pages say fitness can rule out lung cancer surgery and that doctors refer cancer patients to physiotherapy when needed, but none describes an exercise test, a geriatric assessment or a four-week prehabilitation programme followed by a second decision.",
+ "seconds": 51.9,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Itä-Uudenmaan hyvinvointialue prehabilitaatio\"; \"HUS esikuntoutus syöpäleikkaus\"; \"Porvoon sairaala leikkausta edeltävä kuntoutus\", ...) and read 5 pages on hus.fi, europepmc.org.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Itä-Uudenmaan hyvinvointialue prehabilitaatio",
+  "HUS esikuntoutus syöpäleikkaus",
+  "Porvoon sairaala leikkausta edeltävä kuntoutus",
+  "HUS prehabilitaatio keuhkoleikkaus",
+  "HUS keuhkosyöpä esikuntoutus fysioterapeutti ennen leikkausta"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: HUS's pages say fitness can rule out lung cancer surgery and that doctors refer cancer patients to physiotherapy when needed, but none describes an exercise test, a geriatric assessment or a four-week prehabilitation programme followed by a second decision.",
+ "verdict_en": "No public sign that it is running in East Uusimaa. Evidence supports that it works, but not the size of effect we assume. Supported: A 2022 Cochrane review (10 randomised trials, 636 patients) found that exercise before surgery cut lung complications after surgery (risk ratio 0.45) and shortened the hospital stay by about 2.2 days. Not supported: No page I read measures how many more patients receive curative-intent treatment after prehabilitation, so the assumed 0.5-point gain is not shown.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "prehab_fitness_assessment",
+ "intervention_name_en": "Fitness assessment and prehabilitation before deciding against curative treatment",
+ "area_name_en": "East Uusimaa wellbeing services county"
+}

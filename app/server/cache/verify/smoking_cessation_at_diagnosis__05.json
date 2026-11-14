@@ -1,0 +1,384 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Smoking cessation started at the first specialist visit. Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "Quitting after diagnosis was linked to 33% lower all-cause mortality (hazard ratio 0.67, range 0.53–0.85) in early-stage non-small-cell lung cancer (Annals of Internal Medicine, 2021).",
+ "not_supported_en": "The study does not show the effect of offering treatment, only of actually quitting, and it reports no quit rate after an offer.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Apua tupakoinnin lopettamiseen saat Tyksin keuhkosairauksien poliklinikan tupakastavieroitushoitajalta, puh. 010 853 3324.",
+ "in_use_source": {
+  "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+  "title": "Tupakoinnin lopettaminen",
+  "published": null,
+  "fetched_at": "2026-11-14T01:30:07+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows that every smoker with suspected lung cancer is routinely offered cessation medicine and counselling at the first visit.",
+ "summary_en": "Tyks's quit-smoking page says patients can get help from a cessation nurse at the lung clinic, which is where all lung cancer diagnosis in the area is done; no page says every smoker with suspected lung cancer is given medicine and counselling at the first visit. A Moscow cohort study of 517 smokers with early-stage non-small-cell lung cancer (Annals of Internal Medicine, 2021) found 33% lower all-cause mortality in those who quit after diagnosis (hazard ratio 0.67, range 0.53–0.85). That compares quitters with people who kept smoking, not people offered treatment with people who were not, so the effect across everyone reached will be smaller.",
+ "unanswered_en": "No page was found showing whether Tyks refers smokers with suspected lung cancer to its cessation nurse routinely at the first visit.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+   "title": "Tupakoinnin lopettaminen",
+   "quote": "Apua tupakoinnin lopettamiseen saat Tyksin keuhkosairauksien poliklinikan tupakastavieroitushoitajalta, puh. 010 853 3324.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T01:30:07+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Keuhkosyövän diagnostiikka on keskitetty Tyksin keuhkosairauksien poliklinikalle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "quote": "After adjustments, smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85])",
+   "about": "effect",
+   "published": "2021-07-27",
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, hyvaks.fi",
+   "ms": 1331,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha tupakasta vieroitus keuhkosyöpäpotilas",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, kaypahoito.fi, duodecimlehti.fi",
+   "ms": 1631,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/palvelut/hyvinvoinnin-ja-terveyden-edistamisen-palvelut/apua-riippuvuusongelmiin/tupakka-ja-nikotiiniriippuvuus",
+     "title": "Tupakka- ja nikotiiniriippuvuus | Varha"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/khp00042",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10283",
+     "title": "Tupakointi ja syöpä - mitä hyötyä lopettamisesta?"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+     "title": "Tupakoinnin lopettaminen - TYKS"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palvelut/palvelupolut/tukea-nikotiinittomuuteen",
+     "title": "Tukea nikotiinittomuuteen | Varha"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks tupakkavieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: terveyskirjasto.fi, tyks.fi, suomenash.fi, epressi.com",
+   "ms": 1085,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+     "title": "Tupakoinnin lopettaminen"
+    },
+    {
+     "url": "https://suomenash.fi/tiedotteet/2020/tyks-tehostaa-savuttomuuttaan/",
+     "title": "Tyks tehostaa savuttomuuttaan - Suomen ASH ry | Suomen ASH ry"
+    },
+    {
+     "url": "https://www.epressi.com/tiedotteet/terveys/tyks-tehostaa-savuttomuuttaan.html",
+     "title": "Tyks tehostaa savuttomuuttaan - ePressi"
+    },
+    {
+     "url": "https://www.tyks.fi/ajankohtaista/tyks-psykiatrian-potilaat-saavat-apua-tupakoinnin-lopettamiseen",
+     "title": "Tyks Psykiatrian potilaat saavat apua tupakoinnin lopettamiseen | TYKS"
+    },
+    {
+     "url": "https://suomenash.fi/uutiset/2020/hyvia-tuloksia-tyksin-tupakasta-vieroitusryhmassa/",
+     "title": "Hyviä tuloksia Tyksin tupakasta vieroitusryhmässä - Suomen ASH ry | Suomen ASH ry"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen savuton leikkaus keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, sydansairaala.fi, terveyskyla.fi, keuhkosyopa.fi",
+   "ms": 1235,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/leikkaushoito/",
+     "title": "Leikkaushoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/xmedia/duo/duo12032.pdf",
+     "title": "69 Eija-Riitta Salomaa ja Maija Walta | ALKUPERÄISTUTKIMUS"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 1.6,
+   "result_en": "3 reads: B: pathway includes cessation?; B: cessation nurse at lung clinic; A: effect size",
+   "ms": 5203
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "tupakointi lopettaminen vieroitus",
+   "why": "B: pathway includes cessation?",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+   "focus": "tupakastavieroitushoitaja keuhkosairauksien poliklinikka",
+   "why": "B: cessation nurse at lung clinic",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"Tupakoinnin lopettaminen\" · 782 chars · from cache",
+   "ms": 9,
+   "title": "Tupakoinnin lopettaminen",
+   "chars": 782,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://doi.org/10.7326/M21-0252",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "focus": "hazard ratio mortality quit",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progr\" · 2 162 chars · from cache",
+   "ms": 11,
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://doi.org/10.7326/M21-0252",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "writes the answer",
+   "ms": 17438
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tupakoinnin-lopettaminen",
+   "title": "Tupakoinnin lopettaminen",
+   "chars": 782,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:30:07+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "published": "2021-07-27",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:43:22+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to a standing order that offers cessation medicine and counselling to every smoker at the first lung-clinic visit, because Tyks already has a cessation nurse at the lung clinic but no page shows that every suspected lung cancer patient is reached at the first visit.",
+ "seconds": 24.3,
+ "searched_en": "Searched 4 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha tupakasta vieroitus keuhkosyöpäpotilas\"; \"Tyks tupakkavieroitus\"; \"Varsinais-Suomen savuton leikkaus keuhkosyöpä\") and read 3 pages on tyks.fi, doi.org.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha tupakasta vieroitus keuhkosyöpäpotilas",
+  "Tyks tupakkavieroitus",
+  "Varsinais-Suomen savuton leikkaus keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to a standing order that offers cessation medicine and counselling to every smoker at the first lung-clinic visit, because Tyks already has a cessation nurse at the lung clinic but no page shows that every suspected lung cancer patient is reached at the first visit.",
+ "verdict_en": "Partly in place in the Tyks university hospital area, which treats Southwest Finland's patients. Missing: No page shows that every smoker with suspected lung cancer is routinely offered cessation medicine and counselling at the first visit. Evidence supports that it works, but not the size of effect we assume. Supported: Quitting after diagnosis was linked to 33% lower all-cause mortality (hazard ratio 0.67, range 0.53–0.85) in early-stage non-small-cell lung cancer (Annals of Internal Medicine, 2021). Not supported: The study does not show the effect of offering treatment, only of actually quitting, and it reports no quit rate after an offer.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "smoking_cessation_at_diagnosis",
+ "intervention_name_en": "Smoking cessation started at the first specialist visit",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

@@ -1,0 +1,493 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how much?\nMeasure: Nurse navigator for every suspected lung cancer. A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+ "area_id": "06",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A 2026 scoping review of 13 studies found that patient navigation was linked every time to a faster start of first treatment, but the abstract gives no pooled difference in days and is not specific to lung cancer.",
+ "supported_en": "A 2026 scoping review of 13 studies in Japan Journal of Nursing Science found that navigation went with a faster start of first treatment.",
+ "not_supported_en": "The review abstract does not show the 15% cut in waiting time that we assume, or any effect measured in lung cancer alone.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found of a named nurse navigator for suspected lung cancer at Satasairaala or Tyks; Tyks holds a weekly team meeting (MDT) that Satasairaala doctors join remotely.",
+ "missing_en": "",
+ "summary_en": "The lung cancer pages of Satakunta wellbeing services county and Tyks show no public sign of a named nurse who books and chases tests for suspected lung cancer. Tyks runs a weekly team meeting (MDT) that Satasairaala doctors join remotely. A 2026 scoping review of 13 studies found that navigation was linked to a faster start of treatment but gives no pooled number, so our 15% assumption is not confirmed.",
+ "unanswered_en": "No page was found that names a lung cancer nurse coordinator in Satakunta or Tyks, and no source gives the effect in days for lung cancer.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Satasairaalan lääkärit osallistuvat kokouksiin etäyhteydellä.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "title": "Keuhkosyöpä",
+   "quote": "Keuhkosyövän hoidon suunnittelevat keuhkolääkäri, sädehoitolääkäri ja keuhkokirurgi.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:03:51+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "quote": "CPN interventions were consistently associated with accelerated initiation of first treatment among patients with cancer.",
+   "about": "effect",
+   "published": "2026-07-01",
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, tyks.fi",
+   "ms": 2474,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue syöpähoitaja koordinaattori",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 2279,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/tietoa-meista/organisaatio/",
+     "title": "Hallinto ja organisaatio - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-satakunnan-hyvinvointialue/dce54c87-91b8-4372-b096-530a73e1f539",
+     "title": "Syöpätautien poliklinikka - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/tietoa-meista/hyvinvoinnin-ja-terveyden-edistaminen/",
+     "title": "Hyvinvoinnin ja terveyden edistäminen - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://sata.cloudnc.fi/fi-FI/Viranhaltijat/Koordinaattori",
+     "title": "Viranhaltijapäätökset - Koordinaattori"
+    },
+    {
+     "url": "https://satainno.fi/yhteystiedot/",
+     "title": "Arkistot: Yhteystiedot - Satainno"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks hoitokoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1417,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhko-ja-reumasairauksien-osasto",
+     "title": "Keuhko- ja reumasairauksien osasto | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala keuhkosyöpähoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, satakunnanhyvinvointialue.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi",
+   "ms": 1944,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/",
+     "title": "Keuhkosairaudet, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-poliklinikka-satasairaala-puhelinasiointi-satakunnan-hyvinvointialue/75637e0a-6d06-4f18-b141-584423baa086",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala, puhelinasiointi"
+    },
+    {
+     "url": "https://www.satasairaala.fi/keuhkosyopa",
+     "title": "Keuhkosyöpä | Satasairaala"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.5,
+   "result_en": "3 reads: B: nurse navigator at Tyks; B: Satasairaala nurse; A: effect size",
+   "ms": 4822
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "hoitaja yhteyshenkilö koordinaattori moniammatillinen kokous",
+   "why": "B: nurse navigator at Tyks",
+   "status": "done",
+   "t_s": 7.3,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.satasairaala.fi/keuhkosyopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.satasairaala.fi/keuhkosyopa",
+   "focus": "hoitaja yhteyshenkilö koordinaattori",
+   "why": "B: Satasairaala nurse",
+   "status": "done",
+   "t_s": 7.3,
+   "result_en": "no answer in 20 s; skipped",
+   "ms": 20000,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "focus": "navigation time to treatment days reduced",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.3,
+   "result_en": "\"Cancer patient navigation interventions improving timeliness from diag\" · 1 510 chars · from cache",
+   "ms": 9,
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 27.3,
+   "result_en": "1 search: B: navigator nurse in Satakunta",
+   "ms": 3059
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala syöpäkoordinaattori keuhkosyöpä hoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: navigator nurse in Satakunta",
+   "status": "done",
+   "t_s": 30.4,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 2749,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/",
+     "title": "Keuhkosairaudet, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+     "title": "Keuhkosyöpä - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 33.1,
+   "result_en": "2 reads: B: Satakunta nurse navigator",
+   "ms": 3977
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "focus": "hoitaja yhteyshenkilö koordinaattori",
+   "why": "B: Satakunta nurse navigator",
+   "status": "done",
+   "t_s": 37.1,
+   "result_en": "\"Keuhkosyöpä\" · 1 749 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosyöpä",
+   "chars": 1749,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "focus": "keuhkosyöpä hoitaja yhteyshenkilö",
+   "why": "B: Satakunta nurse navigator",
+   "status": "done",
+   "t_s": 37.1,
+   "result_en": "\"Keuhkosairauksien poliklinikka hyvinvointialueella\" · 2 499 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosairauksien poliklinikka hyvinvointialueella",
+   "chars": 2499,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 37.1,
+   "result_en": "writes the answer",
+   "ms": 10558
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "title": "Keuhkosairauksien poliklinikka hyvinvointialueella",
+   "chars": 2499,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "title": "Keuhkosyöpä",
+   "chars": 1749,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:03:51+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:45:34+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: neither Satakunta wellbeing services county nor Tyks shows a nurse navigator on its public pages, but the size of the effect is only our assumption.",
+ "seconds": 47.7,
+ "searched_en": "Searched 5 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue syöpähoitaja koordinaattori\"; \"Tyks hoitokoordinaattori keuhkosyöpä\"; \"Satasairaala keuhkosyöpähoitaja\", ...) and read 4 pages on tyks.fi, pmc.ncbi.nlm.nih.gov, satakunnanhyvinvointialue.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue syöpähoitaja koordinaattori",
+  "Tyks hoitokoordinaattori keuhkosyöpä",
+  "Satasairaala keuhkosyöpähoitaja",
+  "Satasairaala syöpäkoordinaattori keuhkosyöpä hoitaja"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: neither Satakunta wellbeing services county nor Tyks shows a nurse navigator on its public pages, but the size of the effect is only our assumption.",
+ "verdict_en": "No public sign that it is running in Satakunta. Evidence supports that it works, but not the size of effect we assume. Supported: A 2026 scoping review of 13 studies in Japan Journal of Nursing Science found that navigation went with a faster start of first treatment. Not supported: The review abstract does not show the 15% cut in waiting time that we assume, or any effect measured in lung cancer alone.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "nurse_navigator",
+ "intervention_name_en": "Nurse navigator for every suspected lung cancer",
+ "area_name_en": "Satakunta wellbeing services county"
+}

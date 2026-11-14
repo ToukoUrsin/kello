@@ -1,0 +1,660 @@
+{
+ "area_id": "11",
+ "area_name_en": "South Karelia wellbeing services county",
+ "area_name_fi": "Etelä-Karjalan hyvinvointialue",
+ "question": "What is South Karelia wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-11-04",
+   "what_en": "Ekhva's pulmonary outpatient clinic has a specialist nurse for smoking cessation who runs her own appointments.",
+   "what_fi": "Ekhvan keuhkopoliklinikalla toimii tupakoinnin vieroitusohjaaja asiantuntijasairaanhoitajana omine vastaanottoineen.",
+   "quote": "Poliklinikalla toimii asiantuntijasairaanhoitajina unihoitaja, hengityshoitaja sekä tupakoinnin vieroitusohjaaja. Heillä on myös itsenäisiä vastaanottoja.",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+   "title": "Keuhkopoliklinikka C3 - Etelä-Karjalan hyvinvointialue",
+   "relates_to": "smoking_cessation_at_diagnosis",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:19:39+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-10-12",
+   "what_en": "Because the new sote centre is being built, Ekhva changed the route to the oncology clinic and radiotherapy at South Karelia Central Hospital from 12 Oct 2026.",
+   "what_fi": "Uuden sote-keskuksen rakennustöiden vuoksi Ekhva muutti syöpäpoliklinikan ja sädehoidon kulun keskussairaalassa 12.10.2026 alkaen.",
+   "quote": "Kulku Etelä-Karjalan keskussairaalan syöpäpoliklinikalle ja sädehoitoon muuttuu maanantaista 12.10.2026 alkaen uuden sote-keskuksen rakennustöiden vuoksi.",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+   "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:40+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-10-12",
+   "what_en": "The central hospital runs its own radiotherapy unit, and CT, MRI or PET imaging can be used to plan treatment.",
+   "what_fi": "Keskussairaalassa on oma sädehoitoyksikkö, ja suunnittelussa voidaan käyttää TT-, magneetti- tai PET-kuvausta.",
+   "quote": "Sädehoidon suunnittelussa voidaan tietokonetomografiatutkimuksen lisäksi käyttää magneettikuvausta tai positroniemissiotomografiaa eli PET- tutkimusta",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+   "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:40+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-07-17",
+   "what_en": "The share of people in South Karelia waiting more than 180 days for specialist care fell from 6.9% to 2.6% during 2025. This covers all specialties, not lung cancer specifically.",
+   "what_fi": "Yli 180 vrk erikoissairaanhoitoa odottaneiden osuus laski 6,9 %:sta 2,6 %:iin vuonna 2025 (kaikki erikoisalat).",
+   "quote": "Etelä-Karjalassa yli 180 vuorokautta odottaneiden osuus laski 6,9 prosentista (tammikuu 2025) 2,6 prosenttiin (joulukuu 2025).",
+   "url": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+   "title": "THL:n tilastot: Hoitoon pääsy parani Ekhvalla vuonna 2025 - Etelä-Karjalan hyvinvointialue",
+   "relates_to": "time_to_treatment",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:55+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-07-17",
+   "what_en": "Ekhva says 94% of primary care patients aged over 23 get their first care contact within 14 days.",
+   "what_fi": "Ekhvan mukaan 94 % yli 23-vuotiaista pääsee perusterveydenhuollon ensimmäiseen hoitotapahtumaan 14 vrk:ssa.",
+   "quote": "Peräti 94 prosenttia potilaista pääsee ensimmäiseen hoitotapahtumaan jo 14 vuorokauden kuluessa, kertoo Häyhä.",
+   "url": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+   "title": "THL:n tilastot: Hoitoon pääsy parani Ekhvalla vuonna 2025 - Etelä-Karjalan hyvinvointialue",
+   "relates_to": "gp_capacity_econsult",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:55+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-06-30",
+   "what_en": "Ekhva has set aside about 90 million euros for building work, renovation and equipment at the central hospital site. The new sote centre is due in 2030; the article does not mention cancer care specifically.",
+   "what_fi": "Ekhva on varannut noin 90 miljoonaa euroa keskussairaala-alueen rakentamiseen, korjauksiin ja välineisiin; uusi sote-keskus valmistuu 2030 (ei mainita syöpähoitoa erikseen).",
+   "quote": "Yhteensä hyvinvointialue on varannut rakentamiseen, korjaustöihin ja esimerkiksi välineostoihin noin 90 miljoonaa euroa.",
+   "url": "https://yle.fi/a/74-20233845?origin=rss",
+   "title": "Etelä-Karjalan keskussairaalan 90 miljoonaa euroa maksava laajennus alkaa syksyllä – näin työt etenevät",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:22+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Ekhva treats cancer locally at Etelä-Karjalan keskussairaala, which has its own radiotherapy unit and a smoking-cessation nurse at the pulmonary clinic. A 90 million euro expansion of the hospital site started in autumn 2026 and is due in 2030, with no cancer-specific content found. Waiting-time figures are published only for all specialties combined; no lung-cancer pathway, HUS MDT arrangement, screening pilot or lung-cancer decision was found.",
+ "not_found_en": "I found nothing on a lung-cancer-specific pathway, lung cancer waiting times, EBUS or bronchoscopy capacity, a video MDT with HUS, screening, or a regional council decision or project on lung cancer.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 4127
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ekhva keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.1,
+   "result_en": "6 results: terveyskirjasto.fi, docrates.mehilainen.fi, kaikkisyovasta.fi, syopapotilaat.fi",
+   "ms": 3096,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjalan keskussairaala keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.1,
+   "result_en": "6 results: ekhva.fi, suomi.fi",
+   "ms": 1817,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+     "title": "Keuhkopoliklinikka C3 - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopahoitoyksikko-etela-karjalan-hyvinvointialue/daa7a6d3-4b84-44be-82c3-b37a4364c530",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+     "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/etela-karjalan-keskussairaala-etela-karjalan-hyvinvointialue/36d55abb-26c6-4da7-872c-72fed2d8fe21",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjalan hyvinvointialue aluehallitus syöpähoito sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.1,
+   "result_en": "6 results: ekhva.fi, suomi.fi",
+   "ms": 2033,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/hyvinvointialue/hyvinvointialueen-paatoksenteko/aluehallitus/",
+     "title": "Aluehallitus - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopahoitoyksikko-etela-karjalan-hyvinvointialue/daa7a6d3-4b84-44be-82c3-b37a4364c530",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/syopahoitoyksikko-etela-karjalan-hyvinvointialue/b18aa5bb-9b27-4129-bea4-8022c630414c",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/etela-karjalan-hyvinvointialue/3e8356bd-377f-4cad-97b1-a027bd4bbf25",
+     "title": "Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/",
+     "title": "Toimipaikat - Etelä-Karjalan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lappeenranta keskussairaala syöpä 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.1,
+   "result_en": "6 results: ekhva.fi, lapha.fi, saimaansyopayhdistys.fi",
+   "ms": 2231,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://saimaansyopayhdistys.fi/tapahtuma/ensitietopaiva-syopaan-sairastuneille-ja-laheisille-lappeenrannassa/",
+     "title": "Ensitietopäivä syöpään sairastuneille ja läheisille ..."
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+     "title": "Osasto K6, syöpäsairaudet ja palliatiivinen keskus"
+    },
+    {
+     "url": "https://saimaansyopayhdistys.fi/wp-content/uploads/2025/12/Ensitietopaiva-13.10.2026-Ekhva-Saimaan-Syopayhdistys.pdf",
+     "title": "ENSITIETOPÄIVÄ SYÖPÄÄN SAIRASTUNEILLE JA LÄHEISILLE"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.2,
+   "result_en": "3 reads: units, radiotherapy; diagnostics; ward",
+   "ms": 4905
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+   "focus": "sädehoito keuhkosyöpä 12.10.2026 hoitaja",
+   "why": "units, radiotherapy",
+   "status": "done",
+   "t_s": 12.1,
+   "result_en": "\"Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue\" · 6 797 chars · 8 of 13 passages kept",
+   "ms": 4791,
+   "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue",
+   "chars": 6797,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+   "published": "2026-10-12T10:49:49+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+   "focus": "keuhkosyöpä bronkoskopia tutkimukset",
+   "why": "diagnostics",
+   "status": "done",
+   "t_s": 12.1,
+   "result_en": "\"Keuhkopoliklinikka C3 - Etelä-Karjalan hyvinvointialue\" · 5 037 chars · 7 of 11 passages kept · from cache",
+   "ms": 7,
+   "title": "Keuhkopoliklinikka C3 - Etelä-Karjalan hyvinvointialue",
+   "chars": 5037,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+   "published": "2026-11-04T07:56:23+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "focus": "syöpä palliatiivinen keskus",
+   "why": "ward",
+   "status": "done",
+   "t_s": 12.1,
+   "result_en": "\"Osasto K6 - Etelä-Karjalan hyvinvointialue\" · 1 676 chars",
+   "ms": 1418,
+   "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue",
+   "chars": 1676,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "published": "2026-08-03T07:53:32+00:00",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.9,
+   "result_en": "2 searches: waiting time figures; university area surgery centralisation",
+   "ms": 3799
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Ekhva hoitoonpääsy erikoissairaanhoito odotusajat syöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "waiting time figures",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "6 results: ekhva.fi, stm.fi, hus.fi",
+   "ms": 2415,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/asiakkuus-ja-osallisuus/asiakkaan-ja-potilaan-oikeudet/hoitoon-paasy/",
+     "title": "Hoitoon pääsy - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/asiakkuus-ja-osallisuus/asiakkaan-ja-potilaan-oikeudet/hoitoon-paasy/jonotiedot/",
+     "title": "Jonotiedot - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://stm.fi/hoitotakuu",
+     "title": "Hoitoon pääsy (hoitotakuu) - Sosiaali- ja terveysministeriö"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana/hoitoonpaasy-erikoissairaanhoidossa",
+     "title": "Hoitoonpääsy erikoissairaanhoidossa | HUS"
+    },
+    {
+     "url": "https://www.hyvaep.fi/tietoa-ja-ohjeita/hoitoonpaasy-ja-odotusajat/",
+     "title": "Hoitoonpääsy ja odotusajat - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+     "title": "THL:n tilastot: Hoitoon pääsy parani Ekhvalla vuonna 2025 - Etelä-Karjalan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä hoitoketju Etelä-Karjala leikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "university area surgery centralisation",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "6 results: hus.fi, terveyskyla.fi",
+   "ms": 1662,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio/leikkaussalit-ja-tehohoito",
+     "title": "Leikkaussalit ja tehohoito | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/anestesia-ja-leikkausosasto-e2/",
+     "title": "Anestesia- ja leikkausosasto E2 - Etelä-Karjalan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 23.1,
+   "result_en": "2 reads: waiting figures; university pathway",
+   "ms": 6091
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+   "focus": "erikoissairaanhoito odotti yli 180 vuorokautta",
+   "why": "waiting figures",
+   "status": "done",
+   "t_s": 29.2,
+   "result_en": "\"THL:n tilastot: Hoitoon pääsy parani Ekhvalla vuonna 2025 - Etelä-Karj\" · 4 448 chars",
+   "ms": 3336,
+   "title": "THL:n tilastot: Hoitoon pääsy parani Ekhvalla vuonna 2025 - Etelä-Karjalan hyvinvointialue",
+   "chars": 4448,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+   "published": "2026-07-17T07:41:28+00:00",
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous leikkaus Etelä-Karjala keuhkosyöpähoitaja",
+   "why": "university pathway",
+   "status": "done",
+   "t_s": 29.2,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 32.6,
+   "result_en": "draft answer, still open: all 6 findings come from one site (ekhva.fi), so they describe the service as it is, not what is changing. Search for a decision, a project, an investment, a waiting-time figure or dated local news (aluehallitus, hanke, investointi, uutinen, this year) and read two or three",
+   "ms": 17460
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 50.0,
+   "result_en": "1 search: decision/investment news",
+   "ms": 2682
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjala syöpähoito investointi sädehoitolaite uutinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decision/investment news",
+   "status": "done",
+   "t_s": 52.7,
+   "result_en": "6 results: ekhva.fi, suomi.fi, yle.fi",
+   "ms": 1689,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopahoitoyksikko-etela-karjalan-hyvinvointialue/daa7a6d3-4b84-44be-82c3-b37a4364c530",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://yle.fi/a/3-5098879",
+     "title": "Syöpähoidot tehostuvat Etelä-Karjalassa"
+    },
+    {
+     "url": "https://www.ekhva.fi/2026/10/etela-karjalan-keskussairaalan-syopapoliklinikalle-ja-sadehoitoon-johtava-ovi-6-suljetaan-12-10-alkaen-rakennustoiden-vuoksi/",
+     "title": "Etelä-Karjalan keskussairaalan syöpäpoliklinikalle ja sädehoitoon johtava ovi 6 suljetaan 12.10. alkaen rakennustöiden vuoksi - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20233845?origin=rss",
+     "title": "Etelä-Karjalan keskussairaalan 90 miljoonaa euroa maksava laajennus alkaa syksyllä – näin työt etenevät | Etelä-Karjala | Yle"
+    },
+    {
+     "url": "https://paijatha.fi/tiedote/uusi-sadehoitolaite-vahvistaa-syovanhoitoa/",
+     "title": "Uusi sädehoitolaite vahvistaa syövänhoitoa - Päijät-Hämeen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 19,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 54.4,
+   "result_en": "1 read: investment news",
+   "ms": 2801
+  },
+  {
+   "step": 20,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://yle.fi/a/74-20233845?origin=rss",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://yle.fi/a/74-20233845?origin=rss",
+   "focus": "90 miljoonaa sote-keskus valmistuu syöpä",
+   "why": "investment news",
+   "status": "done",
+   "t_s": 57.2,
+   "result_en": "\"Etelä-Karjalan keskussairaalan 90 miljoonaa euroa maksava laajennus al\" · 3 674 chars",
+   "ms": 1973,
+   "title": "Etelä-Karjalan keskussairaalan 90 miljoonaa euroa maksava laajennus alkaa syksyllä – näin työt etenevät",
+   "chars": 3674,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://yle.fi/a/74-20233845?origin=rss",
+   "published": "2026-06-30T06:21:47+03:00",
+   "js_render": false
+  },
+  {
+   "step": 21,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 59.2,
+   "result_en": "writes the answer",
+   "ms": 16878
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+   "title": "Keuhkopoliklinikka C3 - Etelä-Karjalan hyvinvointialue",
+   "chars": 5037,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:39+00:00"
+  },
+  {
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue",
+   "chars": 1676,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:36+00:00"
+  },
+  {
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+   "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue",
+   "chars": 6797,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:40+00:00"
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00"
+  },
+  {
+   "url": "https://www.ekhva.fi/2026/07/thln-tilastot-hoitoon-paasy-parani-ekhvalla-vuonna-2025/",
+   "title": "THL:n tilastot: Hoitoon pääsy parani Ekhvalla vuonna 2025 - Etelä-Karjalan hyvinvointialue",
+   "chars": 4448,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:55+00:00"
+  },
+  {
+   "url": "https://yle.fi/a/74-20233845?origin=rss",
+   "title": "Etelä-Karjalan keskussairaalan 90 miljoonaa euroa maksava laajennus alkaa syksyllä – näin työt etenevät",
+   "chars": 3674,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:22+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:35:39+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 76.1
+}

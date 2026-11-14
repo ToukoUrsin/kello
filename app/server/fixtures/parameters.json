@@ -1,0 +1,15 @@
+{
+ "hazard_per_4_weeks": {
+  "value": 1.04,
+  "lo": 1.02,
+  "hi": 1.07,
+  "url": null,
+  "quote": null,
+  "verified": false,
+  "note": "SAMPLE FIXTURE - placeholder value, not retrieved from the source"
+ },
+ "attributable_share": {
+  "value": 0.6,
+  "note": "SAMPLE FIXTURE - placeholder value, not retrieved from the source"
+ }
+}

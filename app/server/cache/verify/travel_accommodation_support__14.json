@@ -1,0 +1,491 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Karelia wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "14",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "An English registry study links the longest travel time to lower odds of lung cancer surgery (OR 0.60). It did not test travel support, so the assumed gain of 1 percentage point is not measured.",
+ "supported_en": "Crawford et al. (Br J Cancer 2009, northern England) found odds of surgery of 0.60 for the most deprived patients who lived furthest from the diagnosing hospital.",
+ "not_supported_en": "No page shows that travel or accommodation support raises the curative-treatment share, or by how much.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Potilashotellissa yöpyminen on potilaalle maksutonta.",
+ "in_use_source": {
+  "url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+  "title": "Potilas- ja asiakasohje",
+  "published": "2024-10-23",
+  "fetched_at": "2026-11-14T01:22:07+00:00"
+ },
+ "in_use_summary_en": "According to KYS's patient hotel instructions from 23.10.2024, patients stay free of charge in three partner hotels in Kuopio. The patient makes the booking and arranges travel between hotel and hospital. Siun sote gives radiotherapy at its own cancer centre in Joensuu.",
+ "missing_en": "No page shows organised transport, a named contact who makes the booking, or a hotel booked on the patient's behalf.",
+ "summary_en": "B: KYS (Pohjois-Savon hyvinvointialue) gives patients a free stay in partner hotels in Kuopio, once agreed with their care team. The patient books the room and arranges and pays for the trips between hotel and hospital. Siun sote's cancer centre in Joensuu gives radiotherapy, so long courses of radiotherapy do not need a stay in Kuopio. A: The evidence is only an association: an English registry study (Br J Cancer 2009) found odds of surgery of 0.60 with the longest travel time. No study of the measure itself was found.",
+ "unanswered_en": "No page was found on organised transport or a named travel contact for Siun sote patients going to KYS, and no study measured the effect of travel support.",
+ "sources": [
+  {
+   "url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+   "title": "Potilas- ja asiakasohje",
+   "quote": "Potilashotellissa yöpyminen on potilaalle maksutonta.",
+   "about": "in_use",
+   "published": "2024-10-23",
+   "fetched_at": "2026-11-14T01:22:07+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+   "title": "Potilas- ja asiakasohje",
+   "quote": "Potilas varaa itse potilashotellimajoituksen jostakin alla mainituista hotelleista",
+   "about": "in_use",
+   "published": "2024-10-23",
+   "fetched_at": "2026-11-14T01:22:07+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "quote": "Syöpäsairauttasi hoidamme lääkehoidolla ja sädehoidolla, joihin pääset hoitosuunnitelmasi mukaisesti jonottamatta.",
+   "about": "context",
+   "published": "2026-06-24T04:00:33+00:00",
+   "fetched_at": "2026-11-14T01:21:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hyvaks.fi",
+   "ms": 3092,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Siun sote potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: siunsote.fi, soite.fi",
+   "ms": 1967,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/",
+     "title": "Etusivu - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/potilasasiavastaava/",
+     "title": "Potilasasiavastaava - Siun sote"
+    },
+    {
+     "url": "https://soite.fi/asiointiopas/opas-keskussairaalaan-tulijalle/potilashotelli/",
+     "title": "Potilashotelli - Soite"
+    },
+    {
+     "url": "https://www.siunsote.fi/asiakkaan-opas/nain-voit-asioida/laheisille/potilastiedot-ja-tiedustelut/",
+     "title": "Potilastiedot ja tiedustelut"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/potilashotelli-keski-pohjanmaan-hyvinvointialue-soite/3a9f577c-e99b-4c80-96b8-0d2fcf132c6a",
+     "title": "Potilashotelli - Keski-Pohjanmaan hyvinvointialue Soite - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelut/",
+     "title": "Palvelut - Siun sote"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys2030.fi, pshyvinvointialue.fi, oys.fi",
+   "ms": 3056,
+   "results": [
+    {
+     "url": "https://oys2030.fi/potilashotelli/",
+     "title": "Potilashotelli - Oys 2030"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/kys-kuopion-yliopistollinen-sairaala",
+     "title": "KYS Kuopion yliopistollinen sairaala - Pohjois-Savo"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+     "title": "Potilaskoti - OYS"
+    },
+    {
+     "url": "https://oys.fi/asiakkaille/potilaan-opas/potilaskoti",
+     "title": "Potilaskoti - OYS"
+    },
+    {
+     "url": "https://yle.fi/a/3-11498054",
+     "title": "KYS avasi sähköisen palvelun, josta voi katsoa omia potilastietoja | Yle"
+    },
+    {
+     "url": "https://yksipeli.fi/kys-omaisten-majoitus-potilashotelli-kuopio/",
+     "title": "Kys Omaisten Majoitus | Potilashotelli Kuopio"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Karjalan keskussairaala majoitus sädehoidon ajaksi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: siunsote.fi, suomi.fi",
+   "ms": 2784,
+   "results": [
+    {
+     "url": "https://www.siunsote.fi/asiointikanava/pohjois-karjalan-keskussairaala/",
+     "title": "Pohjois-Karjalan keskussairaala - Siun sote"
+    },
+    {
+     "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpäsairaudet ja sädehoito - Siun sote"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/pohjois-karjalan-keskussairaala-pohjois-karjalan-hyvinvointialue-siun-sote/1b493b79-c81b-4524-9e2a-88b2c44cbc3e",
+     "title": "Pohjois-Karjalan keskussairaala - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.siunsote.fi/",
+     "title": "Etusivu - Siun sote"
+    },
+    {
+     "url": "https://suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-pohjois-karjalan-hyvinvointialue-siun-sote/24b32409-7f91-4cd8-9706-343dea884a99",
+     "title": "Syöpäsairaudet ja sädehoito - Pohjois-Karjalan hyvinvointialue – Siun sote - Suomi.fi"
+    },
+    {
+     "url": "https://www.visitkarelia.fi/fi/majoitu",
+     "title": "Majoitu Pohjois-Karjalassa"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: local radiotherapy and accommodation; B: where surgery is done; A: effect size",
+   "ms": 5158
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "focus": "sädehoito majoitus potilashotelli matka",
+   "why": "B: local radiotherapy and accommodation",
+   "status": "done",
+   "t_s": 8.3,
+   "result_en": "\"Syöpäsairaudet ja sädehoito - Siun sote\" · 3 252 chars · from cache",
+   "ms": 5,
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "chars": 3252,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "published": "2026-06-24T04:00:33+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "leikkaus KYS Joensuu sädehoito keskussairaala",
+   "why": "B: where surgery is done",
+   "status": "done",
+   "t_s": 8.3,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time odds surgery 0.60",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.3,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 7,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.3,
+   "result_en": "1 search: B: patient hotel at KYS",
+   "ms": 2151
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS potilashotelli majoitus potilaille Kuopio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: patient hotel at KYS",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "6 results: yle.fi, pshyvinvointialue.fi, iisalmensanomat.fi, savonsanomat.fi",
+   "ms": 3052,
+   "results": [
+    {
+     "url": "https://yle.fi/a/3-7890736",
+     "title": "Sairaala majoittaa osan potilaista hotelliin – säästöä kotikunnalle 150 euroa yöltä | Yle"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+     "title": "Potilas- ja asiakasohje 1 (1) [Kuopion yliopistollinen sairaala"
+    },
+    {
+     "url": "https://www.iisalmensanomat.fi/paikalliset/9931645",
+     "title": "Millainen potilashotelli KYSille voisi tulla? | Paikalliset | Iisalmen Sanomat"
+    },
+    {
+     "url": "https://www.savonsanomat.fi/paikalliset/3230901",
+     "title": "KYS aloitti potilashotellitoiminnan | Savo | Savon Sanomat"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/kys-kuopion-yliopistollinen-sairaala",
+     "title": "KYS Kuopion yliopistollinen sairaala - Pohjois-Savo"
+    },
+    {
+     "url": "https://hotellihaku.fi/budjetti/hotelli-savonia-kuopio-hinnat-arvostelut/",
+     "title": "Hotelli Savonia Kuopio – hinnat, arvostelut ja sijainti - hotellihaku.fi"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.5,
+   "result_en": "1 read: B: KYS patient hotel details",
+   "ms": 3114
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+   "focus": "potilashotelli varaus maksu potilaalle",
+   "why": "B: KYS patient hotel details",
+   "status": "done",
+   "t_s": 16.6,
+   "result_en": "\"Potilas- ja asiakasohje\" · 1 432 chars · PDF 1 p.",
+   "ms": 1764,
+   "title": "Potilas- ja asiakasohje",
+   "chars": 1432,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+   "published": "2024-10-23",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.3,
+   "result_en": "writes the answer",
+   "ms": 14304
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://www.siunsote.fi/palvelu/syopatautien-ja-sadehoidon-palvelut/",
+   "title": "Syöpäsairaudet ja sädehoito - Siun sote",
+   "chars": 3252,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:21:35+00:00",
+   "published": "2026-06-24T04:00:33+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "url": "https://pshyvinvointialue.fi/documents/594193/718155/Potilashotelliohje+potilaalle.pdf/1ead8c9a-02a3-1653-c3f6-75d4f6d444cb?t=1729686250570",
+   "title": "Potilas- ja asiakasohje",
+   "chars": 1432,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:22:07+00:00",
+   "published": "2024-10-23",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:22:21+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to organised transport and a named contact who books the hotel for patients going to Kuopio for lung surgery: KYS's own instructions show that the hotel stay is already free, but patients book it themselves and arrange and pay for their own travel to the hospital, and radiotherapy is already given locally at Siun sote's cancer centre in Joensuu.",
+ "seconds": 32.7,
+ "searched_en": "Searched 5 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Siun sote potilashotelli\"; \"KYS potilaskoti\"; \"Pohjois-Karjalan keskussairaala majoitus sädehoidon ajaksi\", ...) and read 4 pages on siunsote.fi, syovanhoitokeskus.pshyvinvointialue.fi, pmc.ncbi.nlm.nih.gov, pshyvinvointialue.fi.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Siun sote potilashotelli",
+  "KYS potilaskoti",
+  "Pohjois-Karjalan keskussairaala majoitus sädehoidon ajaksi",
+  "KYS potilashotelli majoitus potilaille Kuopio"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to organised transport and a named contact who books the hotel for patients going to Kuopio for lung surgery: KYS's own instructions show that the hotel stay is already free, but patients book it themselves and arrange and pay for their own travel to the hospital, and radiotherapy is already given locally at Siun sote's cancer centre in Joensuu.",
+ "verdict_en": "Partly in place in the KYS university hospital area, which treats North Karelia's patients. Missing: No page shows organised transport, a named contact who makes the booking, or a hotel booked on the patient's behalf. Evidence supports that it works, but not the size of effect we assume. Supported: Crawford et al. (Br J Cancer 2009, northern England) found odds of surgery of 0.60 for the most deprived patients who lived furthest from the diagnosing hospital. Not supported: No page shows that travel or accommodation support raises the curative-treatment share, or by how much.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "travel_accommodation_support",
+ "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
+ "area_name_en": "North Karelia wellbeing services county"
+}

@@ -1,0 +1,393 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Smoking cessation started at the first specialist visit. Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+ "area_id": "06",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "In a Moscow cohort of 517 current smokers with early-stage (IA–IIIA) NSCLC, quitting after diagnosis was linked to lower all-cause mortality (adjusted HR 0.67, 95% CI 0.53–0.85).",
+ "supported_en": "Annals of Internal Medicine (2021): quitting after diagnosis was linked to an adjusted HR of 0.67 for all-cause mortality in early-stage NSCLC.",
+ "not_supported_en": "The evidence does not show that quitting makes more patients eligible for curative treatment, and the result is observational, not from a Finnish trial.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Hoitopolkuun on liitetty myös tupakoinnin lopettamisen tuki. Satakunnassa kehitetty malli on herättänyt kiinnostusta valtakunnallisesti.",
+ "in_use_source": {
+  "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+  "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+  "published": "2026-11-11T10:16:00.000+0",
+  "fetched_at": "2026-11-14T01:43:43+00:00"
+ },
+ "in_use_summary_en": "Satakunnan Kansa reported on 11 Nov 2026 that Sata's new lung cancer pathway, which started as a pilot in 2022 and became standard in 2024, includes support for quitting smoking.",
+ "missing_en": "No page shows that every smoker gets cessation medication and counselling at the first specialist visit.",
+ "summary_en": "According to Satakunnan Kansa (11 Nov 2026), Sata's lung cancer pathway, a 2022 pilot made standard in 2024, includes support for quitting smoking, but nothing says what that support is or whether every smoker gets medication at the first specialist visit. Tyks's lung cancer page does not mention quitting smoking. A 2021 Annals of Internal Medicine cohort study found that quitting after diagnosis was linked to an adjusted HR of 0.67 (0.53–0.85) for all-cause mortality in early-stage NSCLC, which matches the size we assume.",
+ "unanswered_en": "No Sata or Tyks page was found that describes what the quit-smoking support in the pathway includes or when it is given.",
+ "sources": [
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "quote": "Hoitopolkuun on liitetty myös tupakoinnin lopettamisen tuki. Satakunnassa kehitetty malli on herättänyt kiinnostusta valtakunnallisesti.",
+   "about": "in_use",
+   "published": "2026-11-11T10:16:00.000+0",
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "quote": "Vuonna 2022 pilottina alkanut toimintamalli vakiintui käyttöön vuonna 2024.",
+   "about": "in_use",
+   "published": "2026-11-11T10:16:00.000+0",
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "quote": "After adjustments, smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85])",
+   "about": "effect",
+   "published": "2021-07-27",
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Satasairaalan lääkärit osallistuvat kokouksiin etäyhteydellä.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi, hyvaks.fi",
+   "ms": 1167,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue tupakasta vieroitus keuhkosyöpäpotilas",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnankansa.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi, julkaisut.valtioneuvosto.fi, julkari.fi",
+   "ms": 1983,
+   "results": [
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/tupakkavieroitus/",
+     "title": "Tupakkavieroitus - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://julkaisut.valtioneuvosto.fi/bitstreams/9bf2844c-9494-4aa8-a1b3-a1d2571645f0/download",
+     "title": "Tupakasta ja nikotiinista vieroitus"
+    },
+    {
+     "url": "https://www.julkari.fi/items/79f1d60d-bb20-4363-b2e6-fc6abba47f3c",
+     "title": "Tupakasta ja nikotiinista vieroituksen järjestäminen hyvinvointialueilla"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks tupakkavieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: epressi.com, suomenash.fi, tyks.fi",
+   "ms": 1463,
+   "results": [
+    {
+     "url": "https://www.epressi.com/tiedotteet/terveys/tyks-tehostaa-savuttomuuttaan.html",
+     "title": "Tyks tehostaa savuttomuuttaan - ePressi"
+    },
+    {
+     "url": "https://suomenash.fi/tiedotteet/2020/tyks-tehostaa-savuttomuuttaan/",
+     "title": "Tyks tehostaa savuttomuuttaan - Suomen ASH ry | Suomen ASH ry"
+    },
+    {
+     "url": "https://suomenash.fi/uutiset/2020/hyvia-tuloksia-tyksin-tupakasta-vieroitusryhmassa/",
+     "title": "Hyviä tuloksia Tyksin tupakasta vieroitusryhmässä - Suomen ASH ry | Suomen ASH ry"
+    },
+    {
+     "url": "https://www.tyks.fi/ajankohtaista/tyks-psykiatrian-potilaat-saavat-apua-tupakoinnin-lopettamiseen",
+     "title": "Tyks Psykiatrian potilaat saavat apua tupakoinnin lopettamiseen | TYKS"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/savuton-sairaala",
+     "title": "Savuton sairaala | Tyks"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala savuton leikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 3059,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/leikkaus-ja-anestesia/",
+     "title": "Leikkaus ja anestesia, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/leikkaus-ja-anestesia/leikkausosasto/",
+     "title": "Leikkausosasto, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/kirurgia/leikkaushoitokeskus/",
+     "title": "Leikkaushoitokeskus, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/leikkaus-ja-anestesia-satakunnan-hyvinvointialue/345ad18a-b8e8-407d-8fe4-7aebe3f64636",
+     "title": "Leikkaus ja anestesia - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/leikkausosasto-satakunnan-hyvinvointialue/8e768e4c-76e1-47b3-bff5-2c1c7fb3c467",
+     "title": "Leikkausosasto - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.satasairaala.fi/palvelut/leikkaus-ja-anestesia",
+     "title": "Leikkaus ja anestesia | Satasairaala"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: cessation in Tyks lung cancer pathway; B: Sata lung cancer pathway; A: effect size",
+   "ms": 6796
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "tupakointi lopettaminen vieroitus",
+   "why": "B: cessation in Tyks lung cancer pathway",
+   "status": "done",
+   "t_s": 9.9,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 6,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "focus": "tupakointi vieroitus keuhkosyöpä hoitopolku",
+   "why": "B: Sata lung cancer pathway",
+   "status": "done",
+   "t_s": 9.9,
+   "result_en": "\"Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löyt\" · 2 090 chars",
+   "ms": 2052,
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://doi.org/10.7326/M21-0252",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "focus": "hazard ratio all-cause mortality quit",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.9,
+   "result_en": "\"Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progr\" · 2 162 chars · from cache",
+   "ms": 9,
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://doi.org/10.7326/M21-0252",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 11.9,
+   "result_en": "writes the answer",
+   "ms": 11971
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:43:55+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask Satakunta wellbeing services county (Sata) lung medicine first what quit-smoking support its new lung cancer pathway already gives, because a local newspaper says the pathway includes it, and then pay only for medication and counselling at the first specialist visit if that is missing.",
+ "seconds": 23.9,
+ "searched_en": "Searched 4 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue tupakasta vieroitus keuhkosyöpäpotilas\"; \"Tyks tupakkavieroitus\"; \"Satasairaala savuton leikkaus\") and read 3 pages on tyks.fi, satakunnankansa.fi, doi.org.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue tupakasta vieroitus keuhkosyöpäpotilas",
+  "Tyks tupakkavieroitus",
+  "Satasairaala savuton leikkaus"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask Satakunta wellbeing services county (Sata) lung medicine first what quit-smoking support its new lung cancer pathway already gives, because a local newspaper says the pathway includes it, and then pay only for medication and counselling at the first specialist visit if that is missing.",
+ "verdict_en": "Partly in place in Satakunta. Missing: No page shows that every smoker gets cessation medication and counselling at the first specialist visit. Recent evidence supports the size of effect we assume. Annals of Internal Medicine (2021): quitting after diagnosis was linked to an adjusted HR of 0.67 for all-cause mortality in early-stage NSCLC.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "smoking_cessation_at_diagnosis",
+ "intervention_name_en": "Smoking cessation started at the first specialist visit",
+ "area_name_en": "Satakunta wellbeing services county"
+}

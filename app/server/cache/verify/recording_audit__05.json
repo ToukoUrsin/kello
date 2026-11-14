@@ -1,0 +1,584 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Our model assumes no direct effect on patients for this measure. Instead: does a source you read document the problem it fixes?\nMeasure: Audit of treatment records (\"no treatment on record\"). Take 50 patients with no treatment on record and check the charts: were they untreated, or was drug treatment or radiotherapy given and not coded? Fix the coding. It treats no extra patient, but until it is done the county cannot tell a care gap from a recording gap.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "The Cancer Registry report and the Cancer Organisations news article both say that some cancer data is never recorded or never reaches the national registers, and that stage is missing for 48 % of patients; neither measures what a chart audit would change.",
+ "supported_en": "The Cancer Registry reports that stage was missing for 48 % of lung cancer patients, and THL says part of the data is never recorded or never transferred to the national registers.",
+ "not_supported_en": "No page I read gives figures for Southwest Finland on \"no treatment on record\", or measures the result of a chart audit.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that Varha or Tyks audits cancer treatment records; the Tyks Cancer Centre pages only say it tracks the time from referral to first contact.",
+ "missing_en": "",
+ "summary_en": "B: No public sign was found that Varha or Tyks audits cancer treatment records. The Tyks cancer pages say only that the Cancer Centre tracks the time from referral to first treatment contact. A: The 2026 Cancer Registry lung cancer report says stage was missing for 48 % of patients. The Cancer Organisations news on that report quotes THL saying that some data is never recorded or never reaches the national registers, and that wellbeing services counties should review their own recording. This confirms the problem the measure fixes, which fits the model's assumption of no direct effect on patients.",
+ "unanswered_en": "I found no Varha or Tyks page on auditing cancer treatment records and no recording figures for this county.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+   "title": "Syöpä",
+   "quote": "Syöpäkeskus valvoo syövän hoidon toteutumista seuraamalla aikaa, joka kuluu potilaan lähetteen saapumisesta ensimmäiseen hoitokontaktiin.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:08:50+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "quote": "Osa tiedoista jää kirjaamatta tai ei siirry kansallisiin tietojärjestelmiin, minkä vuoksi niitä ei voida hyödyntää raportin aineistossa.",
+   "about": "effect",
+   "published": "2026-04-23T06:06:09+00:00",
+   "fetched_at": "2026-11-14T00:50:26+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "Syövän toteamisvaiheen levinneisyystiedot puuttuivat noin puolelta potilaita (48 %).",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "quote": "Tämä vaatii oman toiminnan tarkastelua niin tietomäärittelijöiltä, tietojärjestelmätoimittajilta, hyvinvointialueiden tietohallinnoilta kuin tietoja kirjaavilta ammattilaisiltakin",
+   "about": "context",
+   "published": "2026-04-23T06:06:09+00:00",
+   "fetched_at": "2026-11-14T00:50:26+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, suomi.fi, tyks.fi",
+   "ms": 2065,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/verkkoasiointi/tyks-syopapotilaan-digihoitopolku-varsinais-suomen-hyvinvointialue/3655f8ca-09c4-484d-9b06-bc94862c2d17",
+     "title": "Tyks Syöpäpotilaan digihoitopolku - Varsinais-Suomen ..."
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha hoitoilmoitus kirjaaminen syöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, varha.fi, hus.fi",
+   "ms": 1822,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/kirjaamo",
+     "title": "Kirjaamo | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/digiasiointi/lomakkeet",
+     "title": "Lomakkeet | Varha"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana",
+     "title": "Oikeutesi potilaana | HUS"
+    },
+    {
+     "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+     "title": "Syöpien ilmoittamisen haasteisiin vastataan - THL-blogi"
+    },
+    {
+     "url": "https://thl.fi/ohjeita-ammattilaisille/terveydenhuollon-kirjaamisohjeet",
+     "title": "Terveydenhuollon kirjaamisohjeet - THL"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks syöpärekisteri hoitotietojen ilmoittaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, tyks.fi, fican.fi",
+   "ms": 1462,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/potilaan-oikeudet/potilastiedot-ja-asiakirjat",
+     "title": "Potilastiedot ja -asiakirjat | Tyks"
+    },
+    {
+     "url": "https://syoparekisteri.fi/seulonta/tietojen-rekisterointi/",
+     "title": "Tietojen rekisteröinti"
+    },
+    {
+     "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syoparekisteri/",
+     "title": "Syöpärekisteri – FICAN"
+    },
+    {
+     "url": "https://syoparekisteri.fi/2022/12/15/tiedontoimittaja-paivitathan-yhteystietosi-syoparekisterille/",
+     "title": "Tiedontoimittaja, päivitäthän yhteystietosi Syöpärekisterille"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tietoa-syoparekisterista/tietotilinpaatos-2023/",
+     "title": "Tietotilinpäätös 2023 - Syöpärekisteri"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen kirjaamisen laatu syöpähoidot keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, syopajarjestot.fi, filha.fi, tyks.fi",
+   "ms": 2194,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/nain-keuhkosyopapotilaiden-hoitopolut-eroavat-toisistaan-suomessa/",
+     "title": "Näin keuhkosyöpäpotilaiden hoitopolut eroavat toisistaan Suomessa - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://www.filha.fi/en/blogi-tieto-yhdistaa-laaturekisteri-tukemassa-keuhkosyovan-hoitoa/",
+     "title": "Blogi: Tieto yhdistää: laaturekisteri tukemassa keuhkosyövän hoitoa"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://fican.fi/nain-keuhkosyopapotilaiden-hoitopolut-eroavat-toisistaan-suomessa/",
+     "title": "Näin keuhkosyöpäpotilaiden hoitopolut eroavat toisistaan Suomessa – FICAN"
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+     "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa - Syöpäjärjestöt"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.2,
+   "result_en": "3 reads: A evidence and county figures; A problem documented; B any audit running",
+   "ms": 5574
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "focus": "kirjaamiskäytäntö hoitotieto Varsinais-Suomi",
+   "why": "A evidence and county figures",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"keuhkosyoparaportti\" · 44 558 chars · 5 of 46 passages kept · from cache",
+   "ms": 9,
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "focus": "kirjaaminen kattavuus Varsinais-Suomi",
+   "why": "A problem documented",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tieto\" · 5 861 chars · 8 of 10 passages kept · from cache",
+   "ms": 10,
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "published": "2026-04-23T06:06:09+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "focus": "hyvinvointialue ilmoitus kirjaaminen Varsinais-Suomi",
+   "why": "B any audit running",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Syöpien ilmoittamisen haasteisiin vastataan\" · 4 283 chars · from cache",
+   "ms": 11,
+   "title": "Syöpien ilmoittamisen haasteisiin vastataan",
+   "chars": 4283,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "published": "2019-01-23T08:26:23+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "1 search: B: any local recording audit",
+   "ms": 3500
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha syöpärekisteri ilmoitukset kattavuus tarkistus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any local recording audit",
+   "status": "done",
+   "t_s": 11.3,
+   "result_en": "6 results: syoparekisteri.fi, varha.fi",
+   "ms": 1614,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/",
+     "title": "Tilastoja ja tutkimusta - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.varha.fi/fi",
+     "title": "Varha: Etusivu"
+    },
+    {
+     "url": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+     "title": "Yhteistyö toi parannusta syöpärekisteri-ilmoituksiin - Syöpärekisteri"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tarkastusoikeus-rekisteritietoihin",
+     "title": "Tarkastusoikeus rekisteritietoihin | Varha"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tietoa-syoparekisterista/tietotilinpaatos-2023/",
+     "title": "Tietotilinpäätös 2023 - Syöpärekisteri"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.9,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Varha / Tyks / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11500
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 24.4,
+   "result_en": "1 search: B: local audit of cancer recording",
+   "ms": 3000
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks syöpäkeskus kirjaamisen auditointi laatu",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: local audit of cancer recording",
+   "status": "done",
+   "t_s": 27.4,
+   "result_en": "6 results: tyks.fi, sttinfo.fi, varha.fi",
+   "ms": 1630,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/tyks-syopakeskus",
+     "title": "Tyks Syöpäkeskus | Tyks"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/70684107/tyksin-erikoissadehoidot-arvioitiin-uudestaan-teravimpaan-karkeen?publisherId=69820130&lang=fi",
+     "title": "Tyksin erikoissädehoidot arvioitiin uudestaan terävimpään kärkeen | Varsinais-Suomen hyvinvointialue, Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/ajankohtaista/tyks-syopakeskus-sai-kiittavan-arvion-ja-jasenyyden-uusimisen-eurooppalaisessa-syovanhoidon",
+     "title": "Tyks Syöpäkeskus sai kiittävän arvion ja jäsenyyden uusimisen eurooppalaisessa syövänhoidon osaamisverkostossa | Varha"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    },
+    {
+     "url": "https://www.pirha.fi/w/tays-syopakeskuksen-auditointi-on-koko-henkiloston-yhteinen-ponnistus",
+     "title": "Tays Syöpäkeskuksen auditointi on koko henkilöstön yhteinen ..."
+    },
+    {
+     "url": "https://sry.fi/app/uploads/sites/11/2024/05/Rintasyovan-seulonnan-laatukasikirja.pdf",
+     "title": "RINTASYÖVÄN SEULONNAN LAATUKÄSIKIRJA Julkaistu 18.4.2024"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.0,
+   "result_en": "2 reads: B: local monitoring of care; B: local recording quality work",
+   "ms": 3981
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+   "focus": "Syöpäkeskus valvoo syövän hoidon toteutumista",
+   "why": "B: local monitoring of care",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "\"Syöpä\" · 2 154 chars",
+   "ms": 4103,
+   "title": "Syöpä",
+   "chars": 2154,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/tyks-syopakeskus",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/tyks-syopakeskus",
+   "focus": "laatu rekisteri kirjaaminen seuranta",
+   "why": "B: local recording quality work",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "\"Tyks Syöpäkeskus\" · 2 271 chars",
+   "ms": 2021,
+   "title": "Tyks Syöpäkeskus",
+   "chars": 2271,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/tyks-syopakeskus",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 37.1,
+   "result_en": "writes the answer",
+   "ms": 11945
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:26+00:00",
+   "published": "2026-04-23T06:06:09+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://blogi.thl.fi/syopien-ilmoittamisen-haasteisiin-vastataan/",
+   "title": "Syöpien ilmoittamisen haasteisiin vastataan",
+   "chars": 4283,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:56:36+00:00",
+   "published": "2019-01-23T08:26:23+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/tyks-syopakeskus",
+   "title": "Tyks Syöpäkeskus",
+   "chars": 2271,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:48+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+   "title": "Syöpä",
+   "chars": 2154,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:50+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": true,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:09:02+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: the Tyks cancer pages show only that the Cancer Centre tracks the time from referral to first contact, not any check of treatment records, and the Cancer Registry and THL say that recording gaps hide what treatment patients actually got.",
+ "seconds": 49.1,
+ "searched_en": "Searched 6 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha hoitoilmoitus kirjaaminen syöpä\"; \"Tyks syöpärekisteri hoitotietojen ilmoittaminen\"; \"Varsinais-Suomen kirjaamisen laatu syöpähoidot keuhkosyöpä\", ...) and read 5 pages on syoparekisteri.fi, syopajarjestot.fi, blogi.thl.fi, tyks.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha hoitoilmoitus kirjaaminen syöpä",
+  "Tyks syöpärekisteri hoitotietojen ilmoittaminen",
+  "Varsinais-Suomen kirjaamisen laatu syöpähoidot keuhkosyöpä",
+  "Varha syöpärekisteri ilmoitukset kattavuus tarkistus",
+  "Tyks syöpäkeskus kirjaamisen auditointi laatu"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: the Tyks cancer pages show only that the Cancer Centre tracks the time from referral to first contact, not any check of treatment records, and the Cancer Registry and THL say that recording gaps hide what treatment patients actually got.",
+ "verdict_en": "No public sign that it is running in Southwest Finland. The problem it fixes is documented only in part. Supported: The Cancer Registry reports that stage was missing for 48 % of lung cancer patients, and THL says part of the data is never recorded or never transferred to the national registers. Not supported: No page I read gives figures for Southwest Finland on \"no treatment on record\", or measures the result of a chart audit.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Problem partly documented",
+ "intervention_id": "recording_audit",
+ "intervention_name_en": "Audit of treatment records (\"no treatment on record\")",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

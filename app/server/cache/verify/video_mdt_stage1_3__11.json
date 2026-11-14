@@ -1,0 +1,491 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Karelia wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "11",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "In one UK district hospital (Southend, 62 patients in a year, before-after) the yearly resection rate rose by 30% after video MDT meetings with a thoracic centre began; this is the relative rise that the 1.5-point assumption is built from.",
+ "supported_en": "A 2004 abstract in the Journal of Telemedicine and Telecare reports a 30% relative rise in the yearly resection rate and a fall in the time from clinic to surgery from 69 to 54 days.",
+ "not_supported_en": "The pages do not show the effect on the share of all lung cancer patients who get curative-intent treatment, and they include no controlled or Finnish data.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that South Karelia's stage I–III lung cancer patients are routinely discussed by video with the HUS lung team; HUS says its own multidisciplinary group reviews patients only when needed.",
+ "missing_en": "",
+ "summary_en": "The HUS lung cancer pathway page says its multidisciplinary team reviews patients \"when needed\". No Ekhva or HUS page shows a video MDT with HUS for every stage I–III patient from South Karelia. The only effect evidence read is a 2004 UK before-after study of 62 patients, where the resection rate rose by 30% (relative). That supports the direction of the effect, but it is small, old and indirect for the assumed 1.5-point gain.",
+ "unanswered_en": "Three searches found no Ekhva or HUS page that says how South Karelia's lung cancer treatment decisions are reviewed together with HUS, or whether any such meeting runs by video.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings, and the mean time from first being seen in the clinic to surgery was reduced from 69 to 54 days.",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1070,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ekhva moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: ekhva.fi, syovanhoitokeskus.pshyvinvointialue.fi, duodecimlehti.fi, tyks.fi",
+   "ms": 1798,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/",
+     "title": "Etelä-Karjalan hyvinvointialue | Etusivu - Etelä-Karjalan ..."
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset ..."
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, kiinteistoliitto.fi, kotiseutuliitto.fi",
+   "ms": 2589,
+   "results": [
+    {
+     "url": "https://www.hus.fi/ajankohtaista/yhtymakokous-jarjestetaan-verkkokokouksena-18122025-klo-10",
+     "title": "Yhtymäkokous järjestetään verkkokokouksena 18.12.2025 klo 10 | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/hallinto-ja-paatoksenteko/yhtymakokous-yhtymahallitus-ja-konsernijaosto",
+     "title": "Yhtymäkokous, yhtymähallitus ja konsernijaosto | HUS"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/etayhteysteknisellavalineella/",
+     "title": "Yhtiökokoukseen osallistuminen teknisen välineen avulla"
+    },
+    {
+     "url": "https://kotiseutuliitto.fi/tietopankki/yhdistystoiminta/yhdistyksen-sahkoinen-kokous/",
+     "title": "Yhdistyksen sähköinen kokous - Suomen Kotiseutuliitto"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/hallinto-ja-paatoksenteko/toimikunnat",
+     "title": "Toimikunnat | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjalan keskussairaala keuhkomeeting videoyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: ekhva.fi, hus.fi, suomi.fi",
+   "ms": 1527,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/keuhkopoliklinikka/",
+     "title": "Keuhkopoliklinikka C3 - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/etela-karjalan-keskussairaalan-rontgen",
+     "title": "Etelä-Karjalan keskussairaalan röntgen | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/etela-karjalan-keskussairaala-etela-karjalan-hyvinvointialue/36d55abb-26c6-4da7-872c-72fed2d8fe21",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkopoliklinikka-etela-karjalan-hyvinvointialue/dbb83bf5-31f6-4480-8ccf-45172e7abb3b",
+     "title": "Keuhkopoliklinikka - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.ekhva.fi/asiakkaalle/toimipisteet/etela-karjalan-keskussairaala/osasto-k6/",
+     "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.6,
+   "result_en": "3 reads: B: HUS pathway MDT; A: effect size; B: county context",
+   "ms": 4505
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous hoitopäätös Etelä-Karjala etäyhteys",
+   "why": "B: HUS pathway MDT",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 0,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ekhva.fi/asiakkaalle/toimipisteet/etela-karjalan-keskussairaala/osasto-k6/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "focus": "syöpä HUS hoitokokous",
+   "why": "B: county context",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Osasto K6 - Etelä-Karjalan hyvinvointialue\" · 1 676 chars",
+   "ms": 6025,
+   "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue",
+   "chars": 1676,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "published": "2026-08-03T07:53:32+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.1,
+   "result_en": "1 search: B: county-HUS joint MDT",
+   "ms": 2986
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Ekhva keuhkosyöpä hoitokokous HUS thoraxkirurgi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county-HUS joint MDT",
+   "status": "done",
+   "t_s": 16.1,
+   "result_en": "6 results: hus.fi, ekhva.fi",
+   "ms": 3086,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://www.ekhva.fi/",
+     "title": "Etelä-Karjalan hyvinvointialue | Etusivu - Etelä-Karjalan ..."
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/meilahden-tornisairaala/keuhko-ja-ruokatorvikirurgian-osasto",
+     "title": "Keuhko- ja ruokatorvikirurgian osasto M11, Meilahden tornisairaala | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 19.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Ekhva / Etelä-Karjalan keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision documen",
+   "ms": 10863
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.1,
+   "result_en": "1 search: B: video MDT Ekhva-HUS",
+   "ms": 2432
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjala keuhkosyöpä etäkonsultaatio HUS moniammatillinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: video MDT Ekhva-HUS",
+   "status": "done",
+   "t_s": 32.5,
+   "result_en": "6 results: hus.fi, suomi.fi",
+   "ms": 1630,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/verkkoasiointi/oma-ekhva-etela-karjalan-hyvinvointialue/8687f5cc-0d34-497d-8e7e-95cbc1cac9db",
+     "title": "Oma Ekhva - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/etela-karjalan-keskussairaalan-rontgen",
+     "title": "Etelä-Karjalan keskussairaalan röntgen | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkopoliklinikka-etela-karjalan-hyvinvointialue/c6dd4f8c-85df-41a1-b142-a6c85d6c9773",
+     "title": "Keuhkopoliklinikka - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kliininen-fysiologia-ja-isotooppiyksikko-etela-karjalan",
+     "title": "Kliininen fysiologia ja isotooppiyksikkö, Etelä-Karjalan keskussairaala | HUS"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.1,
+   "result_en": "writes the answer",
+   "ms": 10720
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/osasto-k6/",
+   "title": "Osasto K6 - Etelä-Karjalan hyvinvointialue",
+   "chars": 1676,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:19:37+00:00",
+   "published": "2026-08-03T07:53:32+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:20:08+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: neither Ekhva's pages nor HUS's pages show a routine video MDT with HUS for every stage I–III patient, and the only effect data are a small before-after study from 2004.",
+ "seconds": 44.9,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Ekhva moniammatillinen kokous keuhkosyöpä\"; \"HUS MDT-kokous etäyhteydellä\"; \"Etelä-Karjalan keskussairaala keuhkomeeting videoyhteys\", ...) and read 3 pages on hus.fi, europepmc.org, ekhva.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Ekhva moniammatillinen kokous keuhkosyöpä",
+  "HUS MDT-kokous etäyhteydellä",
+  "Etelä-Karjalan keskussairaala keuhkomeeting videoyhteys",
+  "Ekhva keuhkosyöpä hoitokokous HUS thoraxkirurgi",
+  "Etelä-Karjala keuhkosyöpä etäkonsultaatio HUS moniammatillinen"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: neither Ekhva's pages nor HUS's pages show a routine video MDT with HUS for every stage I–III patient, and the only effect data are a small before-after study from 2004.",
+ "verdict_en": "No public sign that it is running in South Karelia. Evidence supports that it works, but not the size of effect we assume. Supported: A 2004 abstract in the Journal of Telemedicine and Telecare reports a 30% relative rise in the yearly resection rate and a fall in the time from clinic to surgery from 69 to 54 days. Not supported: The pages do not show the effect on the share of all lung cancer patients who get curative-intent treatment, and they include no controlled or Finnish data.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "South Karelia wellbeing services county"
+}

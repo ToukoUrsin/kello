@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Karelia wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "11",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "The English registry study (Crawford 2009, 34,923 patients) links the longest travel time to lower odds of lung cancer surgery (OR 0.60, combined with deprivation), but it did not test any travel support service.",
+ "supported_en": "A northern England registry study (Br J Cancer 2009) found that the most deprived patients living furthest away had odds of surgery of 0.60 compared with the least deprived living nearest.",
+ "not_supported_en": "No study we read shows that travel or hotel support raises the curative-treatment share, or by how many percentage points (our assumption is 1.0).",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Hotellihuonevaraukset tekee hoitava yksikkö. Potilashotelli sijaitsee Scandic Meilahti -hotellissa Helsingissä.",
+ "in_use_source": {
+  "url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+  "title": "Tervetuloa meille hoitoon",
+  "published": "19.09.2025",
+  "fetched_at": "2026-11-14T00:54:35+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page we read shows organised transport or a named contact for South Karelia patients travelling to HUS.",
+ "summary_en": "HUS says on its own site that it runs a patient hotel at Scandic Meilahti in Helsinki for patients whose treatment lasts more than a day, and that the treating unit books the rooms. No page we read shows organised transport or a named contact for South Karelia patients. On effect, a 2009 English registry study links longer travel time to lower odds of surgery (OR 0.60), but it did not test a support service, so our assumed gain of 1 percentage point has no direct evidence behind it.",
+ "unanswered_en": "We did not search or read Ekhva pages on organised transport or a contact person for treatment at HUS, or any study that tests travel support itself.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+   "title": "Tervetuloa meille hoitoon",
+   "quote": "Hotellihuonevaraukset tekee hoitava yksikkö. Potilashotelli sijaitsee Scandic Meilahti -hotellissa Helsingissä.",
+   "about": "in_use",
+   "published": "19.09.2025",
+   "fetched_at": "2026-11-14T00:54:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+   "title": "Tervetuloa meille hoitoon",
+   "quote": "olet tulossa hoitoon tai toimenpiteeseen, joka kestää yli vuorokauden tai",
+   "about": "in_use",
+   "published": "19.09.2025",
+   "fetched_at": "2026-11-14T00:54:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2287,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ekhva potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, suomi.fi, ekhva.fi, ekhva.suomisote.fi",
+   "ms": 2988,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+     "title": "Tervetuloa meille hoitoon | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/potilashotelli-keski-pohjanmaan-hyvinvointialue-soite/3a9f577c-e99b-4c80-96b8-0d2fcf132c6a",
+     "title": "Potilashotelli - Keski-Pohjanmaan hyvinvointialue Soite - Suomi.fi"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/hyvinvointiasemat/",
+     "title": "Hyvinvointiasemat - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://ekhva.suomisote.fi/",
+     "title": "EKHVA"
+    },
+    {
+     "url": "https://oys2030.fi/potilashotelli/",
+     "title": "Potilashotelli - Oys 2030"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/potilaalle-ja-laheiselle/potilashotelli",
+     "title": "Potilashotelli - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, oys.fi",
+   "ms": 1490,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle",
+     "title": "Potilaalle | HUS"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/asiakkaille/potilaskoti/",
+     "title": "Potilaskoti - OYS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana/potilasasiavastaavat",
+     "title": "Potilasasiavastaavat | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio",
+     "title": "Potilashoidon organisaatio | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/opas-potilaalle/oikeutesi-potilaana",
+     "title": "Oikeutesi potilaana | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/yhteystiedot/kirjaamo-ja-arkistot",
+     "title": "Kirjaamo ja arkistot | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Karjalan keskussairaala majoitus sädehoidon ajaksi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: ekhva.fi, booking.com",
+   "ms": 2502,
+   "results": [
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/syopahoitoyksikko/",
+     "title": "Syöpähoitoyksikkö - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.ekhva.fi/toimipaikat/etela-karjalan-keskussairaala/",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.booking.com/accommodation/region/fi/etela-karjala.fi.html",
+     "title": "Parhaat majoitukset kohteessa Etelä-Karjala, Suomi"
+    },
+    {
+     "url": "https://www.ekhva.fi/2026/10/etela-karjalan-keskussairaalan-syopapoliklinikalle-ja-sadehoitoon-johtava-ovi-6-suljetaan-12-10-alkaen-rakennustoiden-vuoksi/",
+     "title": "Etelä-Karjalan keskussairaalan syöpäpoliklinikalle ja sädehoitoon johtava ovi 6 suljetaan 12.10. alkaen rakennustöiden vuoksi - Etelä-Karjalan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/etela-karjalan-keskussairaala-etela-karjalan-hyvinvointialue/36d55abb-26c6-4da7-872c-72fed2d8fe21",
+     "title": "Etelä-Karjalan keskussairaala - Etelä-Karjalan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.potilas.com/sairaalat/etela-karjalan-keskussairaala/",
+     "title": "Etelä-Karjalan keskussairaala – yhteystiedot | Potilas.com"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.0,
+   "result_en": "2 reads: B patient hotel at HUS; A effect evidence",
+   "ms": 3869
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+   "focus": "potilashotelli Scandic Meilahti hotellihuonevaraukset matkat",
+   "why": "B patient hotel at HUS",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Tervetuloa meille hoitoon\" · 9 646 chars · 6 of 14 passages kept · from cache",
+   "ms": 3,
+   "title": "Tervetuloa meille hoitoon",
+   "chars": 9646,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+   "published": "19.09.2025",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time odds of surgery 0.60",
+   "why": "A effect evidence",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 0,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "writes the answer",
+   "ms": 11829
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/opas-potilaalle/tervetuloa-meille-hoitoon",
+   "title": "Tervetuloa meille hoitoon",
+   "chars": 9646,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:54:35+00:00",
+   "published": "19.09.2025",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:19:17+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to organised transport and a named contact person, because HUS's own page says HUS already runs a patient hotel at Scandic Meilahti and the treating unit books the rooms.",
+ "seconds": 18.7,
+ "searched_en": "Searched 4 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Ekhva potilashotelli\"; \"HUS potilaskoti\"; \"Etelä-Karjalan keskussairaala majoitus sädehoidon ajaksi\") and read 2 pages on hus.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Ekhva potilashotelli",
+  "HUS potilaskoti",
+  "Etelä-Karjalan keskussairaala majoitus sädehoidon ajaksi"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to organised transport and a named contact person, because HUS's own page says HUS already runs a patient hotel at Scandic Meilahti and the treating unit books the rooms.",
+ "verdict_en": "Partly in place in the HUS university hospital area, which treats South Karelia's patients. Missing: No page we read shows organised transport or a named contact for South Karelia patients travelling to HUS. Evidence supports that it works, but not the size of effect we assume. Supported: A northern England registry study (Br J Cancer 2009) found that the most deprived patients living furthest away had odds of surgery of 0.60 compared with the least deprived living nearest. Not supported: No study we read shows that travel or hotel support raises the curative-treatment share, or by how many percentage points (our assumption is 1.0).",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "travel_accommodation_support",
+ "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
+ "area_name_en": "South Karelia wellbeing services county"
+}

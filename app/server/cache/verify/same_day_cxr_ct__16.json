@@ -1,0 +1,634 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Ostrobothnia wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Same-day chest X-ray report with immediate CT. A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+ "area_id": "16",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "",
+ "supported_en": "The Thorax 2023 trial (radioX) found a median saving of 31 days from chest X-ray to lung cancer diagnosis (32 vs 63 days).",
+ "not_supported_en": "The trial gives no confidence interval and was done in a single London hospital, and it measures time to diagnosis, not to the start of treatment.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "I found no public sign that South Ostrobothnia (Hyvaep) or Tays runs this. Hyvaep's radiology page says the X-ray report goes back to the treating doctor. Pirha's lung cancer pathway follows the usual route instead: the GP sends a referral, the hospital handles it in 1–2 working days, and CT usually follows within a week of that. On the effect, a 2023 randomised trial in Thorax (London, 49 lung cancers) found that reading primary-care chest X-rays while the patient waited cut the median time from X-ray to diagnosis from 63 to 32 days, a saving of 31 days.",
+ "unanswered_en": "A final search for reporting radiographers who read chest X-rays in the county turned up nothing new, and I did not find Hyvaep's referral instructions for professionals or any local decision on this measure.",
+ "sources": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Tutkimukset aloitetaan yleensä keuhkojen ja ylävatsan tietokonekerroskuvauksella, joka suoritetaan useimmiten viikon sisällä lähetteen käsittelystä.",
+   "about": "context",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Lähete käsitellään yleensä 1–2 arkipäivän sisällä saapumisesta.",
+   "about": "context",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+   "title": "Radiologia",
+   "quote": "Kuvauksen tai toimenpiteen jälkeen ohjaamme kuvat, mahdolliset näytevastaukset ja röntgenlausunnon hoitavalle lääkärille. Hoitava lääkäri kertoo tulokset tehdyistä tutkimuksista.",
+   "about": "context",
+   "published": "2026-11-13T01:37:52+00:00",
+   "fetched_at": "2026-11-14T01:23:45+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "Immediate reporting by radiographers significantly shortened the time to diagnosis by a median of 31 days, half that seen in the control arm.",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, tays.fi",
+   "ms": 2092,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvaep keuhkokuva lausunto samana päivänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvaep.fi",
+   "ms": 1917,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+     "title": "Radiologia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/leikkaus-ja-anestesia/",
+     "title": "Leikkaus ja anestesia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/hyvinvointialue/viestinta/tiedotuslehti/",
+     "title": "Tiedotuslehti - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.terve.fi/kysymykset/radiologin-lausunto-0",
+     "title": "Radiologin lausunto - 84194 | Terve.fi"
+    },
+    {
+     "url": "https://sydan.fi/kysymys/keuhkokuva-ja-sydamen-vajaatoiminta/",
+     "title": "Keuhkokuva ja sydämen vajaatoiminta - Sydänliitto"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays thorax-röntgen päivystyslausunto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: synlab.fi, pirha.fi",
+   "ms": 1968,
+   "results": [
+    {
+     "url": "https://synlab.fi/thoraxin-rontgen-radiologinen-lausunto/",
+     "title": "Thoraxin röntgen, radiologinen lausunto - SYNLAB Suomi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/r-kuvantaminen-tays-keskussairaala",
+     "title": "R-kuvantaminen, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/laboratorio-ja-kuvantaminen/rontgentutkimukset",
+     "title": "Röntgentutkimukset - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/tays-valkeakosken-paivystyksen-laheteohjeet-ja-konsultaatiot",
+     "title": "Tays Valkeakosken päivystyksen läheteohjeet ja konsultaatiot - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/koulutus/laakarikoulutus/laaketieteen-opiskelijoiden-ja-laakareiden-harjoittelu/amanuenssipaikat-ja-viikko-ohjelmat/radiologia",
+     "title": "Radiologian harjoitteluohjelma amanuensseille Taysissa"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/keuhkotalo/tutkimus-ja-hoito/keuhkosairauksien-tutkimukset/keuhkojen-kuvantamistutkimukset",
+     "title": "Keuhkojen kuvantamistutkimukset"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Seinäjoen keskussairaala keuhkokuvan jälkeen suoraan TT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvaep.fi, suomi.fi",
+   "ms": 2316,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+     "title": "Radiologia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/radiologian-palvelut-etela-pohjanmaan-hyvinvointialue/353bfcb0-16a7-4619-8adf-9e19e3bd7a42",
+     "title": "Radiologian palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/radiologia-kuvansiirtopyynnot-cd-poltot-seinajoen-keskussairaala-etela-pohjanmaan-hyvinvointialue/437133d4-9319-4e6e-9bb2-3f40e08bbc3e",
+     "title": "Radiologia, kuvansiirtopyynnöt, cd-poltot, Seinäjoen keskussairaala - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/en/location/seinajoen-keskussairaala/",
+     "title": "Seinäjoen keskussairaala - EPSHP"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92960",
+     "title": "Keuhkosairauksien uusia kuvantamisstrategioita - Duodecim"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.3,
+   "result_en": "3 reads: Effect size; Local use; Tays pathway",
+   "ms": 4572
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "focus": "median days chest X-ray to diagnosis immediate reporting",
+   "why": "Effect size",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Impact of radiographer immediate reporting of X-rays of the chest from\" · 20 833 chars · 6 of 36 passages kept · from cache",
+   "ms": 4,
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaep.fi/palvelu/radiologia/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+   "focus": "keuhkokuva lausunto samana päivänä TT",
+   "why": "Local use",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Radiologia\" · 13 588 chars · 8 of 30 passages kept",
+   "ms": 2153,
+   "title": "Radiologia",
+   "chars": 13588,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hyvaep.fi/palvelu/radiologia/",
+   "published": "2026-11-13T01:37:52+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "röntgenkuva lähete tietokonetomografia",
+   "why": "Tays pathway",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 8,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.1,
+   "result_en": "2 searches: County fast-track lung imaging pilot; Can primary care order CT directly",
+   "ms": 5080
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Pohjanmaa keuhkosyöpä diagnostiikka nopeutus hanke",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "County fast-track lung imaging pilot",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "6 results: hyvaep.fi, suomi.fi, filha.fi, lausuntopalvelu.fi",
+   "ms": 2777,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-palvelut-etela-pohjanmaan-hyvinvointialue/21ee2120-4e95-484e-a849-65ca429ee9cc",
+     "title": "Keuhkosairauksien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.filha.fi/en/uusi-ohje-terveydenhuollon-ammattilaisille-keuhkosyovan-diagnostiikasta-julkaistu/",
+     "title": "Uusi ohje terveydenhuollon ammattilaisille keuhkosyövän diagnostiikasta julkaistu"
+    },
+    {
+     "url": "https://www.lausuntopalvelu.fi/FI/Proposal/Participation?proposalId=24bd2871-761e-459c-a68d-3d687e017150",
+     "title": "Terveydenhuollon palveluvalikoimaneuvoston päätös ..."
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "hyvaep keuhkosyöpäepäily tietokonetomografia terveyskeskus lähete",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Can primary care order CT directly",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "6 results: hyvaep.fi, hyvaks.fi, hus.fi",
+   "ms": 1586,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+     "title": "Radiologia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://palveluvalikoima.fi/-/kuvantamisen-kriteerit-tietokonetomografiatutkimukselle-oireettoman-henkilon-keuhkosyovan-loytamiseksi-tupakoineelta-henkilolta-hyvaksytty",
+     "title": "Kuvantamisen kriteerit tietokonetomografiatutkimukselle oireettoman henkilön keuhkosyövän löytämiseksi tupakoineelta henkilöltä hyväksytty - Palveluvalikoimaneuvosto"
+    },
+    {
+     "url": "https://hyvaep.terveytesi.fi/citizenportal/",
+     "title": "Kansalaisen terveyspalvelu"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.9,
+   "result_en": "2 reads: County lung cancer pathway; National guidance context",
+   "ms": 5124
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "focus": "keuhkosyöpä lähete tietokonekerroskuvaus kiireellinen",
+   "why": "County lung cancer pathway",
+   "status": "done",
+   "t_s": 22.0,
+   "result_en": "\"Keuhkosairaudet\" · 4 038 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosairaudet",
+   "chars": 4038,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "published": "2026-11-13T01:37:10+00:00",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.filha.fi/en/uusi-ohje-terveydenhuollon-ammattilaisille-keuhkosyovan-diagnostiikasta-julkaistu/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.filha.fi/en/uusi-ohje-terveydenhuollon-ammattilaisille-keuhkosyovan-diagnostiikasta-julkaistu/",
+   "focus": "keuhkokuva lausunto TT viive",
+   "why": "National guidance context",
+   "status": "done",
+   "t_s": 22.0,
+   "result_en": "\"Uusi ohje terveydenhuollon ammattilaisille keuhkosyövän diagnostiikast\" · 1 464 chars · from cache",
+   "ms": 5,
+   "title": "Uusi ohje terveydenhuollon ammattilaisille keuhkosyövän diagnostiikasta julkaistu",
+   "chars": 1464,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.filha.fi/en/uusi-ohje-terveydenhuollon-ammattilaisille-keuhkosyovan-diagnostiikasta-julkaistu/",
+   "published": "2026-05-22T05:03:29+00:00",
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.0,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Hyvaep / Seinäjoen keskussairaala / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11714
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 33.8,
+   "result_en": "1 search: Reporting radiographer chest X-ray in county",
+   "ms": 3035
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "röntgenhoitaja lausuu keuhkokuvat Etelä-Pohjanmaa",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Reporting radiographer chest X-ray in county",
+   "status": "done",
+   "t_s": 36.8,
+   "result_en": "6 results: hyvaep.fi, suomi.fi, synlab.fi, lapha.fi",
+   "ms": 2049,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+     "title": "Radiologia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/radiologian-palvelut-etela-pohjanmaan-hyvinvointialue/353bfcb0-16a7-4619-8adf-9e19e3bd7a42",
+     "title": "Radiologian palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://synlab.fi/rontgenkuvaus/",
+     "title": "Röntgenkuvaus"
+    },
+    {
+     "url": "https://lapha.fi/rontgen-ja-muut-kuvantamispalvelut",
+     "title": "Röntgen ja muut kuvantamispalvelut - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/rontgen-lapuan-sosiaali-ja-terveyskeskus-etela-pohjanmaan-hyvinvointialue/d41e3339-c131-45f9-92a8-796b8bed5089",
+     "title": "Röntgen, Lapuan sosiaali- ja terveyskeskus - Etelä-Pohjanmaan ..."
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 38.8,
+   "result_en": "writes the answer",
+   "ms": 11731
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+   "title": "Radiologia",
+   "chars": 13588,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:23:45+00:00",
+   "published": "2026-11-13T01:37:52+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "title": "Keuhkosairaudet",
+   "chars": 4038,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:23:48+00:00",
+   "published": "2026-11-13T01:37:10+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.filha.fi/en/uusi-ohje-terveydenhuollon-ammattilaisille-keuhkosyovan-diagnostiikasta-julkaistu/",
+   "title": "Uusi ohje terveydenhuollon ammattilaisille keuhkosyövän diagnostiikasta julkaistu",
+   "chars": 1464,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:01:26+00:00",
+   "published": "2026-05-22T05:03:29+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:24:27+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: neither Hyvaep's nor Pirha/Tays's pages show same-day chest X-ray reporting with radiology-triggered CT, and the London trial supports a saving of about 31 days.",
+ "seconds": 50.6,
+ "searched_en": "Searched 7 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Hyvaep keuhkokuva lausunto samana päivänä\"; \"Tays thorax-röntgen päivystyslausunto\"; \"Seinäjoen keskussairaala keuhkokuvan jälkeen suoraan TT\", ...) and read 5 pages on ncbi.nlm.nih.gov, hyvaep.fi, pirha.fi, filha.fi.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Hyvaep keuhkokuva lausunto samana päivänä",
+  "Tays thorax-röntgen päivystyslausunto",
+  "Seinäjoen keskussairaala keuhkokuvan jälkeen suoraan TT",
+  "Etelä-Pohjanmaa keuhkosyöpä diagnostiikka nopeutus hanke",
+  "hyvaep keuhkosyöpäepäily tietokonetomografia terveyskeskus lähete",
+  "röntgenhoitaja lausuu keuhkokuvat Etelä-Pohjanmaa"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: neither Hyvaep's nor Pirha/Tays's pages show same-day chest X-ray reporting with radiology-triggered CT, and the London trial supports a saving of about 31 days.",
+ "verdict_en": "No public sign that it is running in South Ostrobothnia. Recent evidence supports the size of effect we assume. The Thorax 2023 trial (radioX) found a median saving of 31 days from chest X-ray to lung cancer diagnosis (32 vs 63 days).",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "same_day_cxr_ct",
+ "intervention_name_en": "Same-day chest X-ray report with immediate CT",
+ "area_name_en": "South Ostrobothnia wellbeing services county"
+}

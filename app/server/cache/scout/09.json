@@ -1,0 +1,552 @@
+{
+ "area_id": "09",
+ "area_name_en": "Päijät-Häme wellbeing services county",
+ "area_name_fi": "Päijät-Hämeen hyvinvointialue",
+ "question": "What is Päijät-Häme wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-09-28",
+   "what_en": "The oncology outpatient clinic gives cancer drug therapy in its own infusion unit and also offers remote appointments.",
+   "what_fi": "Syöpätautien poliklinikka antaa syöpälääkehoitoja infuusioyksikössä ja tarjoaa etävastaanottoja.",
+   "quote": "Poliklinikalla on syöpätautien erikoislääkärin ja sairaanhoitajan vastaanottoja, rintasyöpäpotilaiden oirepoliklinikka ja syöpälääkehoitoja antava infuusioyksikkö. Poliklinikalla on mahdollisuus etävastaanottoihin.",
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+   "title": "Syöpätautien poliklinikka - Päijät-Hämeen hyvinvointialue",
+   "relates_to": "drug_therapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:05+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-08-19",
+   "what_en": "Päijät-Häme Central Hospital's radiotherapy unit started using a new state-of-the-art radiotherapy machine; the press release is dated August 2026.",
+   "what_fi": "Päijät-Hämeen keskussairaalan sädehoitoyksikkö otti käyttöön uuden sädehoitolaitteen (tiedote elokuu 2026).",
+   "quote": "Päijät-Hämeen keskussairaalan sädehoitoyksikössä on otettu käyttöön uusi, alan viimeisintä teknologiaa edustava sädehoitolaite.",
+   "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+   "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:48+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-08-19",
+   "what_en": "The county runs a cancer centre at the central hospital that brings together cancer treatment, follow-up and specialist expertise, and says it aims for smooth care pathways.",
+   "what_fi": "Hyvinvointialueella on keskussairaalassa syöpäkeskus, joka kokoaa syövänhoidon, seurannan ja asiantuntijaosaamisen.",
+   "quote": "Sädehoitoyksikkö on osa Päijät-Hämeen keskussairaalan syöpäkeskusta, joka kokoaa yhteen syövänhoidon, seurannan ja asiantuntijaosaamisen.",
+   "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+   "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:48+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-03-25",
+   "what_en": "The central hospital's pulmonary ward treats lung cancer and performs bronchoscopies; the page does not say whether EBUS is done or how much capacity there is.",
+   "what_fi": "Keskussairaalan keuhkosairauksien osasto hoitaa keuhkosyöpää ja tekee keuhkoputkentähystyksiä.",
+   "quote": "Yleisimpiä osastolla hoidettavia sairauksia ovat astma, keuhkoahtaumatauti, keuhkokuume, keuhkosyöpä, uniapnea, sarkoidoosi ja tuberkuloosi. Osastolla tehdään mm. keuhkoputkentähystyksiä ja muita pienempiä toimenpiteitä.",
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+   "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue",
+   "relates_to": "ebus_capacity",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:49+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-03-25",
+   "what_en": "The county screens only for cervical, breast and bowel cancer; lung cancer screening is not listed.",
+   "what_fi": "Hyvinvointialue järjestää vain kohdunkaulan-, rinta- ja suolistosyövän seulontoja; keuhkosyöpäseulontaa ei mainita.",
+   "quote": "Päijät-Hämeen hyvinvointialueella järjestetään kohdunkaulan syövän, rintasyövän ja suolistosyövän vapaaehtoisia ja maksuttomia seulontatutkimuksia.",
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/seulonnat/",
+   "title": "Seulonnat - Päijät-Hämeen hyvinvointialue",
+   "relates_to": "ldct_screening",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:34:04+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2024-11-11",
+   "what_en": "In November 2024 the county board was asked to move the radiotherapy unit and the oncologists from HUS to the county at the turn of the year, and to create posts for the doctors.",
+   "what_fi": "Marraskuussa 2024 aluehallitukselle esitettiin sädehoitoyksikön ja syöpälääkäreiden siirtoa HUSilta hyvinvointialueelle vuodenvaihteessa.",
+   "quote": "Aluehallitukselle esitetään, että sädehoitoyksikön toiminta siirretään liikkeenluovutuksella Päijät-Hämeen hyvinvointialueelle vuodenvaihteessa. Samalla lääkäreille perustetaan tarvittavat virat.",
+   "url": "https://yle.fi/a/74-20123035",
+   "title": "Päijät-Hämeen hyvinvointialue haluaa syöpähoidot kokonaan omiin käsiin",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:49+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Päijät-Häme has taken cancer drug therapy and radiotherapy under its own control: a 2024 proposal moved them from HUS to the county. It now runs a cancer centre with a new radiotherapy machine, in use from August 2026, and its pulmonary ward does bronchoscopies for lung cancer. I found no lung-cancer-specific pathway, waiting-time figures, nurse navigator, screening pilot or MDT arrangement with HUS.",
+ "not_found_en": "I searched for lung cancer waiting times, a lung cancer pathway, lung cancer screening, and smoking cessation within hospital care, and found nothing specific to Päijät-Häme for any of them.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 4236
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Hämeen hyvinvointialue keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: suomi.fi, paijatha.fi",
+   "ms": 1865,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-vuodeosasto-paijat-hameen-hyvinvointialue/edf7fa60-a60d-40d4-8ef1-5153998c1494",
+     "title": "Keuhkosairauksien vuodeosasto - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://paijatha.fi/",
+     "title": "Etusivu - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-poliklinikan-palvelut-paijat-hameen-hyvinvointialue/04f35634-6db6-4a1b-8aec-a3e2459ba299",
+     "title": "Keuhkosairauksien poliklinikan palvelut - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Hämeen keskussairaala keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: paijatha.fi, phhyky.palvelupolku.fi, suomi.fi",
+   "ms": 2377,
+   "results": [
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://phhyky.palvelupolku.fi/yhteystiedot/",
+     "title": "Yhteystiedot"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-poliklinikan-palvelut-paijat-hameen-hyvinvointialue/04f35634-6db6-4a1b-8aec-a3e2459ba299",
+     "title": "Keuhkosairauksien poliklinikan palvelut - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-poliklinikka-paijat-hameen-hyvinvointialue/159d0d55-8784-4dfa-93f3-efba4ed632e9",
+     "title": "Keuhkosairauksien poliklinikka - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/asiointiopas/keskussairaalan-palvelut/",
+     "title": "Keskussairaalan palvelut - Päijät-Hämeen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Hämeen hyvinvointialue syöpähoito aluehallitus päätös",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: paijatha.fi, yle.fi",
+   "ms": 1674,
+   "results": [
+    {
+     "url": "https://paijatha.fi/tietoa-meista/paatoksenteko/",
+     "title": "Päätöksenteko - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/tietoa-meista/paatoksenteko/aluehallitus/",
+     "title": "Aluehallitus - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/wp-content/uploads/2025/04/Paatos-Seppo-Korhosen-valitukseen-Paijat-Hameen-aluehallituksen-paatoksesta-3.2.2025-%C2%A7-26.pdf",
+     "title": "HÄMEENLINNAN HALLINTO-OIKEUS PÄÄTÖS 10.04.2025 761/2025"
+    },
+    {
+     "url": "https://yle.fi/a/74-20123035",
+     "title": "Päijät-Hämeen hyvinvointialue haluaa syöpähoidot kokonaan omiin käsiin | Päijät-Häme | Yle"
+    },
+    {
+     "url": "https://kantahameenhva.oncloudos.com/cgi/DREQUEST.PHP?page=meetingitem&id=202532-7",
+     "title": "Aluehallitus Pöytäkirja 17.02.2025/Pykälä 65 | Dynasty..."
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+     "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lahti keskussairaala syöpä uutinen 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: paijatha.fi, etela-suomensyopayhdistys.fi, yle.fi",
+   "ms": 1523,
+   "results": [
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://etela-suomensyopayhdistys.fi/",
+     "title": "Syöpäyhdistys on tukenasi | Etelä-Suomen Syöpäyhdistys"
+    },
+    {
+     "url": "https://paijatha.fi/asiointiopas/keskussairaalan-palvelut/",
+     "title": "Keskussairaalan palvelut - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20251865?origin=rss",
+     "title": "Viikon uutinen selkosuomeksi | lauantai 17.10.2026 | Selkouutiset | Yle"
+    },
+    {
+     "url": "https://yle.fi/a/74-20251865",
+     "title": "Viikon uutinen selkosuomeksi | lauantai 17.10.2026 | Selkouutiset..."
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+     "title": "Syöpäkeskus | HUS"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.6,
+   "result_en": "3 reads: radiotherapy equipment; reorganisation; bronchoscopy",
+   "ms": 4878
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+   "focus": "sädehoitolaite stereotaktinen keuhko",
+   "why": "radiotherapy equipment",
+   "status": "done",
+   "t_s": 11.5,
+   "result_en": "\"Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoi\" · 5 040 chars · 10 of 11 passages kept",
+   "ms": 1969,
+   "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue",
+   "chars": 5040,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://yle.fi/a/74-20123035",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://yle.fi/a/74-20123035",
+   "focus": "sädehoitoyksikkö liikkeenluovutus HUS",
+   "why": "reorganisation",
+   "status": "done",
+   "t_s": 11.5,
+   "result_en": "\"Päijät-Hämeen hyvinvointialue haluaa syöpähoidot kokonaan omiin käsiin\" · 1 231 chars",
+   "ms": 3806,
+   "title": "Päijät-Hämeen hyvinvointialue haluaa syöpähoidot kokonaan omiin käsiin",
+   "chars": 1231,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://yle.fi/a/74-20123035",
+   "published": "2024-11-11T06:54:54+02:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+   "focus": "keuhkosyöpä keuhkoputkentähystys",
+   "why": "bronchoscopy",
+   "status": "done",
+   "t_s": 11.5,
+   "result_en": "\"Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue\" · 1 361 chars",
+   "ms": 3388,
+   "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue",
+   "chars": 1361,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+   "published": "2026-03-25T07:21:36+00:00",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.3,
+   "result_en": "2 searches: numbers, screening; smoking cessation",
+   "ms": 4920
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Päijät-Häme keuhkosyöpä seulonta tai odotusaika",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "numbers, screening",
+   "status": "done",
+   "t_s": 20.2,
+   "result_en": "6 results: kaikkisyovasta.fi, suomi.fi, paijatha.fi",
+   "ms": 2085,
+   "results": [
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/seulonta-voisi-paljastaa-varhaisen-keuhkosyovan/",
+     "title": "Seulonta voisi paljastaa varhaisen keuhkosyövän - Kaikki syövästä"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-osasto-paijat-hameen-hyvinvointialue/7b8945ca-2be6-4931-8868-cbfebe174907",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+     "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/seulonnat/",
+     "title": "Seulonnat - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/seulonnat-paijat-hameen-hyvinvointialue/cfe362f1-ab9f-4fd8-a026-35a09ad7f7c9",
+     "title": "Seulonnat - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-vuodeosasto-paijat-hameen-hyvinvointialue/edf7fa60-a60d-40d4-8ef1-5153998c1494",
+     "title": "Keuhkosairauksien vuodeosasto - Päijät-Hämeen hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "paijatha.fi tupakoinnin lopettaminen erikoissairaanhoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "smoking cessation",
+   "status": "done",
+   "t_s": 20.2,
+   "result_en": "6 results: paijatha.fi, kaypahoito.fi, potilasohjeet.pirha.fi",
+   "ms": 2001,
+   "results": [
+    {
+     "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveytta-ja-hyvinvointia-edistavat-palvelut/tupakointi/",
+     "title": "Tukea tupakoinnin lopettamiseen - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://paijatha.fi/asiointiopas/hoitopaikan-valinta/",
+     "title": "Hoitopaikan valinta - Päijät-Hämeen hyvinvointialue"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/tupakatta-terveempi",
+     "title": "Tupakatta terveempi - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.pirha.fi/web/hoito-ja-palveluketjut/keuhkoahtaumataudin-hoitoketju/aktiivinen-tupakasta-vieroituksen-tukeminen-ja-keuhkoahtaumataudin-tunnistaminen/tupakasta-vieroitus",
+     "title": "Tupakasta vieroitus - Hoito- ja palveluketjut - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.3,
+   "result_en": "2 reads: screening scope; oncology clinic",
+   "ms": 4450
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/seulonnat/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/seulonnat/",
+   "focus": "seulonta rintasyöpä suolistosyöpä keuhko",
+   "why": "screening scope",
+   "status": "done",
+   "t_s": 26.8,
+   "result_en": "\"Seulonnat - Päijät-Hämeen hyvinvointialue\" · 3 955 chars",
+   "ms": 3415,
+   "title": "Seulonnat - Päijät-Hämeen hyvinvointialue",
+   "chars": 3955,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/seulonnat/",
+   "published": "2026-03-25T07:35:25+00:00",
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+   "focus": "syöpälääkehoito sädehoito hoitaja",
+   "why": "oncology clinic",
+   "status": "done",
+   "t_s": 26.8,
+   "result_en": "\"Syöpätautien poliklinikka - Päijät-Hämeen hyvinvointialue\" · 2 709 chars",
+   "ms": 4202,
+   "title": "Syöpätautien poliklinikka - Päijät-Hämeen hyvinvointialue",
+   "chars": 2709,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+   "published": "2026-09-28T12:28:07+00:00",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.0,
+   "result_en": "writes the answer",
+   "ms": 17648
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+   "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue",
+   "chars": 5040,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:48+00:00"
+  },
+  {
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/osastot/keuhkosairauksien-osasto/",
+   "title": "Keuhkosairauksien osasto - Päijät-Hämeen hyvinvointialue",
+   "chars": 1361,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:49+00:00"
+  },
+  {
+   "url": "https://yle.fi/a/74-20123035",
+   "title": "Päijät-Hämeen hyvinvointialue haluaa syöpähoidot kokonaan omiin käsiin",
+   "chars": 1231,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:49+00:00"
+  },
+  {
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/seulonnat/",
+   "title": "Seulonnat - Päijät-Hämeen hyvinvointialue",
+   "chars": 3955,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:04+00:00"
+  },
+  {
+   "url": "https://paijatha.fi/palvelut-ja-hoitoon-hakeutuminen/terveyspalvelut/poliklinikat/syopatautien-poliklinikka/",
+   "title": "Syöpätautien poliklinikka - Päijät-Hämeen hyvinvointialue",
+   "chars": 2709,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:34:05+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:34:23+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 48.6
+}

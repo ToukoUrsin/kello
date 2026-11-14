@@ -1,0 +1,368 @@
+[
+ {
+  "id": "fast_track_pathway",
+  "name_en": "Standardised lung cancer fast-track pathway",
+  "name_fi": "Keuhkosyövän nopeutettu hoitopolku",
+  "step": "diagnosis",
+  "what_en": "Booked slots for CT, bronchoscopy and MDT within fixed day limits, with one coordinator who owns the clock.",
+  "what_fi": "Varatut ajat TT-kuvaukseen, bronkoskopiaan ja moniammatilliseen kokoukseen kiinteissä aikarajoissa; yksi koordinaattori vastaa aikataulusta.",
+  "effect": {
+   "metric": "relative_days",
+   "value": 0.3,
+   "lo": 0.15,
+   "hi": 0.42
+  },
+  "cost": {
+   "eur_setup": 234000.0,
+   "eur_per_year": 416000.0,
+   "scales_with": "county",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1",
+  "owner_en": "Chief physician, pulmonology",
+  "owner_fi": "Keuhkosairauksien ylilääkäri",
+  "prerequisite_en": null,
+  "confidence": "medium",
+  "evidence": [
+   {
+    "claim": "Standardised lung cancer fast-track pathway: sample effect 0.3 (relative_days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_fast_track_pathway"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "ct_capacity",
+  "name_en": "Direct-access CT slots for primary care",
+  "name_fi": "Suora pääsy TT-kuvaukseen perusterveydenhuollosta",
+  "step": "primary",
+  "what_en": "Reserved low-dose CT slots that a GP can book the same week for a patient with red-flag symptoms.",
+  "what_fi": "Varatut matala-annos-TT-ajat, jotka yleislääkäri voi varata samalle viikolle hälytysoireiselle potilaalle.",
+  "effect": {
+   "metric": "days",
+   "value": 7,
+   "lo": 3,
+   "hi": 11
+  },
+  "cost": {
+   "eur_setup": 104000.0,
+   "eur_per_year": 247000.0,
+   "scales_with": "per_100k_pop",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.5",
+  "owner_en": "Head of imaging services",
+  "owner_fi": "Kuvantamisen palvelujohtaja",
+  "prerequisite_en": null,
+  "confidence": "medium",
+  "evidence": [
+   {
+    "claim": "Direct-access CT slots for primary care: sample effect 7 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_ct_capacity"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "ai_cxr_triage",
+  "name_en": "AI triage of chest X-rays",
+  "name_fi": "Keuhkokuvien tekoälyseulonta",
+  "step": "primary",
+  "what_en": "Software flags suspicious chest X-rays for same-day reporting and CT.",
+  "what_fi": "Ohjelmisto nostaa epäilyttävät keuhkokuvat saman päivän lausuntoon ja TT-kuvaukseen.",
+  "effect": {
+   "metric": "days",
+   "value": 4,
+   "lo": 0,
+   "hi": 8
+  },
+  "cost": {
+   "eur_setup": 156000.0,
+   "eur_per_year": 182000.0,
+   "scales_with": "county",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "4.1",
+  "owner_en": "Head of imaging services",
+  "owner_fi": "Kuvantamisen palvelujohtaja",
+  "prerequisite_en": "Free CT capacity (ct_capacity); without it flagged patients wait in the same queue.",
+  "confidence": "low",
+  "null_results": [
+   {
+    "claim": "AI X-ray triage alone: no reduction in time to diagnosis without CT capacity (LungIMPACT 2026)",
+    "url": null,
+    "year": 2026
+   }
+  ],
+  "evidence": [
+   {
+    "claim": "AI triage of chest X-rays: sample effect 4 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_ai_cxr_triage"
+   }
+  ]
+ },
+ {
+  "id": "nurse_navigator",
+  "name_en": "Cancer nurse navigator",
+  "name_fi": "Syöpähoitaja-koordinaattori",
+  "step": "referral",
+  "what_en": "A named nurse books every step, chases results and is the patient's single phone number.",
+  "what_fi": "Nimetty hoitaja varaa jokaisen vaiheen, seuraa tuloksia ja on potilaan ainoa yhteysnumero.",
+  "effect": {
+   "metric": "days",
+   "value": 5,
+   "lo": 2,
+   "hi": 9
+  },
+  "cost": {
+   "eur_setup": 26000.0,
+   "eur_per_year": 176800.0,
+   "scales_with": "per_100k_pop",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "1.2",
+  "owner_en": "Director of nursing, cancer services",
+  "owner_fi": "Syöpäpalvelujen hoitotyön johtaja",
+  "prerequisite_en": null,
+  "confidence": "medium",
+  "evidence": [
+   {
+    "claim": "Cancer nurse navigator: sample effect 5 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_nurse_navigator"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "reflex_molecular",
+  "name_en": "Reflex molecular testing at biopsy",
+  "name_fi": "Refleksinomainen molekyylitestaus biopsiasta",
+  "step": "diagnosis",
+  "what_en": "The pathologist orders the gene panel when non-small-cell cancer is seen, without waiting for the oncologist.",
+  "what_fi": "Patologi tilaa geenipaneelin heti ei-pienisoluisen syövän löydyttyä odottamatta onkologin pyyntöä.",
+  "effect": {
+   "metric": "days",
+   "value": 8,
+   "lo": 4,
+   "hi": 13
+  },
+  "cost": {
+   "eur_setup": 52000.0,
+   "eur_per_year": 2300.0,
+   "scales_with": "per_patient",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "4.3",
+  "owner_en": "Chief of pathology",
+  "owner_fi": "Patologian ylilääkäri",
+  "prerequisite_en": null,
+  "confidence": "high",
+  "evidence": [
+   {
+    "claim": "Reflex molecular testing at biopsy: sample effect 8 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_reflex_molecular"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "virtual_mdt",
+  "name_en": "Twice-weekly virtual MDT with the university hospital",
+  "name_fi": "Etä-MDT yliopistosairaalan kanssa kahdesti viikossa",
+  "step": "treatment",
+  "what_en": "Cases are decided by video within days instead of waiting for the next in-person meeting.",
+  "what_fi": "Tapaukset ratkaistaan videoyhteydellä päivissä seuraavan lähikokouksen odottamisen sijaan.",
+  "effect": {
+   "metric": "days",
+   "value": 4,
+   "lo": 1,
+   "hi": 7
+  },
+  "cost": {
+   "eur_setup": 39000.0,
+   "eur_per_year": 117000.0,
+   "scales_with": "county",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1",
+  "owner_en": "University hospital cancer centre",
+  "owner_fi": "Yliopistosairaalan syöpäkeskus",
+  "prerequisite_en": null,
+  "confidence": "medium",
+  "evidence": [
+   {
+    "claim": "Twice-weekly virtual MDT with the university hospital: sample effect 4 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_virtual_mdt"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "symptom_campaign",
+  "name_en": "Symptom awareness campaign (cough over 3 weeks)",
+  "name_fi": "Oirekampanja (yli 3 viikon yskä)",
+  "step": "patient",
+  "what_en": "Local campaign and pharmacy prompts telling people with a persistent cough to book a visit.",
+  "what_fi": "Paikallinen kampanja ja apteekkien muistutukset: pitkittynyt yskä kannattaa tutkia.",
+  "effect": {
+   "metric": "days",
+   "value": 3,
+   "lo": 0,
+   "hi": 7
+  },
+  "cost": {
+   "eur_setup": 78000.0,
+   "eur_per_year": 98800.0,
+   "scales_with": "per_100k_pop",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "1.3",
+  "owner_en": "Health promotion lead",
+  "owner_fi": "Hyvinvoinnin ja terveyden edistämisen päällikkö",
+  "prerequisite_en": null,
+  "confidence": "low",
+  "evidence": [
+   {
+    "claim": "Symptom awareness campaign (cough over 3 weeks): sample effect 3 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_symptom_campaign"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "gp_decision_support",
+  "name_en": "GP risk tool and e-consultation with pulmonology",
+  "name_fi": "Yleislääkärin riskityökalu ja e-konsultaatio keuhkolääkärille",
+  "step": "primary",
+  "what_en": "Risk score in the patient record plus an e-consult answered within two working days.",
+  "what_fi": "Riskipisteytys potilastietojärjestelmässä ja e-konsultaatio, johon vastataan kahdessa arkipäivässä.",
+  "effect": {
+   "metric": "days",
+   "value": 4,
+   "lo": 1,
+   "hi": 8
+  },
+  "cost": {
+   "eur_setup": 65000.0,
+   "eur_per_year": 104000.0,
+   "scales_with": "county",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.5",
+  "owner_en": "Medical director, primary care",
+  "owner_fi": "Perusterveydenhuollon johtava lääkäri",
+  "prerequisite_en": null,
+  "confidence": "medium",
+  "evidence": [
+   {
+    "claim": "GP risk tool and e-consultation with pulmonology: sample effect 4 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_gp_decision_support"
+   }
+  ],
+  "null_results": []
+ },
+ {
+  "id": "pathway_timestamps",
+  "name_en": "Record and publish the five pathway timestamps",
+  "name_fi": "Kirjataan ja julkaistaan hoitopolun viisi aikaleimaa",
+  "step": "referral",
+  "what_en": "Symptom onset, first contact, referral, treatment decision and treatment start recorded as structured fields and published monthly.",
+  "what_fi": "Oireen alku, ensikontakti, lähete, hoitopäätös ja hoidon alku kirjataan rakenteisesti ja julkaistaan kuukausittain.",
+  "effect": {
+   "metric": "days",
+   "value": 1,
+   "lo": 0,
+   "hi": 3
+  },
+  "cost": {
+   "eur_setup": 117000.0,
+   "eur_per_year": 52000.0,
+   "scales_with": "county",
+   "basis": "Sample cost set for the demo; editable",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.2",
+  "owner_en": "Chief information officer",
+  "owner_fi": "Tietojohtaja",
+  "prerequisite_en": null,
+  "confidence": "medium",
+  "evidence": [
+   {
+    "claim": "Record and publish the five pathway timestamps: sample effect 1 (days)",
+    "quote": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "year": null,
+    "design": null,
+    "n": null,
+    "verified": false,
+    "source_id": "fx_ev_pathway_timestamps"
+   }
+  ],
+  "null_results": []
+ }
+]

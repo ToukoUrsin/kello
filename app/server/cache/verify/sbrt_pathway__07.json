@@ -1,0 +1,393 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kanta-Häme wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated. Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
+ "area_id": "07",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "In a Dutch national cancer registry study of elderly stage I patients, 7% fewer went untreated once stereotactic radiotherapy was fully available. The study does not measure the effect on the share of all lung cancer patients.",
+ "supported_en": "A Netherlands Cancer Registry study (Annals of Oncology 2012) found 7% fewer untreated elderly stage I patients after stereotactic radiotherapy became available.",
+ "not_supported_en": "The pages do not show the assumed 0.8-point rise in the curative share of all patients, or any figure for Finland or Kanta-Häme.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Pieniin kasvaimiin voidaan antaa muutamalla hoitokerralla toteutettavaa täsmäsädehoitoa, johon yleensä liittyy hyvin vähän sivuvaikutuksia.",
+ "in_use_source": {
+  "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+  "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+  "published": "19.8.2026",
+  "fetched_at": "2026-11-14T01:15:27+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows a written rule that every stage I patient too frail for surgery is referred for stereotactic radiotherapy, or an audit that checks this happens.",
+ "summary_en": "Pirkanmaa wellbeing services county (pirha.fi), which runs Tays, has a lung cancer care-pathway page (dated 19.8.2026). It says a multidisciplinary team assesses whether each patient can get curative treatment, and that patients who cannot be operated can get precision radiotherapy (täsmäsädehoito) in a few sessions for small tumours. No page says that every frail stage I patient must be referred. On the effect, a Netherlands Cancer Registry study found 7% fewer elderly stage I patients left untreated once stereotactic radiotherapy was available, but it does not measure the effect on the share of all lung cancer patients.",
+ "unanswered_en": "I looked for a written referral rule for frail stage I patients, Kanta-Häme's own pathway pages, and Finnish data on how many of these patients go untreated, and did not find them.",
+ "sources": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Pieniin kasvaimiin voidaan antaa muutamalla hoitokerralla toteutettavaa täsmäsädehoitoa, johon yleensä liittyy hyvin vähän sivuvaikutuksia.",
+   "about": "in_use",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:27+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "quote": "Moniammatillinen työryhmä arvioi, voiko keuhkosyöpääsi antaa paranemiseen tähtäävä hoitoa.",
+   "about": "in_use",
+   "published": "19.8.2026",
+   "fetched_at": "2026-11-14T01:15:27+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "quote": "Jos leikkaus ei ole mahdollinen, mutta potilaan kunto on hyvä, suunnittelevat syöpälääkärit hoidoksi joko syöpälääkehoidon tai sädehoidon, joskus molemmat.",
+   "about": "context",
+   "published": "9.9.2025",
+   "fetched_at": "2026-11-14T01:15:25+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "quote": "Between period A and C, there was a 7% absolute reduction in patients going untreated",
+   "about": "effect",
+   "published": "2012-05-02",
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, tays.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/syopa/tayspolku-verkkopoliklinikka-syopapotilaille",
+     "title": "TaysPolku verkkopoliklinikka syöpäpotilaille - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Oma Häme stereotaktinen sädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, tamamatka.fi, docrates.mehilainen.fi",
+   "ms": 2091,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13049",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
+    },
+    {
+     "url": "https://tamamatka.fi/stereotaktinen-sadehoito-aivoihin-keuhkosyopa/",
+     "title": "Stereotaktinen sädehoito aivoihin - Kun lääkkeet menettävät tehonsa - TÄMÄ MATKA"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/stereotaktinen-sadehoito/",
+     "title": "Stereotaktinen sädehoito - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito-etapesakkeiden-hoidossa/",
+     "title": "Hypofraktioitu stereotaktinen sädehoito ja etäpesäkkeet - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito/",
+     "title": "Tehokas hypofraktioitu stereotaktinen sädehoito - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/sadehoito/",
+     "title": "Sädehoito – Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays täsmäsädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: keuhkosyopa.fi, terveyskyla.fi, tamamatka.fi, pirha.fi",
+   "ms": 2145,
+   "results": [
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/tasmahoidot/",
+     "title": "Täsmähoidot – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://tamamatka.fi/stereotaktinen-sadehoito-aivoihin-keuhkosyopa/",
+     "title": "Stereotaktinen sädehoito aivoihin - Kun lääkkeet menettävät tehonsa - TÄMÄ MATKA"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/keuhko-ja-ihosairauksien-vuodeosasto-tays-keskussairaala",
+     "title": "Keuhko- ja ihosairauksien vuodeosasto, Tays Keskussairaala"
+    },
+    {
+     "url": "https://www.tays.fi/fi-fi/palvelut/Syovanhoito/Keuhkosyopa",
+     "title": "Keuhkosyöpä | Tampereen yliopistollinen sairaala"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kanta-Hämeen keskussairaala SBRT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: omahame.fi, hamewiki.fi, suomi.fi",
+   "ms": 1682,
+   "results": [
+    {
+     "url": "https://omahame.fi/kanta-hameen-keskussairaala/",
+     "title": "Ahveniston sairaala eli Assi - Oma Häme"
+    },
+    {
+     "url": "https://www.hamewiki.fi/Kanta-H%C3%A4meen_keskussairaala",
+     "title": "Kanta-Hämeen keskussairaala – Häme-Wiki"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/kuvantamispalvelut-ja-tutkimusyksikot-kanta-hameen-hyvinvointialue/8cd8037d-c8d7-4c45-a167-4cff42cb4ccf",
+     "title": "Kuvantamispalvelut ja tutkimusyksiköt - Kanta-Hämeen ..."
+    },
+    {
+     "url": "https://omahame.fi/yhteystiedot",
+     "title": "Yhteystiedot - Oma Häme"
+    },
+    {
+     "url": "https://www.potilas.com/sairaalat/kanta-hameen-keskussairaala/",
+     "title": "Kanta-Hämeen keskussairaala – yhteystiedot | Potilas.com"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Kanta-H%C3%A4meen_keskussairaala",
+     "title": "Kanta-Hämeen keskussairaala – Wikipedia"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: Tays pathway SBRT; B; A effect",
+   "ms": 4591
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "sädehoito stereotaktinen leikkaukseen soveltumaton hoitokokous",
+   "why": "B: Tays pathway SBRT",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept",
+   "ms": 9329,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "focus": "stereotaktinen sädehoito leikkaus",
+   "why": "B",
+   "status": "done",
+   "t_s": 7.7,
+   "result_en": "\"Keuhkosyöpä - pirha.fi\" · 2 467 chars",
+   "ms": 7533,
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/22553198",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/22553198",
+   "focus": "untreated stereotactic decreased",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 7.7,
+   "result_en": "\"Early-stage lung cancer in elderly patients: a population-based study \" · 1 280 chars · from cache",
+   "ms": 4,
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/22553198",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.0,
+   "result_en": "writes the answer",
+   "ms": 15716
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:15:25+00:00",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:15:27+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:15:42+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask Tays (Pirkanmaa wellbeing services county) first whether its lung cancer team already sends every stage I patient who cannot be operated to stereotactic radiotherapy, because Tays' care-pathway page says the treatment is offered and a team assesses each patient; if it does, pay only for a written referral rule and a follow-up check.",
+ "seconds": 32.7,
+ "searched_en": "Searched 4 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Oma Häme stereotaktinen sädehoito keuhkosyöpä\"; \"Tays täsmäsädehoito keuhkosyöpä\"; \"Kanta-Hämeen keskussairaala SBRT\") and read 3 pages on pirha.fi, europepmc.org.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Oma Häme stereotaktinen sädehoito keuhkosyöpä",
+  "Tays täsmäsädehoito keuhkosyöpä",
+  "Kanta-Hämeen keskussairaala SBRT"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 1
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask Tays (Pirkanmaa wellbeing services county) first whether its lung cancer team already sends every stage I patient who cannot be operated to stereotactic radiotherapy, because Tays' care-pathway page says the treatment is offered and a team assesses each patient; if it does, pay only for a written referral rule and a follow-up check.",
+ "verdict_en": "Partly in place in the Tays university hospital area, which treats Kanta-Häme's patients. Missing: No page shows a written rule that every stage I patient too frail for surgery is referred for stereotactic radiotherapy, or an audit that checks this happens. Evidence supports that it works, but not the size of effect we assume. Supported: A Netherlands Cancer Registry study (Annals of Oncology 2012) found 7% fewer untreated elderly stage I patients after stereotactic radiotherapy became available. Not supported: The pages do not show the assumed 0.8-point rise in the curative share of all patients, or any figure for Finland or Kanta-Häme.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "sbrt_pathway",
+ "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
+ "area_name_en": "Kanta-Häme wellbeing services county"
+}

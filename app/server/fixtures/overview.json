@@ -1,0 +1,499 @@
+{
+ "national": {
+  "total_days": {
+   "median": 127,
+   "lo": 109,
+   "hi": 152
+  },
+  "benchmarks": [
+   {
+    "country": "Finland",
+    "days": 127,
+    "source_id": "fx_model",
+    "kind": "estimated"
+   },
+   {
+    "country": "Denmark",
+    "days": 78,
+    "source_id": "fx_literature",
+    "kind": "measured"
+   },
+   {
+    "country": "Sweden",
+    "days": 97,
+    "source_id": "fx_literature",
+    "kind": "measured"
+   }
+  ],
+  "survival": [
+   {
+    "country": "Finland",
+    "sex": "men",
+    "value": 14.1,
+    "source_id": "fx_nordcan",
+    "kind": "measured",
+    "period": "2018-2022"
+   },
+   {
+    "country": "Finland",
+    "sex": "women",
+    "value": 21.5,
+    "source_id": "fx_nordcan",
+    "kind": "measured",
+    "period": "2018-2022"
+   },
+   {
+    "country": "Denmark",
+    "sex": "men",
+    "value": 20.3,
+    "source_id": "fx_nordcan",
+    "kind": "measured",
+    "period": "2018-2022"
+   },
+   {
+    "country": "Denmark",
+    "sex": "women",
+    "value": 27.0,
+    "source_id": "fx_nordcan",
+    "kind": "measured",
+    "period": "2018-2022"
+   },
+   {
+    "country": "Sweden",
+    "sex": "men",
+    "value": 20.6,
+    "source_id": "fx_nordcan",
+    "kind": "measured",
+    "period": "2018-2022"
+   },
+   {
+    "country": "Sweden",
+    "sex": "women",
+    "value": 27.9,
+    "source_id": "fx_nordcan",
+    "kind": "measured",
+    "period": "2018-2022"
+   }
+  ],
+  "steps": [
+   {
+    "id": "patient",
+    "label_en": "First symptom to first primary care contact",
+    "days": 32
+   },
+   {
+    "id": "primary",
+    "label_en": "Primary care contact to referral",
+    "days": 21
+   },
+   {
+    "id": "referral",
+    "label_en": "Referral to first specialist visit",
+    "days": 16
+   },
+   {
+    "id": "diagnosis",
+    "label_en": "First specialist visit to treatment decision",
+    "days": 35
+   },
+   {
+    "id": "treatment",
+    "label_en": "Treatment decision to treatment start",
+    "days": 23
+   }
+  ]
+ },
+ "areas": [
+  {
+   "id": "20",
+   "short_en": "Kainuu",
+   "short_fi": "Kainuun",
+   "total_days": {
+    "median": 147,
+    "lo": 116,
+    "hi": 176
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 35,
+   "lung_deaths_per_100k": 50.4,
+   "data_coverage": 0.59,
+   "pop_total": 70000,
+   "rank": 1,
+   "excess_days_vs_best": 29
+  },
+  {
+   "id": "21",
+   "short_en": "Lapland",
+   "short_fi": "Lapin",
+   "total_days": {
+    "median": 144,
+    "lo": 112,
+    "hi": 173
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 95,
+   "lung_deaths_per_100k": 54.1,
+   "data_coverage": 0.6,
+   "pop_total": 176000,
+   "rank": 2,
+   "excess_days_vs_best": 26
+  },
+  {
+   "id": "16",
+   "short_en": "South Ostrobothnia",
+   "short_fi": "Etelä-Pohjanmaan",
+   "total_days": {
+    "median": 138,
+    "lo": 109,
+    "hi": 164
+   },
+   "worst_step": "diagnosis",
+   "deaths_per_year": 112,
+   "lung_deaths_per_100k": 58.5,
+   "data_coverage": 0.7,
+   "pop_total": 191000,
+   "rank": 3,
+   "excess_days_vs_best": 20
+  },
+  {
+   "id": "09",
+   "short_en": "Päijät-Häme",
+   "short_fi": "Päijät-Hämeen",
+   "total_days": {
+    "median": 136,
+    "lo": 106,
+    "hi": 163
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 112,
+   "lung_deaths_per_100k": 54.5,
+   "data_coverage": 0.73,
+   "pop_total": 205000,
+   "rank": 4,
+   "excess_days_vs_best": 18
+  },
+  {
+   "id": "10",
+   "short_en": "Kymenlaakso",
+   "short_fi": "Kymenlaakson",
+   "total_days": {
+    "median": 135,
+    "lo": 107,
+    "hi": 161
+   },
+   "worst_step": "diagnosis",
+   "deaths_per_year": 77,
+   "lung_deaths_per_100k": 48.3,
+   "data_coverage": 0.6,
+   "pop_total": 160000,
+   "rank": 5,
+   "excess_days_vs_best": 17
+  },
+  {
+   "id": "12",
+   "short_en": "South Savo",
+   "short_fi": "Etelä-Savon",
+   "total_days": {
+    "median": 134,
+    "lo": 105,
+    "hi": 161
+   },
+   "worst_step": "diagnosis",
+   "deaths_per_year": 78,
+   "lung_deaths_per_100k": 60.0,
+   "data_coverage": 0.77,
+   "pop_total": 130000,
+   "rank": 6,
+   "excess_days_vs_best": 16
+  },
+  {
+   "id": "18",
+   "short_en": "Central Ostrobothnia",
+   "short_fi": "Keski-Pohjanmaan",
+   "total_days": {
+    "median": 134,
+    "lo": 106,
+    "hi": 160
+   },
+   "worst_step": "diagnosis",
+   "deaths_per_year": 32,
+   "lung_deaths_per_100k": 47.4,
+   "data_coverage": 0.53,
+   "pop_total": 68000,
+   "rank": 7,
+   "excess_days_vs_best": 16
+  },
+  {
+   "id": "14",
+   "short_en": "North Karelia",
+   "short_fi": "Pohjois-Karjalan",
+   "total_days": {
+    "median": 131,
+    "lo": 102,
+    "hi": 158
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 78,
+   "lung_deaths_per_100k": 47.9,
+   "data_coverage": 0.81,
+   "pop_total": 163000,
+   "rank": 8,
+   "excess_days_vs_best": 13
+  },
+  {
+   "id": "06",
+   "short_en": "Satakunta",
+   "short_fi": "Satakunnan",
+   "total_days": {
+    "median": 130,
+    "lo": 102,
+    "hi": 156
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 104,
+   "lung_deaths_per_100k": 49.1,
+   "data_coverage": 0.57,
+   "pop_total": 212000,
+   "rank": 9,
+   "excess_days_vs_best": 12
+  },
+  {
+   "id": "17",
+   "short_en": "Ostrobothnia",
+   "short_fi": "Pohjanmaan",
+   "total_days": {
+    "median": 129,
+    "lo": 101,
+    "hi": 155
+   },
+   "worst_step": "treatment",
+   "deaths_per_year": 85,
+   "lung_deaths_per_100k": 48.3,
+   "data_coverage": 0.47,
+   "pop_total": 177000,
+   "rank": 10,
+   "excess_days_vs_best": 11
+  },
+  {
+   "id": "19",
+   "short_en": "North Ostrobothnia",
+   "short_fi": "Pohjois-Pohjanmaan",
+   "total_days": {
+    "median": 129,
+    "lo": 100,
+    "hi": 156
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 195,
+   "lung_deaths_per_100k": 46.8,
+   "data_coverage": 0.76,
+   "pop_total": 416000,
+   "rank": 11,
+   "excess_days_vs_best": 11
+  },
+  {
+   "id": "91",
+   "short_en": "Åland",
+   "short_fi": "Ahvenanmaa",
+   "total_days": {
+    "median": 129,
+    "lo": 101,
+    "hi": 155
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 16,
+   "lung_deaths_per_100k": 51.7,
+   "data_coverage": 0.42,
+   "pop_total": 30000,
+   "rank": 12,
+   "excess_days_vs_best": 11
+  },
+  {
+   "id": "07",
+   "short_en": "Kanta-Häme",
+   "short_fi": "Kanta-Hämeen",
+   "total_days": {
+    "median": 128,
+    "lo": 100,
+    "hi": 154
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 87,
+   "lung_deaths_per_100k": 51.2,
+   "data_coverage": 0.8,
+   "pop_total": 170000,
+   "rank": 13,
+   "excess_days_vs_best": 10
+  },
+  {
+   "id": "02",
+   "short_en": "Central Uusimaa",
+   "short_fi": "Keski-Uudenmaan",
+   "total_days": {
+    "median": 126,
+    "lo": 99,
+    "hi": 151
+   },
+   "worst_step": "diagnosis",
+   "deaths_per_year": 90,
+   "lung_deaths_per_100k": 44.4,
+   "data_coverage": 0.51,
+   "pop_total": 203000,
+   "rank": 14,
+   "excess_days_vs_best": 8
+  },
+  {
+   "id": "05",
+   "short_en": "Southwest Finland",
+   "short_fi": "Varsinais-Suomen",
+   "total_days": {
+    "median": 126,
+    "lo": 101,
+    "hi": 149
+   },
+   "worst_step": "treatment",
+   "deaths_per_year": 242,
+   "lung_deaths_per_100k": 49.3,
+   "data_coverage": 0.89,
+   "pop_total": 490000,
+   "rank": 15,
+   "excess_days_vs_best": 8
+  },
+  {
+   "id": "15",
+   "short_en": "Central Finland",
+   "short_fi": "Keski-Suomen",
+   "total_days": {
+    "median": 126,
+    "lo": 100,
+    "hi": 150
+   },
+   "worst_step": "primary",
+   "deaths_per_year": 132,
+   "lung_deaths_per_100k": 48.4,
+   "data_coverage": 0.78,
+   "pop_total": 273000,
+   "rank": 16,
+   "excess_days_vs_best": 8
+  },
+  {
+   "id": "13",
+   "short_en": "North Savo",
+   "short_fi": "Pohjois-Savon",
+   "total_days": {
+    "median": 125,
+    "lo": 99,
+    "hi": 149
+   },
+   "worst_step": "treatment",
+   "deaths_per_year": 129,
+   "lung_deaths_per_100k": 51.9,
+   "data_coverage": 0.79,
+   "pop_total": 248000,
+   "rank": 17,
+   "excess_days_vs_best": 7
+  },
+  {
+   "id": "90",
+   "short_en": "Helsinki",
+   "short_fi": "Helsinki",
+   "total_days": {
+    "median": 125,
+    "lo": 98,
+    "hi": 150
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 309,
+   "lung_deaths_per_100k": 46.5,
+   "data_coverage": 0.92,
+   "pop_total": 665000,
+   "rank": 18,
+   "excess_days_vs_best": 7
+  },
+  {
+   "id": "03",
+   "short_en": "West Uusimaa",
+   "short_fi": "Länsi-Uudenmaan",
+   "total_days": {
+    "median": 124,
+    "lo": 98,
+    "hi": 148
+   },
+   "worst_step": "treatment",
+   "deaths_per_year": 236,
+   "lung_deaths_per_100k": 49.2,
+   "data_coverage": 0.73,
+   "pop_total": 480000,
+   "rank": 19,
+   "excess_days_vs_best": 6
+  },
+  {
+   "id": "08",
+   "short_en": "Pirkanmaa",
+   "short_fi": "Pirkanmaan",
+   "total_days": {
+    "median": 123,
+    "lo": 96,
+    "hi": 147
+   },
+   "worst_step": "primary",
+   "deaths_per_year": 299,
+   "lung_deaths_per_100k": 55.3,
+   "data_coverage": 0.6,
+   "pop_total": 540000,
+   "rank": 20,
+   "excess_days_vs_best": 5
+  },
+  {
+   "id": "04",
+   "short_en": "Vantaa and Kerava",
+   "short_fi": "Vantaan ja Keravan",
+   "total_days": {
+    "median": 122,
+    "lo": 95,
+    "hi": 146
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 148,
+   "lung_deaths_per_100k": 52.9,
+   "data_coverage": 0.88,
+   "pop_total": 280000,
+   "rank": 21,
+   "excess_days_vs_best": 4
+  },
+  {
+   "id": "11",
+   "short_en": "South Karelia",
+   "short_fi": "Etelä-Karjalan",
+   "total_days": {
+    "median": 122,
+    "lo": 94,
+    "hi": 147
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 56,
+   "lung_deaths_per_100k": 44.5,
+   "data_coverage": 0.49,
+   "pop_total": 125000,
+   "rank": 22,
+   "excess_days_vs_best": 4
+  },
+  {
+   "id": "01",
+   "short_en": "East Uusimaa",
+   "short_fi": "Itä-Uudenmaan",
+   "total_days": {
+    "median": 118,
+    "lo": 92,
+    "hi": 142
+   },
+   "worst_step": "patient",
+   "deaths_per_year": 45,
+   "lung_deaths_per_100k": 45.8,
+   "data_coverage": 0.66,
+   "pop_total": 99000,
+   "rank": 23,
+   "excess_days_vs_best": 0
+  }
+ ]
+}

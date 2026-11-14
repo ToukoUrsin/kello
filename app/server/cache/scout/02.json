@@ -1,0 +1,553 @@
+{
+ "area_id": "02",
+ "area_name_en": "Central Uusimaa wellbeing services county",
+ "area_name_fi": "Keski-Uudenmaan hyvinvointialue",
+ "question": "What is Central Uusimaa wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-06-15",
+   "what_en": "HUS's lung cancer pathway says a HUS multidisciplinary lung cancer team gives treatment recommendations when needed.",
+   "what_fi": "HUSin keuhkosyövän hoitopolun mukaan HUSin moniammatillinen keuhkosyöpätyöryhmä antaa tarvittaessa hoitosuosituksen.",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "mdt",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "In the HUS pathway, some patients who cannot have surgery can be given high-dose stereotactic radiotherapy.",
+   "what_fi": "HUSin hoitopolussa osa potilaista, joita ei voida leikata, voi saada korkea-annoksista täsmäsädehoitoa.",
+   "quote": "Jos leikkaus ole mahdollinen, hoitomuoto voi olla korkea-annoksinen niin sanottu täsmäsädehoito osassa tapauksia.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "sbrt_pathway",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-06-15",
+   "what_en": "At HUS, lung cancer patients also see a nurse for guidance at their first visit.",
+   "what_fi": "HUSissa keuhkosyöpäpotilas tapaa ensikäynnillä myös sairaanhoitajan ohjausta varten.",
+   "quote": "Ensikäynnillä tapaat myös sairaanhoitajan. Sairaanhoitajan vastaanotolla saat ohjausta ja neuvontaa.",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "relates_to": "nurse_navigator",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "The day unit of Hyvinkää Hospital's pulmonology clinic gives lung cancer drug treatment locally and monitors bronchoscopy patients.",
+   "what_fi": "Hyvinkään sairaalan keuhkosairauksien vastaanoton päiväyksikkö antaa keuhkosyövän lääkehoitoja paikallisesti ja seuraa bronkoskopiapotilaita.",
+   "quote": "Vastaanottomme yhteydessä toimii päiväyksikkö, jossa teemme keuhkosyövän lääkehoitoja ja keuhkoputken tähystykseen sekä muihin toimenpiteisiin tulevien potilaiden seurantaa.",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+   "title": "Keuhkosairauksien vastaanotto, Hyvinkään sairaala",
+   "relates_to": "drug_therapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T00:59:26+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "The endoscopy unit at Hyvinkää Hospital performs bronchoscopies locally.",
+   "what_fi": "Hyvinkään sairaalan endoskopiayksikkö tekee keuhkoputkien tähystyksiä (bronkoskopioita) paikallisesti.",
+   "quote": "Hyvinkään sairaalan endoskopiayksikössä teemme tähystystutkimuksia, joita ovat mahalaukun tähystykset (gastroskopia), paksusuolen tähystykset (kolonoskopia), virtsarakon tähystykset (kystoskopia) ja keuhkoputkien tähystykset (bronkoskopia)",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/toimipisteet",
+   "title": "Osastot ja vastaanotot | HUS",
+   "relates_to": "ebus_capacity",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:31:34+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "All six findings describe the service as it runs today, not a change, and all come from HUS pages (five from hus.fi, one from a 2024 news item about HUS). HUS runs lung cancer care for Keusote residents through a published pathway with a multidisciplinary team, a nurse at the first visit, and stereotactic radiotherapy for patients who cannot be operated. Hyvinkää Hospital gives lung cancer drug treatment and performs bronchoscopy locally.",
+ "not_found_en": "I found no Keusote decision, project, investment, waiting-time figure, screening pilot or smoking-cessation measure specific to lung cancer; Keusote's access page gives only the general legal waiting-time limits, and its 2026–2029 investment plan was not read.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; university hospital pathway; decisions; local news",
+   "ms": 3844
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Keusote keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 3.8,
+   "result_en": "6 results: terveyskirjasto.fi, kaikkisyovasta.fi, docrates.mehilainen.fi, tyks.fi",
+   "ms": 2343,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/oireet/",
+     "title": "Keuhkosyövän oireet ja riskitekijät - Parempaa Elämää"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä hoitopolku hoitoonpääsy",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "university hospital pathway",
+   "status": "done",
+   "t_s": 3.8,
+   "result_en": "6 results: hus.fi, hyvaks.fi, potilaanlaakarilehti.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+     "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Keusote aluehallitus syöpä investointi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 3.8,
+   "result_en": "6 results: keusote.fi",
+   "ms": 1669,
+   "results": [
+    {
+     "url": "https://www.keusote.fi/keusoten-aluehallitus-kasitteli-talouden-tasapainottamista-palveluverkkoa-ja-vuoden-2026-talousarviota/",
+     "title": "Keusoten aluehallitus käsitteli talouden tasapainottamista, palveluverkkoa ja vuoden 2026 talousarviota - Keski-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.keusote.fi/wp-content/uploads/2026/06/Paivitetty-Investointisuunnitelma-2026-2029-AH-19.5.2026.pdf",
+     "title": "Keski-Uudenmaan hyvinvointialueen investointisuunnitelma 2026–2029"
+    },
+    {
+     "url": "https://www.keusote.fi/wp-content/uploads/2025/03/Talousarvio-2025-taloussuunnitelma-2026-2027-aluevaltuusto-12.12.2024.pdf",
+     "title": "Hyvinvointia yhdessä Taloussuunnitelma 2025–2027 Talousarvio 2025"
+    },
+    {
+     "url": "https://www.keusote.fi/wp-content/uploads/2026/03/Talousarvio-2026-taloussuunnitelma-2027-2029-AV-11.12.2025-3.pdf",
+     "title": "Hyvinvointia yhdessä Taloussuunnitelma 2026–2029 Talousarvio 2026"
+    },
+    {
+     "url": "https://www.keusote.fi/wp-content/uploads/2025/08/Hyvinvointialueohjelma-21.9.2023-1.pdf",
+     "title": "21.9.2023 Keski-Uudenmaan hyvinvointialue- ohjelma 2024–2025 Aluevaltuusto"
+    },
+    {
+     "url": "https://www.keusote.fi/keusoten-tulos-jaa-talousarviota-heikommaksi-mutta-sailyy-ylijaamaisena/",
+     "title": "Keusoten tulos on arviota heikompi, mutta säilyy ylijäämäisenä"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvinkään sairaala syöpä 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 3.8,
+   "result_en": "6 results: hus.fi, suomi.fi, stm.fi",
+   "ms": 1920,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala",
+     "title": "Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/toimipisteet",
+     "title": "Hyvinkään sairaala - Toimipisteet - HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/hyvinkaan-sairaala-hus-helsingin-yliopistollinen-sairaala/8b8c205a-b7db-4ad8-9811-a2e46e351639",
+     "title": "Hyvinkään sairaala - HUS Helsingin yliopistollinen sairaala - Suomi.fi"
+    },
+    {
+     "url": "https://stm.fi/kansallinen-syopastrategia",
+     "title": "Kansallinen syöpästrategia - Sosiaali- ja terveysministeriö"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ensitietop%C3%A4iv%C3%A4t-sy%C3%B6p%C3%A4%C3%A4n-sairastuneille-ja-heid%C3%A4n-l%C3%A4heisilleen-2026",
+     "title": "Ensitietopäivät syöpään sairastuneille ja heidän läheisilleen..."
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiointi/syopatautien-poliklinikka",
+     "title": "Syöpätautien poliklinikka | Keski-Suomen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "3 reads: HUS pathway facts; dated pathway publication; local hospital units",
+   "ms": 5759
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "lähete, bronkoskopia, moniammatillinen kokous, leikkaus, sädehoito, molekyyli",
+   "why": "HUS pathway facts",
+   "status": "done",
+   "t_s": 12.7,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+   "focus": "Syöpäkeskus hoitopolku julkaissut keuhkosyöpä",
+   "why": "dated pathway publication",
+   "status": "done",
+   "t_s": 12.7,
+   "result_en": "\"Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut\" · 2 205 chars",
+   "ms": 2072,
+   "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut",
+   "chars": 2205,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+   "published": "2024-02-15",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/toimipisteet",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/toimipisteet",
+   "focus": "röntgen, keuhkosairauksien poliklinikka, syöpä",
+   "why": "local hospital units",
+   "status": "done",
+   "t_s": 12.7,
+   "result_en": "\"Osastot ja vastaanotot | HUS\" · 2 254 chars",
+   "ms": 17649,
+   "title": "Osastot ja vastaanotot | HUS",
+   "chars": 2254,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/toimipisteet",
+   "published": null,
+   "js_render": true
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.3,
+   "result_en": "draft answer, still open: all 5 findings come from one site (hus.fi), so they describe the service as it is, not what is changing. Search for a decision, a project, an investment, a waiting-time figure or dated local news (aluehallitus, hanke, investointi, uutinen, this year) and read two or three o",
+   "ms": 17505
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 47.8,
+   "result_en": "2 searches: dated local news or decision; reorganisation at local hospital",
+   "ms": 3326
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Keusote syöpäpotilaat hoitoonpääsy uutinen 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "dated local news or decision",
+   "status": "done",
+   "t_s": 51.1,
+   "result_en": "6 results: keusote.fi, yle.fi, satakunnankansa.fi",
+   "ms": 2333,
+   "results": [
+    {
+     "url": "https://www.keusote.fi/asiointiopas/asiakkaan-ja-potilaan-oikeudet/palveluun-ja-hoitoon-paasy/",
+     "title": "Palveluun ja hoitoon pääsy - Keski-Uudenmaan hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20251865",
+     "title": "Viikon uutinen selkosuomeksi | lauantai 17.10.2026 | Selkouutiset | Yle"
+    },
+    {
+     "url": "https://yle.fi/uutiset/lyhyesti/74-20242733",
+     "title": "Syövän hoito voi viivästyä Suomessa kuukausia | Uutisia lyhyesti | Yle Uutiset"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://yle.fi/a/74-20250979",
+     "title": "Mitä alhaisempi koulutustaso, sitä huonompi on lopputulos syöpähoidossa, sanoo järjestön edustaja | Kotimaa | Yle"
+    },
+    {
+     "url": "https://yle.fi/a/74-20209868",
+     "title": "MOT tutki syövän hoitoa ja löysi häkellyttävän tuloksen: Potilaita kuolee Suomessa aiemmin kuin muissa Pohjoismaissa | MOT | Yle"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvinkään sairaala keuhkosairauksien poliklinikka muutos",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "reorganisation at local hospital",
+   "status": "done",
+   "t_s": 51.1,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1744,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+     "title": "Keuhkosairauksien vastaanotto, Hyvinkään sairaala - HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiointi/keuhkosairauksien-poliklinikka",
+     "title": "Keuhkosairauksien poliklinikka | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://hus.fi/keuhkosairauksien-poliklinikka-0",
+     "title": "Keuhkosairauksien vastaanotto, Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/sisatautien-infektio-ja-keuhkosairauksien",
+     "title": "Sisätautien, infektio- ja keuhkosairauksien osasto H5, Hyvinkään..."
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/infektio-ja-keuhkosairauksien-osasto",
+     "title": "Sisätautien, infektio- ja keuhkosairauksien osasto H5, Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-poliklinikka-pohjois-savon-hyvinvointialue/482912ea-a372-40b4-b315-206c947c9e5e",
+     "title": "Keuhkosairauksien poliklinikka - Pohjois-Savon hyvinvointialue -..."
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 53.5,
+   "result_en": "2 reads: local lung cancer clinic; primary care access figure",
+   "ms": 4518
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+   "focus": "keuhkosyöpä",
+   "why": "local lung cancer clinic",
+   "status": "done",
+   "t_s": 58.0,
+   "result_en": "\"Keuhkosairauksien vastaanotto, Hyvinkään sairaala\" · 1 324 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosairauksien vastaanotto, Hyvinkään sairaala",
+   "chars": 1324,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.keusote.fi/asiointiopas/asiakkaan-ja-potilaan-oikeudet/palveluun-ja-hoitoon-paasy/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.keusote.fi/asiointiopas/asiakkaan-ja-potilaan-oikeudet/palveluun-ja-hoitoon-paasy/",
+   "focus": "lääkärin vastaanotolle pääsy vuorokautta 2026",
+   "why": "primary care access figure",
+   "status": "done",
+   "t_s": 58.0,
+   "result_en": "\"Palveluun ja hoitoon pääsy\" · 6 871 chars · 7 of 11 passages kept",
+   "ms": 2592,
+   "title": "Palveluun ja hoitoon pääsy",
+   "chars": 6871,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.keusote.fi/asiointiopas/asiakkaan-ja-potilaan-oikeudet/palveluun-ja-hoitoon-paasy/",
+   "published": "2026-11-11T08:03:56+02:00",
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 60.6,
+   "result_en": "writes the answer",
+   "ms": 15757
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00"
+  },
+  {
+   "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+   "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut",
+   "chars": 2205,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:31:18+00:00"
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/toimipisteet",
+   "title": "Osastot ja vastaanotot | HUS",
+   "chars": 2254,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:31:34+00:00"
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/keuhkosairauksien-vastaanotto-hyvinkaan",
+   "title": "Keuhkosairauksien vastaanotto, Hyvinkään sairaala",
+   "chars": 1324,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:59:26+00:00"
+  },
+  {
+   "url": "https://www.keusote.fi/asiointiopas/asiakkaan-ja-potilaan-oikeudet/palveluun-ja-hoitoon-paasy/",
+   "title": "Palveluun ja hoitoon pääsy",
+   "chars": 6871,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:32:04+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:32:20+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 1
+ },
+ "seconds": 76.4
+}

@@ -1,0 +1,598 @@
+{
+ "area_id": "12",
+ "area_name_en": "South Savo wellbeing services county",
+ "area_name_fi": "Etelä-Savon hyvinvointialue",
+ "question": "What is South Savo wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2022-11-01",
+   "what_en": "The South Savo hospital district, which ran Mikkeli Central Hospital, was costing a radiotherapy building of its own in Mikkeli, because local patients travel to Kuopio, Jyväskylä or Lappeenranta for radiotherapy.",
+   "what_fi": "Mikkelin keskussairaalaa ylläpitänyt Etelä-Savon sairaanhoitopiiri selvitti oman sädetalon kustannuksia, koska potilaat matkustavat sädehoitoon Kuopioon, Jyväskylään tai Lappeenrantaan.",
+   "quote": "Nykyisin sädehoitoa saavat eteläsavolaiset potilaat käyvät hoidossa Kuopiossa, Jyväskylässä tai Lappeenrannassa.",
+   "url": "https://yle.fi/a/3-12671005",
+   "title": "Mikkelin keskussairaala selvittää oman sädetalon rakentamista: \"Syöpähoitojen tarve kasvaa\", sanoo asiantuntija",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:03+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2022-11-01",
+   "what_en": "The planned Mikkeli radiotherapy unit was estimated at tens of millions of euros and would need two treatment machines; patients currently travel for hours by taxi.",
+   "what_fi": "Suunnitellun Mikkelin sädetalon hinnaksi arvioitiin kymmeniä miljoonia euroja ja siihen tarvittaisiin kaksi sädetyslaitetta; potilaat matkustavat nyt tunteja taksilla.",
+   "quote": "Potilas istuu taksissa useita tunteja muutaman minuutin päivittäistä sädeannosta varten.",
+   "url": "https://yle.fi/a/3-12671005",
+   "title": "Mikkelin keskussairaala selvittää oman sädetalon rakentamista: \"Syöpähoitojen tarve kasvaa\", sanoo asiantuntija",
+   "relates_to": "travel_accommodation_support",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:03+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Central Finland's Nova Hospital gives part of the radiotherapy for South Savo patients.",
+   "what_fi": "Keski-Suomen Sairaala Nova antaa osan Etelä-Savon potilaiden sädehoidosta.",
+   "quote": "vastaa kaikista Keski-Suomen hyvinvointialueen aikuispotilaiden säde- ja syöpälääkehoidoista sekä osasta Etelä-Savon potilaiden sädehoidosta.",
+   "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "title": "Syöpätaudit ja sädehoito",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:04+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "KYS in Kuopio provides the highly specialised care for South Savo as part of the Eastern Finland collaboration area, and its cancer centre gives drug therapy and radiotherapy.",
+   "what_fi": "KYS huolehtii Itä-Suomen yhteistyöalueen, myös Etelä-Savon, erityistason erikoissairaanhoidosta; syöpäkeskus antaa lääke- ja sädehoitoja.",
+   "quote": "lisäksi Itä-Suomen yhteistyöalueen (Etelä-Savon hyvinvointialue, Keski-Suomen hyvinvointialue, Pohjois-Karjalan hyvinvointialue) erityistason erikoissairaanhoidosta.",
+   "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+   "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo",
+   "relates_to": "drug_therapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:35:06+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Eloisa runs pulmonology outpatient clinics in Mikkeli and Savonlinna; patients need a doctor's referral.",
+   "what_fi": "Eloisalla on keuhkosairauksien vastaanotot Mikkelissä ja Savonlinnassa, joihin tullaan lääkärin lähetteellä.",
+   "quote": "Keuhkosairauksien palveluihin tullaan lääkärin lähetteellä.",
+   "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "title": "Keuhkosairauksien erikoisalapalvelut",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:20:53+00:00",
+   "from_cache": true
+  }
+ ],
+ "summary_en": "I found five facts, all about where patients are treated. None of them is a recent lung-cancer-specific decision. Eloisa (South Savo) runs pulmonology clinics in Mikkeli and Savonlinna, which take patients by doctor's referral. Radiotherapy and highly specialised cancer care are done outside the county: KYS in Kuopio covers South Savo for highly specialised care, and Nova in Jyväskylä gives part of South Savo's radiotherapy. Patients from the county have to travel for radiotherapy; in 2022 the local hospital district was working out the cost of its own radiotherapy unit in Mikkeli, but I found nothing on whether that went ahead. I found no county-specific lung cancer pathway, waiting-time figures, nurse navigator, screening pilot or MDT arrangement.",
+ "not_found_en": "I searched without result for Eloisa council decisions on lung cancer or on the Mikkeli radiotherapy unit, a local lung cancer pathway, and South Savo lung cancer waiting-time or quality figures; the national registry reports I read give figures only by large region (Eastern Finland), not for South Savo.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county site; pathway; decisions; news",
+   "ms": 4312
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Eloisa keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county site",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: kaikkisyovasta.fi, terveyskirjasto.fi, docrates.mehilainen.fi, parempaaelamaa.fi",
+   "ms": 2642,
+   "results": [
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/luokitus/",
+     "title": "Keuhkosyövän luokitus, levinneisyysaste ja ennuste - Parempaa Elämää"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Mikkelin keskussairaala keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: suomi.fi, hus.fi, etelasavonha.fi",
+   "ms": 2567,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-vastaanotto-mikkeli-etela-savon-hyvinvointialue/5aaf11c7-553a-46da-b17f-5b1a3d23c242",
+     "title": "Keuhkosairauksien vastaanotto, Mikkeli - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://etelasavonha.fi/asiakkaan-opas/toimipisteet/mikkelin-keskussairaala/",
+     "title": "Mikkelin keskussairaala - Eloisa"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-erikoisalapalvelut-etela-savon-hyvinvointialue/873c030d-8949-4f8a-878e-84456289517c",
+     "title": "Keuhkosairauksien erikoisalapalvelut - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/mikkelin-keskussairaala-etela-savon-hyvinvointialue/210a6334-6a89-41e6-8e76-02aaca9d825c",
+     "title": "Mikkelin keskussairaala - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+     "title": "Keuhkosairauksien erikoisalapalvelut - Eloisa"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Savon hyvinvointialue aluehallitus syöpä sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: hyvaks.fi, etelasavonha.fi, fi.wikipedia.org, suomi.fi",
+   "ms": 2822,
+   "results": [
+    {
+     "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+     "title": "Syöpätaudit ja sädehoito | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://etelasavonha.fi/",
+     "title": "Eloisa - Etelä-Savon hyvinvointialue Eloisa"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Etel%C3%A4-Savon_hyvinvointialue",
+     "title": "Etelä-Savon hyvinvointialue – Wikipedia"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/etela-savon-hyvinvointialue/b611438d-6c21-4afd-ab35-e3f89d08ad0b",
+     "title": "Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://etelasavonha.fi/eloisa/",
+     "title": "Tietoa Eloisasta - Eloisa"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Mikkeli keskussairaala syöpähoito 2026 uutinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.3,
+   "result_en": "6 results: yle.fi, saimaansyopayhdistys.fi, suomi.fi",
+   "ms": 2456,
+   "results": [
+    {
+     "url": "https://yle.fi/a/74-20251077",
+     "title": "Selkouutiset | maanantai 12.10.2026 | Selkouutiset | Yle"
+    },
+    {
+     "url": "https://saimaansyopayhdistys.fi/tapahtuma/sairaanhoitaja-mikkelin-keskussairaalan-olka-pisteella/",
+     "title": "Sairaanhoitaja Mikkelin keskussairaalan OLKA-pisteellä tiistaisin - Saimaan Syöpäyhdistys"
+    },
+    {
+     "url": "https://yle.fi/a/3-12671005",
+     "title": "Mikkelin keskussairaala selvittää oman sädetalon rakentamista: \"Syöpähoitojen tarve kasvaa\", sanoo asiantuntija | Yle"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-erikoisalapalvelut-etela-savon-hyvinvointialue/e38d060c-9223-4746-9783-333ac7d583de",
+     "title": "Syöpätautien erikoisalapalvelut - Etelä-Savon hyvinvointialue -..."
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+     "title": "Syöpäkeskus | HUS"
+    },
+    {
+     "url": "https://www.kuntalehti.fi/sote/ainakaan-pahimmat-pelot-eivaet-toteutuneet-mikkelin-ja-savonlinnan-keskussairaaloiden-suhteen-hailakan-vihreaeae-valoa/294833",
+     "title": "Ainakaan pahimmat pelot eivät toteutuneet Mikkelin ja Savonlinnan keskussairaaloiden suhteen – 'Hailakan vihreää valoa' | Kuntalehti"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "4 reads: county pulmonology services; radiotherapy location; radiotherapy plan; university hospital role",
+   "ms": 5671
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "focus": "keuhkosyöpä bronkoskopia tutkimukset",
+   "why": "county pulmonology services",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "\"Keuhkosairauksien erikoisalapalvelut\" · 3 985 chars · from cache",
+   "ms": 4,
+   "title": "Keuhkosairauksien erikoisalapalvelut",
+   "chars": 3985,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "focus": "Etelä-Savon potilaiden sädehoito",
+   "why": "radiotherapy location",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "\"Syöpätaudit ja sädehoito\" · 917 chars",
+   "ms": 3109,
+   "title": "Syöpätaudit ja sädehoito",
+   "chars": 917,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://yle.fi/a/3-12671005",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://yle.fi/a/3-12671005",
+   "focus": "sädetalo Mikkeli kustannukset",
+   "why": "radiotherapy plan",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "\"Mikkelin keskussairaala selvittää oman sädetalon rakentamista: \"Syöpäh\" · 2 337 chars",
+   "ms": 1993,
+   "title": "Mikkelin keskussairaala selvittää oman sädetalon rakentamista: \"Syöpähoitojen tarve kasvaa\", sanoo asiantuntija",
+   "chars": 2337,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://yle.fi/a/3-12671005",
+   "published": "2022-11-01T14:52:07+02:00",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+   "focus": "Etelä-Savon keuhkosyöpä sädehoito",
+   "why": "university hospital role",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "\"Syöpätautien ja sädehoidon palvelut - Pohjois-Savo\" · 10 711 chars · 8 of 22 passages kept",
+   "ms": 4825,
+   "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo",
+   "chars": 10711,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.7,
+   "result_en": "2 searches: radiotherapy unit decision; waiting time figures",
+   "ms": 3771
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Eloisa sädehoitoyksikkö Mikkeli päätös",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "radiotherapy unit decision",
+   "status": "done",
+   "t_s": 21.4,
+   "result_en": "6 results: etelasavonha.fi, lansi-savo.fi",
+   "ms": 2239,
+   "results": [
+    {
+     "url": "https://etelasavonha.fi/asiointikanavat/sosiaalikeskus-mikkeli/",
+     "title": "Työikäisten sosiaalipalvelut, Mikkeli - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/paivystys/sosiaalipaivystys/",
+     "title": "Sosiaalipäivystys - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/",
+     "title": "Eloisa - Etelä-Savon hyvinvointialue Eloisa"
+    },
+    {
+     "url": "https://www.lansi-savo.fi/paikalliset/8156008",
+     "title": "Eloisa lykkää Mikkelin sairaalan 18 miljoonan euron remonttia hamaan tulevaisuuteen | Paikalliset | Länsi-Savo"
+    },
+    {
+     "url": "https://mikkeli.cloudnc.fi/fi-FI/content/77763/17303",
+     "title": "Nimeämispyyntö Etelä-Savon hyvinvointialueen (Eloisa) vanhus- ja..."
+    },
+    {
+     "url": "https://etelasavonha.fi/eloisa/hoitoonpaasy/",
+     "title": "Hoitoon ja palveluihin pääsy - Eloisa"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Savo syöpähoito odotusaika keuhkosyöpä 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "waiting time figures",
+   "status": "done",
+   "t_s": 21.4,
+   "result_en": "6 results: syoparekisteri.fi, syopajarjestot.fi, yle.fi, etelasavonha.fi",
+   "ms": 1002,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+     "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://yle.fi/a/74-20251865",
+     "title": "Viikon uutinen selkosuomeksi | lauantai 17.10.2026 | Selkouutiset | Yle"
+    },
+    {
+     "url": "https://etelasavonha.fi/wp-content/uploads/2023/06/Palvelustrategia_Palvelutuotantosuunnitelma_Etela-Savon_HA.pdf",
+     "title": "Etelä-Savon hyvinvointialueen palvelustrategia ja ..."
+    },
+    {
+     "url": "https://yle.fi/a/74-20242733",
+     "title": "Syöpäpotilaan hoito voi viivästyä Suomessa kuukausia – Heidi Rintahaka kyllästyi odottamaan | MOT | Yle"
+    },
+    {
+     "url": "https://yle.fi/uutiset/lyhyesti/74-20242733",
+     "title": "Syövän hoito voi viivästyä Suomessa kuukausia | Uutisia lyhyesti | Yle Uutiset"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 23.7,
+   "result_en": "3 reads: county figures; investment decision",
+   "ms": 7032
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "focus": "Etelä-Savo",
+   "why": "county figures",
+   "status": "done",
+   "t_s": 30.7,
+   "result_en": "\"Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tieto\" · 5 861 chars · 6 of 10 passages kept · from cache",
+   "ms": 6,
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "published": "2026-04-23T06:06:09+00:00",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.lansi-savo.fi/paikalliset/8156008",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.lansi-savo.fi/paikalliset/8156008",
+   "focus": "remontti lykkää sädehoito syöpä",
+   "why": "investment decision",
+   "status": "done",
+   "t_s": 30.7,
+   "result_en": "\"Eloisa lykkää Mikkelin sairaalan 18 miljoonan euron remonttia hamaan t\" · 764 chars",
+   "ms": 2205,
+   "title": "Eloisa lykkää Mikkelin sairaalan 18 miljoonan euron remonttia hamaan tulevaisuuteen",
+   "chars": 764,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.lansi-savo.fi/paikalliset/8156008",
+   "published": "2024-12-19T10:05:43+02:00",
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "focus": "Etelä-Savo",
+   "why": "county figures",
+   "status": "done",
+   "t_s": 30.7,
+   "result_en": "\"Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon laadusta\" · 33 144 chars · PDF 43 p. · 5 of 49 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon laadusta",
+   "chars": 33144,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "published": "2024-11-13",
+   "js_render": false
+  },
+  {
+   "step": 18,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 32.9,
+   "result_en": "writes the answer",
+   "ms": 17003
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "title": "Keuhkosairauksien erikoisalapalvelut",
+   "chars": 3985,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:20:53+00:00"
+  },
+  {
+   "url": "https://yle.fi/a/3-12671005",
+   "title": "Mikkelin keskussairaala selvittää oman sädetalon rakentamista: \"Syöpähoitojen tarve kasvaa\", sanoo asiantuntija",
+   "chars": 2337,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:03+00:00"
+  },
+  {
+   "url": "https://www.hyvaks.fi/palvelumme/syopataudit-ja-sadehoito",
+   "title": "Syöpätaudit ja sädehoito",
+   "chars": 917,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:04+00:00"
+  },
+  {
+   "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+   "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo",
+   "chars": 10711,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:06+00:00"
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon laadusta",
+   "chars": 33144,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:42:48+00:00"
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:26+00:00"
+  },
+  {
+   "url": "https://www.lansi-savo.fi/paikalliset/8156008",
+   "title": "Eloisa lykkää Mikkelin sairaalan 18 miljoonan euron remonttia hamaan tulevaisuuteen",
+   "chars": 764,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:35:21+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:35:38+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 49.9
+}

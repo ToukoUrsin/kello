@@ -1,0 +1,509 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Central Uusimaa wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Smoking cessation started at the first specialist visit. Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+ "area_id": "02",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "A prospective cohort of 517 current smokers with early-stage NSCLC found that those who quit after diagnosis had lower all-cause mortality (adjusted HR 0.67, 95% CI 0.53–0.85).",
+ "supported_en": "In 517 early-stage NSCLC smokers in Moscow, quitting after diagnosis was linked to lower all-cause mortality (HR 0.67), according to the Annals of Internal Medicine (2021).",
+ "not_supported_en": "The study is observational and Russian. It does not show how many patients a first-visit programme would actually get to quit.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "We found no public sign that HUS or Keusote starts quit-smoking medicine and counselling at the first specialist visit for suspected lung cancer. HUS's pathway page says a nurse gives guidance at the first visit and that quitting completely is key, and Keusote offers a digital quit programme and prescriptions through the patient's own care team. A 2021 cohort study in the Annals of Internal Medicine found that quitting after diagnosis was linked to lower all-cause mortality in early-stage NSCLC (HR 0.67, 95% CI 0.53–0.85), which matches what our model assumes.",
+ "unanswered_en": "Three searches found no HUS or Keusote page describing a standing order for quit-smoking medicine at the first lung cancer visit, and none describing a smoke-free surgery service run by a quit-smoking nurse.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tupakoitsijoiden keuhkosyövissä keskeinen vointiin ja taudin ennusteeseen vaikuttava asia on tupakoinnin kokonaan lopettaminen.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Ensikäynnillä tapaat myös sairaanhoitajan. Sairaanhoitajan vastaanotolla saat ohjausta ja neuvontaa.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.keusote.fi/hyvinvointi/tukea-hyvinvointiin-ja-terveyteen/paihteettomyys-ja-riippuvuudet/nikotiinituotteiden-lopettaminen/",
+   "title": "Nikotiinituotteiden käytön lopettaminen - Keusote",
+   "quote": "Jos koet tarvetta vieroituslääkkeen käytölle, ota yhteyttä omatiimiisi.",
+   "about": "context",
+   "published": "2026-11-03T00:28:29+02:00",
+   "fetched_at": "2026-11-14T00:58:25+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "quote": "After adjustments, smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85])",
+   "about": "effect",
+   "published": "2021-07-27",
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 1168,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Keusote tupakasta vieroitus keuhkosyöpäpotilas",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: keusote.fi, duodecimlehti.fi, terveyskyla.fi, kaypahoito.fi",
+   "ms": 2636,
+   "results": [
+    {
+     "url": "https://www.keusote.fi/hyvinvointi/tukea-hyvinvointiin-ja-terveyteen/paihteettomyys-ja-riippuvuudet/nikotiinituotteiden-lopettaminen/",
+     "title": "Nikotiinituotteiden käytön lopettaminen - Keusote"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10283",
+     "title": "Tupakointi ja syöpä - mitä hyötyä lopettamisesta?"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/khp00012",
+     "title": "Keuhkoahtaumatauti – salaa etenevä kansantauti"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/khp00042",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS tupakkavieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: terveyskirjasto.fi, kaypahoito.fi, hus.fi, filha.fi",
+   "ms": 1408,
+   "results": [
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.hus.fi/",
+     "title": "Etusivu | HUS"
+    },
+    {
+     "url": "https://www.filha.fi/tupakka-ja-nikotiini/tupakkavieroitus/",
+     "title": "Tupakkavieroituksen tukimateriaalia - Filha ry"
+    },
+    {
+     "url": "https://thl.fi/aiheet/alkoholi-tupakka-ja-riippuvuudet/tupakka/vieroitusohjaus/kaytannon-toimintamalleja-tupakasta-vieroitukseen",
+     "title": "Käytännön toimintamalleja tupakasta vieroitukseen - THL"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/nain-saat-apua",
+     "title": "Näin saat apua - HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvinkään sairaala savuton leikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi",
+   "ms": 1883,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/anestesia-ja-leikkausyksikko-hyvinkaan",
+     "title": "Anestesia- ja leikkausyksikkö, Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala",
+     "title": "Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/kirurgian-osasto-hyvinkaan-sairaala",
+     "title": "Kirurgian osasto, Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/kirurgian-vastaanotot-hyvinkaan-sairaala",
+     "title": "Kirurgian vastaanotot, Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/hyvinkaan-sairaala/plastiikka-ja-rintarauhaskirurgian",
+     "title": "Plastiikka- ja rintarauhaskirurgian vastaanotto, Hyvinkään sairaala | HUS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo95807",
+     "title": "Leikkaukseen kotoa - potilaat ovat tyytyväisiä ja rahaa säästyy"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.6,
+   "result_en": "3 reads: B: HUS pathway smoking cessation; A effect size; B: county cessation services",
+   "ms": 4981
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "tupakointi tupakoinnin lopettaminen vieroitus",
+   "why": "B: HUS pathway smoking cessation",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 7 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://doi.org/10.7326/M21-0252",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "focus": "hazard ratio mortality quit",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "\"Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progr\" · 2 162 chars · from cache",
+   "ms": 6,
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://doi.org/10.7326/M21-0252",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.keusote.fi/hyvinvointi/tukea-hyvinvointiin-ja-terveyteen/paihteettomyys-ja-riippuvuudet/nikotiinituotteiden-lopettaminen/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.keusote.fi/hyvinvointi/tukea-hyvinvointiin-ja-terveyteen/paihteettomyys-ja-riippuvuudet/nikotiinituotteiden-lopettaminen/",
+   "focus": "vieroitus vastaanotto lääkitys leikkaus",
+   "why": "B: county cessation services",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "\"Nikotiinituotteiden käytön lopettaminen - Keusote\" · 11 148 chars · 6 of 17 passages kept · from cache",
+   "ms": 8,
+   "title": "Nikotiinituotteiden käytön lopettaminen - Keusote",
+   "chars": 11148,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.keusote.fi/hyvinvointi/tukea-hyvinvointiin-ja-terveyteen/paihteettomyys-ja-riippuvuudet/nikotiinituotteiden-lopettaminen/",
+   "published": "2026-11-03T00:28:29+02:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "1 search: B: HUS cessation medication at first visit",
+   "ms": 3304
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä tupakoinnin lopetus vieroituslääke ensikäynti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS cessation medication at first visit",
+   "status": "done",
+   "t_s": 10.9,
+   "result_en": "6 results: hus.fi, terveyskyla.fi, duodecimlehti.fi",
+   "ms": 2286,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10283",
+     "title": "Tupakointi ja syöpä - mitä hyötyä lopettamisesta?"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo96400",
+     "title": "Tupakointi, nikotiiniriippuvuus ja vieroitushoidot"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk01067",
+     "title": "Tupakoinnin lopettaminen - reseptilääkkeet - Terveyskirjasto"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Keusote / Hyvinkään sairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11610
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 24.8,
+   "result_en": "1 search: B: HUS preoperative cessation service",
+   "ms": 3361
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS savuton leikkaus vieroitushoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS preoperative cessation service",
+   "status": "done",
+   "t_s": 28.2,
+   "result_en": "6 results: hus.fi, yle.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://www.hus.fi/tietoa-meista/ura-husissa/hoitajaksi-husiin/hoitajaksi-leikkaussaleihin-tai-tehohoitoon",
+     "title": "Hoitajaksi leikkaussaleihin tai tehohoitoon | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio/leikkaussalit-ja-tehohoito",
+     "title": "Leikkaussalit ja tehohoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/meilahden-tornisairaala",
+     "title": "Meilahden tornisairaala | HUS"
+    },
+    {
+     "url": "https://yle.fi/a/74-20141344",
+     "title": "Leikkausten määrät kasvoivat HUSissa, mutta yli 6 500 on..."
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoito-laatu-ja-potilasturvallisuus/leikkaussalit-ja-tehohoito",
+     "title": "Leikkaussalit ja tehohoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kirurginen-sairaala",
+     "title": "Kirurginen sairaala | HUS"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.2,
+   "result_en": "writes the answer",
+   "ms": 10769
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "url": "https://www.keusote.fi/hyvinvointi/tukea-hyvinvointiin-ja-terveyteen/paihteettomyys-ja-riippuvuudet/nikotiinituotteiden-lopettaminen/",
+   "title": "Nikotiinituotteiden käytön lopettaminen - Keusote",
+   "chars": 11148,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:58:25+00:00",
+   "published": "2026-11-03T00:28:29+02:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:10:07+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: HUS's lung cancer pathway page says quitting matters, but it does not say that smokers get quit-smoking medicine and counselling at the first visit, and Keusote only offers general quit-smoking support that patients have to ask for themselves.",
+ "seconds": 42.0,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Keusote tupakasta vieroitus keuhkosyöpäpotilas\"; \"HUS tupakkavieroitus\"; \"Hyvinkään sairaala savuton leikkaus\", ...) and read 3 pages on hus.fi, doi.org, keusote.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Keusote tupakasta vieroitus keuhkosyöpäpotilas",
+  "HUS tupakkavieroitus",
+  "Hyvinkään sairaala savuton leikkaus",
+  "HUS keuhkosyöpä tupakoinnin lopetus vieroituslääke ensikäynti",
+  "HUS savuton leikkaus vieroitushoitaja"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: HUS's lung cancer pathway page says quitting matters, but it does not say that smokers get quit-smoking medicine and counselling at the first visit, and Keusote only offers general quit-smoking support that patients have to ask for themselves.",
+ "verdict_en": "No public sign that it is running in Central Uusimaa. Recent evidence supports the size of effect we assume. In 517 early-stage NSCLC smokers in Moscow, quitting after diagnosis was linked to lower all-cause mortality (HR 0.67), according to the Annals of Internal Medicine (2021).",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "smoking_cessation_at_diagnosis",
+ "intervention_name_en": "Smoking cessation started at the first specialist visit",
+ "area_name_en": "Central Uusimaa wellbeing services county"
+}

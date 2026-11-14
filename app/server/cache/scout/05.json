@@ -1,0 +1,441 @@
+{
+ "area_id": "05",
+ "area_name_en": "Southwest Finland wellbeing services county",
+ "area_name_fi": "Varsinais-Suomen hyvinvointialue",
+ "question": "What is Southwest Finland wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-01-21",
+   "what_en": "Turku University Hospital (Tyks) is one of the sites running the national low-dose CT lung cancer screening pilot, which started in January 2026.",
+   "what_fi": "Tyks on yksi kansallisen matala-annoksisen TT-keuhkosyöpäseulontapilotin toteuttajista; pilotti alkoi tammikuussa 2026.",
+   "quote": "Mukana toteutuksessa ovat Helsingin, Oulun, Tampereen ja Turun yliopistolliset sairaalat sekä Vaasan keskussairaala.",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "relates_to": "ldct_screening",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:35:51+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-01-21",
+   "what_en": "Long-term smokers aged 50–74 living in Southwest Finland can apply to the screening pilot.",
+   "what_fi": "Varsinais-Suomessa asuvat 50–74-vuotiaat pitkään tupakoineet voivat hakea seulontapilottiin.",
+   "quote": "Pilottiin voivat hakea mukaan 50–74-vuotiaat, pitkään tupakoineet henkilöt Uudenmaan, Pirkanmaan, Pohjanmaan, Pohjois-Pohjanmaan ja Varsinais-Suomen alueilta.",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "relates_to": "ldct_screening",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:35:51+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-01-21",
+   "what_en": "Everyone in the screening pilot is offered support to stop smoking. This is part of screening, not support started at diagnosis.",
+   "what_fi": "Kaikille seulontapilotin osallistujille tarjotaan tukea tupakoinnin lopettamiseen; tuki kuuluu seulontaan, ei diagnoosivaiheeseen.",
+   "quote": "kaikille osallistujille tarjotaan tukea tupakoinnin lopettamiseen",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "relates_to": "smoking_cessation_at_diagnosis",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:35:51+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "Lung cancer diagnostics in the county are centralised at Tyks's pulmonary outpatient clinic, and Tyks publishes a lung cancer care pathway.",
+   "what_fi": "Keuhkosyövän diagnostiikka on keskitetty Tyksin keuhkosairauksien poliklinikalle, ja Tyks julkaisee keuhkosyövän hoitopolun.",
+   "quote": "Keuhkosyövän diagnostiikka on keskitetty Tyksin keuhkosairauksien poliklinikalle.",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "relates_to": "cpp_pathway",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:35:21+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "At Tyks a multidisciplinary team draws up the treatment plan for lung cancer patients.",
+   "what_fi": "Tyksissä moniammatillinen työryhmä laatii keuhkosyöpäpotilaan hoitosuunnitelman.",
+   "quote": "Moniammatillinen työryhmä laatii hoitosuunnitelman, mutta lopullinen leikkauspäätös tehdään yhdessä sinun kanssasi.",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:35:21+00:00",
+   "from_cache": false
+  },
+  {
+   "date": null,
+   "what_en": "At Tyks the pathologist tests the tumour sample for gene changes, and in some cases a blood sample. The page does not say whether this testing is automatic (reflex).",
+   "what_fi": "Tyksissä patologi tutkii geenivirheet kasvainnäytteestä ja joskus verinäytteestä; sivu ei kerro, onko testaus automaattista.",
+   "quote": "Mahdollisen geenivirheen olemassaolon selvittää patologi sinulta otetusta kasvaimen näytteestä tai joissain tapauksissa verinäytteestä.",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "relates_to": "reflex_molecular",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:35:21+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Two things are visibly running. Tyks takes part in the national low-dose CT lung cancer screening pilot that started in January 2026, open to long-term smokers aged 50–74 in Southwest Finland and including help to stop smoking. Tyks has also centralised lung cancer diagnostics at its pulmonary outpatient clinic, publishes a care pathway, and has a multidisciplinary team plan treatment. I found no decisions from the county board or council, no investments and no published waiting-time figures specific to lung cancer.",
+ "not_found_en": "I found no Varha board or council decisions, investments, waiting-time figures, nurse navigator or radiotherapy plans for lung cancer, and the FICAN page on Varha's own screening invitations timed out both times.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county site; pathway; decisions; news",
+   "ms": 3736
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha keuhkosyöpä",
+   "country": "FI",
+   "why": "county site",
+   "status": "done",
+   "t_s": 3.7,
+   "result_en": "6 results: tyks.fi, docrates.mehilainen.fi, suomenseniorihoiva.fi, keuhkosyopa.fi",
+   "ms": 1732,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/keuhkosyovan-riskikartoituksella-ja-varhaisen-vaiheen-tutkimuksilla-voi-olla-ratkaiseva-merkitys-potilaan-ennusteelle/",
+     "title": "Keuhkosyövän riskikartoituksella ja varhaisen vaiheen tutkimuksilla voi olla ratkaiseva merkitys potilaan ennusteelle"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/tietoa-keuhkosyovasta/keuhkosyovan-oireet/",
+     "title": "Keuhkosyövän oireet – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpä hoitopolku",
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 3.7,
+   "result_en": "6 results: tyks.fi",
+   "ms": 2419,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-hoito-tyks-turun-yliopistollinen-keskussairaala-tyks/93fa4c56-54fa-48d0-b5e4-f78ae7213df3",
+     "title": "Syöpätautien hoito, Tyks - Turun yliopistollinen keskussairaala, Tyks - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha aluehallitus syöpä investointi sädehoito",
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 3.7,
+   "result_en": "6 results: varha.fi, aamuset.fi",
+   "ms": 1862,
+   "results": [
+    {
+     "url": "https://www.varha.fi/sites/default/files/2022-12/Investointisuunnitelma%202024-2027.pdf",
+     "title": "INVESTOINTISUNNITELMA VUOSILLE 2024 - 2027"
+    },
+    {
+     "url": "https://www.varha.fi/sites/default/files/2024-06/varhan-arviointikertomus-2023-valtuusto-12.6.2024-ss-60.pdf",
+     "title": "Varha"
+    },
+    {
+     "url": "https://aamuset.fi/artikkeli/7133361",
+     "title": "Varha aikoo päästä eroon alijäämistä - Uutiset - Aamuset"
+    },
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/talous/rahoitus",
+     "title": "Rahoitus | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/ajankohtaista/aluehallitus-462024-varha-uudistaa-organisaatiotaan",
+     "title": "Aluehallitus 4.6.2024: Varha uudistaa organisaatiotaan | Varha"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72243478/paijat-hameen-hyvinvointialue-uusi-sadehoitolaite-vahvistaa-syovanhoitoa?publisherId=69820870&lang=fi",
+     "title": "Päijät-Hämeen hyvinvointialue: Uusi sädehoitolaite vahvistaa syövänhoitoa | Päijät-Hämeen hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpä 2026",
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 3.7,
+   "result_en": "6 results: tyks.fi, filha.fi",
+   "ms": 3158,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma - Filha ry"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://fican.fi/keuhkosyovan-valtakunnallinen-seulontapilotti-on-nyt-kaynnistynyt-tyksissa/",
+     "title": "Keuhkosyövän valtakunnallinen seulontapilotti on nyt käynnistynyt Tyksissä – FICAN"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhko-ja-reumasairauksien-osasto",
+     "title": "Keuhko- ja reumasairauksien osasto | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "3 reads: screening pilot; pathway; diagnostics unit",
+   "ms": 5329
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/keuhkosyovan-valtakunnallinen-seulontapilotti-on-nyt-kaynnistynyt-tyksissa/",
+   "focus": "seulontapilotti Varha tutkittavia kutsua",
+   "why": "screening pilot",
+   "status": "done",
+   "t_s": 12.2,
+   "result_en": "no answer in 20 s; skipped",
+   "ms": 20000,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "hoitopolku moniammatillinen kokous sädehoito leikkaus",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 12.2,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept",
+   "ms": 2487,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa"
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+   "focus": "keuhkosyövän diagnostiikka keuhkoputken tähystys hoitaja",
+   "why": "diagnostics unit",
+   "status": "done",
+   "t_s": 12.2,
+   "result_en": "\"Keuhkosairauksien poliklinikka, A-sairaala\" · 1 464 chars",
+   "ms": 4267,
+   "title": "Keuhkosairauksien poliklinikka, A-sairaala",
+   "chars": 1464,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala"
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 32.2,
+   "result_en": "1 search: screening pilot on county page",
+   "ms": 2376
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha keuhkosyövän seulontapilotti kutsu",
+   "country": "FI",
+   "why": "screening pilot on county page",
+   "status": "done",
+   "t_s": 34.6,
+   "result_en": "6 results: fican.fi, oys.fi, syopajarjestot.fi, laakarilehti.fi",
+   "ms": 2788,
+   "results": [
+    {
+     "url": "https://fican.fi/keuhkosyovan-valtakunnallinen-seulontapilotti-on-nyt-kaynnistynyt-tyksissa/",
+     "title": "Keuhkosyövän valtakunnallinen seulontapilotti on nyt käynnistynyt Tyksissä – FICAN"
+    },
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/pitkaan-tupakoineita-etsitaan-keuhkosyovan-seulontapilottiin/",
+     "title": "Pitkään tupakoineita etsitään keuhkosyövän seulontapilottiin - Lääkärilehti"
+    },
+    {
+     "url": "https://syoparekisteri.fi/seulonta/tutkimus-2/keuhkosyovan-seulontapilotti/",
+     "title": "Keuhkosyövän seulontapilotti"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palvelut/terveysasemapalvelut/seulonnat",
+     "title": "Seulonnat | Varha"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 37.4,
+   "result_en": "2 reads: screening pilot; screening pilot areas",
+   "ms": 4059
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/keuhkosyovan-valtakunnallinen-seulontapilotti-on-nyt-kaynnistynyt-tyksissa/",
+   "focus": "Varhan tutkittavia kutsua",
+   "why": "screening pilot",
+   "status": "done",
+   "t_s": 41.5,
+   "result_en": "no answer in 20 s; skipped",
+   "ms": 20000,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "focus": "Tyks Varsinais-Suomi alue osallistujat",
+   "why": "screening pilot areas",
+   "status": "done",
+   "t_s": 41.5,
+   "result_en": "\"Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupa\" · 4 547 chars · 7 of 8 passages kept",
+   "ms": 3519,
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "chars": 4547,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/"
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 61.5,
+   "result_en": "writes the answer",
+   "ms": 16822
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:35:21+00:00"
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+   "title": "Keuhkosairauksien poliklinikka, A-sairaala",
+   "chars": 1464,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:35:23+00:00"
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "chars": 4547,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:35:51+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "checked_at": "2026-11-13T23:36:25+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 79.4
+}

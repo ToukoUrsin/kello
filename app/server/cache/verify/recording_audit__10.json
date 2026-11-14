@@ -1,0 +1,522 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Our model assumes no direct effect on patients for this measure. Instead: does a source you read document the problem it fixes?\nMeasure: Audit of treatment records (\"no treatment on record\"). Take 50 patients with no treatment on record and check the charts: were they untreated, or was drug treatment or radiotherapy given and not coded? Fix the coding. It treats no extra patient, but until it is done the county cannot tell a care gap from a recording gap.",
+ "area_id": "10",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "The THL cancer registry lung cancer report says stage at diagnosis was missing for 48 % of patients, and notes from multidisciplinary meetings were found mostly only in the Inner Finland collaborative area (33 % of patients); together these show recording gaps, while the model's zero direct effect is an untested assumption.",
+ "supported_en": "The national cancer registry (THL) reports that stage at diagnosis was missing for 48 % of lung cancer patients diagnosed in 2019–2023.",
+ "not_supported_en": "The pages read give no Kymenlaakso-specific share of patients with no treatment on record.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that Kymenlaakso or HUS checks the charts of cancer patients with no treatment on record; Kymenlaakso does run an internal audit of nursing records (nursing summary and care plan in the LifeCare patient record system), but that audit does not cover cancer treatment coding.",
+ "missing_en": "",
+ "summary_en": "No public sign was found that Kymenlaakso wellbeing services county or HUS checks the charts of cancer patients with no treatment on record. Kymenlaakso runs an internal audit of nursing records in LifeCare (Innokylä page), and its cancer care, including radiotherapy, is centralised at Kymenlaakso Central Hospital. The cancer registry (THL) documents the problem: stage was missing for 48 % of lung cancer patients.",
+ "unanswered_en": "We found no local page that checks cancer treatment coding, and no Kymenlaakso figure for the share of patients with no treatment on record.",
+ "sources": [
+  {
+   "url": "https://www.innokyla.fi/fi/toimintamalli/sote-kirjaamisen-kehittaminen-kymenlaakson-hyvinvointialue-rrp-p4-i3",
+   "title": "Sote-kirjaamisen kehittäminen, Kymenlaakson hyvinvointialue (RRP, P4, I3)",
+   "quote": "Sisäisen auditoinnin avulla arvioidaan hoitotyön ammattilaisten päivittäistä kirjaamista sähköisestä potilastietojärjestelmä LifeCare:stä hoitotyön yhteenvedon (erikoisala-HOI) ja hoitosuunnitelman (Hoke/hoitokertomus) osalta.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:52:40+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "title": "Syöpä",
+   "quote": "Kymenlaaksossa syöpätautien hoito on keskitetty Kymenlaakson keskussairaalaan, jossa sijaitsevat syöpätautien poliklinikka, hoitokeskus ja osastotoiminta sekä sädehoitoyksikkö.",
+   "about": "context",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:54:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "Syövän toteamisvaiheen levinneisyystiedot puuttuivat noin puolelta potilaita (48 %).",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "quote": "MDT-kirjauksia löytyi pääsääntöisesti vain Sisä-Suomen yhteistyöalueelta (33 %:lle potilaita), muilla alueilla kirjauksia löytyi vain satunnaisesti.",
+   "about": "effect",
+   "published": null,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2145,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva hoitoilmoitus kirjaaminen syöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, syoparekisteri.fi",
+   "ms": 2751,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2026/01/Kymenlaakson-hyvinvointialueen-laakehoitosuunnitelma-2026.pdf",
+     "title": "KYMENLAAKSON HYVINVOINTIALUEEN LÄÄKEHOITOSUUNNITELMA 2026"
+    },
+    {
+     "url": "https://kymenhva.fi/anna-palautetta/",
+     "title": "Anna meille palautetta - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://julkari.fi/bitstream/handle/10024/131630/Hoitoonp%C3%A4%C3%A4syn%20seuranta%20sy%C3%B6v%C3%A4n%20hoidossa_p%C3%A4ivitys170225.pdf?isAllowed=y&sequence=6",
+     "title": "OHJAUS Hoitoonpääsyn seuranta syövän hoidossa Määrittelyt ja ohjeistus"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/11/Terveysaseman-vaihto-HVA2.pdf",
+     "title": "Terveysaseman vaihto 1/2 Kymenlaakson hyvinvointialue Y-tunnus / FO-nummer"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS syöpärekisteri hoitotietojen ilmoittaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, fican.fi",
+   "ms": 2463,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://fican.fi/toiminta/arviointi-ja-seuranta/syoparekisteri/",
+     "title": "Syöpärekisteri – FICAN"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tiedonkeruu/",
+     "title": "Tiedonkeruu - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tilastot/tilastokuvaus-ja-laatuselosteet/",
+     "title": "Tilastokuvaukset ja laatuselosteet - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/seulonta/seulontatietojen-ilmoittaminen/",
+     "title": "Seulontatietojen ilmoittaminen - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/tilastot/kliinisten-ilmoitusten-tilasto/",
+     "title": "Kliinisten ilmoitusten tilasto - Syöpärekisteri"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala kirjaamisen laatu syöpähoidot",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, yle.fi",
+   "ms": 1791,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/",
+     "title": "Kymenlaakson keskussairaala - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/74-20125859",
+     "title": "Osa kymenlaaksolaisista käy sairaalassa monta kertaa viikossa – pian he pääsevät uusiin tiloihin | Kymenlaakso | Yle"
+    },
+    {
+     "url": "https://perhekeskus.kymenhva.fi/ajankohtaista/palveluhakemisto/isotooppiyksikko/",
+     "title": "Isotooppiyksikkö - Kymenlaakson perhekeskus"
+    },
+    {
+     "url": "https://perhekeskus.kymenhva.fi/ajankohtaista/palveluhakemisto/syopatautien-ja-sadehoidon-palvelut/",
+     "title": "Syöpätautien poliklinikkapalvelut - Kymenlaakson perhekeskus"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.8,
+   "result_en": "2 reads: A: documented recording gap; B: local audit",
+   "ms": 5450
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "focus": "kirjaamiskäytännöt hoitotieto Kymenlaakso",
+   "why": "A: documented recording gap",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"keuhkosyoparaportti\" · 44 558 chars · 6 of 46 passages kept · from cache",
+   "ms": 10,
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "focus": "kirjaaminen syöpärekisteri ilmoitus laatu",
+   "why": "B: local audit",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"Syöpä\" · 4 029 chars · from cache",
+   "ms": 11,
+   "title": "Syöpä",
+   "chars": 4029,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "1 search: B: any local recording audit",
+   "ms": 3525
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakso syöpärekisteri ilmoitusten kattavuus parantaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any local recording audit",
+   "status": "done",
+   "t_s": 11.7,
+   "result_en": "6 results: syoparekisteri.fi, kymenhva.fi",
+   "ms": 1187,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/",
+     "title": "Tilastoja ja tutkimusta - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/ilmoituspalvelu/",
+     "title": "Tee syöpäilmoitus - Syöpärekisteri"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/digitaaliset-palvelut/oma-kymenlaakso/",
+     "title": "Oma Kymenlaakso - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/syopa_2023_tilastoraportti.html",
+     "title": "Syöpä 2023"
+    },
+    {
+     "url": "https://syoparekisteri.fi/2025/06/26/yhteistyo-toi-parannusta-syoparekisteri-ilmoituksiin/",
+     "title": "Yhteistyö toi parannusta syöpärekisteri-ilmoituksiin - Syöpärekisteri"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/syopa_2022_tilastoraportti.html",
+     "title": "Syöpä 2022"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.9,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Kymenhva / Kymenlaakson keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision docume",
+   "ms": 11735
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 24.7,
+   "result_en": "1 search: B: local audit or decision",
+   "ms": 3145
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson hyvinvointialue syöpäpotilaiden hoitotietojen kirjaaminen auditointi",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: local audit or decision",
+   "status": "done",
+   "t_s": 27.8,
+   "result_en": "6 results: kymenhva.fi, innokyla.fi",
+   "ms": 2394,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2026/01/Kymenlaakson-hyvinvointialueen-laakehoitosuunnitelma-2026.pdf",
+     "title": "KYMENLAAKSON HYVINVOINTIALUEEN LÄÄKEHOITOSUUNNITELMA 2026"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2024/02/Kymen-HVA-laakehoitosuunnitelma-2023-15.2.2024.pdf",
+     "title": "KYMENLAAKSON HYVINVOINTIALUEEN LÄÄKEHOITOSUUNNITELMA 18.4.2023"
+    },
+    {
+     "url": "https://www.innokyla.fi/fi/toimintamalli/sote-kirjaamisen-kehittaminen-kymenlaakson-hyvinvointialue-rrp-p4-i3",
+     "title": "Sote-kirjaamisen kehittäminen, Kymenlaakson hyvinvointialue (RRP, P4, I3) | Innokylä"
+    },
+    {
+     "url": "https://kymenhva.fi/meilla-asiakkaana/henkilotietojen-kasittely/tietopyynnot/",
+     "title": "Tietopyynnöt - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/09/Kymenlaakson-hyvinvointialueen-omavalvonnan-osavuosikatsaus-5-8-2025.pdf",
+     "title": "Omavalvonnan osavuosikatsaus 5–8/2025​"
+    },
+    {
+     "url": "https://kymenhva.fi/rekisteroidyn-informointi-oma-kymenlaakso/",
+     "title": "Tietosuojakäytäntö - Oma Kymenlaakso - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.2,
+   "result_en": "1 read: B: local recording audit",
+   "ms": 3153
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.innokyla.fi/fi/toimintamalli/sote-kirjaamisen-kehittaminen-kymenlaakson-hyvinvointialue-rrp-p4-i3",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.innokyla.fi/fi/toimintamalli/sote-kirjaamisen-kehittaminen-kymenlaakson-hyvinvointialue-rrp-p4-i3",
+   "focus": "auditointi kirjaaminen",
+   "why": "B: local recording audit",
+   "status": "done",
+   "t_s": 33.4,
+   "result_en": "\"Sote-kirjaamisen kehittäminen, Kymenlaakson hyvinvointialue (RRP, P4, \" · 15 057 chars · 6 of 21 passages kept",
+   "ms": 3639,
+   "title": "Sote-kirjaamisen kehittäminen, Kymenlaakson hyvinvointialue (RRP, P4, I3)",
+   "chars": 15057,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.innokyla.fi/fi/toimintamalli/sote-kirjaamisen-kehittaminen-kymenlaakson-hyvinvointialue-rrp-p4-i3",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 37.0,
+   "result_en": "writes the answer",
+   "ms": 13440
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "title": "keuhkosyoparaportti",
+   "chars": 44558,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:50:23+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "title": "Syöpä",
+   "chars": 4029,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:54:05+00:00",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.innokyla.fi/fi/toimintamalli/sote-kirjaamisen-kehittaminen-kymenlaakson-hyvinvointialue-rrp-p4-i3",
+   "title": "Sote-kirjaamisen kehittäminen, Kymenlaakson hyvinvointialue (RRP, P4, I3)",
+   "chars": 15057,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:52:40+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": true,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:52:54+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: Kymenlaakso's own audit (described on Innokylä) checks nursing records, not cancer treatment coding, and the cancer registry (THL) shows large gaps in what gets recorded.",
+ "seconds": 50.5,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva hoitoilmoitus kirjaaminen syöpä\"; \"HUS syöpärekisteri hoitotietojen ilmoittaminen\"; \"Kymenlaakson keskussairaala kirjaamisen laatu syöpähoidot\", ...) and read 3 pages on syoparekisteri.fi, kymenhva.fi, innokyla.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva hoitoilmoitus kirjaaminen syöpä",
+  "HUS syöpärekisteri hoitotietojen ilmoittaminen",
+  "Kymenlaakson keskussairaala kirjaamisen laatu syöpähoidot",
+  "Kymenlaakso syöpärekisteri ilmoitusten kattavuus parantaminen",
+  "Kymenlaakson hyvinvointialue syöpäpotilaiden hoitotietojen kirjaaminen auditointi"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: Kymenlaakso's own audit (described on Innokylä) checks nursing records, not cancer treatment coding, and the cancer registry (THL) shows large gaps in what gets recorded.",
+ "verdict_en": "No public sign that it is running in Kymenlaakso. The problem it fixes is documented only in part. Supported: The national cancer registry (THL) reports that stage at diagnosis was missing for 48 % of lung cancer patients diagnosed in 2019–2023. Not supported: The pages read give no Kymenlaakso-specific share of patients with no treatment on record.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Problem partly documented",
+ "intervention_id": "recording_audit",
+ "intervention_name_en": "Audit of treatment records (\"no treatment on record\")",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}

@@ -1,0 +1,513 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Same-day chest X-ray report with immediate CT. A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+ "area_id": "05",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "A randomised trial in London (Thorax 2023) found that a median of 32 days passed from chest X-ray to lung cancer diagnosis when the X-ray was reported immediately, against 63 days with standard reporting, a 31-day saving.",
+ "supported_en": "A randomised trial in Thorax (2023) found the median time from chest X-ray to diagnosis was 32 days with immediate reporting and 63 days with standard reporting (p=0.03), a 31-day saving.",
+ "not_supported_en": "The trial included only 49 cancers in one London hospital, reported no confidence interval, and does not show the effect in a Finnish setting.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No Tyks or Varha page read says that chest X-rays from health centres are reported while the patient waits, or that radiology starts a same-day CT or the referral; the Tyks pathway says the referral comes from primary care.",
+ "missing_en": "",
+ "summary_en": "Tyks's pages say lung cancer diagnosis is centralised at its lung clinic and that primary care writes the referral; they do not mention same-day X-ray reporting or radiology starting the CT. Tyks reports an average of 9 days from referral arrival to first contact in January–June 2025. A London randomised trial (Thorax 2023) found immediate reporting halved the time from chest X-ray to diagnosis, from 63 to 32 days.",
+ "unanswered_en": "After three search rounds, no Varha or Tyks page was found that describes how fast health-centre chest X-rays are reported or how long it takes from X-ray to CT.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Perusterveydenhuollossa laaditaan sinusta lähete oman alueen sairaalaan, keuhkosairauksien poliklinikalle, jos on herännyt epäily keuhkosyövästä.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "quote": "Keuhkosyövässä seurataan seuraavia hoitoonpääsyaikoja lähetteen saapumisesta Tyksin keuhkovastuualueelle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi",
+   "ms": 736,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha keuhkokuva lausunto samana päivänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, laakarilehti.fi, terve.fi",
+   "ms": 1750,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/palvelut/terveysasemapalvelut/hoitoon-ja-palveluun-hakeutuminen/lausunnot-ja-todistukset",
+     "title": "Lausunnot ja todistukset | Varha"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/keuhkokuva-on-yha-avain-keuhkosyovan-varhaiseen-toteamiseen/",
+     "title": "Keuhkokuva on yhä avain keuhkosyövän varhaiseen toteamiseen - Lääkärilehti"
+    },
+    {
+     "url": "https://www.varha.fi/fi",
+     "title": "Etusivu | Varha"
+    },
+    {
+     "url": "https://www.terve.fi/kysymykset/radiologin-lausunto-0",
+     "title": "Radiologin lausunto - 84194 | Terve.fi"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/kommentit/aanessa-potilas-kun-keuhkokuvaa-hallitsee-iso-mohkale/",
+     "title": "Äänessä potilas: Kun keuhkokuvaa hallitsee iso möhkäle - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/rontgen-ja-muu-kuvantaminen",
+     "title": "Röntgen ja muu kuvantaminen | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks thorax-röntgen päivystyslausunto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 2628,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/tg2-paivystysrontgen",
+     "title": "TG2-päivystysröntgen | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/rontgenkuvaukset",
+     "title": "Röntgenkuvaukset | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-orto-kirurginen-sairaala/kirurgisen-sairaalan-rontgen-tks-rontgen",
+     "title": "Kirurgisen sairaalan röntgen, TKS-röntgen | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/tc2-rontgen",
+     "title": "TC2-röntgen | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-majakkasairaala/majakkasairaala-rontgen",
+     "title": "Majakkasairaala röntgen | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/rontgenin-ajanvaraus",
+     "title": "Röntgenin ajanvaraus | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen keuhkokuvan jälkeen suoraan TT keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: docrates.mehilainen.fi, kaikkisyovasta.fi, tyks.fi",
+   "ms": 1268,
+   "results": [
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-varhaisen-toteamisen-palvelut/keuhkosyovan-riskikartoitus/",
+     "title": "Keuhkosyövän riskikartoitus - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/uutiset/erittain-matala-annoksinen-tt-kuvaus/",
+     "title": "Keuhkosyövän varhaisvaiheen diagnostiikka: Erittäin matala-annoksinen TT-kuvaus kohonneen riskin henkilöille"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/VSSHP/TT%20Keuhkojen%20varjoainetietokonetomografia.pdf",
+     "title": "Päivitetty 30.6.2025 Varsinais-Suomen hyvinvointialue | www.varha.fi 1/2"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/keuhkosyovan-riskikartoituksella-ja-varhaisen-vaiheen-tutkimuksilla-voi-olla-ratkaiseva-merkitys-potilaan-ennusteelle/",
+     "title": "Keuhkosyövän riskikartoituksella ja varhaisen vaiheen tutkimuksilla voi olla ratkaiseva merkitys potilaan ennusteelle"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.6,
+   "result_en": "2 reads: effect size; local pathway",
+   "ms": 4150
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "focus": "median days chest X-ray to diagnosis immediate reporting",
+   "why": "effect size",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"Impact of radiographer immediate reporting of X-rays of the chest from\" · 20 833 chars · 6 of 36 passages kept · from cache",
+   "ms": 16,
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "keuhkokuva TT lähete viive",
+   "why": "local pathway",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "1 read: B: local time from X-ray to CT",
+   "ms": 3104
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "focus": "keuhkokuva TT lähete päivää",
+   "why": "B: local time from X-ray to CT",
+   "status": "done",
+   "t_s": 9.9,
+   "result_en": "\"Keuhkosyövän hoitoonpääsyajat\" · 806 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.9,
+   "result_en": "1 search: B: same-day reporting in Varha",
+   "ms": 2424
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha röntgenhoitaja lausuu keuhkokuvat",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: same-day reporting in Varha",
+   "status": "done",
+   "t_s": 12.3,
+   "result_en": "6 results: biofit.fi, synlab.fi, aava.fi, terve.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://biofit.fi/keuhkokuvaus-mita-se-on-ja-miten-se-tehdaan/",
+     "title": "Keuhkokuvaus: Mitä se on ja miten se tehdään?"
+    },
+    {
+     "url": "https://synlab.fi/rontgenkuvaus/",
+     "title": "Röntgenkuvaus"
+    },
+    {
+     "url": "https://www.aava.fi/palvelut/kuvantaminen/rontgen-ja-ultraaanitutkimukset/rontgentutkimukset/",
+     "title": "Röntgentutkimukset - Lääkärikeskus Aava"
+    },
+    {
+     "url": "https://www.terve.fi/kysymykset/radiologin-lausunto-0",
+     "title": "Radiologin lausunto - 84194 | Terve.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/radiologia/",
+     "title": "Radiologia - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.vauva.fi/keskustelu/5199611/miksei-rontgenhoitaja-saa-vastata-kysymyksiin",
+     "title": "Keskustelu - Miksei röntgenhoitaja saa vastata kysymyksiin? | Aihe vapaa | Vauva"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.4,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Varha / Tyks / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11611
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 27.0,
+   "result_en": "1 search: B: direct CT path in Tyks area",
+   "ms": 2623
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäepäily suora TT-lähete terveyskeskus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: direct CT path in Tyks area",
+   "status": "done",
+   "t_s": 29.6,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1553,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/syopapotilaiden-hoitoonpaasy-tyksissa",
+     "title": "Syöpäpotilaiden hoitoonpääsy Tyksissä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.2,
+   "result_en": "writes the answer",
+   "ms": 10234
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:43:08+00:00",
+ "stopped": "finished",
+ "advice": null,
+ "model_reason_en": "Keep this line: no Tyks or Varha page shows same-day chest X-ray reporting with radiology starting the CT, and a randomised trial supports a saving of about a month.",
+ "seconds": 41.4,
+ "searched_en": "Searched 6 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha keuhkokuva lausunto samana päivänä\"; \"Tyks thorax-röntgen päivystyslausunto\"; \"Varsinais-Suomen keuhkokuvan jälkeen suoraan TT keuhkosyöpä\", ...) and read 3 pages on ncbi.nlm.nih.gov, tyks.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha keuhkokuva lausunto samana päivänä",
+  "Tyks thorax-röntgen päivystyslausunto",
+  "Varsinais-Suomen keuhkokuvan jälkeen suoraan TT keuhkosyöpä",
+  "Varha röntgenhoitaja lausuu keuhkokuvat",
+  "Tyks keuhkosyöpäepäily suora TT-lähete terveyskeskus"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no Tyks or Varha page shows same-day chest X-ray reporting with radiology starting the CT, and a randomised trial supports a saving of about a month.",
+ "verdict_en": "No public sign that it is running in Southwest Finland. Recent evidence supports the size of effect we assume. A randomised trial in Thorax (2023) found the median time from chest X-ray to diagnosis was 32 days with immediate reporting and 63 days with standard reporting (p=0.03), a 31-day saving.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "same_day_cxr_ct",
+ "intervention_name_en": "Same-day chest X-ray report with immediate CT",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

@@ -1,0 +1,522 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Savo wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Fitness assessment and prehabilitation before deciding against curative treatment. Before a stage I-III patient is judged too frail, they get an exercise test, a geriatric assessment if over 75, and four weeks of supervised exercise, breathing training and help to stop smoking. Then the decision is made again.",
+ "area_id": "13",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A Cochrane review from 2022 (9 trials, 573 patients) found that exercise before lung cancer surgery cuts lung complications after surgery by more than half (RR 0.45).",
+ "not_supported_en": "No page we read measures how many more patients get curative treatment after prehabilitation, so the assumed 0.5 points remains an assumption.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: We found no public sign of the measure in North Savo. The KYS lung cancer care pathway (2021) lists only the usual fitness tests (stair test, an exercise test with breathing measured, a 500 m walk) and says that poor general condition can rule out surgery. A FICAN East news item from 1.8.2024 says older cancer patients get a systematic geriatric assessment only in Jyväskylä and Joensuu, and that elsewhere in the region it is still being planned. A: A 2022 Cochrane review found that exercise before surgery cuts lung complications (RR 0.45), but it did not measure whether more patients become eligible for curative treatment.",
+ "unanswered_en": "We found no KYS page on a prehabilitation programme or on geriatric assessment for lung cancer patients at KYS, and no study measuring how many more patients become eligible for curative treatment.",
+ "sources": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ik%C3%A4%C3%A4ntyneiden-sy%C3%B6v%C3%A4n-hoito-edellytt%C3%A4%C3%A4-erityist%C3%A4-huomiota",
+   "title": "Ikääntyneiden syövän hoito edellyttää erityistä huomiota",
+   "quote": "Muualla onkogeriatrisen arvioinnin tarve on tunnistettu, mutta toimintamalli on vielä suunnittelu- ja kehittämisvaiheessa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:21:39+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Mahdollinen muu sairastavuus ja potilaan yleiskunto, jotka voivat olla este leikkaushoidolle.",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "porrastesti, spiroergometria, kliininen kuvaus esim 500 m kävely",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "quote": "Preoperative exercise training results in a large reduction in the risk of developing a postoperative pulmonary complication compared to no preoperative exercise training (risk ratio (RR) 0.45, 95% CI 0.33 to 0.61",
+   "about": "effect",
+   "published": "2022-09-28",
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, hyvaks.fi, hus.fi",
+   "ms": 1506,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon hyvinvointialue prehabilitaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pshyvinvointialue.fi, hyvinvointikertomus.fi, suomi.fi",
+   "ms": 1109,
+   "results": [
+    {
+     "url": "https://pshyvinvointialue.fi/",
+     "title": "Pohjois-Savon hyvinvointialue - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/ajanvaraukset",
+     "title": "Ajanvaraukset - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hyvinvointikertomus.fi/backend/api/document/attachment/24332404314.pdf",
+     "title": "POHJOIS-SAVON HYVINVOINTIALUEEN HYVINVOINTIKERTOMUS JA –SUUNNITELMA 2025-2029"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/pohjois-savon-hyvinvointialue/88226255-69e5-4f7c-b9d3-5b3cb50515e0",
+     "title": "Pohjois-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://yle.fi/a/74-20256740",
+     "title": "Pohjois-Savon hyvinvointialue valmistelee palveluverkon..."
+    },
+    {
+     "url": "https://asiointi.pshyvinvointialue.fi/",
+     "title": "Pohjois-Savo - Asiointi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS esikuntoutus syöpäleikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, kaikkisyovasta.fi",
+   "ms": 1438,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/gynekologinen-sy%C3%B6p%C3%A4leikkaus",
+     "title": "Gynekologinen syöpäleikkaus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/syopatautien-ja-sadehoidon-palvelut",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopahoidot/syovan-leikkaus/",
+     "title": "Syövän leikkaus - Kaikki syövästä"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/syovan-hoito",
+     "title": "Syövän hoito - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-pohjois-savon-hyvinvointialue/73b55781-80d5-4211-93f2-c3143cfb5a36",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savon hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon leikkausta edeltävä kuntoutus keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: keuhkosyopa.fi, sydansairaala.fi, suomenseniorihoiva.fi",
+   "ms": 1908,
+   "results": [
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/leikkaushoito/",
+     "title": "Leikkaushoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-kuntoutus-ja-ennuste/",
+     "title": "Keuhkosyöpä kuntoutus ja ennuste | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/kuntoutuspalvelut",
+     "title": "Kuntoutuspalvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92223",
+     "title": "Keuhkosyövän hoitosuositus"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 1.9,
+   "result_en": "2 reads: B: does KYS pathway include fitness assessment/prehab; A: effect of prehab",
+   "ms": 5205
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "toimintakyky, rasituskoe, spiroergometria, kuntoutus, fysioterapia, tupakointi, leikkauskelpoisuus, geriatrinen",
+   "why": "B: does KYS pathway include fitness assessment/prehab",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/36170564",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/36170564",
+   "focus": "pulmonary complications odds ratio prehabilitation exercise",
+   "why": "A: effect of prehab",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Preoperative exercise training for people with non-small cell lung can\" · 4 109 chars · from cache",
+   "ms": 0,
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/36170564",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "1 search: B: any prehab program at KYS",
+   "ms": 3072
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS prehabilitaatio keuhkoleikkaus fysioterapia ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any prehab program at KYS",
+   "status": "done",
+   "t_s": 10.2,
+   "result_en": "6 results: fysioterapiamessut.expomark.fi, sydansairaala.fi, mehilainen.fi",
+   "ms": 2518,
+   "results": [
+    {
+     "url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+     "title": "Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - Fysioterapia & kuntoutus"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/keuhkoleikkauspotilaan-fysioterapia/",
+     "title": "Keuhkoleikkauspotilaan fysioterapia - Sydänsairaala"
+    },
+    {
+     "url": "https://fysioterapiamessut.expomark.fi/wp-content/uploads/sites/24/2024/09/Posteri-AiraksinenKivioja.pdf",
+     "title": "FYSIOTERAPEUTIN PREOPERATIIVINEN ARVIO JA OHJAUS ENNEN KEUHKOLEIKKAUSTA Lähteet"
+    },
+    {
+     "url": "https://www.mehilainen.fi/terapiapalvelut/fysioterapia/fysioterapia-ennen-ja-jalkeen-leikkauksen",
+     "title": "Fysioterapia ennen ja jälkeen leikkauksen"
+    },
+    {
+     "url": "https://www.aava.fi/palvelut/fysioterapia/pre-ja-postoperatiivinen-fysioterapia/",
+     "title": "Pre- ja postoperatiivinen fysioterapia | Lääkärikeskus Aava"
+    },
+    {
+     "url": "https://www.theseus.fi/bitstream/handle/10024/353809/Hongisto_Hanna_Lehtonen_Janita.pdf?sequence=5",
+     "title": "Sydän- ja keuhkoleikkaukseen tulevan potilaan laadukas preoperatiivinen ohjaus"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.7,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Pohjois-Savon hyvinvointialue / KYS / KYS Kuopion yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 11724
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 24.4,
+   "result_en": "1 search: B: geriatric assessment piece at KYS",
+   "ms": 2537
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS geriatrinen arvio syöpäpotilas iäkäs",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: geriatric assessment piece at KYS",
+   "status": "done",
+   "t_s": 27.0,
+   "result_en": "6 results: laakarilehti.fi, kaikkisyovasta.fi, oamkjournal.oamk.fi",
+   "ms": 1413,
+   "results": [
+    {
+     "url": "https://www.laakarilehti.fi/tieteessa/alkuperaistutkimukset/geriatriset-oireyhtymat-ovat-yleisia-iakkailla-syopapotilailla/",
+     "title": "Geriatriset oireyhtymät ovat yleisiä iäkkäillä syöpäpotilailla - Lääkärilehti"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/geriatrinen-arvio-turvaa-ikaihmiselle-sopivaa-syopahoitoa/",
+     "title": "Geriatrinen arvio turvaa ikäihmiselle sopivaa syöpähoitoa - Kaikki syövästä"
+    },
+    {
+     "url": "https://oamkjournal.oamk.fi/2024/geriatrinen-arviointi-osaksi-syopahoitojen-suunnittelua/",
+     "title": "Geriatrinen arviointi osaksi syöpähoitojen suunnittelua – Oamk Journal"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/tieteessa/geriatrinen-arviointi-ohjaa-iakkaan-syopapotilaan-hoidon-suunnittelua/",
+     "title": "Geriatrinen arviointi ohjaa iäkkään syöpäpotilaan hoidon ..."
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/iakkaiden-syopapotilaiden-kokonaisvaltainen-geriatrinen-arvio-kannattaa/",
+     "title": "Iäkkäiden syöpäpotilaiden kokonaisvaltainen geriatrinen arvio kannattaa - Potilaan Lääkärilehti"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ik%C3%A4%C3%A4ntyneiden-sy%C3%B6v%C3%A4n-hoito-edellytt%C3%A4%C3%A4-erityist%C3%A4-huomiota",
+     "title": "Ikääntyneiden syövän hoito edellyttää erityistä huomiota - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 28.4,
+   "result_en": "1 read: B: is geriatric assessment running at KYS",
+   "ms": 3903
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ik%C3%A4%C3%A4ntyneiden-sy%C3%B6v%C3%A4n-hoito-edellytt%C3%A4%C3%A4-erityist%C3%A4-huomiota",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ik%C3%A4%C3%A4ntyneiden-sy%C3%B6v%C3%A4n-hoito-edellytt%C3%A4%C3%A4-erityist%C3%A4-huomiota",
+   "focus": "geriatrinen arviointi KYS G8 seula käytössä",
+   "why": "B: is geriatric assessment running at KYS",
+   "status": "done",
+   "t_s": 32.3,
+   "result_en": "\"Ikääntyneiden syövän hoito edellyttää erityistä huomiota\" · 7 032 chars · 6 of 10 passages kept",
+   "ms": 1866,
+   "title": "Ikääntyneiden syövän hoito edellyttää erityistä huomiota",
+   "chars": 7032,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ik%C3%A4%C3%A4ntyneiden-sy%C3%B6v%C3%A4n-hoito-edellytt%C3%A4%C3%A4-erityist%C3%A4-huomiota",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.2,
+   "result_en": "writes the answer",
+   "ms": 13564
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/fi/w/ik%C3%A4%C3%A4ntyneiden-sy%C3%B6v%C3%A4n-hoito-edellytt%C3%A4%C3%A4-erityist%C3%A4-huomiota",
+   "title": "Ikääntyneiden syövän hoito edellyttää erityistä huomiota",
+   "chars": 7032,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:21:39+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:21:52+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: KYS's lung cancer care pathway lists only the usual fitness tests before surgery, and FICAN East reported in 2024 that geriatric assessment of older cancer patients runs systematically only in Jyväskylä and Joensuu. No page shows a prehabilitation programme at KYS.",
+ "seconds": 47.7,
+ "searched_en": "Searched 6 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Pohjois-Savon hyvinvointialue prehabilitaatio\"; \"KYS esikuntoutus syöpäleikkaus\"; \"Pohjois-Savon leikkausta edeltävä kuntoutus keuhkosyöpä\", ...) and read 3 pages on syovanhoitokeskus.pshyvinvointialue.fi, europepmc.org.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Pohjois-Savon hyvinvointialue prehabilitaatio",
+  "KYS esikuntoutus syöpäleikkaus",
+  "Pohjois-Savon leikkausta edeltävä kuntoutus keuhkosyöpä",
+  "KYS prehabilitaatio keuhkoleikkaus fysioterapia ennen leikkausta",
+  "KYS geriatrinen arvio syöpäpotilas iäkäs"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: KYS's lung cancer care pathway lists only the usual fitness tests before surgery, and FICAN East reported in 2024 that geriatric assessment of older cancer patients runs systematically only in Jyväskylä and Joensuu. No page shows a prehabilitation programme at KYS.",
+ "verdict_en": "No public sign that it is running in North Savo. Evidence supports that it works, but not the size of effect we assume. Supported: A Cochrane review from 2022 (9 trials, 573 patients) found that exercise before lung cancer surgery cuts lung complications after surgery by more than half (RR 0.45). Not supported: No page we read measures how many more patients get curative treatment after prehabilitation, so the assumed 0.5 points remains an assumption.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "prehab_fitness_assessment",
+ "intervention_name_en": "Fitness assessment and prehabilitation before deciding against curative treatment",
+ "area_name_en": "North Savo wellbeing services county"
+}

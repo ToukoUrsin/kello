@@ -1,0 +1,514 @@
+{
+  "area_id": "21",
+  "area_name_en": "Lapland wellbeing services county",
+  "area_name_fi": "Lapin hyvinvointialue",
+  "question": "What is Lapland wellbeing services county doing about lung cancer care right now?",
+  "findings": [
+    {
+      "date": "2026-07-13",
+      "what_en": "Lapha is closing inpatient wards to save €8 million, which makes taxi trips to treatment longer; a lung cancer patient from Tervola travels hundreds of kilometres for care.",
+      "what_fi": "Lapha sulkee vuodeosastoja 8 miljoonan euron säästöjen vuoksi, mikä pidentää hoitomatkoja; tervolalainen keuhkosyöpäpotilas matkustaa satoja kilometrejä hoitoihin.",
+      "quote": "Lapin hyvinvointialue (Lapha) sulkee vuodeosastoja säästääkseen 8 miljoonaa euroa. Potilaiden Kela-taksimatkat pitenevät ja määrä kasvaa.",
+      "url": "https://yle.fi/a/74-20233572",
+      "title": "Järjetöntä rahan tuhlaamista, sanoo ärhäkkää keuhkosyöpää sairastava Joni Kallojärvi yhä kiihtyvästä Kela-taksirallista",
+      "relates_to": "remote_mdt_travel",
+      "scope": "county",
+      "fetched_at": "2026-11-13T22:53:54+00:00",
+      "from_cache": false
+    },
+    {
+      "date": "2026-01-21",
+      "what_en": "OYS and the Finnish Cancer Registry started a low-dose CT lung cancer screening pilot in January 2026, open to people from North Ostrobothnia but not from Lapland.",
+      "what_fi": "OYS ja Syöpärekisteri käynnistivät tammikuussa 2026 matala-annos-TT-seulontapilotin, johon voivat hakea pohjoispohjanmaalaiset mutta eivät lappilaiset.",
+      "quote": "Pilottiin voivat hakea 50–74-vuotiaat pitkään tupakoineet henkilöt Pohjois-Pohjanmaalta sekä Uudenmaan, Pirkanmaan, Pohjanmaan ja Varsinais-Suomen alueilta.",
+      "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+      "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+      "relates_to": "ldct_screening",
+      "scope": "collaborative_area",
+      "fetched_at": "2026-11-13T22:54:24+00:00",
+      "from_cache": false
+    },
+    {
+      "date": "2026-01-21",
+      "what_en": "The OYS pilot is recruiting 1,200 participants and offers every participant support to stop smoking.",
+      "what_fi": "OYS:n pilottiin haetaan 1 200 osallistujaa, ja kaikille tarjotaan tukea tupakoinnin lopettamiseen.",
+      "quote": "Tutkimukseen haetaan 1 200 osallistujaa. Osalle tehdään matala-annoksinen keuhkokuvaus tutkimuksen alussa ja lopussa. Kaikille osallistujille tarjotaan tukea tupakoinnin lopettamiseen.",
+      "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+      "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+      "relates_to": "smoking_cessation_at_diagnosis",
+      "scope": "collaborative_area",
+      "fetched_at": "2026-11-13T22:54:24+00:00",
+      "from_cache": false
+    },
+    {
+      "date": null,
+      "what_en": "Cancer patients in Lapland receive radiotherapy at OYS in Oulu, not within the county.",
+      "what_fi": "Lapin syöpäpotilaiden sädehoito annetaan OYS:ssa Oulussa.",
+      "quote": "Lapin alueella syöpää sairastaville potilaille annetaan sädehoitoa Oulun yliopistollisessa sairaalassa (OYS).",
+      "url": "https://lapha.fi/fi/syopataudit",
+      "title": "Syöpätaudit - Lapin hyvinvointialue",
+      "relates_to": "radiotherapy",
+      "scope": "county",
+      "fetched_at": "2026-11-13T22:53:52+00:00",
+      "from_cache": false
+    },
+    {
+      "date": null,
+      "what_en": "Lapha's oncology outpatient clinics (Rovaniemi and Kemi) give chemotherapy, immuno-oncology and biological drugs, some oral treatments at home.",
+      "what_fi": "Laphan syöpätautien poliklinikat antavat solunsalpaaja-, immuno-onkologisia ja biologisia lääkehoitoja, osan kotona.",
+      "quote": "Poliklinikallamme potilaat saavat syövän lääkehoitoja, kuten solunsalpaajia, immuno-onkologisia ja biologisia lääkkeitä. Osa suun kautta annosteltavista hoidoista voidaan toteuttaa lääkärin ja sairaanhoitajan valvonnassa myös potilaan kotona.",
+      "url": "https://lapha.fi/fi/syopataudit",
+      "title": "Syöpätaudit - Lapin hyvinvointialue",
+      "relates_to": "drug_therapy",
+      "scope": "county",
+      "fetched_at": "2026-11-13T22:53:52+00:00",
+      "from_cache": false
+    },
+    {
+      "date": null,
+      "what_en": "Lapin keskussairaala has introduced a digital care pathway (Terveyskylä Omapolku) for cancer patients.",
+      "what_fi": "Lapin keskussairaalassa on otettu käyttöön syöpäpotilaan digihoitopolku Terveyskylässä.",
+      "quote": "Terveyskylän digihoitopolkujen käyttö laajenee Lapin hyvinvointialueella. Huhtikuussa saatiin käyttöön digihoitopolku uniapneapotilaille. Nyt vuorostaan syöpäpotilaat saavat oman digihoitopolun.",
+      "url": "https://lapha.fi/fi/w/lapin-keskussairaalassa-otetaan-kayttoon-syopapotilaan-digihoitopolku",
+      "title": "Lapin Keskussairaalassa otetaan käyttöön syöpäpotilaan digihoitopolku",
+      "relates_to": "nurse_navigator",
+      "scope": "county",
+      "fetched_at": "2026-11-13T22:53:52+00:00",
+      "from_cache": false
+    }
+  ],
+  "summary_en": "Lapha gives cancer drug therapy in Rovaniemi and Kemi and has a digital pathway for cancer patients, but sends patients to OYS in Oulu for radiotherapy. Ward closures meant to save €8M are making treatment trips longer. The 2026 OYS low-dose CT screening pilot is open to residents of North Ostrobothnia, not Lapland. I found no Lapha lung-cancer pathway, waiting-time figures, EBUS/molecular testing plans or board decisions about lung cancer.",
+  "not_found_en": "I searched for Lapha decisions, a lung-cancer pathway with booked slots, waiting times, video MDT and diagnostics capacity and found nothing; the OYS page on how care is divided across the region returned a 404 error.",
+  "trace": [
+    {
+      "step": 1,
+      "round": 1,
+      "tool": "claude",
+      "input": "plan the first searches",
+      "status": "done",
+      "t_s": 0.0,
+      "result_en": "4 searches: county site; pathway; decisions; news",
+      "ms": 4513
+    },
+    {
+      "step": 2,
+      "round": 1,
+      "tool": "oxylabs /v1/search",
+      "input": "Lapha keuhkosyöpä",
+      "country": "FI",
+      "why": "county site",
+      "status": "done",
+      "t_s": 4.5,
+      "result_en": "6 results: terveyskirjasto.fi, lapha.fi, kaikkisyovasta.fi",
+      "ms": 2301,
+      "results": [
+        {
+          "url": "https://www.terveyskirjasto.fi/dlk00031",
+          "title": "Keuhkosyöpä - Terveyskirjasto"
+        },
+        {
+          "url": "https://lapha.fi/yhteystiedot",
+          "title": "Yhteystiedot - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://lapha.fi/",
+          "title": "Etusivu - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+          "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+        },
+        {
+          "url": "https://yle.fi/a/74-20233572",
+          "title": "Järjetöntä rahan tuhlaamista, sanoo ärhäkkää keuhkosyöpää sairastava Joni Kallojärvi yhä kiihtyvästä Kela-taksirallista | Lappi | Yle"
+        },
+        {
+          "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+          "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "round": 1,
+      "tool": "oxylabs /v1/search",
+      "input": "Lapin keskussairaala keuhkosyöpä hoitopolku",
+      "country": "FI",
+      "why": "pathway",
+      "status": "done",
+      "t_s": 4.5,
+      "result_en": "6 results: suomi.fi, lapha.fi, posio.fi",
+      "ms": 1651,
+      "results": [
+        {
+          "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+          "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+        },
+        {
+          "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/e708fa9c-2ceb-4df3-9e63-dc6fe238d3f1",
+          "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Suomi.fi"
+        },
+        {
+          "url": "https://lapha.fi/keuhkosairaudet",
+          "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://www.posio.fi/palvelupaikat/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-2/",
+          "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Posion kunta"
+        },
+        {
+          "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+          "title": "Keuhkosyövän hoitopolku | HUS"
+        },
+        {
+          "url": "https://lapha.fi/syopataudit",
+          "title": "Syöpätaudit - Lapin hyvinvointialue"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "round": 1,
+      "tool": "oxylabs /v1/search",
+      "input": "Lapin hyvinvointialue aluehallitus syöpähoito sädehoito",
+      "country": "FI",
+      "why": "decisions",
+      "status": "done",
+      "t_s": 4.5,
+      "result_en": "6 results: suomi.fi, lapha.fi",
+      "ms": 1489,
+      "results": [
+        {
+          "url": "https://www.suomi.fi/palvelut/syopataudit-lapin-hyvinvointialue/9b61d8e0-29cc-40d1-9ed0-90b40a45370d",
+          "title": "Syöpätaudit - Lapin hyvinvointialue - Suomi.fi"
+        },
+        {
+          "url": "https://lapha.fi/fi/syopataudit",
+          "title": "Syöpätaudit - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://lapha.fi/fi/ptv-c/c1ca3a25-ad57-4aea-9084-9874828486b6",
+          "title": "Syöpätautien poliklinikan aukioloajat - - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://lapha.fi/tietoameista/aluehallitus",
+          "title": "Aluehallitus - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://lapha.fi/documents/594637/0/Lapin-hyvinvointialueen-hallintosaanto.pdf",
+          "title": "1(58) LAPIN HYVINVOINTIALUEEN HALLINTOSÄÄNTÖ Käsittelyhistoria Toimielin Pvm"
+        },
+        {
+          "url": "https://lapha.fi/tietoameista/paatoksenteko",
+          "title": "Päätöksenteko - Lapin hyvinvointialue"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "round": 1,
+      "tool": "oxylabs /v1/search",
+      "input": "Lapin keskussairaala syöpä uutinen 2026",
+      "country": "FI",
+      "why": "news",
+      "status": "done",
+      "t_s": 4.5,
+      "result_en": "6 results: yle.fi, lapha.fi, suomi.fi, lapinkansa.fi",
+      "ms": 3155,
+      "results": [
+        {
+          "url": "https://yle.fi/t/18-194893/fi",
+          "title": "Lapin keskussairaala | Yle.fi | Uutiset, urheilu, ilmiöt"
+        },
+        {
+          "url": "https://lapha.fi/fi/syopataudit",
+          "title": "Syöpätaudit - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://www.suomi.fi/palvelut/syopataudit-lapin-hyvinvointialue/9b61d8e0-29cc-40d1-9ed0-90b40a45370d",
+          "title": "Syöpätaudit - Lapin hyvinvointialue - Suomi.fi"
+        },
+        {
+          "url": "https://www.lapinkansa.fi/aihe/lapin-keskussairaala/1072",
+          "title": "Lapin keskussairaala | Lapin Kansa"
+        },
+        {
+          "url": "https://lapha.fi/fi/w/lapin-keskussairaalassa-otetaan-kayttoon-syopapotilaan-digihoitopolku",
+          "title": "Lapin Keskussairaalassa otetaan käyttöön syöpäpotilaan digihoitopolku - Lapin hyvinvointialue"
+        },
+        {
+          "url": "https://lapha.fi/sairaalapalvelut",
+          "title": "Sairaalapalvelut - Lapin hyvinvointialue"
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "round": 1,
+      "tool": "claude",
+      "input": "decide the next step",
+      "status": "done",
+      "t_s": 7.7,
+      "result_en": "4 reads: travel/centralisation; radiotherapy location; digital pathway; diagnostics",
+      "ms": 6588
+    },
+    {
+      "step": 7,
+      "round": 1,
+      "tool": "oxylabs /v1/scrape",
+      "input": "https://yle.fi/a/74-20233572",
+      "focus": "keuhkosyöpä Oulu hoidot matkat Lapin hyvinvointialue",
+      "why": "travel/centralisation",
+      "status": "done",
+      "t_s": 14.3,
+      "result_en": "\"Järjetöntä rahan tuhlaamista, sanoo ärhäkkää keuhkosyöpää sairastava J\" · 5 712 chars · 6 of 8 passages kept",
+      "ms": 3225,
+      "title": "Järjetöntä rahan tuhlaamista, sanoo ärhäkkää keuhkosyöpää sairastava Joni Kallojärvi yhä kiihtyvästä Kela-taksirallista",
+      "chars": 5712,
+      "from_cache": false,
+      "kind": "html",
+      "page_url": "https://yle.fi/a/74-20233572"
+    },
+    {
+      "step": 8,
+      "round": 1,
+      "tool": "oxylabs /v1/scrape",
+      "input": "https://lapha.fi/fi/syopataudit",
+      "focus": "sädehoito OYS keuhkosyöpä lääkehoito",
+      "why": "radiotherapy location",
+      "status": "done",
+      "t_s": 14.3,
+      "result_en": "\"Syöpätaudit - Lapin hyvinvointialue\" · 5 070 chars · 9 of 11 passages kept",
+      "ms": 1905,
+      "title": "Syöpätaudit - Lapin hyvinvointialue",
+      "chars": 5070,
+      "from_cache": false,
+      "kind": "html",
+      "page_url": "https://lapha.fi/fi/syopataudit"
+    },
+    {
+      "step": 9,
+      "round": 1,
+      "tool": "oxylabs /v1/scrape",
+      "input": "https://lapha.fi/fi/w/lapin-keskussairaalassa-otetaan-kayttoon-syopapotilaan-digihoitopolku",
+      "focus": "digihoitopolku syöpäpotilas keuhko",
+      "why": "digital pathway",
+      "status": "done",
+      "t_s": 14.3,
+      "result_en": "\"Lapin Keskussairaalassa otetaan käyttöön syöpäpotilaan digihoitopolku\" · 401 chars",
+      "ms": 1401,
+      "title": "Lapin Keskussairaalassa otetaan käyttöön syöpäpotilaan digihoitopolku",
+      "chars": 401,
+      "from_cache": false,
+      "kind": "html",
+      "page_url": "https://lapha.fi/fi/w/lapin-keskussairaalassa-otetaan-kayttoon-syopapotilaan-digihoitopolku"
+    },
+    {
+      "step": 10,
+      "round": 1,
+      "tool": "oxylabs /v1/scrape",
+      "input": "https://lapha.fi/keuhkosairaudet",
+      "focus": "keuhkosyöpä bronkoskopia lähete",
+      "why": "diagnostics",
+      "status": "done",
+      "t_s": 14.3,
+      "result_en": "\"Keuhkosairaudet - Lapin hyvinvointialue\" · 6 242 chars · 8 of 13 passages kept",
+      "ms": 1856,
+      "title": "Keuhkosairaudet - Lapin hyvinvointialue",
+      "chars": 6242,
+      "from_cache": false,
+      "kind": "html",
+      "page_url": "https://lapha.fi/keuhkosairaudet"
+    },
+    {
+      "step": 11,
+      "round": 2,
+      "tool": "claude",
+      "input": "decide the next step",
+      "status": "done",
+      "t_s": 17.5,
+      "result_en": "2 searches: university pathway; screening",
+      "ms": 5740
+    },
+    {
+      "step": 12,
+      "round": 2,
+      "tool": "oxylabs /v1/search",
+      "input": "OYS keuhkosyöpä hoitoketju Pohde",
+      "country": "FI",
+      "why": "university pathway",
+      "status": "done",
+      "t_s": 23.2,
+      "result_en": "6 results: oys.fi, syovanhoitokeskus.pshyvinvointialue.fi, sttinfo.fi, pohde.fi",
+      "ms": 1528,
+      "results": [
+        {
+          "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+          "title": "Keuhkosairauksien hoito sairaalan poliklinikalla"
+        },
+        {
+          "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+          "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+        },
+        {
+          "url": "https://www.sttinfo.fi/tiedote/71750363/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista?publisherId=69817636&lang=fi",
+          "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista | Pohjois-Pohjanmaan hyvinvointialue Pohde"
+        },
+        {
+          "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+          "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena ..."
+        },
+        {
+          "url": "https://oys.fi/palvelumme/syopataudit/",
+          "title": "Syöpätautien hoito - OYS"
+        },
+        {
+          "url": "https://oys.fi/keuhkosyovan-hoitopolku/keuhkosyovan-hoidon-porrastus/",
+          "title": "Keuhkosyövän hoidon porrastus - Keuhkosyövän hoitopolku"
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "round": 2,
+      "tool": "oxylabs /v1/search",
+      "input": "keuhkosyövän seulonta Pohjois-Suomi pilotti",
+      "country": "FI",
+      "why": "screening",
+      "status": "done",
+      "t_s": 23.2,
+      "result_en": "6 results: oys.fi, syopajarjestot.fi, yle.fi, syoparekisteri.fi",
+      "ms": 2710,
+      "results": [
+        {
+          "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+          "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+        },
+        {
+          "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+          "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+        },
+        {
+          "url": "https://yle.fi/a/74-20205604",
+          "title": "Suomessa alkaa laaja pilotti, jossa seulotaan keuhkosyöpää | Kotimaa | Yle"
+        },
+        {
+          "url": "https://syoparekisteri.fi/seulonta/tutkimus-2/keuhkosyovan-seulontapilotti/",
+          "title": "Keuhkosyövän seulontapilotti"
+        },
+        {
+          "url": "https://www.laakarilehti.fi/terveydenhuolto/pitkaan-tupakoineita-etsitaan-keuhkosyovan-seulontapilottiin/",
+          "title": "Pitkään tupakoineita etsitään keuhkosyövän seulontapilottiin - Lääkärilehti"
+        },
+        {
+          "url": "https://www.pirkanmaansyopayhdistys.fi/keuhkosyopa-seulonta/",
+          "title": "Keuhkosyövän seulontapilotti käynnistyy myös Pirkanmaalla | Pirkanmaan Syöpäyhdistys"
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "round": 2,
+      "tool": "claude",
+      "input": "decide the next step",
+      "status": "done",
+      "t_s": 25.9,
+      "result_en": "2 reads: regional division of care; screening pilot scope",
+      "ms": 17450
+    },
+    {
+      "step": 15,
+      "round": 2,
+      "tool": "oxylabs /v1/scrape",
+      "input": "https://oys.fi/keuhkosyovan-hoitopolku/keuhkosyovan-hoidon-porrastus/",
+      "focus": "Lappi Lapin keskussairaala hoidon porrastus leikkaus sädehoito",
+      "why": "regional division of care",
+      "status": "done",
+      "t_s": 43.4,
+      "result_en": "could not read: the site answered HTTP 404",
+      "ms": 2237,
+      "error": true
+    },
+    {
+      "step": 16,
+      "round": 2,
+      "tool": "oxylabs /v1/scrape",
+      "input": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+      "focus": "Pohjois-Pohjanmaa 50–74 tupakoineet Lappi",
+      "why": "screening pilot scope",
+      "status": "done",
+      "t_s": 43.4,
+      "result_en": "\"OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudi\" · 2 751 chars",
+      "ms": 4082,
+      "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+      "chars": 2751,
+      "from_cache": false,
+      "kind": "html",
+      "page_url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/"
+    },
+    {
+      "step": 17,
+      "round": 2,
+      "tool": "claude",
+      "input": "decide the next step",
+      "status": "done",
+      "t_s": 47.5,
+      "result_en": "writes the answer",
+      "ms": 19588
+    }
+  ],
+  "rounds": 2,
+  "searches": 6,
+  "pages_read": [
+    {
+      "url": "https://lapha.fi/fi/w/lapin-keskussairaalassa-otetaan-kayttoon-syopapotilaan-digihoitopolku",
+      "title": "Lapin Keskussairaalassa otetaan käyttöön syöpäpotilaan digihoitopolku",
+      "chars": 401,
+      "kind": "html",
+      "from_cache": false,
+      "fetched_at": "2026-11-13T22:53:52+00:00"
+    },
+    {
+      "url": "https://lapha.fi/keuhkosairaudet",
+      "title": "Keuhkosairaudet - Lapin hyvinvointialue",
+      "chars": 6242,
+      "kind": "html",
+      "from_cache": false,
+      "fetched_at": "2026-11-13T22:53:52+00:00"
+    },
+    {
+      "url": "https://lapha.fi/fi/syopataudit",
+      "title": "Syöpätaudit - Lapin hyvinvointialue",
+      "chars": 5070,
+      "kind": "html",
+      "from_cache": false,
+      "fetched_at": "2026-11-13T22:53:52+00:00"
+    },
+    {
+      "url": "https://yle.fi/a/74-20233572",
+      "title": "Järjetöntä rahan tuhlaamista, sanoo ärhäkkää keuhkosyöpää sairastava Joni Kallojärvi yhä kiihtyvästä Kela-taksirallista",
+      "chars": 5712,
+      "kind": "html",
+      "from_cache": false,
+      "fetched_at": "2026-11-13T22:53:54+00:00"
+    },
+    {
+      "url": "https://pohde.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+      "title": "OYS mukana keuhkosyövän seulontapilotissa - tavoitteena parantaa taudin varhaista toteamista - Pohde",
+      "chars": 2751,
+      "kind": "html",
+      "from_cache": false,
+      "fetched_at": "2026-11-13T22:54:24+00:00"
+    }
+  ],
+  "model": "claude-opus-5-5",
+  "search_backend": "oxylabs-web-api",
+  "budget_s": 90.0,
+  "checked_at": "2026-11-13T22:54:43+00:00",
+  "stopped": "finished",
+  "findings_dropped": {
+    "quote_not_on_page": 0,
+    "not_about_this_county": 0
+  },
+  "seconds": 68.2
+}

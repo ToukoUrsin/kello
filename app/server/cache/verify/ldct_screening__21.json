@@ -1,0 +1,544 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Low-dose CT screening for long-term heavy smokers. Invite 50-74-year-old long-term heavy smokers to low-dose CT with smoking cessation support, so cancers are found before symptoms. Finland is piloting this in 2026-2028.",
+ "area_id": "21",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "A meta-analysis of nine randomised trials found 16% lower lung cancer mortality with low-dose CT screening (RR 0.84, 95% CI 0.76–0.92).",
+ "supported_en": "A 2021 meta-analysis of nine randomised trials in Lancet Regional Health – Europe found a pooled relative rate of 0.84 (0.76–0.92) for lung cancer death.",
+ "not_supported_en": "The pages read do not confirm the NELSON baseline death rate of 3.30 per 1 000 person-years, and they give no results from Finland.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign of it in Lapland: the pilot that OYS and the Finnish Cancer Registry started in January 2026 is open only to residents of Uusimaa, Pirkanmaa, Ostrobothnia, North Ostrobothnia and Southwest Finland, and Lapha's screening page lists no lung cancer screening.",
+ "missing_en": "",
+ "summary_en": "OYS and the Finnish Cancer Registry started a lung cancer screening pilot in January 2026 for 1 200 long-term smokers aged 50–74, but only people from Uusimaa, Pirkanmaa, Ostrobothnia, North Ostrobothnia and Southwest Finland can apply. Lapha's screening page lists no lung screening. A meta-analysis of nine trials (Lancet Regional Health – Europe, 2021) found 16% lower lung cancer mortality (RR 0.84, 0.76–0.92), which matches the model's assumption.",
+ "unanswered_en": "No page showed any plan to extend the pilot to Lapland or a national decision on a full screening programme.",
+ "sources": [
+  {
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "quote": "Pilottiin voivat hakea 50–74-vuotiaat pitkään tupakoineet henkilöt Pohjois-Pohjanmaalta sekä Uudenmaan, Pirkanmaan, Pohjanmaan ja Varsinais-Suomen alueilta.",
+   "about": "context",
+   "published": "2026-11-14T00:59:46+00:00",
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "quote": "Tutkimukseen haetaan 1 200 osallistujaa. Osalle tehdään matala-annoksinen keuhkokuvaus tutkimuksen alussa ja lopussa.",
+   "about": "context",
+   "published": "2026-11-14T00:59:46+00:00",
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "title": "Lung cancer mortality reduction by LDCT screening: UKLS randomised trial results and international meta-analysis",
+   "quote": "LDCT screening was associated with a 16% relative reduction in lung cancer mortality when compared against a non-LDCT control arm (RR 0.84 [0.76–0.92])",
+   "about": "effect",
+   "published": "2021",
+   "fetched_at": "2026-11-13T23:49:42+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, hyvaks.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 2876,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha keuhkosyöpäseulonta pilotti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: yle.fi, syopajarjestot.fi, oys.fi, laakarilehti.fi",
+   "ms": 2865,
+   "results": [
+    {
+     "url": "https://yle.fi/a/74-20205604",
+     "title": "Suomessa alkaa laaja pilotti, jossa seulotaan keuhkosyöpää | Kotimaa | Yle"
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/pitkaan-tupakoineita-etsitaan-keuhkosyovan-seulontapilottiin/",
+     "title": "Pitkään tupakoineita etsitään keuhkosyövän seulontapilottiin - Lääkärilehti"
+    },
+    {
+     "url": "https://seura.fi/asiat/ajankohtaista/keuhkosyopa-voi-kuulua-kansalliseen-seulontaohjelmaan/",
+     "title": "Keuhkosyöpä on yleisin syöpäkuolemien aiheuttaja – Seulontapilotti tukee ensikerran suomalaisia riskiryhmäläisiä, tulokset maailmalta rohkaisevia"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/syopa-lehti/seulonta-voisi-paljastaa-varhaisen-keuhkosyovan/",
+     "title": "Seulonta voisi paljastaa varhaisen keuhkosyövän - Kaikki syövästä"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS matala-annos-TT seulonta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, oulu.cris.fi, continentalhospitals.com",
+   "ms": 1579,
+   "results": [
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/rontgen-ja-kuvantaminen/",
+     "title": "Röntgen ja kuvantaminen - OYS"
+    },
+    {
+     "url": "https://oulu.cris.fi/en/publications/0072e551-3269-47a2-8a3f-6b0e839e8e28",
+     "title": "Keuhkosyövän seulonta matala-annos TT:llä tuo terveyshyötyjä ..."
+    },
+    {
+     "url": "https://continentalhospitals.com/fi/blog/low-dose-ct-scans-for-early-lung-cancer-detection/",
+     "title": "Matala-annoksiset TT-skannaukset keuhkosyövän varhaiseen havaitsemiseen"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo16353",
+     "title": "Pitkään tupakoineiden keuhkosyövän seulontaa tulisi Suomessa ..."
+    },
+    {
+     "url": "https://fi.iliveok.com/health/keuhkojen-seulonta-kuka-tarvitsee-matala-annoksisen-tt-kuvauksen-ja-kuinka-usein-se-tulisi-tehda_139353i15989.html",
+     "title": "Keuhkojen seulonta: kuka tarvitsee matala-annoksisen TT-kuvauksen..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin keskussairaala keuhkosyövän seulontapilotti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, syopajarjestot.fi, laakarilehti.fi, lapha.fi",
+   "ms": 2876,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://www.laakarilehti.fi/terveydenhuolto/pitkaan-tupakoineita-etsitaan-keuhkosyovan-seulontapilottiin/",
+     "title": "Pitkään tupakoineita etsitään keuhkosyövän seulontapilottiin - Lääkärilehti"
+    },
+    {
+     "url": "https://lapha.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://seura.fi/asiat/ajankohtaista/keuhkosyopa-voi-kuulua-kansalliseen-seulontaohjelmaan/",
+     "title": "Keuhkosyöpä on yleisin syöpäkuolemien aiheuttaja – Seulontapilotti tukee ensikerran suomalaisia riskiryhmäläisiä, tulokset maailmalta rohkaisevia"
+    },
+    {
+     "url": "https://www.iltalehti.fi/terveysuutiset/a/dd873d66-6e94-4706-bec4-54591577e328",
+     "title": "Sinua etsitään, jos kuulut tähän joukkoon"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.9,
+   "result_en": "3 reads: B: does pilot cover Lapland; B: eligible regions; A: effect size",
+   "ms": 6847
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "focus": "Lappi Pohjois-Pohjanmaa alue mukana sairaalat",
+   "why": "B: does pilot cover Lapland",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudi\" · 2 751 chars · from cache",
+   "ms": 4,
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "chars": 2751,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "published": "2026-11-14T00:59:46+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "focus": "alueet Pohjois-Pohjanmaan asukkaat hakea",
+   "why": "B: eligible regions",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupa\" · 4 547 chars · 8 of 8 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "chars": 4547,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "published": "2026-01-21T07:57:26+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "focus": "lung cancer mortality relative risk 0.84",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Lung cancer mortality reduction by LDCT screening: UKLS randomised tri\" · 42 390 chars · 5 of 59 passages kept · from cache",
+   "ms": 13,
+   "title": "Lung cancer mortality reduction by LDCT screening: UKLS randomised trial results and international meta-analysis",
+   "chars": 42390,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "published": "2021",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "1 search: B: any Lapland-specific screening plan",
+   "ms": 3092
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin hyvinvointialue keuhkosyövän seulonta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any Lapland-specific screening plan",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "6 results: lapha.fi, suomi.fi",
+   "ms": 3056,
+   "results": [
+    {
+     "url": "https://lapha.fi/seulontatutkimukset",
+     "title": "Seulontatutkimukset - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/seulontatutkimukset-lapin-hyvinvointialue/f9e5da41-ec21-4636-b8c7-0e5409141766",
+     "title": "Seulontatutkimukset - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/fi/syopataudit",
+     "title": "Syöpätaudit - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/verkkoasiointi/esitietolomake-kohdunkaulan-syovan-seulontaan-lapin-hyvinvointialue/3fa9ba25-40ed-4a4d-997c-9934ba311e6f",
+     "title": "Esitietolomake kohdunkaulan syövän seulontaan - Lapin..."
+    },
+    {
+     "url": "https://lapha.fi/fi/terveysasemapalvelut?p_p_id=com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_Qw2vltFyYh2A&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_Qw2vltFyYh2A_delta=10&p_r_p_resetCur=false&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_Qw2vltFyYh2A_cur=4",
+     "title": "Terveysasemapalvelut - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://fimlab.fi/kohdunkaulan-syovan-seulonta/kohdunkaulansyovan-seulonta-lapin-alueen-yhteystiedot/",
+     "title": "Kohdunkaulansyövän seulonta – Lapin alueen yhteystiedot"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.9,
+   "result_en": "1 read: B: Lapland screening list",
+   "ms": 3856
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://lapha.fi/seulontatutkimukset",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://lapha.fi/seulontatutkimukset",
+   "focus": "keuhkosyöpä seulonta Vuonna 2026",
+   "why": "B: Lapland screening list",
+   "status": "done",
+   "t_s": 19.8,
+   "result_en": "\"Seulontatutkimukset - Lapin hyvinvointialue\" · 41 176 chars · 8 of 86 passages kept",
+   "ms": 6311,
+   "title": "Seulontatutkimukset - Lapin hyvinvointialue",
+   "chars": 41176,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://lapha.fi/seulontatutkimukset",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 26.1,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Lapha / Lapin keskussairaala / OYS Oulun yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 12773
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 38.8,
+   "result_en": "1 search: B: can Lapland residents join pilot",
+   "ms": 2675
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "keuhko.fi seulontapilotti Lappi asukkaat",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: can Lapland residents join pilot",
+   "status": "done",
+   "t_s": 41.5,
+   "result_en": "6 results: syopajarjestot.fi, sttinfo.fi, seura.fi, pirkanmaansyopayhdistys.fi",
+   "ms": 2152,
+   "results": [
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/71749366/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita?publisherId=69820264&lang=fi",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita | Syöpäjärjestöt"
+    },
+    {
+     "url": "https://seura.fi/asiat/ajankohtaista/keuhkosyopa-voi-kuulua-kansalliseen-seulontaohjelmaan/",
+     "title": "Keuhkosyöpä on yleisin syöpäkuolemien aiheuttaja – Seulontapilotti tukee ensikerran suomalaisia riskiryhmäläisiä, tulokset maailmalta rohkaisevia"
+    },
+    {
+     "url": "https://www.pirkanmaansyopayhdistys.fi/keuhkosyopa-seulonta/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy myös Pirkanmaalla | Pirkanmaan Syöpäyhdistys"
+    },
+    {
+     "url": "https://fican.fi/keuhkosyovan-valtakunnallinen-seulontapilotti-on-nyt-kaynnistynyt-tyksissa/",
+     "title": "Keuhkosyövän valtakunnallinen seulontapilotti on nyt käynnistynyt Tyksissä – FICAN"
+    },
+    {
+     "url": "https://syoparekisteri.fi/seulonta/tutkimus-2/keuhkosyovan-seulontapilotti/",
+     "title": "Keuhkosyövän seulontapilotti"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 43.7,
+   "result_en": "writes the answer",
+   "ms": 10977
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-seulontapilotti-kaynnistyy-mukaan-etsitaan-pitkaan-tupakoineita-50-74-vuotiaita/",
+   "title": "Keuhkosyövän seulontapilotti käynnistyy – mukaan etsitään pitkään tupakoineita 50–74-vuotiaita",
+   "chars": 4547,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:32:22+00:00",
+   "published": "2026-01-21T07:57:26+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+   "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista",
+   "chars": 2751,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:02:01+00:00",
+   "published": "2026-11-14T00:59:46+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "title": "Lung cancer mortality reduction by LDCT screening: UKLS randomised trial results and international meta-analysis",
+   "chars": 42390,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:49:42+00:00",
+   "published": "2021",
+   "js_render": false
+  },
+  {
+   "url": "https://lapha.fi/seulontatutkimukset",
+   "title": "Seulontatutkimukset - Lapin hyvinvointialue",
+   "chars": 41176,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:50:27+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:50:55+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: OYS says only five other regions can join its 2026 lung cancer screening pilot, so Lapland residents have no public route into it. The trial evidence supports the assumed 16% drop in lung cancer deaths. Starting the programme still needs a national decision.",
+ "seconds": 54.7,
+ "searched_en": "Searched 6 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha keuhkosyöpäseulonta pilotti\"; \"OYS matala-annos-TT seulonta\"; \"Lapin keskussairaala keuhkosyövän seulontapilotti\", ...) and read 4 pages on oys.fi, syopajarjestot.fi, pmc.ncbi.nlm.nih.gov, lapha.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Lapha keuhkosyöpäseulonta pilotti",
+  "OYS matala-annos-TT seulonta",
+  "Lapin keskussairaala keuhkosyövän seulontapilotti",
+  "Lapin hyvinvointialue keuhkosyövän seulonta",
+  "keuhko.fi seulontapilotti Lappi asukkaat"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: OYS says only five other regions can join its 2026 lung cancer screening pilot, so Lapland residents have no public route into it. The trial evidence supports the assumed 16% drop in lung cancer deaths. Starting the programme still needs a national decision.",
+ "verdict_en": "No public sign that it is running in Lapland. Recent evidence supports the size of effect we assume. A 2021 meta-analysis of nine randomised trials in Lancet Regional Health – Europe found a pooled relative rate of 0.84 (0.76–0.92) for lung cancer death.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "ldct_screening",
+ "intervention_name_en": "Low-dose CT screening for long-term heavy smokers",
+ "area_name_en": "Lapland wellbeing services county"
+}

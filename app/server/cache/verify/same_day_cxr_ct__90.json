@@ -1,0 +1,491 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in City of Helsinki (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Same-day chest X-ray report with immediate CT. A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+ "area_id": "90",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "In a London randomised trial, immediate chest X-ray reporting gave a median of 32 days from X-ray to lung cancer diagnosis, against 63 days with standard reporting (p=0.03), a saving of 31 days.",
+ "supported_en": "A 2023 randomised trial in Thorax found the median time from chest X-ray to diagnosis fell from 63 to 32 days with immediate reporting.",
+ "not_supported_en": "The result comes from one small trial at one London hospital, with 49 cancers and no confidence interval, so the effect in Finland is not shown.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "Two extra searches found no public sign of same-day chest X-ray reporting or radiology-triggered CT in Helsinki or HUS; HUS's pathway page says the primary-care doctor makes the referral.",
+ "missing_en": "",
+ "summary_en": "No public page shows same-day chest X-ray reporting with immediate CT in Helsinki or HUS. HUS's pathway page says the primary-care doctor sends a referral to HUS's lung disease clinic when an X-ray raises suspicion. A 2023 randomised trial in Thorax (London) cut the median time from chest X-ray to diagnosis from 63 to 32 days.",
+ "unanswered_en": "I found no page on how fast HUS radiology reports primary-care chest X-rays or whether radiology can order the CT itself.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Jos epäillään keuhkosyöpää, lääkäri tekee lähetteen HUSin keuhkosairauksien vastaanotolle.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2014,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsingin kaupunki keuhkokuva lausunto samana päivänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hel.fi, paatokset.hel.fi, tilaakukat.fi",
+   "ms": 2692,
+   "results": [
+    {
+     "url": "https://www.hel.fi/fi/sosiaali-ja-terveyspalvelut/asiakkaan-tiedot-ja-oikeudet/odotusajat-ja-asiakaskokemus",
+     "title": "Odotusajat ja asiakaskokemus - Helsingin kaupunki"
+    },
+    {
+     "url": "https://www.hel.fi/fi/uutiset/kaupunginhallitus-antoi-lausuntoja",
+     "title": "Kaupunginhallitus antoi lausuntoja | Helsingin kaupunki"
+    },
+    {
+     "url": "https://paatokset.hel.fi/fi/kokouskalenteri",
+     "title": "Kokouskalenteri | Päätökset | Helsingin kaupunki"
+    },
+    {
+     "url": "https://tilaakukat.fi/laheta-kukkia/helsinki/",
+     "title": "Kukkalähetys Helsinki – kukat perille samana päivänä"
+    },
+    {
+     "url": "https://helsinginkeskuspuisto.fi/aikajana/kaupungin-keuhkot/",
+     "title": "Kaupungin keuhkot. - Keskuspuisto"
+    },
+    {
+     "url": "https://paatokset.hel.fi/fi/kuulutukset-ja-ilmoitukset",
+     "title": "Kuulutukset ja ilmoitukset | Päätökset | Helsingin kaupunki"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS thorax-röntgen päivystyslausunto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, diagnostiikka.hus.fi",
+   "ms": 2807,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/laboratorio-ja-kuvantaminen/vapaasti-valittavat-rontgenit",
+     "title": "Vapaasti valittavat röntgenit | HUS"
+    },
+    {
+     "url": "https://diagnostiikka.hus.fi/p%C3%A4ivyst%C3%A4v%C3%A4t-r%C3%B6ntgenyksik%C3%B6t",
+     "title": "Päivystävät röntgenyksiköt - Ammattilaisen sivusto - HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/elielinaukion-rontgen",
+     "title": "Elielinaukion röntgen | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/meilahden-tornisairaala/meilahden-tornisairaalan-rontgen",
+     "title": "Meilahden tornisairaalan röntgen | HUS"
+    },
+    {
+     "url": "https://diagnostiikka.hus.fi/radiologia",
+     "title": "Radiologia - Ammattilaisen sivusto"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/potilasohjeet-laboratoriot-ja-kuvantaminen",
+     "title": "Potilasohjeet laboratoriot ja kuvantaminen | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsinki keuhkokuvan jälkeen suoraan TT keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: docrates.mehilainen.fi, terveystalo.com, kaikkisyovasta.fi",
+   "ms": 2041,
+   "results": [
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-varhaisen-toteamisen-palvelut/keuhkosyovan-riskikartoitus/",
+     "title": "Keuhkosyövän riskikartoitus - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/uutiset/erittain-matala-annoksinen-tt-kuvaus/",
+     "title": "Keuhkosyövän varhaisvaiheen diagnostiikka: Erittäin matala-annoksinen TT-kuvaus kohonneen riskin henkilöille"
+    },
+    {
+     "url": "https://www.terveystalo.com/fi/palvelut/keuhkojen-tietokonetomografia",
+     "title": "Keuhkojen tietokonetomografia | Terveystalo"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/artikkelit/keuhkosyovan-riskikartoituksella-ja-varhaisen-vaiheen-tutkimuksilla-voi-olla-ratkaiseva-merkitys-potilaan-ennusteelle/",
+     "title": "Keuhkosyövän riskikartoituksella ja varhaisen vaiheen tutkimuksilla voi olla ratkaiseva merkitys potilaan ennusteelle"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-toteaminen",
+     "title": "Keuhkosyövän toteaminen"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.8,
+   "result_en": "3 reads: B: HUS pathway; A: effect; B: reporting timing",
+   "ms": 5011
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "keuhkokuva TT lähete röntgen",
+   "why": "B: HUS pathway",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 8,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "focus": "median days diagnosis immediate reporting",
+   "why": "A: effect",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Impact of radiographer immediate reporting of X-rays of the chest from\" · 20 833 chars · 6 of 36 passages kept · from cache",
+   "ms": 5,
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/elielinaukion-rontgen",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/elielinaukion-rontgen",
+   "focus": "lausunto tulos",
+   "why": "B: reporting timing",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Elielinaukion röntgen\" · 2 732 chars",
+   "ms": 1796,
+   "title": "Elielinaukion röntgen",
+   "chars": 2732,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/elielinaukion-rontgen",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.6,
+   "result_en": "1 search: B: radiology-triggered CT in HUS",
+   "ms": 2835
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäepäily thoraxkuva radiologi suoraan TT lähete",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: radiology-triggered CT in HUS",
+   "status": "done",
+   "t_s": 12.5,
+   "result_en": "6 results: hus.fi, duodecimlehti.fi, terveyskyla.fi",
+   "ms": 2815,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/laboratorio-ja-kuvantaminen/vapaasti-valittavat-rontgenit",
+     "title": "Vapaasti valittavat röntgenit | HUS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92960",
+     "title": "Keuhkosairauksien uusia kuvantamisstrategioita"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/keuhkotalo/tutkimus-ja-hoito/keuhkosairauksien-tutkimukset/keuhkojen-kuvantamistutkimukset",
+     "title": "Keuhkojen kuvantamistutkimukset"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/uutiset/erittain-matala-annoksinen-tt-kuvaus/",
+     "title": "Keuhkosyövän varhaisvaiheen diagnostiikka: Erittäin matala-annoksinen TT-kuvaus kohonneen riskin henkilöille"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/keuhkosyovan-diagnosointi/",
+     "title": "Keuhkosyöpädiagnoosi ja kuvantamistutkimukset"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.3,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Helsingin kaupunki / HUS / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 10014
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.3,
+   "result_en": "1 search: B: any Helsinki fast-track chest X-ray reporting",
+   "ms": 2995
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsinki terveysasema keuhkokuva radiologin lausunto nopeutettu keuhkosyöpäepäily",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: any Helsinki fast-track chest X-ray reporting",
+   "status": "done",
+   "t_s": 28.3,
+   "result_en": "6 results: synlab.fi, hel.fi, terve.fi, hus.fi",
+   "ms": 2565,
+   "results": [
+    {
+     "url": "https://synlab.fi/rontgenkuvaus/",
+     "title": "Röntgenkuvaus"
+    },
+    {
+     "url": "https://www.hel.fi/fi/sosiaali-ja-terveyspalvelut/terveydenhoito/terveysasemat",
+     "title": "Terveysasemat"
+    },
+    {
+     "url": "https://www.terve.fi/kysymykset/radiologin-lausunto-0",
+     "title": "Radiologin lausunto - 84194 | Terve.fi"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.lausuntopalvelu.fi/FI/Proposal/Participation?proposalId=24bd2871-761e-459c-a68d-3d687e017150",
+     "title": "Lausunto - Lausuntopalvelu"
+    },
+    {
+     "url": "https://www.terveystalo.com/fi/palvelut/keuhkojen-rontgenkuvaus",
+     "title": "Keuhkojen röntgenkuvaus"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.9,
+   "result_en": "writes the answer",
+   "ms": 9020
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/elielinaukion-rontgen",
+   "title": "Elielinaukion röntgen",
+   "chars": 2732,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:28:16+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:28:46+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because HUS's lung cancer pathway page still has the primary-care doctor making the referral after a suspicious X-ray and shows no same-day reporting, and a trial supports a saving of about 31 days.",
+ "seconds": 39.9,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Helsingin kaupunki keuhkokuva lausunto samana päivänä\"; \"HUS thorax-röntgen päivystyslausunto\"; \"Helsinki keuhkokuvan jälkeen suoraan TT keuhkosyöpä\", ...) and read 3 pages on hus.fi, ncbi.nlm.nih.gov.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Helsingin kaupunki keuhkokuva lausunto samana päivänä",
+  "HUS thorax-röntgen päivystyslausunto",
+  "Helsinki keuhkokuvan jälkeen suoraan TT keuhkosyöpä",
+  "HUS keuhkosyöpäepäily thoraxkuva radiologi suoraan TT lähete",
+  "Helsinki terveysasema keuhkokuva radiologin lausunto nopeutettu keuhkosyöpäepäily"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because HUS's lung cancer pathway page still has the primary-care doctor making the referral after a suspicious X-ray and shows no same-day reporting, and a trial supports a saving of about 31 days.",
+ "verdict_en": "No public sign that it is running in Helsinki. Recent evidence supports the size of effect we assume. A 2023 randomised trial in Thorax found the median time from chest X-ray to diagnosis fell from 63 to 32 days with immediate reporting.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "same_day_cxr_ct",
+ "intervention_name_en": "Same-day chest X-ray report with immediate CT",
+ "area_name_en": "City of Helsinki"
+}

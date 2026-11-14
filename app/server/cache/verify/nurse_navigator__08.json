@@ -1,0 +1,584 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Pirkanmaa wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how much?\nMeasure: Nurse navigator for every suspected lung cancer. A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+ "area_id": "08",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A 2026 scoping review of 13 studies (Japan Journal of Nursing Science) links cancer patient navigation with faster first treatment.",
+ "not_supported_en": "No page read gives a relative reduction for lung cancer to confirm the 15% (0-30%) we assume.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: Pirha's pages say that lung cancer is diagnosed at Tays Cancer Centre, that referrals for suspected cancer are urgent and handled within 1–2 working days, and that the centre tracks the time from referral to first contact. None of the pages read mentions a named nurse navigator, so there is no public sign of the measure. A: A 2026 scoping review of 13 studies found that patient navigation was consistently associated with faster first treatment, but the abstract gives no size of effect against usual care.",
+ "unanswered_en": "No Pirha or Tays page read names a lung cancer nurse coordinator or a plan for one, and none gives the current referral-to-treatment times.",
+ "sources": [
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "title": "Syöpäepäily ja -diagnoosi - pirha.fi",
+   "quote": "Syövän hoitoon tai syöpäepäilyyn liittyvät lähetteet luokitellaan kiireelliseksi. Lähetteet käsitellään 1–2 arkipäivän kuluessa sen saapumisesta.",
+   "about": "context",
+   "published": "9.11.2026",
+   "fetched_at": "2026-11-14T01:18:10+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "title": "Syöpäepäily ja -diagnoosi - pirha.fi",
+   "quote": "Tays Syöpäkeskus valvoo syövän hoidon toteutumista seuraamalla aikaa, joka kuluu potilaan lähetteen saapumisesta ensimmäiseen hoitokontaktiin.",
+   "about": "context",
+   "published": "9.11.2026",
+   "fetched_at": "2026-11-14T01:18:10+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "title": "Syöpäepäily ja -diagnoosi - pirha.fi",
+   "quote": "Keuhkosyövän diagnostiset selvitykset tehdään Tays syöpäkeskuksessa.",
+   "about": "context",
+   "published": "9.11.2026",
+   "fetched_at": "2026-11-14T01:18:10+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "quote": "CPN interventions were consistently associated with accelerated initiation of first treatment among patients with cancer.",
+   "about": "effect",
+   "published": "2026-07-01",
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, tays.fi",
+   "ms": 1515,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha syöpähoitaja koordinaattori",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi",
+   "ms": 2336,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/documents/d/guest/syovanhoidon-omavalvontasuunnitelma",
+     "title": "Omavalvontasuunnitelma Syövänhoidon vastuualue"
+    },
+    {
+     "url": "https://www.pirha.fi/web/hoito-ja-palveluketjut/monisairaan-potilaan-hoitoketju/hoidon-ja-palveluiden-jarjestaminen/monisairaan-kokonaishoidon-koordinointi",
+     "title": "Monisairaan kokonaishoidon koordinointi - Hoito- ja palveluketjut - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/tietoa-meista/hallinto-ja-organisaatio/sote-palvelut/sairaalapalvelut",
+     "title": "Sairaalapalvelut - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopahoitojen-jalkeen",
+     "title": "Syöpähoitojen jälkeen - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/tietoa-meista/hallinto-ja-organisaatio",
+     "title": "Hallinto ja organisaatio"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/ammattilaiselle/tutkimus/tutkimuspalvelujen-yhteystiedot/tutkimuskoordinaattorit",
+     "title": "Tutkimuskoordinaattorit - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays hoitokoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, suomi.fi, filha.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-tays-keskussairaala-pirkanmaan-hyvinvointialue/66476935-a726-429e-8ee4-3b4e149be85d",
+     "title": "Syöpätautien poliklinikka, Tays Keskussairaala - Pirkanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma - Filha ry"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "Epäily Diagnoosi ja hoito Seurant - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/keuhkot-iho-ja-allergia/keuhkosairaudet",
+     "title": "Keuhkosairaudet - pirha.fi"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/heraamosta-kotiin",
+     "title": "Heräämöstä kotiin (Herko) - Potilasohjeet - intra.pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirkanmaan keuhkosyöpähoitaja keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirkanmaansyopayhdistys.fi, suomi.fi, pirha.fi, pjhoy.fi",
+   "ms": 1909,
+   "results": [
+    {
+     "url": "https://www.pirkanmaansyopayhdistys.fi/keuhkosyopa-seulonta/",
+     "title": "Keuhkosyövän seulontapilotti käynnistyy myös Pirkanmaalla | Pirkanmaan Syöpäyhdistys"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-hoito-pirkanmaan-hyvinvointialue/fcb2820f-a8c7-4b3d-949e-05239d4a5f49",
+     "title": "Keuhkosairauksien hoito - Pirkanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pjhoy.fi/ota-yhteytta/",
+     "title": "Ota yhteyttä | Pirkanmaan Jätehuolto"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-tays-keskussairaala-pirkanmaan-hyvinvointialue/b5b31154-17fc-4098-95e7-cb7ad44a3f94",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - Pirkanmaan..."
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: named nurse coordinator in pathway; B; A effect size",
+   "ms": 4960
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "focus": "hoitaja koordinaattori yhteyshenkilö ajanvaraus hoitoneuvottelu",
+   "why": "B: named nurse coordinator in pathway",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - pirha.fi\" · 27 195 chars · 6 of 38 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "focus": "hoitaja yhteystiedot koordinaattori",
+   "why": "B",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Keuhkosyöpä - pirha.fi\" · 2 467 chars",
+   "ms": 4205,
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "focus": "navigation time to treatment days reduced",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Cancer patient navigation interventions improving timeliness from diag\" · 1 510 chars · from cache",
+   "ms": 12,
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.2,
+   "result_en": "1 search: B: named nurse coordinator at Tays",
+   "ms": 2599
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpä koordinoiva sairaanhoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: named nurse coordinator at Tays",
+   "status": "done",
+   "t_s": 14.8,
+   "result_en": "6 results: pirha.fi, suomi.fi",
+   "ms": 1641,
+   "results": [
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/syopatautien-poliklinikka-tays-keskussairaala",
+     "title": "Syöpätautien poliklinikka, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syovan-hoito-pirkanmaan-hyvinvointialue/186dfa22-bd09-437c-aeb9-8dd4ddb67f96",
+     "title": "Syövän hoito - Pirkanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/syovanhoidon-vuodeosasto-rs1-tays-keskussairaala",
+     "title": "Syövänhoidon vuodeosasto RS1, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/onkologinen-laaketutkimusyksikko-fonk-tays-keskussairaala",
+     "title": "Onkologinen lääketutkimusyksikkö, FONK, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-tays-keskussairaala-pirkanmaan-hyvinvointialue/66476935-a726-429e-8ee4-3b4e149be85d",
+     "title": "Syöpätautien poliklinikka, Tays Keskussairaala - Pirkanmaan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.5,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Pirha / Tays / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 10253
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 26.7,
+   "result_en": "1 search: B: coordinator planned or piloted",
+   "ms": 2507
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha syöpäkoordinaattori diagnostiikka nopeutus hanke",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: coordinator planned or piloted",
+   "status": "done",
+   "t_s": 29.2,
+   "result_en": "6 results: pirha.fi, nokianuutiset.fi",
+   "ms": 2525,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/infektioiden-torjunta-ja-hoito/infektioiden-hoito-ja-diagnostiikka",
+     "title": "Infektioiden hoito ja diagnostiikka - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/palvelut/sairaalat-tays/syopa",
+     "title": "Syöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.nokianuutiset.fi/uutiset/art-2000011454357.html",
+     "title": "Pirha käynnistää hankkeen iäkkäiden syöpähoidon kehittämiseksi - Nokian Uutiset"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/guest/syovanhoidon-omavalvontasuunnitelma",
+     "title": "Omavalvontasuunnitelma Syövänhoidon vastuualue"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+     "title": "Syöpäepäily ja -diagnoosi - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/syopa",
+     "title": "Syöpä"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.8,
+   "result_en": "2 reads: B",
+   "ms": 3831
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "focus": "hoitaja koordinaattori yhteyshenkilö",
+   "why": "B",
+   "status": "done",
+   "t_s": 35.6,
+   "result_en": "\"Syöpäepäily ja -diagnoosi - pirha.fi\" · 6 303 chars · 6 of 9 passages kept",
+   "ms": 4756,
+   "title": "Syöpäepäily ja -diagnoosi - pirha.fi",
+   "chars": 6303,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "published": "9.11.2026",
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/documents/d/guest/syovanhoidon-omavalvontasuunnitelma",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/documents/d/guest/syovanhoidon-omavalvontasuunnitelma",
+   "focus": "koordinaattori hoitopolku keuhkosyöpä",
+   "why": "B",
+   "status": "done",
+   "t_s": 35.6,
+   "result_en": "\"Omavalvontasuunnitelma Syövänhoidon vastuualue\" · 104 653 chars · PDF 60 p. · 6 of 155 passages kept",
+   "ms": 2806,
+   "title": "Omavalvontasuunnitelma Syövänhoidon vastuualue",
+   "chars": 104653,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://www.pirha.fi/documents/d/guest/syovanhoidon-omavalvontasuunnitelma",
+   "published": "2026-03-13",
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.4,
+   "result_en": "writes the answer",
+   "ms": 9986
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi",
+   "chars": 27195,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:15:28+00:00",
+   "published": "19.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:17:42+00:00",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/documents/d/guest/syovanhoidon-omavalvontasuunnitelma",
+   "title": "Omavalvontasuunnitelma Syövänhoidon vastuualue",
+   "chars": 104653,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:18:08+00:00",
+   "published": "2026-03-13",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopaepaily-ja-diagnoosi",
+   "title": "Syöpäepäily ja -diagnoosi - pirha.fi",
+   "chars": 6303,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:18:10+00:00",
+   "published": "9.11.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:18:20+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: Pirha's Tays cancer pages describe urgent referrals handled within 1–2 working days and multidisciplinary team meetings, but none says that a named nurse books and chases every step for each suspected lung cancer.",
+ "seconds": 50.3,
+ "searched_en": "Searched 6 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Pirha syöpähoitaja koordinaattori\"; \"Tays hoitokoordinaattori keuhkosyöpä\"; \"Pirkanmaan keuhkosyöpähoitaja keuhkosyöpä\", ...) and read 5 pages on pirha.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Pirha syöpähoitaja koordinaattori",
+  "Tays hoitokoordinaattori keuhkosyöpä",
+  "Pirkanmaan keuhkosyöpähoitaja keuhkosyöpä",
+  "Tays keuhkosyöpä koordinoiva sairaanhoitaja",
+  "Pirha syöpäkoordinaattori diagnostiikka nopeutus hanke"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: Pirha's Tays cancer pages describe urgent referrals handled within 1–2 working days and multidisciplinary team meetings, but none says that a named nurse books and chases every step for each suspected lung cancer.",
+ "verdict_en": "No public sign that it is running in Pirkanmaa. Evidence supports that it works, but not the size of effect we assume. Supported: A 2026 scoping review of 13 studies (Japan Journal of Nursing Science) links cancer patient navigation with faster first treatment. Not supported: No page read gives a relative reduction for lung cancer to confirm the 15% (0-30%) we assume.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "nurse_navigator",
+ "intervention_name_en": "Nurse navigator for every suspected lung cancer",
+ "area_name_en": "Pirkanmaa wellbeing services county"
+}

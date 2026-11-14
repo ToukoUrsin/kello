@@ -1,0 +1,513 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Savo wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Thoracic surgeon reviews every decision not to operate. A thoracic surgeon from the university hospital sits in the county lung meeting every week and gives a second opinion before a stage I-II patient is refused surgery. Counties without their own thoracic surgeon decide about surgery without one today.",
+ "area_id": "12",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "Lau et al. (2013, England) link local thoracic surgeons to higher lung cancer resection rates: 20.0% in hospitals where surgeons were based vs 11.6% in peripheral hospitals. The study is observational, and the abstract does not show the 2.4-point figure for surgeons attending the lung meeting.",
+ "supported_en": "Lau et al. 2013 report a lung cancer resection rate of 20.0% in English hospitals where surgeons were based vs 11.6% in peripheral hospitals.",
+ "not_supported_en": "The abstract read does not show the 14.4% vs 12.0% figure for surgeon attendance at lung meetings, and nothing read covers Finland.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "I found no public sign that this runs in South Savo. KYS's lung cancer care pathway (Pohjois-Savo, 2021) says a thoracic surgeon attends KYS's own weekly team meeting, where every lung cancer patient's treatment is decided. Eloisa's lung disease page for Mikkeli and Savonlinna does not mention lung cancer meetings or surgeon review. On the effect, Lau et al. 2013 (England, observational) found more operations where surgeons were based (20.0% vs 11.6%), but the abstract does not show the 2.4-point meeting-attendance effect we assume.",
+ "unanswered_en": "No page says whether Eloisa's lung cancer meetings include a KYS thoracic surgeon.",
+ "sources": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Moniammatillinen meeting kokoontuu viikoittain. Paikalla ovat thorax-kirurgi, patologi, radiologi, onkologi ja keuhkolääkäreitä.",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Jos thorax-kuvan ja oireiden perusteella epäillään keuhkosyöpää, potilas lähetetään jatkotutkimuksiin keuhkosairauksien klinikkaan",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "with a higher resection rate in hospitals where surgeons were based (base hospitals) than in peripheral hospitals (20.0% versus 11.6%, p",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hus.fi",
+   "ms": 1047,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/kys-kuopion-yliopistollinen-sairaala",
+     "title": "KYS Kuopion yliopistollinen sairaala - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Eloisa thoraxkirurgin konsultaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: etelasavonha.fi, suomi.fi",
+   "ms": 3059,
+   "results": [
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/kirurgia/",
+     "title": "Kirurgian erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/kirurgian-erikoisalapalvelut-etela-savon-hyvinvointialue/a9b73c6f-25d0-46df-95e3-8b2616797694",
+     "title": "Kirurgian erikoisalapalvelut - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/erikoisalapalvelut/kirurgian-erikoisalapalvelut/",
+     "title": "Kirurgian erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/sisataudit/",
+     "title": "Sisätautien erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://eloisa.ims.fi/spring/public/4c89e155-22bc-4bd2-9030-0d538481015b/fi",
+     "title": "Ulkohyvinvointialuehinnasto (Palveluiden myyntihinnasto) 2026 1.5.2026"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/terveydenhoito/terveysneuvo/",
+     "title": "Terveysneuvo - Eloisa"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkokirurgi leikkausarvio keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, sydansairaala.fi, pshyvinvointialue.fi, terveyskirjasto.fi",
+   "ms": 2511,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Mikkelin keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, etelasavonha.fi, mikkelinkaupunkilehti.fi",
+   "ms": 3056,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhkosairauksien-vastaanotto-mikkeli-etela-savon-hyvinvointialue/5aaf11c7-553a-46da-b17f-5b1a3d23c242",
+     "title": "Keuhkosairauksien vastaanotto, Mikkeli - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/mikkelin-keskussairaala-etela-savon-hyvinvointialue/210a6334-6a89-41e6-8e76-02aaca9d825c",
+     "title": "Mikkelin keskussairaala - Etelä-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://etelasavonha.fi/asiakkaan-opas/toimipisteet/mikkelin-keskussairaala/",
+     "title": "Mikkelin keskussairaala - Eloisa"
+    },
+    {
+     "url": "https://www.mikkelinkaupunkilehti.fi/paikalliset/4012409",
+     "title": "Keskussairaala vahvoilla | Paikalliset | Mikkelin Kaupunkilehti"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/kirurgia/",
+     "title": "Kirurgian erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/wp-content/uploads/2026/05/Mikkelin-keskussairaala_alue-ja-pysakointikartta_A4.pdf",
+     "title": "Mikkelin keskussairaala"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "2 reads: B: who decides surgery in KYS area; A: effect size",
+   "ms": 4288
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "kokous thoraxkirurgi hoitopäätös keskussairaala leikkaus",
+   "why": "B: who decides surgery in KYS area",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 6 of 29 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/23242439",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "focus": "surgeon attended MDT resection rate 14.4% 12.0%",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "\"The effects of increased provision of thoracic surgical specialists on\" · 1 323 chars · from cache",
+   "ms": 0,
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/23242439",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.4,
+   "result_en": "1 search: B: does Eloisa lung meeting include KYS surgeon",
+   "ms": 4240
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Savo keuhkosyöpä meeting KYS thoraxkirurgi etäyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: does Eloisa lung meeting include KYS surgeon",
+   "status": "done",
+   "t_s": 11.6,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, pohjois-savonsyopayhdistys.fi",
+   "ms": 2173,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.pohjois-savonsyopayhdistys.fi/ajankohtaista/tapahtumat/kys-etayhteys-ensitietopaiva/",
+     "title": "KYS/etäyhteys: Ensitietopäivä | Pohjois-Savon Syöpäyhdistys"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/documents/594193/718143/Anestesiologian+ja+tehohoidon+torstaimeetingohjelmat,+kev%C3%A4t+2023.pdf/e2e3f1ce-4ab7-84a7-4e97-944cf5eeff9d?t=1675945840042",
+     "title": "MEETINGOHJELMA 1 (1) Operatiivinen keskus Anestesiologia ja tehohoito"
+    },
+    {
+     "url": "https://www.terveysatlas.fi/clinics/63a18ea8-23d3-5588-a9d7-db2dbd286f84",
+     "title": "Sydän- ja rintaelinkirurgian osasto, KYS - Kuopio - TerveysAtlas"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/en/",
+     "title": "Etusivu - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.8,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Eloisa / Mikkelin keskussairaala / KYS Kuopion yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 12727
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 26.5,
+   "result_en": "1 search: B: South Savo lung MDT composition",
+   "ms": 2856
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Eloisa keuhkosyöpä hoitopäätös moniammatillinen kokous Mikkeli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: South Savo lung MDT composition",
+   "status": "done",
+   "t_s": 29.4,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, etelasavonha.fi, tyks.fi",
+   "ms": 2007,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/hoitokeskus/",
+     "title": "Hoitokeskuspalvelut - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+     "title": "Keuhkosairauksien erikoisalapalvelut - Eloisa"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://etelasavonha.fi/eloisa/hoitoonpaasy/",
+     "title": "Hoitoon ja palveluihin pääsy - Eloisa"
+    },
+    {
+     "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/terveydenhoito/terveysneuvo/",
+     "title": "Terveysneuvo - Eloisa"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.4,
+   "result_en": "1 read: B: Eloisa lung meeting",
+   "ms": 2936
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "focus": "keuhkosyöpä hoitopäätös KYS kirurgi meeting",
+   "why": "B: Eloisa lung meeting",
+   "status": "done",
+   "t_s": 34.3,
+   "result_en": "\"Keuhkosairauksien erikoisalapalvelut\" · 3 985 chars",
+   "ms": 4173,
+   "title": "Keuhkosairauksien erikoisalapalvelut",
+   "chars": 3985,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 38.5,
+   "result_en": "writes the answer",
+   "ms": 11648
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://etelasavonha.fi/palvelut/terveyspalvelut/sairaalapalvelut/erikoisalapalvelut/keuhkosairaudet/",
+   "title": "Keuhkosairauksien erikoisalapalvelut",
+   "chars": 3985,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:20:53+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:21:05+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no page shows a KYS thoracic surgeon reviewing surgery decisions at South Savo's lung meetings. KYS's care pathway puts a surgeon only in KYS's own weekly meeting, and Eloisa's lung disease page says nothing about how surgery decisions are made.",
+ "seconds": 50.1,
+ "searched_en": "Searched 6 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Eloisa thoraxkirurgin konsultaatio\"; \"KYS keuhkokirurgi leikkausarvio keuhkosyöpä\"; \"Mikkelin keskussairaala keuhkosyöpäleikkaukset keskittäminen\", ...) and read 3 pages on syovanhoitokeskus.pshyvinvointialue.fi, europepmc.org, etelasavonha.fi.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Eloisa thoraxkirurgin konsultaatio",
+  "KYS keuhkokirurgi leikkausarvio keuhkosyöpä",
+  "Mikkelin keskussairaala keuhkosyöpäleikkaukset keskittäminen",
+  "Etelä-Savo keuhkosyöpä meeting KYS thoraxkirurgi etäyhteys",
+  "Eloisa keuhkosyöpä hoitopäätös moniammatillinen kokous Mikkeli"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no page shows a KYS thoracic surgeon reviewing surgery decisions at South Savo's lung meetings. KYS's care pathway puts a surgeon only in KYS's own weekly meeting, and Eloisa's lung disease page says nothing about how surgery decisions are made.",
+ "verdict_en": "No public sign that it is running in South Savo. Evidence supports that it works, but not the size of effect we assume. Supported: Lau et al. 2013 report a lung cancer resection rate of 20.0% in English hospitals where surgeons were based vs 11.6% in peripheral hospitals. Not supported: The abstract read does not show the 14.4% vs 12.0% figure for surgeon attendance at lung meetings, and nothing read covers Finland.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "surgeon_second_opinion",
+ "intervention_name_en": "Thoracic surgeon reviews every decision not to operate",
+ "area_name_en": "South Savo wellbeing services county"
+}

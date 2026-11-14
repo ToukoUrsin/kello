@@ -1,0 +1,560 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated. Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
+ "area_id": "06",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "Dutch data show 7 percentage points fewer untreated elderly stage I patients; the 0.8-point gain for all patients is our own estimate.",
+ "supported_en": "In the Netherlands, 7 percentage points fewer elderly stage I patients went untreated once stereotactic radiotherapy was available (Annals of Oncology 2012).",
+ "not_supported_en": "No page I read shows the gain in curative-intent share across all lung cancer patients, and none shows Finnish figures.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "Tyks says radiotherapy may be given when surgery is unsuitable; no page I read names a stereotactic radiotherapy referral rule.",
+ "missing_en": "",
+ "summary_en": "The pages I could read show no sign of a referral rule for stereotactic radiotherapy in Satakunta or at Tyks. Tyks's lung cancer pathway page says only that radiotherapy can be given when surgery does not suit the patient. Satasairaala's radiotherapy unit works with Tyks, and some of its patients are treated in Turku. On the effect, Dutch registry data (Annals of Oncology, 2012) show 7 percentage points fewer untreated elderly stage I patients once stereotactic radiotherapy was available; the gain for all patients was not measured.",
+ "unanswered_en": "The Tyks news page about its stereotactic radiotherapy would not open, so I could not confirm whether Tyks gives it to inoperable lung cancer patients or refers them by a set rule.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Sinulle voidaan antaa sädehoitoa, jos leikkaushoito ei sovi sinulle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+   "title": "Sädehoitoyksikkö, Satasairaala",
+   "quote": "Teemme yhteistyötä Turun yliopistollisen keskussairaalan kanssa. Osa sädehoitopotilaista hoidetaan Turussa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:03:58+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "quote": "Between period A and C, there was a 7% absolute reduction in patients going untreated, corresponding to an 8-month improvement in median survival",
+   "about": "effect",
+   "published": "2012-05-02",
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi",
+   "ms": 2061,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue stereotaktinen sädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, satakunnanhyvinvointialue.fi",
+   "ms": 1775,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13049",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+     "title": "Keuhkosyöpä - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+     "title": "Sädehoitoyksikkö, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/satakunnan-hyvinvointialue/d6a8ae74-8cc9-4663-aebb-2fd51e530efd",
+     "title": "Satakunnan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks täsmäsädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, docrates.mehilainen.fi",
+   "ms": 1919,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/sadehoitopoliklinikka",
+     "title": "Sädehoitopoliklinikka | Tyks"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/tasmahoidot/",
+     "title": "Täsmähoidot – Keuhkosyöpä"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala SBRT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 1358,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/",
+     "title": "Erityis- ja sairaalapalvelut - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/satasairaala-satakunnan-hyvinvointialue/97f61a35-21a0-440c-9976-7d65930053e5",
+     "title": "Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/satasairaalan-kartta/",
+     "title": "Satasairaalan kartta - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/terveyssosiaalityo/",
+     "title": "Satasairaalan sosiaalityö - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/sisataudit/sisatautien-poliklinikka/",
+     "title": "Sisätautien poliklinikka, Satasairaala ja Rauma - Satakunnanhyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.1,
+   "result_en": "3 reads: B county; B Tyks; A",
+   "ms": 4833
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "focus": "stereotaktinen sädehoito leikkaus ei mahdollinen",
+   "why": "B county",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Keuhkosyöpä\" · 1 749 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosyöpä",
+   "chars": 1749,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "stereotaktinen sädehoito leikkaus",
+   "why": "B Tyks",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 6 of 30 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/22553198",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/22553198",
+   "focus": "untreated stereotactic",
+   "why": "A",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "\"Early-stage lung cancer in elderly patients: a population-based study \" · 1 280 chars · from cache",
+   "ms": 8,
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/22553198",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.9,
+   "result_en": "1 search + 1 read: B: SBRT offered locally; B: SBRT at Satasairaala",
+   "ms": 3540
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala sädehoitoyksikkö stereotaktinen sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: SBRT offered locally",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, docrates.mehilainen.fi",
+   "ms": 1527,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+     "title": "Sädehoitoyksikkö, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/stereotaktinen-sadehoito/",
+     "title": "Stereotaktinen sädehoito - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito/",
+     "title": "Tehokas hypofraktioitu stereotaktinen sädehoito - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo13049",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo50470",
+     "title": "Keskushermoston kasvainten stereo-taktinen sädehoito"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+   "focus": "stereotaktinen keuhko",
+   "why": "B: SBRT at Satasairaala",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "\"Sädehoitoyksikkö, Satasairaala\" · 1 147 chars · from cache",
+   "ms": 1,
+   "title": "Sädehoitoyksikkö, Satasairaala",
+   "chars": 1147,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.0,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Satakunnan hyvinvointialue / Satasairaala / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision ",
+   "ms": 13971
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.9,
+   "result_en": "1 search: B: SBRT at Tyks",
+   "ms": 2400
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks stereotaktinen sädehoito keuhko leikkauskelvoton",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: SBRT at Tyks",
+   "status": "done",
+   "t_s": 28.3,
+   "result_en": "6 results: duodecimlehti.fi, varha.fi, tyks.fi",
+   "ms": 1247,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13049",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
+    },
+    {
+     "url": "https://www.varha.fi/fi/ajankohtaista/tyksin-erikoissadehoidot-arvioitiin-uudestaan-teravimpaan-karkeen",
+     "title": "Tyksin erikoissädehoidot arvioitiin uudestaan terävimpään kärkeen | Varha"
+    },
+    {
+     "url": "https://www.tyks.fi/ajankohtaista/tyksin-erikoissadehoidot-arvioitiin-teravimpaan-karkeen-ensimmaisena-pohjoismaissa-ja",
+     "title": "Tyksin erikoissädehoidot arvioitiin terävimpään kärkeen ensimmäisenä Pohjoismaissa ja Baltiassa | TYKS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo50470",
+     "title": "Keskushermoston kasvainten stereo-taktinen sädehoito"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/sadehoito/",
+     "title": "Sädehoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://tamamatka.fi/stereotaktinen-sadehoito-aivoihin-keuhkosyopa/",
+     "title": "Stereotaktinen sädehoito aivoihin - Kun lääkkeet menettävät tehonsa - TÄMÄ MATKA"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.6,
+   "result_en": "1 read: B: SBRT at Tyks",
+   "ms": 2906
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/ajankohtaista/tyksin-erikoissadehoidot-arvioitiin-teravimpaan-karkeen-ensimmaisena-pohjoismaissa-ja",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/ajankohtaista/tyksin-erikoissadehoidot-arvioitiin-teravimpaan-karkeen-ensimmaisena-pohjoismaissa-ja",
+   "focus": "Keuhkosyövässä vartalon stereotaktista sädehoitoa",
+   "why": "B: SBRT at Tyks",
+   "status": "done",
+   "t_s": 32.5,
+   "result_en": "no answer in 20 s; skipped",
+   "ms": 20000,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 52.5,
+   "result_en": "writes the answer",
+   "ms": 9976
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "title": "Keuhkosyöpä",
+   "chars": 1749,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:03:51+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+   "title": "Sädehoitoyksikkö, Satasairaala",
+   "chars": 1147,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:03:58+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:15:12+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "",
+ "seconds": 62.5,
+ "searched_en": "Searched 6 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue stereotaktinen sädehoito keuhkosyöpä\"; \"Tyks täsmäsädehoito keuhkosyöpä\"; \"Satasairaala SBRT\", ...) and read 4 pages on satakunnanhyvinvointialue.fi, tyks.fi, europepmc.org.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue stereotaktinen sädehoito keuhkosyöpä",
+  "Tyks täsmäsädehoito keuhkosyöpä",
+  "Satasairaala SBRT",
+  "Satasairaala sädehoitoyksikkö stereotaktinen sädehoito",
+  "Tyks stereotaktinen sädehoito keuhko leikkauskelvoton"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "No public sign that this is running in Satakunta after 6 searches and 4 pages read: it stays in the plan.",
+ "verdict_en": "No public sign that it is running in Satakunta. Evidence supports that it works, but not the size of effect we assume. Supported: In the Netherlands, 7 percentage points fewer elderly stage I patients went untreated once stereotactic radiotherapy was available (Annals of Oncology 2012). Not supported: No page I read shows the gain in curative-intent share across all lung cancer patients, and none shows Finnish figures.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "sbrt_pathway",
+ "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
+ "area_name_en": "Satakunta wellbeing services county"
+}

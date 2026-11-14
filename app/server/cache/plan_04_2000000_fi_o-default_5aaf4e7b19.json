@@ -1,0 +1,225 @@
+{
+ "title": "Vantaa ja Kerava: mihin 2 000 000 € keuhkosyövän hoitopolulla ensin",
+ "markdown": "# Vantaa ja Kerava: mihin 2 000 000 € keuhkosyövän hoitopolulla ensin\n\n## Ero yhdellä lauseella\nVantaalla ja Keravalla 85.4 % kiireettömistä terveyskeskuslääkärikäynneistä odotti yli 7 päivää, kun koko maassa osuus oli 54.7 % (2025, mitattu, maan heikoin) [^sotkanet_6411]. Parantavaan hoitoon pääsi 35.6 % potilaista (koko maa 27.0 %, 2019–2023, mitattu, maan paras), joten parhaan neljänneksen tasoon (30.4 %) verrattuna vajetta ei ole [^fcr_lung_quality_report]. Malli arvioi ajaksi ensioireesta hoidon alkuun 177 päivää (161–197), mikä on arviolta pisin 23 alueesta [^model].\n\n## Missä päivät menetetään\nPisimmälle kansallisesta tasosta jää arvioitu potilasviive, eli aika ensioireesta ensikontaktiin: 67 päivää (58–79), kun koko maassa se on 56 [^model]. Mallin oletuksissa sitä pidentävät rahan puutteen vuoksi tingitty hoito, 25.4 % vs. 22.9 % [^sotkanet_4263], ja päivittäin tupakoivat, 12.5 % vs. 9.1 % [^sotkanet_4404]. Perusterveydenhuollosta lähetteeseen kuluu arviolta 51 päivää (38–66), koko maassa 41 [^model]. Diagnoosista hoidon alkuun kuluu 39.4 päivää (koko maa 36.9, 1.1.2018–30.6.2022), mutta luku on laskettu HUS-yhteistyöalueen mitatuista hoitomuotokohtaisista mediaaneista eikä hyvinvointialueelle [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n\n## Kolme toimenpidettä\n1. **Mitä:** Tarkistetaan 50 potilaan kertomukset, joilta hoitotieto puuttuu (alueella 28.9 %, koko maassa 27.5 %) [^fcr_lung_quality_report]. **Vastuu:** Syöpätautien ylilääkäri ja kirjaamisvastaava. **Kustannus:** 8 000 €/v, oletus [^model]. **Odotettu vaikutus:** 0 päivää ja 0 vältettyä kuolemaa; hyöty on siinä, että hoitovaje ja kirjaamisvaje voidaan erottaa toisistaan [^model]. **Näyttö:** [^ev_recording_audit_1] [^ev_recording_audit_2] [^ev_recording_audit_3] [^ev_recording_audit_4]. **Tiekartta:** 3.2.2 Vertaiskehittämisen prosessit [^roadmap_3.2.2].\n2. **Mitä:** Tupakoiva keuhkosyöpäepäily saa vieroituslääkkeen ensikäynnillä. **Vastuu:** Keuhkosairauksien ylilääkäri ja osastonhoitaja. **Kustannus:** 48 600 €/v, oletus [^model]. **Odotettu vaikutus:** 0 päivää; arviolta 0.38 (0.08–0.83) vältettyä kuolemaa vuodessa [^model]. **Näyttö:** havainnoiva [^ev_smoking_cessation_at_diagnosis_1] [^ev_smoking_cessation_at_diagnosis_2]. **Tiekartta:** 3.1.2 Syöpäkohtaiset hoitoketjukuvaukset [^roadmap_3.1.2].\n3. **Mitä:** Thorax-kuva lausutaan samana päivänä, ja epäilyttävästä löydöksestä seuraa heti TT. **Vastuu:** Kuvantamisen ylilääkäri ja perusterveydenhuollon johtava lääkäri. **Kustannus:** 109 000 €/v, oletus [^model]. **Odotettu vaikutus:** arviolta 26 päivää (0–37) ja 0.48 (−0.03–1.9) vältettyä kuolemaa vuodessa; alaraja on alle nollan [^model]. **Näyttö:** [^ev_same_day_cxr_ct_1] [^ev_same_day_cxr_ct_2]. **Tiekartta:** 2.5.2 Standardoidut lähetekriteerit [^roadmap_2.5.2].\n\n## Mitä mitataan maanantaista alkaen\n- Ensioireen tai ensimmäisen perusterveydenhuollon kontaktin päivämäärä [^model]\n- Päivät lähetteestä ensimmäiseen keuhkopoliklinikkakäyntiin [^model]\n- Päivät ensikäynnistä diagnoosiin ja diagnoosista hoidon alkuun alueen omana lukuna [^model]\n- Syy, kun hoitotieto puuttuu [^model]\n\n## Analyysin rajoitteet\nVaiheiden päivät ovat alueen tason arvioita, eivät yksittäisten hoitopolkujen mittauksia, ja niiden painot on oletettu eikä sovitettu aineistoon [^model]. Tarkistus ei ole validointi: yksikään kolmesta mitatusta tulosmuuttujasta ei korreloinut arvioidun kellon kanssa odotettuun suuntaan sattumaa vahvemmin [^model]. Parantavan hoidon osuudessa korrelaatio oli rho −0.30 (p 0.17) [^model]. Kuolemavaikutuksen alaraja on alle nollan, koska viiveen ja kuolleisuuden yhteys ei ole keuhkosyövässä tilastollisesti merkitsevä [^model].",
+ "claims": [
+  {
+   "text": "Vantaalla ja Keravalla 85.4 % kiireettömistä terveyskeskuslääkärikäynneistä odotti yli 7 päivää, kun koko maassa osuus oli 54.7 % (2025, mitattu, maan heikoin) . Parantavaan hoitoon pääsi 35.6 % potilaista (koko maa 27.0 %, 2019–2023, mitattu, maan paras), joten parhaan neljänneksen tasoon (30.4 %) verrattuna vajetta ei ole . Malli arvioi ajaksi ensioireesta hoidon alkuun 177 päivää (161–197), mikä on arviolta pisin 23 alueesta .",
+   "source_ids": [
+    "sotkanet_6411",
+    "fcr_lung_quality_report",
+    "model"
+   ]
+  },
+  {
+   "text": "Pisimmälle kansallisesta tasosta jää arvioitu potilasviive, eli aika ensioireesta ensikontaktiin: 67 päivää (58–79), kun koko maassa se on 56 . Mallin oletuksissa sitä pidentävät rahan puutteen vuoksi tingitty hoito, 25.4 % vs. 22.9 % , ja päivittäin tupakoivat, 12.5 % vs. 9.1 % . Perusterveydenhuollosta lähetteeseen kuluu arviolta 51 päivää (38–66), koko maassa 41 . Diagnoosista hoidon alkuun kuluu 39.4 päivää (koko maa 36.9, 1.1.2018–30.6.2022), mutta luku on laskettu HUS-yhteistyöalueen mitatuista hoitomuotokohtaisista mediaaneista eikä hyvinvointialueelle .",
+   "source_ids": [
+    "model",
+    "sotkanet_4263",
+    "sotkanet_4404",
+    "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28"
+   ]
+  },
+  {
+   "text": "1. **Mitä:** Tarkistetaan 50 potilaan kertomukset, joilta hoitotieto puuttuu (alueella 28.9 %, koko maassa 27.5 %) . **Vastuu:** Syöpätautien ylilääkäri ja kirjaamisvastaava. **Kustannus:** 8 000 €/v, oletus . **Odotettu vaikutus:** 0 päivää ja 0 vältettyä kuolemaa; hyöty on siinä, että hoitovaje ja kirjaamisvaje voidaan erottaa toisistaan . **Näyttö:** . **Tiekartta:** 3.2.2 Vertaiskehittämisen prosessit .",
+   "source_ids": [
+    "fcr_lung_quality_report",
+    "model",
+    "ev_recording_audit_1",
+    "ev_recording_audit_2",
+    "ev_recording_audit_3",
+    "ev_recording_audit_4",
+    "roadmap_3.2.2"
+   ]
+  },
+  {
+   "text": "2. **Mitä:** Tupakoiva keuhkosyöpäepäily saa vieroituslääkkeen ensikäynnillä. **Vastuu:** Keuhkosairauksien ylilääkäri ja osastonhoitaja. **Kustannus:** 48 600 €/v, oletus . **Odotettu vaikutus:** 0 päivää; arviolta 0.38 (0.08–0.83) vältettyä kuolemaa vuodessa . **Näyttö:** havainnoiva . **Tiekartta:** 3.1.2 Syöpäkohtaiset hoitoketjukuvaukset .",
+   "source_ids": [
+    "model",
+    "ev_smoking_cessation_at_diagnosis_1",
+    "ev_smoking_cessation_at_diagnosis_2",
+    "roadmap_3.1.2"
+   ]
+  },
+  {
+   "text": "3. **Mitä:** Thorax-kuva lausutaan samana päivänä, ja epäilyttävästä löydöksestä seuraa heti TT. **Vastuu:** Kuvantamisen ylilääkäri ja perusterveydenhuollon johtava lääkäri. **Kustannus:** 109 000 €/v, oletus . **Odotettu vaikutus:** arviolta 26 päivää (0–37) ja 0.48 (−0.03–1.9) vältettyä kuolemaa vuodessa; alaraja on alle nollan . **Näyttö:** . **Tiekartta:** 2.5.2 Standardoidut lähetekriteerit .",
+   "source_ids": [
+    "model",
+    "ev_same_day_cxr_ct_1",
+    "ev_same_day_cxr_ct_2",
+    "roadmap_2.5.2"
+   ]
+  },
+  {
+   "text": "Ensioireen tai ensimmäisen perusterveydenhuollon kontaktin päivämäärä",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Päivät lähetteestä ensimmäiseen keuhkopoliklinikkakäyntiin",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Päivät ensikäynnistä diagnoosiin ja diagnoosista hoidon alkuun alueen omana lukuna",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Syy, kun hoitotieto puuttuu",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Vaiheiden päivät ovat alueen tason arvioita, eivät yksittäisten hoitopolkujen mittauksia, ja niiden painot on oletettu eikä sovitettu aineistoon . Tarkistus ei ole validointi: yksikään kolmesta mitatusta tulosmuuttujasta ei korreloinut arvioidun kellon kanssa odotettuun suuntaan sattumaa vahvemmin . Parantavan hoidon osuudessa korrelaatio oli rho −0.30 (p 0.17) . Kuolemavaikutuksen alaraja on alle nollan, koska viiveen ja kuolleisuuden yhteys ei ole keuhkosyövässä tilastollisesti merkitsevä .",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [],
+  "flagged": [
+   {
+    "sentence": "Sitä pidentäviä tekijöitä ovat rahan puutteen vuoksi tingitty hoito, 25.4 % vs. 22.9 % [^sotkanet_4263], ja päivittäin tupakoivat, 12.5 % vs. 9.1 % [^sotkanet_4404].",
+    "reason": "Stated as established cause; in the source these are assumed prior elasticities in the model, not fitted effects. Rewritten to 'Mallin oletuksissa sitä pidentävät ...'."
+   },
+   {
+    "sentence": "Diagnoosista hoidon alkuun kuluu mitatusti 39.4 päivää (koko maa 36.9, 1.1.2018–30.6.2022), mutta luku on julkaistu HUS-yhteistyöalueelle eikä hyvinvointialueelle [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].",
+    "reason": "39.4 is not itself published or directly measured: it is an arithmetic weighting of the measured HUS medians (surgery 46, radiotherapy 39, drug therapy 36) by the national treatment mix. Removed 'mitatusti' and reworded to say the figure is computed from measured collaborative-area medians."
+   },
+   {
+    "sentence": "Tarkistus ei ole validointi: yksikään kolmesta mitatusta tulosmuuttujasta ei korreloinut arvioidun kellon kanssa odotettuun suuntaan sattumaa vahvemmin.",
+    "reason": "Factual claim had no citation marker; supported by consistency_check in the model output, so [^model] was added."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "sotkanet_6411": {
+   "title": "Sotkanet indicator 6411: Waiting time for elective outpatient medical visit (physician) in primary health care exceeds 7 days from assessment of the need for treatment, % appointments kept",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/6411",
+   "retrieved_at": "2026-11-13T19:58:15Z"
+  },
+  "fcr_lung_quality_report": {
+   "title": "Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet)",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z"
+  },
+  "model": {
+   "title": "Kello pathway simulation (estimated; method in Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "sotkanet_4263": {
+   "title": "Sotkanet indicator 4263: Going short of food, medicines or physician visits because of lack of money (%)",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4263",
+   "retrieved_at": "2026-11-13T19:58:25Z"
+  },
+  "sotkanet_4404": {
+   "title": "Sotkanet indicator 4404: Daily smokers (%)",
+   "publisher": "THL Sotkanet; data owner: Finnish institute for Health and Welfare (THL)",
+   "url": "https://sotkanet.fi/sotkanet/en/metadata/indicators/4404",
+   "retrieved_at": "2026-11-13T19:58:43Z"
+  },
+  "src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28": {
+   "title": "Keuhkosyöpä Suomessa (lung cancer in Finland, PDF report, Dec 2024), p. 28 (measured, 1.1.2018-30.6.2022; read by Gemini)",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": "2026-11-13T20:00:00Z",
+   "kind": "measured"
+  },
+  "ev_recording_audit_1": {
+   "title": "The registry itself says part of the regional differences comes from recording practice.",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "year": 2026,
+   "design": "national registry quality report, Finland 2019-2023",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_recording_audit_2": {
+   "title": "Treatment data linked to a lung cancer visit was found for 72.5 % of patients nationally.",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "year": 2026,
+   "design": "national registry quality report, Finland 2019-2023",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_recording_audit_3": {
+   "title": "Stage was missing for nearly half of patients, which the registry attributes to gaps in clinical cancer notifications.",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "year": 2026,
+   "design": "registry report press release",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_recording_audit_4": {
+   "title": "Denmark: a national lung cancer registry with quarterly reports and yearly audit went together with rising resection rates and survival.",
+   "url": "https://europepmc.org/article/MED/24457234",
+   "year": 2013,
+   "design": "national clinical registry report, Denmark, 2000-2012",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_3.2.2": {
+   "title": "National cancer roadmap, measure 3.2.2: Define and start peer-development processes in which quality register data are compared and reviewed systematically",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "ev_smoking_cessation_at_diagnosis_1": {
+   "title": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "year": 2021,
+   "design": "prospective cohort, Moscow",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_smoking_cessation_at_diagnosis_2": {
+   "title": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "year": 2025,
+   "design": "retrospective five-hospital cohort, Finland",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_3.1.2": {
+   "title": "National cancer roadmap, measure 3.1.2: Write cancer-specific care pathway descriptions, regional pathways based on them, and a mechanism to maintain them",
+   "url": null,
+   "kind": "roadmap"
+  },
+  "ev_same_day_cxr_ct_1": {
+   "title": "Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis.",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "year": 2023,
+   "design": "randomised controlled trial (radioX), single London hospital",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_same_day_cxr_ct_2": {
+   "title": "Finnish specialist care loses time waiting for imaging and reports.",
+   "url": "https://yle.fi/a/74-20242733",
+   "year": 2026,
+   "design": "journalism citing unpublished four-city study",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "roadmap_2.5.2": {
+   "title": "National cancer roadmap, measure 2.5.2: Support smooth transfer to specialist care by defining standard referral criteria in the national pathways, so patients with possible cancer symptoms are sent quickly to diagnostic tests",
+   "url": null,
+   "kind": "roadmap"
+  }
+ },
+ "area_id": "04",
+ "budget_eur": 2000000.0,
+ "lang": "fi",
+ "generated_at": "2026-11-13T23:46:52+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "# Vantaa ja Kerava: mihin 2 000 000 € keuhkosyövän hoitopolulla ensin\n\n## Ero yhdellä lauseella\nVantaalla ja Keravalla 85.4 % kiireettömistä terveyskeskuslääkärikäynneistä odotti yli 7 päivää, kun koko maassa osuus oli 54.7 % (2025, mitattu, maan heikoin) [^sotkanet_6411]. Parantavaan hoitoon pääsi 35.6 % potilaista (koko maa 27.0 %, 2019–2023, mitattu, maan paras), joten parhaan neljänneksen tasoon (30.4 %) verrattuna vajetta ei ole [^fcr_lung_quality_report]. Malli arvioi ajaksi ensioireesta hoidon alkuun 177 päivää (161–197), mikä on arviolta pisin 23 alueesta [^model].\n\n## Missä päivät menetetään\nPisimmälle kansallisesta tasosta jää arvioitu potilasviive, eli aika ensioireesta ensikontaktiin: 67 päivää (58–79), kun koko maassa se on 56 [^model]. Sitä pidentäviä tekijöitä ovat rahan puutteen vuoksi tingitty hoito, 25.4 % vs. 22.9 % [^sotkanet_4263], ja päivittäin tupakoivat, 12.5 % vs. 9.1 % [^sotkanet_4404]. Perusterveydenhuollosta lähetteeseen kuluu arviolta 51 päivää (38–66), koko maassa 41 [^model]. Diagnoosista hoidon alkuun kuluu mitatusti 39.4 päivää (koko maa 36.9, 1.1.2018–30.6.2022), mutta luku on julkaistu HUS-yhteistyöalueelle eikä hyvinvointialueelle [^src_fi_assets_files_2024_12_Keuhkosyopa_Suomessa_pdf_p28].\n\n## Kolme toimenpidettä\n1. **Mitä:** Tarkistetaan 50 potilaan kertomukset, joilta hoitotieto puuttuu (alueella 28.9 %, koko maassa 27.5 %) [^fcr_lung_quality_report]. **Vastuu:** Syöpätautien ylilääkäri ja kirjaamisvastaava. **Kustannus:** 8 000 €/v, oletus [^model]. **Odotettu vaikutus:** 0 päivää ja 0 vältettyä kuolemaa; hyöty on siinä, että hoitovaje ja kirjaamisvaje voidaan erottaa toisistaan [^model]. **Näyttö:** [^ev_recording_audit_1] [^ev_recording_audit_2] [^ev_recording_audit_3] [^ev_recording_audit_4]. **Tiekartta:** 3.2.2 Vertaiskehittämisen prosessit [^roadmap_3.2.2].\n2. **Mitä:** Tupakoiva keuhkosyöpäepäily saa vieroituslääkkeen ensikäynnillä. **Vastuu:** Keuhkosairauksien ylilääkäri ja osastonhoitaja. **Kustannus:** 48 600 €/v, oletus [^model]. **Odotettu vaikutus:** 0 päivää; arviolta 0.38 (0.08–0.83) vältettyä kuolemaa vuodessa [^model]. **Näyttö:** havainnoiva [^ev_smoking_cessation_at_diagnosis_1] [^ev_smoking_cessation_at_diagnosis_2]. **Tiekartta:** 3.1.2 Syöpäkohtaiset hoitoketjukuvaukset [^roadmap_3.1.2].\n3. **Mitä:** Thorax-kuva lausutaan samana päivänä, ja epäilyttävästä löydöksestä seuraa heti TT. **Vastuu:** Kuvantamisen ylilääkäri ja perusterveydenhuollon johtava lääkäri. **Kustannus:** 109 000 €/v, oletus [^model]. **Odotettu vaikutus:** arviolta 26 päivää (0–37) ja 0.48 (−0.03–1.9) vältettyä kuolemaa vuodessa; alaraja on alle nollan [^model]. **Näyttö:** [^ev_same_day_cxr_ct_1] [^ev_same_day_cxr_ct_2]. **Tiekartta:** 2.5.2 Standardoidut lähetekriteerit [^roadmap_2.5.2].\n\n## Mitä mitataan maanantaista alkaen\n- Ensioireen tai ensimmäisen perusterveydenhuollon kontaktin päivämäärä [^model]\n- Päivät lähetteestä ensimmäiseen keuhkopoliklinikkakäyntiin [^model]\n- Päivät ensikäynnistä diagnoosiin ja diagnoosista hoidon alkuun alueen omana lukuna [^model]\n- Syy, kun hoitotieto puuttuu [^model]\n\n## Analyysin rajoitteet\nVaiheiden päivät ovat alueen tason arvioita, eivät yksittäisten hoitopolkujen mittauksia, ja niiden painot on oletettu eikä sovitettu aineistoon [^model]. Tarkistus ei ole validointi: yksikään kolmesta mitatusta tulosmuuttujasta ei korreloinut arvioidun kellon kanssa odotettuun suuntaan sattumaa vahvemmin. Parantavan hoidon osuudessa korrelaatio oli rho −0.30 (p 0.17) [^model]. Kuolemavaikutuksen alaraja on alle nollan, koska viiveen ja kuolleisuuden yhteys ei ole keuhkosyövässä tilastollisesti merkitsevä [^model].",
+ "objective": "default"
+}

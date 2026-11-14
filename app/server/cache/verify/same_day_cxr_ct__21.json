@@ -1,0 +1,503 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Same-day chest X-ray report with immediate CT. A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+ "area_id": "21",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "In a randomised trial in London, published in Thorax in 2023, the median time from chest X-ray to lung cancer diagnosis was 32 days with immediate reporting and 63 days with standard reporting, a saving of 31 days (p=0.03, 49 cancers).",
+ "supported_en": "A randomised trial in Thorax (2023) found a 31-day shorter median time from chest X-ray to diagnosis (32 vs 63 days).",
+ "not_supported_en": "There is no confidence interval, and the trial is from one London hospital, not a Finnish or rural setting.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found that same-day chest X-ray reporting with direct CT runs in Lapha or at OYS; Lapha's CT page describes an ordinary booked CT whose results come from the referring unit.",
+ "missing_en": "",
+ "summary_en": "No public sign was found that Lapha or OYS already reads chest X-rays the same day and sends suspicious cases straight to CT; Lapha's lung CT page describes a booked scan whose results come from the referring unit. A randomised trial in Thorax (2023) found that reporting the X-ray at once halved the median time from chest X-ray to lung cancer diagnosis, from 63 to 32 days.",
+ "unanswered_en": "Two OYS lung pages could not be opened (HTTP 404), so the OYS pathway for chest X-ray findings was not checked.",
+ "sources": [
+  {
+   "url": "https://lapha.fi/keuhkojen-alueen-tietokonetomografiatutkimus",
+   "title": "Keuhkojen alueen tietokonetomografiatutkimus - Lapin hyvinvointialue",
+   "quote": "Tulokset tehdystä tutkimuksesta saat lähettävältä yksiköltä.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:40:20+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, pirha.fi",
+   "ms": 2005,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://oys.fi/tietoameista/syopakeskus/",
+     "title": "Syöpäkeskus - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha keuhkokuva lausunto samana päivänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lapha.fi, suomi.fi",
+   "ms": 2440,
+   "results": [
+    {
+     "url": "https://lapha.fi/keuhkojen-toimintakoe-puhalluskoe",
+     "title": "Keuhkojen toimintakoe, puhalluskoe"
+    },
+    {
+     "url": "https://lapha.fi/",
+     "title": "Etusivu - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/e708fa9c-2ceb-4df3-9e63-dc6fe238d3f1",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka"
+    },
+    {
+     "url": "https://lapha.fi/hoitajan-ja-laakarin-kiireeton-vastaanotto",
+     "title": "Hoitajan ja lääkärin kiireetön vastaanotto"
+    },
+    {
+     "url": "https://sydan.fi/kysymys/keuhkokuva-ja-sydamen-vajaatoiminta/",
+     "title": "Keuhkokuva ja sydämen vajaatoiminta - Sydänliitto"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS thorax-röntgen päivystyslausunto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, pohde.fi, oys.fi",
+   "ms": 3339,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/oys-b-kuvantaminen-pohjois-pohjanmaan-hyvinvointialue/a4fcc3a8-e169-4610-bbb8-611c7c8bcebf",
+     "title": "OYS B-kuvantaminen - Pohjois-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://pohde.fi/palvelut/rontgen-ja-kuvantaminen/?area=oulu",
+     "title": "Röntgen ja kuvantaminen - Pohjois-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/palvelut/rontgen-ja-kuvantaminen/",
+     "title": "Röntgen ja kuvantaminen - OYS"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/ajanvaraus-oys-kuvantaminen-pohjois-pohjanmaan-hyvinvointialue/1e236a1b-4131-4a1d-8fac-bc201569d638",
+     "title": "Ajanvaraus OYS kuvantaminen - Pohjois-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/oysin-paivystysrontgen-b-rontgen-pohjois-pohjanmaan-hyvinvointialue/a4fcc3a8-e169-4610-bbb8-611c7c8bcebf",
+     "title": "OYSin päivystysröntgen, B-röntgen - Suomi.fi"
+    },
+    {
+     "url": "https://www.finngedi.fi/index.php/saapuminen/",
+     "title": "Saapuminen - FinnGeDi-tutkimus"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin keskussairaala keuhkokuvan jälkeen suoraan TT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomi.fi, lapha.fi",
+   "ms": 1617,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/e708fa9c-2ceb-4df3-9e63-dc6fe238d3f1",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-sisatauti-ja-keuhko-osasto-5-lapin-hyvinvointialue/1d4320e7-2162-4e2a-a612-a09b22e13800",
+     "title": "Lapin keskussairaalan sisätauti- ja keuhko-osasto 5 - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/fi/ptv-c/f9f110c6-77b2-4d0d-b209-9d68757cc272",
+     "title": "- Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-lapin-hyvinvointialue/6c3a0f92-b33b-4419-adad-148758fafd7b",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.4,
+   "result_en": "2 reads: effect size; pathway in OYS area",
+   "ms": 4762
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "focus": "median days chest X-ray to diagnosis immediate reporting",
+   "why": "effect size",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "\"Impact of radiographer immediate reporting of X-rays of the chest from\" · 20 833 chars · 6 of 36 passages kept · from cache",
+   "ms": 4,
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "focus": "keuhkokuva TT lähete radiologi",
+   "why": "pathway in OYS area",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 1994,
+   "error": true
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 10.1,
+   "result_en": "1 search: B: local fast track",
+   "ms": 3025
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin hyvinvointialue keuhkosyöpäepäily keuhkokuva TT nopea",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: local fast track",
+   "status": "done",
+   "t_s": 13.1,
+   "result_en": "6 results: lapha.fi, syovanhoitokeskus.pshyvinvointialue.fi, suomi.fi",
+   "ms": 3053,
+   "results": [
+    {
+     "url": "https://lapha.fi/keuhkojen-alueen-tietokonetomografiatutkimus",
+     "title": "Keuhkojen alueen tietokonetomografiatutkimus - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/keuhkojen-alueen-tt-ohjattu-biopsia-tai-punktio",
+     "title": "Keuhkojen alueen TT-ohjattu biopsia tai punktio - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-lapin-hyvinvointialue/6c3a0f92-b33b-4419-adad-148758fafd7b",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-keuhkosairauksien-poliklinikka-lapin-hyvinvointialue/79f74a16-f0ae-4cd9-a3ea-dba32a6be208",
+     "title": "Lapin keskussairaalan keuhkosairauksien poliklinikka - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://lapha.fi/keuhkosairaudet",
+     "title": "Keuhkosairaudet - Lapin hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Lapha / Lapin keskussairaala / OYS Oulun yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 9269
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.5,
+   "result_en": "1 search: B: OYS pathway imaging step",
+   "ms": 2250
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyövän hoitopolku diagnostiikka keuhkokuva tietokonetomografia",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: OYS pathway imaging step",
+   "status": "done",
+   "t_s": 27.7,
+   "result_en": "6 results: oys.fi, duodecimlehti.fi, tyks.fi",
+   "ms": 1563,
+   "results": [
+    {
+     "url": "https://oys.fi/sisatautikeskus/keuhkosairaudet",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/kuvantaminen-ja-muu-diagnostiikka/",
+     "title": "Kuvantaminen ja muu diagnostiikka - OYS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92960",
+     "title": "Keuhkosairauksien uusia kuvantamisstrategioita"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://aidiagme.com/fi/pathologies-and-diseases/lung-cancer/",
+     "title": "Keuhkosyöpä: oireet, diagnoosi ja hoito - AI DiagMe"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.3,
+   "result_en": "2 reads: B: OYS fast track; B: Lapha CT practice",
+   "ms": 3919
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/sisatautikeskus/keuhkosairaudet",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/sisatautikeskus/keuhkosairaudet",
+   "focus": "keuhkosyöpäepäily keuhkokuvalöydös tietokonetomografia nopea",
+   "why": "B: OYS fast track",
+   "status": "done",
+   "t_s": 33.2,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2449,
+   "error": true
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://lapha.fi/keuhkojen-alueen-tietokonetomografiatutkimus",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://lapha.fi/keuhkojen-alueen-tietokonetomografiatutkimus",
+   "focus": "tietokonetomografia lausunto tulokset",
+   "why": "B: Lapha CT practice",
+   "status": "done",
+   "t_s": 33.2,
+   "result_en": "\"Keuhkojen alueen tietokonetomografiatutkimus - Lapin hyvinvointialue\" · 1 743 chars",
+   "ms": 1680,
+   "title": "Keuhkojen alueen tietokonetomografiatutkimus - Lapin hyvinvointialue",
+   "chars": 1743,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://lapha.fi/keuhkojen-alueen-tietokonetomografiatutkimus",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 35.6,
+   "result_en": "writes the answer",
+   "ms": 8745
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "url": "https://lapha.fi/keuhkojen-alueen-tietokonetomografiatutkimus",
+   "title": "Keuhkojen alueen tietokonetomografiatutkimus - Lapin hyvinvointialue",
+   "chars": 1743,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:40:20+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:40:29+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because no Lapha or OYS page shows same-day chest X-ray reporting with direct CT, and a randomised trial supports a saving of about 31 days.",
+ "seconds": 44.4,
+ "searched_en": "Searched 6 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha keuhkokuva lausunto samana päivänä\"; \"OYS thorax-röntgen päivystyslausunto\"; \"Lapin keskussairaala keuhkokuvan jälkeen suoraan TT\", ...) and read 2 pages on ncbi.nlm.nih.gov, lapha.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Lapha keuhkokuva lausunto samana päivänä",
+  "OYS thorax-röntgen päivystyslausunto",
+  "Lapin keskussairaala keuhkokuvan jälkeen suoraan TT",
+  "Lapin hyvinvointialue keuhkosyöpäepäily keuhkokuva TT nopea",
+  "OYS keuhkosyövän hoitopolku diagnostiikka keuhkokuva tietokonetomografia"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 2,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 1
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because no Lapha or OYS page shows same-day chest X-ray reporting with direct CT, and a randomised trial supports a saving of about 31 days.",
+ "verdict_en": "No public sign that it is running in Lapland. Recent evidence supports the size of effect we assume. A randomised trial in Thorax (2023) found a 31-day shorter median time from chest X-ray to diagnosis (32 vs 63 days).",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "same_day_cxr_ct",
+ "intervention_name_en": "Same-day chest X-ray report with immediate CT",
+ "area_name_en": "Lapland wellbeing services county"
+}

@@ -1,0 +1,659 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in South Ostrobothnia wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how much?\nMeasure: Nurse navigator for every suspected lung cancer. A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+ "area_id": "16",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A 2026 scoping review of 13 studies found navigation was consistently associated with faster first treatment, but the abstract gives no pooled number of days saved and nothing specific to lung cancer.",
+ "supported_en": "A 2026 scoping review of 13 studies in the Japan Journal of Nursing Science found patient navigation consistently associated with faster first treatment.",
+ "not_supported_en": "The review gives no difference against usual care, so it does not show our assumed 15 % (0–30 %) cut in waiting time.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "The Hyvaep pages on lung disease and cancer services and the Pirha/Tays lung cancer pages name doctors, a specialist meeting, rehabilitation counsellors and a doctor–nurse pair at the Tays lung clinic, but none describes a nurse who books and chases every test for each suspected lung cancer. Hyvaep's lung clinic says lung cancer found there is treated elsewhere case by case, and Hyvaep's cancer clinic says radiotherapy is mainly given with Vaasa central hospital. A 2026 scoping review of 13 studies found navigation consistently associated with faster first treatment, without a pooled number of days saved.",
+ "unanswered_en": "We found no page from Hyvaep or Tays on a lung cancer nurse coordinator, project or pilot, and no study that measures how many days a navigator saves for lung cancer patients.",
+ "sources": [
+  {
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "title": "Keuhkosairaudet",
+   "quote": "Poliklinikalla todettu keuhkosyöpä hoidetaan tapauskohtaisesti muualla.",
+   "about": "context",
+   "published": "2026-11-13T01:37:10+00:00",
+   "fetched_at": "2026-11-14T01:23:48+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "quote": "Jos oireiden tai röntgenkuvan perusteella on syytä epäillä keuhkosyöpää, lääkäri lähettää potilaan kiireellisesti jatkotutkimuksiin Taysiin.",
+   "about": "context",
+   "published": "9.9.2025",
+   "fetched_at": "2026-11-14T01:17:42+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+   "title": "Syöpätaudit",
+   "quote": "Jos sinulle suunnitellaan sädehoitoa, se toteutetaan yhteistyössä pääsääntöisesti Vaasan keskussairaalan kanssa.",
+   "about": "context",
+   "published": "2026-11-13T01:37:25+00:00",
+   "fetched_at": "2026-11-14T01:24:49+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "quote": "CPN interventions were consistently associated with accelerated initiation of first treatment among patients with cancer.",
+   "about": "effect",
+   "published": "2026-07-01",
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi",
+   "ms": 1512,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Hyvaep syöpähoitaja koordinaattori",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvaep.fi",
+   "ms": 3054,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+     "title": "Syöpätaudit - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/",
+     "title": "Etelä-Pohjanmaan hyvinvointialue - Etelä-Pohjanmaan hyvinvointialueen sosiaali- ja terveydenhuollon sekä pelastuslaitoksen palvelut"
+    },
+    {
+     "url": "https://www.hyvaep.fi/uploads/2026/06/verkkosivuille-hyvaep-organisaatio-ja-johtamisrakenne_290626.pdf",
+     "title": "Hyvaep organisaatio- ja johtamisrakenne"
+    },
+    {
+     "url": "https://www.hyvaep.fi/en/service/kotihoito/",
+     "title": "Kotihoito - EPSHP"
+    },
+    {
+     "url": "https://www.hyvaep.fi/uploads/2023/08/hyvaep-organisaatio-ja-johtamisrakenne_210823.pdf",
+     "title": "Hyvaep organisaatio- ja johtamisrakenne"
+    },
+    {
+     "url": "https://www.hyvaep.fi/hyvinvointialue/hyvinvoinnin-ja-terveyden-edistaminen/hyvinvoinnin-ja-terveyden-edistamisen-koordinointi/",
+     "title": "Hyvinvoinnin ja terveyden edistämisen koordinointi - Etelä-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays hoitokoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, suomi.fi",
+   "ms": 3097,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-tays-keskussairaala-pirkanmaan-hyvinvointialue/66476935-a726-429e-8ee4-3b4e149be85d",
+     "title": "Syöpätautien poliklinikka, Tays Keskussairaala - Suomi.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/w/tays-etsii-pitkaan-tupakoineita-50-74-vuotiaita-keuhkosyovan-seulontapilottiin-tavoitteena-aikaistaa-syovan-tunnistamista",
+     "title": "Tays etsii pitkään tupakoineita 50–74-vuotiaita keuhkosyövän ..."
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "Epäily Diagnoosi ja hoito Seurant - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/keuhkot-iho-ja-allergia/keuhkosairaudet",
+     "title": "Keuhkosairaudet - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Seinäjoen keskussairaala keuhkosyöpähoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hyvaep.fi, suomi.fi",
+   "ms": 1715,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hyvaep.fi/toimipiste/seinajoen-keskussairaala/",
+     "title": "Seinäjoen keskussairaala"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-palvelut-etela-pohjanmaan-hyvinvointialue/2759fa61-0e65-414f-b424-543f5be9e339",
+     "title": "Syöpätautien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/en/location/seinajoen-keskussairaala/",
+     "title": "Seinäjoen keskussairaala - EPSHP"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/keuhko-ja-infektiosairauksien-osasto-a31-hoitajat-etela-pohjanmaan-hyvinvointialue/5077bdbe-da18-4789-b826-668636e4da21",
+     "title": "Keuhko- ja infektiosairauksien osasto A31, hoitajat"
+    },
+    {
+     "url": "https://doczz.net/doc/7064576/tervetuloa-oppimaan---keuhko--ja-infektiosairauksien-osasto",
+     "title": "Tervetuloa oppimaan - Keuhko- ja infektiosairauksien osasto"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.1,
+   "result_en": "3 reads: B: navigator nurse at Tays; B: county navigator; A: effect size",
+   "ms": 4899
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/documents/d/guest/keuhkosyopapotilaan-hoitopolku",
+   "focus": "hoitaja yhteyshenkilö koordinaattori hoitoneuvottelu",
+   "why": "B: navigator nurse at Tays",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Lähete TULOSTA YHTEYSTIEDOT\" · 52 461 chars · PDF 50 p. · 6 of 67 passages kept",
+   "ms": 4421,
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "chars": 52461,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://www.pirha.fi/documents/d/guest/keuhkosyopapotilaan-hoitopolku",
+   "published": "2019-03-11",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "focus": "keuhkosyöpä hoitaja koordinaattori yhteyshenkilö",
+   "why": "B: county navigator",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Keuhkosairaudet\" · 4 038 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosairaudet",
+   "chars": 4038,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "published": "2026-11-13T01:37:10+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "focus": "navigation time to treatment days reduced",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.0,
+   "result_en": "\"Cancer patient navigation interventions improving timeliness from diag\" · 1 510 chars · from cache",
+   "ms": 6,
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.4,
+   "result_en": "1 search: B: county navigator nurse",
+   "ms": 2296
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Etelä-Pohjanmaa syöpäkoordinaattori keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: county navigator nurse",
+   "status": "done",
+   "t_s": 14.7,
+   "result_en": "6 results: hyvaep.fi, pohjanmaansyopayhdistys.fi, suomi.fi",
+   "ms": 1832,
+   "results": [
+    {
+     "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pohjanmaansyopayhdistys.fi/",
+     "title": "Syöpäyhdistys on tukenasi | Pohjanmaan syöpäyhdistys"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-palvelut-etela-pohjanmaan-hyvinvointialue/2759fa61-0e65-414f-b424-543f5be9e339",
+     "title": "Syöpätautien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+     "title": "Syöpätaudit - Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-palvelut-etela-pohjanmaan-hyvinvointialue/21ee2120-4e95-484e-a849-65ca429ee9cc",
+     "title": "Keuhkosairauksien palvelut - Etelä-Pohjanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://fican.fi/toiminta/hoitosuositukset/keuhkosyopa/",
+     "title": "Keuhkosyöpä – FICAN"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.6,
+   "result_en": "2 reads: B: county navigator; B: national navigator recommendation",
+   "ms": 4173
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hyvaep.fi/palvelu/syopataudit/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+   "focus": "yhteyshoitaja koordinaattori syöpähoitaja keuhkosyöpä",
+   "why": "B: county navigator",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "\"Syöpätaudit\" · 5 367 chars · 6 of 10 passages kept",
+   "ms": 1914,
+   "title": "Syöpätaudit",
+   "chars": 5367,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+   "published": "2026-11-13T01:37:25+00:00",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://fican.fi/toiminta/hoitosuositukset/keuhkosyopa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://fican.fi/toiminta/hoitosuositukset/keuhkosyopa/",
+   "focus": "hoitokoordinaattori yhteyshenkilö viive hoidon aloitus",
+   "why": "B: national navigator recommendation",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "\"Keuhkosyöpä – FICAN\" · 345 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosyöpä – FICAN",
+   "chars": 345,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://fican.fi/toiminta/hoitosuositukset/keuhkosyopa/",
+   "published": "31.3.2026",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 22.7,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Hyvaep / Seinäjoen keskussairaala / Tays Tampereen yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 12447
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 35.1,
+   "result_en": "1 search: B: navigator nurse at Tays",
+   "ms": 2720
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "keuhkosyöpähoitaja Tays yhteyshoitaja",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: navigator nurse at Tays",
+   "status": "done",
+   "t_s": 37.8,
+   "result_en": "6 results: pirha.fi, tyks.fi, suomi.fi",
+   "ms": 2224,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/syopatautien-poliklinikka-tays-keskussairaala",
+     "title": "Syöpätautien poliklinikka, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/sosiaalityontekija-keuhkosairauksien-hoito-tays-pirkanmaan-hyvinvointialue/6a7649c6-5b79-41c2-a39b-f589068a05a2",
+     "title": "Sosiaalityöntekijä, keuhkosairauksien hoito (Tays) - Pirkanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/syovanhoidon-vuodeosasto-rs1-tays-keskussairaala",
+     "title": "Syövänhoidon vuodeosasto RS1, Tays Keskussairaala - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.0,
+   "result_en": "2 reads: B: Tays navigator",
+   "ms": 4508
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "focus": "hoitaja yhteyshenkilö koordinoi kiireellisesti",
+   "why": "B: Tays navigator",
+   "status": "done",
+   "t_s": 44.6,
+   "result_en": "\"Keuhkosyöpä - pirha.fi\" · 2 467 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "step": 19,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+   "focus": "lääkäri-hoitaja työpari keuhkosyöpä",
+   "why": "B: Tays navigator",
+   "status": "done",
+   "t_s": 44.6,
+   "result_en": "\"Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi\" · 1 865 chars",
+   "ms": 4508,
+   "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi",
+   "chars": 1865,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+   "published": "14.11.2026",
+   "js_render": false
+  },
+  {
+   "step": 20,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 49.1,
+   "result_en": "writes the answer",
+   "ms": 9922
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.hyvaep.fi/palvelu/keuhkosairaudet/",
+   "title": "Keuhkosairaudet",
+   "chars": 4038,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:23:48+00:00",
+   "published": "2026-11-13T01:37:10+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "title": "Cancer patient navigation interventions improving timeliness from diagnosis to first treatment in oncology care: A scoping review.",
+   "chars": 1510,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:33:22+00:00",
+   "published": "2026-07-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/documents/d/guest/keuhkosyopapotilaan-hoitopolku",
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "chars": 52461,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:24:39+00:00",
+   "published": "2019-03-11",
+   "js_render": false
+  },
+  {
+   "url": "https://fican.fi/toiminta/hoitosuositukset/keuhkosyopa/",
+   "title": "Keuhkosyöpä – FICAN",
+   "chars": 345,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:59:11+00:00",
+   "published": "31.3.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hyvaep.fi/palvelu/syopataudit/",
+   "title": "Syöpätaudit",
+   "chars": 5367,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:24:49+00:00",
+   "published": "2026-11-13T01:37:25+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+   "title": "Keuhkosyöpä - pirha.fi",
+   "chars": 2467,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:17:42+00:00",
+   "published": "9.9.2025",
+   "js_render": false
+  },
+  {
+   "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+   "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi",
+   "chars": 1865,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:25:16+00:00",
+   "published": "14.11.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:25:26+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no public page from Hyvaep or Pirha/Tays shows a named nurse coordinating each suspected lung cancer, and the evidence suggests navigation speeds up treatment, though it gives no exact size.",
+ "seconds": 59.0,
+ "searched_en": "Searched 6 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Hyvaep syöpähoitaja koordinaattori\"; \"Tays hoitokoordinaattori keuhkosyöpä\"; \"Seinäjoen keskussairaala keuhkosyöpähoitaja\", ...) and read 7 pages on pirha.fi, hyvaep.fi, pmc.ncbi.nlm.nih.gov, fican.fi.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Hyvaep syöpähoitaja koordinaattori",
+  "Tays hoitokoordinaattori keuhkosyöpä",
+  "Seinäjoen keskussairaala keuhkosyöpähoitaja",
+  "Etelä-Pohjanmaa syöpäkoordinaattori keuhkosyöpä",
+  "keuhkosyöpähoitaja Tays yhteyshoitaja"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no public page from Hyvaep or Pirha/Tays shows a named nurse coordinating each suspected lung cancer, and the evidence suggests navigation speeds up treatment, though it gives no exact size.",
+ "verdict_en": "No public sign that it is running in South Ostrobothnia. Evidence supports that it works, but not the size of effect we assume. Supported: A 2026 scoping review of 13 studies in the Japan Journal of Nursing Science found patient navigation consistently associated with faster first treatment. Not supported: The review gives no difference against usual care, so it does not show our assumed 15 % (0–30 %) cut in waiting time.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "nurse_navigator",
+ "intervention_name_en": "Nurse navigator for every suspected lung cancer",
+ "area_name_en": "South Ostrobothnia wellbeing services county"
+}

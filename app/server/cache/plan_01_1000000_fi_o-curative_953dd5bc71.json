@@ -1,0 +1,198 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Itä-Uudenmaan hyvinvointialue: 0,3 keuhkosyöpäpotilasta lisää parantavaan hoitoon vuodessa, 15 600 € vuodessa",
+ "markdown": "# Itä-Uudenmaan hyvinvointialue: 0,3 keuhkosyöpäpotilasta lisää parantavaan hoitoon vuodessa, 15 600 € vuodessa\n\n> 0,3 potilasta lisää parantavaan hoitoon vuodessa · 15 600 € / 1 milj. € · 984 400 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää\n\n## Ero\n\nItä-Uudenmaan hyvinvointialueella sadasta keuhkosyöpäpotilaasta 28 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero mahtuu tämän kokoisen alueen satunnaisvaihteluun. [^care_curative] Parhaan neljänneksen hyvinvointialueisiin (30,4 %) verrattuna parantavaan pyrkivästä hoidosta puuttuu 1,1 potilasta vuodessa (vaihteluväli 0,0–4,0). [^care_curative] [^model] Koko Suomeen verrattuna vajetta ei ole (vaihteluväli 0,0–2,2 potilasta vuodessa), joten sitä ei voi jakaa leikkaushoitoon ja parantavaan pyrkivään sädehoitoon. [^care_curative] [^model]\n\n## Tavoite\n\nParantavaan pyrkivää hoitoa saavien keuhkosyöpäpotilaiden osuus nostetaan 28,3 %:sta 28,8 %:iin vuoteen 2028 mennessä: 0,3 potilasta lisää vuodessa (vaihteluväli 0,0–0,6), kustannus 15 600 € vuodessa eli noin 57 778 € lisäpotilasta kohti. [^care_curative][^model]\n\n## Rahoitettavat toimet\n\n| # | Toimi ja vastuutaho | Kustannus vuodessa | Potilaita lisää parantavaan hoitoon vuodessa (vaihteluväli) | Ensimmäinen askel tällä viikolla | Mittari: nyt → tavoite |\n|---|---|---|---|---|---|\n| | **Hyvinvointialue voi aloittaa maanantaina** | | | | |\n| 1 | **Toimintakyvyn arvio ja esikuntoutus ennen kuin parantavasta hoidosta luovutaan**[^ev_prehab_fitness_assessment_1]. Keuhkosairauksien ylilääkäri; kuntoutuksen ja geriatrian vastuulääkärit | 15 600 € | 0,3 (0,0–0,6) | Päätetään, ettei yhtäkään I–III-asteen potilasta kirjata hoitoon soveltumattomaksi ilman rasituskoetta, ja varataan fysioterapiaryhmä. | Parantavaan hoitoon ohjautuneiden osuus: 28,3 % → 28,8 % vuoteen 2028 mennessä |\n| | **Yhteensä** | **15 600 €** | **0,3 (0,0–0,6)** | | |\n\nNäitä vaikutuksia ei ole mitattu yhdessäkään tutkimuksessa; jokaisen vaihteluvälin alaraja on nolla. Vaihteluvälit eivät summaudu kokonaisvälin suuruisiksi, koska toimilla on yhteinen yläraja. Kustannukset ovat oletuksia. [^model]\n\n## Vaatii kansallisen päätöksen (ei sisälly tähän budjettiin)\n\n- **Matala-annos-TT-seulonta pitkään tupakoineille**[^ev_ldct_screening_1]: STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus). 318 752 € vuodessa; arviolta 0,5 kuolemaa vähemmän vuodessa (0,1–1,4). Ei sisälly tähän budjettiin. Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi. [^model]\n\n## Mitä mitataan maanantaista alkaen\n\n- Parantavaan pyrkivää hoitoa saavien osuus: 28,3 % (2019–2023, mitattu) → 28,8 % vuoteen 2028 mennessä. [^care_curative][^model]\n- Syöpärekisterin julkiset luvut kattavat vuodet 2019–2023; näitä seurataan kuukausittain alueen omista tiedoista. [^care_curative]\n\n## Mitä lisärahalla saa ja mitä ei\n\n15 600 € vuodessa ostaa kaikki toimet, jotka mallissa lisäävät parantavaan pyrkivää hoitoa Itä-Uudellamaalla. Jäljelle jäävällä 984 400 €:lla ei saa enempää, koska toimia rajaa mitatun vajeen saavutettava osa eikä raha. [^model] Muita käyttötapoja rahalle näkyy, kun valitaan toimet vältettyjen kuolemien mukaan tai katsotaan kansallista päätöstä vaativia toimia, kuten matala-annos-TT-seulontaa pitkään tupakoineille. [^model] Alueella kuolee keuhkosyöpään 47,6 ihmistä vuodessa, ja tämän suunnitelman mallinnetaan välttävän niistä 0,0 (vaihteluväli 0,0–0,17). [^deaths] [^model]\n\n## Rajoitteet\n\n- Vaikutukset ovat vaihteluvälejä eivätkä todennäköisyyksiä. Ne ovat pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä alarajalta ylärajalle. Mikään koe ei ole mitannut niitä. [^model]\n- Osuudet on vakioitu vain 65 vuotta täyttäneiden osuudella. Levinneisyyttä, toimintakykyä, kudostyyppiä, tupakointia ja kirjausten kattavuutta ei ole huomioitu. Aluetason luvut eivät osoita syitä. [^model]\n- Aika oireista hoitoon on arvioitu eikä mitattu, ja se on vain toissijainen näkökulma. [^model] Tarkistuksessa 0/3 mitattua lopputulosta vastasi sitä odotettuun suuntaan sattumaa selvemmin. [^model]",
+ "claims": [
+  {
+   "text": "Itä-Uudenmaan hyvinvointialueella sadasta keuhkosyöpäpotilaasta 28 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero mahtuu tämän kokoisen alueen satunnaisvaihteluun.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "Parhaan neljänneksen hyvinvointialueisiin (30,4 %) verrattuna parantavaan pyrkivästä hoidosta puuttuu 1,1 potilasta vuodessa (vaihteluväli 0,0–4,0).",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Koko Suomeen verrattuna vajetta ei ole (vaihteluväli 0,0–2,2 potilasta vuodessa), joten sitä ei voi jakaa leikkaushoitoon ja parantavaan pyrkivään sädehoitoon.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Parantavaan pyrkivää hoitoa saavien keuhkosyöpäpotilaiden osuus nostetaan 28,3 %:sta 28,8 %:iin vuoteen 2028 mennessä: 0,3 potilasta lisää vuodessa (vaihteluväli 0,0–0,6), kustannus 15 600 € vuodessa eli noin 57 778 € lisäpotilasta kohti.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Toimintakyvyn arvio ja esikuntoutus ennen kuin parantavasta hoidosta luovutaan**. Keuhkosairauksien ylilääkäri; kuntoutuksen ja geriatrian vastuulääkärit",
+   "source_ids": [
+    "ev_prehab_fitness_assessment_1"
+   ]
+  },
+  {
+   "text": "Näitä vaikutuksia ei ole mitattu yhdessäkään tutkimuksessa; jokaisen vaihteluvälin alaraja on nolla. Vaihteluvälit eivät summaudu kokonaisvälin suuruisiksi, koska toimilla on yhteinen yläraja. Kustannukset ovat oletuksia.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Matala-annos-TT-seulonta pitkään tupakoineille**: STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus). 318 752 € vuodessa; arviolta 0,5 kuolemaa vähemmän vuodessa (0,1–1,4). Ei sisälly tähän budjettiin. Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Parantavaan pyrkivää hoitoa saavien osuus: 28,3 % (2019–2023, mitattu) → 28,8 % vuoteen 2028 mennessä.",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Syöpärekisterin julkiset luvut kattavat vuodet 2019–2023; näitä seurataan kuukausittain alueen omista tiedoista.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "15 600 € vuodessa ostaa kaikki toimet, jotka mallissa lisäävät parantavaan pyrkivää hoitoa Itä-Uudellamaalla. Jäljelle jäävällä 984 400 €:lla ei saa enempää, koska toimia rajaa mitatun vajeen saavutettava osa eikä raha.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Muita käyttötapoja rahalle näkyy, kun valitaan toimet vältettyjen kuolemien mukaan tai katsotaan kansallista päätöstä vaativia toimia, kuten matala-annos-TT-seulontaa pitkään tupakoineille.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Alueella kuolee keuhkosyöpään 47,6 ihmistä vuodessa, ja tämän suunnitelman mallinnetaan välttävän niistä 0,0 (vaihteluväli 0,0–0,17).",
+   "source_ids": [
+    "deaths",
+    "model"
+   ]
+  },
+  {
+   "text": "Vaikutukset ovat vaihteluvälejä eivätkä todennäköisyyksiä. Ne ovat pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä alarajalta ylärajalle. Mikään koe ei ole mitannut niitä.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Osuudet on vakioitu vain 65 vuotta täyttäneiden osuudella. Levinneisyyttä, toimintakykyä, kudostyyppiä, tupakointia ja kirjausten kattavuutta ei ole huomioitu. Aluetason luvut eivät osoita syitä.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Aika oireista hoitoon on arvioitu eikä mitattu, ja se on vain toissijainen näkökulma.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Tarkistuksessa 0/3 mitattua lopputulosta vastasi sitä odotettuun suuntaan sattumaa selvemmin.",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [],
+  "flagged": [
+   {
+    "sentence": "Lisää toisi kansallista päätöstä vaativa Matala-annos-TT-seulonta pitkään tupakoineille tai toimien valinta vältettyjen kuolemien mukaan. [^model]",
+    "reason": "The source does not say these would add more patients treated to cure; it only says the deaths objective or national-decision measures show what else the money could do. Rewritten to match that."
+   },
+   {
+    "sentence": "Arvioitua aikaa oireista hoitoon ei käytetä tässä suunnitelmassa.",
+    "reason": "The source does not say the clock is unused in this plan. It says the clock is an estimated, secondary view and not measured. Rewritten to say that, and a source marker was added."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Parantava hoito (mitattu; 2019–2023; lukenut Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), s. 14",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kellon malli: optimointi ja sen kirjatut oletukset (arvio; ks. Lähteet ja menetelmä)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "ev_prehab_fitness_assessment_1": {
+   "title": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "year": 2025,
+   "design": "retrospective five-hospital cohort, Finland",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "deaths": {
+   "title": "Keuhkosyöpäkuolemat ja ikävakioitu kuolleisuus alueittain, 2020-2024 (mitattu). Suomen Syöpärekisterin tilastot",
+   "publisher": "Suomen Syöpärekisteri",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "01",
+ "budget_eur": 1000000.0,
+ "lang": "fi",
+ "objective": "curative",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "prehab_fitness_assessment",
+   "name": "Toimintakyvyn arvio ja esikuntoutus ennen kuin parantavasta hoidosta luovutaan"
+  }
+ ],
+ "strip": {
+  "closes": 0.3,
+  "of": null,
+  "pct": null,
+  "deaths": null,
+  "spent": 15600.0,
+  "budget": 1000000.0,
+  "left": 984400.0,
+  "saturated": true,
+  "lead_en": "0.3 more patients a year treated to cure",
+  "lead_fi": "0,3 potilasta lisää parantavaan hoitoon vuodessa",
+  "money_en": "€15,600 of €1M",
+  "money_fi": "15 600 € / 1 milj. €",
+  "left_en": "€984,400 left: nothing more pays off on today's evidence",
+  "left_fi": "984 400 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää",
+  "text_en": "0.3 more patients a year treated to cure · €15,600 of €1M · €984,400 left: nothing more pays off on today's evidence",
+  "text_fi": "0,3 potilasta lisää parantavaan hoitoon vuodessa · 15 600 € / 1 milj. € · 984 400 € jää käyttämättä: nykynäytöllä millään muulla ei saada lisää"
+ },
+ "written_sections": [
+  "Ero",
+  "Mitä lisärahalla saa ja mitä ei",
+  "Rajoitteet"
+ ],
+ "generated_at": "2026-11-14T01:10:06+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## Ero\nItä-Uudenmaan hyvinvointialueella sadasta keuhkosyöpäpotilaasta 28 saa parantavaan pyrkivää hoitoa. Koko Suomessa luku on 27. Ero mahtuu tämän kokoisen alueen satunnaisvaihteluun. [^care_curative] Parhaan neljänneksen hyvinvointialueisiin (30,4 %) verrattuna parantavaan pyrkivästä hoidosta puuttuu 1,1 potilasta vuodessa (vaihteluväli 0,0–4,0). [^care_curative] [^model] Koko Suomeen verrattuna vajetta ei ole (vaihteluväli 0,0–2,2 potilasta vuodessa), joten sitä ei voi jakaa leikkaushoitoon ja parantavaan pyrkivään sädehoitoon. [^care_curative] [^model]\n\n## Mitä lisärahalla saa ja mitä ei\n15 600 € vuodessa ostaa kaikki toimet, jotka mallissa lisäävät parantavaan pyrkivää hoitoa Itä-Uudellamaalla. Jäljelle jäävällä 984 400 €:lla ei saa enempää, koska toimia rajaa mitatun vajeen saavutettava osa eikä raha. [^model] Lisää toisi kansallista päätöstä vaativa Matala-annos-TT-seulonta pitkään tupakoineille tai toimien valinta vältettyjen kuolemien mukaan. [^model] Alueella kuolee keuhkosyöpään 47,6 ihmistä vuodessa, ja tämän suunnitelman mallinnetaan välttävän niistä 0,0 (vaihteluväli 0,0–0,17). [^deaths] [^model]\n\n## Rajoitteet\n- Vaikutukset ovat vaihteluvälejä eivätkä todennäköisyyksiä. Ne ovat pienin ja suurin arvo, kun kaikki oletukset siirretään yhdessä alarajalta ylärajalle. Mikään koe ei ole mitannut niitä. [^model]\n- Osuudet on vakioitu vain 65 vuotta täyttäneiden osuudella. Levinneisyyttä, toimintakykyä, kudostyyppiä, tupakointia ja kirjausten kattavuutta ei ole huomioitu. Aluetason luvut eivät osoita syitä. [^model]\n- Arvioitua aikaa oireista hoitoon ei käytetä tässä suunnitelmassa. Tarkistuksessa 0/3 mitattua lopputulosta vastasi sitä odotettuun suuntaan sattumaa selvemmin. [^model]"
+}

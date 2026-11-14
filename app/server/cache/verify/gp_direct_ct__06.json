@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: GP direct access to low-dose CT. Health-centre doctors can order chest CT directly for patients whose symptoms raise suspicion but do not meet urgent referral criteria, without first referring to specialist care.",
+ "area_id": "06",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "The Danish trial found a non-significant 8-day shorter median diagnostic interval (36 vs 44 days, p=0.299).",
+ "supported_en": "BMC Cancer 2015 (Aarhus trial): direct GP access to low-dose CT came with an 8-day shorter median diagnostic interval (36 vs 44 days), not statistically significant.",
+ "not_supported_en": "The trial does not show a reliable 8-day gain or any effect on time to treatment start, and no Satakunta results are published yet.",
+ "in_use_here": "yes",
+ "in_use_scope": "county",
+ "in_use_quote": "Keskeinen uudistus on se, että keuhkosyöpää epäiltäessä potilas voidaan lähettää keuhkojen tietokonetomografiaan eli TT-kuvaukseen suoraan perusterveydenhuollosta.",
+ "in_use_source": {
+  "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+  "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+  "published": "2026-11-11T10:16:00.000+0",
+  "fetched_at": "2026-11-14T01:43:43+00:00"
+ },
+ "in_use_summary_en": "Satakunnan Kansa reports that since 2024 Satakunta's primary care has routinely referred patients with suspected lung cancer (at least 20 pack-years plus symptoms) directly to chest CT, after a pilot that began in 2022; about 170 patients have been scanned.",
+ "missing_en": "",
+ "summary_en": "Satakunnan Kansa (11 Nov 2026) reports that Satakunta wellbeing services county lets primary-care doctors send patients with suspected lung cancer straight to chest CT. Patients qualify if they have at least 20 pack-years of smoking and symptoms. The service began as a pilot in 2022, became routine in 2024, and about 170 patients have been scanned so far. The Danish cluster-randomised trial (BMC Cancer 2015) found a median diagnostic interval of 36 days with direct CT access against 44 days without (p=0.299), so the 8-day difference is not statistically significant.",
+ "unanswered_en": "I found no page from the county itself confirming the pathway, only the newspaper report, and the county's own study of how well it works has not been published.",
+ "sources": [
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "quote": "Keskeinen uudistus on se, että keuhkosyöpää epäiltäessä potilas voidaan lähettää keuhkojen tietokonetomografiaan eli TT-kuvaukseen suoraan perusterveydenhuollosta.",
+   "about": "in_use",
+   "published": "2026-11-11T10:16:00.000+0",
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "quote": "Uuden hoitopolun kautta on tähän mennessä kuvattu noin 170 potilasta. Vuonna 2022 pilottina alkanut toimintamalli vakiintui käyttöön vuonna 2024.",
+   "about": "in_use",
+   "published": "2026-11-11T10:16:00.000+0",
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+   "title": "The effect of direct access to CT scan in early lung cancer detection: an unblinded, cluster-randomised trial",
+   "quote": "Patients listed with control GPs had a statistically insignificantly longer median diagnostic interval (44 days, IQI: 17–112) than patients listed with intervention GPs (36 days, IQI: 17–83) ( p  = 0.299).",
+   "about": "effect",
+   "published": "2015",
+   "fetched_at": "2026-11-13T23:50:36+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, hyvaks.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 2339,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue terveyskeskuslääkäri suora lähete keuhkojen TT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi",
+   "ms": 3040,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/terveyspalvelut/",
+     "title": "Terveyspalvelut - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-satakunnan-hyvinvointialue/472cf083-5ce3-4379-ac60-e72843536301",
+     "title": "Keuhkosairaudet - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/laakarin-tai-hoitajan-vastaanotto-satakunnan-hyvinvointialue/866f8a88-3461-4245-b044-700f20f3bfa5",
+     "title": "Lääkärin tai hoitajan vastaanotto - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks matala-annos-TT lähete perusterveydenhuolto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1958,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/lahete",
+     "title": "Lähete | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/ammattilaiselle/lahetteet-ja-laheteohjeet",
+     "title": "Lähetteet ja läheteohjeet | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/tietokonetomografiat-ja-toimenpiteet",
+     "title": "Tietokonetomografiat ja -toimenpiteet | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/sites/default/files/2022-09/TYKS_IBD_hoitopolku.pdf",
+     "title": "Sairauden epäily Hoidon aloitus tai tehostaminen Seuranta IBD-YHDISTYKSET"
+    },
+    {
+     "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/VSSHP/KEUHKOJEN%20VENTILAATION%20JA%20PERFUUSION%20GAMMAKUVAUS%20%28HK%29_0.pdf",
+     "title": "Hoito-ohje ammattilaisille"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/kuvantaminen-ja-diagnoosi/tietokonetomografia-tt/",
+     "title": "TT-kuvaus syövän diagnostiikassa ja hoidossa - Docrates"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala keuhkosyöpäepäily lähete kuvantaminen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi, satasairaala.fi, hoito-ohjeet.fi",
+   "ms": 3314,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/kuvantaminen/",
+     "title": "Kuvantaminen - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/kuvantamispalvelut-satakunnan-hyvinvointialue/f28e884a-46fe-4039-8afb-6e2696c5cdfa",
+     "title": "Kuvantamispalvelut - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.satasairaala.fi/palvelut/kuvantaminen",
+     "title": "Kuvantaminen | Satasairaala"
+    },
+    {
+     "url": "https://hoito-ohjeet.fi/en/Ohjepankki/SATSHP/Keuhkojen%20tietokonetomografia.pdf",
+     "title": "Potilasohje, Kuvantaminen, 2026 Keuhkojen tietokonetomografiatutkimus"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/satasairaalan-kuvantaminen-satakunnan-hyvinvointialue/a2e0d301-d409-4b70-8fad-0a3d03002c66",
+     "title": "Satasairaalan kuvantaminen - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.theseus.fi/bitstream/handle/10024/1342/Hakala_Annika_Uusitalo_Katja_2.pdf?sequence=1&isAllowed=y",
+     "title": "38 LIITE 1: 1 (17) SATAKUNNAN SAIRAANHOITOPIIRI"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.3,
+   "result_en": "2 reads: B: Satakunta direct CT pathway; A effect size",
+   "ms": 6099
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "focus": "TT-kuvaukseen suoraan perusterveydenhuollosta",
+   "why": "B: Satakunta direct CT pathway",
+   "status": "done",
+   "t_s": 9.4,
+   "result_en": "\"Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löyt\" · 2 090 chars · from cache",
+   "ms": 1,
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+   "focus": "median diagnostic interval days",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 9.4,
+   "result_en": "\"The effect of direct access to CT scan in early lung cancer detection:\" · 42 174 chars · 5 of 64 passages kept · from cache",
+   "ms": 11,
+   "title": "The effect of direct access to CT scan in early lung cancer detection: an unblinded, cluster-randomised trial",
+   "chars": 42174,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.4,
+   "result_en": "writes the answer",
+   "ms": 11670
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+   "title": "The effect of direct access to CT scan in early lung cancer detection: an unblinded, cluster-randomised trial",
+   "chars": 42174,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:50:36+00:00",
+   "published": "2015",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:51:17+00:00",
+ "stopped": "finished",
+ "advice": "take_out",
+ "model_reason_en": "Take this line out: Satakunnan Kansa reports that Satakunta's health centres already send patients with suspected lung cancer straight to chest CT, and that this has been routine practice since 2024.",
+ "seconds": 21.1,
+ "searched_en": "Searched 4 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue terveyskeskuslääkäri suora lähete keuhkojen TT\"; \"Tyks matala-annos-TT lähete perusterveydenhuolto\"; \"Satasairaala keuhkosyöpäepäily lähete kuvantaminen\") and read 2 pages on satakunnankansa.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue terveyskeskuslääkäri suora lähete keuhkojen TT",
+  "Tyks matala-annos-TT lähete perusterveydenhuolto",
+  "Satasairaala keuhkosyöpäepäily lähete kuvantaminen"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "exclude",
+ "plan_effect_reason_en": "Take this line out: Satakunnan Kansa reports that Satakunta's health centres already send patients with suspected lung cancer straight to chest CT, and that this has been routine practice since 2024.",
+ "verdict_en": "Already running in Satakunta. Evidence supports that it works, but not the size of effect we assume. Supported: BMC Cancer 2015 (Aarhus trial): direct GP access to low-dose CT came with an 8-day shorter median diagnostic interval (36 vs 44 days), not statistically significant. Not supported: The trial does not show a reliable 8-day gain or any effect on time to treatment start, and no Satakunta results are published yet.",
+ "in_use_label_en": "Already running here",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "gp_direct_ct",
+ "intervention_name_en": "GP direct access to low-dose CT",
+ "area_name_en": "Satakunta wellbeing services county"
+}

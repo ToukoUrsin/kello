@@ -1,0 +1,549 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Savo wellbeing services county (or in the KYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure reduce deaths among the people it reaches, and by how much?\nMeasure: Smoking cessation started at the first specialist visit. Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+ "area_id": "13",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "In a Moscow cohort of 517 current smokers with early-stage NSCLC, quitting after diagnosis was linked to lower all-cause mortality (adjusted HR 0.67, 95% CI 0.53–0.85).",
+ "supported_en": "A 2021 study in Annals of Internal Medicine reports an adjusted HR of 0.67 (0.53–0.85) for all-cause mortality after quitting in early-stage NSCLC; the county has published a model for raising smoking and giving quit-smoking advice.",
+ "not_supported_en": "The study is observational, and no page shows how many patients a first-visit offer would get to quit.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Pohjois-Savon tupakka- ja nikotiinivieroituksen toimintamalli on julkaistu. Mallin avulla otat tupakka- ja nikotiinituotteiden käytön puheeksi, annat tarvittaessa vierotusohjauksen ja teet tarvittavat toimenpidekirjaukset.",
+ "in_use_source": {
+  "url": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+  "title": "Riippuvuuksien ehkäisy - HYTE - Pohjois-Savo",
+  "published": null,
+  "fetched_at": "2026-11-14T01:52:10+00:00"
+ },
+ "in_use_summary_en": "Pohjois-Savo has published a county-wide model for tobacco and nicotine cessation (raise the subject, give quit-smoking advice when needed, record it), but the KYS lung cancer care chain only asks for pack-years on the referral.",
+ "missing_en": "No page shows quit-smoking medicines and counselling started at the first KYS lung clinic visit for every smoker with suspected lung cancer.",
+ "summary_en": "The Pohjois-Savo wellbeing services county has published a county-wide model for raising tobacco use and giving quit-smoking advice. The KYS lung cancer care chain only records pack-years, and no page shows quit-smoking medicines and counselling started at the first lung clinic visit. A 2021 Annals of Internal Medicine cohort found an adjusted HR of 0.67 (0.53–0.85) for death from any cause among early-stage NSCLC patients who quit after diagnosis.",
+ "unanswered_en": "I found no page showing that KYS lung clinic patients are routinely given quit-smoking medicines or referred to a quit-smoking nurse.",
+ "sources": [
+  {
+   "url": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+   "title": "Riippuvuuksien ehkäisy - HYTE - Pohjois-Savo",
+   "quote": "Pohjois-Savon tupakka- ja nikotiinivieroituksen toimintamalli on julkaistu. Mallin avulla otat tupakka- ja nikotiinituotteiden käytön puheeksi, annat tarvittaessa vierotusohjauksen ja teet tarvittavat toimenpidekirjaukset.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T01:52:10+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "quote": "Tieto tupakoinnista askivuosin",
+   "about": "context",
+   "published": "2021-10-22",
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "quote": "After adjustments, smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85])",
+   "about": "effect",
+   "published": "2021-07-27",
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pshyvinvointialue.fi, hyvaks.fi",
+   "ms": 3169,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon hyvinvointialue tupakasta vieroitus keuhkosyöpäpotilas",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: julkaisut.valtioneuvosto.fi, pshyvinvointialue.fi",
+   "ms": 2378,
+   "results": [
+    {
+     "url": "https://julkaisut.valtioneuvosto.fi/bitstreams/9bf2844c-9494-4aa8-a1b3-a1d2571645f0/download",
+     "title": "Tupakasta ja nikotiinista vieroitus Suositukset hyvinointialueille"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/fi/w/nikotiiniriippuvuuteen-kannattaa-hakea-apua-tukea-on-tarjolla",
+     "title": "Nikotiiniriippuvuuteen kannattaa hakea apua – tukea on ..."
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/asiakas-ja-potilasturvallisuus",
+     "title": "Asiakas- ja potilasturvallisuus - Pohjois-Savo"
+    },
+    {
+     "url": "https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/9bf2844c-9494-4aa8-a1b3-a1d2571645f0/content",
+     "title": "Sosiaali- ja terveysministeriön JULKAISUJA | 2024:16 Tupakasta ja"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/potilalle",
+     "title": "Potilaalle - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/potilasasiavastaava",
+     "title": "Potilasasiavastaava - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS tupakkavieroitus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kaypahoito.fi, terveyskirjasto.fi, filha.fi, apollonia.fi",
+   "ms": 2002,
+   "results": [
+    {
+     "url": "https://www.kaypahoito.fi/hoi40020",
+     "title": "Tupakka- ja nikotiiniriippuvuuden ehkäisy ja hoito"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00337",
+     "title": "Tupakoinnin lopettaminen (tupakasta vieroitus) - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.filha.fi/tupakka-ja-nikotiini/tupakkavieroitus/",
+     "title": "Tupakkavieroituksen tukimateriaalia - Filha ry"
+    },
+    {
+     "url": "https://www.apollonia.fi/tiedeuutiset/tupakkavieroituksen-kuusi-kta/",
+     "title": "Tupakkavieroituksen kuusi K:ta - Apollonia"
+    },
+    {
+     "url": "https://www.filha.fi/en/tupakka-ja-terveys-paiva-2025/",
+     "title": "Tupakka ja terveys -päivä 2025 - Filha"
+    },
+    {
+     "url": "https://yle.fi/a/3-8887910",
+     "title": "Tays alkaa vierottaa leikkauspotilaita tupakasta – tupakointi voi perua toimenpiteen | Yle"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Savon savuton leikkaus keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: keuhkosyopa.fi, pshyvinvointialue.fi, sydansairaala.fi, suomi.fi",
+   "ms": 1553,
+   "results": [
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/leikkaushoito/",
+     "title": "Leikkaushoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://pshyvinvointialue.fi/keuhkosairauksien-palvelut",
+     "title": "Keuhkosairauksien palvelut - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-pohjois-savon-hyvinvointialue/73b55781-80d5-4211-93f2-c3143cfb5a36",
+     "title": "Syöpätautien ja sädehoidon palvelut - Pohjois-Savon hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/plastiikkakirurgian-leikkaushoidonsuunnittelija-pohjois-savon-hyvinvointialue/ed268b13-6226-45d2-8c02-128512725f35",
+     "title": "Plastiikkakirurgian leikkaushoidonsuunnittelija - Pohjois-Savon..."
+    },
+    {
+     "url": "https://pohjois-savonsyopayhdistys.fi/",
+     "title": "Pohjois-Savon - Syöpäyhdistys on tukenasi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.2,
+   "result_en": "3 reads: B: cessation in KYS pathway; A: effect size; B: county cessation services",
+   "ms": 7219
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "focus": "tupakointi tupakasta vieroitus lopettaminen",
+   "why": "B: cessation in KYS pathway",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitoketju\" · 20 640 chars · PDF 22 p. · 5 of 29 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://doi.org/10.7326/M21-0252",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "focus": "hazard ratio all-cause mortality quit",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "\"Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progr\" · 2 162 chars · from cache",
+   "ms": 5,
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://doi.org/10.7326/M21-0252",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pshyvinvointialue.fi/fi/w/nikotiiniriippuvuuteen-kannattaa-hakea-apua-tukea-on-tarjolla",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pshyvinvointialue.fi/fi/w/nikotiiniriippuvuuteen-kannattaa-hakea-apua-tukea-on-tarjolla",
+   "focus": "vieroitus erikoissairaanhoito KYS leikkaus",
+   "why": "B: county cessation services",
+   "status": "done",
+   "t_s": 10.4,
+   "result_en": "\"Nikotiiniriippuvuuteen kannattaa hakea apua – tukea on tarjolla\" · 1 953 chars",
+   "ms": 3701,
+   "title": "Nikotiiniriippuvuuteen kannattaa hakea apua – tukea on tarjolla",
+   "chars": 1953,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://pshyvinvointialue.fi/fi/w/nikotiiniriippuvuuteen-kannattaa-hakea-apua-tukea-on-tarjolla",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "1 search: B: perioperative cessation at KYS",
+   "ms": 2253
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "KYS leikkauspotilas tupakoinnin lopettaminen ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: perioperative cessation at KYS",
+   "status": "done",
+   "t_s": 16.3,
+   "result_en": "6 results: duodecimlehti.fi, potilasohjeet.pirha.fi, palveluketjut.hyvaep.fi",
+   "ms": 1876,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13819",
+     "title": "Potilas pitää vieroittaa tupakasta ennen kirurgisia toimenpiteitä"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/tupakointi-ja-leikkaukseen-valmistautuminen",
+     "title": "Tupakointi ja leikkaukseen valmistautuminen - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/tupakkatuotteiden-kaytto-ja-leikkaukseen-valmistautuminen",
+     "title": "Tupakkatuotteiden käyttö ja leikkaukseen valmistautuminen - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://palveluketjut.hyvaep.fi/wp-content/uploads/2023/11/Tupakkatuotteiden-kaytto-ja-leikkaus-potilasohje-1.pdf",
+     "title": "Potilasohje 1722-2010-P 1 (8) 2.2.2023 Etelä-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/leikkaukseen/tietoa-leikkaushoidosta/tupakoinnin-ja-nikotiinituotteiden-lopettamisen-edut-ennen-leikkausta",
+     "title": "Tupakoinnin ja nikotiinituotteiden lopettamisen edut ennen leikkausta"
+    },
+    {
+     "url": "https://say.fi/wp-content/uploads/2025/11/SAY_Leikkausta_edeltavan_arvioinnin_suositus_10_2025.pdf",
+     "title": "24.10.2025 Suomen Anestesiologiyhdistys 1 Leikkausta edeltävä arviointi"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 18.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Pohjois-Savon hyvinvointialue / KYS / KYS Kuopion yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 12048
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 30.3,
+   "result_en": "1 search: B: cessation nurse at KYS/county",
+   "ms": 2704
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "pshyvinvointialue.fi vieroitushoitaja tupakka",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: cessation nurse at KYS/county",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "6 results: filha.fi, hyte.pshyvinvointialue.fi, julkari.fi",
+   "ms": 2634,
+   "results": [
+    {
+     "url": "https://www.filha.fi/en/vieroitustyota-hyvinvointialueella-vieroitushoitajan-vastaanotolla-tuetaan-tupakka-ja-nikotiinituotteiden-kayton-lopettamista/",
+     "title": "Vieroitustyötä hyvinvointialueella – vieroitushoitajan vastaanotolla tuetaan tupakka- ja nikotiinituotteiden käytön lopettamista"
+    },
+    {
+     "url": "https://hyte.pshyvinvointialue.fi/sme/p%C3%A4iv%C3%A4kotirauhan-julistus-2024/-/asset_publisher/y4VByf5zJAfv/document/id/2671307",
+     "title": "Päihde_ ja mielenterveysalan järjestöt tutuiksi Pohjois_Savossa 301024.pdf - HYTE - Pohjois-Savo"
+    },
+    {
+     "url": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+     "title": "Riippuvuuksien ehkäisy - HYTE - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.julkari.fi/items/79f1d60d-bb20-4363-b2e6-fc6abba47f3c",
+     "title": "Tupakasta ja nikotiinista vieroituksen järjestäminen hyvinvointialueilla"
+    },
+    {
+     "url": "https://hyte.pshyvinvointialue.fi/documents/594193/718131/HAL-l%C3%A4hetekriteerit.pdf/c45fc630-64ce-c926-4b28-a8d6187d9ca4?t=1728289080895",
+     "title": "A. HAL-poliklinikalle lähetettävät potilaat 1. ..."
+    },
+    {
+     "url": "https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/9bf2844c-9494-4aa8-a1b3-a1d2571645f0/content",
+     "title": "Sosiaali- ja terveysministeriön JULKAISUJA | 2024:16 Tupakasta ja"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 35.6,
+   "result_en": "1 read: B: county cessation model",
+   "ms": 2988
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+   "focus": "tupakka- ja nikotiinivieroituksen toimintamalli",
+   "why": "B: county cessation model",
+   "status": "done",
+   "t_s": 38.6,
+   "result_en": "\"Riippuvuuksien ehkäisy - HYTE - Pohjois-Savo\" · 12 661 chars · 6 of 18 passages kept",
+   "ms": 2601,
+   "title": "Riippuvuuksien ehkäisy - HYTE - Pohjois-Savo",
+   "chars": 12661,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 41.2,
+   "result_en": "writes the answer",
+   "ms": 13487
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+   "title": "Keuhkosyöpäpotilaan hoitoketju",
+   "chars": 20640,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:19:09+00:00",
+   "published": "2021-10-22",
+   "js_render": false
+  },
+  {
+   "url": "https://doi.org/10.7326/M21-0252",
+   "title": "Postdiagnosis Smoking Cessation and Reduced Risk for Lung Cancer Progression and Mortality : A Prospective Cohort Study.",
+   "chars": 2162,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:04+00:00",
+   "published": "2021-07-27",
+   "js_render": false
+  },
+  {
+   "url": "https://pshyvinvointialue.fi/fi/w/nikotiiniriippuvuuteen-kannattaa-hakea-apua-tukea-on-tarjolla",
+   "title": "Nikotiiniriippuvuuteen kannattaa hakea apua – tukea on tarjolla",
+   "chars": 1953,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:51:43+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://hyte.pshyvinvointialue.fi/smn/riippuvuuksien-ehkaisy",
+   "title": "Riippuvuuksien ehkäisy - HYTE - Pohjois-Savo",
+   "chars": 12661,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:52:10+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:52:24+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask the KYS lung clinic (keuhkosairauksien poliklinikka) first whether the county's published quit-smoking model is already used at the first lung-cancer visit, because Pohjois-Savo has such a model but no page shows it in the lung cancer pathway.",
+ "seconds": 54.7,
+ "searched_en": "Searched 6 queries (\"KYS keuhkosyöpäpotilaan hoitopolku\"; \"Pohjois-Savon hyvinvointialue tupakasta vieroitus keuhkosyöpäpotilas\"; \"KYS tupakkavieroitus\"; \"Pohjois-Savon savuton leikkaus keuhkosyöpä\", ...) and read 4 pages on syovanhoitokeskus.pshyvinvointialue.fi, doi.org, pshyvinvointialue.fi, hyte.pshyvinvointialue.fi.",
+ "queries": [
+  "KYS keuhkosyöpäpotilaan hoitopolku",
+  "Pohjois-Savon hyvinvointialue tupakasta vieroitus keuhkosyöpäpotilas",
+  "KYS tupakkavieroitus",
+  "Pohjois-Savon savuton leikkaus keuhkosyöpä",
+  "KYS leikkauspotilas tupakoinnin lopettaminen ennen leikkausta",
+  "pshyvinvointialue.fi vieroitushoitaja tupakka"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask the KYS lung clinic (keuhkosairauksien poliklinikka) first whether the county's published quit-smoking model is already used at the first lung-cancer visit, because Pohjois-Savo has such a model but no page shows it in the lung cancer pathway.",
+ "verdict_en": "Partly in place in North Savo. Missing: No page shows quit-smoking medicines and counselling started at the first KYS lung clinic visit for every smoker with suspected lung cancer. Recent evidence supports the size of effect we assume. A 2021 study in Annals of Internal Medicine reports an adjusted HR of 0.67 (0.53–0.85) for all-cause mortality after quitting in early-stage NSCLC; the county has published a model for raising smoking and giving quit-smoking advice.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "smoking_cessation_at_diagnosis",
+ "intervention_name_en": "Smoking cessation started at the first specialist visit",
+ "area_name_en": "North Savo wellbeing services county"
+}

@@ -1,0 +1,388 @@
+{
+ "area_id": "91",
+ "area_name_en": "Åland",
+ "area_name_fi": "Ahvenanmaa",
+ "question": "What is Åland doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2025-04-23",
+   "what_en": "ÅHS gives antibodies, chemotherapy and immunotherapy locally, while radiotherapy, chemoradiotherapy and PET scans are done in Turku.",
+   "what_fi": "ÅHS antaa vasta-aine-, solusalpaaja- ja immunoterapiahoitoja paikallisesti, mutta sädehoito, kemosädehoito ja PET-tutkimukset tehdään Turussa.",
+   "quote": "Cancerbehandlingar som exempelvis antikroppar, cytostatika och immunterapi kan man få vid ÅHS, och även andra medicinska åtgärder som är betydande för cancervården. Men till exempel strålbehandling, kemoradioterapier, PET-undersökningar och bentäthetsmätning sker i Åbo",
+   "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "title": "Litenheten är ibland en fördel - Allt om cancer",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:53+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025-04-23",
+   "what_en": "In autumn 2024 the Åland Cancer Society kept the flights to Turku running until the end of February, so patients can travel for radiotherapy and fly home the same day.",
+   "what_fi": "Syksyllä 2024 Ahvenanmaan syöpäyhdistys turvasi Turun-lennot helmikuun loppuun, joten potilaat voivat käydä sädehoidossa ja palata kotiin samana päivänä.",
+   "quote": "På hösten 2024 kom cancerföreningen in och tryggade flygtrafiken till slutet av februari. Det är behändigt att åka till Åbo på förmiddagen för till exempel strålbehandling och sedan flyga hem till sin familj till kvällen.",
+   "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "title": "Litenheten är ibland en fördel - Allt om cancer",
+   "relates_to": "travel_accommodation_support",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:53+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025-04-23",
+   "what_en": "ÅHS has a cancer nurse, but she says she cannot reach out to every patient herself; patients contact her or are referred by other staff.",
+   "what_fi": "ÅHS:llä on syöpähoitaja, mutta hänen mukaansa hän ei pysty itse tavoittamaan kaikkia potilaita; potilaat ottavat yhteyttä itse tai muun henkilökunnan kautta.",
+   "quote": "Alla patienter är välkomna att själva ta kontakt med mig eller kontakta mig via annan vårdpersonal. Jag har inte möjlighet att söka upp alla patienter",
+   "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "title": "Litenheten är ibland en fördel - Allt om cancer",
+   "relates_to": "nurse_navigator",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:53+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025-04-23",
+   "what_en": "At the ÅHS oncology clinic, patients usually see an oncologist within a couple of weeks and treatment often starts the following week; oncologists visit as consultants from Sweden and Finland.",
+   "what_fi": "ÅHS:n onkologisella vastaanotolla potilas pääsee onkologille parissa viikossa, ja hoito alkaa usein seuraavalla viikolla; onkologit käyvät konsultteina Ruotsista ja Suomesta.",
+   "quote": "Patienten kommer till onkologen inom ett par veckor och behandlingen kan ofta starta veckan därpå.",
+   "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "title": "Litenheten är ibland en fördel - Allt om cancer",
+   "relates_to": "time_to_treatment",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:38:53+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025",
+   "what_en": "Tyks, the university hospital for the area, reports an average of 9 days from referral to first contact for suspected lung cancer in January–June 2025, down from 13 days.",
+   "what_fi": "Tyks raportoi keuhkosyöpäepäilyn lähetteestä ensimmäiseen hoitokontaktiin keskimäärin 9 päivää tammi–kesäkuussa 2025, kun aiemmin aika oli 13 päivää.",
+   "quote": "2025 tammikuu–kesäkuu | 9 päivää",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "relates_to": "time_to_treatment",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025",
+   "what_en": "At Tyks, when chemotherapy is the first lung cancer treatment, it started on average 35 days after referral in January–June 2025.",
+   "what_fi": "Tyksissä solusalpaajahoito ensimmäisenä keuhkosyövän hoitona alkoi tammi–kesäkuussa 2025 keskimäärin 35 päivää lähetteen saapumisesta.",
+   "quote": "## Ensimmäinen hoito on solusalpaajahoito (lähetteen saapumisesta kulunut aika)\n\nJakso | Hoitoonpääsyaika (keskimääräinen)\n2025 tammikuu–kesäkuu | 35 päivää",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "relates_to": "drug_therapy",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  }
+ ],
+ "summary_en": "I found six findings from two pages, and none of them is an ÅHS decision or plan. The newest are 2025 waiting times from Tyks, the university hospital in Turku: 9 days on average from a lung cancer referral to the first contact, and 35 days until chemotherapy when that is the first treatment. Tyks also handles lung cancer diagnosis centrally, and a 2025 magazine article says ÅHS in Åland gives drug treatments locally (chemotherapy, immunotherapy), sends patients to Turku for radiotherapy and PET scans, has one cancer nurse, and that the local cancer society kept the Turku flights running until the end of February 2025.",
+ "not_found_en": "I only searched the ÅHS site in general terms, with no searches for decisions, so I found no ÅHS decisions, projects or investments for lung cancer, nor any ÅHS work on screening, molecular testing, a joint video team meeting with Tyks, or a quit-smoking programme at diagnosis; this does not show that none exist.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway with Tyks; travel/treatment location; Finnish angle",
+   "ms": 4362
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "ÅHS lungcancer",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: docrates.mehilainen.fi, tyks.fi, cancerfonden.se, alltomcancer.fi",
+   "ms": 2133,
+   "results": [
+    {
+     "url": "https://docrates.mehilainen.fi/sv/cancerformer/lungcancer/",
+     "title": "Lungcancer - symptom, diagnostik och behandling - Docrates"
+    },
+    {
+     "url": "https://www.tyks.fi/sv/behandlingar-och-undersokningar/lungcancer",
+     "title": "Lungcancer | ÅUCS"
+    },
+    {
+     "url": "https://www.cancerfonden.se/om-cancer/cancersjukdomar/lungcancer",
+     "title": "Lungcancer – Symtom, orsaker och behandling | Cancerfonden"
+    },
+    {
+     "url": "https://alltomcancer.fi/information-om-cancer/cancersjukdomar/lungcancer/",
+     "title": "Lungcancer - Allt om cancer"
+    },
+    {
+     "url": "https://www.hus.fi/sv/patienten/behandlingar-och-undersokningar/cancer/vardvag-lungcancer",
+     "title": "Vårdväg för lungcancer | HUS"
+    },
+    {
+     "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+     "title": "Litenheten är ibland en fördel - Allt om cancer"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ålands centralsjukhus cancer vårdkedja Åbo",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway with Tyks",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: ahs.ax, alltomcancer.fi, suomi.fi, tyks.fi",
+   "ms": 1722,
+   "results": [
+    {
+     "url": "https://www.ahs.ax/",
+     "title": "Välkommen till ÅHS | Ålands hälso- och sjukvård"
+    },
+    {
+     "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+     "title": "Litenheten är ibland en fördel - Allt om cancer"
+    },
+    {
+     "url": "https://www.suomi.fi/service/behandling-av-cancersjukdomar-aucs-abo-universitetscentralsjukhus-aucs/93fa4c56-54fa-48d0-b5e4-f78ae7213df3",
+     "title": "Behandling av cancersjukdomar, ÅUCS - Åbo universitetscentralsjukhus (ÅUCS) - Suomi.fi"
+    },
+    {
+     "url": "https://www.tyks.fi/sv",
+     "title": "Framsida | ÅUCS"
+    },
+    {
+     "url": "https://www.suomi.fi/organisation/abo-universitetscentralsjukhus-aucs/7c8ea991-dae8-4623-975f-c4ad08d504ff",
+     "title": "Åbo universitetscentralsjukhus (ÅUCS) - Suomi.fi"
+    },
+    {
+     "url": "https://www.tyks.fi/sv/behandlingar-och-undersokningar/prostatacancer",
+     "title": "Prostatacancer | ÅUCS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "ÅHS strålbehandling cancer Åbo resor",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "travel/treatment location",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: tyks.fi, hus.fi, alltomcancer.fi, ahs.ax",
+   "ms": 2682,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/sv/patienter-och-anhoriga/sjukhus-och-enheter/aucs-t-sjukhuset/stralbehandlingspolikliniken",
+     "title": "Strålbehandlingspolikliniken | ÅUCS"
+    },
+    {
+     "url": "https://www.hus.fi/sv/patienten/behandlingar-och-undersokningar/stralbehandling",
+     "title": "Strålbehandling | HUS"
+    },
+    {
+     "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+     "title": "Litenheten är ibland en fördel - Allt om cancer"
+    },
+    {
+     "url": "https://www.ahs.ax/patienter/transportkansliet",
+     "title": "Transportkansliet | Ålands hälso"
+    },
+    {
+     "url": "https://www.cancer.ax/hjalpmedel",
+     "title": "Hjälpmedel | Cancer.ax"
+    },
+    {
+     "url": "https://yle.fi/a/7-10059713",
+     "title": "Nytt sätt att behandla prostatacancer har gett lovande resultat vid Åbo universitetscentralsjukhus | Åboland | Svenska Yle"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ahvenanmaa keuhkosyöpä hoito Tyks",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Finnish angle",
+   "status": "done",
+   "t_s": 4.4,
+   "result_en": "6 results: tyks.fi",
+   "ms": 2045,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhko-ja-reumasairauksien-osasto",
+     "title": "Keuhko- ja reumasairauksien osasto | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/tulosryhmat/operatiivisten-alojen-tulosryhma/tyks-syopaklinikka-ja-paakeskus",
+     "title": "Tyks Syöpäklinikka ja Pääkeskus | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "3 reads: Åland cancer care organisation; waiting time figures; pathway",
+   "ms": 4888
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "focus": "ÅHS strålbehandling Åbo flyg cancersjukskötare",
+   "why": "Åland cancer care organisation",
+   "status": "done",
+   "t_s": 11.9,
+   "result_en": "\"Litenheten är ibland en fördel - Allt om cancer\" · 5 415 chars · 8 of 9 passages kept",
+   "ms": 3361,
+   "title": "Litenheten är ibland en fördel - Allt om cancer",
+   "chars": 5415,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "published": "2025-04-23T08:30:02+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "focus": "hoitoonpääsyajat päivää prosenttia",
+   "why": "waiting time figures",
+   "status": "done",
+   "t_s": 11.9,
+   "result_en": "\"Keuhkosyövän hoitoonpääsyajat\" · 806 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/sv/behandlingar-och-undersokningar/lungcancer",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/sv/behandlingar-och-undersokningar/lungcancer",
+   "focus": "Åland lungpoliklinik diagnostik",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 11.9,
+   "result_en": "\"Lungcancer\" · 3 182 chars",
+   "ms": 4029,
+   "title": "Lungcancer",
+   "chars": 3182,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/sv/behandlingar-och-undersokningar/lungcancer",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.0,
+   "result_en": "writes the answer",
+   "ms": 21402
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:30:13+00:00"
+  },
+  {
+   "url": "https://alltomcancer.fi/digitidning/litenheten-ar-ibland-en-fordel/",
+   "title": "Litenheten är ibland en fördel - Allt om cancer",
+   "chars": 5415,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:38:53+00:00"
+  },
+  {
+   "url": "https://www.tyks.fi/sv/behandlingar-och-undersokningar/lungcancer",
+   "title": "Lungcancer",
+   "chars": 3182,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:38:53+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:39:15+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 37.4
+}

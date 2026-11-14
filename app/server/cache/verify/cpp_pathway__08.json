@@ -1,0 +1,529 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Pirkanmaa wellbeing services county (or in the Tays university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Standardised lung cancer pathway with booked slots. A lung cancer pathway on the Danish/Swedish/Norwegian model: fixed referral criteria, pre-booked CT, PET-CT, bronchoscopy and MDT slots, a named pathway owner, and published time limits for each step.",
+ "area_id": "08",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "A single-region Italian study (Life 2025) found a fast-track pathway with pre-booked slots cut the average time to diagnosis by about 18 days (42.9 to 25.0).",
+ "not_supported_en": "None of the pages I read measures days saved from first symptom to treatment in a Nordic or Finnish setting.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Tutkimukset aloitetaan yleensä keuhkojen ja ylävatsan tietokonekerroskuvauksella, joka suoritetaan useimmiten viikon sisällä lähetteen käsittelystä.",
+ "in_use_source": {
+  "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+  "title": "Lähete TULOSTA YHTEYSTIEDOT",
+  "published": "2019-03-11",
+  "fetched_at": "2026-11-14T01:16:37+00:00"
+ },
+ "in_use_summary_en": "",
+ "missing_en": "No page shows published time limits for each step, pre-booked PET-CT, bronchoscopy or specialist team meeting slots, a named pathway owner, or monitoring against time limits.",
+ "summary_en": "I found part of this measure already in place at Tays. Pirha's patient pathway for Tays lung cancer care says that urgent referrals are usually handled within 1–2 working days. A nurse books the tests, CT is usually done within a week, and the results appointment is booked before the CT. On the effect, an Italian fast-track study (Life 2025) used pre-booked test slots, a case manager and weekly specialist team meetings. It cut the average time to diagnosis from 42.9 to 25.0 days, about 18 days. That is time to diagnosis, not from first symptom to treatment.",
+ "unanswered_en": "I found no Nordic study of days saved from first symptom to treatment, and I did not check whether the Filha national guideline sets time limits for each step.",
+ "sources": [
+  {
+   "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "quote": "Tutkimukset aloitetaan yleensä keuhkojen ja ylävatsan tietokonekerroskuvauksella, joka suoritetaan useimmiten viikon sisällä lähetteen käsittelystä.",
+   "about": "in_use",
+   "published": "2019-03-11",
+   "fetched_at": "2026-11-14T01:16:37+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "quote": "Sairaanhoitaja varaa tutkimukset ja lähettää sinulle kutsukirjeen. Lähete käsitellään yleensä 1–2 arkipäivän sisällä saapumisesta.",
+   "about": "in_use",
+   "published": "2019-03-11",
+   "fetched_at": "2026-11-14T01:16:37+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "quote": "Aika keuhkosairauksien poliklinikalle tulosten kuulemiseen varataan yleensä jo ennen tietokonekerroskuvausta.",
+   "about": "in_use",
+   "published": "2019-03-11",
+   "fetched_at": "2026-11-14T01:16:37+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11944219/",
+   "title": "Optimizing Lung Cancer Diagnostics: Insights from a Fast-Track Program in a Complex Healthcare Setting †",
+   "quote": "Results showed a significant reduction in the mean time to definitive diagnosis from 42.9 days (95% CI: 35.6–50.3) in the control group to 25.0 days (95% CI: 20.8–29.3) in the Fast-Track cohort",
+   "about": "effect",
+   "published": "2025",
+   "fetched_at": "2026-11-14T01:17:03+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+   "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha",
+   "quote": "Osana ohjelmaa on julkaistu keuhkosyövän diagnostiikkaohje terveydenhuollon ammattilaisille. Ohjeen tavoitteena on yhdenmukaistaa ja tehostaa keuhkosyövän diagnostiikkaa.",
+   "about": "context",
+   "published": "2026-11-12T15:30:12+00:00",
+   "fetched_at": "2026-11-14T01:01:45+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi, tays.fi",
+   "ms": 2040,
+   "results": [
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/d/kehitysversio/keuhkosyopapotilaan-hoitopolku",
+     "title": "[PDF] Keuhkosyöpäpotilaan hoitopolku"
+    },
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://tays.fi/fi-FI/Palvelut/Syovanhoito/Keuhkosyopa/Keuhkosyopapotilaan_hoitopolku(75898)",
+     "title": "Sairaalat - Tays - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/toimipisteet/toimipistehakemisto/keuhkosairauksien-poliklinikka-tays-keskussairaala",
+     "title": "Keuhkosairauksien poliklinikka, Tays Keskussairaala - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirha keuhkosyövän hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pirha.fi",
+   "ms": 1728,
+   "results": [
+    {
+     "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+     "title": "Lähete TULOSTA YHTEYSTIEDOT AMMATTILAISET TUKENASI VERTAISTUKI POTILASOPPAAT"
+    },
+    {
+     "url": "https://pirha.fi/fi/palvelut/sairaalat-tays/syopa/syopasairaudet/keuhkosyopa",
+     "title": "Keuhkosyöpä - pirha.fi"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut",
+     "title": "Hoito- ja palvelupolut - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/hoitopolut",
+     "title": "Hoitopolut - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/asiakkaalle/hoitopolut",
+     "title": "Hoitopolut - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+     "title": "Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tays keuhkosyövän hoitoketju",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syovanhoitokeskus.pshyvinvointialue.fi, pirha.fi, tyks.fi",
+   "ms": 2221,
+   "results": [
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.pirha.fi/web/hoito-ja-palveluketjut/rintasyopapotilaan-hoitoketju",
+     "title": "Rintasyöpäpotilaan hoitoketju - Hoito- ja palveluketjut -..."
+    },
+    {
+     "url": "https://www.pirha.fi/toimipisteet/toimipistehakemisto/keuhko-ja-ihosairauksien-vuodeosasto-tays-keskussairaala",
+     "title": "Keuhko- ja ihosairauksien vuodeosasto, Tays Keskussairaala"
+    },
+    {
+     "url": "https://www.tyks.fi/ammattilaiselle/hoitoketjut",
+     "title": "Hoitoketjut - TYKS"
+    },
+    {
+     "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+     "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pirkanmaan hoitoonpääsy määräajat keuhkosyöpä keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, suomi.fi, pirha.fi",
+   "ms": 2962,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairauksien-hoito-pirkanmaan-hyvinvointialue/fcb2820f-a8c7-4b3d-949e-05239d4a5f49",
+     "title": "Keuhkosairauksien hoito - Pirkanmaan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    },
+    {
+     "url": "https://www.pirha.fi/asiakkaalle/hoitoon-paasy-ja-odotusajat",
+     "title": "Hoitoon pääsy ja odotusajat - pirha.fi"
+    },
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste - Terveyskylä.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.0,
+   "result_en": "3 reads: B: pathway time limits; B: referral criteria; B: national programme planned",
+   "ms": 6727
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "focus": "kiireellisesti viikon kuluessa tietokonetomografia bronkoskopia hoitoneuvottelu",
+   "why": "B: pathway time limits",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Lähete TULOSTA YHTEYSTIEDOT\" · 52 461 chars · PDF 50 p. · 5 of 67 passages kept",
+   "ms": 10170,
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "chars": 52461,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "published": "2019-03-11",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "focus": "lähete kriteerit kiireellinen aika",
+   "why": "B: referral criteria",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi\" · 2 340 chars",
+   "ms": 10099,
+   "title": "Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi",
+   "chars": 2340,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "published": "7.8.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+   "focus": "hoitopolku viive tavoite sairaalat",
+   "why": "B: national programme planned",
+   "status": "done",
+   "t_s": 9.7,
+   "result_en": "\"Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha\" · 5 425 chars · 6 of 8 passages kept · from cache",
+   "ms": 7,
+   "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha",
+   "chars": 5425,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+   "published": "2026-11-12T15:30:12+00:00",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 19.9,
+   "result_en": "draft answer, still open: question A: no page read so far reports on the effect.",
+   "ms": 14336
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.2,
+   "result_en": "1 search: A: days saved by pathway",
+   "ms": 2586
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "lung cancer fast-track pathway time to treatment days reduction",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "A: days saved by pathway",
+   "status": "done",
+   "t_s": 36.8,
+   "result_en": "6 results: mdpi.com, rmpartners.nhs.uk, doi.org",
+   "ms": 1565,
+   "results": [
+    {
+     "url": "https://www.mdpi.com/2077-0383/14/9/2915",
+     "title": "Fast-Track Diagnostic Pathway for Lung Cancer Detection: Single-Center Experience"
+    },
+    {
+     "url": "https://rmpartners.nhs.uk/wp-content/uploads/2024/09/national-optimal-lung-cancer-pathway_v4_01jan2024.pdf",
+     "title": "National Optimal Lung Cancer Pathway (NOLCP)"
+    },
+    {
+     "url": "https://rmpartners.nhs.uk/wp-content/uploads/2023/07/National-Optimal-Lung-Cancer-Pathway-3.0-1.pdf",
+     "title": "National Optimal Lung Cancer Pathway"
+    },
+    {
+     "url": "https://doi.org/10.1177/15533506251375786",
+     "title": "Fast Track Pathway for Lung Cancer: The Integration of ION Robotic-Assisted Bronchoscopy With Robotic Thoracic Surgical Resection - Juliana Guarize, Luca Bertolaccini, Lorenzo Spaggiari, 2026"
+    },
+    {
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11944219/",
+     "title": "Optimizing Lung Cancer Diagnostics: Insights from a Fast-Track Program in a Complex Healthcare Setting - PMC"
+    },
+    {
+     "url": "https://www.sciencedirect.com/science/article/pii/S016950022400401X",
+     "title": "Analyzing diagnostic and treatment wait times for lung cancer..."
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 38.4,
+   "result_en": "2 reads: A: days saved",
+   "ms": 4084
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11944219/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11944219/",
+   "focus": "reduction mean time to definitive diagnosis days treatment",
+   "why": "A: days saved",
+   "status": "done",
+   "t_s": 42.4,
+   "result_en": "\"Optimizing Lung Cancer Diagnostics: Insights from a Fast-Track Program\" · 34 260 chars · 4 of 46 passages kept",
+   "ms": 4135,
+   "title": "Optimizing Lung Cancer Diagnostics: Insights from a Fast-Track Program in a Complex Healthcare Setting †",
+   "chars": 34260,
+   "from_cache": false,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11944219/",
+   "published": "2025",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.mdpi.com/2077-0383/14/9/2915",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.mdpi.com/2077-0383/14/9/2915",
+   "focus": "fast-track days time to treatment",
+   "why": "A: days saved",
+   "status": "done",
+   "t_s": 42.4,
+   "result_en": "no answer in 16 s; skipped",
+   "ms": 16560,
+   "error": true,
+   "timeout": true
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 59.0,
+   "result_en": "writes the answer",
+   "ms": 13729
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://www.filha.fi/valtakunnallinen-keuhkosyopaohjelma/",
+   "title": "Valtakunnallinen Keuhkosyöpäohjelma 2026-2035 - Filha",
+   "chars": 5425,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:01:45+00:00",
+   "published": "2026-11-12T15:30:12+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/keuhkosyovan-laheteohjeet-ja-konsultaatiot",
+   "title": "Keuhkosyövän läheteohjeet ja konsultaatiot - pirha.fi",
+   "chars": 2340,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:16:37+00:00",
+   "published": "7.8.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.pirha.fi/documents/2739855/3352120/Keuhkosyopapotilaan+hoitopolku.pdf/dfb72ff6-21b0-84ca-1c33-59b4fbd2263b?version=1.0&t=1697694864580",
+   "title": "Lähete TULOSTA YHTEYSTIEDOT",
+   "chars": 52461,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:16:37+00:00",
+   "published": "2019-03-11",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11944219/",
+   "title": "Optimizing Lung Cancer Diagnostics: Insights from a Fast-Track Program in a Complex Healthcare Setting †",
+   "chars": 34260,
+   "kind": "article",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:17:03+00:00",
+   "published": "2025",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:17:30+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to published time limits for each step, guaranteed PET-CT, bronchoscopy and MDT slots, a named pathway owner and time-stamp monitoring, because Pirha's Tays pathway already handles referrals quickly, has nurses book the tests and usually does CT within a week.",
+ "seconds": 72.7,
+ "searched_en": "Searched 5 queries (\"Tays keuhkosyöpäpotilaan hoitopolku\"; \"Pirha keuhkosyövän hoitopolku\"; \"Tays keuhkosyövän hoitoketju\"; \"Pirkanmaan hoitoonpääsy määräajat keuhkosyöpä keuhkosyöpä\", ...) and read 4 pages on pirha.fi, filha.fi, pmc.ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tays keuhkosyöpäpotilaan hoitopolku",
+  "Pirha keuhkosyövän hoitopolku",
+  "Tays keuhkosyövän hoitoketju",
+  "Pirkanmaan hoitoonpääsy määräajat keuhkosyöpä keuhkosyöpä",
+  "lung cancer fast-track pathway time to treatment days reduction"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 1,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 1
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to published time limits for each step, guaranteed PET-CT, bronchoscopy and MDT slots, a named pathway owner and time-stamp monitoring, because Pirha's Tays pathway already handles referrals quickly, has nurses book the tests and usually does CT within a week.",
+ "verdict_en": "Partly in place in Pirkanmaa. Missing: No page shows published time limits for each step, pre-booked PET-CT, bronchoscopy or specialist team meeting slots, a named pathway owner, or monitoring against time limits. Evidence supports that it works, but not the size of effect we assume. Supported: A single-region Italian study (Life 2025) found a fast-track pathway with pre-booked slots cut the average time to diagnosis by about 18 days (42.9 to 25.0). Not supported: None of the pages I read measures days saved from first symptom to treatment in a Nordic or Finnish setting.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "cpp_pathway",
+ "intervention_name_en": "Standardised lung cancer pathway with booked slots",
+ "area_name_en": "Pirkanmaa wellbeing services county"
+}

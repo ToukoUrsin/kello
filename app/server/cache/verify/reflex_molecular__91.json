@@ -1,0 +1,544 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Åland (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Reflex molecular testing ordered by pathology. The pathologist starts the biomarker panel (EGFR, ALK, ROS1, PD-L1, NGS) as soon as non-small cell lung cancer is seen, without waiting for the oncologist to order it. The result now decides treatment at every stage: osimertinib or alectinib after surgery, durvalumab or osimertinib after chemoradiotherapy in stage III, and the first drug in advanced disease.",
+ "area_id": "91",
+ "verdict": "not_found",
+ "effect_check": "not_found",
+ "effect_summary_en": "No page I read measured the effect; the assumed 7 days (range 0–14) is still unchecked.",
+ "supported_en": "",
+ "not_supported_en": "No page I read shows that automatic testing saves 7 days (range 0–14).",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "I found no public sign of automatic testing ordered by pathology at ÅHS or Tyks.",
+ "missing_en": "",
+ "summary_en": "I found no public sign that this runs in Åland (ÅHS) or at Tyks. Tyks says its pathologist checks the tumour sample for gene changes and that results usually take 2–4 weeks; Tyks also runs a cancer molecular genetics lab. I read no page that measures how many days automatic testing saves.",
+ "unanswered_en": "I found no Tyks, Varha or ÅHS page saying whether gene testing starts automatically, and I did not read the US study behind the assumed 7-day effect, so that number is still unchecked.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Mahdollisen geenivirheen olemassaolon selvittää patologi sinulta otetusta kasvaimen näytteestä tai joissain tapauksissa verinäytteestä.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Tulosten valmistuminen kestää yleensä 2–4 viikkoa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-kantasairaalan-alue/molekyylihematologian-ja-patologian-laboratorio",
+   "title": "Molekyylihematologian ja -patologian laboratorio",
+   "quote": "Laboratorio on erikoistunut pahanlaatuisten veritautien sekä syöpätautien molekyyligeneettisiin tutkimuksiin.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:30:44+00:00",
+   "from_cache": false
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, hyvaks.fi",
+   "ms": 1368,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "ÅHS refleksitestaus keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: suomenseniorihoiva.fi, mtvuutiset.fi, kaikkisyovasta.fi, hus.fi",
+   "ms": 1534,
+   "results": [
+    {
+     "url": "https://suomenseniorihoiva.fi/tietopankki/ikaantyneiden-sairaudet/keuhkosyopa-oireet/",
+     "title": "Keuhkosyövän oireet ja ensioireet - Tunnista ajoissa | Suomen Seniorihoiva"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/helppo-sormitesti-voi-paljastaa-keuhkosyovan-loytyyko-kynsiesi-valista-timantti/7637780",
+     "title": "Helppo sormitesti voi paljastaa keuhkosyövän – löytyykö kynsiesi välistä \"timantti\"? | MTV Uutiset"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/keuhkosyovan-diagnosointi/",
+     "title": "Keuhkosyöpädiagnoosi ja kuvantamistutkimukset"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo15505",
+     "title": "Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks NGS keuhkosyöpä patologia",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, terveyskirjasto.fi",
+   "ms": 2105,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554989/Keuhkosy_v_n_molekyylipatologinen.pdf",
+     "title": "593 Duodecim 2016;132:593–9 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Ålands centralsjukhus molekyylipatologia EGFR ALK",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lakartidningen.se, akademiska.se, tuhat.helsinki.fi, 1587791.169.directo.fi",
+   "ms": 1632,
+   "results": [
+    {
+     "url": "https://lakartidningen.se/klinik-och-vetenskap-1/artiklar-1/temaartikel/2021/05/molekylar-patologi-nyckeln-till-malinriktad-cancerbehandling",
+     "title": "Molekylär patologi – nyckeln till målinriktad cancerbehandling – Läkartidningen"
+    },
+    {
+     "url": "https://www.akademiska.se/for-vardgivare/sektioner/klinisk-patologi/laboratorier/molekylar-patologi/",
+     "title": "Molekylär patologi | Akademiska"
+    },
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554989/Keuhkosy_v_n_molekyylipatologinen.pdf",
+     "title": "593 Duodecim 2016;132:593–9 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    },
+    {
+     "url": "https://1587791.169.directo.fi/@Bin/ca44cc4be61a4d44fb75009fd0f23cfa/1791884992/application/pdf/173596/Jussi%20Koivunen%20-%20Molekyylidiagnostiikka%20keuhkosy%c3%b6v%c3%a4n%20hoidossa.pdf",
+     "title": "Molekyylidiagnostiikka keuhkosyövän hoidossa Jussi Koivunen, el, dos."
+    },
+    {
+     "url": "https://algoldiagnostics.fi/tuoteryhmat/idylla-molekyylipatologia/",
+     "title": "Idylla™-molekyylipatologia Archives - Algol DiagnosticsAlgol Diagnostics"
+    },
+    {
+     "url": "https://algoldiagnostics.fi/tuoteryhmat/",
+     "title": "Tuoteryhmät Archives - Algol DiagnosticsAlgol Diagnostics"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.1,
+   "result_en": "2 reads: B: Tyks pathway reflex testing; B context times",
+   "ms": 5944
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "patologi molekyyli EGFR ALK PD-L1 geenitutkimus näyte",
+   "why": "B: Tyks pathway reflex testing",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "focus": "päivää hoidon aloitus diagnoosi",
+   "why": "B context times",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "\"Keuhkosyövän hoitoonpääsyajat\" · 806 chars",
+   "ms": 2450,
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 10.5,
+   "result_en": "1 search: B: reflex testing at Tyks pathology",
+   "ms": 3553
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "refleksitestaus keuhkosyöpä patologi EGFR Varha",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: reflex testing at Tyks pathology",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "6 results: terveytta.net, parempaaelamaa.fi, tuhat.helsinki.fi, aidiagme.com",
+   "ms": 2979,
+   "results": [
+    {
+     "url": "https://terveytta.net/mika-on-egfr-mutaatio-keuhkosyovassa-usein-kysyttyihin-kysymyksiin-vastattu",
+     "title": "Mikä on EGFR-mutaatio keuhkosyövässä? Usein kysyttyihin kysymyksiin vastattu - Terveyttä"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/keuhkosyovan-diagnosointi/",
+     "title": "Keuhkosyöpädiagnoosi ja kuvantamistutkimukset"
+    },
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554989/Keuhkosy_v_n_molekyylipatologinen.pdf",
+     "title": "593 Duodecim 2016;132:593–9 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    },
+    {
+     "url": "https://aidiagme.com/fi/pathologies-and-diseases/lung-cancer/",
+     "title": "Keuhkosyöpä: oireet, diagnoosi ja hoito - AI DiagMe"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10588",
+     "title": "Keuhkosyöpien tarkentuva diagnostiikka"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo15505",
+     "title": "Keuhkosyöpä"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.0,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in ÅHS / Ålands centralsjukhus / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 12163
+  },
+  {
+   "step": 11,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.2,
+   "result_en": "1 search: B: reflex testing at Tyks pathology",
+   "ms": 2886
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks patologia molekyylipatologia keuhkosyöpä NGS automaattisesti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: reflex testing at Tyks pathology",
+   "status": "done",
+   "t_s": 32.1,
+   "result_en": "6 results: tuhat.helsinki.fi, tyks.fi, duodecimlehti.fi",
+   "ms": 1992,
+   "results": [
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554989/Keuhkosy_v_n_molekyylipatologinen.pdf",
+     "title": "593 Duodecim 2016;132:593–9 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-kantasairaalan-alue/molekyylihematologian-ja-patologian-laboratorio",
+     "title": "Molekyylihematologian ja -patologian laboratorio | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/xmedia/duo/duo16298.pdf",
+     "title": "Molekyylipatologia osana syöpäpotilaan hoitoa"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10588",
+     "title": "Keuhkosyöpien tarkentuva diagnostiikka"
+    },
+    {
+     "url": "https://www.tyks.fi/ammattilaiselle/molekyylipatologia",
+     "title": "Molekyylipatologia | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 34.1,
+   "result_en": "2 reads: B: reflex testing at Tyks; B",
+   "ms": 4432
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/ammattilaiselle/molekyylipatologia",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/ammattilaiselle/molekyylipatologia",
+   "focus": "keuhkosyöpä EGFR ALK NGS refleksi patologi pyyntö",
+   "why": "B: reflex testing at Tyks",
+   "status": "done",
+   "t_s": 38.5,
+   "result_en": "\"Molekyylipatologia\" · 1 097 chars",
+   "ms": 12756,
+   "title": "Molekyylipatologia",
+   "chars": 1097,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/ammattilaiselle/molekyylipatologia",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-kantasairaalan-alue/molekyylihematologian-ja-patologian-laboratorio",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-kantasairaalan-alue/molekyylihematologian-ja-patologian-laboratorio",
+   "focus": "keuhkosyöpä NGS patologi pyynnöstä",
+   "why": "B",
+   "status": "done",
+   "t_s": 38.5,
+   "result_en": "\"Molekyylihematologian ja -patologian laboratorio\" · 1 122 chars",
+   "ms": 2876,
+   "title": "Molekyylihematologian ja -patologian laboratorio",
+   "chars": 1122,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-kantasairaalan-alue/molekyylihematologian-ja-patologian-laboratorio",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 51.3,
+   "result_en": "writes the answer",
+   "ms": 9968
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-kantasairaalan-alue/molekyylihematologian-ja-patologian-laboratorio",
+   "title": "Molekyylihematologian ja -patologian laboratorio",
+   "chars": 1122,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:30:44+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/ammattilaiselle/molekyylipatologia",
+   "title": "Molekyylipatologia",
+   "chars": 1097,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:30:53+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:31:03+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line. Tyks has a molecular pathology lab and says the pathologist checks for gene changes, but no page I read says the lung cancer test panel starts automatically, without an order from the treating doctor.",
+ "seconds": 61.3,
+ "searched_en": "Searched 6 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"ÅHS refleksitestaus keuhkosyöpä\"; \"Tyks NGS keuhkosyöpä patologia\"; \"Ålands centralsjukhus molekyylipatologia EGFR ALK\", ...) and read 4 pages on tyks.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "ÅHS refleksitestaus keuhkosyöpä",
+  "Tyks NGS keuhkosyöpä patologia",
+  "Ålands centralsjukhus molekyylipatologia EGFR ALK",
+  "refleksitestaus keuhkosyöpä patologi EGFR Varha",
+  "Tyks patologia molekyylipatologia keuhkosyöpä NGS automaattisesti"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 1
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line. Tyks has a molecular pathology lab and says the pathologist checks for gene changes, but no page I read says the lung cancer test panel starts automatically, without an order from the treating doctor.",
+ "verdict_en": "No public sign that it is running in Åland. No page read in this check reports the size of the effect.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Nothing found on the effect",
+ "intervention_id": "reflex_molecular",
+ "intervention_name_en": "Reflex molecular testing ordered by pathology",
+ "area_name_en": "Åland"
+}

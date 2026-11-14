@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Same-day chest X-ray report with immediate CT. A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+ "area_id": "06",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "In the radioX randomised trial (Thorax 2023), immediate reporting of chest X-rays cut the median time from X-ray to lung cancer diagnosis from 63 to 32 days (p=0.03), a saving of 31 days.",
+ "supported_en": "A randomised trial published in Thorax in 2023 found that immediate reporting halved the median time to diagnosis, from 63 to 32 days.",
+ "not_supported_en": "The trial is from London, includes only 49 cancers and reports no confidence interval, and nothing shows how many days Satakunta's existing direct-CT pathway already saves.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Keskeinen uudistus on se, että keuhkosyöpää epäiltäessä potilas voidaan lähettää keuhkojen tietokonetomografiaan eli TT-kuvaukseen suoraan perusterveydenhuollosta.",
+ "in_use_source": {
+  "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+  "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+  "published": "2026-11-11T10:16:00.000+0",
+  "fetched_at": "2026-11-14T01:43:43+00:00"
+ },
+ "in_use_summary_en": "Satakunta's pathway lets primary care send patients with suspected lung cancer straight to CT without a specialist review first; it began as a pilot in 2022 and became standard practice in 2024 (Satakunnan Kansa, 11 Nov 2026).",
+ "missing_en": "No page shows that chest X-rays are reported while the patient waits, or that radiology triggers a same-day CT.",
+ "summary_en": "Satakunnan Kansa reports that since 2024 primary care in Satakunta can send patients with suspected lung cancer straight to CT without a specialist review first; about 170 patients have been scanned this way. No page shows chest X-rays being reported while the patient waits. A 2023 randomised trial in Thorax found that immediate X-ray reporting cut the median time to diagnosis from 63 to 32 days.",
+ "unanswered_en": "I found no page on whether Satakunta or Tyks report primary-care chest X-rays the same day, and the newspaper article is not the county's own page.",
+ "sources": [
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "quote": "Keskeinen uudistus on se, että keuhkosyöpää epäiltäessä potilas voidaan lähettää keuhkojen tietokonetomografiaan eli TT-kuvaukseen suoraan perusterveydenhuollosta.",
+   "about": "in_use",
+   "published": "2026-11-11T10:16:00.000+0",
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "quote": "Vuonna 2022 pilottina alkanut toimintamalli vakiintui käyttöön vuonna 2024.",
+   "about": "in_use",
+   "published": "2026-11-11T10:16:00.000+0",
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+   "about": "effect",
+   "published": "2023",
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, hyvaks.fi",
+   "ms": 1500,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopapoliklinikka",
+     "title": "Syöpäpoliklinikka | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue keuhkokuva lausunto samana päivänä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 1149,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/kuvantaminen/",
+     "title": "Kuvantaminen - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-satakunnan-hyvinvointialue/472cf083-5ce3-4379-ac60-e72843536301",
+     "title": "Keuhkosairaudet - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://api.hankeikkuna.fi/asiakirjat/31c89e55-c10a-4a08-b8db-2cc485caf795/4d51d200-5bf7-49e7-8d56-abd175d0238d/LAUSUNTO_20250617175048.PDF",
+     "title": "Lausuntopalvelu.fi 1/6 Satakunnan hyvinvointialue Lausunto 16.06.2025"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks thorax-röntgen päivystyslausunto",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1796,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/tg2-paivystysrontgen",
+     "title": "TG2-päivystysröntgen | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/rontgenkuvaukset",
+     "title": "Röntgenkuvaukset | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-orto-kirurginen-sairaala/kirurgisen-sairaalan-rontgen-tks-rontgen",
+     "title": "Kirurgisen sairaalan röntgen, TKS-röntgen | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/tc2-rontgen",
+     "title": "TC2-röntgen | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/yhteispaivystys-tyks-akuutti",
+     "title": "Yhteispäivystys, Tyks Akuutti - Varha"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-majakkasairaala/majakkasairaala-rontgen",
+     "title": "Majakkasairaala röntgen | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala keuhkokuvan jälkeen suoraan TT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, duodecimlehti.fi, satakunnankansa.fi",
+   "ms": 2271,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/kuvantaminen/",
+     "title": "Kuvantaminen - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo13979",
+     "title": "Keuhkojen ja rintakehän erittäin pieni-annoksisen TT:n käyttöaiheet ja mahdollisuudet"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92960",
+     "title": "Keuhkosairauksien uusia kuvantamisstrategioita"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/nak06406",
+     "title": "Keuhkokuvan osuvuus keuhkokuumeen diagnosoinnissa, referenssinä keuhkojen TT-tutkimus"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.3,
+   "result_en": "2 reads: B: Sata new lung cancer pathway; A: effect size",
+   "ms": 3815
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "focus": "keuhkokuva TT suoraan perusterveydenhuollosta lausunto samana päivänä",
+   "why": "B: Sata new lung cancer pathway",
+   "status": "done",
+   "t_s": 6.1,
+   "result_en": "\"Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löyt\" · 2 090 chars · from cache",
+   "ms": 0,
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "focus": "median days diagnosis immediate reporting",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 6.1,
+   "result_en": "\"Impact of radiographer immediate reporting of X-rays of the chest from\" · 20 833 chars · 6 of 36 passages kept · from cache",
+   "ms": 5,
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "published": "2023",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.1,
+   "result_en": "writes the answer",
+   "ms": 11153
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+   "title": "Sairauden hoito | Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu",
+   "chars": 2090,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:43:43+00:00",
+   "published": "2026-11-11T10:16:00.000+0",
+   "js_render": false
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "title": "Impact of radiographer immediate reporting of X-rays of the chest from general practice on the lung cancer pathway (radioX): a randomised controlled trial",
+   "chars": 20833,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:54:38+00:00",
+   "published": "2023",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:44:24+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to same-day reporting of chest X-rays only, and first ask Satakunnan hyvinvointialue's imaging unit how its direct-CT pathway works, because primary care in Satakunta can already send suspected lung cancer patients straight to CT, so part of the 31 days may already be saved.",
+ "seconds": 17.3,
+ "searched_en": "Searched 4 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue keuhkokuva lausunto samana päivänä\"; \"Tyks thorax-röntgen päivystyslausunto\"; \"Satasairaala keuhkokuvan jälkeen suoraan TT\") and read 2 pages on satakunnankansa.fi, ncbi.nlm.nih.gov.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue keuhkokuva lausunto samana päivänä",
+  "Tyks thorax-röntgen päivystyslausunto",
+  "Satasairaala keuhkokuvan jälkeen suoraan TT"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to same-day reporting of chest X-rays only, and first ask Satakunnan hyvinvointialue's imaging unit how its direct-CT pathway works, because primary care in Satakunta can already send suspected lung cancer patients straight to CT, so part of the 31 days may already be saved.",
+ "verdict_en": "Partly in place in Satakunta. Missing: No page shows that chest X-rays are reported while the patient waits, or that radiology triggers a same-day CT. Recent evidence supports the size of effect we assume. A randomised trial published in Thorax in 2023 found that immediate reporting halved the median time to diagnosis, from 63 to 32 days.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "same_day_cxr_ct",
+ "intervention_name_en": "Same-day chest X-ray report with immediate CT",
+ "area_name_en": "Satakunta wellbeing services county"
+}
