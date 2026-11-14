@@ -377,6 +377,9 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
 
   /* ---------- words ---------- */
   const askOn = !explore && reached(v, 5, T.sim.ask);
+  // The national plan the map shows (the gap objective under a €5M ceiling), for the last sentence of a county's run.
+  const lead = ov.data?.national_lead, nat = lead?.plan_extra_curative_patients_per_year != null && lead.plan_spent_eur != null && lead.plan_counties
+    ? { extra: lead.plan_extra_curative_patients_per_year, eur: lead.plan_spent_eur, n: lead.plan_counties, lo: lead.plan_extra_lo ?? 0, hi: lead.plan_extra_hi ?? null } : null;
   const pilot = opt.data?.pilot ?? opt.data?.ui.pilot ?? null;
   const ask = pilot ? [pilot.six_months?.patients_seen?.expected != null ? `about ${whole(pilot.six_months.patients_seen.expected)} patients` : null, pilot.six_months?.no_surgery_decisions_reviewed?.expected != null ? `about ${whole(pilot.six_months.no_surgery_decisions_reviewed.expected)} decisions not to operate reviewed` : null].filter(Boolean).join(", ") || `${pilot.actions.length} actions` : null;
   // What the pilot does, per action: the part the web check did not find in place.
@@ -435,7 +438,18 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   }
   else if (a === 4) { const e = featIv ? effectText(featIv.effect) : null; const p = pins.find((x) => x.id === evId); head = featIv && e ? <>{isFI ? shortName(featIv.id, featIv.name_en) : p?.short}: {e.value}, range {e.range}. {featIv.effect.kind === "measured" ? "Measured in" : `An ${featIv.effect.kind ?? "assumption"} from`} {featIv.evidence.length} {featIv.evidence.length === 1 ? "study" : "studies"}.</> : <>The studies behind the plan.</>; }
   else if (deaths && tot) head = <>{myDots === 0 ? "At or above the national share: the" : "The"} plan avoids about {one(tot.shown.deaths)} deaths a year.</>;
-  else if (askOn && ask && pilot?.audit && pilot.six_months?.no_surgery_decisions_reviewed?.expected != null && sim.data) { headKey = "5a"; head = <>The model says about {whole(sim.data.reached.median)} more a year, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}. Six months replace it with a count: {pilot.audit.charts} charts for {eurx(pilot.audit.cost_eur)}, about {whole(pilot.six_months.no_surgery_decisions_reviewed.expected)} decisions reviewed.</>; }
+  else if (askOn && ask && pilot?.audit && pilot.six_months?.no_surgery_decisions_reviewed?.expected != null && sim.data) {
+    // The run ends on one sentence: what is counted here first, then the same run at the scale of the country.
+    headKey = "5a";
+    const worst = counties.reduce((m, c) => (c.dots > (m?.dots ?? -1) ? c : m), counties[0]);
+    head = nat && nat.n > 1 ? <>Six months in {name}{worst?.id === scope ? " first" : ", counted"}, then the same run in all {nat.n} counties: about {whole(nat.extra)} of the {total} a year for {eurx(nat.eur)}.</>
+      : <>Six months in {name}: {pilot.audit.charts} charts and about {whole(pilot.six_months.no_surgery_decisions_reviewed.expected)} decisions counted, in place of the model's {whole(sim.data.reached.median)} a year.</>;
+  }
+  else if (isFI && askOn && nat && nat.n > 1 && nat.hi != null && sim.data) {
+    headKey = "5a";
+    const worst = counties.reduce((m, c) => (c.dots > (m?.dots ?? -1) ? c : m), counties[0]);
+    head = <>The same run in all {nat.n} counties: about {whole(nat.extra)} of the {total} a year for {eurx(nat.eur)}, range {whole(nat.lo)} to {whole(nat.hi)}{worst ? <>, {worst.name} first</> : null}.</>;
+  }
   else head = sim.data && yearIdx < years.length ? <>The plan played forward, year by year, to {years[years.length - 1]}.</>
     : sim.data ? (narrow && narrow.part.n > 0 ? <>If all {narrow.n} actions are needed in full: about {whole(sim.data.reached.median)} more a year treated to cure by {years[years.length - 1]}, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>
       : <>By {years[years.length - 1]}, about {whole(sim.data.reached.median)} more a year treated to cure, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>)
@@ -698,17 +712,25 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
 
         {!explore && a === 5 && (
           <div className={"st-ask" + (askOn ? " on" : "")}>
-            {ask && pilot && pilotParts.some((x) => x.missing) && (
-              <div className="st-pilot">
-                <span>The pilot runs the two actions that decide who is treated, for the part the check did not find:</span>
-                <ul>{pilotParts.map((x) => <li key={x.id}><b>{x.name}.</b> {x.missing ? `Missing: ${x.missing}.` : "No public sign of it: the pilot starts it."}</li>)}</ul>
-              </div>
-            )}
-            {ask && pilot ? <p>Six months with {name}{hosp ? ` and ${hosp.city}` : ""}: <span className="num">{ask}</span>.</p> : <p>{isFI ? "The plan county by county, with who does what." : `The plan for ${name}, with who does what.`}</p>}
-            {ask && pilot?.effect.curative_share_after_pct != null && pilot.effect.curative_share_now_pct != null && !deaths && (
-              <span className="st-fine on num">Counted, not modelled. The model for these {pilot.actions.length} actions alone: {one(pilot.effect.curative_share_now_pct)}% → {one(pilot.effect.curative_share_after_pct)}% by {pilot.effect.by_year ?? years[years.length - 1]}{tot?.curative_share_after_pct != null ? ` (all ${nPins} actions: ${one(tot.curative_share_after_pct)}%)` : ""}.</span>
-            )}
+            {!(ask && pilot) && <p>{isFI ? "The plan county by county, with who does what." : `The plan for ${name}, with who does what.`}</p>}
+            {ask && pilot && nat && nat.n > 1 && nat.hi != null && !isFI && !deaths && <span className="st-fine on num">The {whole(nat.extra)} is modelled, range {whole(nat.lo)} to {whole(nat.hi)}. The six months are counted: {pilot.audit?.charts} charts, about {whole(pilot.six_months?.no_surgery_decisions_reviewed?.expected ?? 0)} decisions.</span>}
             <button className="btn primary" onClick={() => open("plan")}>Open the plan</button>
+            {ask && pilot && (
+              <details className="st-more st-sixmonths">
+                <summary>What the six months do{nat && !isFI && !deaths ? ", and where the numbers come from" : ""}</summary>
+                <div className="st-pilot">
+                  <span>Six months with {name}{hosp ? ` and ${hosp.city}` : ""}: <span className="num">{ask}</span>. Counted, not modelled.</span>
+                  {pilotParts.some((x) => x.missing) && <>
+                    <span>The pilot runs the two actions that decide who is treated, for the part the check did not find:</span>
+                    <ul>{pilotParts.map((x) => <li key={x.id}><b>{x.name}.</b> {x.missing ? `Missing: ${x.missing}.` : "No public sign of it: the pilot starts it."}</li>)}</ul>
+                  </>}
+                  {pilot.effect.curative_share_after_pct != null && pilot.effect.curative_share_now_pct != null && !deaths && (
+                    <span className="num">The model for these {pilot.actions.length} actions alone: {one(pilot.effect.curative_share_now_pct)}% → {one(pilot.effect.curative_share_after_pct)}% by {pilot.effect.by_year ?? years[years.length - 1]}{tot?.curative_share_after_pct != null ? ` (all ${nPins} actions: ${one(tot.curative_share_after_pct)}%)` : ""}.</span>
+                  )}
+                  {nat && !isFI && !deaths && <span className="num">The national plan is modelled: about {whole(nat.extra)} of the {total} a year{nat.hi != null ? `, range ${whole(nat.lo)} to ${whole(nat.hi)}` : ""}, {eurx(nat.eur)} a year in {nat.n} counties.</span>}
+                </div>
+              </details>
+            )}
             {otherRuns("The same run, another county, a different plan:")}
           </div>
         )}

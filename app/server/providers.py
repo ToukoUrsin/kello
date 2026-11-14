@@ -383,9 +383,11 @@ def _enrich_overview(o: dict) -> dict:
             out["gap_checks"] = gc["checks"]
             out["gap_checks_overall_en"] = gc["overall_en"]
             try:  # the national plan as the optimiser gives it today, not a number typed in here
-                nt = optimize("FI", 5_000_000, "gap", []).get("totals") or {}
+                nplan = optimize("FI", 5_000_000, "gap", [])
+                nt = nplan.get("totals") or {}
             except Exception:  # noqa: BLE001
-                nt = {}
+                nplan, nt = {}, {}
+            nrange = nt.get("extra_curative_patients_per_year") or {}
             out["national_lead"] = {
                 "patients_short_per_year": round(float((cp.get("missing_patients") or {}).get("per_year") or 0), 1),
                 "patients_short_in_seven_counties": round(float((cp.get("missing_patients") or {}).get("per_year_in_counties_below_limits") or 0), 1),
@@ -394,6 +396,8 @@ def _enrich_overview(o: dict) -> dict:
                 "plan_extra_curative_patients_per_year": (nt.get("shown") or {}).get("extra"),
                 "plan_gap_closed_pct": round(nt["gap_closed_pct"]) if nt.get("gap_closed_pct") is not None else None,
                 "plan_spent_eur": nt.get("eur"),
+                "plan_extra_lo": nrange.get("lo"), "plan_extra_hi": nrange.get("hi"),
+                "plan_counties": len((nplan.get("ui") or {}).get("by_county") or []) or None,
                 "note_en": "Arithmetic from measured county shares; the national plan is modelled at €5M and spends only where the optimiser finds value.",
             }
     except Exception as e:  # noqa: BLE001
