@@ -53,6 +53,14 @@
   #idle p b.ok { color: #7fd29f; } #idle p b.no { color: #e9cf8e; }
   #start { height: 64px; border: 0; border-radius: 12px; background: var(--go); color: #fff; font-size: 20px; font-weight: 650; }
   #start:active { filter: brightness(0.9); }
+  /* the same lines in a small window on the laptop itself */
+  body.read.mac #now { font-size: clamp(19px, 4.3vw, 30px); line-height: 1.3; }
+  body.read.mac #say { padding: 4px 16px 10px; }
+  body.read.mac #tag { margin-bottom: 6px; font-size: 12px; }
+  body.read.mac #next { margin-top: 12px; padding-top: 8px; font-size: clamp(13px, 2.6vw, 16px); }
+  body.read.mac #idle { gap: 12px; padding: 14px 18px; }
+  body.read.mac #idle ol { display: none; }
+  body.read.mac #start { height: 48px; font-size: 17px; }
   .hide { display: none !important; }
 </style>
 </head>
@@ -62,12 +70,13 @@
 <div id="card" class="hide">
   <h1>Film mode</h1>
   <ol>
-    <li>On your phone open <code id="readurl"></code></li>
-    <li>Start the screen recording of this screen.</li>
-    <li>Tap <b>Start</b> on the phone and read what it shows. The demo plays by itself.</li>
+    <li>Click <b>Show my lines</b>. A small window opens that stays on top: it shows what to say. Drag it where you like.</li>
+    <li>In the recorder choose <b>Window</b> or <b>Current tab</b> and pick this Kello window. Not the whole screen: then the lines would be in the film.</li>
+    <li>Press <b>F</b> for full screen, start recording, press <b>S</b>. After 3, 2, 1 read the underlined word. The demo plays by itself.</li>
   </ol>
-  <div class="st"><span>Demo: <b id="s-demo" class="no">loading</b></span><span>Phone: <b id="s-phone" class="no">waiting</b></span></div>
-  <div class="row"><button id="b-full">Full screen (F)</button><button id="b-hide">Hide this (H)</button><small>S start · R restart</small></div>
+  <div class="st"><span>Demo: <b id="s-demo" class="no">loading</b></span><span>Lines: <b id="s-phone" class="no">not open</b></span></div>
+  <div class="row"><button id="b-lines">Show my lines (L)</button><button id="b-full">Full screen (F)</button><button id="b-hide">Hide this (H)</button><small>S start · R restart</small></div>
+  <p style="margin:12px 0 0;font-size:12px;color:#7d858f">Lines on a phone instead: <span id="readurl"></span></p>
 </div>
 
 <!-- phone -->
@@ -81,7 +90,7 @@
       <li>Tap Start. After 3, 2, 1 read the big text aloud.</li>
       <li>Follow the underlined word. Grey means it should be said already.</li>
     </ol>
-    <p>Laptop: <b id="r-stage" class="no">not open yet</b>. <span id="r-hint">Without it you can still practise here.</span></p>
+    <p><span id="r-where">Laptop</span>: <b id="r-stage" class="no">not open yet</b>. <span id="r-hint">Without it you can still practise here.</span></p>
     <button id="start">Start</button>
     <p id="done" class="hide">Done. Stop the recording. Tap Start for another take.</p>
   </div>
@@ -104,29 +113,41 @@ const LINES = [
   { s: 28.8, e: 45.0, tag: "4 · The check", text: "Then it checks its own plan against the hospital's public pages. This is Oulu University Hospital, word for word. Four of the six actions already run in part. The plan pays only for what's missing." },
   { s: 45.9, e: 53.4, tag: "5 · The evidence", text: "The effects come from published studies, not from Lapland. So every range starts at zero." },
   { s: 54.3, e: 65.2, tag: "6 · To 2028", text: "If the hospital needs all six: about five more patients a year treated to cure by 2028. Honest range: zero to eight." },
-  { s: 66.2, e: 77.0, tag: "Another county", text: "It works for every county. Tap Kymenlaakso: it gets its own plan. Five actions, 186 thousand euros." },
-  { s: 78.4, e: 93.2, tag: "What if", text: "What if Rovaniemi gets a radiotherapy unit? The drive goes from 250 kilometres to 93. But that's one more patient, for one and a half million euros a year." },
-  { s: 94.4, e: 102.6, tag: "The Monday page", text: "What the county gets is one page: who does what on Monday, and what it costs. In Finnish." },
-  { s: 104.0, e: 116.2, tag: "The ask", text: "We ask AstraZeneca for one introduction, to Lapland and Oulu University Hospital. Six months there, every treatment decision reviewed. Then every county with a gap." },
+  { s: 66.2, e: 75.3, tag: "Another county", text: "It works for every county. Kymenlaakso gets its own plan: five actions, 186 thousand euros." },
+  { s: 76.4, e: 91.2, tag: "What if", text: "What if Rovaniemi gets a radiotherapy unit? The drive goes from 250 kilometres to 93. But that's one more patient, for one and a half million euros a year." },
+  { s: 92.4, e: 100.4, tag: "The Monday page", text: "What the county gets is one page: who does what on Monday, and what it costs. In Finnish." },
+  { s: 101.6, e: 113.3, tag: "The ask", text: "We ask AstraZeneca for one introduction, to Lapland and Oulu University Hospital. Six months there, every treatment decision reviewed. Then every county with a gap." },
 ];
-const END = 117.5;
 const START = "/#/run/21";
 const byText = (doc, sel, text) => [...doc.querySelectorAll(sel)].find((b) => b.textContent.trim().startsWith(text));
 const ACTIONS = [
   { t: 0.5, tap: (d) => d.querySelector(".st-run") },
   { t: 66.0, tap: (d) => byText(d, ".st-others button", "Kymenlaakso") },
   { t: 67.8, tap: (d) => d.querySelector(".st-steps li:nth-child(3) button") },
-  { t: 78.0, go: "#/run/21?act=6" },
-  { t: 79.6, tap: (d) => d.querySelector(".st-explore") },
-  { t: 81.0, tap: (d) => byText(d, "button", "New site") },
-  { t: 82.4, map: true },
-  { t: 94.0, tap: (d) => byText(d, ".st-nav button", "Who does what on Monday") },
-  { t: 100.4, tap: (d) => byText(d, "button", "Suomi") },
-  { t: 103.6, go: "#/run/21?act=6" },
+  { t: 76.0, go: "#/run/21?act=6" },
+  { t: 77.6, tap: (d) => d.querySelector(".st-explore") },
+  { t: 79.0, tap: (d) => byText(d, "button", "New site") },
+  { t: 80.4, map: true },
+  { t: 92.0, tap: (d) => byText(d, ".st-nav button", "Who does what on Monday") },
+  { t: 98.2, tap: (d) => byText(d, "button", "Suomi") },
+  { t: 101.2, go: "#/run/21?act=6" },
 ];
 
-const ROOM = (new URLSearchParams(location.search).get("r") || "main").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 16) || "main";
+const QS = new URLSearchParams(location.search);
+/* The speaker's own first sentence, said over the first screen before the Run starts. It comes from the link
+   (?open=...), so it is never part of this file. Everything after it moves later by the time it takes to say. */
+const OPEN = (QS.get("open") || "").replace(/\s+/g, " ").trim().slice(0, 120);
+const PRE = OPEN ? Math.round((OPEN.split(" ").length / 2.3 + 1.0) * 10) / 10 : 0;
+if (PRE) {
+  for (const l of LINES) { l.s += PRE; l.e += PRE; }
+  for (const a of ACTIONS) a.t += PRE;
+  LINES.unshift({ s: 0.3, e: PRE - 0.7, tag: "Why", text: OPEN });
+}
+const END = 114.2 + PRE;
+const MAC = QS.has("mac");
+const ROOM = (QS.get("r") || "main").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 16) || "main";
 const READ = /[?&]read\b/.test(location.search);
+const READ_URL = "/film.html?read" + (ROOM !== "main" ? `&r=${ROOM}` : "") + (OPEN ? `&open=${encodeURIComponent(OPEN)}` : "");
 const $ = (id) => document.getElementById(id);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -164,8 +185,27 @@ if (!READ) {
   document.body.className = "stage";
   const frame = $("demo"), card = $("card");
   frame.classList.remove("hide"); card.classList.remove("hide");
-  $("readurl").textContent = `${location.host}/film.html?read`;
-  let dirty = false, done = new Set(), ranFor = null, chain = Promise.resolve(), hideAt = 0;
+  $("readurl").textContent = location.host + READ_URL;
+  let dirty = false, done = new Set(), ranFor = null, chain = Promise.resolve(), linesWin = null;
+  // The lines in their own small window on this computer. A recording of this window or tab does not contain it.
+  async function openLines() {
+    if (linesWin && !linesWin.closed) { try { linesWin.focus(); } catch (e) { /* fine */ } return; }
+    const url = location.origin + READ_URL + "&mac";
+    try {
+      if ("documentPictureInPicture" in window) {       // stays on top, also over a full-screen window
+        const w = await window.documentPictureInPicture.requestWindow({ width: 640, height: 400 });
+        w.document.title = "Kello: what to say";
+        w.document.documentElement.style.cssText = "height:100%;background:#0b0d10";
+        w.document.body.style.cssText = "margin:0;height:100%;background:#0b0d10;overflow:hidden";
+        const f = w.document.createElement("iframe");
+        f.src = url; f.title = "What to say"; f.style.cssText = "display:block;border:0;width:100%;height:100%";
+        w.document.body.appendChild(f);
+        linesWin = w;
+        return;
+      }
+    } catch (e) { /* no such window here: an ordinary small window instead */ }
+    linesWin = window.open(url, "kello-lines", `popup=yes,width=640,height=420,left=${Math.max(0, screen.availWidth - 660)},top=${Math.max(0, screen.availHeight - 460)}`);
+  }
   const doc = () => frame.contentDocument;
   const ready = () => { const b = doc()?.querySelector(".st-run"); return !!b && !b.disabled; };
   const load = () => { dirty = false; frame.src = "about:blank"; setTimeout(() => { frame.src = START; }, 30); };
@@ -224,15 +264,13 @@ if (!READ) {
   }
   function begin() {
     ranFor = state.start_at; done = new Set(); chain = Promise.resolve();
-    card.hidden = true; hideAt = -1;
+    card.hidden = true;
     if (dirty || !ready()) load();
   }
   setInterval(() => {
     $("s-demo").textContent = ready() ? "ready" : "loading"; $("s-demo").className = ready() ? "ok" : "no";
     const phone = serverNow() - (state.reader_seen || 0) < 2500;
-    $("s-phone").textContent = phone ? "connected" : "waiting"; $("s-phone").className = phone ? "ok" : "no";
-    if (phone && ready() && !card.hidden && !hideAt) hideAt = Date.now() + 3000;
-    if (hideAt && Date.now() > hideAt) { card.hidden = true; hideAt = -1; }
+    $("s-phone").textContent = phone ? "open" : "not open"; $("s-phone").className = phone ? "ok" : "no";
     const t = tNow();
     if (t == null) { if (ranFor != null) { ranFor = null; document.body.classList.remove("on"); doc()?.documentElement.classList.remove("film-on"); load(); } return; }
     if (state.start_at !== ranFor) { if (t < 3) begin(); else return; }   // opened in the middle of a take: wait for the next one
@@ -243,11 +281,12 @@ if (!READ) {
 
   const full = () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.());
   $("b-full").onclick = full;
-  $("b-hide").onclick = () => { card.hidden = true; hideAt = -1; };
+  $("b-hide").onclick = () => { card.hidden = true; };
+  $("b-lines").onclick = openLines;
   const key = (e) => {
     const k = (e.key || "").toLowerCase();
     if (e.metaKey || e.ctrlKey || e.altKey || /^(input|textarea|select)$/i.test(e.target?.tagName || "")) return;
-    if (k === "f") full(); else if (k === "h") { card.hidden = !card.hidden; hideAt = -1; } else if (k === "s" && !running()) { awake(); send("start"); } else if (k === "r") send("reset"); else return;
+    if (k === "f") full(); else if (k === "l") openLines(); else if (k === "h") card.hidden = !card.hidden; else if (k === "s" && !running()) { awake(); send("start"); } else if (k === "r") send("reset"); else return;
     e.preventDefault(); e.stopPropagation();
   };
   window.addEventListener("keydown", key, true);
@@ -257,7 +296,8 @@ if (!READ) {
 
 /* ================= phone ================= */
 if (READ) {
-  document.body.className = "read";
+  document.body.className = MAC ? "read mac" : "read";
+  if (MAC) { $("r-where").textContent = "Demo"; $("r-hint").textContent = "Open the Kello window first."; $("start").textContent = "Start (S)"; }
   $("reader").classList.remove("hide");
   const mmss = (t) => `${Math.floor(Math.max(0, t) / 60)}:${String(Math.floor(Math.max(0, t) % 60)).padStart(2, "0")}`;
   $("total").textContent = `of ${mmss(END)}`;
@@ -298,7 +338,9 @@ if (READ) {
     for (let k = 0; k < spans.length; k++) { const said = f >= l.ends[k], at = !said && f >= 0 && (k === 0 || f >= l.ends[k - 1]); const c = said ? "said" : at ? "at" : ""; if (spans[k].className !== c) spans[k].className = c; }
   }
   requestAnimationFrame(frame);
-  $("start").onclick = () => { awake(); finished = false; $("done").classList.add("hide"); send("start"); };
+  const go = () => { awake(); finished = false; $("done").classList.add("hide"); send("start"); };
+  $("start").onclick = go;
+  window.addEventListener("keydown", (e) => { if (!e.metaKey && !e.ctrlKey && !e.altKey && !running() && /^(s|S| |Enter)$/.test(e.key)) { e.preventDefault(); go(); } });
   $("stop").onclick = () => {
     if (Date.now() - stopArmed < 2500) { stopArmed = 0; $("stop").textContent = "Stop"; finished = false; send("reset"); }
     else { stopArmed = Date.now(); $("stop").textContent = "Tap again to stop"; setTimeout(() => { if (stopArmed && Date.now() - stopArmed >= 2400) { stopArmed = 0; $("stop").textContent = "Stop"; } }, 2500); }
