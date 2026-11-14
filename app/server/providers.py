@@ -757,7 +757,7 @@ def _outside_proof() -> dict | None:
         if e.get("metric") == "curative_share_pp":
             it["model"] = {"value": e.get("value"), "lo": e.get("lo"), "hi": e.get("hi"), "kind": e.get("kind")}
         items.append(it)
-    return {"backtest_en": d.get("backtest_en"), "items": items}
+    return {"backtest_en": d.get("backtest_en"), "summary_en": d.get("summary_en") if items else None, "items": items}
 
 
 def _attach_gap_checks(obj: dict, area_id: str, *, mvi: dict | None = None) -> dict:

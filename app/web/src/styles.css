@@ -2081,3 +2081,8 @@ ol.pathway-grid { list-style: none; margin: 0; padding: 0; }
 .proof q { display: block; font-size: 12px; line-height: 1.45; color: var(--ink-3); quotes: none; overflow-wrap: anywhere; }
 .proof li > a { font-size: 12px; }
 .proof-back { color: var(--ink-3); }
+.proof-sum { font-weight: 550; color: var(--ink) !important; }
+.proof ul { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px 40px; }
+.proof { max-width: none; }
+.proof-back, .proof-sum { max-width: 80ch; }
+.proof li { align-content: start; }

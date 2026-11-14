@@ -1,7 +1,56 @@
 {
  "note": "Outside proof for 'Is this gap real?' and step 5 of the Run: published before-and-after figures next to the model's effect size. Every quote is word for word from the source.",
- "backtest_en": "No backtest is possible: the registry publishes each county's share for one pooled period only, 2019–2023, so there is no earlier period to fit on.",
+ "backtest_en": "No backtest is possible: Finland has published each county's share only for two overlapping pooled periods (2018 to mid-2022 and 2019–2023), so there is no earlier period to fit on.",
  "items": [
+  {
+   "id": "fi_central_ostrobothnia_resection",
+   "action_id": "surgeon_second_opinion",
+   "action_en": "the surgeon's second look",
+   "where_en": "Finland, Central Finland and Ostrobothnia",
+   "period": "2006 to 2017",
+   "introduced_en": "Guideline-based work-up before surgery: a stair-climbing fitness test, PET-CT, more high-risk patients operated",
+   "what_en": "Share of all lung cancer patients operated",
+   "before": {
+    "label": "the earlier period",
+    "value": 10.5
+   },
+   "after": {
+    "label": "the later period",
+    "value": 19.7
+   },
+   "unit": "%",
+   "change_pp": 9.2,
+   "kind": "measured",
+   "quote": "The overall resection rate increased from 10.5%-19.7 %, mainly due to a higher number of high-risk patients (12.7 % vs. 34.3 %, p < 0.001).",
+   "source_title": "Helminen et al., Lung Cancer 2020, 2,116 patients",
+   "source_url": "https://europepmc.org/article/MED/31838168",
+   "caveat_en": "Two hospital districts, no control area, surgery only, and several changes at once. The abstract does not give the year the two periods split."
+  },
+  {
+   "id": "no_innlandet_weekly_review",
+   "action_id": "video_mdt_stage1_3",
+   "action_en": "the weekly video review",
+   "where_en": "Norway, Innlandet hospital trust",
+   "period": "2018 to 2022",
+   "introduced_en": "A weekly review of every patient's pathway, with a check that each one reached the team meeting (started 2020/2021)",
+   "what_en": "Share of all lung cancer patients treated to cure",
+   "before": {
+    "label": "2018",
+    "value": 33
+   },
+   "after": {
+    "label": "2022",
+    "value": 39
+   },
+   "unit": "%",
+   "change_pp": 6,
+   "kind": "measured",
+   "quote_lang": "no",
+   "quote": "Lungeseksjonen på Elverum Sykehus har opprettet et ukesprogram hvor alle pakkeforløp diskuteres. … Det undersøkes også om pasienten er vudert til MDT-møte. … I 2022 hadde Sykehuset Innlandet HF 39 % kurativt behandlede pasienter og Sykehuset i Telemark hadde 35 %. Det er en forbedring fra henholdsvis 33 og 30 % i 2018.",
+   "source_title": "Cancer Registry of Norway, lung cancer quality register, annual report 2023, Table 5.1",
+   "source_url": "https://www.fhi.no/globalassets/publikasjoner-og-rapporter/arsrapporter/publisert-2024/arsrapport-2023-nasjonalt-kvalitetsregister-for-lungekreft.pdf",
+   "caveat_en": "One trust of about 250 patients a year, no control area. The same report's 2023 row sums to about 34%, so part of the rise did not hold."
+  },
   {
    "id": "fi_sbrt_2019_2023",
    "action_id": "sbrt_pathway",
@@ -26,7 +75,9 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "page": 12,
    "caveat_en": "A national trend, not a trial of the referral rule: it shows the share moves by this much in four years. Surgery stayed at 16.5%.",
-   "action_en": "the radiotherapy referral rule"
+   "action_en": "the radiotherapy referral rule",
+   "introduced_en": "Stereotactic radiotherapy spreading across the country"
   }
- ]
+ ],
+ "summary_en": "Three measured changes of the same kind, each larger than what the plan assumes. None is a trial of the plan's own actions."
 }
