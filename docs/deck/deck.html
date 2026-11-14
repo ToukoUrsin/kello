@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kello: pitch deck</title>
+<style>
+@font-face { font-family: "Public Sans"; src: url("../../app/web/node_modules/@fontsource-variable/public-sans/files/public-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; }
+@page { size: 1920px 1080px; margin: 0; }
+:root { --page:#f4f5f3; --surface:#fcfcfb; --ink:#11161c; --ink-2:#48505a; --ink-3:#6b727b; --line:#dcdedb; --accent:#104281; --data:#1c5cab; --soft:#9ec5f4; --plan:#d97706; --empty:#e2e4e1; }
+* { box-sizing: border-box; margin: 0; }
+html, body { background: var(--page); color: var(--ink); font: 400 30px/1.4 "Public Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.slide { width: 1920px; height: 1080px; padding: 96px 120px 84px; position: relative; page-break-after: always; overflow: hidden; display: flex; flex-direction: column; }
+.slide:last-child { page-break-after: auto; }
+.eyebrow { font-size: 22px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 28px; }
+h1 { font-size: 76px; line-height: 1.08; font-weight: 680; letter-spacing: -0.025em; max-width: 1500px; }
+h2 { font-size: 60px; line-height: 1.1; font-weight: 680; letter-spacing: -0.02em; max-width: 1560px; }
+.sub { font-size: 32px; color: var(--ink-2); max-width: 1400px; margin-top: 28px; }
+.foot { position: absolute; left: 120px; right: 120px; bottom: 44px; display: flex; justify-content: space-between; font-size: 20px; color: var(--ink-3); }
+.foot b { color: var(--ink); font-weight: 650; }
+.num { font-variant-numeric: tabular-nums; }
+.or { color: var(--plan); }
+.bl { color: var(--data); }
+.grow { flex: 1; }
+/* dots */
+.cols { display: flex; gap: 96px; margin-top: 64px; }
+.col .name { font-size: 28px; font-weight: 650; }
+.col .big { font-size: 84px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+.col .of { font-size: 24px; color: var(--ink-3); margin-bottom: 18px; }
+.dots { display: grid; grid-template-columns: repeat(10, 26px); gap: 8px; }
+.dots i { width: 26px; height: 26px; border-radius: 50%; background: var(--empty); }
+.dots i.on { background: var(--data); }
+.dots i.pl { background: var(--plan); }
+/* two-up */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 60px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 40px 44px; }
+.card .k { font-size: 22px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.card .v { font-size: 92px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin: 10px 0 6px; }
+.card p { font-size: 28px; color: var(--ink-2); }
+.bar { display: flex; height: 44px; border-radius: 6px; overflow: hidden; margin: 22px 0 14px; font-size: 24px; font-weight: 650; color: #fff; }
+.bar span { display: flex; align-items: center; padding-left: 14px; }
+/* checks */
+.checks { margin-top: 44px; border-top: 1px solid var(--line); }
+.check { display: grid; grid-template-columns: 56px 420px 1fr 210px; align-items: baseline; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); font-size: 27px; }
+.check .q { font-weight: 650; }
+.check .a { color: var(--ink-2); }
+.mark { width: 26px; height: 26px; border-radius: 50%; background: var(--ink); align-self: center; }
+.mark.half { background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); border: 3px solid var(--ink); }
+.mark.open { background: transparent; border: 3px solid var(--ink-3); }
+.check .vd { font-size: 22px; font-weight: 650; text-align: right; }
+/* plan table */
+table { border-collapse: collapse; width: 100%; margin-top: 26px; font-size: 24px; line-height: 1.3; }
+th { text-align: left; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); font-weight: 650; padding: 0 16px 12px 0; border-bottom: 2px solid var(--ink); }
+td { padding: 9px 16px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.r, th.r { text-align: right; padding-right: 0; }
+td .who { display: block; font-size: 19px; color: var(--ink-3); }
+tr.zero td { color: var(--ink-3); }
+tr.sum td { border-bottom: 0; font-weight: 700; font-size: 28px; padding-top: 14px; }
+.tag { display: block; width: fit-content; margin: 4px 0 2px; white-space: nowrap; font-size: 17px; font-weight: 650; padding: 2px 10px; border-radius: 4px; background: #fdf3dc; color: #6b4a00; border: 1px solid #e9cf8e; }
+.tag.no { background: #eeefec; color: var(--ink-2); border-color: var(--line); }
+/* list */
+.list { margin-top: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px 72px; }
+.item h3 { font-size: 38px; font-weight: 680; margin-bottom: 8px; }
+.item p { font-size: 30px; color: var(--ink-2); }
+.ask { display: grid; grid-template-columns: 1.15fr .85fr; gap: 80px; margin-top: 52px; }
+.steps { font-size: 31px; color: var(--ink-2); }
+.steps li { margin: 0 0 24px 0; padding-left: 6px; }
+.steps b { color: var(--ink); }
+.links { margin-top: 30px; font-size: 26px; }
+.links div { margin-bottom: 8px; }
+.links span { color: var(--ink-3); display: inline-block; width: 150px; }
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide">
+  <div class="eyebrow">Kello · lung cancer · Finland's 21 wellbeing services counties and Helsinki</div>
+  <h1>In Lapland, 18 of 100 lung cancer patients get treatment that aims to cure. In Vantaa and Kerava, 36.</h1>
+  <div class="cols">
+    <div class="col"><div class="name">Lapland</div><div class="big num">18.5</div><div class="of">of 100</div><div class="dots" data-n="18.5"></div></div>
+    <div class="col"><div class="name">Finland</div><div class="big num">27.0</div><div class="of">of 100</div><div class="dots" data-n="27"></div></div>
+    <div class="col"><div class="name">Vantaa and Kerava</div><div class="big num">35.6</div><div class="of">of 100, highest county</div><div class="dots" data-n="35.6"></div></div>
+    <div class="col" style="max-width:520px; align-self:flex-end">
+      <p style="font-size:30px;color:var(--ink-2)">Kello shows each county where it loses those patients, and hands it a costed plan to get them back.</p>
+    </div>
+  </div>
+  <div class="foot"><span><b>Kello</b> · Northbound Dispatch · Junction 2026 · AstraZeneca "Equal Care Across Finland"</span><span>Finnish Cancer Registry, patients diagnosed 2019–2023, p. 14 · measured</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="eyebrow">The insight</div>
+  <h2>Lapland's patients don't wait longer. Fewer of them are treated to cure.</h2>
+  <div class="two">
+    <div class="card">
+      <div class="k">Diagnosis to first treatment</div>
+      <div class="v num">31 <span style="font-size:40px;font-weight:600;color:var(--ink-3)">days in the north</span></div>
+      <p>37 days in Finland as a whole. Time is not where the north falls behind.</p>
+      <p style="font-size:21px;color:var(--ink-3);margin-top:14px">Northern university hospital area, 2018–mid 2022 · estimated from the registry's medians</p>
+    </div>
+    <div class="card">
+      <div class="k">Missing from treatment that aims to cure</div>
+      <div class="v num">12 <span style="font-size:40px;font-weight:600;color:var(--ink-3)">patients a year</span></div>
+      <div class="bar"><span style="width:61%;background:#0d366b">7.4 not operated</span><span style="width:39%;background:#5598e7">4.7 no radiotherapy</span></div>
+      <p style="font-size:21px;color:var(--ink-3)">142 new patients a year × (27.0% − 18.5%) = 12.1, range 7.8–16.0 · measured</p>
+    </div>
+  </div>
+  <p class="sub"><b style="color:var(--ink)">12 of 22 counties</b> are further from the national rate than chance explains. Chance alone would put about one there. Across Finland that is about 66 patients a year, 50 of them in seven counties.</p>
+  <div class="foot"><span><b>Kello</b></span><span>2 / 6</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="eyebrow">Is the gap real?</div>
+  <h2 id="checks-title">Five checks before anyone spends a euro.</h2>
+  <div class="checks" id="checks"></div>
+  <p class="sub" id="checks-overall" style="font-size:28px"></p>
+  <div class="foot"><span><b>Kello</b></span><span>3 / 6</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="eyebrow">What to do: Lapland's plan, one page, in Finnish or English</div>
+  <h2 style="font-size:52px"><span class="num">€211,500</span> a year gets about <span class="or">5 of the 12</span> patients treated to cure.</h2>
+  <table>
+    <tr><th style="width:42%">Action</th><th>First step this week</th><th class="r" style="width:170px">Cost a year</th><th class="r" style="width:320px">More treated to cure</th></tr>
+    <tr class="zero"><td>Step zero: audit the records<span class="who">Chief physician of oncology, head of clinical coding</span></td><td>Pull 50 patients with no treatment on record and check their charts</td><td class="r num">€8,000</td><td class="r">settles what is real</td></tr>
+    <tr><td>A chest surgeon reviews every decision not to operate <span class="tag">partly in place: ask first</span><span class="who">Chief of pulmonology, chief of thoracic surgery</span></td><td>Send last quarter's non-operated early-stage patients for a second look</td><td class="r num">€41,000</td><td class="r num">1.7</td></tr>
+    <tr><td>Weekly video meeting with the university hospital's specialists <span class="tag">partly in place: ask first</span><span class="who">Chief of pulmonology, lead of the lung cancer team</span></td><td>Ask for a fixed weekly slot, list every patient not discussed</td><td class="r num">€51,000</td><td class="r num">1.4</td></tr>
+    <tr><td>Precise radiotherapy for patients who cannot be operated <span class="tag">partly in place: ask first</span><span class="who">Chief of oncology, chief of radiotherapy</span></td><td>Write the referral rule: every such patient is referred the same week</td><td class="r num">€30,400</td><td class="r num">1.1</td></tr>
+    <tr><td>Travel and hotel paid for treatment trips to Oulu <span class="tag">partly in place: narrow it</span><span class="who">Chief of oncology, hospital social work</span></td><td>Name one person who books hotel and transport for every patient</td><td class="r num">€43,600</td><td class="r num">0.7</td></tr>
+    <tr><td>A fitness test before anyone is ruled too frail <span class="tag no">no public sign of it</span><span class="who">Chief of pulmonology, rehabilitation and geriatrics</span></td><td>No patient is recorded "not fit" without an exercise test</td><td class="r num">€37,500</td><td class="r num">0.3</td></tr>
+    <tr class="sum"><td>Six actions, each with an owner</td><td></td><td class="r num">€211,500</td><td class="r num">5.2 <span style="font-weight:400;font-size:22px;color:var(--ink-3)">(0–7.7, modelled)</span></td></tr>
+  </table>
+  <div class="foot"><span><b>Kello</b> · the tags come from a live web check of county and hospital pages (Oxylabs Web API)</span><span>4 / 6</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="eyebrow">Why you can trust it</div>
+  <h2>Every number says how it was made, and opens the page it came from.</h2>
+  <div class="list">
+    <div class="item"><h3>Measured, estimated or assumed</h3><p>Each figure carries one of three labels, its period, the page and the sentence it was read from.</p></div>
+    <div class="item"><h3>966 values read from registry reports</h3><p>Finnish county cancer data has no API. Gemini read the PDFs and charts; 946 values were found again in the source, 20 are shown as unverified.</p></div>
+    <div class="item"><h3>Checked against the web, live</h3><p>For each action: is it already running in this county? Searches and page reads go through the Oxylabs Web API; a quote that is not word for word in the page is dropped. The answer changes the plan.</p></div>
+    <div class="item"><h3>What it cannot show</h3><p>No trial has measured these effects, so every range starts at zero. Cancer stage is not published by county. Our first model, a clock from symptom to treatment, did not match outcomes; the app says so.</p></div>
+  </div>
+  <div class="foot"><span><b>Kello</b> · public data only, no patient-level data</span><span>5 / 6</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="eyebrow">The ask</div>
+  <h2>A six-month pilot with Lapland and the Oulu university hospital.</h2>
+  <div class="ask">
+    <ol class="steps">
+      <li><b>Weeks 1–8:</b> audit 50 charts with no treatment on record. Settles how much of the gap is care and how much is recording.</li>
+      <li><b>Months 1–6:</b> a chest surgeon reviews every decision not to operate; every patient who cannot be operated is referred for precise radiotherapy.</li>
+      <li><b>Counted in six months:</b> about 71 patients seen, 64 no-surgery decisions reviewed, decisions changed, referrals made. Vantaa and Kerava as the comparison.</li>
+      <li><b>Read in 2028:</b> share treated to cure from 18.5% to 20.5% with these two actions, 22.2% with the full plan.</li>
+    </ol>
+    <div>
+      <div class="card">
+        <div class="k">After Lapland</div>
+        <p style="margin-top:12px;font-size:29px;color:var(--ink)">The same page exists for every county. A national plan of <b class="num">€1.43M</b> a year reaches about <b class="num">32</b> of the 66 missing patients.</p>
+      </div>
+      <div class="links">
+        <div><span>Live demo</span><b>kello-care.fly.dev</b></div>
+        <div><span>Source</span><b id="repo">REPO_URL</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Kello</b> · Northbound Dispatch · Junction 2026</span><span>6 / 6</span></div>
+</section>
+
+<script src="checks.js"></script>
+<script>
+// Dot grids: n filled of 100, filled from the bottom row up, like the app.
+document.querySelectorAll(".dots").forEach((g) => {
+  const n = Math.round(parseFloat(g.dataset.n));
+  for (let row = 0; row < 10; row++) for (let c = 0; c < 10; c++) {
+    const idx = (9 - row) * 10 + c; // bottom-left is 0
+    const i = document.createElement("i");
+    if (idx < n) i.className = "on";
+    g.appendChild(i);
+  }
+});
+// Slide 3 is filled from checks.json (written by docs/deck/build.py from /api/areas/21).
+const C = window.KELLO_CHECKS || { overall: "", checks: [] };
+const box = document.getElementById("checks");
+const LABEL = { holds: "holds", mostly_holds: "mostly holds", cannot_tell: "cannot tell yet", weakens: "weakens it" };
+const MARK = { holds: "", mostly_holds: "half", cannot_tell: "open", weakens: "open" };
+C.checks.forEach((c) => {
+  const d = document.createElement("div"); d.className = "check";
+  d.innerHTML = `<span class="mark ${MARK[c.verdict] ?? "open"}"></span><span class="q"></span><span class="a"></span><span class="vd"></span>`;
+  d.querySelector(".q").textContent = c.q; d.querySelector(".a").textContent = c.a; d.querySelector(".vd").textContent = LABEL[c.verdict] ?? c.verdict;
+  box.appendChild(d);
+});
+document.getElementById("checks-overall").textContent = C.overall;
+</script>
+</body>
+</html>
