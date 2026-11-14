@@ -1,5 +1,6 @@
 import { GapCheck, api, useAsync } from "./lib";
 import { Failed } from "./App";
+import OutsideProof from "./OutsideProof";
 
 const label: Record<string, string> = { holds: "holds", mostly_holds: "mostly holds", weakens: "speaks against", cannot_tell: "cannot tell" };
 
@@ -31,12 +32,13 @@ export default function GapChecks({ areaId, variant }: { areaId: string; variant
   const state = useAsync(() => api.area(areaId), [areaId]);
   const checks = state.data?.gap_checks ?? [];
   const overall = state.data?.gap_checks_overall_en;
+  const proof = <OutsideProof p={state.data?.outside_proof} />;
   if (state.loading && !state.data) return <div className={`gapchecks ${variant} muted`} aria-label="Checking whether the gap is real">Checking the gap…</div>;
   if (state.error && !state.data) return <div className={`gapchecks ${variant}`}><Failed message={`The checks of the gap could not be loaded. ${state.error}`} retry={state.reload} /></div>;
   if (!checks.length) return null;
   if (variant === "line") {
     const first = (overall ?? "").split(". ")[0].replace(/\.?$/, ".");
-    return <details className="gapchecks line"><summary><b>Is this gap real?</b> <span className="gapsum">{first}</span> <span className="gapmarks" aria-hidden="true">{checks.map((c) => <i key={c.id} className={c.verdict} />)}</span></summary><p className="gapsum-open">{first}</p><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol></details>;
+    return <details className="gapchecks line"><summary><b>Is this gap real?</b> <span className="gapsum">{first}</span> <span className="gapmarks" aria-hidden="true">{checks.map((c) => <i key={c.id} className={c.verdict} />)}</span></summary><p className="gapsum-open">{first}</p><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol>{proof}</details>;
   }
   if (variant === "strip") {
     return (
@@ -50,9 +52,9 @@ export default function GapChecks({ areaId, variant }: { areaId: string; variant
             </li>
           ))}
         </ul>
-        <details className="gapstrip-more"><summary>How each check was made</summary><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol></details>
+        <details className="gapstrip-more"><summary>How each check was made</summary><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol>{proof}</details>
       </section>
     );
   }
-  return <section className="gapchecks full panel" aria-label="Is this gap real?"><header><h2>Is this gap real?</h2></header><div className="body"><p className="lede">{overall}</p><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol></div></section>;
+  return <section className="gapchecks full panel" aria-label="Is this gap real?"><header><h2>Is this gap real?</h2></header><div className="body"><p className="lede">{overall}</p><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol>{proof}</div></section>;
 }

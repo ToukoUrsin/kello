@@ -382,6 +382,7 @@ def _enrich_overview(o: dict) -> dict:
             out["national"]["gap_checks_overall_fi"] = gc["overall_fi"]
             out["gap_checks"] = gc["checks"]
             out["gap_checks_overall_en"] = gc["overall_en"]
+            out["outside_proof"] = outside_proof()
             try:  # the national plan as the optimiser gives it today, not a number typed in here
                 nplan = optimize("FI", 5_000_000, "gap", [])
                 nt = nplan.get("totals") or {}
@@ -737,6 +738,28 @@ def _gap_checks(area_id: str, path: dict, mvi: dict | None = None) -> dict:
     return {"checks": checks, "overall_en": overall, "overall_fi": overall_fi}
 
 
+def outside_proof() -> dict | None:
+    """Published before-and-after figures next to the model's effect size, and whether a backtest is possible."""
+    return memo("outside_proof", _outside_proof)
+
+
+def _outside_proof() -> dict | None:
+    d = _read(DATA / "evidence/outside_proof.json")
+    if not isinstance(d, dict):
+        return None
+    ivs = {i.get("id"): i for i in interventions()[0] if isinstance(i, dict)}
+    items = []
+    for it in d.get("items") or []:
+        if not (isinstance(it, dict) and it.get("quote") and it.get("source_url")):
+            continue   # nothing without its sentence and its link
+        it = dict(it)
+        e = (ivs.get(it.get("action_id")) or {}).get("effect") or {}
+        if e.get("metric") == "curative_share_pp":
+            it["model"] = {"value": e.get("value"), "lo": e.get("lo"), "hi": e.get("hi"), "kind": e.get("kind")}
+        items.append(it)
+    return {"backtest_en": d.get("backtest_en"), "items": items}
+
+
 def _attach_gap_checks(obj: dict, area_id: str, *, mvi: dict | None = None) -> dict:
     cp = obj.get("care_path") if isinstance(obj, dict) else None
     if isinstance(cp, dict):
@@ -744,6 +767,7 @@ def _attach_gap_checks(obj: dict, area_id: str, *, mvi: dict | None = None) -> d
         obj["gap_checks"] = gc["checks"]
         obj["gap_checks_overall_en"] = gc["overall_en"]
         obj["gap_checks_overall_fi"] = gc["overall_fi"]
+        obj["outside_proof"] = outside_proof()
     return obj
 
 

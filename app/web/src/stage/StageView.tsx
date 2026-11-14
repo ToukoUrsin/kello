@@ -7,6 +7,7 @@ import { ACTS, countAt, LAST, progress, reached, T, useReducedMotion, useRun } f
 import StageMap, { Pinned, Seg, useCamera } from "./StageMap";
 import { CarePathCard, effectText, Fly, Ledger, LedgerRow, PageCard, StudyCard } from "./Cards";
 import { SimChart } from "./Charts";
+import { ProofLine } from "../OutsideProof";
 import Explore, { SITE, Tool } from "./Explore";
 import "./stage.css";
 
@@ -708,7 +709,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
           </div>
         )}
 
-        {!explore && a === 4 && (studyIv ? <StudyCard iv={studyIv} idx={evIdx} setIdx={setEvIdx} quoteOn={reached(v, 4, T.evidence.quote)} flying={false} /> : <p className="st-quiet">{ivs.error ? "The studies are not available right now." : ""}</p>)}
+        {!explore && a === 4 && (studyIv ? <><StudyCard iv={studyIv} idx={evIdx} setIdx={setEvIdx} quoteOn={reached(v, 4, T.evidence.quote)} flying={false} /><ProofLine p={ov.data?.outside_proof} actionId={studyIv.id} /></> : <p className="st-quiet">{ivs.error ? "The studies are not available right now." : ""}</p>)}
 
         {!explore && a === 5 && (
           <div className={"st-ask" + (askOn ? " on" : "")}>

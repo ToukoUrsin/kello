@@ -2068,3 +2068,16 @@ ol.pathway-grid { list-style: none; margin: 0; padding: 0; }
 .mdecide b { font-weight: 700; }
 .drugnext { margin-top: 6px; font-size: 14px; }
 @media print { .pilotgate, .mdecide { font-size: 8.5pt; padding: 4pt 6pt; } }
+
+/* Published before-and-after figures under "Is this gap real?" */
+.proof { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 10px; max-width: 80ch; }
+.proof h3 { margin: 0; font-size: 14px; font-weight: 600; }
+.proof ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.proof li { display: grid; gap: 4px; min-width: 0; }
+.proof-head { display: flex; align-items: baseline; gap: 8px; font-size: 14px; }
+.proof-head b { font-weight: 600; }
+.proof p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+.proof p b { color: var(--ink); font-weight: 600; }
+.proof q { display: block; font-size: 12px; line-height: 1.45; color: var(--ink-3); quotes: none; overflow-wrap: anywhere; }
+.proof li > a { font-size: 12px; }
+.proof-back { color: var(--ink-3); }

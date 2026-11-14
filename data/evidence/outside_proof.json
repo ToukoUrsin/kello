@@ -1,0 +1,32 @@
+{
+ "note": "Outside proof for 'Is this gap real?' and step 5 of the Run: published before-and-after figures next to the model's effect size. Every quote is word for word from the source.",
+ "backtest_en": "No backtest is possible: the registry publishes each county's share for one pooled period only, 2019–2023, so there is no earlier period to fit on.",
+ "items": [
+  {
+   "id": "fi_sbrt_2019_2023",
+   "action_id": "sbrt_pathway",
+   "where_en": "Finland, all counties",
+   "period": "2019 to 2023",
+   "what_en": "Stereotactic radiotherapy within a year of diagnosis",
+   "before": {
+    "label": "2019",
+    "value": 9.4,
+    "n": "286 of 3,049"
+   },
+   "after": {
+    "label": "2023",
+    "value": 12.9,
+    "n": "362 of 2,808"
+   },
+   "unit": "%",
+   "change_pp": 3.5,
+   "kind": "measured",
+   "quote": "2019 | 3049 | 504 | 16.5 | 34 | 1.1 | 286 | 9.4 | 30 | 1.0 | 134 | 4.4 | 802 | 26.3 … 2023 | 2808 | 464 | 16.5 | 27 | 1.0 | 362 | 12.9 | 43 | 1.5 | 125 | 4.5 | 828 | 29.5",
+   "source_title": "Finnish Cancer Registry, lung cancer report, Table 7",
+   "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "page": 12,
+   "caveat_en": "A national trend, not a trial of the referral rule: it shows the share moves by this much in four years. Surgery stayed at 16.5%.",
+   "action_en": "the radiotherapy referral rule"
+  }
+ ]
+}

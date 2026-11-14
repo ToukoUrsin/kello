@@ -448,3 +448,6 @@
 .st-pick select { min-width: 0; flex: 0 1 auto; max-width: 100%; text-overflow: ellipsis; }
 /* Low screens: the ask ends at its button; the same counties are one tap away in the picker above. */
 .st.short:not(.phone) .st-ask .st-others { display: none; }
+
+.st-proof { max-width: none; color: var(--ink-2); }
+.st-proof b { color: var(--ink); font-weight: 600; }
