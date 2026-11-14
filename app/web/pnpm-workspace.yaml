@@ -1,0 +1,5 @@
+# esbuild (used by vite) must run its install script; pnpm 10+ refuses unless it is listed here.
+allowBuilds:
+  esbuild: true
+onlyBuiltDependencies:
+  - esbuild
