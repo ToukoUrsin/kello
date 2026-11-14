@@ -1,0 +1,1845 @@
+[
+ {
+  "id": "cpp_pathway",
+  "name_en": "Standardised lung cancer pathway with booked slots",
+  "name_fi": "Keuhkosyövän standardoitu hoitopolku ja varatut tutkimusajat",
+  "step": "diagnosis",
+  "what_en": "A lung cancer pathway on the Danish/Swedish/Norwegian model: fixed referral criteria, pre-booked CT, PET-CT, bronchoscopy and MDT slots, a named pathway owner, and published time limits for each step.",
+  "what_fi": "Tanskan, Ruotsin ja Norjan mallin mukainen hoitopolku: yhtenäiset lähetekriteerit, etukäteen varatut TT-, PET-TT-, bronkoskopia- ja MDT-ajat, nimetty vastuuhenkilö ja julkiset tavoiteajat joka vaiheelle.",
+  "effect": {
+   "metric": "days",
+   "value": 14,
+   "lo": 5,
+   "hi": 23,
+   "kind": "assumption",
+   "basis": "Gap between the Finnish specialist-care interval (58 days, Yle MOT 2026) and the Nordic standard times referral -> treatment: Denmark 44 (41-45), Sweden 44 (40-44), Norway 42 (35-42). value = 58-44; hi = 58-35; lo = assumption that only a third of the gap closes, because in Sweden only 30 % of lung pathway patients met the lead time. No opened study reports days saved by a pathway for lung cancer.",
+   "applies_to_steps": [
+    "referral",
+    "diagnosis",
+    "treatment"
+   ],
+   "secondary": {
+    "metric": "mortality_rr",
+    "value": 0.74,
+    "lo": 0.66,
+    "hi": 0.83,
+    "basis": "inverse of excess hazard ratio 3 years, before vs after pathway implementation = 1.35 (1.21-1.51), all seven cancers combined, Denmark; before-after design, lead-time and selection bias possible"
+   }
+  },
+  "evidence": [
+   {
+    "claim": "Three-year relative survival for symptomatic cancer patients diagnosed via primary care rose from 45 % to 54 % after Danish cancer patient pathways were introduced.",
+    "quote": "For all cancers combined, the RS3years rose from 45% (95% confidence interval (CI): 42;47) before to 54% (95% CI: 52;56) after CPP implementation. The excess mortality was higher before than after CPP implementation (EHR3years before vs. after CPP = 1.35 (95% CI: 1.21;1.51)).",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/",
+    "year": 2017,
+    "design": "before-during-after cohort, Denmark",
+    "n": 7725,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Sweden: 72 % of lung cancer patients were diagnosed through the pathway.",
+    "quote": "Lung cancer                                     740                  733                               525 (72%)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+    "year": 2023,
+    "design": "registry cohort, one Swedish region, 2018",
+    "n": 19204,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Finland is the only Nordic country without national standardised care pathways.",
+    "quote": "Finland is also the only Nordic country without transparent national cancer care guidelines and standardized care pathways.",
+    "url": "https://ihe.se/en/new-cancer-dashboard-for-finland/",
+    "year": 2026,
+    "design": "policy report summary (IHE)",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Sweden: only 30 % of lung cancer pathway patients started treatment within the 30-44 day lead time; a pathway on paper does not deliver the time by itself.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+    "year": 2023
+   },
+   {
+    "claim": "Danish authors note the survival gain may partly reflect lead-time bias and selection bias.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/",
+    "year": 2017
+   }
+  ],
+  "cost": {
+   "eur_setup": 50000,
+   "eur_per_year": 90000,
+   "scales_with": "county",
+   "basis": "Setup: process design and booking templates, 50 000 EUR. Yearly: 1.0 pathway coordinator nurse (60 000) + 0.2 pulmonologist as pathway owner (0.2 x 150 000 = 30 000). Booked slots reallocate existing capacity. National guideline and pathway work is budgeted separately in the roadmap: 5 000 000 EUR/year (measure 3.1.1, covers 2.5.2, 3.1.2-3.1.4).",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "2.5.2",
+   "3.1.1",
+   "3.1.4"
+  ],
+  "owner_fi": "Keuhkosairauksien ylilääkäri (alueellinen polku); FICAN ja kansallinen keuhkosyöpäryhmä (kansallinen hoitoketjukuvaus)",
+  "owner_en": "Chief physician of pulmonology (county pathway); FICAN and the national lung cancer group (national pathway description)",
+  "prerequisite_en": "Imaging and bronchoscopy slots must actually exist; needs time stamps recorded per step so the limits can be monitored.",
+  "confidence": "medium",
+  "owner_level": "county",
+  "targets_stage": "time_to_treatment",
+  "modality": null,
+  "first_step_en": "Name one pathway owner and book fixed weekly CT, PET-CT, bronchoscopy and MDT slots for suspected lung cancer.",
+  "first_step_fi": "Nimetään hoitopolulle vastuuhenkilö ja varataan keuhkosyöpäepäilyille kiinteät viikoittaiset TT-, PET-TT-, bronkoskopia- ja MDT-ajat.",
+  "kpi": {
+   "indicator": "dx_to_treatment_days",
+   "label_en": "Days from diagnosis to start of treatment (median)",
+   "label_fi": "Päivät diagnoosista hoidon alkuun (mediaani)",
+   "baseline_from": "care_path.time_to_treatment",
+   "target_rule_en": "at or below the national median; published for the collaborative area, so the county must start reporting its own",
+   "target": {
+    "type": "national"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "same_day_cxr_ct",
+  "name_en": "Same-day chest X-ray report with immediate CT",
+  "name_fi": "Thorax-kuvan lausunto samana päivänä ja välitön TT",
+  "step": "primary",
+  "what_en": "A radiologist or reporting radiographer reads primary-care chest X-rays while the patient waits; if suspicious, CT is done the same day or within days and the referral is triggered by radiology.",
+  "what_fi": "Radiologi lausuu perusterveydenhuollon thorax-kuvan potilaan odottaessa; epäilyttävä löydös johtaa TT-kuvaukseen samana päivänä tai lähipäivinä ja lähete käynnistyy radiologiasta.",
+  "effect": {
+   "metric": "days",
+   "value": 31,
+   "lo": 0,
+   "hi": 46,
+   "kind": "measured",
+   "basis": "Median chest X-ray -> lung cancer diagnosis 32 days (IQR 19-70) with immediate reporting vs 63 days (IQR 29-78) with standard reporting, p=0.03. No confidence interval reported: lo = 0 (small trial, 49 cancers), hi = assumption. The interval measured spans our steps primary, referral and diagnosis; the model should cap the saving at the days available in those steps.",
+   "applies_to_steps": [
+    "primary",
+    "referral",
+    "diagnosis"
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis.",
+    "quote": "The median time from CXR to diagnosis of lung cancer for IR was 32 days (IQR 19, 70) compared with 63 days (IQR 29, 78) for SR (p=0.03).",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+    "year": 2023,
+    "design": "randomised controlled trial (radioX), single London hospital",
+    "n": 8682,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Finnish specialist care loses time waiting for imaging and reports.",
+    "quote": "Erikoissairaanhoidossa on taas odottamista esimerkiksi kuvaukseen, kuvauslausuntoon ja näytteenottoon.",
+    "url": "https://yle.fi/a/74-20242733",
+    "year": 2026,
+    "design": "journalism citing unpublished four-city study",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "In the same trial, mean days to diagnosis did not differ (54.4 vs 50.3); the effect is on the median and rests on 49 cancers.",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+    "year": 2023
+   }
+  ],
+  "cost": {
+   "eur_setup": 20000,
+   "eur_per_year": 105000,
+   "scales_with": "county",
+   "basis": "Setup: workflow and referral-rule change, 20 000 EUR. Yearly: 0.5 radiologist for hot reporting (0.5 x 150 000 = 75 000) + 0.5 radiographer/coordinator (30 000). CT volume is brought forward, not added.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.5.2",
+  "roadmap_measures_related": [
+   "3.1.2"
+  ],
+  "owner_fi": "Kuvantamisen ylilääkäri yhdessä perusterveydenhuollon johtavan lääkärin kanssa",
+  "owner_en": "Chief radiologist together with the chief physician of primary care",
+  "prerequisite_en": "CT capacity for same-week scans; radiology allowed to trigger the specialist referral.",
+  "confidence": "medium",
+  "owner_level": "county",
+  "targets_stage": null,
+  "modality": null,
+  "first_step_en": "Agree with radiology that a suspicious chest X-ray is followed by CT the same day, without a new referral.",
+  "first_step_fi": "Sovitaan kuvantamisen kanssa, että epäilyttävän keuhkokuvan jälkeen TT tehdään samana päivänä ilman uutta lähetettä.",
+  "kpi": {
+   "indicator": "cxr_to_ct_days",
+   "label_en": "Days from suspicious chest X-ray to CT",
+   "label_fi": "Päivät epäilyttävästä keuhkokuvasta TT-kuvaukseen",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it from this month; target 3 days or less (our target)",
+   "target": {
+    "type": "fixed",
+    "value": 3
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "gp_direct_ct",
+  "name_en": "GP direct access to low-dose CT",
+  "name_fi": "Yleislääkärin suora lähete matala-annos-TT:hen",
+  "step": "primary",
+  "what_en": "Health-centre doctors can order chest CT directly for patients whose symptoms raise suspicion but do not meet urgent referral criteria, without first referring to specialist care.",
+  "what_fi": "Terveyskeskuslääkäri voi tilata keuhkojen TT-kuvauksen suoraan, kun oireet herättävät epäilyn mutta kiireellisen lähetteen kriteerit eivät täyty.",
+  "effect": {
+   "metric": "days",
+   "value": 8,
+   "lo": 0,
+   "hi": 16,
+   "kind": "measured",
+   "basis": "Median diagnostic interval 36 days (intervention GPs) vs 44 days (control GPs), p=0.299, not statistically significant. value = 44-36; lo = 0 because the trial is null; hi = assumption (twice the point estimate).",
+   "applies_to_steps": [
+    "primary",
+    "referral"
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "Danish cluster-randomised trial: direct CT access gave a non-significant 8-day shorter diagnostic interval and no stage shift.",
+    "quote": "Patients listed with control GPs had a statistically insignificantly longer median diagnostic interval (44 days, IQI: 17–112) than patients listed with intervention GPs (36 days, IQI: 17–83) ( p = 0.299).",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+    "year": 2015,
+    "design": "cluster-randomised controlled trial, Aarhus, 119 practices",
+    "n": 331,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Finland has the lowest access to CT from primary care and the longest primary care waits in the Nordics.",
+    "quote": "Finland has the lowest access to computed tomography (CT) from primary care, longest waiting times in primary care, and lacks a national outcome tracking system.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "year": 2025,
+    "design": "survey + expert workshops",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "The lead investigator of the Finnish delay study recommends direct CT ordering from primary care.",
+    "quote": "Kuittisen mielestä heidän pitäisi myös saada määrätä suoraan tietokonekuvauksia sen sijaan, että potilas joutuu siirtymään erikoissairaanhoidon puolelle jonottamaan kuvauksia.",
+    "url": "https://yle.fi/a/74-20242733",
+    "year": 2026,
+    "design": "expert opinion",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Direct low-dose CT from primary care did not statistically significantly decrease time to diagnosis or change stage at diagnosis.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4660800/",
+    "year": 2015
+   }
+  ],
+  "cost": {
+   "eur_setup": 10000,
+   "eur_per_year": 60000,
+   "scales_with": "per_100k_pop",
+   "basis": "Setup: one training round for GPs, 10 000 EUR. Yearly per 100 000 residents: about 300 extra CT scans x 200 EUR = 60 000 EUR. The number of scans is an assumption.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.5.2",
+  "roadmap_measures_related": [
+   "2.5.1"
+  ],
+  "owner_fi": "Perusterveydenhuollon johtava lääkäri ja kuvantamisen ylilääkäri",
+  "owner_en": "Chief physician of primary care and chief radiologist",
+  "prerequisite_en": "Baseline matters: Denmark already had fast-track referral; Finland starts from the lowest primary-care CT access in the Nordics, so the Danish null result may understate the Finnish effect. That is a hypothesis, not evidence.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": null,
+  "modality": null,
+  "first_step_en": "Open chest CT ordering to health centre doctors for named symptoms and reserve the CT slots.",
+  "first_step_fi": "Avataan terveyskeskuslääkäreille oikeus tilata keuhkojen TT nimetyillä oireilla ja varataan kuvausajat.",
+  "kpi": {
+   "indicator": "gp_visit_to_ct_days",
+   "label_en": "Days from first GP visit to CT",
+   "label_fi": "Päivät ensimmäisestä terveyskeskuskäynnistä TT-kuvaukseen",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it from this month; target 14 days or less (our target)",
+   "target": {
+    "type": "fixed",
+    "value": 14
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "ai_cxr_triage_alone",
+  "name_en": "AI chest X-ray triage without added capacity",
+  "name_fi": "Tekoäly thorax-kuvien priorisoinnissa ilman lisäkapasiteettia",
+  "step": "primary",
+  "what_en": "AI software flags suspicious primary-care chest X-rays so they are reported first. Included as a documented null result: the tool should not recommend it alone.",
+  "what_fi": "Tekoäly nostaa epäilyttävät thorax-kuvat lausuntojonon kärkeen. Mukana dokumentoituna nollatuloksena: työkalu ei suosittele tätä yksinään.",
+  "effect": {
+   "metric": "relative_days",
+   "value": 0.02,
+   "lo": -0.16,
+   "hi": 0.17,
+   "kind": "measured",
+   "basis": "Ratio of geometric means for time to lung cancer diagnosis 0.98 (95 % CI 0.83-1.16), i.e. 2 % shorter, compatible with no effect. Medians 44 vs 46 days. Time to treatment 76 vs 72.5 days."
+  },
+  "evidence": [
+   {
+    "claim": "Randomised trial of 93 326 chest X-rays: AI prioritisation changed neither time to CT nor time to diagnosis.",
+    "quote": "Median times to diagnosis were 44 days (26–90) and 46 days (24–105) respectively, with a ratio of geometric means of 0.98 (95% CI = 0.83–1.16; P = 0.84).",
+    "url": "https://www.nature.com/articles/s41591-026-04253-5",
+    "year": 2026,
+    "design": "prospective multicentre randomised controlled trial (LungIMPACT), UK",
+    "n": 93326,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Authors conclude AI worklist prioritisation should not be deployed for this purpose.",
+    "quote": "AI prioritization of CXR requested by UK primary care has no significant impact on the lung cancer pathway. Therefore, CXR AI deployments should not include worklist prioritization in this context.",
+    "url": "https://www.nature.com/articles/s41591-026-04253-5",
+    "year": 2026,
+    "design": "randomised controlled trial",
+    "n": 93326,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Time to CT 53 vs 53 days; ratio of geometric means 0.97 (0.93-1.02), P=0.31.",
+    "url": "https://www.nature.com/articles/s41591-026-04253-5",
+    "year": 2026
+   },
+   {
+    "claim": "No difference in time to referral (14 vs 15 days), time to treatment (76 vs 72.5 days) or stage at diagnosis (P=0.34).",
+    "url": "https://www.nature.com/articles/s41591-026-04253-5",
+    "year": 2026
+   }
+  ],
+  "cost": {
+   "eur_setup": 50000,
+   "eur_per_year": 100000,
+   "scales_with": "county",
+   "basis": "Setup: integration with PACS/RIS, 50 000 EUR. Yearly licence 100 000 EUR per county. Both are assumptions; no Finnish price was found. Nationally the roadmap budgets 1 140 000 EUR for digital pathways and AI tools (measure 3.5.3).",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.5.3",
+  "roadmap_measures_related": [],
+  "owner_fi": "Kuvantamisen ylilääkäri; FICAN (kansallinen tekoälyratkaisujen selvitys)",
+  "owner_en": "Chief radiologist; FICAN (national review of AI tools)",
+  "prerequisite_en": "Only worth buying together with reporting and CT capacity that can act on the flag (see same_day_cxr_ct).",
+  "confidence": "high",
+  "owner_level": "county",
+  "targets_stage": null,
+  "modality": null,
+  "first_step_en": "Do not buy it alone: first check how many days a flagged X-ray waits for CT.",
+  "first_step_fi": "Ei hankita yksinään: selvitetään ensin, montako päivää poikkeava keuhkokuva odottaa TT-kuvausta.",
+  "kpi": {
+   "indicator": "cxr_to_ct_days",
+   "label_en": "Days from suspicious chest X-ray to CT",
+   "label_fi": "Päivät epäilyttävästä keuhkokuvasta TT-kuvaukseen",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it",
+   "target": {
+    "type": "record"
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "ebus_capacity",
+  "name_en": "EBUS as first test, with enough bronchoscopy capacity",
+  "name_fi": "EBUS ensimmäisenä tutkimuksena ja riittävä bronkoskopiakapasiteetti",
+  "step": "diagnosis",
+  "what_en": "Endobronchial ultrasound-guided needle biopsy as the first invasive test after CT for suspected stage I-IIIA disease, giving diagnosis and staging in one procedure, with enough EBUS lists (own or bought) to do it within a week.",
+  "what_fi": "Kaikututkimusohjattu bronkoskopianäyte (EBUS) ensimmäisenä kajoavana tutkimuksena TT:n jälkeen, jolloin diagnoosi ja levinneisyys saadaan samalla kertaa; riittävästi EBUS-aikoja (omana työnä tai ostopalveluna) viikon sisään.",
+  "effect": {
+   "metric": "days",
+   "value": 15,
+   "lo": 8,
+   "hi": 21,
+   "kind": "measured",
+   "basis": "Median time to treatment decision 14 days (95 % CI 14-15) with EBUS first vs 29 days (95 % CI 23-35) with conventional work-up. value = 29-14; lo/hi from the two confidence intervals (23-15, 35-14). Applies to patients with suspected stage I-IIIA disease.",
+   "applies_to_share_note": "suspected stage I-IIIA only"
+  },
+  "evidence": [
+   {
+    "claim": "Randomised trial: EBUS as initial investigation halved time to treatment decision.",
+    "quote": "The median time to treatment decision was shorter with EBUS-TBNA (14 days; 95% CI 14-15) than with CDS (29 days; 23-35) resulting in a hazard ratio of 1·98",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/",
+    "year": 2015,
+    "design": "open-label multicentre randomised controlled trial (Lung-BOOST), six UK centres",
+    "n": 133,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Finnish target: tissue sample within a week of the request.",
+    "quote": "biopsia tai neulanäyte) tulee ottaa viikon kuluessa tutkimuspyynnön saapumisesta kirurgiseen yksikköön tai",
+    "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+    "year": 2016,
+    "design": "national guidance (THL Ohjaus 21/2016)",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [],
+  "cost": {
+   "eur_setup": 150000,
+   "eur_per_year": 75000,
+   "scales_with": "county",
+   "basis": "Setup: one EBUS scope and processor, 150 000 EUR (zero if the hospital already has one). Yearly: 0.3 pulmonologist (45 000) + 0.5 endoscopy nurse (30 000) for one extra weekly list. Alternative: buy the procedures from the university hospital.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.1"
+  ],
+  "owner_fi": "Keuhkosairauksien ylilääkäri",
+  "owner_en": "Chief physician of pulmonology",
+  "prerequisite_en": "Trained EBUS operators and on-site cytology; pathology must turn the sample around within a week.",
+  "confidence": "high",
+  "owner_level": "county",
+  "targets_stage": "staged",
+  "modality": null,
+  "first_step_en": "Count how many patients waited over a week for bronchoscopy last quarter and add one EBUS list a week.",
+  "first_step_fi": "Lasketaan, kuinka moni odotti bronkoskopiaa yli viikon viime neljänneksellä, ja lisätään yksi EBUS-lista viikossa.",
+  "kpi": {
+   "indicator": "stage_recorded_pct",
+   "label_en": "Share of patients with stage recorded",
+   "label_fi": "Levinneisyystieto kirjattu, osuus potilaista",
+   "baseline_from": "care_path.staged",
+   "target_rule_en": "reach the best county",
+   "target": {
+    "type": "best"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "reflex_molecular",
+  "name_en": "Reflex molecular testing ordered by pathology",
+  "name_fi": "Patologian käynnistämä refleksitestaus (molekyylidiagnostiikka)",
+  "step": "diagnosis",
+  "what_en": "The pathologist starts the biomarker panel (EGFR, ALK, ROS1, PD-L1, NGS) as soon as non-small cell lung cancer is seen, without waiting for the oncologist to order it. The result now decides treatment at every stage: osimertinib or alectinib after surgery, durvalumab or osimertinib after chemoradiotherapy in stage III, and the first drug in advanced disease.",
+  "what_fi": "Patologi käynnistää biomarkkeripaneelin (EGFR, ALK, ROS1, PD-L1, NGS) heti ei-pienisoluisen keuhkosyövän toteamisen jälkeen odottamatta onkologin tilausta. Tulos ohjaa nykyisin hoitoa kaikissa levinneisyysasteissa: liitännäishoito leikkauksen jälkeen, kemosädehoidon jälkeinen hoito asteessa III ja ensilinjan lääke levinneessä taudissa.",
+  "effect": {
+   "metric": "days",
+   "value": 7,
+   "lo": 0,
+   "hi": 14,
+   "kind": "assumption",
+   "basis": "Measured in one US centre: mean time to initiation of molecular testing fell from 27.4 weekdays (in-house, clinician-ordered) to 0.95 weekdays (reflex); reporting time unchanged at about 11 weekdays. The Finnish ordering delay is not published, so we assume 0-14 calendar days are removable for the patients whose first treatment waits for the result. Biomarkers now gate treatment in resected stage IB-IIIA (ADAURA, ALINA), unresectable stage III (PACIFIC, LAURA) and advanced disease. The model counts deaths avoided only through earlier curative-intent treatment; the benefit of earlier targeted drugs in advanced disease is real and not counted.",
+   "measured_effect": {
+    "metric": "weekdays_to_test_initiation",
+    "before": 27.4,
+    "after": 0.95
+   },
+   "applies_to_share_note": "non-small cell lung cancer at any stage where the first treatment decision needs the result"
+  },
+  "evidence": [
+   {
+    "claim": "Resected EGFR-mutated NSCLC: 89 % vs 52 % alive and disease-free at 24 months with adjuvant osimertinib, so EGFR status is needed after surgery.",
+    "quote": "In the overall population, 89% of the patients in the osimertinib group (95% CI, 85 to 92) and 52% of those in the placebo group (95% CI, 46 to 58) were alive and disease-free at 24 months",
+    "url": "https://europepmc.org/article/MED/32955177",
+    "year": 2020,
+    "design": "randomised controlled trial (ADAURA)",
+    "n": 682,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Resected ALK-positive NSCLC: 93.8 % vs 63.0 % alive and disease-free at 2 years with adjuvant alectinib.",
+    "quote": "The percentage of patients alive and disease-free at 2 years was 93.8% in the alectinib group and 63.0% in the chemotherapy group among patients with stage II or IIIA disease",
+    "url": "https://europepmc.org/article/MED/38598794",
+    "year": 2024,
+    "design": "randomised controlled trial (ALINA)",
+    "n": 257,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Stage III EGFR-mutated NSCLC after chemoradiotherapy: median progression-free survival 39.1 vs 5.6 months with osimertinib.",
+    "quote": "the median progression-free survival was 39.1 months with osimertinib versus 5.6 months with placebo",
+    "url": "https://europepmc.org/article/MED/38828946",
+    "year": 2024,
+    "design": "randomised controlled trial (LAURA)",
+    "n": 216,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Stage III NSCLC after chemoradiotherapy: durvalumab lengthened progression-free survival, so PD-L1 and EGFR status are needed before consolidation.",
+    "quote": "The median progression-free survival from randomization was 16.8 months (95% confidence interval [CI], 13.0 to 18.1) with durvalumab versus 5.6 months",
+    "url": "https://europepmc.org/article/MED/28885881",
+    "year": 2017,
+    "design": "randomised controlled trial (PACIFIC)",
+    "n": 713,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Reflex protocol cut time to initiation of molecular testing from about 27 weekdays to under 1.",
+    "quote": "IT was lowest for reflex protocol orders (mean weekdays: 30.0 send-out, 27.4 in-house clinician-ordered, 0.95 reflex).",
+    "url": "https://doi.org/10.1093/jalm/jfad104",
+    "year": 2023,
+    "design": "retrospective review of three workflows, single US institution",
+    "n": 578,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Reflex testing also reduced care given without biomarker information.",
+    "quote": "with a reduction in nonbiomarker informed care (58.8% send-out, 19.5% in-house clinician-ordered, 11.5% reflex)",
+    "url": "https://doi.org/10.1093/jalm/jfad104",
+    "year": 2023,
+    "design": "retrospective review",
+    "n": 578,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "IHE lists suboptimal use of advanced biomarker testing among Finnish gaps.",
+    "quote": "It has also comparatively long waiting times to get a confirmed diagnosis, suboptimal use of advanced biomarker testing",
+    "url": "https://ihe.se/en/new-cancer-dashboard-for-finland/",
+    "year": 2026,
+    "design": "policy report summary (IHE)",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Reporting time itself did not change (11.1, 11.9, 11.4 weekdays); the gain is only in when the test starts.",
+    "url": "https://doi.org/10.1093/jalm/jfad104",
+    "year": 2023
+   }
+  ],
+  "cost": {
+   "eur_setup": 20000,
+   "eur_per_year": 150,
+   "scales_with": "per_patient",
+   "basis": "Setup: protocol and laboratory information system rule, 20 000 EUR. Per newly diagnosed NSCLC patient per year: about 150 EUR, assuming 10-15 % more panels run at roughly 1 000-1 500 EUR each. Panel price is an assumption.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.1"
+  ],
+  "owner_fi": "Patologian ylilääkäri yhdessä syöpätautien ylilääkärin kanssa",
+  "owner_en": "Chief pathologist together with the chief physician of oncology",
+  "prerequisite_en": "Agreed national testing panel; molecular pathology capacity (roadmap 3.5.1 names molecular diagnostics staffing as a need).",
+  "confidence": "medium",
+  "owner_level": "county",
+  "targets_stage": "drug_therapy",
+  "modality": null,
+  "first_step_en": "The chief pathologist and the chief oncologist sign a standing order: every new non-small cell lung cancer sample goes to EGFR, ALK and PD-L1 testing the day it is diagnosed.",
+  "first_step_fi": "Patologian ja syöpätautien ylilääkärit allekirjoittavat pysyväismääräyksen: jokaisesta uudesta ei-pienisoluisesta keuhkosyöpänäytteestä tehdään EGFR-, ALK- ja PD-L1-tutkimukset diagnoosipäivänä.",
+  "kpi": {
+   "indicator": "dx_to_biomarker_days",
+   "label_en": "Days from tissue diagnosis to complete biomarker result; days to first drug treatment",
+   "label_fi": "Päivät kudosdiagnoosista biomarkkerivastaukseen; päivät ensimmäiseen lääkehoitoon",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it from this month; target 10 working days or less (our target, no Finnish standard was found)",
+   "target": {
+    "type": "fixed",
+    "value": 10
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "liquid_biopsy_first",
+  "name_en": "Plasma ctDNA test before tissue diagnosis",
+  "name_fi": "Plasman ctDNA-testi ennen kudosdiagnoosia",
+  "step": "diagnosis",
+  "what_en": "For patients whose imaging already shows advanced lung cancer, a blood-based ctDNA genotyping test is sent at the first specialist visit, in parallel with the biopsy.",
+  "what_fi": "Kun kuvantaminen jo viittaa levinneeseen keuhkosyöpään, verestä tehtävä ctDNA-genotyypitys lähetetään ensikäynnillä rinnakkain koepalan kanssa.",
+  "effect": {
+   "metric": "days",
+   "value": 23,
+   "lo": 0,
+   "hi": 23,
+   "kind": "measured",
+   "basis": "Median referral -> treatment 39 days (IQR 27-52) vs 62 days (IQR 44-82) in a reference cohort; non-randomised. value = 62-39; lo = 0 because of the design. Applies only to advanced non-squamous NSCLC (60 % of enrolled patients in the trial).",
+   "applies_to_steps": [
+    "diagnosis",
+    "treatment"
+   ],
+   "applies_to_share_note": "advanced non-squamous NSCLC only"
+  },
+  "evidence": [
+   {
+    "claim": "Plasma-first genotyping was associated with 23 days shorter time to treatment.",
+    "quote": "The median time to treatment was 39 days (IQR, 27-52 days) for the ACCELERATE cohort vs 62 days (IQR, 44-82 days) for the reference cohort",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10369925/",
+    "year": 2023,
+    "design": "single-group non-randomised trial with reference cohort, Toronto",
+    "n": 150,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Single-centre, non-randomised; reference cohort is historical standard care, so part of the difference may be confounded.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10369925/",
+    "year": 2023
+   }
+  ],
+  "cost": {
+   "eur_setup": 10000,
+   "eur_per_year": 2000,
+   "scales_with": "per_patient",
+   "basis": "Setup: logistics and ordering, 10 000 EUR. About 2 000 EUR per tested patient (commercial ctDNA NGS assay); price is an assumption, no Finnish list price was opened.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.3"
+  ],
+  "owner_fi": "Syöpätautien ylilääkäri ja patologian/genetiikan laboratorio",
+  "owner_en": "Chief physician of oncology and the pathology/genetics laboratory",
+  "prerequisite_en": "Useful only where tissue genotyping is the bottleneck; needs a validated assay and a rule for acting on a plasma result.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": "drug_therapy",
+  "modality": null,
+  "first_step_en": "Agree with the laboratory which patients with suspected advanced cancer get a plasma test at the first visit.",
+  "first_step_fi": "Sovitaan laboratorion kanssa, keille levinnyttä syöpää epäiltäessä otetaan plasmanäyte ensikäynnillä.",
+  "kpi": {
+   "indicator": "dx_to_biomarker_days",
+   "label_en": "Days from first specialist visit to biomarker result",
+   "label_fi": "Päivät ensikäynnistä biomarkkerivastaukseen",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it",
+   "target": {
+    "type": "record"
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "nurse_navigator",
+  "name_en": "Nurse navigator for every suspected lung cancer",
+  "name_fi": "Hoitajakoordinaattori jokaiselle keuhkosyöpäepäilylle",
+  "step": "treatment",
+  "what_en": "A named nurse books and chases every test, calls the patient, prepares the MDT and removes waiting between steps from referral to first treatment.",
+  "what_fi": "Nimetty hoitaja varaa ja varmistaa tutkimukset, pitää yhteyttä potilaaseen, valmistelee MDT-kokouksen ja poistaa odotusta vaiheiden välistä lähetteestä ensimmäiseen hoitoon.",
+  "effect": {
+   "metric": "relative_days",
+   "value": 0.15,
+   "lo": 0.0,
+   "hi": 0.3,
+   "kind": "assumption",
+   "basis": "The opened scoping review reports times achieved under navigation (diagnosis -> treatment under 60 days; abnormal imaging -> treatment 38 days) but no pooled difference versus control. 15 % (0-30 %) of the step is our assumption.",
+   "applies_to_steps": [
+    "referral",
+    "diagnosis",
+    "treatment"
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "Scoping review of 13 studies: navigation shortened diagnosis-to-treatment waits.",
+    "quote": "CPN interventions accelerated services by reducing waiting times from diagnosis to first treatment to <60 days, including biopsy to treatment in 2 days, abnormal imaging to treatment in 38 days",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+    "year": 2026,
+    "design": "scoping review, 13 studies, several cancers including lung",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "No pooled effect size; included studies are mostly retrospective cohorts in other health systems.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+    "year": 2026
+   }
+  ],
+  "cost": {
+   "eur_setup": 5000,
+   "eur_per_year": 60000,
+   "scales_with": "county",
+   "basis": "Yearly: 1.0 nurse (60 000 EUR) per county, enough for roughly 150 new lung cancer patients a year; large counties need more. Setup: training, 5 000 EUR.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.2"
+  ],
+  "owner_fi": "Keuhkosairauksien ja syöpätautien osastonhoitajat; ylihoitaja",
+  "owner_en": "Head nurses of pulmonology and oncology; director of nursing",
+  "prerequisite_en": "Authority to book across radiology, pulmonology, pathology and oncology calendars.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": "time_to_treatment",
+  "modality": null,
+  "first_step_en": "Name one nurse who books every test for each new suspected lung cancer patient and calls the patient with the dates.",
+  "first_step_fi": "Nimetään hoitaja, joka varaa jokaisen uuden keuhkosyöpäepäilyn tutkimukset ja ilmoittaa ajat potilaalle.",
+  "kpi": {
+   "indicator": "dx_to_treatment_days",
+   "label_en": "Days from diagnosis to start of treatment (median)",
+   "label_fi": "Päivät diagnoosista hoidon alkuun (mediaani)",
+   "baseline_from": "care_path.time_to_treatment",
+   "target_rule_en": "at or below the national median; published for the collaborative area, so the county must start reporting its own",
+   "target": {
+    "type": "national"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "ldct_screening",
+  "name_en": "Low-dose CT screening for long-term heavy smokers",
+  "name_fi": "Matala-annos-TT-seulonta pitkään tupakoineille",
+  "step": "patient",
+  "what_en": "Invite 50-74-year-old long-term heavy smokers to low-dose CT with smoking cessation support, so cancers are found before symptoms. Finland is piloting this in 2026-2028.",
+  "what_fi": "Kutsutaan 50–74-vuotiaat pitkään ja paljon tupakoineet matala-annos-TT-kuvaukseen ja tupakkavieroitukseen, jolloin syöpä löytyy ennen oireita. Suomessa pilotti 2026–2028.",
+  "effect": {
+   "metric": "mortality_rr",
+   "value": 0.84,
+   "lo": 0.76,
+   "hi": 0.92,
+   "kind": "measured",
+   "basis": "Pooled relative rate of lung cancer death, nine randomised trials. It applies to the people screened. Deaths avoided per year = people screened (1 000 per 100 000 residents: the same people the cost pays for) x their lung cancer death rate without screening (3.30 per 1 000 person-years, NELSON control arm) x (1 - 0.84) = 0.53 per 100 000 residents. At about 320 000 EUR a year per 100 000 residents that is roughly 600 000 EUR per death avoided.",
+   "participants_per_100k": 1000,
+   "baseline_deaths_per_1000_person_years": 3.3,
+   "deaths_avoided_per_100k_residents": 0.53
+  },
+  "evidence": [
+   {
+    "claim": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+    "quote": "The meta-analysis indicated a significant reduction in lung cancer mortality with a pooled overall relative rate of 0.84 (95% CI 0.76-0.92) from nine eligible trials.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+    "year": 2021,
+    "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+    "n": 3968,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "NELSON control arm: 3.30 lung cancer deaths per 1 000 person-years among unscreened heavy smokers (the baseline risk used here).",
+    "quote": "lung-cancer mortality was 2.50 deaths per 1000 person-years and 3.30 deaths per 1000 person-years, respectively",
+    "url": "https://doi.org/10.1056/NEJMoa1911793",
+    "year": 2020,
+    "design": "randomised controlled trial, Netherlands and Belgium",
+    "n": 15789,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "NELSON: 24 % lower lung cancer mortality in men at 10 years.",
+    "quote": "The cumulative rate ratio for death from lung cancer at 10 years was 0.76 (95% confidence interval [CI], 0.61 to 0.94; P = 0.01) in the screening group as compared with the control group",
+    "url": "https://doi.org/10.1056/NEJMoa1911793",
+    "year": 2020,
+    "design": "randomised controlled trial, Netherlands and Belgium",
+    "n": 15789,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Finnish Oulu pilot: 5 of 6 screen-detected cancers were stage I.",
+    "quote": "participants were detected. Five of the detected cases (83%) were detected in stage I, while one case was",
+    "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+    "year": 2026,
+    "design": "pilot study (LDCT-SC-FI, Oulu, 200 participants) as cited by IHE",
+    "n": 200,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Finnish national pilot: 1 200 long-term smokers from five regions.",
+    "quote": "Pilottiin valikoidaan 1 200 pitkään tupakoinutta henkilöä Uudenmaan, Pirkanmaan, Pohjanmaan, Pohjois-Pohjanmaan ja Varsinais-Suomen alueilta.",
+    "url": "https://yle.fi/a/74-20205604",
+    "year": 2026,
+    "design": "news report on national pilot",
+    "n": 1200,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "NHS targeted lung health checks: about 76 % of cancers found at stage I-II.",
+    "quote": null,
+    "url": "https://www.england.nhs.uk/2024/11/thousands-of-cancers-caught-early-through-nhs-lung-checks/",
+    "year": 2024,
+    "design": "programme statistics (NHS England press release)",
+    "n": null,
+    "verified": false,
+    "access": "blocked",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "UKLS alone did not reach significance: relative rate 0.65 (0.41-1.02), p=0.062.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+    "year": 2021
+   }
+  ],
+  "cost": {
+   "eur_setup": 100000,
+   "eur_per_year": 300000,
+   "scales_with": "per_100k_pop",
+   "basis": "Per 100 000 residents per year: assume 2 000 eligible, 50 % take part -> 1 000 scans x 250 EUR (scan, reading, invitation) = 250 000; follow-up scans for about 10 % = 25 000; 0.4 coordinator nurse = 24 000; total about 300 000 EUR. Setup 100 000 EUR for invitation system and nodule protocol. Eligible numbers and prices are assumptions; the Finnish pilot 2026-2028 will give real ones. The roadmap gives no budget (\"arviota ei tässä vaiheessa esitetä\").",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.3.4",
+  "roadmap_measures_related": [
+   "2.3.1",
+   "2.3.2"
+  ],
+  "owner_fi": "STM ja Palko (päätös), Suomen Syöpärekisteri (ohjaus), hyvinvointialue (toteutus)",
+  "owner_en": "Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery)",
+  "prerequisite_en": "A national decision (Ministry, Palko). A county cannot start a screening programme alone, so it is never bought from a county budget. Needs smoking-history data to find eligible people, and CT and thoracic surgery capacity for the cancers found. Benefits arrive after years, not within a budget year.",
+  "confidence": "high",
+  "owner_level": "national",
+  "targets_stage": null,
+  "modality": null,
+  "first_step_en": "Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site.",
+  "first_step_fi": "Ei hyvinvointialueen päätös. Pyydetään STM:ltä ja Palkolta aikataulu pilotin 2026–2028 jälkeen ja tarjoudutaan pilottialueeksi.",
+  "kpi": {
+   "indicator": "screening_participants",
+   "label_en": "People screened per year; share of cancers found at stage I",
+   "label_fi": "Seulottuja vuodessa; I-asteessa todettujen osuus",
+   "baseline_from": null,
+   "target_rule_en": "set by the national programme after the pilot",
+   "target": {
+    "type": "record"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "symptom_campaign",
+  "name_en": "Symptom awareness campaign (cough over three weeks)",
+  "name_fi": "Oiretietoisuuskampanja (yli kolme viikkoa jatkunut yskä)",
+  "step": "patient",
+  "what_en": "A campaign on the English \"Be Clear on Cancer\" model telling people with a persistent cough to see a doctor. Weak evidence: in England the share found at stage I rose during the campaign months and faded within months, so it has to be repeated every year, and the extra GP visits and chest X-rays cost several times the advertising.",
+  "what_fi": "Englannin Be Clear on Cancer -mallin mukainen kampanja, joka ohjaa pitkittyneestä yskästä kärsivät lääkäriin. Näyttö on heikko: Englannissa varhaisvaiheessa todettujen osuus nousi kampanjakuukausina ja palasi ennalleen muutamassa kuukaudessa, joten kampanja on toistettava vuosittain, ja lisäkäynnit ja keuhkokuvat maksavat moninkertaisesti mainontaan verrattuna.",
+  "effect": {
+   "metric": "stage_shift_pp",
+   "value": 0.8,
+   "lo": 0.0,
+   "hi": 1.6,
+   "kind": "estimated",
+   "basis": "Average over a year, not the campaign months. Measured: the share of NSCLC diagnosed at stage I rose by 3.1 points (14.1 % to 17.3 %) during the campaign period, and stayed higher only \"for several months after the campaign (until October)\". One campaign a year: 3.1 points for about 3 of 12 months = 0.8 points averaged over the year; upper bound 1.6 if the full effect lasted 6 months; lower bound 0 because it is a before-after comparison and the regional pilot did not reach significance.",
+   "measured_during_campaign_pp": 3.1,
+   "months_at_full_effect": 3,
+   "fades": true
+  },
+  "evidence": [
+   {
+    "claim": "English national lung campaign: stage I share of NSCLC +3.1 percentage points.",
+    "quote": "the proportion of NSCLCs diagnosed at stage I increased by 3.1 percentage points during the campaign period, (from 14.1% to 17.3%, P &lt;0.001; a proportional increase of 22%)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+    "year": 2015,
+    "design": "before-after evaluation of national campaign, England",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "The patient interval is the longest single step in Finland.",
+    "quote": "Tutkimuksen perusteella potilaasta itsestään johtuva viive on yli 50 päivää, perusterveydenhuollossa kuluu 41 päivää ja erikoissairaanhoidossa 58 päivää.",
+    "url": "https://yle.fi/a/74-20242733",
+    "year": 2026,
+    "design": "journalism citing unpublished four-city study",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Stated reasons for late presentation: cost and fear.",
+    "quote": "syöpäjärjestöjen kyselyn mukaan moni välttelee lääkärin menoa taloudellisista syistä tai sen takia, että ajatus syövän löytämisestä pelottaa",
+    "url": "https://yle.fi/a/74-20242733",
+    "year": 2026,
+    "design": "survey by cancer organisations as reported by Yle",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "The stage effect faded within months of the campaign.",
+    "quote": "The proportion of NSCLC cases diagnosed at stage I appeared to be higher for several months after the campaign (until October)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+    "year": 2015,
+    "design": "before-after evaluation of national campaign, England",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "The campaign raised GP chest X-ray requests by 20 %: the downstream workload is the main cost.",
+    "quote": "a change in GP behaviour with a 20% increase in chest X-ray (CXR) requests",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+    "year": 2015,
+    "design": "regional pilot evaluation, England",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Stage shift in the regional pilot did not reach significance; effect is a before-after comparison and faded some months after the campaign.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4453621/",
+    "year": 2015
+   }
+  ],
+  "cost": {
+   "eur_setup": 0,
+   "eur_per_year": 69600,
+   "scales_with": "per_100k_pop",
+   "basis": "Per 100 000 residents per year. Advertising: 7 100 EUR (roadmap measure 1.3.2 budgets 400 000 EUR nationally; 400 000 / 5.6 million x 100 000). Extra health-care use during and after the campaign, our assumption: 300 extra GP visits x 125 EUR = 37 500; 250 extra chest X-rays x 60 EUR = 15 000; 50 extra CT scans x 200 EUR = 10 000. Total 69 600 EUR, repeated every year because the effect fades. Only the advertising figure comes from a source.",
+   "source_url": "res/roadmap/r.txt#L1644",
+   "kind": "assumption"
+  },
+  "roadmap_measure": "1.3.2",
+  "roadmap_measures_related": [],
+  "owner_fi": "FICAN ja Syöpäjärjestöt (kansallinen kampanja); hyvinvointialueen viestintä ja perusterveydenhuolto (alueellinen toteutus)",
+  "owner_en": "FICAN and the Cancer Society (national campaign); county communications and primary care (local delivery)",
+  "prerequisite_en": "Primary care must be able to see the extra patients quickly; in England urgent referrals rose during the campaign.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": "staged",
+  "modality": null,
+  "first_step_en": "Before buying advertising, check that health centres can see the extra patients within a week.",
+  "first_step_fi": "Ennen mainonnan ostamista varmistetaan, että terveyskeskukset pystyvät ottamaan lisäpotilaat vastaan viikon sisällä.",
+  "kpi": {
+   "indicator": "stage_1_share_pct",
+   "label_en": "Share of cancers found at stage I",
+   "label_fi": "I-asteessa todettujen osuus",
+   "baseline_from": null,
+   "target_rule_en": "not published per county (stage is missing for nearly half of patients): record it",
+   "target": {
+    "type": "record"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "nssc_rapid_dx_centre",
+  "name_en": "Rapid diagnostic centre for non-specific symptoms",
+  "name_fi": "Diagnostinen keskus epämääräisille syöpäoireille",
+  "step": "primary",
+  "what_en": "One referral route for patients with serious but non-specific symptoms (weight loss, fatigue, abnormal bloods): a small team does bloods, CT and review within days, on the Danish NSSC pathway model.",
+  "what_fi": "Yksi lähetereitti potilaille, joilla on vakavia mutta epämääräisiä oireita (laihtuminen, väsymys, poikkeavat verikokeet): pieni tiimi tekee verikokeet, TT:n ja arvion päivien sisällä Tanskan mallin mukaan.",
+  "effect": {
+   "metric": "relative_days",
+   "value": 0.1,
+   "lo": 0.0,
+   "hi": 0.25,
+   "kind": "assumption",
+   "basis": "The opened Danish study is descriptive (8 % of 314 referrals had cancer) and gives no time comparison. 10 % (0-25 %) of the primary care interval is our assumption. The Lancet Primary Care 2025 paper named in the brief could not be opened."
+  },
+  "evidence": [
+   {
+    "claim": "Danish diagnostic centre: 8 % of referrals with non-specific symptoms had cancer.",
+    "quote": "Of total referrals, 25 (8%) received a malignant diagnosis, 20 (6%) a non-malignant but clinically relevant diagnosis with initiation of treatment",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10773629/",
+    "year": 2024,
+    "design": "prospective descriptive study, one Danish diagnostic centre",
+    "n": 314,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Lancet Primary Care 2025 evaluation of rapid diagnostic centres.",
+    "quote": null,
+    "url": "https://www.thelancet.com/journals/lanprc/article/PIIS3050-5143(25)00019-6/fulltext",
+    "year": 2025,
+    "design": "not opened (HTTP 403)",
+    "n": null,
+    "verified": false,
+    "access": "blocked_403",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "81 % of referrals had no serious new condition; no evidence opened on days saved or stage shift.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10773629/",
+    "year": 2024
+   }
+  ],
+  "cost": {
+   "eur_setup": 50000,
+   "eur_per_year": 195000,
+   "scales_with": "county",
+   "basis": "Yearly: 0.5 internist/GP (75 000) + 1.0 nurse (60 000) + about 300 CT scans x 200 EUR (60 000) = 195 000 EUR. Setup 50 000 EUR.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.5.2",
+  "roadmap_measures_related": [
+   "3.1.2"
+  ],
+  "owner_fi": "Perusterveydenhuollon johtava lääkäri ja sisätautien/yleislääketieteen ylilääkäri",
+  "owner_en": "Chief physician of primary care and chief of internal/general medicine",
+  "prerequisite_en": "Standard referral criteria (roadmap 2.5.2) and guaranteed imaging slots.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": null,
+  "modality": null,
+  "first_step_en": "Name the unit and the doctor who take patients with unexplained weight loss or fatigue within a week.",
+  "first_step_fi": "Nimetään yksikkö ja lääkäri, joka ottaa selittämättömästä laihtumisesta tai väsymyksestä kärsivät potilaat vastaan viikon sisällä.",
+  "kpi": {
+   "indicator": "referral_to_diagnosis_days",
+   "label_en": "Days from referral to diagnosis",
+   "label_fi": "Päivät lähetteestä diagnoosiin",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it",
+   "target": {
+    "type": "record"
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "gp_capacity_econsult",
+  "name_en": "Faster access to a doctor in primary care, with pulmonologist e-consultation",
+  "name_fi": "Nopeampi pääsy lääkärille perusterveydenhuollossa ja keuhkolääkärin sähköinen konsultaatio",
+  "step": "primary",
+  "what_en": "Extra doctor capacity and continuity (personal doctor model) so a patient with lung symptoms meets a doctor within a week, plus a same-week electronic consultation line from GP to pulmonologist.",
+  "what_fi": "Lisää lääkäriresurssia ja hoidon jatkuvuutta (omalääkärimalli), jotta keuhko-oireinen pääsee lääkärille viikossa, sekä yleislääkärin ja keuhkolääkärin välinen sähköinen konsultaatio saman viikon aikana.",
+  "effect": {
+   "metric": "days",
+   "value": 9,
+   "lo": 0,
+   "hi": 12,
+   "kind": "assumption",
+   "basis": "Survey mode for getting a health-centre appointment with lung cancer symptoms: Finland 14 days vs 2-7 days in the other Nordic countries. Closing that gap saves 7-12 days; value = midpoint, lo = 0. No trial opened; e-consultation effect not quantified."
+  },
+  "evidence": [
+   {
+    "claim": "Appointment wait 14 days in Finland vs 2-7 days in other Nordics.",
+    "quote": "To secure an appointment at the health center for patients with LC symptoms (days)       14        2–7       2–7      2–7       2–7",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "year": 2025,
+    "design": "survey of healthcare professionals + expert workshops",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "National data: 35 % waited over 14 days for a primary care doctor in 2023.",
+    "quote": "In 2023, 35% of patients waited longer than 14 days to see a doctor in primary care, and 14% waited for 1–3 months",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "year": 2025,
+    "design": "national statistics cited in paper",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Only 40-60 % of Finnish patients meet a doctor at first contact.",
+    "quote": "Mode of reported share of patients meeting a doctor in the first healthcare contact    40–60%    80–100%    100%      100%     100%",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "year": 2025,
+    "design": "survey",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Nordic experts in the same study agreed that a few weeks difference in waiting times does not explain the survival difference.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "year": 2025
+   }
+  ],
+  "cost": {
+   "eur_setup": 20000,
+   "eur_per_year": 145000,
+   "scales_with": "per_100k_pop",
+   "basis": "Per 100 000 residents per year: 1.0 extra GP (130 000 EUR) + 0.1 pulmonologist for e-consultations (15 000 EUR). Setup 20 000 EUR. The roadmap funds this through the national personal doctor programme (measure 2.5.1), no separate budget.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "2.5.1",
+  "roadmap_measures_related": [
+   "2.5.2",
+   "3.5.3"
+  ],
+  "owner_fi": "Perusterveydenhuollon johtava lääkäri; STM (omalääkäriohjelma)",
+  "owner_en": "Chief physician of primary care; Ministry of Social Affairs and Health (personal doctor programme)",
+  "prerequisite_en": "Doctors to hire; benefit is not lung-specific, so most of the value lies outside this model.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": null,
+  "modality": null,
+  "first_step_en": "Open an e-consultation line from health centre doctors to a pulmonologist with an answer within two working days.",
+  "first_step_fi": "Avataan terveyskeskuslääkäreille e-konsultaatio keuhkolääkärille; vastaus kahden arkipäivän kuluessa.",
+  "kpi": {
+   "indicator": "primary_care_wait_over_7d_pct",
+   "label_en": "Share of primary care visits that waited over 7 days",
+   "label_fi": "Yli 7 päivää odottaneiden osuus perusterveydenhuollon käynneistä",
+   "baseline_from": null,
+   "target_rule_en": "at or below the national share",
+   "target": {
+    "type": "national"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "video_mdt_stage1_3",
+  "name_en": "Weekly video review of every stage I-III patient with the university hospital's specialists",
+  "name_fi": "Viikoittainen etäkokous, jossa yliopistosairaalan erikoislääkärit käyvät läpi jokaisen I–III-asteen potilaan",
+  "step": "treatment",
+  "what_en": "Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+  "what_fi": "Jokainen potilas, jonka syöpä ei ole levinnyt (aste I–III), käsitellään etäyhteydellä yliopistosairaalan keuhkosyöpätyöryhmässä (kirurgi, sädehoitolääkäri, onkologi) ennen kuin parantavasta hoidosta luovutaan. Nyt keskussairaala voi päättää asiasta yksin.",
+  "effect": {
+   "metric": "curative_share_pp",
+   "value": 1.5,
+   "lo": 0.0,
+   "hi": 3.0,
+   "kind": "assumption",
+   "basis": "Percentage points added to the share of all lung cancer patients who get curative-intent treatment. No randomised trial exists. In one English district hospital the resection rate rose by 30 % (relative) after a video MDT with the thoracic surgeon started (62 patients a year, before-after). We count a quarter of that on a curative share of about 20 %: 0.25 x 0.30 x 20 = 1.5 points. Upper bound: half of it (3.0). Lower bound 0: an Australian cohort found no difference in surgery between MDT and non-MDT patients, and a systematic review found little evidence that MDT meetings improve outcomes. Counted only in counties that do not host a university hospital.",
+   "applies_to": "counties without a university hospital"
+  },
+  "evidence": [
+   {
+    "claim": "A video MDT with the thoracic surgeon in a district hospital: resection rate up 30 % (relative).",
+    "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine",
+    "url": "https://europepmc.org/article/MED/15237512",
+    "year": 2004,
+    "design": "before-after study, one district general hospital, England",
+    "n": 62,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Same study: time from clinic to surgery fell from 69 to 54 days.",
+    "quote": "the mean time from first being seen in the clinic to surgery was reduced from 69 to 54 days",
+    "url": "https://europepmc.org/article/MED/15237512",
+    "year": 2004,
+    "design": "before-after study, one district general hospital, England",
+    "n": 62,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "MDT discussion doubled the share who got radiotherapy (66 % vs 33 %) but not surgery.",
+    "quote": "Treatment receipt for MDT patients versus non-MDT patients was 12% versus 13%, respectively, for surgery (P value nonsignificant); 66% versus 33%, respectively, for radiotherapy (P < .001)",
+    "url": "https://europepmc.org/article/MED/21523766",
+    "year": 2011,
+    "design": "cohort, South Western Sydney, Australia",
+    "n": 988,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "After a thoracic multidisciplinary conference started, guideline-concordant treatment rose from 81 % to 97 % and days to treatment fell from 29 to 17.",
+    "quote": "adherence to the National Comprehensive Cancer Network (NCCN) treatment guidelines (81%/97%: p<0.0001) all increased significantly while mean days from diagnosis to treatment significantly decreased (29/17: p<0.0001)",
+    "url": "https://europepmc.org/article/MED/20206544",
+    "year": 2010,
+    "design": "before-after study, one US centre (535 patients before, 687 after)",
+    "n": 1222,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Whether Finnish patients are discussed in an MDT cannot be measured from national registers today.",
+    "quote": "eikä hoitoilmoitusrekisteriin kirjattujen tietojen perusteella voida arvioida MDT-toiminnan toteutumista",
+    "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+    "year": 2026,
+    "design": "registry report press release",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "MDT discussion did not change the share operated (12 % vs 13 %) and did not influence survival (Boxer 2011).",
+    "url": "https://europepmc.org/article/MED/21523766",
+    "year": 2011
+   },
+   {
+    "claim": "Systematic review: MDT meetings change management plans, but there is little evidence that they improve clinical outcomes (Pillay 2016).",
+    "url": "https://europepmc.org/article/MED/26643552",
+    "year": 2016
+   }
+  ],
+  "cost": {
+   "eur_setup": 30000,
+   "eur_per_year": 45000,
+   "scales_with": "county",
+   "basis": "Setup: video MDT room and image sharing with the university hospital, 30 000 EUR. Yearly: 0.3 coordinator nurse (18 000), 0.1 specialist doctor to prepare cases (15 000), university hospital MDT time bought (12 000). All assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.3",
+   "3.2.2"
+  ],
+  "owner_fi": "Keuhkosairauksien ylilääkäri; yliopistosairaalan keuhkosyövän MDT-vastaava",
+  "owner_en": "Chief physician of pulmonology; lead of the university hospital lung MDT",
+  "prerequisite_en": "The university hospital agrees a weekly video slot. Roadmap 3.1.2 expects regional pathway responsibilities to be agreed in collaborative-area contracts by 2028.",
+  "confidence": "low",
+  "owner_level": "collaborative_area",
+  "targets_stage": "curative",
+  "modality": "any",
+  "first_step_en": "Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there.",
+  "first_step_fi": "Pyydetään yliopistosairaalalta kiinteä viikoittainen etäkokousaika ja listataan viime kuussa todetut I–III-asteen potilaat, joita siellä ei käsitelty.",
+  "kpi": {
+   "indicator": "curative_intent_pct",
+   "label_en": "Share of patients who get treatment that aims to cure",
+   "label_fi": "Parantavaan hoitoon ohjautuneiden osuus",
+   "baseline_from": "care_path.curative",
+   "target_rule_en": "county share today plus the points this measure is expected to add; never above the best county",
+   "target": {
+    "type": "plus_gain"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "surgeon_second_opinion",
+  "name_en": "A chest surgeon reviews every decision not to operate",
+  "name_fi": "Thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta",
+  "step": "treatment",
+  "what_en": "A thoracic surgeon from the university hospital sits in the county lung meeting every week and gives a second opinion before a stage I-II patient is refused surgery. Counties without their own thoracic surgeon decide about surgery without one today.",
+  "what_fi": "Yliopistosairaalan thoraxkirurgi osallistuu viikoittain alueen keuhkosyöpäkokoukseen ja antaa toisen arvion ennen kuin I–II-asteen potilas jätetään leikkaamatta. Alueet, joilla ei ole omaa thoraxkirurgia, tekevät nyt leikkauspäätökset ilman kirurgia.",
+  "effect": {
+   "metric": "curative_share_pp",
+   "value": 1.2,
+   "lo": 0.0,
+   "hi": 2.4,
+   "kind": "assumption",
+   "basis": "Percentage points added to the share of all patients treated with curative intent, through more operations. In England, units where a surgeon attended more than two-thirds of the lung MDT meetings operated on 14.4 % of patients against 12.0 % elsewhere: a difference of 2.4 points (observational, units differ in other ways). We count half (1.2); upper bound the full difference (2.4); lower bound 0. Counted only in counties that do not host a university hospital.",
+   "applies_to": "counties without a university hospital"
+  },
+  "evidence": [
+   {
+    "claim": "Units where surgeons attended more than two-thirds of lung MDT meetings operated on 14.4 % vs 12.0 %.",
+    "quote": "where surgeons were present in more than two-thirds of the lung cancer multidisciplinary team meetings (14.4% versus 12.0%, p = 0.046)",
+    "url": "https://europepmc.org/article/MED/23242439",
+    "year": 2013,
+    "design": "retrospective observational study, national audit linked to surgeon workforce data, England 2008-2009",
+    "n": null,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Units that added specialist thoracic surgeons raised their resection rate more (relative rise 66 % vs 19 %).",
+    "quote": "Four units increased their number of specialist thoracic surgeons and had a significantly higher increase in resection rate than units without expansion (relative rise 66.3% versus 19.2%; p = 0.022).",
+    "url": "https://europepmc.org/article/MED/23242439",
+    "year": 2013,
+    "design": "national survey linked to audit data, England",
+    "n": null,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Patients first seen in a thoracic surgical centre were 51 % more likely to be operated (17 % vs 13 %).",
+    "quote": "patients with NSCLC first seen in thoracic surgical centres (27% of the cohort) were 51% more likely to have surgery than those seen in non-surgical centres (adjusted OR 1.51, 95% CI 1.16 to 1.97). Resection rates varied from 13% to 17% between non-surgical and thoracic surgical centres.",
+    "url": "https://europepmc.org/article/MED/21785158",
+    "year": 2011,
+    "design": "national audit cohort, England",
+    "n": 34513,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+    "quote": "Among potentially operable patients, 50.6% were deemed ineligible for surgery due to various factors, including poor pulmonary or cardiac function, comorbidities, or localised tumour spread.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+    "year": 2025,
+    "design": "retrospective five-hospital cohort, Finland",
+    "n": 545,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Observational comparisons of hospitals: units where surgeons attend differ in other ways too. In an Australian cohort, patients discussed in an MDT were not operated more often than others (12 % vs 13 %, Boxer 2011).",
+    "url": "https://europepmc.org/article/MED/21523766",
+    "year": 2011
+   }
+  ],
+  "cost": {
+   "eur_setup": 5000,
+   "eur_per_year": 40000,
+   "scales_with": "county",
+   "basis": "Yearly: 0.2 thoracic surgeon bought from the university hospital (0.2 x 150 000 = 30 000) and 10 000 for case preparation. Setup 5 000. All assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.1"
+  ],
+  "owner_fi": "Keuhkosairauksien ylilääkäri; yliopistosairaalan thoraxkirurgian ylilääkäri",
+  "owner_en": "Chief physician of pulmonology; chief of thoracic surgery at the university hospital",
+  "prerequisite_en": "Surgeon time at the university hospital (there are few thoracic surgeons; roadmap 3.5.1 names staffing as a need) and operating capacity for the extra patients.",
+  "confidence": "medium",
+  "owner_level": "collaborative_area",
+  "targets_stage": "surgery",
+  "modality": "surgery",
+  "first_step_en": "Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look.",
+  "first_step_fi": "Sovitaan yliopistosairaalan kanssa, että thoraxkirurgi osallistuu viikoittaiseen keuhkosyöpäkokoukseen, ja lähetetään viime neljänneksen leikkaamatta jääneet I–II-asteen potilaat uuteen arvioon.",
+  "kpi": {
+   "indicator": "surgery_pct",
+   "label_en": "Share of patients operated",
+   "label_fi": "Leikattujen osuus",
+   "baseline_from": "care_path.surgery",
+   "target_rule_en": "county share today plus the points this measure is expected to add",
+   "target": {
+    "type": "plus_gain"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "sbrt_pathway",
+  "name_en": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
+  "name_fi": "Stereotaktinen sädehoito varhaisvaiheen potilaille, joita ei voida leikata",
+  "step": "treatment",
+  "what_en": "Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
+  "what_fi": "Jokainen I-asteen potilas, joka ei kestä leikkausta, lähetetään stereotaktiseen sädehoitoon (3–8 käyntiä, ei nukutusta) sen sijaan, että hän jää hoidotta. Hoitoa annetaan kaikissa yliopistosairaaloissa; osalta alueista puuttuu lähettämisen sääntö.",
+  "effect": {
+   "metric": "curative_share_pp",
+   "value": 0.8,
+   "lo": 0.0,
+   "hi": 1.6,
+   "kind": "assumption",
+   "basis": "Percentage points added to the share of all patients treated with curative intent, through radiotherapy. In the Netherlands the share of elderly stage I patients left untreated fell by 7 points nationally (and radiotherapy use rose 16 points in one province) when stereotactic radiotherapy became available. Elderly stage I patients are roughly 8 % of all lung cancer patients (our assumption; no county table by stage and age is published): 7 to 16 points x 8 % = 0.6 to 1.3 points. Finland already gives this treatment, so the gain exists only where a county refers fewer patients than the rest; we use 0.8 with bounds 0 and 1.6."
+  },
+  "evidence": [
+   {
+    "claim": "Netherlands, elderly stage I patients: 7 points fewer untreated after stereotactic radiotherapy became available; surgery unchanged.",
+    "quote": "Between period A and C, there was a 7% absolute reduction in patients going untreated, corresponding to an 8-month improvement in median survival (P < 0.001). Radiotherapy utilization increased from 31% to 38%, whereas surgical utilization remained constant (37%).",
+    "url": "https://europepmc.org/article/MED/22553198",
+    "year": 2012,
+    "design": "population registry, Netherlands, elderly stage I patients",
+    "n": 4605,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "North Holland: radiotherapy use in elderly stage I patients rose 16 points and fewer went untreated.",
+    "quote": "SBRT introduction was associated with a 16% absolute increase in RT use, a decline in the proportion of untreated elderly patients, and an improvement in OS.",
+    "url": "https://europepmc.org/article/MED/21041709",
+    "year": 2010,
+    "design": "population registry, North Holland, patients aged 75+",
+    "n": 875,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Medically inoperable stage I patients treated with stereotactic radiotherapy: 40 % alive at five years.",
+    "quote": "Disease-free survival and overall survival at 5 years was 25.5% (95% CI, 14.9%-37.4%) and 40.0% (95% CI, 27.1%-52.5%), respectively",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6117101/",
+    "year": 2018,
+    "design": "single-arm phase 2 trial (RTOG 0236)",
+    "n": 55,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Untreated stage I patients: 6 % alive at five years.",
+    "quote": "Five-year OS for untreated stage I NSCLC was 6% overall, 9% for T1 tumors, and 11% for patients who refused surgical resection.",
+    "url": "https://europepmc.org/article/MED/17505036",
+    "year": 2007,
+    "design": "population registry, California",
+    "n": 1432,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "No randomised comparison of stereotactic radiotherapy with no treatment exists; the Dutch figures are before-after changes in a registry, and the patients in the trial were selected.",
+    "url": "https://europepmc.org/article/MED/22553198",
+    "year": 2012
+   }
+  ],
+  "cost": {
+   "eur_setup": 10000,
+   "eur_per_year": 200,
+   "scales_with": "per_patient",
+   "basis": "Per newly diagnosed lung cancer patient per year: about 1 extra treatment course per 100 patients x 6 000 EUR = 60 EUR, lung function tests and PET-CT for the 5 in 100 assessed x 1 500 EUR = 75 EUR, referral coordination 65 EUR. Setup: referral rule and training, 10 000 EUR. Prices are assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.1.4"
+  ],
+  "owner_fi": "Syöpätautien ylilääkäri; yliopistosairaalan sädehoidon ylilääkäri",
+  "owner_en": "Chief physician of oncology; chief of radiotherapy at the university hospital",
+  "prerequisite_en": "Radiotherapy slots at the university hospital and PET-CT for staging.",
+  "confidence": "medium",
+  "owner_level": "county",
+  "targets_stage": "radiotherapy",
+  "modality": "radiotherapy",
+  "first_step_en": "Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week.",
+  "first_step_fi": "Kirjataan lähettämisen sääntö: jokainen I-asteen potilas, jota ei hyväksytä leikkaukseen, lähetetään samalla viikolla stereotaktiseen sädehoitoon.",
+  "kpi": {
+   "indicator": "curative_intent_pct",
+   "label_en": "Share of patients who get treatment that aims to cure",
+   "label_fi": "Parantavaan hoitoon ohjautuneiden osuus",
+   "baseline_from": "care_path.curative",
+   "target_rule_en": "county share today plus the points this measure is expected to add; never above the best county",
+   "target": {
+    "type": "plus_gain"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "prehab_fitness_assessment",
+  "name_en": "Fitness test and training before anyone is ruled too frail for curative treatment",
+  "name_fi": "Kuntotesti ja esikuntoutus ennen kuin ketään pidetään liian huonokuntoisena parantavaan hoitoon",
+  "step": "treatment",
+  "what_en": "Before a stage I-III patient is judged too frail, they get an exercise test, a geriatric assessment if over 75, and four weeks of supervised exercise, breathing training and help to stop smoking. Then the decision is made again.",
+  "what_fi": "Ennen kuin I–III-asteen potilas todetaan liian huonokuntoiseksi, hänelle tehdään rasituskoe, yli 75-vuotiaalle geriatrinen arvio ja järjestetään neljän viikon ohjattu liikunta, hengitysharjoittelu ja tupakkavieroitus. Sen jälkeen päätös tehdään uudelleen.",
+  "effect": {
+   "metric": "curative_share_pp",
+   "value": 0.5,
+   "lo": 0.0,
+   "hi": 1.5,
+   "kind": "assumption",
+   "basis": "Percentage points added to the share of all patients treated with curative intent. No opened study measures how many more patients become fit for curative treatment. In five Finnish hospitals half (50.6 %) of potentially operable patients were judged not fit for surgery. If potentially operable patients are about 20 % of all patients and 1 in 20 of those refused became eligible: 20 x 0.506 x 0.05 = 0.5 points; upper bound 3 in 20 (1.5); lower bound 0. What trials do show is fewer complications after surgery, not more patients treated."
+  },
+  "evidence": [
+   {
+    "claim": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+    "quote": "Among potentially operable patients, 50.6% were deemed ineligible for surgery due to various factors, including poor pulmonary or cardiac function, comorbidities, or localised tumour spread.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+    "year": 2025,
+    "design": "retrospective five-hospital cohort, Finland",
+    "n": 545,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Exercise training before lung surgery more than halves lung complications after it.",
+    "quote": "Preoperative exercise training results in a large reduction in the risk of developing a postoperative pulmonary complication compared to no preoperative exercise training (risk ratio (RR) 0.45, 95% CI 0.33 to 0.61",
+    "url": "https://europepmc.org/article/MED/36170564",
+    "year": 2022,
+    "design": "Cochrane systematic review, 10 randomised trials",
+    "n": 636,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Geriatric assessment in lung cancer patients changed treatment decisions.",
+    "quote": "The information revealed by a geriatric assessment led to changes in oncologic treatment and nononcologic interventions.",
+    "url": "https://europepmc.org/article/MED/27349507",
+    "year": 2016,
+    "design": "systematic review, 18 studies",
+    "n": null,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "The Cochrane review measures complications and exercise capacity in patients already accepted for surgery; it does not show that more patients get operated.",
+    "url": "https://europepmc.org/article/MED/36170564",
+    "year": 2022
+   }
+  ],
+  "cost": {
+   "eur_setup": 10000,
+   "eur_per_year": 250,
+   "scales_with": "per_patient",
+   "basis": "Per newly diagnosed patient per year: about 15 in 100 patients assessed x 1 500 EUR (exercise test, geriatric assessment, four weeks of physiotherapy) = 225 EUR, plus coordination. Setup: training, 10 000 EUR. Prices are assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.5.4",
+  "roadmap_measures_related": [
+   "3.1.2"
+  ],
+  "owner_fi": "Keuhkosairauksien ylilääkäri; kuntoutuksen ja geriatrian vastuulääkärit",
+  "owner_en": "Chief physician of pulmonology; leads of rehabilitation and geriatrics",
+  "prerequisite_en": "Physiotherapy and geriatric capacity; four weeks of preparation must not push treatment past the target time.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": "curative",
+  "modality": "any",
+  "first_step_en": "Decide that no stage I-III patient is recorded as \"not fit\" without an exercise test, and book the physiotherapy group.",
+  "first_step_fi": "Päätetään, ettei yhtäkään I–III-asteen potilasta kirjata hoitoon soveltumattomaksi ilman rasituskoetta, ja varataan fysioterapiaryhmä.",
+  "kpi": {
+   "indicator": "curative_intent_pct",
+   "label_en": "Share of patients who get treatment that aims to cure",
+   "label_fi": "Parantavaan hoitoon ohjautuneiden osuus",
+   "baseline_from": "care_path.curative",
+   "target_rule_en": "county share today plus the points this measure is expected to add; never above the best county",
+   "target": {
+    "type": "plus_gain"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "travel_accommodation_support",
+  "name_en": "Travel and hotel paid for patients far from the university hospital",
+  "name_fi": "Matkat ja majoitus maksetaan kaukana yliopistosairaalasta asuville",
+  "step": "treatment",
+  "what_en": "Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+  "what_fi": "Leikkaukseen tai viikkojen sädehoitoon matkustavalle potilaalle varataan potilashotelli, järjestetään kuljetus ja nimetään yhteyshenkilö, jotta välimatka ei ole syy valita muuta kuin parantava hoito.",
+  "effect": {
+   "metric": "curative_share_pp",
+   "value": 1.0,
+   "lo": 0.0,
+   "hi": 2.0,
+   "kind": "assumption",
+   "basis": "Percentage points added to the share of all patients treated with curative intent, at full distance (county centre 200 km or more from the university hospital); scaled down to 0 at 50 km. No study of travel support was opened. The reason to act is an association: in England patients with the longest travel time to hospital had odds of surgery 0.60 times those of the nearest, and in Finland the curative share falls with distance to the university hospital (Spearman -0.66 across counties, weaker after allowing for age). Removing a quarter of a gap of about 4 points gives 1.0; bounds 0 and 2.0. The distance association must not be read as the effect of this measure.",
+   "applies_to": "scaled by road distance from county centre to university hospital: 0 at 50 km, full at 200 km"
+  },
+  "evidence": [
+   {
+    "claim": "England: longer travel-time contrasts were associated with lower surgery odds; the first contrast was 0.88 (95% CI 0.70–1.11), not significant.",
+    "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+    "year": 2009,
+    "design": "cancer registry cohort, Northern England",
+    "n": 34923,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Patients living further from a thoracic surgery hospital were less likely to be operated.",
+    "quote": "Lung cancer patients living further from a thoracic surgery hospital were less likely to receive surgery, and both lung cancer and rectal cancer patients were less likely to receive chemotherapy if they lived distant from these services.",
+    "url": "https://europepmc.org/article/MED/18375117",
+    "year": 2008,
+    "design": "cancer registry cohort, Northern England",
+    "n": null,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Ostrobothnia: patients living over 50 km from the hospital had higher 12-month mortality.",
+    "quote": "the adjusted HR increased to 1.47 (95% CI: 1.07–2.01; p = 0.017) for patients living in rural areas compared to those in urban areas",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+    "year": 2024,
+    "design": "population-based single-hospital cohort, Vaasa 2016-2020",
+    "n": 321,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Curative treatment is delivered less often in Eastern and Northern Finland.",
+    "quote": "Syöpärekisterin mukaan Itä- ja Pohjois-Suomessa keuhkosyöpäpotilailla parantava hoito toteutuu harvemmin kuin muualla Suomessa.",
+    "url": "https://yle.fi/a/74-20250979",
+    "year": 2026,
+    "design": "news report citing the Finnish Cancer Registry",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "No intervention study: every figure here is an association between distance and treatment, not the effect of paying for travel.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+    "year": 2009
+   },
+   {
+    "claim": "The Ostrobothnia paper notes that an Australian and a Polish study found no association between distance and survival.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+    "year": 2024
+   }
+  ],
+  "cost": {
+   "eur_setup": 5000,
+   "eur_per_year": 300,
+   "scales_with": "per_patient",
+   "basis": "Per newly diagnosed patient per year: about 30 in 100 patients travel for curative work-up or treatment x 1 000 EUR (patient hotel nights and organised transport beyond what Kela reimburses) = 300 EUR. Setup 5 000 EUR. Patient numbers and prices are assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [
+   "3.5.4"
+  ],
+  "owner_fi": "Syöpätautien ylilääkäri ja sosiaalityö; yliopistosairaalan potilashotelli",
+  "owner_en": "Chief physician of oncology and hospital social work; university hospital patient hotel",
+  "prerequisite_en": "Patient hotel capacity near the university hospital.",
+  "confidence": "low",
+  "owner_level": "county",
+  "targets_stage": "curative",
+  "modality": "any",
+  "first_step_en": "Name one contact person who books the patient hotel and transport for every patient sent to the university hospital for curative treatment.",
+  "first_step_fi": "Nimetään yhteyshenkilö, joka varaa potilashotellin ja kuljetuksen jokaiselle parantavaan hoitoon yliopistosairaalaan lähetettävälle.",
+  "kpi": {
+   "indicator": "curative_intent_pct",
+   "label_en": "Share of patients who get treatment that aims to cure",
+   "label_fi": "Parantavaan hoitoon ohjautuneiden osuus",
+   "baseline_from": "care_path.curative",
+   "target_rule_en": "county share today plus the points this measure is expected to add; never above the best county",
+   "target": {
+    "type": "plus_gain"
+   },
+   "by_year": 2028
+  }
+ },
+ {
+  "id": "recording_audit",
+  "name_en": "Check the charts of patients with no treatment on record",
+  "name_fi": "Tarkista niiden potilaiden kertomukset, joilla ei ole hoitokirjausta",
+  "step": "treatment",
+  "what_en": "Take 50 patients with no treatment on record and check the charts: were they untreated, or was drug treatment or radiotherapy given and not coded? Fix the coding. It treats no extra patient, but until it is done the county cannot tell a care gap from a recording gap.",
+  "what_fi": "Poimitaan 50 potilasta, joilta hoitotieto puuttuu, ja tarkistetaan potilaskertomuksista, jäivätkö he hoidotta vai jäikö lääke- tai sädehoito kirjaamatta. Kirjaaminen korjataan. Yhtään uutta potilasta ei hoideta, mutta sitä ennen alue ei voi erottaa hoitovajetta kirjaamisvajeesta.",
+  "effect": {
+   "metric": "curative_share_pp",
+   "value": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "kind": "assumption",
+   "basis": "Adds no treated patients and avoids no deaths; the model counts zero. Its value is that the county can trust its own care path. Bought first in counties where \"no treatment on record\" is far above the national share while life-prolonging treatment is far below it.",
+   "applies_to": "counties with a recording flag on the care path"
+  },
+  "evidence": [
+   {
+    "claim": "The registry itself says part of the regional differences comes from recording practice.",
+    "quote": "Nämä havainnot viittaavat siihen, että osa alueellisista eroista ei selity yksin potilasrakenteella, vaan myös diagnostiikan, hoitoprosessien ja kirjaamiskäytäntöjen eroilla.",
+    "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+    "year": 2026,
+    "design": "national registry quality report, Finland 2019-2023",
+    "n": 14871,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Treatment data linked to a lung cancer visit was found for 72.5 % of patients nationally.",
+    "quote": "Keuhkosyöpäkäyntiin liittyvä hoitotieto löytyi 10 784 potilaalta (72,5 %).",
+    "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+    "year": 2026,
+    "design": "national registry quality report, Finland 2019-2023",
+    "n": 14871,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Stage was missing for nearly half of patients, which the registry attributes to gaps in clinical cancer notifications.",
+    "quote": "Levinneisyystieto puuttui lähes puolelta potilaista, mikä kertoo puutteista kliinisten syöpäilmoitusten kirjaamisessa.",
+    "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+    "year": 2026,
+    "design": "registry report press release",
+    "n": null,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Denmark: a national lung cancer registry with quarterly reports and yearly audit went together with rising resection rates and survival.",
+    "quote": "Five-year survival after surgical resection has increased from 39.5% to 48.1%. Improvements of waiting times, accordance between cTNM and pTNM, and resection rates are documented.",
+    "url": "https://europepmc.org/article/MED/24457234",
+    "year": 2013,
+    "design": "national clinical registry report, Denmark, 2000-2012",
+    "n": 40000,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "An audit by itself changes no treatment. The Danish improvements happened alongside pathways and centralisation, so they cannot be credited to the registry alone.",
+    "url": "https://europepmc.org/article/MED/24457234",
+    "year": 2013
+   }
+  ],
+  "cost": {
+   "eur_setup": 15000,
+   "eur_per_year": 5000,
+   "scales_with": "county",
+   "basis": "Setup: about 0.2 person-years of a coding nurse and a clinician to review 50 charts and correct the coding rules, 15 000 EUR. Yearly: a repeat sample, 5 000 EUR. Assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.2.2",
+  "roadmap_measures_related": [
+   "3.2.1",
+   "3.1.4"
+  ],
+  "owner_fi": "Syöpätautien ylilääkäri ja tietohallinnon kirjaamisvastaava",
+  "owner_en": "Chief physician of oncology and the head of clinical coding",
+  "prerequisite_en": "None; it can start this week.",
+  "confidence": "medium",
+  "owner_level": "county",
+  "targets_stage": "no_record",
+  "modality": null,
+  "first_step_en": "Pull 50 patients diagnosed in 2023 with no treatment on record and check their charts this month.",
+  "first_step_fi": "Poimitaan 50 vuonna 2023 todettua potilasta, joilta hoitotieto puuttuu, ja tarkistetaan heidän potilaskertomuksensa tämän kuun aikana.",
+  "kpi": {
+   "indicator": "no_treatment_record_pct",
+   "label_en": "Share of patients with no treatment on record",
+   "label_fi": "Potilaat, joilta hoitotieto puuttuu, osuus",
+   "baseline_from": "care_path.no_record",
+   "target_rule_en": "at or below the national share once coding is corrected",
+   "target": {
+    "type": "national"
+   },
+   "by_year": 2027
+  }
+ },
+ {
+  "id": "smoking_cessation_at_diagnosis",
+  "name_en": "Smoking cessation started at the first specialist visit",
+  "name_fi": "Tupakkavieroitus aloitetaan ensikäynnillä",
+  "step": "treatment",
+  "what_en": "Every current smoker with suspected lung cancer gets cessation medication and counselling at the first visit, as part of preparing for curative treatment.",
+  "what_fi": "Jokainen tupakoiva keuhkosyöpäepäilypotilas saa vieroituslääkityksen ja ohjauksen ensikäynnillä osana parantavaan hoitoon valmistautumista.",
+  "effect": {
+   "metric": "mortality_rr",
+   "value": 0.67,
+   "lo": 0.53,
+   "hi": 0.85,
+   "kind": "measured",
+   "basis": "Adjusted hazard ratio for all-cause mortality in patients who quit after diagnosis vs those who continued; applies only to current smokers with early-stage (IA-IIIA) NSCLC. Observational. It does not shorten any pathway step (days saved = 0) and its effect on eligibility for curative treatment was not found in an opened source.",
+   "applies_to_share_note": "current smokers with stage IA-IIIA NSCLC only"
+  },
+  "evidence": [
+   {
+    "claim": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+    "quote": "smoking cessation remained associated with decreased risk for all-cause mortality (HR, 0.67 [95% CI, 0.53 to 0.85]), cancer-specific mortality (HR, 0.75 [CI, 0.58 to 0.98])",
+    "url": "https://doi.org/10.7326/M21-0252",
+    "year": 2021,
+    "design": "prospective cohort, Moscow",
+    "n": 517,
+    "verified": true,
+    "access": "abstract",
+    "fetched_at": "2026-11-13"
+   },
+   {
+    "claim": "Half of potentially operable Finnish patients are not operated, often for lung or heart function.",
+    "quote": "Among potentially operable patients, 50.6% were deemed ineligible for surgery due to various factors, including poor pulmonary or cardiac function, comorbidities, or localised tumour spread.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+    "year": 2025,
+    "design": "retrospective five-hospital cohort, Finland",
+    "n": 545,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13"
+   }
+  ],
+  "null_results": [
+   {
+    "claim": "Observational, single country (Russia); patients who manage to quit may differ from those who do not.",
+    "url": "https://doi.org/10.7326/M21-0252",
+    "year": 2021
+   }
+  ],
+  "cost": {
+   "eur_setup": 5000,
+   "eur_per_year": 400,
+   "scales_with": "per_patient",
+   "basis": "About 400 EUR per smoking patient: 12 weeks of cessation medication plus three nurse contacts. Setup: training, 5 000 EUR. Prices are assumptions.",
+   "source_url": null,
+   "kind": "assumption"
+  },
+  "roadmap_measure": "3.1.2",
+  "roadmap_measures_related": [],
+  "owner_fi": "Keuhkosairauksien ylilääkäri ja osastonhoitaja",
+  "owner_en": "Chief physician and head nurse of pulmonology",
+  "prerequisite_en": "None beyond a standing order; can start tomorrow.",
+  "confidence": "medium",
+  "owner_level": "county",
+  "targets_stage": "curative",
+  "modality": null,
+  "first_step_en": "Write the standing order: every smoker with suspected lung cancer leaves the first visit with cessation medicine and a nurse call booked.",
+  "first_step_fi": "Kirjoitetaan pysyväismääräys: jokainen tupakoiva keuhkosyöpäepäilypotilas saa ensikäynnillä vieroituslääkkeen ja ajan hoitajan soittoon.",
+  "kpi": {
+   "indicator": "cessation_offered_pct",
+   "label_en": "Share of smoking patients given cessation medicine at the first visit",
+   "label_fi": "Vieroituslääkityksen ensikäynnillä saaneiden osuus tupakoivista",
+   "baseline_from": null,
+   "target_rule_en": "not published in Finland: record it; target 90 % (our target)",
+   "target": {
+    "type": "fixed",
+    "value": 90
+   },
+   "by_year": 2027
+  }
+ }
+]

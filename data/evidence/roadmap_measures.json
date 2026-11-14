@@ -1,0 +1,854 @@
+{
+ "_meta": {
+  "source_roadmap": "res/roadmap/r.txt (Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031)",
+  "source_strategy": "res/strategy/s.txt (Kansallinen syöpästrategia 2026–2035)",
+  "built_at": "2026-11-13",
+  "note": "Finnish fields are copied from the text with line-break hyphens left as in the extracted text. title_en and summary_en are our translations. budget_eur is the figure after \"Arvioitu tarvittava määräraha\"; null means the roadmap states no separate amount (see budget_text_fi)."
+ },
+ "measures": [
+  {
+   "id": "1.3.2",
+   "title_fi": "Edistetään varhaista hoitoon hakeutumista kansallisella viestintäsuunnitelmalla, joka keskittyy lisäämään tietoisuutta syöpien oireista",
+   "title_en": "Promote early presentation with a national communication plan that raises awareness of cancer symptoms",
+   "summary_en": "A national symptom-awareness communication plan, drawing on examples such as the UK Be Clear on Cancer campaign aimed at groups with delayed presentation.",
+   "responsible": "FICAN, hyvinvointialueet, HUS ja Helsingin kaupunki (varhainen hoitoon pääsy), Syöpäjärjestöt, lisäksi muut sote-alan järjestöt, THL ja ammattikorkeakoulut.",
+   "schedule": "2026–2028: Viestintästrategian suunnitelma valmisteltu yhteistyössä vastuutahojen kanssa. 2029–2031: Viestintästrategia valmis ja pilotoitu kansallisesti.",
+   "budget_eur": 400000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 400 000 €. Rahoitusta kohdennetaan vastuu- tahoille asiantuntija- ja viestintäresursseihin kansallisen viestintäkampanjan toteutta- miseksi.",
+   "indicator": [
+    "Syövistä 70 % diagnosoidaan luokissa I–II vuoteen 2035 mennessä."
+   ],
+   "quote_fi": "Laaditaan ja toteutetaan kansallinen syöpien oiretietoisuutta lisäävä viestintäsuunni- telma. Suunnitelman laatimisessa hyödynnetään hyviä esimerkkejä muista maista ja strategioista (esimerkiksi Isossa-Britanniassa toteutettu Be Clear on Cancer -kam- panja26, jossa kohderyhmänä olivat erityisesti ne sosioekonomiset ryhmät, joiden hoitoon hakeutumisessa tai pääsyssä oli havaittu viiveitä). Suunnite",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 1621,
+    "end": 1669,
+    "responsible": [
+     1641
+    ],
+    "resource": [
+     1644
+    ],
+    "schedule": [
+     1648
+    ],
+    "indicator": [
+     1653
+    ]
+   },
+   "used_by_interventions": [
+    "symptom_campaign"
+   ],
+   "verified": true
+  },
+  {
+   "id": "2.3.1",
+   "title_fi": "Selvennetään syöpäseulontojen kansallisen ohjausryhmän, seulontaohjelmakohtaisten asiantuntijaryhmien ja Palkon seulontajaoston välinen työnjako ja vastuut",
+   "title_en": "Clarify the division of work between the national screening steering group, programme expert groups and the Palko screening section",
+   "summary_en": "Defines a permanent official structure, process and timetable for planning and steering cancer screening.",
+   "responsible": "STM, Palko, THL / Suomen Syöpärekisteri, kansallinen syöpäseulontojen ohjausryhmä41.",
+   "schedule": "2026–2028: Syöpäseulontojen ohjauksen virallinen rakenne määritelty ja toiminnassa.",
+   "budget_eur": 250000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 250 000 €. Määrittely tehdään virkatyönä nykyisten resurssien puitteissa, mutta kansallinen ohjausrakenne vaatii pysyvää rahoitusta.",
+   "indicator": [
+    "Seulontojen ohjauksen rakenne on määritelty ja prosessit dokumentoitu julkisesti."
+   ],
+   "quote_fi": "Määritellään syöpäseulontojen suunnitteluun ja ohjaukseen pysyvä virallinen rakenne, prosessi ja aikataulut. Suunnittelun ja ohjauksen uudet rakenteet huomioivat Palkon ja sen seulontajaoston toiminnan. Vastuualueena ovat seulontojen kansallinen ohjaus, uusien seulontaohjelmien käynnistäminen, olemassa olevien seulontaohjel- mien kehittäminen sekä lainsäädännön valmistelu ja uudistaminen yhdessä s",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2203,
+    "end": 2241,
+    "responsible": [
+     2215
+    ],
+    "resource": [
+     2231
+    ],
+    "schedule": [
+     2235
+    ],
+    "indicator": [
+     2238
+    ]
+   },
+   "used_by_interventions": [
+    "ldct_screening"
+   ],
+   "verified": true
+  },
+  {
+   "id": "2.3.2",
+   "title_fi": "Päivitetään kriteerit syöpäseulontaohjelmien päätöksentekoon",
+   "title_en": "Update the criteria for decisions on cancer screening programmes",
+   "summary_en": "Updates the 2006 decision criteria and evidence requirements for new and existing screening programmes (mortality effect, harms, cost-effectiveness).",
+   "responsible": "STM, Palko, kansallinen syöpäseulontojen ohjausryhmä.",
+   "schedule": "2026–2028: Seulontaohjelmiin liittyvän päätöksenteon kriteerit julkaistu. 2029–2031: Kriteerejä sovelletaan johdonmukaisesti seulontaan liittyvässä päätöksen- teossa.",
+   "budget_eur": null,
+   "budget_text_fi": "Tehdään virkatyönä nykyisten resurssien puitteissa.",
+   "indicator": [
+    "Seulontaohjelmiin liittyvän päätöksenteon vuonna 2006 julkaistut kansalli- set kriteerit on päivitetty, ja niihin sitoudutaan päätöksenteossa."
+   ],
+   "quote_fi": "Päivitetään kriteerit uusiin ja nykyisiin syöpäseulontaohjelmiin liittyvälle päätöksen- teolle ja tähän vaadittavalle tutkimusnäytölle osana laajempaa seulontaohjelmien arviointikriteerien päivitystä. Nykyiset STM:n käyttämät kriteerit42 ovat vuodelta 2006 ja kaipaavat päivitystä. Olennaisia kriteerejä ovat muun muassa seulonnan syöpäkuolleisuutta vähentävä vaikutus, haittojen minimointi ja kustan",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2242,
+    "end": 2268,
+    "responsible": [
+     2256
+    ],
+    "resource": [
+     2258
+    ],
+    "schedule": [
+     2260
+    ],
+    "indicator": [
+     2265
+    ]
+   },
+   "used_by_interventions": [
+    "ldct_screening"
+   ],
+   "verified": true
+  },
+  {
+   "id": "2.3.3",
+   "title_fi": "Laajennetaan rintasyövän seulonta 46–74-vuotiaisiin",
+   "title_en": "Extend breast cancer screening to ages 46-74",
+   "summary_en": "Extends the breast screening target age from 50-69 to 46-74.",
+   "responsible": "STM, Palko.",
+   "schedule": "2026–2028: Rintasyövän seulonnan kohdeikää on muutettu 46–74-vuotiaisiin, ja ohjelman laajennukseen on varattu rahoitus hyvinvointialueille. 2029–2031: Seulontaa toteutetaan laajemman kohdeikämäärityksen mukaisesti.",
+   "budget_eur": 9000000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 9 000 000 € lisärahoituksena hyvinvointi- alueille, mikä kattaa seulontaohjelman asteittaisen laajennuksen vuosina 2028–2031. Ikäryhmiä koskevan laajennuksen jälkeen tarvittava määrärahan lisäystarve on 6 000 000 € vuodessa.",
+   "indicator": [
+    "Seulonta-asetukseen päivitetty rintasyövän seulonnan kohdeiäksi 46–74-vuo- tiaat."
+   ],
+   "quote_fi": "Rintasyövän seulonnan kohdeikää tulee laajentaa nykyisestä 50–69-vuotiaista 46–74-vuotiaisiin. Euroopan unionin neuvosto suositti jo vuonna 2022, että seulonta 42 I. Autti-Rämö, ym. 2006. Lisääkö seulonta terveyttä? Suomen Lääkärilehti 27-31/2006 vsk 61. 45 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031 tulisi ulottaa 45–74-vuotiaisiin. Kohdeikäryhmän laajennuksest",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2269,
+    "end": 2314,
+    "responsible": [
+     2299
+    ],
+    "resource": [
+     2301
+    ],
+    "schedule": [
+     2306
+    ],
+    "indicator": [
+     2311
+    ]
+   },
+   "used_by_interventions": [],
+   "verified": true
+  },
+  {
+   "id": "2.3.4",
+   "title_fi": "Perustetaan uusia valtakunnallisia seulontaohjelmia ja muokataan nykyisiä ohjelmia tutkittuun tietoon ja EU-suosituksiin pohjautuen",
+   "title_en": "Establish new national screening programmes and adapt existing ones based on research and EU recommendations",
+   "summary_en": "Covers the lung cancer screening pilot for long-term smokers (started early 2026) and the prostate screening decision; lung pilot to expand regionally by 2028.",
+   "responsible": "STM, Palko, kansallinen syöpäseulontojen ohjausryhmä tai uusi määri- tetty ohjausrakenne, Suomen Syöpärekisteri, hyvinvointialueet ja Helsingin kaupunki.",
+   "schedule": "2026–2028: Keuhkosyövän pienimuotoinen seulontapilotti on laajentunut alueelli- sesti, ja siihen kutsutaan EU-suosituksen edellyttämä kohdeväestö. 2029–2031: Eturauhassyövän seulontaohjelman asiantuntijaryhmä ja Palko ovat anta- neet lausuntonsa eturauhassyövän lisäämisestä valtakunnalliseen seulontaohjelmaan, ja mahdollinen suunnitelma eturauhassyövän lisäämisestä valtakunnalliseen seulon- taohjelmaan on valmisteltu.",
+   "budget_eur": null,
+   "budget_text_fi": "Valtion talousarviossa varataan laskelmiin perustuva erillisrahoitus uusien valtakunnallisten seulontaohjelmien käynnistämiseen. Erillisrahoituksen suuruus riippuu suunnitellun seulontaohjelman toteutuksesta, joten arviota ei tässä vaiheessa esitetä.",
+   "indicator": [
+    "Vaikuttaviksi ja kustannusvaikuttaviksi arvioidut seulonnat on otettu osaksi valtakunnallista seulontaohjelmaa."
+   ],
+   "quote_fi": "EU suosittaa eturauhassyövän ja pitkään tupakoineiden keuhkosyövän seulonnan pilotoimista tutkimusasetelmassa. Näitä seulontoja tutkitaan Suomessa paraikaa satunnaistetussa asetelmassa. Eturauhassyövän osalta vuodesta 2018 lähtien käyn- nissä olleesta, laajasta ProScreen-tutkimuksesta odotetaan tuloksia strategiakauden aikana. Keuhkosyövän seulonnan pilottitutkimus on käynnistynyt vuoden 2026 alus",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2315,
+    "end": 2371,
+    "responsible": [
+     2349
+    ],
+    "resource": [
+     2352
+    ],
+    "schedule": [
+     2357
+    ],
+    "indicator": [
+     2365
+    ]
+   },
+   "used_by_interventions": [
+    "ldct_screening"
+   ],
+   "verified": true
+  },
+  {
+   "id": "2.5.1",
+   "title_fi": "Parannetaan hoitoonpääsyä lisäämällä lääkäriresurssia perusterveydenhuoltoon esimerkiksi laajentamalla omalääkärimalli valtakunnalliseksi",
+   "title_en": "Improve access to care by adding doctor capacity in primary care, for example by extending the personal doctor model nationwide",
+   "summary_en": "Strengthens doctor availability and continuity of care in primary care as a condition for early detection; delivered through the national personal doctor programme.",
+   "responsible": "STM (omalääkäriohjelman44 kansallinen toimeenpano, ohjaus ja rahoi- tus), hyvinvointialueet, HUS ja Helsingin kaupunki (omalääkärimallien käyttöönotto).",
+   "schedule": "2026–2028: Omalääkäriohjelman toimeenpano laajenee, ja hoidon jatkuvuusmallit kattavat kasvavan osan väestöstä kaikilla hyvinvointialueilla. 2028–2031: Hoidon jatkuvuusmallit vakiintuneesti käytössä kaikilla hyvinvointialu- eilla. Perusterveydenhuollon lääkärikapasiteetti vahvistunut ja hoitoonpääsyn viiveet lyhentyneet.",
+   "budget_eur": null,
+   "budget_text_fi": "Toimenpide toteutetaan osana kansallista omalääkäriohjelmaa.",
+   "indicator": null,
+   "quote_fi": "Syöpien varhainen havaitseminen edellyttää toimivaa ja jatkuvaa hoitosuhdetta perus- terveydenhuollossa. Hoidon jatkuvuus vahvistaa potilaan ja ammattilaisen välistä luottamusta, mahdollistaa oireiden kokonaisvaltaisen arvioinnin ja tukee varhaista diagnostiikkaa. Syövän varhaisen toteamisen näkökulmasta on keskeistä, että lääkärien saata- vuutta perusterveydenhuollossa vahvistetaan ja hoidon jatk",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2583,
+    "end": 2625,
+    "responsible": [
+     2613
+    ],
+    "resource": [
+     2616
+    ],
+    "schedule": [
+     2618
+    ],
+    "indicator": []
+   },
+   "used_by_interventions": [
+    "gp_capacity_econsult",
+    "gp_direct_ct"
+   ],
+   "verified": true
+  },
+  {
+   "id": "2.5.2",
+   "title_fi": "Tuetaan sujuvaa siirtymää erikoissairaanhoitoon määrittämällä kansallisiin hoitoketjuihin kuuluvat standardoidut lähetekriteerit, joiden täyttyessä mahdollisista syöpäoireista kärsivät potilaat ohjataan nopeasti tarvittaviin diagnostisiin tutkimuksiin",
+   "title_en": "Support smooth transfer to specialist care by defining standard referral criteria in the national pathways, so patients with possible cancer symptoms are sent quickly to diagnostic tests",
+   "summary_en": "Standard referral criteria and symptom-based operating models written into national cancer pathway descriptions, for at least the five most common cancers by 2028.",
+   "responsible": "FICAN (kehitystyön koordinaatio ja toimintamallien jalkauttaminen ja toimeenpanoalueilla) yhteistyössä kansallisten moniammatillisten syöpäryhmien kanssa.",
+   "schedule": "2026–2028: Standardoidut lähetekriteerit ja oirelähtöiset toimintamallit sisällytetty vähintään viiden yleisimmän syövän kansallisiin hoitoketjukuvauksiin. Pilotointi ja käyttöönotto käynnistetty hyvinvointialueilla. 2029–2031: Standardoidut lähetekriteerit ja toimintamallit sisällytetty kaikkiin mer- kittäviin syöpäkohtaisiin hoitoketjukuvauksiin. Käyttöönotto laajennettu valtakunnal- lisesti ja seuranta vakiintunut osaksi hoitoketjujen hallintaa.",
+   "budget_eur": null,
+   "budget_text_fi": "Toteutetaan osana osatavoitteen 3.1 mukaista kansallista hoitoketju- ja hoitosuositustyötä.",
+   "indicator": [
+    "Vähintään 70 % syövistä diagnosoidaan levinneisyysluokissa I–II vuo- teen 2035 mennessä.",
+    "Ohjeistukset (lähetekriteerit ja toimintamallit) on sisällytetty osaksi kaikkia valtakunnallisia hoitoketjuja."
+   ],
+   "quote_fi": "Syövän varhainen toteaminen edellyttää, että perusterveydenhuollosta erikoissairaan- hoitoon siirtyminen on sujuvaa ja yhdenmukaista koko maassa. Osana kansallisia syöpäkohtaisia hoitoketjukuvauksia (toimenpide 3.1.2) määritellään selkeät, standar- doidut lähetekriteerit ja toimintamallit, jotka tukevat perusterveydenhuollon ammat- tilaisia syövän varhaisessa tunnistamisessa, diagnostiikan käynnis",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2626,
+    "end": 2691,
+    "responsible": [
+     2670
+    ],
+    "resource": [
+     2674
+    ],
+    "schedule": [
+     2677
+    ],
+    "indicator": [
+     2685,
+     2688
+    ]
+   },
+   "used_by_interventions": [
+    "cpp_pathway",
+    "gp_capacity_econsult",
+    "gp_direct_ct",
+    "nssc_rapid_dx_centre",
+    "same_day_cxr_ct"
+   ],
+   "verified": true
+  },
+  {
+   "id": "2.5.3",
+   "title_fi": "Luodaan toimintamallit syöpäriskiryhmien tunnistamiseksi ja varhaisdiagnostiikan parantamiseksi geenitiedon avulla",
+   "title_en": "Create operating models for identifying cancer risk groups and improving early diagnosis using genetic information",
+   "summary_en": "National programme on using genetic information to find high-risk people; report by 2028, regional pilots 2029-2031.",
+   "responsible": "FICAN (ohjelman käynnistäminen ja koordinointi).",
+   "schedule": "2026–2028: Hankkeen / työryhmän selvitysraportti valmis. 2029–2031: Toimintamallien pilotointi käynnistetty alueellisesti.",
+   "budget_eur": 1000000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 1 000 000 €. Rahoitusta kohdennetaan kan- sallisen ohjelman koordinointiin, nykytilan kartoitukseen sekä suositusten ja toimin- tamallien valmisteluun ja pilotointiin.",
+   "indicator": [
+    "Ohjeistukset (lähetekriteerit ja toimintamallit) on sisällytetty osaksi kaikkia valtakunnallisia hoitoketjuja."
+   ],
+   "quote_fi": "Syövän ehkäisy ja varhainen toteaminen voivat tehostua merkittävästi tunnistamalla henkilöt, joilla on tavanomaista suurempi riski sairastua syöpään. Geenitiedon hyö- dyntäminen tarjoaa uusia mahdollisuuksia syöpäriskiryhmien tunnistamiseen sekä syövän ehkäisyn ja varhaisen toteamisen tehostamiseen. Osa syövistä liittyy perinnölliseen alttiuteen, mutta syöpäalttiusoireyhtymien tun- nistaminen on e",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2692,
+    "end": 2738,
+    "responsible": [
+     2711
+    ],
+    "resource": [
+     2723
+    ],
+    "schedule": [
+     2727
+    ],
+    "indicator": [
+     2731
+    ]
+   },
+   "used_by_interventions": [],
+   "verified": true
+  },
+  {
+   "id": "3.1.1",
+   "title_fi": "Luodaan kansallinen mekanismi sekä pysyvä rahoitus syöpäkohtaisten hoitosuositusten ylläpitoon",
+   "title_en": "Create a national mechanism and permanent funding for maintaining cancer-specific care guidelines",
+   "summary_en": "Nationally coordinated mechanism (as in Denmark, Sweden, Norway) for writing and updating cancer guidelines; 5 MEUR a year also funds measures 2.5.2, 3.1.2, 3.1.3, 3.1.4 and 4.3.2.",
+   "responsible": "FICAN (kansallinen koordinaatio, prosessin hallinta, asiantuntijaryh- mien nimeäminen ja tukitoiminnot sekä alueellinen käyttöönotto ja seuranta), yhteis- työssä kansallisten monialaisten syöpäryhmien kanssa (suositusten sisällöt), Duodecim (menetelmätuki ja ohjaus), Palko (palveluvalikoiman linjausten yhteensovittaminen).",
+   "schedule": "2026–2028: Kansalliset syöpäryhmät nimetty ja roolit määritelty; Sopimuksellinen pohja eri toimijoiden välille luotu; Kansallinen syövän hoitosuositusprosessin käsi- kirja on laadittu ja ensimmäinen uuden yhdenmukaisen mallin mukainen syöpä kohtainen hoitosuositustyö on julkaistu. 51 Sosiaali- ja terveysministeriö. Kansallinen palvelureformi. 52 Sosiaali- ja terveysministeriö. Sosiaalihuollon ja terveydenhuollon palveluvalikoiman määrittäminen. 55 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031 2029–2031: Ensimmäiset 10 monialaista syöpäryhmää ovat saaneet ensimmäiset yhdenmukaisen hoitosuositusprosessin mukaiset hoitosuositukset valmiiksi, ja suosi- tusten päivitysten tarve arvioidaan systemaattisesti (tarvittaessa ja vähintään kerran vuodessa).",
+   "budget_eur": 5000000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 5 000 000 € / vuosi (yhteensä 25 000 000 € / 5 vuotta, mikä kattaa myös toimenpiteiden 2.5.2, 3.1.2, 3.1.3, 3.1.4 sekä 4.3.2 toteutuk- sen). Rahoitusta kohdennetaan kansallisten hoitosuositus- ja hoitoketjutyön hallinto- ja koordinaatiorakenteiden muodostamiseen, syöpäkohtaisen asiantuntijaryhmän työskentelyn tukemiseen mukaan lukien metodologinen osaaminen, julkaisualustan teknisten ratkaisujen kehitys sekä alueellisten syöpäkeskusten käyttöönotto- ja seu- rantarakenteiden vahvistaminen ja hoitoketjujen toteutus hyvinvointialueilla. Käyn- nistysvaiheen rahoituksen tavoitteena on luoda pysyvä kansallinen mekanismi. Toi- minnan vakiinnuttaminen edellyttää tämän jälkeen pysyvää vuosittaista rahoitusta, joka sisällytetään valtion rahoitusohjaukseen osana keskittämisasetuksessa osoitettua syövän ehkäisyn, diagnostiikan, hoidon ja kuntoutuksen valtakunnallista suunnittelu- ja yhteensovittamistehtävää.",
+   "indicator": [
+    "Ajantasaisten kansallisten hoitosuositusten ja hoitoketjujen saatavuudessa ollaan pohjoismaisella tasolla (hoitosuositusten osuus suhteessa pohjoismaisiin ver- rokkeihin, %)."
+   ],
+   "quote_fi": "Otetaan käyttöön muiden pohjoismaiden mallien (esim. Tanska48, Ruotsi49, Norja50) mukaisesti kansallisesti koordinoitu mekanismi syöpäkohtaisten hoitosuositusten laadintaan, päivittämiseen ja ylläpitoon. Hoitosuositukset kattavat hoitoketjun kaikki vaiheet aina ehkäisystä ja varhaisesta diagnostiikasta seurantaan, huomioiden myös kuntoutumiseen ja elämänlaadun tukeen sekä palliatiiviseen hoitoon l",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2739,
+    "end": 2842,
+    "responsible": [
+     2794
+    ],
+    "resource": [
+     2799
+    ],
+    "schedule": [
+     2812
+    ],
+    "indicator": [
+     2838
+    ]
+   },
+   "used_by_interventions": [
+    "cpp_pathway"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.1.2",
+   "title_fi": "Laaditaan syöpäkohtaiset hoitoketjukuvaukset, ja niiden pohjalta sovelletut alueelliset hoitoketjut, sekä mekanismi niiden ylläpitoon ja hallintaan",
+   "title_en": "Write cancer-specific care pathway descriptions, regional pathways based on them, and a mechanism to maintain them",
+   "summary_en": "National pathway descriptions on the model of Danish Kræftpakkeforløb, Swedish SVF and Norwegian Pakkeforløp; five cancers and cancer-specific access-time targets by 2028.",
+   "responsible": "FICAN (kansallinen koordinaatio, prosessin hallinta ja tukitoiminnot sekä alueellinen käyttöönotto ja seuranta) yhteistyössä kansallisten monialaisten syöpäryhmien kanssa (hoitoketjujen sisällöt), hyvinvointialueet ja HUS (hoitoketjujen toteutus).",
+   "schedule": "2026–2028: Kansalliset hoitoketjukuvaukset tehty viidestä syövästä ja syöpäkohtaiset hoitoonpääsyajat on määritetty. YTA- ja hyvinvointialueilla sekä HUSissa alueellisten hoitoketjujen vastuunjaosta on sovittu sopimuksellisesti (YTA-sopimukset). 2029–2031: Kansalliset hoitoketjukuvaukset laadittu kaikista merkittävistä syövistä/ syöpäryhmistä. Seurannan ja hoitoketjun hallinnan avulla arvioidaan jatkuvasti annettujen hoitojen (interventioiden) vaikuttavuutta ja hoitoonpääsyä ja reagoidaan lääketieteellisiin ja alue- tai organisaatiokohtaisiin muutoksiin, joilla voi olla vaiku- tusta potilaan hoitoon.",
+   "budget_eur": null,
+   "budget_text_fi": "Toteutetaan osana toimenpiteessä 3.1.1 kuvattua kokonaisresursointia.",
+   "indicator": [
+    "Potilaat pääsevät hoitoon tavoiteaikojen puitteissa."
+   ],
+   "quote_fi": "Laaditaan kansalliset syöpäkohtaiset hoitoketjukuvaukset osana toimenpiteessä 3.1.1 kuvattua kansallista mekanismia. Kansalliset hoitoketjut kuvataan hyödyntäen poh- joismaissa kehitettyjä malleja. Tällaisia ovat Tanskan Kræftpakkeforløb53, Ruotsin standardiserade vårdförlopp (SVF)54 ja Norjan Pakkeforløp - kreft55, joissa kansalliset hoitosuositukset ja standardoidut hoitopolut muodostavat yhtenä",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2843,
+    "end": 2909,
+    "responsible": [
+     2890
+    ],
+    "resource": [
+     2895
+    ],
+    "schedule": [
+     2897
+    ],
+    "indicator": [
+     2907
+    ]
+   },
+   "used_by_interventions": [
+    "cpp_pathway",
+    "ebus_capacity",
+    "liquid_biopsy_first",
+    "nssc_rapid_dx_centre",
+    "nurse_navigator",
+    "prehab_fitness_assessment",
+    "reflex_molecular",
+    "same_day_cxr_ct",
+    "sbrt_pathway",
+    "smoking_cessation_at_diagnosis",
+    "surgeon_second_opinion",
+    "travel_accommodation_support",
+    "video_mdt_stage1_3"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.1.3",
+   "title_fi": "Luodaan kansallisesti yhtenäiset linjaukset kustannusten ja muiden yhteiskunnallisten vaikutuksien huomioimiseksi hoitovalinnoissa",
+   "title_en": "Create nationally uniform policies for taking costs and other societal effects into account in treatment choices",
+   "summary_en": "Applies the service-range principles of the Ministry to cancer guidelines and pathways.",
+   "responsible": "STM, Palko ja muut arviointiviranomaiset yhteystyössä arviointiviran- omaiset yhteistyössä FICANin sekä kansallisten monialaisten syöpäryhmien kanssa.",
+   "schedule": "2026–2028: Huomioitu palveluvalikoiman periaatteet syövän hoitosuositusprosessin kehittämisessä. 2029–2031: Syövän hoitosuositukset ja muu suositustoiminta ovat keskenään linjassa. 56 Sosiaali- ja terveysministeriö. Sosiaalihuollon ja terveydenhuollon palveluvalikoiman periaatteiden määrittäminen. 57 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031",
+   "budget_eur": null,
+   "budget_text_fi": "Toteutetaan osana toimenpiteessä 3.1.1 kuvattua kokonaisresursointia.",
+   "indicator": null,
+   "quote_fi": "Huomioidaan STM:n Sosiaalihuollon ja terveydenhuollon palveluvalikoiman periaat- teiden määrittäminen -hankkeessa56 julkaistavat palveluvalikoiman periaatteet, ja sovelletaan niitä syövän hoitosuosituksissa ja hoitoketjujen laatimisessa. Integroidaan palveluvalikoiman periaatteet osaksi kansallista hoitosuositusprosessia. Yhteiskun- nallisissa vaikutuksissa huomioidaan mahdollisuuksien mukaan myös",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2910,
+    "end": 2944,
+    "responsible": [
+     2920
+    ],
+    "resource": [
+     2923
+    ],
+    "schedule": [
+     2925
+    ],
+    "indicator": []
+   },
+   "used_by_interventions": [],
+   "verified": true
+  },
+  {
+   "id": "3.1.4",
+   "title_fi": "Määritellään kansalliset laatu- ja vaikuttavuustavoitteet ja seurantamittarit hoitoketjujen seurannan mahdollistamiseksi",
+   "title_en": "Define national quality and effectiveness targets and follow-up indicators so that pathways can be monitored",
+   "summary_en": "Cancer-specific quality and effectiveness targets and indicators for at least the five largest cancer groups by 2028.",
+   "responsible": "FICAN (kansallinen koordinaatio ja tavoitteiden määrittelyn ohjaus) yhdessä kansallisen syövän diagnostiikan ja hoidon ohjausryhmän (yhteiset indikaat- torit) sekä kansallisten monialaisten syöpäryhmien kanssa (syöpäkohtaiset laatu- ja vaikuttavuustavoitteet sekä indikaattorit), THL (indikaattorien määrittelyn metodolo- ginen tuki ja ohjaus).",
+   "schedule": "2026–2028: Kansalliset laatu- ja vaikuttavuusindikaattorit sekä tavoitteet määritetty vähintään viidelle suurimmalle syöpäryhmälle; Syöpäkohtaiset ja yhteiset indikaatto- rit määritelty. 2029–2031: Kansalliset laatu- ja vaikuttavuusindikaattorit sekä -tavoitteet määritelty kaikille merkittäville syöpäryhmille, ne ovat käytössä ja mahdollistavat vertailukelpoi- sen tiedon tuottamisen hoidon kehittämisen ja päätöksenteon tueksi. 58 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031",
+   "budget_eur": null,
+   "budget_text_fi": "Toteutetaan osana toimenpiteessä 3.1.1 kuvattua kokonaisresursointia.",
+   "indicator": [
+    "Kansalliset ja yhtenäiset tavoitteet ja keskeisimmät vaikuttavuuden seuranta- mittarit määritetty sovittuihin syöpiin."
+   ],
+   "quote_fi": "Määritellään kansallisesti yhtenäiset syöpäkohtaiset laatu- ja vaikuttavuustavoitteet ja niitä seuraavat indikaattorit osana toimenpiteessä 3.1.1 määriteltyä kansallista meka- nismia. Laatu- ja vaikuttavuustavoitteet muodostavat sisällöllisen perustan kansalli- selle vertailulle, vertaiskehittämiselle ja tulosparannukselle. Laatu- ja vaikuttavuusta- voitteet tulisi ensisijaisesti määrittää suurimm",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 2945,
+    "end": 3003,
+    "responsible": [
+     2971
+    ],
+    "resource": [
+     2977
+    ],
+    "schedule": [
+     2979
+    ],
+    "indicator": [
+     2997
+    ]
+   },
+   "used_by_interventions": [
+    "cpp_pathway",
+    "recording_audit",
+    "sbrt_pathway"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.2.1",
+   "title_fi": "Luodaan lainsäädännöllinen pohja THL:n Syöpärekisterin yhteyteen perustettavalle syövän hoidon laaturekisterille",
+   "title_en": "Create the legal basis for a cancer care quality register at the THL Cancer Registry",
+   "summary_en": "National cancer quality register; five cancers first; target 90 % data coverage including stage.",
+   "responsible": "STM (asetusmuutos), THL/Suomen Syöpärekisteri (syövän laaturekiste- rin perustaminen ja ylläpito), FICAN.",
+   "schedule": "2026–2028: Laaturekisteriasetus on päivitetty koskemaan syöpäsairauksia. 2029–2031: Syövän laaturekisteri tuottaa vähintään viiden eri syövän vuosittaiset raportit, ja niistä saatu tieto ohjaa tavoiteperusteisesti kansallisen ja alueellisen syö- vänhoidon kehittämistä ja palvelujärjestelmän toimintaa.",
+   "budget_eur": 2500000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 2 500 000 €. Rahoitusta kohdennetaan syö- vän laaturekisterin tietopohjan rakentamiseen, analyysi- ja raportointitietokantojen sekä toiminnan ja raportoinnin kehittämiseen sekä tarvittaviin juokseviin investoin- teihin ja infrastruktuurin kehittämiseen. Käynnistysvaiheen rahoituksen tavoitteena varmistetaan pysyvän laaturekisteritoiminnan käynnistäminen. Toiminnan vakiin- nuttaminen edellyttää tämän jälkeen pysyvää vuosittaista rahoitusta, joka sisällyte- tään valtion rahoitusohjaukseen osana kansallista laaturekisteritoimintaa.",
+   "indicator": [
+    "Laaturekisterin tietopohja (ml. levinneisyystieto) mahdollistaa laadun ja vaikuttavuuden luotettavan arvioinnin ja vertailun (tietopohjan kattavuus 90 %); Klii- nisten syöpäilmoitusten määrä (tavoitteena 90 % tapauksista automatisoidusti vuo- teen 2030 mennessä)."
+   ],
+   "quote_fi": "Perustetaan THL:n Syöpärekisterin yhteyteen kansallinen syövän hoidon laaturekis- teri. Perustamisessa hyödynnetään käynnissä olevan tutkimushankkeen aikana kehi- tettäviä malleja sekä hankkeen tuottamia tuloksia. Alkuvaiheessa laaturekisteritoi- mintaa kehitetään viiden syövän osalta tutkimushankkeen tulosten perusteella. Laa- turekisteritoiminnan laajentaminen uusiin syöpiin arvioidaan osana laa",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3004,
+    "end": 3060,
+    "responsible": [
+     3028
+    ],
+    "resource": [
+     3031
+    ],
+    "schedule": [
+     3049
+    ],
+    "indicator": [
+     3055
+    ]
+   },
+   "used_by_interventions": [
+    "recording_audit"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.2.2",
+   "title_fi": "Määritetään ja käynnistetään vertaiskehittämisen prosessit, jolla laaturekisterin tuottamaa tietoa vertaillaan ja tarkastellaan systemaattisesti",
+   "title_en": "Define and start peer-development processes in which quality register data are compared and reviewed systematically",
+   "summary_en": "Benchmarking between wellbeing services counties to find development needs and share good practice.",
+   "responsible": "FICAN (vertaisarviointi ja -kehittämistoiminnan järjestäminen), THL.",
+   "schedule": "2026–2028: Vertaisarvioinnin ja -kehittämisen prosessit ja toimintamallit on määri- telty ja käynnistetty ensimmäisen viiden syövän osalta. 60 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031 2029–2031: Vertaisarvioinnin ja -kehittämisen prosessit ovat vakiintuneet ja niitä kehitetään jatkuvasti. Arvioinnin alueellisia eroja seurataan systemaattisesti julkisesti raportoitavilla mittareilla. Arvioinnin tuloksia verrataan systemaattisesti kansainväli- siin verrokkeihin sovituin mittarein. Syövän hoidon tuloksissa, kustannusvaikutta- vuudessa ja/tai yhdenvertaisuudessa havaitaan myönteistä kehitystä.",
+   "budget_eur": 300000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 300 000 €. Rahoitusta kohdennetaan vertais- kehittämistoiminnan järjestämiseen. Käynnistysvaiheen rahoituksen tavoitteena on luoda ja ottaa käyttöön kansallisen syöpien vertaiskehittämisen toimintamallit. Toi- minnan vakiinnuttaminen edellyttää tämän jälkeen pysyvää vuosittaista rahoitusta, joka sisällytetään valtion rahoitusohjaukseen osana keskittämisasetuksessa osoitettua syövän ehkäisyn, diagnostiikan, hoidon ja kuntoutuksen valtakunnallista suunnittelu- ja yhteensovittamistehtävää.",
+   "indicator": [
+    "Syöpäkohtaisten tietojen kirjaaminen laaturekisteriin.",
+    "Vertaiskehittämistoiminta käytössä (syöpätyyppien lukumäärä, joista tieto laaturekistereissä).",
+    "Saatavilla on luotettavaa tietoa syövän diagnostiikka- ja hoitokäytäntöjen alueellisista eroista, minkä avulla voidaan kaventaa eroja hoitotuloksissa."
+   ],
+   "quote_fi": "Ensisijaisena tavoitteena on vertaiskehittäminen ja tulosten tarkastelu kansallisesti. Siten voidaan tunnistaa kehityskohteita ja jakaa hyviä käytäntöjä tulosten parantami- seksi ja erojen kaventamiseksi (benchmarking) hyvinvointialueiden kesken. Vertais kehittämistoiminnan pitkän tähtäimen tavoitteena on potilaille merkittävien tulosten parantaminen sekä hoidon kustannusvaikuttavuuden ja yhdenver",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3061,
+    "end": 3118,
+    "responsible": [
+     3080
+    ],
+    "resource": [
+     3082
+    ],
+    "schedule": [
+     3090
+    ],
+    "indicator": [
+     3110,
+     3112,
+     3115
+    ]
+   },
+   "used_by_interventions": [
+    "recording_audit",
+    "video_mdt_stage1_3"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.2.3",
+   "title_fi": "Määritetään ja käynnistetään ohjaus- ja johtamismekanismit, joilla vertaisarvioinnin tuloksiin ja mahdollisiin puutteisiin reagoidaan",
+   "title_en": "Define and start steering and management mechanisms for reacting to peer-review results and shortcomings",
+   "summary_en": "Uniform structures for reviewing results and reacting to deviations regionally and nationally.",
+   "responsible": "FICAN (ohjaus- ja johtomekanismien sekä prosessien määrittäminen ja käyttöönotto), STM (tiedon hyödyntäminen sisällön ohjauksessa).",
+   "schedule": "2026–2028: Sovittu yhdessä toimintamallit tulosten tarkasteluun poikkeamiin reagoi- miseen alueellisissa ja kansallisissa johtamis- ja ohjausrakenteissa. 2029–2031: Toimintamallit ovat käytössä ja ohjaus- ja johtomekanismi vakiintunut; tulospoikkeamiin reagointi toteutuu systemaattisesti kaikilla alueilla; kehittämistoi- mien vaikutuksia seurataan kansallisesti.",
+   "budget_eur": 3000000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 3 000 000 €. Rahoitusta kohdennetaan alueelliseen sekä kansalliseen ohjaus- ja johtomekanismien koordinaatioon ja rapor- tointirakenteiden ylläpitoon. Käynnistysvaiheen rahoituksen tavoitteena on luoda ja ottaa käyttöön pysyvät ohjaus- ja johtomekanismit. Toiminnan vakiinnuttaminen edellyttää tämän jälkeen pysyvää vuosittaista rahoitusta, joka sisällytetään valtion rahoitusohjaukseen osana keskittämisasetuksessa osoitettua syövän ehkäisyn, diag- nostiikan, hoidon ja kuntoutuksen valtakunnallista suunnittelu- ja yhteensovittamis- tehtävää.",
+   "indicator": [
+    "Saatavilla on luotettavaa tietoa syövän diagnostiikka- ja hoitokäytäntöjen alueellisista eroista, minkä avulla voidaan kaventaa eroja hoitotuloksissa."
+   ],
+   "quote_fi": "Ensisijaisena tavoitteena on, että vertaiskehittäminen ja tulosten tarkastelu yhdessä kansallisessa foorumissa auttavat tunnistamaan kehityskohteita ja löytämään hyvin- vointialueiden kesken hyviä käytäntöjä, joiden käyttöönoton myötä nähdään tulos parannuksia. Tämän lisäksi on kuitenkin varmistettava yhdenmukaiset rakenteet ja toimintamallit systemaattiseen tulosten tarkasteluun ja mahdollisiin t",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3119,
+    "end": 3176,
+    "responsible": [
+     3144
+    ],
+    "resource": [
+     3157
+    ],
+    "schedule": [
+     3166
+    ],
+    "indicator": [
+     3173
+    ]
+   },
+   "used_by_interventions": [],
+   "verified": true
+  },
+  {
+   "id": "3.2.4",
+   "title_fi": "Selkeytetään syövän hoidon laaturekisteritoimintaan osallistuvien toimijoiden roolit ja vastuut, laaditaan sopimuksellinen pohja sekä varmistetaan pysyvä rahoitus laaturekisteritoiminnalle",
+   "title_en": "Clarify roles and responsibilities in cancer quality register work, create a contractual basis and secure permanent funding",
+   "summary_en": "Roles, contracts and permanent funding for the quality register.",
+   "responsible": "THL, Syöpärekisteri, FICAN, STM (kansallinen ohjaus ja rahoitusratkaisut).",
+   "schedule": "2026–2028: Toimijoiden roolit ja vastuut täsmennetty tutkimushankkeen pohjalta; sopimuksellinen yhteistyömalli laadittu ja hyväksytty; pysyvän rahoituksen malli sovittu. 2029–2031: Sopimuksellinen toimintamalli käytössä; rahoitus sisällytetty pysyvästi kansalliseen ohjaus- ja rahoitusjärjestelmään. 3.3 Kuntoutus, psykososiaalinen tuki, terveyssosiaalityö ja palliatiivinen hoito ovat vakiintunut osa syöpäpotilaan hoitoketjua ja yhdenvertaisesti saatavilla",
+   "budget_eur": null,
+   "budget_text_fi": "Toteutetaan virkatyönä.",
+   "indicator": null,
+   "quote_fi": "Syövän hoidon laaturekisteritoiminnan pitkäjänteisen ja vaikuttavan toteutuksen varmistamiseksi määritellään selkeästi kansallisten toimijoiden roolit, vastuut ja työn- jako. Käynnissä olevan tutkimushankkeen tuloksia hyödynnetään toimijoiden roolien tarkentamisessa ja pysyvän yhteistyömallin rakentamisessa. Tavoitteena on luoda selkeä, sopimuksellinen ja pysyvä toimintamalli, joka tukee laatureki",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3177,
+    "end": 3221,
+    "responsible": [
+     3196
+    ],
+    "resource": [
+     3198
+    ],
+    "schedule": [
+     3210
+    ],
+    "indicator": []
+   },
+   "used_by_interventions": [],
+   "verified": true
+  },
+  {
+   "id": "3.5.1",
+   "title_fi": "Luodaan kestävät strategiat syövän hoitoon osallistuvan henkilöstön riittävyyden varmistamiseksi",
+   "title_en": "Create sustainable strategies to ensure enough staff for cancer care",
+   "summary_en": "Realistic assessment of staffing and training needs in cancer diagnostics (especially molecular diagnostics) and care; county workforce plans.",
+   "responsible": "Terveydenhuollon ammattihenkilöiden neuvottelukunta70 ja sen alaiset erikoislääkäri- ja erikoishammaslääkärikoulutuksen sekä yleislääketieteen erityiskou- lutuksen koordinaatiojaosto 2026–202971 sekä hoitohenkilöstön koulutuksen koordi- naatiojaosto 2024–2672; Hyvän työn ohjelma (selvitysten toteuttaminen); yliopistot ja ammattikorkeakoulut (koulutuksen järjestäminen ja osaamisen arviointi); yliopisto- sairaalat ja hyvinvointialueet (koulutuspaikkojen järjestäminen ja alueellisten ratkai- sujen kehittäminen).",
+   "schedule": "2026–2028: Erikoislääkärikoulutuksen tarveselvitys valmistuu; selvitys sairaalage- neetikkojen ja -solubiologien koulutustarpeesta laaditaan; syövän hoidon henkilöstö- tarpeet huomioidaan koulutusmäärien suunnittelussa ja rahoituksen valmistelussa osana Hyvän työn ohjelmaa; hyvinvointialueet laativat suunnitelmat syövän hoidon henkilöstön riittävyyden turvaamiseksi syrjäseuduilla. 2029–2031: Koulutusmäärien ja erikoistumiskoulutuksen mahdolliset lisäykset toteu- tuvat ja syöpätautien diagnostiikkaan ja hoitoon osallistuvien terveydenhuollon ammattilaisten koulutustarve on sovitettu yhdessä koulutusta antavien oppilaitosten kanssa tarve-ennustetta vastaavalle tasolle. Alueelliset ratkaisut ovat käytössä kaikilla hyvinvointialueilla. Arvioidaan toimenpiteiden vaikutukset henkilöstövajeisiin ja alueellisiin eroihin.",
+   "budget_eur": 8500000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 8 500 000 €. Rahoitusta kohdennetaan tar- vittavien syövän hoitoon ja tutkimukseen osallistuvien terveydenhuollon ammatti- henkilöiden koulutusmäärien lisäämiseen ja vahvistamiseen sekä koulutus- ja ohjaus- resurssien vahvistamiseen.",
+   "indicator": [
+    "Ammattilaisten alueellinen jakautuminen, sairauspoissaolot ja työtyytyväi- syyskyselyt."
+   ],
+   "quote_fi": "Arvioidaan syövän diagnostiikkaan (erityisesti molekyylidiagnostiikkaan) ja hoitoon osallistuvien ammattilaisten resurssi- ja koulutustarve realistisesti. Arvion pohjalta 70 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031 koulutustarpeet ja -resurssit suunnitellaan vastaamaan tätä tarvetta, ja turvataan näin palveluiden valmius syövän kehittyvän diagnostiikan ja hoi",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3635,
+    "end": 3725,
+    "responsible": [
+     3674
+    ],
+    "resource": [
+     3682
+    ],
+    "schedule": [
+     3709
+    ],
+    "indicator": [
+     3722
+    ]
+   },
+   "used_by_interventions": [
+    "ebus_capacity",
+    "reflex_molecular",
+    "surgeon_second_opinion"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.5.2",
+   "title_fi": "Kehitetään ja lisätään syövän hoitoon osallistuvien ammattilaisten jatkuvaa koulutusta ja erikoistumismahdollisuuksia sekä määritellään kansalliset yhtenäiset ammatti- ja tehtävänimikkeet",
+   "title_en": "Develop and increase continuing education and specialisation for cancer professionals and define uniform national job titles",
+   "summary_en": "Continuing education and specialisation in all key professions; uniform titles and competence requirements for cancer nursing staff.",
+   "responsible": "Hoitohenkilöstön koulutuksen koordinaatiojaosto (valmisteilla olevan hoitohenkilöstön erikoistumiskoulutuksen toimenpideohjelman valmistelu syövän hoidon osaamis- ja erikoistumistarpeet huomioiden), erikoislääkäri- ja erikoisham- maslääkärikoulutuksen sekä yleislääketieteen erityiskoulutuksen koordinaatiojaosto 2026–2029, valtakunnallinen ammatillisen jatkokoulutuksen toimikunta VAJT yhteis- työssä erikoisala- ja hoitajayhdistysten kanssa (lisäkoulutusohjelmien tarpeen arviointi ja kehittämisehdotukset), yliopistot ja ammattikorkeakoulut (koulutuksen toteutus ja osaamisen arviointi), hyvinvointialueet ja HUS, FICAN (osaamisen ja hyvien käytänteiden jakaminen valtakunnallisesti).",
+   "schedule": "2026–2028: Syöpätautien diagnostiikkaan ja hoitoon liittyvät lisäkoulutusohjelmat on kartoitettu ja uusien koulutusohjelmien tarve arvioitu; syövän hoitohenkilöstölle on luotu yhteneväiset nimikkeet ja osaamisvaatimukset; erikoistumiskoulutusten sisältö- jen kehittäminen työelämän tarpeita vastaavaksi on käynnissä. 2029–2031: Syöpätautien diagnostiikkaan ja hoitoon liittyvät lisäkoulutusohjelmat on käynnistetty tarpeen mukaisesti; syövän hoitohenkilöstön erikoistumiskoulutusten sisällöt on päivitetty.",
+   "budget_eur": null,
+   "budget_text_fi": "Valmistelu toteutetaan virkatyönä osana STM:n koordinaatiojaostojen sekä VAJT:n toimintaa. Hoitohenkilöstön erikoistumiskoulutusta koskevassa toimenpide- ohjelmassa sekä erikoislääkärien lisäkoulutusohjelmia koskevassa selvityksessä mää- ritellään tarkemmin tarvittavat koulutusmäärät. Tarvittavien koulutuskokonaisuuk- sien toteutumisen varmistamiseksi hyvinvointialueet ja HUS varaavat riittävät resurs- sit henkilöstön osaamisen kehittämiseen ja hyödyntävät korkeakoulujen tarjoamaa täydennyskoulutusta.",
+   "indicator": [
+    "Valmistuneiden ja erikoistumiskoulutuksen suorittaneiden määrä vuosittain."
+   ],
+   "quote_fi": "Syövän hoidon parissa työskentelevien ammattilaisten jatkuvaa koulutusta ja erikois- tumismahdollisuuksia vahvistetaan kaikissa keskeisissä ammattiryhmissä. Koulutusta kehitetään vastaamaan työelämän tarpeita, syövän diagnostiikan ja hoidon kehittyviä käytäntöjä (mukaan lukien digitaaliset työkalut, tekoälyn hyödyntäminen ja yksilölli- nen hoito) sekä moniammatillisen työskentelyn vaatimuksia. Tot",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3726,
+    "end": 3794,
+    "responsible": [
+     3765
+    ],
+    "resource": [
+     3775
+    ],
+    "schedule": [
+     3783
+    ],
+    "indicator": [
+     3792
+    ]
+   },
+   "used_by_interventions": [
+    "nurse_navigator"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.5.3",
+   "title_fi": "Edistetään digitaalisten työkalujen, tekoälyn ja innovaatioiden käyttöönottoa ja kehittämistä syövän hoidossa",
+   "title_en": "Promote the adoption and development of digital tools, AI and innovations in cancer care",
+   "summary_en": "Digital care pathways, remote monitoring and AI tools to support early detection, coordination and continuity from primary to specialist care.",
+   "responsible": "FICAN (kansallinen digitaalisten työkalujen ja tekoälypohjaisten ratkai- sujen selvitys- ja kehitystyö ja käyttöönoton tuki alueilla), hyvinvointialueet, HUS ja Helsingin kaupunki (työkalujen käyttöönotto).",
+   "schedule": "2026–2028: Digitaalisten hoitopolkujen ja tekoälypohjaisten ratkaisujen nykytila kartoitettu; kansallinen määrittelytyö tehty; priorisoitujen syöpäryhmien osalta kehi- tystyö ja rajattu pilotointi käynnistetty osassa hyvinvointialueita. 2029–2031: Digitaalisten hoitopolkujen käyttöönotto laajenee vaiheittain eri syöpä- ryhmiin ja hyvinvointialueille; ehdotukset muiden tekoälypohjaisten ja digitaalisten ratkaisujen käyttöönottoon ja pilotointiin syövän hoidossa laadittu.",
+   "budget_eur": 1140000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 1 140 000 €. Rahoitusta kohdennetaan digi- taalisten hoitopolkujen ja tekoälypohjaisten työkalujen selvitys- ja kehitystyöhön sekä käyttöönoton tukeen alueilla.",
+   "indicator": [
+    "Digitaalisten hoitopolkujen ja tekoälysovellusten käyttöaste syöpää hoitavissa yksiköissä."
+   ],
+   "quote_fi": "Digitaalisten työkalujen tavoitteena on vahvistaa syövän varhaista toteamista sekä hoidon jatkuvuutta koko potilaan hoitopolulla perusterveydenhuollosta erikoissai- raanhoitoon, parantaa moniammatillista yhteistyötä, tukea hoidon koordinaatiota ja lisätä potilaiden mahdollisuuksia osallistua omaan hoitoonsa. Digitaaliset ratkaisut, kuten digitaaliset hoitopolut ja niihin integroitava etäseuranta, ",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3795,
+    "end": 3854,
+    "responsible": [
+     3835
+    ],
+    "resource": [
+     3839
+    ],
+    "schedule": [
+     3843
+    ],
+    "indicator": [
+     3851
+    ]
+   },
+   "used_by_interventions": [
+    "ai_cxr_triage_alone",
+    "gp_capacity_econsult",
+    "liquid_biopsy_first",
+    "video_mdt_stage1_3"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.5.4",
+   "title_fi": "Vahvistetaan psykososiaalisen tuen, kuntoutuksen, geriatrisen onkologian ja palliatiivisen hoidon osaamista kaikissa syövän hoidon vaiheissa",
+   "title_en": "Strengthen competence in psychosocial support, rehabilitation, geriatric oncology and palliative care at all stages of cancer care",
+   "summary_en": "Curriculum and continuing-education development in these areas.",
+   "responsible": "Erikoislääkäri- ja erikoishammaslääkärikoulutuksen sekä yleislääketie- teen erityiskoulutuksen koordinaatiojaosto 2026–2029 sekä hoitohenkilöstön koulu- tuksen koordinaatiojaosto 2024–2026, yliopistot ja ammattikorkeakoulut, HUS ja hyvinvointialueet.",
+   "schedule": "2026–2028: Psykososiaalisen tuen, kuntoutuksen, palliatiivisen hoidon ja geriatrisen onkologian opetuksen nykytila kartoitettu; kansalliset osaamissuositukset ja opinto sisältölinjaukset laadittu; geriatrisen onkologian osaamiskokonaisuus määritelty ja 75 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031 integroitu geriatrian erikoislääkärikoulutuksen linjauksiin; uusien opintokokonai- suuksien suunnittelu käynnistetty 2029–2031: Opintokokonaisuudet sisältyvät korkeakoulujen opetussuunnitelmiin; geriatris-onkologinen osaamiskokonaisuus määritelty ja integroitu onkologian eri- koislääkärikoulutuksen linjauksiin; geriatriseen onkologiaan liittyvä koulutus toteu- tuu geriatrian erikoislääkärikoulutuksessa; täydennyskoulutus toteutuu systemaatti- sesti kaikilla hyvinvointialueilla",
+   "budget_eur": 1500000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 1 500 000 €. Rahoitusta kohdennetaan geri- atrisen onkologian, psykososiaalisen tuen ja kuntoutuksen opintokokonaisuuksien kehittämiseen sekä täydennyskoulutuksen valtakunnalliseen sisällölliseen rakentami- seen myös palliatiivinen hoito huomioiden. Selvitykset ja kansallisten osaamislinjaus- ten valmistelu toteutetaan virkatyönä STM:n ja koordinaatiojaostojen toimesta. Opin- tokokonaisuuksien integrointi toteutetaan korkeakoulujen normaalina opetussuunni- telmatyönä. Täydennyskoulutus toteutetaan hyvinvointialueiden järjestämisvastuulla osana lakisääteistä täydennyskoulutusta.",
+   "indicator": [
+    "Geriatrisen onkologian sisältyminen geriatrian erikoislääkärikoulutukseen"
+   ],
+   "quote_fi": "Vahvistetaan psykososiaalisen ja kuntoutumisen tuen sekä ikääntyneiden syöpäpoti- laiden hoidon osaamista kehittämällä lääketieteen, hoitotyön sekä muiden syövän 74 Valtioneuvosto. Lainsäädäntöhanke ennakoivan sosiaali- ja terveydenhuollon mahdollistamiseksi (ennakoiva sote 2). 74 Kansallinen syöpästrategia 2026–2035: Toimeenpanon tiekartta vuosille 2026–2031 hoitoon osallistuvien sosiaali- ja ter",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3855,
+    "end": 3940,
+    "responsible": [
+     3901
+    ],
+    "resource": [
+     3906
+    ],
+    "schedule": [
+     3915
+    ],
+    "indicator": [
+     3938
+    ]
+   },
+   "used_by_interventions": [
+    "prehab_fitness_assessment",
+    "travel_accommodation_support"
+   ],
+   "verified": true
+  },
+  {
+   "id": "3.5.5",
+   "title_fi": "Käynnistetään palliatiivisen lääketieteen erikoislääkärikoulutus",
+   "title_en": "Start specialist training in palliative medicine",
+   "summary_en": "New medical specialty training programme in palliative medicine.",
+   "responsible": "STM:n erikoislääkäri- ja erikoishammaslääkärikoulutuksen sekä yleis- lääketieteen erityiskoulutuksen75 koordinaatiojaosto ja yliopistojen ammatilliset jatko- koulutustoimikunnat ja professorit, yhteistyötahoina erikoisalayhdistykset, Suomen Lääkäriliitto ja muut tarvittavat sidosryhmät.",
+   "schedule": "2026–2028: Koordinaatiojaoston arvio ja esitys annettu; asetusmuutos hyväksytty; koulutusrakenne ja valtakunnallinen koulutusverkosto suunniteltu; ensimmäiset koulutuspaikat valmisteltu; opetussuunnitelma laadittu; ensimmäinen erikoislääkäri- koulutuksen hakukierros käynnistynyt. 2029–2031: Palliatiivisen lääketieteen erikoislääkärikoulutus käynnissä.",
+   "budget_eur": 3000000,
+   "budget_text_fi": "Arvioitu tarvittava määräraha 3 000 000 €. Rahoitusta kohdennetaan koulu- tuskorvausjärjestelmän vahvistamiseen (erikoistumisvirat) sekä opetuksellisten ja klii- nisten koulutusresurssien lisäämiseen. Valmisteluvaihe toteutetaan pääosin virkatyönä.",
+   "indicator": [
+    "Perustettu palliatiivisen lääketieteen erikoislääkärikoulutus."
+   ],
+   "quote_fi": "Käynnistetään palliatiivisen lääketieteen erikoislääkärikoulutus tukemaan palliatiivi- sen hoidon laadun ja osaamisen kehittämistä kansallisesti. Koulutuksen myötä Suo- meen saadaan yliopistotasoisesti koulutettuja erikoislääkäreitä, joilla on valmiudet toimia palliatiivisen hoidon asiantuntijoina, kehittäjinä ja kouluttajina. Alan erikois- lääkärit vastaavat väestön kasvavaan laadukkaan palliatii",
+   "line_ref": {
+    "file": "res/roadmap/r.txt",
+    "start": 3941,
+    "end": 4004,
+    "responsible": [
+     3966
+    ],
+    "resource": [
+     3986
+    ],
+    "schedule": [
+     3990
+    ],
+    "indicator": [
+     3997
+    ]
+   },
+   "used_by_interventions": [],
+   "verified": true
+  }
+ ],
+ "strategy_indicators": {
+  "goal_2": {
+   "title_fi": "Vähennetään syöpätaakkaa ehkäisyn ja varhaisen toteamisen avulla",
+   "title_en": "Reduce the cancer burden through prevention and early detection",
+   "indicators": [
+    {
+     "text_fi": "Ehkäistävien syöpien määrä laskee 1000 tapauksella vuodessa*",
+     "text_en": "The number of preventable cancers falls by 1,000 cases a year",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 155
+     },
+     "verified": true
+    },
+    {
+     "text_fi": "Kaikissa syöpäseulontaohjelmissa saavutetaan 80 %:n osallistumisaste jokaisella hyvinvointialueella",
+     "text_en": "Every cancer screening programme reaches 80 % participation in every wellbeing services county",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 156
+     },
+     "verified": true
+    },
+    {
+     "text_fi": "Vähintään 70 % syövistä diagnosoidaan levinneisyysluokissa I-II",
+     "text_en": "At least 70 % of cancers are diagnosed at stage I-II",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 158
+     },
+     "verified": true
+    }
+   ]
+  },
+  "goal_3": {
+   "title_fi": "Varmistetaan yhdenvertainen ja vaikuttava syövänhoito",
+   "title_en": "Ensure equal and effective cancer care",
+   "indicators": [
+    {
+     "text_fi": "Huonoennusteisten syöpien 5 vuoden elossaololuvut saavuttavat pohjoismaisen tason**",
+     "text_en": "Five-year survival for poor-prognosis cancers reaches the Nordic level",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 162
+     },
+     "verified": true
+    },
+    {
+     "text_fi": "Syöpäkuolleisuus pienenee 10 % (nykyisin 13 300 henkilöä vuodessa)",
+     "text_en": "Cancer mortality falls by 10 % (currently 13,300 people a year)",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 164
+     },
+     "verified": true
+    },
+    {
+     "text_fi": "Potilaat pääsevät hoitoon tavoiteaikojen puitteissa***",
+     "text_en": "Patients get treatment within the target times",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 165
+     },
+     "verified": true
+    }
+   ],
+   "footnotes": [
+    {
+     "text_fi": "** Viiden vuoden suhteellinen elossaolo kasvaa Nordcan-tilastossa esitetystä vuoden 2023 tasosta yli 14 prosenttiyksikköä keuhkosyövässä, 6 prosenttiyksikköä haimasyövässä ja 14 prosenttiyksikköä maksasyövässä. Pohjoismaisella tasolla viitataan Ruotsin ja Norjan keskiarvoon.",
+     "text_en": "Five-year relative survival rises from the 2023 NORDCAN level by more than 14 percentage points in lung cancer, 6 in pancreatic and 14 in liver cancer. Nordic level means the mean of Sweden and Norway.",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 181
+     },
+     "verified": true
+    },
+    {
+     "text_fi": "*** THL (Ohjaus 21/2016). Hoitoonpääsyn seuranta syövän hoidossa.",
+     "text_en": "Target times refer to THL Ohjaus 21/2016 (6 weeks from referral to first treatment when cancer is suspected).",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 184
+     },
+     "verified": true
+    }
+   ]
+  },
+  "equality": {
+   "indicators": [
+    {
+     "text_fi": "Alueelliset ja sosioekonomiset erot syövän ilmaantuvuudessa, hoidossa ja syöpäkuolleisuudessa ovat käytettävissä palvelutoiminnassa ja niillä ohjataan toimintaa",
+     "text_en": "Regional and socioeconomic differences in cancer incidence, care and mortality are available to services and used to steer them",
+     "line_ref": {
+      "file": "res/strategy/s.txt",
+      "line": 176
+     },
+     "verified": true
+    }
+   ]
+  }
+ }
+}

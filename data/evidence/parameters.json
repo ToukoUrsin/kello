@@ -1,0 +1,958 @@
+{
+ "_meta": {
+  "built_at": "2026-11-13",
+  "owner": "evidence agent",
+  "rules": "verified=true means the source page or PDF was opened on the fetch date and the quote is present in the saved copy under data/raw/evidence/. access=abstract means only the publisher abstract (via Europe PMC) was opened. kind: measured = copied from a published source; reported = a figure a journalist reported from a study that is not published (no sample size, no method), shown as reported and never as measured; estimated = our arithmetic on measured figures (method given); assumption = set by us, editable.",
+  "sign_convention": "In interventions.json effect values for metric days / relative_days are days SAVED (positive = faster). relative_days is the fraction of the interval removed. stage_shift_pp = percentage-point rise in stage I share. mortality_rr < 1 = fewer deaths."
+ },
+ "baseline_days": {
+  "source_study": {
+   "description_en": "Unpublished ongoing Finnish study of lung cancer treatment delays, coordinated by Professor Outi Kuittinen (University of Eastern Finland), run in Kuopio, Tampere, Turku and Rovaniemi. First results given to Yle MOT (published 12 Oct 2026). Sample size and whether figures are means or medians are not stated in the article text (\"keskimäärin\").",
+   "cities": [
+    "Kuopio",
+    "Tampere",
+    "Turku",
+    "Rovaniemi"
+   ],
+   "sample_size": null,
+   "sample_size_note": "Not stated in the article text; the infographic could not be read as text.",
+   "url": "https://yle.fi/a/74-20242733",
+   "quote": "Onkologian professori Outi Kuittinen Itä-Suomen yliopistosta koordinoi käynnissä olevaa tutkimusta keuhkosyöpähoitojen viiveistä. Sitä tehdään Kuopiossa, Tampereella, Turussa ja Rovaniemellä.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_mot/page.txt"
+  },
+  "total": {
+   "value": 155,
+   "lo": 149,
+   "hi": 165,
+   "kind": "reported",
+   "url": "https://yle.fi/a/74-20250979",
+   "quote": "Ylen MOT kertoi, että syövän hoidossa takamatka länsinaapureihin on pitkä. Tanskassa keuhkosyöpäpotilas pääsee hoitoon 67 päivässä. Ruotsissa viive ensimmäisten oireiden toteamisen jälkeen on 107 päivää. Suomessa viive on pisin, 155 päivää.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_250979/page.txt",
+   "note": "155 days is stated in the Yle follow-up article (and the MOT infographic); the MOT article text says \"keskimäärin noin viisi kuukautta\". lo = 50+41+58; hi is our assumption."
+  },
+  "steps": {
+   "patient": {
+    "value": 56,
+    "lo": 50,
+    "hi": 65,
+    "kind": "estimated",
+    "url": "https://yle.fi/a/74-20242733",
+    "quote": "Tutkimuksen perusteella potilaasta itsestään johtuva viive on yli 50 päivää, perusterveydenhuollossa kuluu 41 päivää ja erikoissairaanhoidossa 58 päivää.",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/yle_mot/page.txt",
+    "method": "Source says \"over 50 days\". 56 = 155 total - 41 primary care - 58 specialist care. lo = 50 (stated floor), hi = assumption.",
+    "definition": "first symptom -> first primary care contact (\"potilaasta itsestään johtuva viive\")"
+   },
+   "primary": {
+    "value": 41,
+    "lo": 33,
+    "hi": 49,
+    "kind": "reported",
+    "url": "https://yle.fi/a/74-20242733",
+    "quote": "Tutkimuksen perusteella potilaasta itsestään johtuva viive on yli 50 päivää, perusterveydenhuollossa kuluu 41 päivää ja erikoissairaanhoidossa 58 päivää.",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/yle_mot/page.txt",
+    "method": "Point value from source. No interval published; lo/hi = +-20 % assumption.",
+    "definition": "time spent in primary care before referral (\"perusterveydenhuollossa kuluu 41 päivää\")"
+   },
+   "referral": {
+    "value": 14,
+    "lo": 9,
+    "hi": 19,
+    "kind": "estimated",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "quote": "For specialist consultation after initial visit to a GP (weeks)                          2–4       1–2       1–2      1–2       2–3",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/khalife/page.txt",
+    "method": "Yle MOT gives one figure for specialist care (58 days). No opened source gives a measured Finnish split of it. We split 58 days in proportion to three published Finnish figures that describe the same three sub-steps but do not add up to 58: GP visit -> specialist consultation 2-4 weeks (mid 21 d, Khalife 2025 survey mode), specialist consultation -> diagnosis 4 weeks (28 d, Khalife 2025), diagnosis -> treatment start 36-38 days (37 d, Finnish Cancer Registry 2018-2022 via IHE 2026). Weights 21:28:37 -> 14, 19, 25 days. lo/hi use the Khalife range for referral (2-4 weeks scaled) and +-30 % for the others. The unscaled figures sum to 86 days, i.e. the specialist phase may be longer than the 58 days Yle reports.",
+    "definition": "referral -> first specialist visit"
+   },
+   "diagnosis": {
+    "value": 19,
+    "lo": 13,
+    "hi": 25,
+    "kind": "estimated",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "quote": "For a LC diagnosis after specialist consultation (weeks)                                  4         4        2–4      2–4       1–2",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/khalife/page.txt",
+    "method": "Yle MOT gives one figure for specialist care (58 days). No opened source gives a measured Finnish split of it. We split 58 days in proportion to three published Finnish figures that describe the same three sub-steps but do not add up to 58: GP visit -> specialist consultation 2-4 weeks (mid 21 d, Khalife 2025 survey mode), specialist consultation -> diagnosis 4 weeks (28 d, Khalife 2025), diagnosis -> treatment start 36-38 days (37 d, Finnish Cancer Registry 2018-2022 via IHE 2026). Weights 21:28:37 -> 14, 19, 25 days. lo/hi use the Khalife range for referral (2-4 weeks scaled) and +-30 % for the others. The unscaled figures sum to 86 days, i.e. the specialist phase may be longer than the 58 days Yle reports.",
+    "definition": "first specialist visit -> diagnosis and treatment decision"
+   },
+   "treatment": {
+    "value": 25,
+    "lo": 17,
+    "hi": 37,
+    "kind": "estimated",
+    "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+    "quote": "time from diagnosis to start of treatment for patients treated during the first six months was 36–38 days in 2018-",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/ihe_pdf/page.txt",
+    "method": "Yle MOT gives one figure for specialist care (58 days). No opened source gives a measured Finnish split of it. We split 58 days in proportion to three published Finnish figures that describe the same three sub-steps but do not add up to 58: GP visit -> specialist consultation 2-4 weeks (mid 21 d, Khalife 2025 survey mode), specialist consultation -> diagnosis 4 weeks (28 d, Khalife 2025), diagnosis -> treatment start 36-38 days (37 d, Finnish Cancer Registry 2018-2022 via IHE 2026). Weights 21:28:37 -> 14, 19, 25 days. lo/hi use the Khalife range for referral (2-4 weeks scaled) and +-30 % for the others. The unscaled figures sum to 86 days, i.e. the specialist phase may be longer than the 58 days Yle reports.",
+    "definition": "treatment decision -> treatment start",
+    "note": "The registry figure (36-38 days median, diagnosis -> treatment start, 2018-2022) is the only national measured number for any specialist sub-step; hi = 37 keeps it inside the interval. IHE cites: Malila et al., Lung cancer report, Cancer Society of Finland 2024 (primary report not opened)."
+   }
+  },
+  "specialist_total": {
+   "value": 58,
+   "lo": 46,
+   "hi": 86,
+   "kind": "reported",
+   "url": "https://yle.fi/a/74-20242733",
+   "quote": "Tutkimuksen perusteella potilaasta itsestään johtuva viive on yli 50 päivää, perusterveydenhuollossa kuluu 41 päivää ja erikoissairaanhoidossa 58 päivää.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_mot/page.txt",
+   "note": "hi = 86 = sum of unscaled Khalife + registry figures (21+28+37)."
+  },
+  "supporting": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "quote": "To secure an appointment at the health center for patients with LC symptoms (days)       14        2–7       2–7      2–7       2–7",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/khalife/page.txt",
+    "claim": "Survey mode: 14 days to get a health-centre appointment with lung cancer symptoms in Finland vs 2-7 days in Sweden, Denmark, Norway, Iceland.",
+    "design": "survey of healthcare professionals + expert workshops"
+   },
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "quote": "Mode of reported share of patients meeting a doctor in the first healthcare contact    40–60%    80–100%    100%      100%     100%",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/khalife/page.txt",
+    "claim": "In Finland 40-60 % of patients meet a doctor at first contact vs 80-100 % elsewhere in the Nordics.",
+    "design": "survey"
+   },
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12160590/",
+    "quote": "In 2023, 35% of patients waited longer than 14 days to see a doctor in primary care, and 14% waited for 1–3 months",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/khalife/page.txt",
+    "claim": "National primary care waiting data 2023 (not lung-specific).",
+    "design": "national statistics cited in paper"
+   },
+   {
+    "url": "https://yle.fi/a/74-20242733",
+    "quote": "Erikoissairaanhoidossa on taas odottamista esimerkiksi kuvaukseen, kuvauslausuntoon ja näytteenottoon.",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/yle_mot/page.txt",
+    "claim": "Where specialist-care time goes: waiting for imaging, the imaging report and biopsy."
+   }
+  ]
+ },
+ "measured_hospital_times": [
+  {
+   "area_id": "05",
+   "hospital": "Tyks (Turku University Hospital)",
+   "referral_to_first_visit_days": null,
+   "referral_to_treatment_days": null,
+   "period": null,
+   "kind": "measured",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "quote": null,
+   "year": null,
+   "verified": false,
+   "access": "blocked_403",
+   "fetched_at": "2026-11-13",
+   "local_copy": null,
+   "note": "Tyks publishes lung cancer access times on this page, but it returned HTTP 403 to curl, WebFetch and two proxies on 2026-11-13. Values left empty rather than filled from memory. Open in a browser and enter the numbers."
+  }
+ ],
+ "measured_hospital_times_note": "No per-hospital lung cancer times could be opened. IHE 2026 states: \"Some wellbeing services counties publish their own statistics online, but they group all cancers together with no split by cancer type\". The Finnish Cancer Registry lung report 2019-2023 (https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html) was later opened from the copy the data agent saved (data/raw/evidence/fcr_report/page.txt).",
+ "nordic_benchmarks_total_days": {
+  "definition": "first symptom -> treatment start, lung cancer, as reported by Yle MOT (method of the Swedish and Danish figures is not described in the article)",
+  "FI": {
+   "value": 155,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://yle.fi/a/74-20250979",
+   "quote": "Ylen MOT kertoi, että syövän hoidossa takamatka länsinaapureihin on pitkä. Tanskassa keuhkosyöpäpotilas pääsee hoitoon 67 päivässä. Ruotsissa viive ensimmäisten oireiden toteamisen jälkeen on 107 päivää. Suomessa viive on pisin, 155 päivää.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_250979/page.txt"
+  },
+  "SE": {
+   "value": 107,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://yle.fi/a/74-20242733",
+   "quote": "Ruotsissa vastaava kokonaisviive on 107 vuorokautta. Tanskassa se on 67 vuorokautta, eli useita kuukausia vähemmän.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_mot/page.txt"
+  },
+  "DK": {
+   "value": 67,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://yle.fi/a/74-20242733",
+   "quote": "Ruotsissa vastaava kokonaisviive on 107 vuorokautta. Tanskassa se on 67 vuorokautta, eli useita kuukausia vähemmän.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_mot/page.txt"
+  }
+ },
+ "target_times": {
+  "FI_thl_ohjaus_21_2016": {
+   "referral_to_first_treatment": {
+    "value": 42,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+    "quote": "teen saapumisesta ensimmäiseen hoitoon (leikkaus, lääke- tai sädehoito) on 6 viikkoa.",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/thl_b1/page.txt",
+    "note": "\"Syöpäepäilyssä maksimiaika lähetteen saapumisesta ensimmäiseen hoitoon ... on 6 viikkoa\" = 42 days. This is the target the National Cancer Strategy indicator \"Potilaat pääsevät hoitoon tavoiteaikojen puitteissa\" points to. The PDF opened is the version \"Voimassa 1.1.2017 lähtien\" (file name ...päivitys170225)."
+   },
+   "imaging_report": {
+    "value": 7,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+    "quote": "olla käytettävissä viikon kuluessa tutkimuspyynnön tekemisestä.",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/thl_b1/page.txt",
+    "note": "Radiologist report within one week of the imaging request."
+   },
+   "biopsy": {
+    "value": 7,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+    "quote": "biopsia tai neulanäyte) tulee ottaa viikon kuluessa tutkimuspyynnön saapumisesta kirurgiseen yksikköön tai",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/thl_b1/page.txt",
+    "note": "Tissue sample within one week of the request."
+   },
+   "pathology_report": {
+    "value": 7,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+    "quote": "kuvantamisyksikköön. Patologin lausunnon tulee olla käytettävissä viikon kuluessa kudosnäytteen otosta,",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/thl_b1/page.txt",
+    "note": "Pathology report within one week of the sample, unless special stains are needed."
+   },
+   "referral_to_first_visit": {
+    "value": 21,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+    "quote": "the need for treatment must begin within 21 days of the referral arriving at the hospital or other unit providing",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/ihe_pdf/page.txt",
+    "note": "Not a cancer-specific THL Ohjaus target: the general statutory limit (assessment of need for treatment within 21 days of referral), as described by IHE 2026. THL Ohjaus 21/2016 gives no separate referral -> first visit or referral -> treatment decision limit in the text we opened."
+   },
+   "referral_to_treatment_decision": {
+    "value": null,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.julkari.fi/server/api/core/bitstreams/de33d584-bdce-40a1-b100-df48c4906a49/content",
+    "quote": null,
+    "year": 2016,
+    "verified": false,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": null,
+    "note": "No such limit found in the opened PDF."
+   },
+   "statutory_treatment_start": {
+    "value": 180,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+    "quote": "specialized medical care in the hospital district, and the necessary treatment must begin within 180 days of the",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/ihe_pdf/page.txt"
+   }
+  },
+  "NO_pakkeforlop_lung": {
+   "referral_to_first_visit": {
+    "value": 7,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.helsedirektoratet.no/nasjonale-forlop/lungekreft/forlopstider-i-pakkeforlop-for-lungekreft",
+    "quote": "Fra henvisning mottatt til første fremmøte utredende avdeling                                                  7 kalenderdager",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/no_lung/page.txt"
+   },
+   "first_visit_to_decision": {
+    "value": 21,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://www.helsedirektoratet.no/nasjonale-forlop/lungekreft/forlopstider-i-pakkeforlop-for-lungekreft",
+    "quote": "Fra første fremmøte i utredende avdeling til avsluttet utredning (beslutning tas)                              21 kalenderdager",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/no_lung/page.txt"
+   },
+   "decision_to_treatment": {
+    "value": 14,
+    "lo": 7,
+    "hi": 14,
+    "kind": "measured",
+    "url": "https://www.helsedirektoratet.no/nasjonale-forlop/lungekreft/forlopstider-i-pakkeforlop-for-lungekreft",
+    "quote": "Fra avsluttet utredning til start behandling                                        Medikamentell behandling   7 kalenderdager",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/no_lung/page.txt",
+    "note": "surgery 14, drug 7, radiotherapy 14"
+   },
+   "referral_to_treatment": {
+    "value": 42,
+    "lo": 35,
+    "hi": 42,
+    "kind": "measured",
+    "url": "https://www.helsedirektoratet.no/nasjonale-forlop/lungekreft/forlopstider-i-pakkeforlop-for-lungekreft",
+    "quote": "Fra henvisning mottatt til start behandling                                         Medikamentell behandling   35 kalenderdager",
+    "year": 2026,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/no_lung/page.txt",
+    "note": "surgery 42, drug 35, radiotherapy 42; page last revised 3 July 2026"
+   }
+  },
+  "SE_svf_lung": {
+   "suspicion_to_treatment": {
+    "value": 44,
+    "lo": 40,
+    "hi": 44,
+    "kind": "measured",
+    "url": "https://kunskapsbanken.cancercentrum.se/diagnoser/lungcancer/vardforlopp/",
+    "quote": "Start av första behandling, kirurgi eller strålbehandling | 44 kalenderdagar",
+    "year": 2024,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/se_svf/page.txt",
+    "note": "From decision of well-founded suspicion: drug 40, surgery/radiotherapy 44, palliative symptom relief 30 calendar days; target 80 % of patients within lead time. Version 1.4, 2024-11-05."
+   },
+   "achieved": {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10636179/",
+    "quote": "Lung cancer                            30–44                30",
+    "year": 2023,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/svf/page.txt",
+    "claim": "In one Swedish region in 2018 only 30 % of lung cancer pathway patients started treatment within the lead time (30-44 days); 72 % of lung cancer patients were diagnosed via the pathway.",
+    "design": "registry cohort, state transition model",
+    "n": 19204
+   }
+  },
+  "DK_kraeftpakke_lung": {
+   "referral_to_first_visit": {
+    "value": 6,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://lungekraeft.com/wp-content/uploads/2016/11/pakkeforloeb-for-lungekraeft-sundhedsstyrrelsen.pdf",
+    "quote": "Fra henvisning modtaget til første fremmøde på                        6 kalenderdage",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/dk_lung2/page.txt"
+   },
+   "first_visit_to_end_of_workup": {
+    "value": 24,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://lungekraeft.com/wp-content/uploads/2016/11/pakkeforloeb-for-lungekraeft-sundhedsstyrrelsen.pdf",
+    "quote": "Fra første fremmøde på udredende afdeling til                         24 kalenderdage",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/dk_lung2/page.txt"
+   },
+   "workup_to_treatment": {
+    "value": 14,
+    "lo": 11,
+    "hi": 15,
+    "kind": "measured",
+    "url": "https://lungekraeft.com/wp-content/uploads/2016/11/pakkeforloeb-for-lungekraeft-sundhedsstyrrelsen.pdf",
+    "quote": "Stråleterapi   15 kalenderdage",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/dk_lung2/page.txt",
+    "note": "surgery 14, radiotherapy 15, chemotherapy 11"
+   },
+   "referral_to_treatment": {
+    "value": 44,
+    "lo": 41,
+    "hi": 45,
+    "kind": "measured",
+    "url": "https://lungekraeft.com/wp-content/uploads/2016/11/pakkeforloeb-for-lungekraeft-sundhedsstyrrelsen.pdf",
+    "quote": "Kemoterapi     41 kalenderdage",
+    "year": 2016,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/dk_lung2/page.txt",
+    "note": "surgery 44, radiotherapy 45, chemotherapy 41. Opened copy is the 2016 Sundhedsstyrelsen pathway description (mirror). The current sst.dk PDF (https://www.sst.dk/media/estk2oo1/pakkeforloeb-for-lungekraeft-jan-2025.pdf) returned HTTP 429; a search summary indicates the same 6/24/14/44 values but that was not opened."
+   }
+  }
+ },
+ "delay_mortality": {
+  "hr_per_4_weeks": {
+   "surgery": {
+    "value": 1.06,
+    "lo": 1.06,
+    "hi": 1.08,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7610021/",
+    "quote": "all indications showing a hazard ratio for each four week delay of between 1.06 and 1.08 (6-8% increased chance of death for each four week delay in treatment)",
+    "year": 2020,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/hanna/page.txt",
+    "note": "range across surgical indications; e.g. colectomy 1.06 (1.01-1.12), breast surgery 1.08 (1.03-1.13)"
+   },
+   "lung_surgery": {
+    "value": 1.06,
+    "lo": 0.93,
+    "hi": 1.19,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7610021/",
+    "quote": "The results for lung surgery were consistent with other sites, though not statistically significant (1.06, 0.93 to 1.19).",
+    "year": 2020,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/hanna/page.txt",
+    "note": "Only lung-specific estimate with high-validity data. Not statistically significant. Use as the model default with its full interval."
+   },
+   "systemic": {
+    "value": null,
+    "lo": 1.01,
+    "hi": 1.28,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7610021/",
+    "quote": "Estimates for systemic treatment varied (hazard ratio range 1.01-1.28).",
+    "year": 2020,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/hanna/page.txt",
+    "note": "range across indications, no pooled value; none lung-specific"
+   },
+   "radiotherapy_head_neck": {
+    "value": 1.09,
+    "lo": 1.05,
+    "hi": 1.14,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7610021/",
+    "quote": "Radiotherapy estimates were for radical radiotherapy for head and neck cancer (hazard ratio 1.09, 95% confidence interval 1.05 to 1.14)",
+    "year": 2020,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/hanna/page.txt"
+   },
+   "lung_chemoradiation": {
+    "value": null,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7610021/",
+    "quote": "NSCLC, stage III chemoradiation No high validity data found SCLC, limited stage chemoradiation No high validity data found",
+    "year": 2020,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/hanna/page.txt",
+    "note": "No high-validity data for lung chemoradiation."
+   }
+  },
+  "design": "systematic review and meta-analysis, 34 studies, 17 indications, n=1 272 681",
+  "caveat_en": "Delay in Hanna et al. is diagnosis -> first treatment (curative, neoadjuvant, adjuvant). It does not cover the patient or primary care intervals. Applying it to pre-diagnosis days is an assumption of the model."
+ },
+ "finland_lung_facts": {
+  "curative_intent_share_pct": {
+   "value": 27,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "quote": "Parantavaan hoitoon ohjautui runsas neljännes (27 %) potilaista.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/syopajarjestot/page.txt",
+   "period": "2019-2023"
+  },
+  "operated_share_pct": {
+   "value": 11.8,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "quote": "A recent Finnish Cancer Registry publication reported that only 11.8% of patients underwent surgery.",
+   "year": 2025,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/paappanen/page.txt",
+   "note": "Comparison in the same paper: 26.6 % in Norway, 26.0 % in Denmark."
+  },
+  "stage_missing_share": {
+   "value": null,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "quote": "Levinneisyystieto puuttui lähes puolelta potilaista, mikä kertoo puutteista kliinisten syöpäilmoitusten kirjaamisessa.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/syopajarjestot/page.txt",
+   "note": "\"nearly half\"; no exact percentage in the release",
+   "period": "2019-2023"
+  },
+  "histology_unspecified_share": {
+   "value": null,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://www.laakarilehti.fi/terveydenhuolto/keuhkosyovan-toteamisessa-eroja-hyvinvointialueiden-valilla/",
+   "quote": "noin viidenneksellä potilaista syövän tarkkaa solutyyppiä ei ollut määritelty",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/laakarilehti/page.txt",
+   "note": "\"about one fifth\""
+  },
+  "stage_iv_share_pct": {
+   "value": 59,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+   "quote": "diagnosed with stage IV lung cancer (59%) had not changed over time. This was stated to be one of the main",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/ihe_pdf/page.txt",
+   "note": "single-centre Finnish study 2007-2019 as cited by IHE; not national"
+  },
+  "five_year_survival_pct": {
+   "FI_men": {
+    "value": 16.7,
+    "lo": null,
+    "hi": null,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+    "quote": "The 5-year survival rate for male patients with LC between 2018 and 2022 was 16.7% in Finland, compared to 26.8% in Sweden, 28.2% in Norway, 26.2% in Denmark, and 28.4% in Iceland",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/paappanen/page.txt",
+    "period": "2018-2022",
+    "note": "NORDCAN as cited by Paappanen; FI women 27.3 %"
+   }
+  },
+  "operability": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305687/",
+   "quote": "Among potentially operable patients, 50.6% were deemed ineligible for surgery due to various factors, including poor pulmonary or cardiac function, comorbidities, or localised tumour spread.",
+   "year": 2025,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/paappanen/page.txt",
+   "claim": "In five Finnish hospitals, half of potentially operable stage I-IIIA NSCLC patients were not operated, mostly for fitness/comorbidity reasons, not delay.",
+   "design": "retrospective five-hospital cohort",
+   "n": 545
+  },
+  "regional": {
+   "url": "https://yle.fi/a/74-20250979",
+   "quote": "Syöpärekisterin mukaan Itä- ja Pohjois-Suomessa keuhkosyöpäpotilailla parantava hoito toteutuu harvemmin kuin muualla Suomessa.",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/yle_250979/page.txt",
+   "claim": "Curative treatment is delivered less often in Eastern and Northern Finland."
+  },
+  "annual_new_cases": {
+   "value": null,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "quote": null,
+   "year": null,
+   "verified": false,
+   "access": "blocked_403",
+   "fetched_at": "2026-11-13",
+   "local_copy": null,
+   "note": "Cancer Registry lung report returned 403. Take lung incidence and deaths from data/processed/indicators.jsonl (data agent, Statistics Finland / Cancer Registry API)."
+  },
+  "annual_deaths": {
+   "value": null,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "quote": null,
+   "year": null,
+   "verified": false,
+   "access": "blocked_403",
+   "fetched_at": "2026-11-13",
+   "local_copy": null,
+   "note": "See annual_new_cases. IHE 2026 states only that lung cancer caused the most cancer deaths in both sexes in 2023 (all-cancer deaths 13,645)."
+  },
+  "all_cancer_deaths_2023": {
+   "value": 13645,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+   "quote": "The number of cancer deaths (mortality) in Finland was 13,645 (7,364 men and 6,281 women) in 2023 (7). Lung cancer",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/ihe_pdf/page.txt"
+  }
+ },
+ "stage_survival_5y_pct": {
+  "country": "Norway",
+  "period": "2020-2024",
+  "measure": "five-year relative survival, lung cancer",
+  "stage_I": {
+   "value": 71,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+   "quote": "five-year relative survival rate in stage I lung cancer was 71% compared to only 9% in stage IV in Norway in 2020-",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/ihe_pdf/page.txt",
+   "note": "secondary citation: IHE 2026 citing the Norwegian lung cancer quality registry annual report 2024"
+  },
+  "stage_IV": {
+   "value": 9,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": "https://ihe.se/app/uploads/2026/04/IHE-Cancer-Dashboard-Finland_.pdf",
+   "quote": "five-year relative survival rate in stage I lung cancer was 71% compared to only 9% in stage IV in Norway in 2020-",
+   "year": 2026,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/ihe_pdf/page.txt"
+  },
+  "stage_II": {
+   "value": null,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": null,
+   "quote": null,
+   "year": null,
+   "verified": false,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": null,
+   "note": "not found in an opened source"
+  },
+  "stage_III": {
+   "value": null,
+   "lo": null,
+   "hi": null,
+   "kind": "measured",
+   "url": null,
+   "quote": null,
+   "year": null,
+   "verified": false,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": null,
+   "note": "not found in an opened source"
+  }
+ },
+ "inequality": {
+  "education_stage_iv_or": {
+   "men": {
+    "value": 1.1,
+    "lo": 1.08,
+    "hi": 1.12,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12551501/",
+    "quote": "Patients with lower education had higher odds of being diagnosed with stage IV cancer than patients with higher education (men: OR 1.10, 95% CI 1.08 to 1.12; women: OR 1.15, 95% CI 1.13 to 1.17).",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/zai/page.txt"
+   },
+   "women": {
+    "value": 1.15,
+    "lo": 1.13,
+    "hi": 1.17,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12551501/",
+    "quote": "Patients with lower education had higher odds of being diagnosed with stage IV cancer than patients with higher education (men: OR 1.10, 95% CI 1.08 to 1.12; women: OR 1.15, 95% CI 1.13 to 1.17).",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/zai/page.txt"
+   },
+   "note": "All cancers combined, Finland 2000-2019, register-based, n = 469 522 new cancers. Lung-specific estimates are in the full paper tables and were not extracted."
+  },
+  "education_mortality_hr": {
+   "men": {
+    "value": 1.13,
+    "lo": 1.1,
+    "hi": 1.16,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12551501/",
+    "quote": "patients with lower education had higher mortality rates than patients with higher education (men: HR 1.13, 95% CI 1.10 to 1.16; women: HR 1.14, 95% CI 1.11 to 1.17)",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/zai/page.txt"
+   },
+   "women": {
+    "value": 1.14,
+    "lo": 1.11,
+    "hi": 1.17,
+    "kind": "measured",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12551501/",
+    "quote": "patients with lower education had higher mortality rates than patients with higher education (men: HR 1.13, 95% CI 1.10 to 1.16; women: HR 1.14, 95% CI 1.11 to 1.17)",
+    "year": 2025,
+    "verified": true,
+    "access": "full_text",
+    "fetched_at": "2026-11-13",
+    "local_copy": "data/raw/evidence/zai/page.txt"
+   }
+  },
+  "distance_over_50km_mortality_hr": {
+   "value": 1.47,
+   "lo": 1.07,
+   "hi": 2.01,
+   "kind": "measured",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+   "quote": "the adjusted HR increased to 1.47 (95% CI: 1.07–2.01; p = 0.017) for patients living in rural areas compared to those in urban areas",
+   "year": 2024,
+   "verified": true,
+   "access": "full_text",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/ostrobothnia/page.txt",
+   "note": "NSCLC patients first treated at Vaasa Central Hospital 2016-2020, n=321 (104 living >50 km away); 12-month survival; adjusted for performance status, frailty, stage. Single hospital, association only."
+  }
+ },
+ "curative_access": {
+  "note": "v3. Used to turn \"extra patients treated with curative intent\" into deaths avoided. The conversion is an assumption, not a causal estimate; the sources below are context for its size.",
+  "deaths_avoided_per_extra_curative_patient": {
+   "value": 0.15,
+   "lo": 0.05,
+   "hi": 0.3,
+   "kind": "assumption",
+   "definition": "deaths within five years avoided per additional patient who gets curative-intent treatment instead of none or non-curative treatment",
+   "basis": "The patients a county adds at the margin are older and less fit than those already treated, and some would have been cured anyway by later treatment, so the full difference between treated and untreated groups must not be used. Context: stereotactic radiotherapy in medically inoperable stage I patients gave 40 % five-year survival (RTOG 0236) against 6 % in untreated stage I patients (population registry, not a comparison of like with like): a difference of 0.34. We count under half of that (0.15) and allow 0.05-0.30. Not adjusted for anything; observational sources.",
+   "context": [
+    {
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6117101/",
+     "quote": "Disease-free survival and overall survival at 5 years was 25.5% (95% CI, 14.9%-37.4%) and 40.0% (95% CI, 27.1%-52.5%), respectively",
+     "year": 2018,
+     "verified": true,
+     "access": "full_text",
+     "fetched_at": "2026-11-13",
+     "local_copy": "data/raw/evidence/rtog0236/page.txt",
+     "claim": "Stereotactic radiotherapy for medically inoperable stage I NSCLC: 40 % alive at five years.",
+     "design": "single-arm phase 2 trial, 55 evaluable patients"
+    },
+    {
+     "url": "https://europepmc.org/article/MED/17505036",
+     "quote": "Five-year OS for untreated stage I NSCLC was 6% overall",
+     "year": 2007,
+     "verified": true,
+     "access": "abstract",
+     "fetched_at": "2026-11-13",
+     "local_copy": "data/raw/evidence/raz_untreated/page.txt",
+     "claim": "Untreated stage I NSCLC: 6 % alive at five years.",
+     "design": "population registry, California, 1 432 untreated patients"
+    },
+    {
+     "url": "https://europepmc.org/article/MED/21871792",
+     "quote": "A high frequency of resection was strongly inversely associated with overall mortality (HR 0.88, 95% CI 0.86-0.91 for the highest compared to the lowest resection quintile)",
+     "year": 2012,
+     "verified": true,
+     "access": "abstract",
+     "fetched_at": "2026-11-13",
+     "local_copy": "data/raw/evidence/riaz_resection/page.txt",
+     "claim": "English areas that operate more have lower mortality among all lung cancer patients (ecological).",
+     "design": "population-based, England 2004-2006, 77 349 patients"
+    },
+    {
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3798968/",
+     "quote": "increasing surgical resection rates appeared to explain some of this improvement",
+     "year": 2013,
+     "verified": true,
+     "access": "full_text",
+     "fetched_at": "2026-11-13",
+     "local_copy": "data/raw/evidence/khakwani_nlca/page.txt",
+     "claim": "Rising resection rates explained part of the survival improvement in England.",
+     "design": "national audit cohort"
+    }
+   ]
+  }
+ },
+ "screening": {
+  "note": "v3. Screening benefit = people screened x their lung cancer death rate without screening x trial effect. Cost and benefit refer to the same people.",
+  "baseline_lung_deaths_per_1000_person_years": {
+   "value": 3.3,
+   "lo": 2.5,
+   "hi": 4.1,
+   "kind": "measured",
+   "url": "https://doi.org/10.1056/NEJMoa1911793",
+   "quote": "lung-cancer mortality was 2.50 deaths per 1000 person-years and 3.30 deaths per 1000 person-years, respectively",
+   "year": 2020,
+   "verified": true,
+   "access": "abstract",
+   "fetched_at": "2026-11-13",
+   "local_copy": "data/raw/evidence/nelson/page.txt",
+   "note": "Control arm of NELSON (men aged 50-74, heavy smokers). lo/hi = +-25 %, our assumption, because the Finnish eligible group is not the trial population."
+  },
+  "participants_per_100k_residents": {
+   "value": 1000,
+   "lo": 600,
+   "hi": 1400,
+   "kind": "assumption",
+   "basis": "2 000 eligible per 100 000 residents x 50 % take part. Same assumption as the cost. The Finnish pilot 2026-2028 will give real numbers."
+  }
+ },
+ "cost_assumptions": {
+  "note": "Unit costs used in interventions.json. All are assumptions set by us and editable; the THL unit cost page (https://thl.fi/data-ja-tilastot/sote-talous/yksikkokustannukset) returned 403 and could not be opened.",
+  "nurse_fte_eur_per_year": {
+   "value": 60000,
+   "kind": "assumption",
+   "basis": "registered nurse / coordinator, salary plus employer costs"
+  },
+  "specialist_physician_fte_eur_per_year": {
+   "value": 150000,
+   "kind": "assumption",
+   "basis": "pulmonologist / radiologist / oncologist, salary plus employer costs"
+  },
+  "gp_fte_eur_per_year": {
+   "value": 130000,
+   "kind": "assumption",
+   "basis": "health centre physician, salary plus employer costs"
+  },
+  "ct_scan_eur": {
+   "value": 200,
+   "kind": "assumption",
+   "basis": "chest CT including report, public provider internal price"
+  },
+  "gp_short_visit_eur": {
+   "value": 125,
+   "kind": "assumption",
+   "basis": "THL unit cost 2024 for a 1-20 min primary care doctor appointment as shown in a search-result snippet; the THL page itself could not be opened",
+   "url": "https://thl.fi/data-ja-tilastot/sote-talous/yksikkokustannukset",
+   "verified": false
+  },
+  "finland_population": {
+   "value": 5600000,
+   "kind": "assumption",
+   "basis": "round figure used only to turn national roadmap budgets into per-100k amounts; replace with pop_total from indicators.jsonl"
+  }
+ }
+}
