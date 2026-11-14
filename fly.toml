@@ -1,0 +1,25 @@
+# Kello public demo. Deploy with deploy/fly.sh (it builds the web app first).
+app = "kello-care"
+primary_region = "arn"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  # one machine, always on: the first click of a judge must not wait for a cold start
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    interval = "15s"
+    timeout = "5s"
+    grace_period = "40s"
+    method = "GET"
+    path = "/api/status"
+
+[[vm]]
+  size = "shared-cpu-2x"
+  memory = "2gb"
