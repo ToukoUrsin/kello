@@ -6,8 +6,9 @@ import PlanView from "./PlanView";
 import SourcesDrawer from "./SourcesDrawer";
 import Monday from "./Monday";
 import Review from "./Review";
+import StageView from "./stage/StageView";
 
-type View = "map" | "county" | "plan" | "monday" | "review";
+type View = "map" | "county" | "plan" | "monday" | "review" | "run";
 export type Lang = "en" | "fi";
 /** Everything a link has to carry: #/plan/21?budget=1000000&lang=fi&objective=curative&without=sbrt_pathway */
 interface Route { view: View; scope: string; budget: number; lang: Lang; objective: string | null; without: string[]; from?: "FI" | null }
@@ -20,7 +21,7 @@ function parseHash(): Route {
   const q = new URLSearchParams(query);
   const b = q.get("budget") == null || q.get("budget") === "" ? NaN : Number(q.get("budget"));
   return {
-    view: v === "county" || v === "plan" || v === "monday" || v === "review" ? v : "map", scope: s || "FI",
+    view: v === "county" || v === "plan" || v === "monday" || v === "review" || v === "run" ? v : "map", scope: s || (v === "run" ? "21" : "FI"),
     budget: Number.isFinite(b) && b >= 0 ? Math.min(50_000_000, Math.round(b)) : DEFAULT_BUDGET,
     lang: q.get("lang") === "fi" ? "fi" : "en",
     objective: OBJECTIVES.includes(q.get("objective") ?? "") ? q.get("objective") : null,
@@ -35,6 +36,7 @@ function toHash(r: Route): string {
   if (r.view !== "map" && r.objective) q.set("objective", r.objective);
   if (r.view !== "map" && r.without.length) q.set("without", r.without.join(","));
   if (r.view !== "map" && r.from === "FI" && r.scope !== "FI") q.set("from", "FI");
+  if (r.view === "run") return `#/run/${r.scope}`;
   const qs = q.toString();
   return `#/${r.view}/${r.scope}${qs ? `?${qs}` : ""}`;
 }
@@ -104,7 +106,7 @@ export default function App() {
   const setWithout = useCallback((without: string[]) => patch({ without }), [patch]);
 
   const sorted = [...(areas.data ?? [])].sort((a, b) => a.short_en.localeCompare(b.short_en));
-  const tabs: [View, string][] = [["map", "Map"], ["county", "County"], ["plan", "Plan"]];
+  const tabs: [View, string][] = [["run", "Run"], ["map", "Map"], ["county", "County"], ["plan", "Plan"]];
 
   return (
     <div className="app">
@@ -118,7 +120,7 @@ export default function App() {
         </div>
         <nav className="tabs" aria-label="Views">
           {tabs.map(([v, label]) => (
-            <button key={v} aria-current={route.view === v || (v === "plan" && route.view === "monday") || (v === "county" && route.view === "review") ? "page" : undefined} onClick={() => go(v)}>{label}</button>
+            <button key={v} aria-current={route.view === v || (v === "plan" && route.view === "monday") || (v === "county" && route.view === "review") ? "page" : undefined} onClick={() => go(v, v === "run" && route.view === "map" ? "21" : undefined)}>{label}</button>
           ))}
         </nav>
         <div className="spacer" />
@@ -131,6 +133,7 @@ export default function App() {
         <button className="btn srcbtn" onClick={() => setDrawer({ focus: null })} aria-haspopup="dialog">Sources<span className="wide"> &amp; method</span></button>
       </header>
       <main>
+        {route.view === "run" && <StageView key={route.scope} scope={route.scope} areas={areas.data ?? []} open={(view, section) => go(view, route.scope, section)} openSources={() => setDrawer({ focus: null })} />}
         {route.view === "map" && <MapView onPick={(id, section) => go("county", id, section)} openPlan={(id) => go("plan", id)} areas={areas.data ?? []} />}
         {route.view === "county" && <CountyView key={route.scope} scope={route.scope} budget={route.budget} setBudget={setBudget} objective={route.objective} setObjective={setObjective} without={route.without} setWithout={setWithout} areas={areas.data ?? []} openPlan={() => go("plan")} openMonday={() => go("monday")} pick={(id) => go("county", id)} />}
         {route.view === "plan" && <PlanView key={route.scope} fromNational={route.from === "FI"} scope={route.scope} budget={route.budget} setBudget={setBudget} lang={route.lang} setLang={setLang} objective={route.objective} without={route.without} areas={areas.data ?? []} openCounty={() => go("county")} openMonday={() => go("monday")} />}
