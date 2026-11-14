@@ -258,7 +258,9 @@ def build_material(area_id: str, budget_eur: float, lang: str, objective: str | 
         rec = next((v for v in registry.values() if isinstance(v, dict) and v.get("url") == s.get("source_url")), {})
         label = s.get(f"label_{lang}") or s.get("label_en")
         reader = str(s.get("read_by") or "").split(":")[0].capitalize()
-        bits = [f.t("measured", "mitattu"), str(s.get("period") or "").replace("-", "–") if re.fullmatch(r"\d{4}-\d{4}", str(s.get("period") or "")) else s.get("period")]
+        kind_word = "estimated" if s.get("kind") == "estimated" else ("assumption" if s.get("kind") == "assumption" else "measured")
+        kind_fi = {"estimated": "arvio", "assumption": "oletus", "measured": "mitattu"}[kind_word]
+        bits = [f.t(kind_word, kind_fi), str(s.get("period") or "").replace("-", "–") if re.fullmatch(r"\d{4}-\d{4}", str(s.get("period") or "")) else s.get("period")]
         if s.get("level") == "collaborative_area":
             bits.append(f.t("published for the collaborative area", "julkaistu yhteistyöalueelle"))
         if reader:

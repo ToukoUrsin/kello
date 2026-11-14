@@ -1,9 +1,10 @@
 import { StudyLine } from "./StudyLine";
 import { Fragment, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { api, ApiError, AreaMeta, ChartRead, eurFi, eurx, fiNumbers, friendly, one, Plan, ReportJob, ReportResult, ReportRow, useAsync, when, whenFi, VerifyResult, OptResult } from "./lib";
+import { api, ApiError, AreaMeta, ChartRead, eurFi, eurx, fiNumbers, friendly, one, Plan, ReportJob, ReportResult, ReportRow, plainMoney, RETRY_MS, useAsync, when, whenFi, VerifyResult, OptResult, readerName } from "./lib";
 import { adviceWord, checkCount, host } from "./WebCheck";
 import { Failed } from "./App";
-import { PilotFigures, pilotText } from "./Pilot";
+import { PilotFigures, PilotSteps, pilotText } from "./Pilot";
+import { DrugFinding } from "./Pathway";
 import type { Lang } from "./App";
 
 const PRESETS = [500_000, 1_000_000, 2_000_000];
@@ -113,6 +114,15 @@ function renderPlan(md: string, toFootnote: (n: number) => void, under?: (no: st
 
 /** A query string of several hundred characters does not belong on a printed page: the link keeps it, the text shows where it goes. */
 const shortUrl = (u: string) => { if (u.length <= 100) return u; try { const x = new URL(u); return `${x.origin}${x.pathname}${x.search ? "?…" : ""}`; } catch { return `${u.slice(0, 96)}…`; } };
+/** "claude-opus-5-5" -> "Claude": model ids stay out of the page. */
+const writerName = (m?: string | null) => (!m ? "a language model" : /claude/i.test(m) ? "Claude" : /gemini/i.test(m) ? "Gemini" : m);
+/** The hosted copy shows stored plans only: say plainly which one is shown, and for which budget. */
+function nearestLabel(n: NonNullable<Plan["nearest"]>, asked: number, lang: Lang): string {
+  const fi = lang === "fi", m = (x: number) => (fi ? eurFi(x) : eurx(x));
+  if (n.budget_eur === asked) return fi ? `Tämä Kellon versio näyttää valmiiksi kirjoitetut suunnitelmat. Tässä on tallennettu suunnitelma: ${m(n.budget_eur)} vuodessa.` : `This copy of Kello shows plans written earlier. This is the stored plan for ${m(n.budget_eur)} a year${/every action still in it/.test(n.label_en) ? ", with every action still in it" : ""}.`;
+  return fi ? `Tämä Kellon versio näyttää valmiiksi kirjoitetut suunnitelmat. Summalle ${m(asked)} ei ole tallennettua suunnitelmaa, joten tässä on lähin: ${m(n.budget_eur)} vuodessa.`
+    : `This copy of Kello shows plans written earlier. There is none for ${m(asked)} a year, so this is the nearest stored plan: ${m(n.budget_eur)} a year${/every action still in it/.test(n.label_en) ? ", with every action still in it" : ""}.`;
+}
 const dayOf = (iso: string) => { const d = new Date(iso); return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }); };
 
 /** Grey blocks in the shape of the plan: title, summary strip, two short sections, the action table, the rest. */
@@ -139,9 +149,12 @@ const plainAreas = (t: string) => t
   .replace(/collaborative area/g, "university hospital area")
   .replace(/\bOYS\b/g, "Oulu university hospital");
 
-interface Props { scope: string; budget: number; setBudget: (n: number) => void; lang: Lang; setLang: (l: Lang) => void; objective: string | null; without: string[]; areas: AreaMeta[]; openCounty: () => void }
+/** Millions in the stored text read like the rest of the page: €1,426,060 -> €1.43M, 17 418 643 € -> 17,4 milj. €. The stored text is not changed. */
+const plainMoneyFi = (t: string) => t.replace(/(?<![\d\u00a0 ])(\d{1,3}(?:[\u00a0 ]\d{3}){2,})[\u00a0 ]?€/g, (_m, d: string) => eurFi(Number(d.replace(/[\u00a0 ]/g, ""))));
 
-export default function PlanView({ scope, budget, setBudget, lang, setLang, objective, without, areas, openCounty }: Props) {
+interface Props { scope: string; budget: number; setBudget: (n: number) => void; lang: Lang; setLang: (l: Lang) => void; objective: string | null; without: string[]; areas: AreaMeta[]; openCounty: () => void; openMonday?: () => void; fromNational?: boolean }
+
+export default function PlanView({ scope, budget, setBudget, lang, setLang, objective, without, areas, openCounty, openMonday, fromNational = false }: Props) {
   const [stage, setStage] = useState<string | null>(null);
   const [draft, setDraft] = useState("");
   const [plan, setPlan] = useState<Plan | null>(null);
@@ -150,6 +163,7 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
   const [copied, setCopied] = useState(false);
   const es = useRef<EventSource | null>(null);
   const ivs = useAsync(api.interventions, []);
+  const detail = useAsync(() => api.area(scope), [scope]);
   const opt = useAsync<OptResult>(() => api.optimize(scope, budget, objective), [scope, budget, objective]);
   const t = T[lang];
   const area = areas.find((a) => a.id === scope);
@@ -157,10 +171,13 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
   const name = lang === "fi" ? (scope === "FI" ? "Suomi" : area?.name_fi ?? area?.short_fi ?? scope) : scope === "FI" ? "Finland" : area?.name_en ?? nameEn;
   const key = without.join(",");
 
-  const run = useCallback((refresh = false) => {
+  const planGen = useRef(0);
+  const run = useCallback((refresh = false, attempt = 0) => {
     es.current?.close();
+    const my = attempt ? planGen.current : ++planGen.current;
     setPlan(null); setDraft(""); setError(null);
     if (budget <= 0) { setStage(null); return; }
+    if (areas.length && scope !== "FI" && !areas.some((a) => a.id === scope)) { setStage(null); setError("There is no county with that code. Choose one from the list at the top of the page."); return; }
     setStage("material");
     const q = new URLSearchParams({ budget_eur: String(budget), lang });
     if (objective) q.set("objective", objective);
@@ -173,13 +190,17 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
     src.addEventListener("done", (e) => { const p: Plan = JSON.parse((e as MessageEvent).data); setPlan(p); setStage(null); api.notePlan(p.fixture === true); src.close(); });
     src.addEventListener("error", (e) => {
       const data = (e as MessageEvent).data;
-      let msg = "The plan did not arrive: the connection was lost while it was being written.";
+      src.close();
+      if (my !== planGen.current) return;
+      // A dropped connection is not a failed plan: ask again (0.5 s, 1.5 s, 4 s) before saying anything.
+      if (!data && attempt < RETRY_MS.length) { setTimeout(() => { if (my === planGen.current) run(refresh, attempt + 1); }, RETRY_MS[attempt]); return; }
+      let msg = "The plan did not arrive: Kello could not be reached. Check your connection and try again.";
       if (data) { try { const j = JSON.parse(data); msg = /rate|busy|429|503|529|overload/i.test(`${j.error} ${j.detail ?? ""} ${j.status ?? ""}`) ? "The plan writer is busy right now. Wait a minute and try again." : "The plan could not be written this time."; } catch { /* keep default */ } }
       setError(msg); setStage(null); src.close();
     });
-  }, [scope, budget, lang, objective, key]);
+  }, [scope, budget, lang, objective, key, areas.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  useEffect(() => { const timer = setTimeout(() => run(false), 300); return () => { clearTimeout(timer); es.current?.close(); }; }, [run]);
+  useEffect(() => { const timer = setTimeout(() => run(false), 300); return () => { clearTimeout(timer); planGen.current++; es.current?.close(); }; }, [run]);
 
   // A footnote number scrolls to its source inside the plan and marks it for a moment.
   const toFootnote = useCallback((n: number) => {
@@ -193,7 +214,7 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
   const ownPilot = !!pilot && scope !== "FI";
   // The pilot is drawn once, from its data, below the plan; the model's own pilot paragraph is left out so it is not said twice.
   const md = useMemo(() => {
-    const m = lang === "fi" ? fiNumbers(raw) : plainAreas(raw);
+    const m = lang === "fi" ? plainMoneyFi(fiNumbers(raw)) : plainMoney(plainAreas(raw));
     return ownPilot ? m.replace(/\n## (?:Pilot ask|Pilottiehdotus)\s*\n[\s\S]*?(?=\n## |$)/, "\n") : m;
   }, [raw, lang, ownPilot]);
   // Today's web checks, printed under the action they belong to. The stored plan itself never changes with a check.
@@ -263,15 +284,16 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
           <span>Kello · {scope === "FI" ? t.national : t.doc} · {name}</span>
           <span>{t.ceiling} {money(shownBudget)} {t.year}{plan?.generated_at ? ` · ${lang === "fi" ? whenFi(plan.generated_at) : when(plan.generated_at).replace(/,.*$/, "")}` : ""}{plan?.fixture ? ` · ${t.sample}` : ""}</span>
         </div>
-        {plan?.nearest && <p className="nearest">{lang === "fi" ? plan.nearest.label_fi : plan.nearest.label_en}</p>}
+        {plan?.nearest ? <p className="nearest" role="note">{nearestLabel(plan.nearest, budget, lang)}</p>
+          : fromNational && plan ? <p className="nearest" role="note">{lang === "fi" ? `Avattu kansallisesta suunnitelmasta: tämä on alueen oma suunnitelma, ${money(shownBudget)} vuodessa.` : `Opened from the national plan: this is ${name}'s own plan, for ${money(shownBudget)} a year.`}</p> : null}
         {budget <= 0 ? <p className="muted">{t.zero}</p> : error ? <Failed message={error} retry={() => run(false)} /> : md ? (
           <>
             <div className={"doc" + (stage === "writing" ? " caret" : "")}>{nodes}</div>
             {ownPilot && pilot && <section className="planpilot" aria-label="Pilot ask">
               <h2>{lang === "fi" ? "Pilottiehdotus" : "Pilot ask"}</h2>
               <p className="asklead">{pilotText(pilot, lang).lead}</p>
+              <PilotSteps p={pilot} lang={lang} />
               <PilotFigures p={pilot} lang={lang} cmpName={lang === "fi" ? areas.find((a) => a.id === pilot.six_months?.comparison_area_id)?.name_fi : undefined} />
-              {pilotText(pilot, lang).rest && <p>{pilotText(pilot, lang).rest}</p>}
               {pilot.cannot_show_en && <p className="small muted">{lang === "fi" ? (pilot.cannot_show_fi ?? pilot.cannot_show_en) : pilot.cannot_show_en}</p>}
             </section>}
             {((plan?.action_studies?.length ?? 0) > 0 || (opt.data?.chosen?.some((c) => c.study_line_en) ?? false)) && <section className="planstudies" aria-label="Effect studies">
@@ -301,12 +323,14 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
       </article>
 
       <aside className="side noprint">
+        {detail.data?.pathway && <DrugFinding pathway={detail.data.pathway} where={nameEn} />}
         <section className="panel">
           <header><h2>One-page plan for {nameEn}</h2></header>
           <div className="body" style={{ display: "grid", gap: 12 }}>
             <div className="row">
               <button className="btn primary" onClick={pdf} disabled={!plan}>Print / save PDF</button>
               <button className="btn" onClick={copy} disabled={budget <= 0}>{copied ? "Link copied" : "Copy link"}</button>
+              {openMonday && scope !== "FI" && <button className="btn" onClick={openMonday}>Who does what on Monday</button>}
             </div>
             <div>
               <span className="lb" id="lb-lang">Language</span>
@@ -320,7 +344,8 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
               <div className="seg" role="group" aria-labelledby="lb-b">
                 {PRESETS.map((b) => <button key={b} aria-pressed={budget === b} onClick={() => setBudget(b)}>{eurx(b).replace(/,000$/, "k")}</button>)}
               </div>
-              {!PRESETS.includes(budget) && <div className="small muted" style={{ marginTop: 4 }}>Using {eurx(budget)} from the link or the county page.</div>}
+              {plan?.nearest && plan.nearest.budget_eur !== budget ? <div className="small muted" style={{ marginTop: 4 }}>You asked for {eurx(budget)}; the plan shown is the stored one for {eurx(plan.nearest.budget_eur)}.</div>
+                : !PRESETS.includes(budget) && <div className="small muted" style={{ marginTop: 4 }}>Using {eurx(budget)} from the link or the county page.</div>}
             </div>
             {stage && (
               <ul className="stages" role="status">
@@ -329,7 +354,7 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
             )}
             {plan && !stage && (
               <p className="small muted">
-                {plan.generated_by === "template" ? "This is the template text: the plan writer could not be reached, so the sentences are built straight from the numbers. " : `Written by ${plan.generated_by}${plan.generated_at ? ` on ${when(plan.generated_at)}` : ""}. `}
+                {plan.generated_by === "template" ? "The plan writer could not be reached, so these sentences are built straight from the numbers. " : `Written by ${writerName(plan.generated_by)}${plan.generated_at ? ` on ${when(plan.generated_at)}` : ""}. `}
                 {plan.objective ? `Actions ranked by ${OBJ[plan.objective] ?? plan.objective}. ` : ""}
                 The numbers and their order are the county page's own. The link carries the county, budget, language and anything left out, and always shows this same text.{" "}
                 {!plan.nearest && <button className="btn quiet sm inline" onClick={() => run(true)}>Write it again</button>}
@@ -344,7 +369,7 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
             <header><h2>Reviewer note</h2></header>
             <div className="body">
               {plan.review.summary?.reviewed === false || /fail|none/.test(plan.review.checked_by ?? "") ? (
-                <p className="count">Not checked by a second pass{plan.generated_by === "template" ? ": this is the template text." : "."}</p>
+                <p className="count">Not checked by a second pass{plan.generated_by === "template" ? ": the sentences are built straight from the numbers." : "."}</p>
               ) : (
                 <p className="count num">Checked by a second pass: {sum.rewritten} sentence{sum.rewritten === 1 ? "" : "s"} rewritten, {sum.removed} removed.</p>
               )}
@@ -487,7 +512,7 @@ function ReadReport() {
         {chart && charts.data && acc && <ChartExample c={charts.data} onClose={clear} />}
         {st.data && !chart && (
           <div className="readresult">
-            <p className="small"><b>{doc?.title ?? st.what}</b><span className="muted num"> · {rows.length} values in this read{st.data.model ? ` · read by ${st.data.model}` : ""}{st.data.cached ? ` · read earlier${st.data.read_at ? `, ${when(st.data.read_at)}` : ""}` : ""}{nKept ? ` · ${nKept} added to Kello by you` : ""}</span> <button type="button" className="btn quiet sm inline" onClick={clear}>Close</button></p>
+            <p className="small"><b>{doc?.title ?? st.what}</b><span className="muted num"> · {rows.length} values in this read{st.data.model ? ` · read by ${readerName(st.data.model)}` : ""}{st.data.cached ? ` · read earlier${st.data.read_at ? `, ${when(st.data.read_at)}` : ""}` : ""}{nKept ? ` · ${nKept} added to Kello by you` : ""}</span> <button type="button" className="btn quiet sm inline" onClick={clear}>Close</button></p>
             {inKello != null && inKello > 0 && inKello !== rows.length && <p className="small muted num">Kello's dataset holds {inKello} values from this report, from several reads of its pages and tables; that is the count in Sources &amp; method.</p>}
             {st.data.notes_en && <details className="gnotes small" open={rows.length === 0}><summary>Gemini's note on this document</summary><p>{st.data.notes_en}</p></details>}
             {rows.length === 0 ? <p className="small muted">No value with a page and quote could be taken from this document{st.data.notes_en ? "; the note above says why" : ""}.</p> : (
@@ -526,7 +551,7 @@ function ChartExample({ c, onClose }: { c: ChartRead; onClose: () => void }) {
   const blind = a.check_a_blind_read_vs_table;
   return (
     <div className="readresult">
-      <p className="small"><b>{a.figure}: {a.caption}</b><span className="muted num"> · {c.count} values · read by {a.model}</span> <button type="button" className="btn quiet sm inline" onClick={onClose}>Close</button></p>
+      <p className="small"><b>{a.figure}: {a.caption}</b><span className="muted num"> · {c.count} values · read by {readerName(a.model)}</span> <button type="button" className="btn quiet sm inline" onClick={onClose}>Close</button></p>
       <p className="small">{a.what} Gemini read the bar lengths off the picture.</p>
       {blind && <p className="small num"><b>How accurate is that?</b> On a chart of the same design whose numbers are printed, we painted the numbers out and compared: {blind.n} values, off by {one(blind.mean_abs_error_pp)} percentage points on average, {one(blind.max_abs_error_pp)} at most.</p>}
       <ul className="rrows num">

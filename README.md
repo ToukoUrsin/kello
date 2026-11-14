@@ -25,20 +25,31 @@ Set `JUNCTION_OXYLABS_API_KEY`, `GEMINI_API_KEY`, and `ANTHROPIC_API_KEY`; set `
   Finland 27.0%, Vantaa and Kerava 35.6%. 12 of 22 counties are further from the national rate than chance explains.
   Across Finland about 66 patients a year miss that treatment, 50 of them in seven counties.
 - **Is it real?** Five checks per county: chance, age, stage at diagnosis, missing records, deaths and survival.
-  For Lapland four of five say the gap is real; stage is not published by county, and an 8-week chart audit settles it.
-- **Where the patients are lost.** Lapland's patients do not wait longer (31 days from diagnosis to treatment in the Oulu
-  university hospital area, 37 in Finland). About 12 a year are missing from curative treatment: 7 not operated,
-  5 not given curative radiotherapy.
+  For Lapland two say clearly yes, two mostly yes, and one cannot be answered from public data: stage is not published
+  by county, and an 8-week chart audit settles it.
+- **Where on the care path.** Four steps per county: found early enough, referred fast enough, treated fast enough,
+  given treatment that aims to cure. Lapland falls behind at the last one only. Its patients do not wait longer (31 days
+  from diagnosis to treatment in the Oulu university hospital area, 37 in Finland). About 12 a year are missing from
+  curative treatment: 7 not operated, 5 not given curative radiotherapy.
+- **Two more findings.** Across counties, the further people live from a university hospital, the fewer are treated to
+  cure (rank correlation −0.66; −0.37 with the share of residents over 65 held fixed). Drug treatment is on record for
+  10.3% of Lapland's patients against 25.1% in Finland; that field is the registry's least reliable.
 - **What to do.** For Lapland six actions for €211,500 a year, about 5 of the 12 patients (range 0–7.7, modelled).
   Each action has an owner, a first step this week, the county's own reason for it and the study its effect comes from.
   A live web check asks whether the action is already running there, and the plan changes with the answer.
-- **The ask.** A six-month pilot of two actions with Lapland and the Oulu university hospital: about 71 patients and
-  64 decisions not to operate reviewed; 18.5% → 20.5% treated to cure by 2028, by the model.
+- **Who does what on Monday.** One printable page per county (`#/monday/21`, Finnish or English): each row is one
+  person's job, with the owner's role, the first step this week, the cost a year and what done looks like in 90 days.
+- **The ask.** Six months with Lapland and the Oulu university hospital. Week 1: ask the hospital which actions already
+  run. Weeks 1–8: audit 50 charts (€8,000). Months 3–6: start the two actions the audit says are new. Counted: about
+  71 patients, 64 decisions not to operate reviewed, decisions changed, referrals made. Model estimate: 18.5% → 20.5%
+  treated to cure by 2028.
 - **A one-page plan** per county, and one for Finland, in Finnish or English.
 
 Every number is tagged `measured`, `estimated` or `assumption` and opens the page and sentence it came from. Public
 aggregate data only. No patient-level data, no individual risk prediction. No trial has measured these effects, so
 every range starts at zero.
+
+`#/reset` puts a running demo back to its start state (stored web checks, anything the browser remembers).
 
 ## Data pipeline
 

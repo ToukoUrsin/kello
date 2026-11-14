@@ -1,18 +1,20 @@
 import { StudyLine } from "./StudyLine";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { api, AreaDetail, AreaMeta, CarePath, Chosen, days, eurx, Intervention, KIND_LABEL, one, OptResult, period, range, rng1, ScoutFinding, ScoutResult, SrcRef, Stage, useAsync, VerifyResult, when } from "./lib";
+import { api, AreaDetail, AreaMeta, CarePath, Chosen, days, eurx, Intervention, KIND_LABEL, one, OptResult, period, plainMoney, range, rng1, ScoutFinding, ScoutResult, SrcRef, Stage, useAsync, VerifyResult, when } from "./lib";
 import { Failed, Skeleton } from "./App";
 import { SourceChip } from "./Source";
 import GapChecks from "./GapChecks";
 import { PilotAsk } from "./Pilot";
+import Pathway from "./Pathway";
+import ExpertQuote from "./ExpertQuote";
 import { Col, Dots } from "./Dots";
-import { effectWord, Finding, host, inUseWord, movesOut, Scout, Trace, useLiveRun, WebCheckResult, adviceWord, checkCount } from "./WebCheck";
+import { effectWord, Finding, host, inUseWord, LiveOutcome, movesOut, Scout, Trace, useLiveRun, WebCheckResult, adviceWord, checkCount } from "./WebCheck";
 
 /* The county page tells one story: where this county loses lung cancer patients between diagnosis and treatment
    that aims to cure, and what closes that gap. Every number on it comes from the API. */
 
 interface Props { scope: string; budget: number; setBudget: (n: number) => void; objective: string | null; setObjective: (o: string | null) => void;
-  without: string[]; setWithout: (ids: string[]) => void; areas: AreaMeta[]; openPlan: () => void; pick: (id: string) => void }
+  without: string[]; setWithout: (ids: string[]) => void; areas: AreaMeta[]; openPlan: () => void; openMonday: () => void; pick: (id: string) => void }
 
 const PRESETS = [250_000, 500_000, 1_000_000, 2_000_000];
 const OBJECTIVES: [string, string][] = [["curative", "Most patients treated to cure"], ["gap", "Close the gap to Finland"], ["deaths", "Most deaths avoided"]];
@@ -74,7 +76,7 @@ function StageRow({ s, where, flag, best = true, own = false }: { s: Stage; wher
   );
 }
 
-export default function CountyView({ scope, budget, setBudget, objective, setObjective, without, setWithout, areas, openPlan, pick }: Props) {
+export default function CountyView({ scope, budget, setBudget, objective, setObjective, without, setWithout, areas, openPlan, openMonday, pick }: Props) {
   const isFI = scope === "FI";
   const area = useAsync(() => api.area(scope), [scope]);
   const ivs = useAsync(api.interventions, []);
@@ -170,6 +172,8 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
     setLive((p) => ({ ...p, [id]: v }));
     // A check that finds the measure already in place takes it out of the plan: its euros are freed and the totals follow.
     if (movesOut(v) && chosen.some((c) => c.intervention_id === id)) drop(id);
+    // A run that replaced an "already in place" answer with a weaker one puts the line back.
+    else if (!movesOut(v) && v.live_outcome === "replaced" && v.previous?.plan_effect === "exclude" && without.includes(id)) putBack(id);
   };
   const linked = new Set([...chosen.map((c) => c.intervention_id), ...(o?.needs_national_decision ?? []).map((c) => c.intervention_id)]);
   // The stage named as the reason on a card must be one where this county is behind Finland; otherwise the share treated to cure, or nothing.
@@ -270,17 +274,21 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
 
       {!(cp && cp.stages.length > 0 && cur) && <div id="sec-why" className="anchor gapstripwrap"><GapChecks areaId={scope} variant="strip" /></div>}
 
+      <ExpertQuote scope={scope} />
+      <Pathway pathway={d.pathway} where={name} />
+
       <section className="panel acts" aria-label="Budget and actions" id="sec-plan">
         <header>
           <h2>{nothing ? `What ${name} can do` : metric === "extra" ? `What closes the gap in ${name}, in order` : `What the plan buys in ${name}, in order`}</h2>
           <div className="spacer" />
+          <button className="btn sm" onClick={openMonday}>Who does what on Monday</button>
           <button className="btn sm" onClick={openPlan}>Open the plan</button>
         </header>
         {opt.error ? <Failed message={opt.error} retry={opt.reload} /> : !o || !ui || !t ? <div className="body"><Skeleton rows={[40, 150, 150, 150]} label="Choosing the actions" /></div> : (
           <div className={opt.loading ? "busy" : ""}>
             <div className="totals">
               <div className="strip" role="note" aria-label="The plan in one line">
-                <b>{ui.strip.lead_en}</b><span className="num">{ui.strip.money_en} a year</span><span className="num">{ui.strip.left_en}</span>
+                <b>{plainMoney(ui.strip.lead_en)}</b><span className="num">{plainMoney(ui.strip.money_en)} a year</span><span className="num">{plainMoney(ui.strip.left_en)}</span>
                 {checked && <span className="webline" key={checked}>{checked}</span>}
               </div>
               {nothing ? <p className="lede">No measure adds to this objective in {name} at this budget. {euro(o.saturation_note_en)}</p> : (
@@ -497,8 +505,6 @@ function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths,
   const run = useLiveRun<VerifyResult>();
   const [open, setOpen] = useState(false);
   const [ev, setEv] = useState(false);
-  // The answer stored before a live run, so the card can show what the run changed.
-  const [prev, setPrev] = useState<VerifyResult | undefined>();
   const k = c.kpi;
   const zero = c.group === "step_zero";
   const ex = c.extra_curative_patients_per_year, de = c.deaths_avoided_per_year;
@@ -507,12 +513,13 @@ function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths,
   // A check that found part of the measure in place changes what to do first: "Ask first" sits next to the title, its reason opens below it.
   const flag = check && !national && !movesOut(check) && check.plan_effect === "flag" && check.plan_effect_reason_en ? check : null;
   const rm = roadmap.find((r) => r.id === iv?.roadmap_measure);
-  const start = () => { setPrev(check); run.start(`/api/verify/stream?intervention_id=${encodeURIComponent(c.intervention_id)}&area_id=${encodeURIComponent(areaId)}`, onCheck); };
+  // The check runs as a job on the server: a dropped connection loses nothing, and pressing again joins the running check.
+  const prev = useRef<VerifyResult | undefined>();
+  const start = () => { prev.current = check; setOpen(true); run.start(() => api.verifyStart(c.intervention_id, areaId), onCheck); };
   const because = zero ? c.why_first_en : stage && stage.value != null && stage.national != null && areaId !== "FI"
     ? `Because ${name}'s share for “${lower(stage.label_en)}” is ${sval(stage)} against ${sval(stage, stage.national)} in Finland.` : null;
   const cell = (label: string, value: React.ReactNode, unit: string) => <div><dt className="sr">{label}</dt><dd>{value}<small>{unit}</small></dd></div>;
   const gist = (v: VerifyResult) => [inUseWord(v, name)?.[1], adviceWord(v)].filter(Boolean).join(" · ") || "No answer";
-  const diff = fresh && prev && check && prev.checked_at !== check.checked_at ? { was: gist(prev), now: gist(check) } : null;
   const study = studyUrl(c.study_line_en);
   // Why here, as one line: the sentence with the county's number. Any sentence after it opens with the evidence.
   const whyParts = (c.why_here_en ?? "").split(/(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/);
@@ -528,14 +535,9 @@ function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths,
           <h3>{c.name_en}</h3>
           {flag && !fresh && <button type="button" className="askpill" aria-expanded={open} onClick={() => setOpen((x) => !x)} title={`The web check of ${dayOf(flag.checked_at)} found part of this in place`}>{adviceWord(flag) ?? "Ask first"}</button>}
         </div>
-        {diff && (
-          <div className="vdiff" role="status">
-            <div className="was"><span>Stored answer, {dayOf(prev!.checked_at)}</span>{diff.was !== diff.now ? <s>{diff.was}</s> : <span className="v">{diff.was}</span>}</div>
-            <div className={"now" + (diff.was !== diff.now ? " changed" : "")}><span>This run, {dayOf(check!.checked_at)}</span><b>{diff.now}</b>{diff.was === diff.now ? <em> (same answer)</em> : null}</div>
-          </div>
-        )}
+        {fresh && check && !run.running && <LiveOutcome v={check} retry={start} />}
         {askOpen && flag && (
-          <div className={"askfirst" + (fresh && (!diff || diff.was !== diff.now) ? " new" : "")}>
+          <div className={"askfirst" + (fresh && check?.live_outcome === "replaced" ? " new" : "")}>
             <p><b>{adviceWord(flag) ?? "Ask first"}</b> <span className="muted">(web check, {dayOf(flag.checked_at)})</span>: {flag.plan_effect_reason_en}</p>
             {flag.in_use_quote && <blockquote>“{flag.in_use_quote}”{flag.in_use_source?.url ? <> <a href={flag.in_use_source.url} target="_blank" rel="noreferrer">{flag.in_use_source.title ?? host(flag.in_use_source.url)}</a></> : null}</blockquote>}
           </div>
@@ -543,6 +545,7 @@ function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths,
         <div className="cmain">
           {whyLead && <p className="whyhere">{whyLead}</p>}
           {c.first_step_en && <p className="cfirst"><b>{flag ? "Then, the first step." : "First step."}</b> {c.first_step_en}</p>}
+          {c.day90_en && !national && <p className="cfirst c90"><b>Done in 90 days when.</b> {c.day90_en.split(" Counted:")[0]}</p>}
           <div className="cfoot">
             {c.owner_en && <p className="own"><b>Owner.</b> {c.owner_en}</p>}
             <span className="clinks">
@@ -608,9 +611,9 @@ function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths,
           {!check && !run.running && <span className="muted">Is it already in place in {name}, and does the evidence hold?</span>}
         </div>
       </div>
-      {run.running && <div className="livebox"><b>Checking now, through the Oxylabs Web API: is it in place in {name}, and does the evidence hold?</b>{prev && <p className="small muted">Stored answer from {dayOf(prev.checked_at)}: {gist(prev)}. This run replaces it.</p>}<Trace steps={run.steps} live /></div>}
-      {run.error && <p className="readerr">{run.error} <button className="btn sm" onClick={start}>Try again</button></p>}
-      {check && !run.running && (open || fresh) && (
+      {run.running && <div className="livebox"><b>Checking now, through the Oxylabs Web API: is it in place in {name}, and does the evidence hold?</b>{prev.current && <p className="small muted">Stored answer from {dayOf(prev.current.checked_at)}: {gist(prev.current)}. This run replaces it only if it finds at least as much evidence.</p>}{run.waiting && <p className="small muted">Waiting for the connection. The check goes on on the server; the steps catch up when the page reconnects.</p>}<Trace steps={run.steps} live /></div>}
+      {run.error && <p className="readerr">{run.error}{check ? ` The stored check of ${dayOf(check.checked_at)} stays.` : ""} <button className="btn sm" onClick={start}>Try again</button></p>}
+      {check && !run.running && (open || fresh || !!run.error) && (
         <WebCheckResult v={check} areaName={name} fresh={fresh} lead={!flag}>
           {!national && (check.in_use_here === "yes" || movesOut(check)) && <p className="small"><b>The budget should not buy it twice.</b> <button type="button" className="btn sm" onClick={onDrop}>Re-plan without it</button></p>}
           {!check.plan_effect && check.in_use_here === "partly" && <p className="small"><b>Part of this exists already.</b> The money stays in the plan; start from what is there.</p>}

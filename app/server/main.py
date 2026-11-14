@@ -173,6 +173,17 @@ def goal3():
         raise HTTPException(status_code=503, detail={"error": "Goal 3 data is not loaded", "detail": str(e)})
 
 
+@app.get("/api/expert-review")
+def expert_review():
+    """Words of a named clinician or sponsor expert who has looked at a plan. Shown only with their consent; empty until then."""
+    try:
+        doc = json.loads((providers.DATA / "processed" / "expert_review.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"reviews": []}
+    ok = [r for r in doc.get("reviews") or [] if isinstance(r, dict) and r.get("consent") is True and str(r.get("quote_en") or "").strip() and str(r.get("name") or "").strip()]
+    return {"reviews": ok}
+
+
 @app.get("/api/funnel")
 def funnel():
     """County funnel plot of the curative-intent share, from the registry's counts, with exact binomial limits."""

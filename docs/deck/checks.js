@@ -1,5 +1,5 @@
 window.KELLO_CHECKS = {
- "overall": "Four of five checks say the gap is real. Stage at diagnosis is the one public data cannot answer; the records audit (8 weeks, €8,000) settles it.",
+ "overall": "Two checks say clearly yes, two mostly yes and one cannot be answered from public data. That one is stage at diagnosis; the 50-chart audit (8 weeks, €8,000) settles it.",
  "checks": [
   {
    "q": "Could it be chance?",

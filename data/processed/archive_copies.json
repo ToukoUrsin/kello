@@ -1,0 +1,55 @@
+{
+ "checked_at": "2026-11-14",
+ "note": "Existing Internet Archive copies of cited registry pages; none were requested.",
+ "copies": [
+  {
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "copy_url": null,
+   "checked": "ok"
+  },
+  {
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "copy_url": null,
+   "checked": "ok"
+  },
+  {
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22r.e2.as%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_surv%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22surv%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210200L%22,%2210300L%22,%2210400L%22,%2210500L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "copy_url": null,
+   "checked": "ok"
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "copy_url": "https://web.archive.org/web/20261102093911/https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "captured": "20261102",
+   "checked": "ok"
+  },
+  {
+   "url": "https://cancerregistry.fi/statistics/cancer-statistics/",
+   "copy_url": "https://web.archive.org/web/20261031152156/https://cancerregistry.fi/statistics/cancer-statistics/",
+   "captured": "20261031",
+   "checked": "ok"
+  },
+  {
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "copy_url": null,
+   "checked": "ok"
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/cancer_in_finland_2023.html",
+   "copy_url": "https://web.archive.org/web/20260919081400/https://syoparekisteri.fi/assets/themes/ssy3/factsheets/cancer_in_finland_2023.html",
+   "captured": "20260919",
+   "checked": "ok"
+  },
+  {
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "copy_url": "https://web.archive.org/web/20260424061005/https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "captured": "20260424",
+   "checked": "ok"
+  },
+  {
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22inc.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_inc%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22inc_ts1%22&in.subset.area=%5B%22-1L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "copy_url": null,
+   "checked": "ok"
+  }
+ ]
+}

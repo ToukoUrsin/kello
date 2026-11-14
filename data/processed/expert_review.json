@@ -1,0 +1,4 @@
+{
+ "_how": "One entry per person who has looked at a plan and agreed to be quoted. Nothing is shown unless consent is true and name and quote_en are filled. Fields: scope (area id, e.g. '21'), quote_en, quote_fi (optional), name, role, org, date (YYYY-MM-DD), consent (true only when the person said yes to being named on the page).",
+ "reviews": []
+}

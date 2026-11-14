@@ -16,3 +16,4 @@ deploy/fly.local.sh
 film/local.env.sh
 film/out/
 docs/deck/out/
+FILM_PLAN.md

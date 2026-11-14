@@ -1,14 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
-import { AreaMeta, SrcRef, useAsync, useFixtureCalls } from "./lib";
+import { api, AreaMeta, SrcRef, useAsync, useFixtureCalls } from "./lib";
 import MapView from "./MapView";
 import CountyView from "./CountyView";
 import PlanView from "./PlanView";
 import SourcesDrawer from "./SourcesDrawer";
+import Monday from "./Monday";
+import Review from "./Review";
 
-type View = "map" | "county" | "plan";
+type View = "map" | "county" | "plan" | "monday" | "review";
 export type Lang = "en" | "fi";
 /** Everything a link has to carry: #/plan/21?budget=1000000&lang=fi&objective=curative&without=sbrt_pathway */
-interface Route { view: View; scope: string; budget: number; lang: Lang; objective: string | null; without: string[] }
+interface Route { view: View; scope: string; budget: number; lang: Lang; objective: string | null; without: string[]; from?: "FI" | null }
 const DEFAULT_BUDGET = 1_000_000;
 const OBJECTIVES = ["curative", "deaths", "gap"];
 
@@ -18,19 +20,21 @@ function parseHash(): Route {
   const q = new URLSearchParams(query);
   const b = q.get("budget") == null || q.get("budget") === "" ? NaN : Number(q.get("budget"));
   return {
-    view: v === "county" || v === "plan" ? v : "map", scope: s || "FI",
+    view: v === "county" || v === "plan" || v === "monday" || v === "review" ? v : "map", scope: s || "FI",
     budget: Number.isFinite(b) && b >= 0 ? Math.min(50_000_000, Math.round(b)) : DEFAULT_BUDGET,
     lang: q.get("lang") === "fi" ? "fi" : "en",
     objective: OBJECTIVES.includes(q.get("objective") ?? "") ? q.get("objective") : null,
     without: (q.get("without") ?? "").split(",").map((x) => x.replace(/[^a-z0-9_]/g, "")).filter(Boolean).slice(0, 20),
+    from: q.get("from") === "FI" && s && s !== "FI" ? "FI" : null,
   };
 }
 function toHash(r: Route): string {
   const q = new URLSearchParams();
   if (r.view === "plan" || (r.view === "county" && r.budget !== DEFAULT_BUDGET)) q.set("budget", String(r.budget));
-  if (r.view === "plan") q.set("lang", r.lang);
+  if (r.view === "plan" || (r.view === "monday" && r.lang === "fi")) q.set("lang", r.lang);
   if (r.view !== "map" && r.objective) q.set("objective", r.objective);
   if (r.view !== "map" && r.without.length) q.set("without", r.without.join(","));
+  if (r.view !== "map" && r.from === "FI" && r.scope !== "FI") q.set("from", "FI");
   const qs = q.toString();
   return `#/${r.view}/${r.scope}${qs ? `?${qs}` : ""}`;
 }
@@ -58,8 +62,10 @@ export function Failed({ message, retry, center = false }: { message: string; re
 export default function App() {
   const [route, setRoute] = useState<Route>(parseHash);
   const [drawer, setDrawer] = useState<{ focus: SrcRef | null } | null>(null);
-  const areas = useAsync<AreaMeta[]>(() => fetch("/api/areas").then((r) => r.json()), []);
+  const areas = useAsync<AreaMeta[]>(api.areas, []);
   const fixtureCalls = useFixtureCalls();
+  // The county list fills the area picker; if it failed (after its retries), ask again a little later.
+  useEffect(() => { if (!areas.error) return; const t = setTimeout(areas.reload, 5000); return () => clearTimeout(t); }, [areas.error]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const on = () => setRoute(parseHash());
@@ -76,7 +82,9 @@ export default function App() {
   const go = useCallback((view: View, scope?: string, section?: string) => {
     const cur = parseHash();
     const other = scope != null && scope !== cur.scope;   // a choice made for one county does not follow to the next
-    window.location.hash = toHash({ ...cur, view, scope: scope ?? cur.scope, ...(other ? { objective: null, without: [] } : {}) });
+    // A county opened from the national page gets its own plan at the default budget, not the national one; the plan says so.
+    const fromFI = other && cur.scope === "FI" && scope !== "FI";
+    window.location.hash = toHash({ ...cur, view, scope: scope ?? cur.scope, ...(other ? { objective: null, without: [], from: null } : {}), ...(fromFI ? { budget: DEFAULT_BUDGET, from: "FI" } : {}) });
     window.scrollTo(0, 0);
     // A step of the 90-second path lands on its own part of the county page once that part has drawn.
     if (section) {
@@ -90,7 +98,7 @@ export default function App() {
     window.history.replaceState(null, "", toHash(next));
     setRoute(next);
   }, []);
-  const setBudget = useCallback((budget: number) => patch({ budget }), [patch]);
+  const setBudget = useCallback((budget: number) => patch({ budget, from: null }), [patch]);
   const setLang = useCallback((lang: Lang) => patch({ lang }), [patch]);
   const setObjective = useCallback((objective: string | null) => patch({ objective, without: [] }), [patch]);
   const setWithout = useCallback((without: string[]) => patch({ without }), [patch]);
@@ -110,7 +118,7 @@ export default function App() {
         </div>
         <nav className="tabs" aria-label="Views">
           {tabs.map(([v, label]) => (
-            <button key={v} aria-current={route.view === v ? "page" : undefined} onClick={() => go(v)}>{label}</button>
+            <button key={v} aria-current={route.view === v || (v === "plan" && route.view === "monday") || (v === "county" && route.view === "review") ? "page" : undefined} onClick={() => go(v)}>{label}</button>
           ))}
         </nav>
         <div className="spacer" />
@@ -124,8 +132,10 @@ export default function App() {
       </header>
       <main>
         {route.view === "map" && <MapView onPick={(id, section) => go("county", id, section)} openPlan={(id) => go("plan", id)} areas={areas.data ?? []} />}
-        {route.view === "county" && <CountyView key={route.scope} scope={route.scope} budget={route.budget} setBudget={setBudget} objective={route.objective} setObjective={setObjective} without={route.without} setWithout={setWithout} areas={areas.data ?? []} openPlan={() => go("plan")} pick={(id) => go("county", id)} />}
-        {route.view === "plan" && <PlanView key={route.scope} scope={route.scope} budget={route.budget} setBudget={setBudget} lang={route.lang} setLang={setLang} objective={route.objective} without={route.without} areas={areas.data ?? []} openCounty={() => go("county")} />}
+        {route.view === "county" && <CountyView key={route.scope} scope={route.scope} budget={route.budget} setBudget={setBudget} objective={route.objective} setObjective={setObjective} without={route.without} setWithout={setWithout} areas={areas.data ?? []} openPlan={() => go("plan")} openMonday={() => go("monday")} pick={(id) => go("county", id)} />}
+        {route.view === "plan" && <PlanView key={route.scope} fromNational={route.from === "FI"} scope={route.scope} budget={route.budget} setBudget={setBudget} lang={route.lang} setLang={setLang} objective={route.objective} without={route.without} areas={areas.data ?? []} openCounty={() => go("county")} openMonday={() => go("monday")} />}
+        {route.view === "monday" && <Monday key={route.scope} scope={route.scope} budget={route.budget} lang={route.lang} setLang={setLang} objective={route.objective} without={route.without} areas={areas.data ?? []} openPlan={() => go("plan")} openCounty={() => go("county")} />}
+        {route.view === "review" && <Review key={route.scope} scope={route.scope} areas={areas.data ?? []} openPlan={() => go("plan")} openMonday={() => go("monday")} />}
       </main>
       {drawer && <SourcesDrawer scope={route.scope} focus={drawer.focus} onClose={closeDrawer} />}
     </div>

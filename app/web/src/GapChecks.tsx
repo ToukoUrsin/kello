@@ -1,4 +1,5 @@
 import { GapCheck, api, useAsync } from "./lib";
+import { Failed } from "./App";
 
 const label: Record<string, string> = { holds: "holds", mostly_holds: "mostly holds", weakens: "speaks against", cannot_tell: "cannot tell" };
 
@@ -31,6 +32,7 @@ export default function GapChecks({ areaId, variant }: { areaId: string; variant
   const checks = state.data?.gap_checks ?? [];
   const overall = state.data?.gap_checks_overall_en;
   if (state.loading && !state.data) return <div className={`gapchecks ${variant} muted`} aria-label="Checking whether the gap is real">Checking the gap…</div>;
+  if (state.error && !state.data) return <div className={`gapchecks ${variant}`}><Failed message={`The checks of the gap could not be loaded. ${state.error}`} retry={state.reload} /></div>;
   if (!checks.length) return null;
   if (variant === "line") {
     return <details className="gapchecks line"><summary><b>Is this gap real?</b> {(overall ?? "").split(". ")[0].replace(/\.?$/, ".")} <span className="gapmarks" aria-hidden="true">{checks.map((c) => <i key={c.id} className={c.verdict} />)}</span></summary><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol></details>;

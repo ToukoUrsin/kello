@@ -37,6 +37,7 @@ GEMINI_API_KEY.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 import time
@@ -50,7 +51,7 @@ MODEL = agent.MODEL
 BUDGET_S = 75.0
 MAX_ROUNDS = 3
 SCHEMA = 4  # stored results older than this are run again by prerun.py
-STORE = Path(__file__).resolve().parents[1] / "cache" / "verify"
+STORE = Path(os.environ.get("KELLO_VERIFY_STORE") or Path(__file__).resolve().parents[1] / "cache" / "verify")
 
 _ASKS = {
     "days": "shorten the time from first symptom to treatment start for lung cancer patients, and by how many days",
@@ -496,6 +497,11 @@ def present(res: dict) -> dict:
                       + (f" after {len(queries)} search{'' if len(queries) == 1 else 'es'} and {n_read} page{'' if n_read == 1 else 's'} read" if queries else "") + ": it stays in the plan.")
     res["plan_effect"] = effect
     res["plan_effect_reason_en"] = reason
+    # One answer per action: the advice word always agrees with what the check does to the plan.
+    adv = res.get("advice")
+    res["advice"] = ("take_out" if effect == "exclude" else "keep" if effect == "keep"
+                     else adv if adv in ("narrow", "check_first") else "check_first")
+    res["evidence_n"] = local_evidence(res)
 
     # --- the verdict in plain words (never the bare word "mixed")
     zero = bool(res.get("zero_effect"))
@@ -596,6 +602,22 @@ def is_fresh(intervention_id: str, area_id: str | None = None, max_age_s: float 
     return age < max_age_s
 
 
+def failure_en(err: str | None) -> str:
+    """Why a live run did not answer, in plain words (no exception names, no endpoints)."""
+    e = str(err or "")
+    if "OxylabsAuth" in e or "no_search" in e:
+        return "the web search is not connected on this copy"
+    if "NoModel" in e or "401" in e or "403" in e:
+        return "no language model answered"
+    if re.search(r"429|rate|overload|529|busy", e, re.I):
+        return "the search or the model was busy"
+    if "time budget" in e or "did not finish within" in e or "imeout" in e:
+        return "it ran out of time before an answer was written"
+    if "restarted" in e:
+        return "the server restarted during the run"
+    return "the search or the model failed"
+
+
 def from_store(intervention_id: str, area_id: str | None, live_error: str | None = None) -> dict | None:
     """The stored result marked as such: `from_cache: true`, its own `checked_at`, and why the live run did not answer."""
     old = stored(intervention_id, area_id)
@@ -603,62 +625,88 @@ def from_store(intervention_id: str, area_id: str | None, live_error: str | None
         return None
     old = present(old)
     old["from_cache"] = True
+    for k in ("previous", "live_candidate", "stability", "live_trace"):
+        old.pop(k, None)
     if live_error:
         old["live_error"] = live_error
+        old["live_error_en"] = failure_en(live_error)
         old["live_tried_at"] = _now()
+        old["live_outcome"] = "failed"
     return old
 
 
-def _evidence_count(res: dict | None) -> int:
-    """A small, deterministic proxy for how much a web check actually read."""
-    if not isinstance(res, dict):
+def _names_area(src: dict, h: dict, res: dict) -> bool:
+    """The page of this quote names the county or its university hospital area (judged from what a result keeps:
+    the site, the title, the quote, and the scope the quote rule gave the in-use quote)."""
+    if res.get("in_use_quote") and src.get("quote") == res.get("in_use_quote") \
+            and res.get("in_use_scope") in ("county", "collaborative_area"):
+        return True
+    host = _host(src.get("url") or "")
+    if h.get("site") and host.endswith(h["site"]) or any(host.endswith(x) for x in h.get("uni_sites") or []):
+        return True
+    near = f"{src.get('title') or ''} {src.get('quote') or ''}"
+    return bool(counties.mentions(near, h["local_terms"]) or counties.mentions(near, h["yta_terms"]))
+
+
+def local_evidence(res: dict | None) -> int:
+    """How much a check found, as one number: verbatim quotes (every quote kept passed the quote rule) on pages that
+    name the county or its university hospital area. A live run replaces the stored answer only when it is at least
+    as large. Used the same way for every model, so a weaker run cannot overwrite a stronger stored one."""
+    if not isinstance(res, dict) or res.get("error"):
         return 0
-    sources = res.get("sources") or []
-    pages = res.get("pages_read") or []
-    return len([x for x in sources if isinstance(x, dict) and x.get("url")]) + len([x for x in pages if isinstance(x, dict) and x.get("url")])
+    h = counties.hints(res.get("area_id"))
+    seen = set()
+    for s in res.get("sources") or []:
+        if isinstance(s, dict) and s.get("quote") and (h is None or _names_area(s, h, res)):
+            seen.add((s.get("url"), s.get("quote")))
+    return len(seen)
 
 
-def _previous_view(res: dict | None) -> dict | None:
+def _view(res: dict | None) -> dict | None:
     if not isinstance(res, dict):
         return None
-    return {k: res.get(k) for k in ("verdict", "effect_check", "in_use_here", "plan_effect", "advice", "checked_at")}
+    out = {k: res.get(k) for k in ("verdict", "effect_check", "in_use_here", "plan_effect", "advice", "checked_at", "model")}
+    out["evidence_n"] = local_evidence(res)
+    return out
 
 
 def check_measure(iv: dict, area_id: str | None = None, on_event=None, budget_s: float = BUDGET_S) -> dict:
-    """The app's check: one intervention (a row of interventions.json), one county. The last good
-    result per (intervention, county) is kept on disk; a failed run never replaces it, and is
-    answered with it (`from_cache: true`)."""
+    """The app's check: one intervention (a row of interventions.json), one county.
+
+    One answer per action: the stored result is what every screen shows. A live run replaces it only when it found
+    at least as much evidence (local_evidence: verbatim quotes on pages that name the county or its university
+    hospital area). `live_outcome` says what happened: "first" (nothing was stored), "replaced", "kept" (the run
+    found less; the stored answer is returned unchanged, with `live_candidate` summarising the run) or "failed"
+    (the run did not finish; the stored answer is returned with `live_error_en`)."""
+    iid = str(iv.get("id"))
     question, context, focus = question_for(iv, area_id)
-    old = stored(str(iv.get("id")), area_id)
+    old = stored(iid, area_id)
     res = verify_claim(question, context, area_id=area_id, on_event=on_event, focus=focus, budget_s=budget_s,
-                       intervention_id=str(iv.get("id")), name_fi=str(iv.get("name_fi") or ""), zero_effect=_zero_effect(iv))
+                       intervention_id=iid, name_fi=str(iv.get("name_fi") or ""), zero_effect=_zero_effect(iv))
     h = counties.hints(area_id)
     res.update(intervention_id=iv.get("id"), intervention_name_en=iv.get("name_en"),
                area_name_en=h["name_en"] if h else "Finland")
     if "error" in res:
-        old = from_store(str(iv.get("id")), area_id, res["error"])
-        if old is not None:
-            old["live_trace"] = res.get("trace") or []
-            old["previous"] = _previous_view(old)
-            return old
-        return res
+        kept = from_store(iid, area_id, res["error"])
+        return kept if kept is not None else res
+    res = present(res)
+    for k in ("previous", "live_candidate", "stability"):
+        res.pop(k, None)
     if old:
-        # Keep a prior answer stable unless the new run read strictly more evidence.
-        # The compact previous field lets the UI show what changed without exposing
-        # the whole trace twice.
-        candidate = present(res)
-        previous = _previous_view(old)
-        candidate["previous"] = previous
-        if _evidence_count(candidate) <= _evidence_count(old):
-            stable = present(old)
-            stable["previous"] = _previous_view(old)
-            stable["live_candidate"] = _previous_view(candidate)
-            stable["stability"] = "kept_previous_less_evidence"
-            return stable
-        res = candidate
+        old = present(old)
+        if local_evidence(res) < local_evidence(old):
+            for k in ("previous", "live_candidate", "stability", "live_trace"):
+                old.pop(k, None)
+            old.update(live_outcome="kept", live_candidate=_view(res), live_trace=res.get("trace") or [],
+                       live_seconds=res.get("seconds"))
+            return old
+        res["previous"] = _view(old)
+        res["live_outcome"] = "replaced"
+    else:
+        res["live_outcome"] = "first"
     try:
         STORE.mkdir(parents=True, exist_ok=True)
-        f = _file(str(iv.get("id")), area_id)
+        f = _file(iid, area_id)
         tmp = f.with_suffix(".tmp")
         tmp.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
         tmp.replace(f)
@@ -673,7 +721,10 @@ def latest(area_id: str | None = None) -> list[dict]:
     out = []
     for f in STORE.glob(f"*__{want}.json"):
         try:
-            out.append(present(json.loads(f.read_text(encoding="utf-8"))))
+            r = present(json.loads(f.read_text(encoding="utf-8")))
+            for k in ("previous", "live_candidate", "stability", "live_trace", "live_outcome"):
+                r.pop(k, None)  # the stored answer as it stands; what a live run changed is shown only after that run
+            out.append(r)
         except (OSError, ValueError):
             continue
     return sorted(out, key=lambda r: r.get("checked_at") or "", reverse=True)

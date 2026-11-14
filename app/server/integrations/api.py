@@ -8,6 +8,11 @@ County scout (same loop)
     POST /api/scout {area_id}                                -> result
     GET  /api/scout/stream?area_id=                          -> SSE: step, done | error
     GET  /api/scout/latest?area_id=                          -> result | {area_id, findings: null}
+Live runs as jobs (the run goes on whatever the client does; a lost connection loses nothing)
+    POST /api/verify/start {intervention_id, area_id?}       -> {job_id, status, steps, next, result?}  (joins a running check)
+    POST /api/scout/start {area_id}                          -> same
+    GET  /api/live/{job_id}?since=N                          -> poll: steps from N on, result once ended
+    GET  /api/live/{job_id}/stream?since=N                   -> SSE: job, step (with id), done | error
 What is connected
     GET  /api/integrations/status                            -> {search, claude, gemini, model, stored_checks, stored_scouts}
 Report reader (Gemini)
@@ -34,6 +39,7 @@ import json
 import logging
 import threading
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -59,7 +65,8 @@ def _now() -> str:
 
 # ----------------------------------------------------------------- jobs (one thread per run)
 
-_jobs: dict[str, dict] = {}
+_jobs: dict[str, dict] = {}      # key (what is checked) -> latest job; a second start of the same key joins it
+_by_id: dict[str, dict] = {}     # job id -> job, kept 30 min after it ends so a client that lost its connection can fetch the result
 _jobs_lock = threading.Lock()
 
 
@@ -68,13 +75,16 @@ def _start(key: str, fn, *args, fallback=None, limit_s: float = 150.0) -> dict:
     `fallback(reason) -> result | None` answers when the run crashes or passes `limit_s`."""
     with _jobs_lock:
         job = _jobs.get(key)
-        if job and not job["done"]:
+        if job and not job["done"] and "settled" not in job:
             return job
         for k in [k for k, j in _jobs.items() if j["done"] and time.time() - j["finished"] > 600]:
             _jobs.pop(k, None)
-        job = {"key": key, "events": [], "done": False, "result": None, "error": None, "finished": 0.0,
-               "started": time.time(), "fallback": fallback, "limit_s": limit_s}
+        job = {"key": key, "id": uuid.uuid4().hex[:12], "events": [], "done": False, "result": None, "error": None,
+               "finished": 0.0, "started": time.time(), "fallback": fallback, "limit_s": limit_s}
         _jobs[key] = job
+        _by_id[job["id"]] = job
+        for jid in [i for i, j in _by_id.items() if j["done"] and time.time() - j["finished"] > 1800]:
+            _by_id.pop(jid, None)
 
     def work():
         try:
@@ -97,6 +107,8 @@ def _settled(job: dict) -> tuple[dict | None, str | None]:
         return None, None
     if job["done"] and not job["error"]:
         return job["result"], None
+    if "settled" in job:
+        return job["settled"]
     reason = job["error"] or f"the live run did not finish within {int(job['limit_s'])} s"
     old = None
     if job["fallback"]:
@@ -104,7 +116,32 @@ def _settled(job: dict) -> tuple[dict | None, str | None]:
             old = job["fallback"](reason)
         except Exception:  # noqa: BLE001
             log.exception("fallback for %s failed", job["key"])
-    return (old, None) if old is not None else (None, reason)
+    job["settled"] = (old, None) if old is not None else (None, reason)
+    if not job["done"]:  # past its hard limit: the answer is given now, the thread may still finish in the background
+        job["finished"] = time.time()
+    return job["settled"]
+
+
+def _plain_failure(error: str | None) -> str:
+    from . import verify
+
+    return verify.failure_en(error)
+
+
+def job_view(job: dict, since: int = 0) -> dict:
+    """What a client needs to follow a run without a stream: the steps from `since` on, and the result once it ends.
+    status: running | done (a result, possibly the stored one with live_outcome "failed") | failed (nothing to show)."""
+    result, error = _settled(job)
+    events = job["events"]
+    since = max(0, min(int(since or 0), len(events)))
+    out = {"job_id": job["id"], "status": "done" if result is not None else "failed" if error else "running",
+           "elapsed_s": round(((job["finished"] or time.time()) if (result is not None or error) else time.time()) - job["started"], 1),
+           "since": since, "next": len(events), "steps": events[since:]}
+    if result is not None:
+        out["result"] = result
+    if error:
+        out["error_en"] = _plain_failure(error)
+    return out
 
 
 async def _wait(job: dict) -> dict:
@@ -121,28 +158,127 @@ def _sse(event: str, data) -> str:
     return f"event: {event}\ndata: {json.dumps(data, ensure_ascii=False, default=str)}\n\n"
 
 
-def _stream(job: dict, fail: str) -> StreamingResponse:
+def _stream(job: dict, fail: str, since: int = 0) -> StreamingResponse:
     async def gen():
-        sent, last = 0, time.time()
+        sent, last = max(0, int(since or 0)), time.time()
+        yield _sse("job", {"job_id": job["id"], "since": sent})
         while True:
             events = job["events"]
             while sent < len(events):
-                yield _sse("step", events[sent])
+                yield f"id: {sent + 1}\n" + _sse("step", events[sent])
                 sent += 1
                 last = time.time()
             result, error = _settled(job)
             if (result is not None or error) and sent >= len(job["events"]):
                 break
-            if time.time() - last > 10:
-                yield ": waiting\n\n"
+            if time.time() - last > 5:  # a named event, so the page can tell a quiet run from a dead connection
+                yield _sse("ping", {"elapsed_s": round(time.time() - job.get("started", time.time()))})
                 last = time.time()
             await asyncio.sleep(0.15)
         if result is not None:
             yield _sse("done", result)
         else:
-            yield _sse("error", {"error": fail, "detail": error})
+            yield _sse("error", {"error": fail, "detail": _plain_failure(error), "error_en": _plain_failure(error)})
 
     return StreamingResponse(gen(), media_type="text/event-stream", headers=_SSE_HEADERS)
+
+
+class StartBody(BaseModel):
+    intervention_id: str | None = None
+    area_id: str | None = None
+
+
+def _job(job_id: str) -> dict:
+    job = _by_id.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail={"error": "No such run", "detail": "the run is not known to this server; it may have restarted",
+                                                     "gone": True})
+    return job
+
+
+@router.get("/api/live/{job_id}")
+def live_job(job_id: str, since: int = 0):
+    """Poll a live run (web check or scout): new steps since `since`, and the result once it has ended."""
+    return job_view(_job(job_id), since)
+
+
+@router.get("/api/live/{job_id}/stream")
+async def live_job_stream(job_id: str, since: int = 0):
+    """SSE for a run already started: `job`, then `step` events from `since` on, then `done` (result) or `error`."""
+    return _stream(_job(job_id), "The live run failed", since)
+
+
+@router.post("/api/verify/start")
+def verify_start(body: StartBody):
+    """Start a web check, or join the one running for the same measure and county. Returns at once."""
+    if not body.intervention_id:
+        raise HTTPException(status_code=400, detail="intervention_id is required")
+    return job_view(_verify_job(body.intervention_id, body.area_id))
+
+
+@router.post("/api/scout/start")
+def scout_start(body: StartBody):
+    """Start a county scout, or join the one running for the same county. Returns at once."""
+    return job_view(_scout_job(body.area_id or ""))
+
+
+@router.get("/api/archive")
+def archive():
+    """Existing Internet Archive copies of the registry pages Kello cites (looked up once, stored)."""
+    from . import archive_copies
+
+    return archive_copies.load()
+
+
+# ----------------------------------------------------------------- demo reset (back to the state the server started with)
+
+def _demo_files() -> list[Path]:
+    from . import scout, verify
+
+    return sorted(verify.STORE.glob("*.json")) + sorted(scout.STORE.glob("*.json")) + ([KEPT] if KEPT.exists() else [])
+
+
+def _snapshot() -> dict[Path, bytes]:
+    out: dict[Path, bytes] = {}
+    for f in _demo_files():
+        try:
+            out[f] = f.read_bytes()
+        except OSError:
+            pass
+    return out
+
+
+try:
+    _SEED = _snapshot()   # stored web checks, county scouts and kept report rows, as they were at start
+except Exception:  # noqa: BLE001 - the app must start without it
+    _SEED = {}
+
+
+@router.post("/api/demo/reset")
+def demo_reset():
+    """Put the stored web checks, county scouts and kept report rows back to what the server started with,
+    and forget finished runs, so a demo always begins from the same screen."""
+    restored = removed = 0
+    with _jobs_lock:
+        for f in _demo_files():
+            if f not in _SEED:
+                try:
+                    f.unlink()
+                    removed += 1
+                except OSError:
+                    pass
+        for f, data in _SEED.items():
+            try:
+                if not f.exists() or f.read_bytes() != data:
+                    f.parent.mkdir(parents=True, exist_ok=True)
+                    f.write_bytes(data)
+                    restored += 1
+            except OSError:
+                pass
+        for d in (_jobs, _by_id):
+            for k in [k for k, j in d.items() if j["done"]]:
+                d.pop(k, None)
+    return {"ok": True, "restored": restored, "removed": removed}
 
 
 @router.get("/api/integrations/status")

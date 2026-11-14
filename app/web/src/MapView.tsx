@@ -4,6 +4,8 @@ import { api, AreaMeta, days, eurx, Funnel, Goal3, int, Kind, MeasuredVal, mval,
 import { Failed, Loading, Skeleton } from "./App";
 import { SourceChip } from "./Source";
 import FunnelPlot from "./Funnel";
+import DistanceScatter from "./DistanceScatter";
+import ExpertQuote from "./ExpertQuote";
 import Scoreboard from "./Scoreboard";
 import { Col, Dots } from "./Dots";
 import GapChecks from "./GapChecks";
@@ -155,8 +157,9 @@ export default function MapView({ onPick, openPlan }: { onPick: (id: string, sec
   const legendVals = breaks; // ascending; the swatches follow the values, so the darkest end is always the worse one
   return (
     <div className="mapview">
-      <Lead data={data} funnel={funnel.data} onPick={onPick} openPlan={openPlan} />
+      <Lead data={data} funnel={funnel.data} funnelLoading={funnel.loading} funnelRetry={funnel.reload} onPick={onPick} openPlan={openPlan} />
       {funnel.data && <FunnelPlot f={funnel.data} hot={hot} setHot={setHot} onPick={onPick} />}
+      {funnel.data && <DistanceScatter f={funnel.data} hot={hot} setHot={setHot} onPick={onPick} />}
 
       <div className="where">
         <section className="panel mappanel" aria-label="Map of Finland by county">
@@ -240,7 +243,7 @@ export default function MapView({ onPick, openPlan }: { onPick: (id: string, sec
       </section>
       </div>
 
-      {goal3.data && <Scoreboard g={goal3.data} />}
+      {goal3.data ? <Scoreboard g={goal3.data} /> : goal3.error ? <Failed message={goal3.error} retry={goal3.reload} /> : null}
 
       {tip && hotArea && (
         <div className="tip num" style={{ left: Math.min(tip.x + 14, window.innerWidth - 290), top: Math.min(tip.y + 14, window.innerHeight - 120) }}>
@@ -257,7 +260,7 @@ export default function MapView({ onPick, openPlan }: { onPick: (id: string, sec
 
 /* ---------- the first screen: the gap, drawn; that it is real; what closing it costs; one button; the 90-second path ---------- */
 const CHANCE: Record<string, string> = { "99.8": "less than once in 500", "95": "less than once in 20" };
-function Lead({ data, funnel, onPick, openPlan }: { data: Overview; funnel: Funnel | null; onPick: (id: string, section?: string) => void; openPlan: (id: string) => void }) {
+function Lead({ data, funnel, funnelLoading = false, funnelRetry, onPick, openPlan }: { data: Overview; funnel: Funnel | null; funnelLoading?: boolean; funnelRetry?: () => void; onPick: (id: string, section?: string) => void; openPlan: (id: string) => void }) {
   const low = funnel?.lowest ?? null;
   // The one recommendation: what the plan for the lowest county costs and closes. Same optimiser answer as its county page and plan.
   const rec = useAsync(() => (low ? api.optimize(low.id, 1_000_000) : Promise.resolve(null)), [low?.id]);
@@ -269,7 +272,7 @@ function Lead({ data, funnel, onPick, openPlan }: { data: Overview; funnel: Funn
   if (!funnel || !low) return (
     <section className="hero" aria-label="The gap">
       <div className="herotext"><h1>Lung cancer care in Finland, county by county.</h1>
-        <p className="heroline">The county comparison could not be loaded. The map below still opens every county.</p></div>
+        {funnelLoading ? <div className="heroline skeleton" style={{ height: 44 }} /> : <div className="heroline"><Failed message="The county comparison could not be loaded. The map below still opens every county." retry={funnelRetry} /></div>}</div>
     </section>
   );
   const lowPct = (low.k / low.n) * 100, highPct = (funnel.highest.k / funnel.highest.n) * 100;
@@ -281,6 +284,7 @@ function Lead({ data, funnel, onPick, openPlan }: { data: Overview; funnel: Funn
   return (
     <section className="hero" aria-label="The gap">
         <h1>In {low.short_en}, <b className="num">{low.per_100} of 100</b> lung cancer patients get treatment that aims to cure. In {funnel.highest.short_en}, <b className="num">{funnel.highest.per_100}</b>.</h1>
+        <ExpertQuote />
         <GapChecks areaId={low.id} variant="line" />
         <div className="heroviz">
           <div className="dotcols home">{cols.map((c) => <Dots key={c.name} col={c} on={false} />)}</div>
@@ -290,14 +294,17 @@ function Lead({ data, funnel, onPick, openPlan }: { data: Overview; funnel: Funn
           {odds ? <>With {int(low.n)} patients, {low.short_en} would fall this far below Finland by chance {odds}.</> : <>{low.short_en} is below Finland's {one(funnel.national.pct)}%.</>}{" "}
           {(() => { const k = funnel.areas.filter((a) => a.side === "below" && a.outside !== "none" && a.id !== low.id).length; return k > 0 ? <>{k} other {k === 1 ? "county is" : "counties are"} also below Finland beyond chance.</> : null; })()}
         </p>
-        {data.national_lead && <p className="heroline nationallead">
-          Across Finland about <b className="num">{int(data.national_lead.patients_short_per_year)}</b> patients a year miss treatment that aims to cure, <b className="num">{int(data.national_lead.patients_short_in_seven_counties)}</b> of them in seven counties. <a href="#/plan/FI?budget=5000000&objective=gap">A national plan</a> for <b className="num">€1.43M</b> a year gets about <b className="num">{int(data.national_lead.plan_extra_curative_patients_per_year)}</b> of them treated ({data.national_lead.plan_gap_closed_pct}%), by the model.
-        </p>}
+        {data.national_lead && <div className="nationalresult" role="note">
+          <span className="eyebrow">Finland, the result</span>
+          <p>About <b className="num">{int(data.national_lead.patients_short_per_year)}</b> patients a year miss treatment that aims to cure; <b className="num">{int(data.national_lead.patients_short_in_seven_counties)}</b> are in seven counties.</p>
+          <p><a href="#/plan/FI?budget=5000000&objective=gap">A national plan</a> spends <b className="num">€1.43M</b> a year and reaches about <b className="num">{int(data.national_lead.plan_extra_curative_patients_per_year)}</b> patients (modelled).</p>
+        </div>}
+        {data.pathway?.note_en && <p className="heroline pathwayline"><b>Where public data points:</b> treatment is the clearest county gap; Finland does not publish county stage-at-diagnosis or lung-cancer referral-to-specialist times.</p>}
         {r && r.chosen.length > 0 ? (
           <p className="heroline plan">
-            <b>The plan.</b> {r.chosen.length} actions for <span className="num">{eurx(r.totals.eur)}</span> a year: {lowerFirst(r.ui.strip.lead_en)}{r.ui.metric === "extra" ? ", by the model" : ""}. Each has an owner and a first step this week.
+            <b>The plan.</b> {r.chosen.length} actions for <span className="num">{eurx(r.totals.eur)}</span> a year: {lowerFirst(r.ui.strip.lead_en)}{r.ui.metric === "extra" ? ", by the model" : ""}. <a href={`#/monday/${low.id}`}>Who does what on Monday</a>: each action has an owner, a first step this week and what done looks like in 90 days.
           </p>
-        ) : rec.loading ? <div className="heroline skeleton" style={{ height: 44 }} /> : null}
+        ) : rec.loading ? <div className="heroline skeleton" style={{ height: 44 }} /> : rec.error ? <div className="heroline"><Failed message={rec.error} retry={rec.reload} /></div> : null}
         <div className="heroact">
           <button className="btn primary lg" onClick={() => onPick(low.id)}>See where {low.short_en} loses patients</button>
           {src && <span className="herosrc">Diagnosed {period(funnel.period)} <SourceChip s={src} short /></span>}

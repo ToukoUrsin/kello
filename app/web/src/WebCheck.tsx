@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { EndpointUse, ScoutFinding, ScoutResult, TraceStep, VerifyResult, when } from "./lib";
+import { api, ApiError, EndpointUse, friendly, LiveJob, ScoutFinding, ScoutResult, sleep, TraceStep, VerifyResult, when } from "./lib";
 
 /* The live web check and the county scout: an agent searches and reads pages through the Oxylabs Web API and answers
    with verbatim quotes. The steps are shown while they run, with the endpoint and the time each one took. */
@@ -7,7 +7,7 @@ import { EndpointUse, ScoutFinding, ScoutResult, TraceStep, VerifyResult, when }
 /** Words a county director reads, never the raw verdict codes. */
 const EFFECT: Record<string, [string, string]> = {
   supports: ["supported", "supported"], supported: ["supported", "supported"],
-  weaker: ["weaker", "weaker than we assumed"], mixed: ["weaker", "weaker than we assumed"],
+  weaker: ["weaker", "smaller than we assumed"], mixed: ["weaker", "smaller than we assumed"],
   contradicts: ["contradicted", "contradicted"], contradicted: ["contradicted", "contradicted"],
   not_found: ["not_found", "not found"],
 };
@@ -29,19 +29,43 @@ export const movesOut = (v: VerifyResult) => (v.plan_effect ? v.plan_effect === 
 export const ADVICE: Record<string, string> = { take_out: "Take it out", narrow: "Narrow it", check_first: "Ask first", keep: "Keep it" };
 export const adviceWord = (v: VerifyResult) => ADVICE[v.advice ?? ""] ?? (v.plan_effect === "exclude" ? ADVICE.take_out : v.plan_effect === "flag" ? ADVICE.check_first : v.plan_effect === "keep" ? ADVICE.keep : null);
 const sameDay = (a: Date, b: Date) => a.toDateString() === b.toDateString();
-/** "6 of 6 actions checked against the web today: 4 partly in place, ask first; 2 no public sign" - counts only, from the stored checks. */
+/** "6 of 6 actions checked against the web today: 2 narrow it, 2 ask first; 2 no public sign" - counts only, from the stored
+ *  checks, by the same advice word the cards and the plan table show, so the header always adds up to the rows below it. */
 export function checkCount(ids: string[], checks: Record<string, VerifyResult | undefined>, fi = false): string | null {
   const done = ids.map((id) => checks[id]).filter((v): v is VerifyResult => !!v && !!v.checked_at && !!(v.plan_effect || v.in_use_here));
   if (!done.length) return null;
   const today = done.every((v) => sameDay(new Date(v.checked_at), new Date()));
-  const n = (f: (v: VerifyResult) => boolean) => done.filter(f).length;
-  const out = n(movesOut), flag = n((v) => !movesOut(v) && (v.plan_effect === "flag" || v.in_use_here === "partly")), planned = n((v) => !movesOut(v) && v.plan_effect !== "flag" && v.in_use_here === "planned");
-  const none = done.length - out - flag - planned;
+  const word = (v: VerifyResult) => (movesOut(v) ? "take_out" : v.advice === "narrow" ? "narrow" : v.plan_effect === "flag" || v.in_use_here === "partly" || v.in_use_here === "planned" ? "check_first" : "keep");
+  const n = (w: string) => done.filter((v) => word(v) === w).length;
+  const [out, narrow, ask, none] = [n("take_out"), n("narrow"), n("check_first"), n("keep")];
   const bits = fi
-    ? [out ? `${out} jo käytössä, poistettu` : null, flag ? `${flag} osittain käytössä, kysy ensin` : null, planned ? `${planned} suunnitteilla` : null, none ? `${none} ei julkista merkkiä` : null]
-    : [out ? `${out} already in place, taken out` : null, flag ? `${flag} partly in place, ask first` : null, planned ? `${planned} planned` : null, none ? `${none} no public sign` : null];
+    ? [out ? `${out} jo käytössä, poistettu` : null, narrow ? `${narrow} rajaa` : null, ask ? `${ask} kysy ensin` : null, none ? `${none} ei julkista merkkiä` : null]
+    : [out ? `${out} already in place, taken out` : null, narrow ? `${narrow} narrow it` : null, ask ? `${ask} ask first` : null, none ? `${none} no public sign` : null];
   return fi ? `${done.length}/${ids.length} toimesta tarkistettu verkosta${today ? " tänään" : ""}: ${bits.filter(Boolean).join("; ")}`
     : `${done.length} of ${ids.length} actions checked against the web${today ? " today" : ""}: ${bits.filter(Boolean).join("; ")}`;
+}
+/** "Gemini" / "Claude", never a model id. */
+export const modelName = (m?: string | null) => (!m ? null : /gemini/i.test(m) ? "Gemini" : /claude|opus|sonnet|haiku/i.test(m) ? "Claude" : null);
+const IN_USE_SHORT: Record<string, string> = { yes: "Already running here", partly: "Partly in place", planned: "Planned, not running yet", no_evidence: "No public sign of it" };
+const gistOf = (x?: { in_use_here?: string | null; advice?: string | null } | null) => [IN_USE_SHORT[x?.in_use_here ?? ""], ADVICE[x?.advice ?? ""]].filter(Boolean).join(" · ") || "No answer";
+const dayShort = (iso?: string | null) => { const d = new Date(iso ?? ""); return Number.isNaN(d.getTime()) ? "the stored check" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }); };
+
+/** What a live run did to the answer, in one place: replaced it (before -> after), kept the stored one, or failed. */
+export function LiveOutcome({ v, retry }: { v: VerifyResult; retry?: () => void }) {
+  const o = v.live_outcome;
+  if (o === "replaced" && v.previous) {
+    const was = gistOf(v.previous), now = gistOf(v);
+    if (was === now) return <p className="small muted liveout">Same answer as the stored check of {dayShort(v.previous.checked_at)}: <b>{now}</b>. The plan stays as it is.</p>;
+    return (
+      <div className="vdiff" role="status">
+        <div className="was"><span>Stored answer, {dayShort(v.previous.checked_at)}</span><s>{was}</s></div>
+        <div className="now changed"><span>This run, {dayShort(v.checked_at)}</span><b>{now}</b><em> the plan follows</em></div>
+      </div>
+    );
+  }
+  if (o === "kept") return <p className="small liveout" role="status">This run found less than the stored check of {dayShort(v.checked_at)}, so the answer stays: <b>{ADVICE[v.advice ?? ""] ?? gistOf(v)}</b>.</p>;
+  if (o === "failed") return <p className="small liveout readerr" role="status">The live run did not finish ({v.live_error_en ?? "the search or the model failed"}), so this is the stored check of {dayShort(v.checked_at)}.{retry && <> <button className="btn sm" onClick={retry}>Try again</button></>}</p>;
+  return null;
 }
 const SCOPE: Record<string, string> = { county: "named for this county", collaborative_area: "named for the university hospital area, not the county", national: "a national programme that does not name this county" };
 
@@ -51,7 +75,9 @@ const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? "" : w.endsWith("
 export const host = (u?: string | null) => { try { return new URL(u ?? "").hostname.replace(/^www\./, ""); } catch { return u ?? ""; } };
 const text = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? String((x as Record<string, unknown>).query ?? (x as Record<string, unknown>).url ?? "") : "");
 const secs = (ms?: number) => (ms == null ? "" : ms >= 950 ? `${(ms / 1000).toFixed(1)} s` : `${Math.round(ms)} ms`);
-const toolName = (t: TraceStep) => (/claude|gemini/i.test(t.tool ?? "") ? t.model ?? (t.tool ?? "").replace(/^./, (c) => c.toUpperCase()) : (t.tool ?? "").replace(/^oxylabs/i, "Oxylabs"));
+const toolName = (t: TraceStep) => (/claude|gemini/i.test(t.tool ?? "") ? modelName(t.model) ?? modelName(t.tool) ?? "Model" : (t.tool ?? "").replace(/^oxylabs/i, "Oxylabs"));
+/** What a step does, in plain words, before the endpoint that did it. */
+const stepLabel = (t: TraceStep) => (isSearch(t) ? "Searching Finnish hospital and county sites" : isRead(t) ? "Reading a page" : /claude|gemini/i.test(t.tool ?? "") ? `${modelName(t.model) ?? modelName(t.tool) ?? "The model"} reads what was found` : "");
 
 function Endpoints({ rows }: { rows?: EndpointUse[] | null }) {
   if (!rows?.length) return null;
@@ -86,7 +112,7 @@ export function Trace({ steps, live = false }: { steps: TraceStep[]; live?: bool
         const running = t.status === "running";
         return (
           <li key={i} className={(t.error ? "err" : "") + (running ? " run" : "")} ref={i === steps.length - 1 ? end : undefined}>
-            <span className="tool num">{toolName(t)}</span>
+            <span className="tool num">{stepLabel(t) ? <><b className="slabel">{stepLabel(t)}</b> <span className="muted">{toolName(t)}</span></> : toolName(t)}</span>
             <span className="what">
               {isSearch(t) ? <>“{inp}”</> : isRead(t) ? (/^https?:/.test(inp) ? <a href={inp} target="_blank" rel="noreferrer">{host(inp)}{(() => { try { const p = new URL(inp).pathname; return p.length > 1 ? p.slice(0, 38) + (p.length > 38 ? "…" : "") : ""; } catch { return ""; } })()}</a> : inp) : inp}
               {t.result_en && !running ? <span className="muted"> → {t.result_en}</span> : null}
@@ -99,33 +125,84 @@ export function Trace({ steps, live = false }: { steps: TraceStep[]; live?: bool
   );
 }
 
-/** Runs a server-sent stream of `step` events that ends in `done` (the result) or `error`. */
+/** Follows a live run that runs as a job on the server. The run does not depend on this page's connection: steps arrive over
+ *  a stream; on any stream error the page polls the job every 2 s (and reopens the stream once the poll answers), resuming
+ *  from the last step it has. Steps already shown stay. When the job ends the result is fetched by id. Only a failure the
+ *  server reports ends in `error`. */
 export function useLiveRun<T>() {
-  const [st, setSt] = useState<{ running: boolean; steps: TraceStep[]; result: T | null; error: string | null }>({ running: false, steps: [], result: null, error: null });
+  const [st, setSt] = useState<{ running: boolean; steps: TraceStep[]; result: T | null; error: string | null; waiting: boolean }>({ running: false, steps: [], result: null, error: null, waiting: false });
+  const gen = useRef(0);
   const es = useRef<EventSource | null>(null);
-  useEffect(() => () => es.current?.close(), []);
-  const start = useCallback((url: string, onDone?: (r: T) => void) => {
+  const dog = useRef<number | undefined>(undefined);
+  useEffect(() => () => { gen.current++; es.current?.close(); window.clearInterval(dog.current); }, []);
+  const start = useCallback((begin: () => Promise<LiveJob<T>>, onDone?: (r: T) => void) => {
+    const my = ++gen.current;
     es.current?.close();
-    setSt({ running: true, steps: [], result: null, error: null });
-    const src = new EventSource(url);
-    es.current = src;
-    src.addEventListener("step", (e) => {
-      const s: TraceStep = JSON.parse((e as MessageEvent).data);
-      setSt((p) => { const i = p.steps.findIndex((x) => x.step === s.step); const steps = i >= 0 ? p.steps.map((x, j) => (j === i ? s : x)) : [...p.steps, s]; return { ...p, steps }; });
+    window.clearInterval(dog.current);
+    setSt({ running: true, steps: [], result: null, error: null, waiting: false });
+    let id = "", next = 0, ended = false, misses = 0;
+    const live = () => my === gen.current && !ended;
+    const merge = (steps: TraceStep[]) => steps.length && setSt((p) => {
+      const out = [...p.steps];
+      for (const s of steps) { const i = out.findIndex((x) => x.step != null && x.step === s.step); if (i >= 0) out[i] = s; else out.push(s); }
+      return { ...p, steps: out };
     });
-    src.addEventListener("done", (e) => {
-      const r: T = JSON.parse((e as MessageEvent).data);
-      src.close();
-      setSt((p) => ({ ...p, running: false, result: r }));
-      onDone?.(r);
-    });
-    src.addEventListener("error", (e) => {
-      const data = (e as MessageEvent).data;
-      let msg = "The web check lost its connection before it finished.";
-      if (data) { try { const j = JSON.parse(data); msg = /key|not connected|no_search/i.test(`${j.error} ${j.reason ?? ""}`) ? "The web search is not connected on this copy of Kello." : /rate|busy|429|503/i.test(`${j.error} ${j.detail ?? ""}`) ? "The web check is busy right now." : "The web check did not finish."; } catch { /* keep default */ } }
-      src.close();
-      setSt((p) => ({ ...p, running: false, error: msg }));
-    });
+    const stop = () => { es.current?.close(); window.clearInterval(dog.current); };
+    const fail = (msg: string) => { if (!live()) return; ended = true; stop(); setSt((p) => ({ ...p, running: false, waiting: false, error: msg })); };
+    const apply = (j: LiveJob<T>): boolean => {
+      if (!live()) return true;
+      merge(j.steps ?? []);
+      next = Math.max(next, j.next ?? next);
+      if (j.status === "done" && j.result) { ended = true; stop(); setSt((p) => ({ ...p, running: false, waiting: false, result: j.result! })); onDone?.(j.result); return true; }
+      if (j.status === "failed") { fail(`The live run failed: ${j.error_en ?? "the search or the model failed"}.`); return true; }
+      return false;
+    };
+    const poll = async () => {
+      while (live()) {
+        try {
+          const j = await api.liveJob<T>(id, next);
+          if (apply(j)) return;
+          misses = 0;
+          setSt((p) => (p.waiting ? { ...p, waiting: false } : p));
+          listen();
+          return;
+        } catch (e) {
+          if ((e as ApiError).status === 404) { fail("The live run was interrupted: the server restarted. Nothing was changed."); return; }
+          if (++misses > 300) { fail("Kello has not answered for ten minutes. Check your connection and try again."); return; }
+          setSt((p) => (p.waiting ? p : { ...p, waiting: true }));
+        }
+        await sleep(2000);
+      }
+    };
+    const listen = () => {
+      if (!live()) return;
+      es.current?.close();
+      const src = new EventSource(`/api/live/${id}/stream?since=${next}`);
+      es.current = src;
+      // The server sends something at least every 5 s. A connection that goes quiet for 15 s is dead even if
+      // the browser has not noticed (a network switch, a sleeping laptop): drop it and follow the run by polling.
+      let seen = Date.now();
+      window.clearInterval(dog.current);
+      dog.current = window.setInterval(() => {
+        if (es.current !== src || !live()) return;
+        if (Date.now() - seen > 15000) { src.close(); window.clearInterval(dog.current); setSt((p) => (p.waiting ? p : { ...p, waiting: true })); poll(); }
+      }, 3000);
+      const alive = () => { seen = Date.now(); };
+      src.addEventListener("job", alive);
+      src.addEventListener("ping", alive);
+      src.addEventListener("step", (e) => { alive(); const s: TraceStep = JSON.parse((e as MessageEvent).data); next += 1; merge([s]); });
+      // The stream says the run has ended: fetch the result by id (a poll that is retried like every request).
+      src.addEventListener("done", () => { src.close(); window.clearInterval(dog.current); if (live()) poll(); });
+      src.addEventListener("error", (e) => {
+        src.close();
+        window.clearInterval(dog.current);
+        if (!live() || es.current !== src) return;
+        const data = (e as MessageEvent).data;
+        if (data) { let why = ""; try { why = JSON.parse(data).error_en ?? ""; } catch { /* plain */ } fail(`The live run failed${why ? `: ${why}` : ""}.`); return; }
+        setTimeout(poll, 1000);   // the connection dropped, not the run: follow it by polling, then stream again
+      });
+    };
+    begin().then((j) => { if (!live()) return; id = j.job_id; if (!apply(j)) listen(); }, (e) => fail(friendly(e)));
   }, []);
   return { ...st, start };
 }
@@ -143,16 +220,9 @@ export function WebCheckResult({ v, areaName, children, fresh = false, lead = tr
         <div className="vh"><b>Web check</b>
           {use && <span className={`inuse ${use[0]}`}>{use[1]}</span>}
           {eff && <span className={`verdict ${eff[0]}`}>assumed effect: {eff[1]}</span>}
-          <span className="muted small num">{v.from_cache ? `stored result from ${when(v.checked_at)}` : when(v.checked_at)}{v.model ? ` · ${v.model}` : ""}</span>
+          <span className="muted small num">{v.from_cache || v.live_outcome === "kept" ? `stored result from ${when(v.checked_at)}` : when(v.checked_at)}{modelName(v.model) ? ` · ${modelName(v.model)}` : ""}</span>
         </div>
         {lead && v.plan_effect_reason_en && <p className={"vadvice" + (fresh ? " new" : "")}>{advice ? <b>{advice}. </b> : null}{v.plan_effect_reason_en}</p>}
-        {v.previous && !v.live_candidate && (() => {
-          const before = ADVICE[v.previous.advice ?? ""] ?? null;
-          const day = v.previous.checked_at ? when(v.previous.checked_at) : "the stored check";
-          if (before && advice && before !== advice) return <p className="small beforeafter"><span>Before, {day}: <b>{before}</b></span><span>Now: <b>{advice}</b></span></p>;
-          return <p className="small muted">Same answer as the stored check of {day}{advice ? <>: <b>{advice}</b></> : null}. The plan stays as it is.</p>;
-        })()}
-        {v.live_candidate && <p className="small muted">This run found less than the stored check, so the stored answer stays.</p>}
         <p className="vsum">{v.verdict_en}</p>
         {lead && v.in_use_quote && <blockquote>“{v.in_use_quote}”{v.in_use_source?.url ? <> <a href={v.in_use_source.url} target="_blank" rel="noreferrer">{v.in_use_source.title ?? host(v.in_use_source.url)}</a></> : null}</blockquote>}
         {children}
@@ -216,6 +286,7 @@ const dateOnly = (d: string) => { const x = new Date(d); return Number.isNaN(x.g
 /** The scout panel: stored findings, and a live run that shows every search and page as it happens. */
 export function Scout({ scope, name, stored, onNew, bears, linked }: { scope: string; name: string; stored: ScoutResult | null; onNew: (r: ScoutResult) => void; bears: (id?: string | null) => string | null; linked: Set<string> }) {
   const run = useLiveRun<ScoutResult>();
+  const go = () => run.start(() => api.scoutStart(scope), onNew);
   const data = run.result ?? (stored?.checked_at ? stored : null);
   const how = data ? (data.searched_en ? data.searched_en.replace(/\.$/, "") : effort(data)) : null;
   const rows = data?.findings ?? [];
@@ -226,11 +297,12 @@ export function Scout({ scope, name, stored, onNew, bears, linked }: { scope: st
         <h2>What is {name} already doing?</h2>
         <span className="small muted">{data?.checked_at ? (data.from_cache ? `Stored web search from ${when(data.checked_at)}` : `Web search, last run ${when(data.checked_at)}`) : "A web search of county and hospital pages"}</span>
         <div className="spacer" />
-        <button className="btn sm" onClick={() => run.start(`/api/scout/stream?area_id=${encodeURIComponent(scope)}`, onNew)} disabled={run.running}>{data ? "Search again" : "Search the web"}</button>
+        <button className="btn sm" onClick={go} disabled={run.running}>{data ? "Search again" : "Search the web"}</button>
       </header>
       <div className="scoutbody">
-        {run.running && <div className="livebox"><b>Searching now, through the Oxylabs Web API</b><Trace steps={run.steps} live /></div>}
-        {run.error && <p className="small readerr">{run.error} {stored?.checked_at ? "The findings below are from the last run." : ""} <button className="btn sm" onClick={() => run.start(`/api/scout/stream?area_id=${encodeURIComponent(scope)}`, onNew)}>Try again</button></p>}
+        {run.running && <div className="livebox"><b>Searching now, through the Oxylabs Web API</b>{run.waiting && <p className="small muted">Waiting for the connection. The search goes on on the server; the steps catch up when the page reconnects.</p>}<Trace steps={run.steps} live /></div>}
+        {data?.live_error_en && !run.running && run.result && <p className="small readerr">The live search did not finish ({data.live_error_en}), so these are the findings of {when(data.checked_at)}. <button className="btn sm" onClick={go}>Try again</button></p>}
+        {run.error && <p className="small readerr">{run.error} {stored?.checked_at ? "The findings below are from the last run." : ""} <button className="btn sm" onClick={go}>Try again</button></p>}
         {!data && !run.running && !run.error && <p className="muted">No search has been run for {name} yet. An agent looks through county and hospital pages for pilots, decisions and capacity news; it takes about a minute.</p>}
         {data && !run.running && (
           <>

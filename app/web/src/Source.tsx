@@ -5,7 +5,7 @@ export function SourceChip({ s, short = false }: { s: SrcRef; short?: boolean })
   const text = short ? s.label ?? (s.kind === "estimated" ? "Estimated" : s.kind === "assumption" ? "Assumption" : s.kind === "reported" ? "Reported" : "Measured") : chipText(s);
   return (
     <button type="button" className={`chip ${s.kind}`} onClick={(e) => { e.stopPropagation(); openSource(s); }}
-      title={`${chipText(s)}${s.note ? `. ${s.note.replace(/\.$/, "")}` : ""}. Open the source and method.`}>
+      title={`${s.quote ? `${s.page != null && s.page !== "" ? `Page ${s.page}: ` : ""}“${s.quote}”\n` : ""}${chipText(s)}${s.note ? `. ${s.note.replace(/\.$/, "")}` : ""}. Open the source and method.`}>
       <i aria-hidden="true" />{text}
     </button>
   );

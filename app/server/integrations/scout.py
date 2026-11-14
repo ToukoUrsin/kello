@@ -267,7 +267,10 @@ def from_store(area_id: str, live_error: str | None = None) -> dict | None:
         return None
     old["from_cache"] = True
     if live_error:
+        from .verify import failure_en
+
         old["live_error"] = live_error
+        old["live_error_en"] = failure_en(live_error)
         old["live_tried_at"] = _now()
     return old
 

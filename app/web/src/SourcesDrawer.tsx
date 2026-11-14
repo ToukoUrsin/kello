@@ -1,6 +1,24 @@
 import { useEffect, useRef } from "react";
-import { api, chipText, int, KIND_HELP, KIND_LABEL, Kind, one, period, publisherOf, readerName, SrcRef, useAsync } from "./lib";
+import { api, ArchiveCopy, chipText, int, isRegistry, KIND_HELP, KIND_LABEL, Kind, one, period, publisherOf, readerName, savedCopy, SrcRef, useAsync } from "./lib";
 import { Failed, Loading } from "./App";
+
+/**
+ * A link to a cited page that still works when the registry site shows a robot check:
+ * the saved copy in the Internet Archive when one exists, otherwise a plain line saying what to expect.
+ */
+export function SourceLink({ url, copies, label, full = false }: { url: string; copies?: ArchiveCopy[]; label?: string; full?: boolean }) {
+  const copy = savedCopy(url, copies);
+  let host = url;
+  try { host = new URL(url).hostname.replace(/^www\./, ""); } catch { /* keep the raw text */ }
+  const day = copy?.captured ? `${copy.captured.slice(6, 8).replace(/^0/, "")}.${copy.captured.slice(4, 6).replace(/^0/, "")}.${copy.captured.slice(0, 4)}` : null;
+  return (
+    <span className="srclink">
+      <a className={full ? "url" : undefined} href={url} target="_blank" rel="noreferrer">{full ? url : label ?? host}</a>
+      {copy?.copy_url ? <> · <a href={copy.copy_url + (url.match(/#.*$/)?.[0] ?? "")} target="_blank" rel="noreferrer">saved copy{day ? ` (${day})` : ""}</a></>
+        : isRegistry(url) ? <span className="muted"> · the registry site asks your browser to pass a check first</span> : null}
+    </span>
+  );
+}
 
 const sameUrl = (a?: string | null, b?: string | null) => !!a && !!b && a.replace(/[#?].*$/, "") === b.replace(/[#?].*$/, "");
 
@@ -11,6 +29,8 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
   const science = useAsync(api.science, []);
   const charts = useAsync(api.readCharts, []);
   const kept = useAsync(api.readKept, []);
+  const archive = useAsync(api.archive, []);
+  const copies = archive.data?.copies;
   const closeRef = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLDivElement>(null);
 
@@ -39,7 +59,7 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
   // One count per kind, computed from the reader's own records: values read, and how many were found again in the source.
   const nRead = reader.data?.rows ?? 0;
   const nOk = docs.reduce((n, d) => n + (d.verified ?? 0), 0);
-  const model = (docs[0]?.read_by ?? "").replace(/^gemini:/, "");
+  const model = readerName(docs[0]?.read_by) ?? "";
   const check = area.data?.consistency_check;
   // The registry entry behind the number that was clicked, if we can tell which one it is.
   const hit = focus ? entries.find(([id, s]) => id === focus.source_id || sameUrl(s.url, focus.source_url)) : undefined;
@@ -65,23 +85,24 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
           {focus && (
             <section className={`focus ${focus.kind}`} aria-label="The number you selected">
               <div className="fk"><span className={`chip ${focus.kind} still`}><i aria-hidden="true" />{chipText(focus)}</span></div>
+              {focus.quote && <blockquote lang="fi" className="fquote">{focus.page != null && focus.page !== "" && <span className="fpage num">Page {focus.page}</span>}“{focus.quote}”<cite>Verbatim from the source{focus.read_by ? `; read by ${readerName(focus.read_by)}` : ""}</cite></blockquote>}
               {(focus.what || focus.value) && <h3>{focus.what}{focus.value ? <>: <span className="num">{focus.value}</span></> : null}</h3>}
               {focus.kind === "estimated" && <p>Kello's own arithmetic on published figures, not a number taken from a register.{focus.note ? " How it is built:" : " See the method below."}</p>}
               {focus.kind === "assumption" && <p>Set by hand where no public figure exists. Replace it with the county's own number before using it in a decision.</p>}
               {focus.kind === "reported" && <p>Reported in the press, not a published national statistic. Kello shows it for context and does not build on it.</p>}
               {focus.note && focus.kind !== "reported" && <p>{focus.note}</p>}
-              {focus.quote && <blockquote lang="fi">“{focus.quote}”<cite>Verbatim from the source{focus.page != null ? `, page ${focus.page}` : ""}{focus.read_by ? `; read by ${readerName(focus.read_by)}` : ""}</cite></blockquote>}
               {(focus.kind === "measured" || focus.kind === "reported") && (
                 <dl className="fmeta">
                   {(hit?.[1].title || publisherOf(focus)) && <div><dt>Source</dt><dd>{hit?.[1].title ?? publisherOf(focus)}{hit?.[1].publisher ? `, ${hit[1].publisher}` : ""}</dd></div>}
                   {focus.period && <div><dt>Period</dt><dd className="num">{period(focus.period)}</dd></div>}
                   {focus.page != null && focus.page !== "" && <div><dt>Page</dt><dd className="num">{focus.page}</dd></div>}
-                  {focus.read_by && <div><dt>Read by</dt><dd>{focus.read_by.replace(/^gemini:/, "Gemini, ")}; number and quote checked against the page</dd></div>}
+                  {focus.read_by && <div><dt>Read by</dt><dd>{readerName(focus.read_by)}; number and quote checked against the page</dd></div>}
                 </dl>
               )}
-              {pageUrl && <p><a className="url" href={pageUrl} target="_blank" rel="noreferrer">{pageUrl}</a></p>}
+              {pageUrl && <p className="small"><SourceLink url={pageUrl} copies={copies} label={focus?.page != null && focus.page !== "" ? `Open page ${focus.page} on ${publisherOf(focus) ?? "the source site"}` : `Open on ${publisherOf(focus!) ?? "the source site"}`} /></p>}
             </section>
           )}
+          {reader.error && <section><Failed message={reader.error} retry={reader.reload} /></section>}
           {nRead > 0 && (
             <section>
               <p className="first-line num"><b>{model || "Gemini"} read {int(nRead)} values</b> from registry PDFs and charts, each with page and quote; <b>{int(nOk)}</b> re-confirmed in the source, <b>{int(nRead - nOk)}</b> flagged and shown as unverified.</p>
@@ -108,7 +129,7 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
                 <tbody>
                   {docs.map((d) => (
                     <tr key={d.url} className={isHit(d.source_id ?? "", d.url) ? "hit" : ""}>
-                      <td><b>{d.title ?? d.url}</b>{d.publisher ? `, ${d.publisher}` : ""}<br /><a className="url" href={d.url} target="_blank" rel="noreferrer">{d.url}</a></td>
+                      <td><b>{d.title ?? d.url}</b>{d.publisher ? `, ${d.publisher}` : ""}<br /><SourceLink url={d.url} copies={copies} full /></td>
                       <td className="n num"><b>{d.rows}</b></td>
                       <td className="n num">{d.verified ?? "–"}</td>
                       <td className="n num">{d.verified != null ? d.rows - d.verified : "–"}</td>
@@ -203,7 +224,7 @@ export default function SourcesDrawer({ scope, focus, onClose }: { scope: string
                       const status = s.status ?? (s.verified === false ? "listed" : s.retrieved_at ? "opened" : null);
                       return (
                         <tr key={id} className={(isHit(id, s.url) ? "hit" : "") + (status === "listed" ? " listed" : "")}>
-                          <td><b>{s.title ?? id}</b>{s.publisher ? `, ${s.publisher}` : ""}<br />{s.url ? <a className="url" href={s.url} target="_blank" rel="noreferrer">{s.url}</a> : <span className="muted">no URL</span>}{s.notes && <div className="muted" style={{ fontSize: 12.5 }}>{s.notes.replace(/^\d+ values parsed[^.]*\.\s*/, "")}</div>}</td>
+                          <td><b>{s.title ?? id}</b>{s.publisher ? `, ${s.publisher}` : ""}<br />{s.url ? <SourceLink url={s.url} copies={copies} full /> : <span className="muted">no URL</span>}{s.notes && <div className="muted" style={{ fontSize: 12.5 }}>{s.notes.replace(/^\d+ values parsed[^.]*\.\s*/, "")}</div>}</td>
                           <td className="n num">{s.values ? s.values : "–"}</td>
                           <td className="num" style={{ whiteSpace: "nowrap" }}>{s.retrieved_at ? String(s.retrieved_at).slice(0, 10) : "–"}</td>
                           <td style={{ whiteSpace: "nowrap" }}>{status === "opened" ? "Opened" : status === "listed" ? "Listed" : "–"}</td>

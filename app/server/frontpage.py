@@ -127,6 +127,30 @@ def funnel() -> dict:
     return providers.memo("funnel", _funnel)
 
 
+def _distance(areas: list[dict]) -> dict | None:
+    """Rank correlation of the curative share with distance to the university hospital, raw and with the 65+ share held fixed."""
+    try:
+        from scipy.stats import spearmanr
+    except Exception:  # noqa: BLE001
+        return None
+    rows = [a for a in areas if a.get("km_to_university_hospital") is not None and a.get("pop_65plus_pct") is not None]
+    if len(rows) < 10:
+        return None
+    y = [a["k"] / a["n"] for a in rows]
+    km = [float(a["km_to_university_hospital"]) for a in rows]
+    age = [float(a["pop_65plus_pct"]) for a in rows]
+    r_yk, p_yk = spearmanr(y, km)
+    r_ya, r_ka = spearmanr(y, age)[0], spearmanr(km, age)[0]
+    den = ((1 - r_ya ** 2) * (1 - r_ka ** 2)) ** 0.5
+    partial = (r_yk - r_ya * r_ka) / den if den else None
+    return {"n": len(rows), "rho": round(float(r_yk), 2), "p": round(float(p_yk), 4), "rho_age": round(float(r_ya), 2),
+            "rho_given_age": None if partial is None else round(float(partial), 2),
+            "kind": "measured",
+            "note_en": ("Rank correlation across counties. Distance is the population-weighted road distance from where residents live to their university hospital. "
+                        "Older counties are also the more distant ones, so the two cannot be fully separated with 22 counties. "
+                        "A pattern between counties, not proof for any patient.")}
+
+
 def _funnel() -> dict:
     d = measured_mod.data()
     period = "2019-2023"
@@ -163,6 +187,12 @@ def _funnel() -> dict:
                      if f.get("stage_id") in ("no_record", "drug_therapy") and f.get("text_en")]
         except Exception:  # noqa: BLE001
             flags = []
+        try:
+            exp = (providers.area(aid).get("care_path") or {}).get("expected") or {}
+            areas[-1]["km_to_university_hospital"] = exp.get("km_to_university_hospital")
+            areas[-1]["pop_65plus_pct"] = exp.get("pop_65plus_pct")
+        except Exception:  # noqa: BLE001
+            pass
         if flags:
             areas[-1]["recording_flag"] = {"stages": [f["stage_id"] for f in flags], "strength": "strong" if any(f.get("strength") == "strong" for f in flags) else "possible",
                                            "text_en": " ".join(f["text_en"] for f in flags)}
@@ -180,6 +210,7 @@ def _funnel() -> dict:
     high = max(areas, key=lambda a: a["k"] / a["n"])
     rec = K["FI"]
     return {
+        "distance": _distance(areas),
         "indicator": "lung_curative_intent_pct", "label_en": "Share of lung cancer patients given treatment that aims to cure",
         # wording follows data/processed/indicators_catalog.json (lung_curative_intent_pct), not memory
         "definition_en": ("Curative-intent treatment: the Finnish Cancer Registry's treatment category 'Parantava', the first-line treatment within 12 months "

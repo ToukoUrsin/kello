@@ -8,7 +8,10 @@ export interface AreaMeta { id: string; name_fi: string; name_en: string; short_
 export interface MeasuredVal { value: number; national?: number | null; rank?: number | null; unit?: string; period?: string; source_id?: string; source_url?: string; page?: number | string | null; read_by?: string | null; level?: string; quote?: string | null }
 export interface CareSummary { curative_share_pct: number; lo?: number | null; hi?: number | null; n?: number | null; national_pct?: number | null; outside_limits?: string | null; missing_patients_per_year?: number | null; expected_pct?: number | null; recording_flag?: boolean }
 export interface OverviewArea { id: string; short_en: string; short_fi: string; yta?: string | null; total_days: Interval; worst_step: string; care?: CareSummary | null; measured?: Record<string, MeasuredVal | null> | null; patients_per_year?: number | null }
-export interface Overview { national: { total_days: Interval; gap_checks?: GapCheck[]; gap_checks_overall_en?: string; gap_checks_overall_fi?: string }; areas: OverviewArea[]; gap_checks?: GapCheck[]; gap_checks_overall_en?: string; national_lead?: { patients_short_per_year: number; patients_short_in_seven_counties: number; counties: number; plan_budget_eur: number; plan_extra_curative_patients_per_year: number; plan_gap_closed_pct: number; plan_spent_eur: number; note_en?: string }; clock_note_en?: string | null; fixture?: boolean }
+export interface PathwayFigure { label_en: string; value: number | null; national: number | null; unit?: string; kind: Kind; verdict_en: string; source_id?: string | null; source_url?: string | null; page?: number | string | null; quote?: string | null; read_by?: string | null; period?: string | null; note_en?: string | null }
+export interface PathwayStep { id: string; label_en: string; figures: PathwayFigure[]; verdict?: "here" | "possibly_here" | "not_behind" | "cannot_tell"; verdict_en: string; answer_en?: string; what_not_published_en: string }
+export interface Pathway { steps: PathwayStep[]; note_en?: string; what_finland_does_not_publish?: string[]; distance_en?: string; stage_bound_en?: string; drug_finding?: { drug: PathwayFigure; life_prolonging: PathwayFigure } }
+export interface Overview { national: { total_days: Interval; gap_checks?: GapCheck[]; gap_checks_overall_en?: string; gap_checks_overall_fi?: string; pathway?: Pathway }; areas: OverviewArea[]; pathway?: Pathway; gap_checks?: GapCheck[]; gap_checks_overall_en?: string; national_lead?: { patients_short_per_year: number; patients_short_in_seven_counties: number; counties: number; plan_budget_eur: number; plan_extra_curative_patients_per_year: number; plan_gap_closed_pct: number; plan_spent_eur: number; note_en?: string }; clock_note_en?: string | null; fixture?: boolean }
 
 /** One stage of the care path: what share of a county's lung cancer patients reach it. */
 export interface Stage { id: string; label_en: string; value: number | null; unit?: string; n?: number | null; lo?: number | null; hi?: number | null; national?: number | null;
@@ -32,7 +35,7 @@ export interface ConsistencyCheck { what_en?: string; summary_en?: string; resul
 export interface AreaDetail { area: AreaMeta; care_path?: CarePath | null; steps: Step[]; clock_note_en?: string | null; total_method_en?: string;
   mortality_vs_incidence?: { sentence_en?: string; small_numbers?: boolean; source_url?: string | null } | null; consistency_check?: ConsistencyCheck | null;
   gap_checks?: GapCheck[]; gap_checks_overall_en?: string; gap_checks_overall_fi?: string;
-  data_gaps: { what_en: string; why_it_matters_en: string; who_could_publish_en: string }[]; sources: Record<string, SourceRec>; fixture?: boolean }
+  data_gaps: { what_en: string; why_it_matters_en: string; who_could_publish_en: string }[]; sources: Record<string, SourceRec>; pathway?: Pathway; fixture?: boolean }
 export interface Intervention {
   id: string; name_en: string; name_fi: string; step: string; what_en: string; what_fi?: string;
   effect: { metric: string; value: number; lo: number; hi: number; kind?: Kind; basis?: string };
@@ -48,12 +51,14 @@ export interface Chosen { intervention_id: string; name_en: string; name_fi?: st
   owner_level?: "county" | "collaborative_area" | "national"; owner_en?: string; targets_stage?: string | null;
   extra_curative_patients_per_year: Interval; deaths_avoided_per_year: Interval; eur_per_extra_curative_patient: number | null; eur_per_death_avoided: number | null;
   confidence: string; first_step_en?: string; kpi?: Kpi | null; effect_kind?: Kind; note_en?: string | null; why_first_en?: string | null;
-  shown: { extra: number; deaths: number }; study_line_en?: string | null; why_here_en?: string | null; n?: number; group?: string }
+  shown: { extra: number; deaths: number }; study_line_en?: string | null; why_here_en?: string | null; n?: number; group?: string;
+  owner_fi?: string; first_step_fi?: string; day90_en?: string; day90_fi?: string }
+export interface ExpertReview { scope?: string; quote_en: string; quote_fi?: string; name: string; role?: string; org?: string; date?: string; consent: boolean }
 export interface Strip { closes: number | null; of: number | null; pct: number | null; deaths: number | null; spent: number; budget: number; left: number; saturated: boolean; lead_en: string; money_en: string; left_en: string; text_en: string }
 export interface CountyShare { n: number; area_id: string; area_en: string; eur: number; extra: number; deaths: number; measures: { intervention_id: string; name_en: string; eur: number; shown: { extra: number; deaths: number } }[] }
 export interface OptUi { metric: "extra" | "deaths"; step_zero: string[]; step_zero_title_en: string; groups?: { id: string; title_en: string; ids: string[] }[] | null; national_title_en: string;
   by_county?: CountyShare[] | null; strip: Strip; pilot?: Pilot | null }
-export interface Pilot { months: number; actions: string[]; effect: { extra_curative_patients_per_year: Interval; curative_share_now_pct?: number; curative_share_after_pct?: number; by_year?: number; kind?: Kind }; text_en: string; text_fi?: string; six_months: Record<string, any>; cannot_show_en?: string; cannot_show_fi?: string }
+export interface Pilot { months: number; actions: string[]; effect: { extra_curative_patients_per_year: Interval; curative_share_now_pct?: number; curative_share_after_pct?: number; by_year?: number; kind?: Kind }; text_en: string; text_fi?: string; six_months: Record<string, any>; ask_first?: { intervention_id: string; question_en: string; question_fi?: string; advice?: string }[]; audit?: { weeks: number; charts: number; cost_eur: number; fields_en: string[]; fields_fi: string[] }; comparison_en?: string; comparison_fi?: string; targets_en?: string; targets_fi?: string; success?: Record<string, any>; cannot_show_en?: string; cannot_show_fi?: string }
 export interface OptResult {
   scope: string; scope_en?: string; budget_eur: number; objective: string; objective_note_en?: string | null; objective_en?: string | null; objectives_available?: string[]; excluded?: string[];
   chosen: Chosen[]; needs_national_decision?: Chosen[];
@@ -81,12 +86,15 @@ export interface VerifyResult { question?: string; verdict: string; summary_en?:
   plan_effect?: "exclude" | "flag" | "keep" | null; plan_effect_reason_en?: string | null; advice?: "take_out" | "narrow" | "check_first" | "keep" | null;
   in_use_label_en?: string | null; verdict_en?: string | null; effect_label_en?: string | null; supported_en?: string | null; not_supported_en?: string | null; missing_en?: string | null;
   searched_en?: string | null; queries?: string[] | null; endpoints_used?: EndpointUse[] | null; model?: string | null; models?: string[] | null; from_cache?: boolean; live_error?: string | null;
-  previous?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string } | null; stability?: string; live_candidate?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string } | null;
+  previous?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string; model?: string; evidence_n?: number } | null; stability?: string; live_candidate?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string; model?: string; evidence_n?: number } | null;
+  live_outcome?: "first" | "replaced" | "kept" | "failed" | null; live_error_en?: string | null; live_tried_at?: string | null; evidence_n?: number | null; live_trace?: TraceStep[] | null;
   trace?: TraceStep[] | null; rounds?: number | null; searches?: number | null; pages_read?: unknown[] | null; seconds?: number | null }
+/** A live run followed by id: the steps from `since` on, and once it has ended the result (or, with nothing stored, a plain reason). */
+export interface LiveJob<T> { job_id: string; status: "running" | "done" | "failed"; elapsed_s: number; since: number; next: number; steps: TraceStep[]; result?: T; error_en?: string }
 export interface EndpointUse { endpoint?: string; api?: string; calls?: number; failed?: number; why_en?: string; js_render?: number; from_cache?: number }
 export interface ScoutFinding { date?: string | null; what_en?: string; relates_to?: string | null; scope?: string | null; title?: string; quote?: string | null; url?: string | null }
 export interface ScoutResult { area_id?: string; summary_en?: string; checked_at?: string | null; trace?: TraceStep[] | null; rounds?: number | null; searches?: number | null; pages_read?: unknown[] | null;
-  findings?: ScoutFinding[] | null; not_found_en?: string; error?: string | null; searched_en?: string | null; endpoints_used?: EndpointUse[] | null; from_cache?: boolean; models?: string[] | null; seconds?: number | null }
+  findings?: ScoutFinding[] | null; not_found_en?: string; error?: string | null; live_error?: string | null; live_error_en?: string | null; searched_en?: string | null; endpoints_used?: EndpointUse[] | null; from_cache?: boolean; models?: string[] | null; seconds?: number | null }
 export interface ReportRow { indicator_guess?: string; label?: string; label_en?: string; area?: string; value?: number | string; unit?: string; period?: string; page?: number | string; quote?: string; verified?: boolean;
   read_from?: string; value_kind?: string }
 export interface ReportResult { document?: { title?: string; url?: string; pages?: number; publisher?: string }; extracted: ReportRow[]; model?: string; cached?: boolean; read_at?: string; notes_en?: string | null; seconds?: number }
@@ -118,8 +126,10 @@ export interface Goal3 {
   sources?: Record<string, { title?: string; publisher?: string; url?: string }>; notes_en?: string[];
 }
 export interface FunnelArea { id: string; short_en: string; n: number; k: number; pct: number; lo: number; hi: number; outside: "none" | "95" | "99.8"; side: "none" | "below" | "above"; page?: number | string | null; quote?: string | null;
-  recording_flag?: { stages: string[]; strength: string; text_en: string } | null }
+  recording_flag?: { stages: string[]; strength: string; text_en: string } | null;
+  km_to_university_hospital?: number | null; pop_65plus_pct?: number | null }
 export interface Funnel {
+  distance?: { n: number; rho: number; p: number; rho_age: number; rho_given_age: number | null; note_en: string } | null;
   label_en: string; definition_en: string; period: string; national: { n: number; k: number; pct: number }; areas: FunnelArea[];
   limits: { n: number; lo95: number; hi95: number; lo998: number; hi998: number }[]; n_areas: number;
   expected_outside_95: number; observed_outside_95: number; expected_outside_998: number; observed_outside_998: number;
@@ -145,9 +155,18 @@ export class ApiError extends Error {
   status: number;
   constructor(message: string, status: number) { super(message); this.status = status; }
 }
+/** Waits between tries of a request that met a network error or a 502/503/504: Wi-Fi drops for a few seconds, a server restarts. */
+export const RETRY_MS = [500, 1500, 4000];
+export const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+const RETRY_STATUS = new Set([502, 503, 504]);
 async function request<T>(path: string, init?: RequestInit, label?: string): Promise<T> {
-  let res: Response;
-  try { res = await fetch(path, init); } catch { throw new ApiError("Kello did not answer. Check your connection and try again.", 0); }
+  let res: Response | null = null;
+  for (let i = 0; ; i++) {
+    try { res = await fetch(path, init); } catch { res = null; }
+    if ((res === null || RETRY_STATUS.has(res.status)) && i < RETRY_MS.length) { await sleep(RETRY_MS[i]); continue; }
+    break;
+  }
+  if (res === null) throw new ApiError("Kello did not answer. Check your connection and try again.", 0);
   let body: any = null;
   try { body = await res.json(); } catch { /* non-JSON body */ }
   if (!res.ok) {
@@ -164,6 +183,16 @@ const soft = <T,>(p: Promise<T>): Promise<T | null> => p.catch((e: ApiError) => 
 const post = (body: unknown): RequestInit => ({ method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
 
 let statusOnce: Promise<Status> | null = null;
+export interface ArchiveCopy { url: string; copy_url: string | null; captured?: string | null }
+let archiveOnce: Promise<{ copies: ArchiveCopy[] }> | null = null;
+/** The registry sites ask the browser to pass a check before they show a page. */
+export const isRegistry = (u?: string | null) => !!u && /\/\/(?:www\.|tilastot\.)?(?:syoparekisteri|cancerregistry)\.fi/.test(u);
+/** The saved copy of a cited page, if the archive holds one. */
+export function savedCopy(url: string | null | undefined, copies: ArchiveCopy[] | undefined): ArchiveCopy | null {
+  if (!url || !copies) return null;
+  const bare = (x: string) => x.replace(/#.*$/, "");
+  return copies.find((c) => c.copy_url && bare(c.url) === bare(url)) ?? null;
+}
 /** A request that failed in a way the reader can act on: plain words, no addresses. */
 export const friendly = (e: unknown): string => {
   const err = e as ApiError;
@@ -172,6 +201,7 @@ export const friendly = (e: unknown): string => {
   if (err?.status >= 500) return "Something went wrong on our side. Try again.";
   return err?.message || "Something went wrong. Try again.";
 };
+let expertOnce: Promise<{ reviews: ExpertReview[] }> | null = null;
 export const api = {
   overview: () => request<Overview>("/api/overview", undefined, "map"),
   geo: () => request<GeoJSON.FeatureCollection>("/api/geo"),
@@ -194,6 +224,15 @@ export const api = {
   reader: () => request<ReaderInfo>("/api/reader"),
   science: () => request<ScienceInfo>("/api/science"),
   status: () => (statusOnce ??= request<Status>("/api/status").catch(() => ({} as Status))),
+  areas: () => request<AreaMeta[]>("/api/areas"),
+  /** Words of a named expert who has looked at a plan; empty until someone has agreed to be quoted. */
+  expertReview: () => (expertOnce ??= request<{ reviews: ExpertReview[] }>("/api/expert-review").catch(() => { expertOnce = null; return { reviews: [] as ExpertReview[] }; })),
+  /** Existing archive copies of the registry pages Kello cites; looked up once on the server. */
+  archive: () => (archiveOnce ??= request<{ copies: ArchiveCopy[] }>("/api/archive").catch(() => { archiveOnce = null; return { copies: [] as ArchiveCopy[] }; })),
+  /** Live runs (web check, scout) are jobs on the server: start or join one, then follow it by id. */
+  verifyStart: (intervention_id: string, area_id: string) => request<LiveJob<VerifyResult>>("/api/verify/start", post({ intervention_id, area_id })),
+  scoutStart: (area_id: string) => request<LiveJob<ScoutResult>>("/api/scout/start", post({ area_id })),
+  liveJob: <T,>(id: string, since: number) => request<LiveJob<T>>(`/api/live/${id}?since=${since}`),
   notePlan: (isFixture: boolean) => note("plan", isFixture),
 };
 
@@ -228,11 +267,14 @@ export function eur(n: number | null | undefined): string {
   if (Math.abs(n) >= 1e3) return `€${nf0.format(Math.round(n / 1e3))}k`;
   return `€${nf0.format(n)}`;
 }
-/** Exact euros, as the optimiser counts them: €211,500. Millions stay short: €1M. */
+/** Exact euros below a million, as the optimiser counts them: €211,500. Millions are short: €1M, €1.43M. */
 export function eurx(n: number | null | undefined): string {
   if (n == null || Number.isNaN(n)) return "–";
-  return n >= 1e6 && n % 1e5 === 0 ? `€${String(n / 1e6)}M` : `€${nf0.format(Math.round(n))}`;
+  // From a million up, money is shown to three figures at most: €1.43M, €17.4M, never €1,426,060.
+  return Math.abs(n) >= 1e6 ? eur(n) : `€${nf0.format(Math.round(n))}`;
 }
+/** Millions in server-written text read like the rest of the page: €1,426,060 -> €1.43M. */
+export const plainMoney = (t?: string | null) => (t ?? "").replace(/€(\d{1,3}(?:,\d{3}){2,})(?![\d,])/g, (_m, d: string) => eurx(Number(d.replace(/,/g, ""))));
 /** A range in the same decimals as its point: 0–7.7 */
 export const rng1 = (lo: number, hi: number) => {
   const fmt = (n: number) => {
@@ -273,7 +315,7 @@ export function fiNumbers(text: string): string {
     : part.replace(/(\d),(?=\d{3}(\D|$))/g, "$1\u00a0").replace(/(?<![\d.])(\d+)\.(\d+)(?!\.?\d)/g, "$1,$2").replace(/\bEUR\s?([\d\u00a0,]+)/g, "$1\u00a0€"))).join("");
 }
 export function eurFi(n: number): string {
-  if (Math.abs(n) >= 1e6) return `${String(+(n / 1e6).toFixed(2)).replace(".", ",")} milj. €`;
+  if (Math.abs(n) >= 1e6) return `${String(+(n / 1e6).toFixed(Math.abs(n) >= 1e7 ? 1 : 2)).replace(".", ",")} milj. €`;
   return `${new Intl.NumberFormat("fi-FI", { maximumFractionDigits: 0 }).format(n)} €`;
 }
 export function useDebounced<T>(v: T, ms: number): T {

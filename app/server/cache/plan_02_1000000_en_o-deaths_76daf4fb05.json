@@ -1,0 +1,314 @@
+{
+ "version": "v3-care-path-4",
+ "title": "Central Uusimaa: €309,480 a year, about 0.9 lung cancer deaths avoided a year (modelled)",
+ "markdown": "# Central Uusimaa: €309,480 a year, about 0.9 lung cancer deaths avoided a year (modelled)\n\n> About 0.9 deaths avoided a year (modelled) · €309,480 of €1.00M · €690,520 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in Central Uusimaa, 34 get treatment that aims to cure. In Finland it is 27. No stage of the care path is below the national level beyond chance. [^care_curative] There is no shortfall: Central Uusimaa gives more patients treatment that aims to cure than Finland as a whole, and is at or above the best quarter of counties (30.4%). [^care_curative] [^model] So this plan ranks measures by deaths avoided instead of by extra patients treated to cure. [^model]\n\n## The target\n\nThis plan is ranked by deaths avoided: about 0.9 a year (range −0.1 to 2.5), for €309,480 a year. [^model] Deaths avoided are modelled from stated assumptions, not observed. [^model] The low end is below zero: how much delay adds to lung cancer deaths is not statistically certain, so no benefit cannot be ruled out. [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | Deaths avoided a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Standardised lung cancer pathway with booked slots**[^ev_cpp_pathway_1]. Chief physician of pulmonology (county pathway); FICAN and the national lung cancer group (national pathway description) | €100,000 | 0.3 (−0.1 to 1.2) | Name one pathway owner and book fixed weekly CT, PET-CT, bronchoscopy and MDT slots for suspected lung cancer. | Days from diagnosis to start of treatment (median): 39.4 days → 36.9 days by 2028 |\n| 2 | **Smoking cessation started at the first specialist visit**[^ev_smoking_cessation_at_diagnosis_1]. Chief physician and head nurse of pulmonology | €39,480 | 0.3 (0.1–0.7) | Write the standing order: every smoker with suspected lung cancer leaves the first visit with cessation medicine and a nurse call booked. | Share of smoking patients given cessation medicine at the first visit: not published today → 90% by 2027 |\n| 3 | **Same-day chest X-ray report with immediate CT**[^ev_same_day_cxr_ct_1]. Chief radiologist together with the chief physician of primary care | €109,000 | 0.2 (−0.0 to 0.6) | Agree with radiology that a suspicious chest X-ray is followed by CT the same day, without a new referral. | Days from suspicious chest X-ray to CT: not published today → 3 days by 2027 |\n| 4 | **Nurse navigator for every suspected lung cancer**[^ev_nurse_navigator_1]. Head nurses of pulmonology and oncology; director of nursing | €61,000 | 0.1 (0.0–0.1) | Name one nurse who books every test for each new suspected lung cancer patient and calls the patient with the dates. | Days from diagnosis to start of treatment (median): 39.4 days → 36.9 days by 2028 |\n| | **Total** | **€309,480** | **0.9 (−0.1 to 2.5)** | | |\n\nEffects are modelled from published studies and stated assumptions, not observed here. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €642,653 a year; modelled to avoid 1.1 deaths a year (0.2–2.9). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Days from diagnosis to start of treatment (median): 39.4 days → 36.9 days by 2028. [^care_time_to_treatment][^model]\n- Share of smoking patients given cessation medicine at the first visit: not published today → 90% by 2027. [^model]\n- Days from suspicious chest X-ray to CT: not published today → 3 days by 2027. [^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nEUR 309,480 a year buys every measure that avoids deaths in Central Uusimaa. The remaining EUR 690,520 buys nothing more in the model, as no other measure avoids deaths at an acceptable cost. [^model] Low-dose CT screening for long-term heavy smokers needs a national decision. [^model] Lung cancer causes about 72 deaths a year here, and this plan is modelled to avoid 0.9 of them a year (range -0.1 to 2.5). [^deaths] [^model]\n\n## Limits\n\n- The effects are modelled from stated assumptions, not observed. Each range runs from the lowest to the highest result with all assumptions moved together, not a probability. [^model]\n- The shares are adjusted only for residents' age, not for stage, other illness, histology, how the cancer was found or smoking. County figures cannot show cause. [^model]\n- The symptom-to-treatment clock is estimated, not measured, and is only a secondary view. A check against measured outcomes did not confirm it (0 of 3). [^model]",
+ "claims": [
+  {
+   "text": "Of 100 lung cancer patients in Central Uusimaa, 34 get treatment that aims to cure. In Finland it is 27. No stage of the care path is below the national level beyond chance.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "There is no shortfall: Central Uusimaa gives more patients treatment that aims to cure than Finland as a whole, and is at or above the best quarter of counties (30.4%).",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "So this plan ranks measures by deaths avoided instead of by extra patients treated to cure.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "This plan is ranked by deaths avoided: about 0.9 a year (range −0.1 to 2.5), for €309,480 a year.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Deaths avoided are modelled from stated assumptions, not observed.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The low end is below zero: how much delay adds to lung cancer deaths is not statistically certain, so no benefit cannot be ruled out.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Standardised lung cancer pathway with booked slots**. Chief physician of pulmonology (county pathway); FICAN and the national lung cancer group (national pathway description)",
+   "source_ids": [
+    "ev_cpp_pathway_1"
+   ]
+  },
+  {
+   "text": "Smoking cessation started at the first specialist visit**. Chief physician and head nurse of pulmonology",
+   "source_ids": [
+    "ev_smoking_cessation_at_diagnosis_1"
+   ]
+  },
+  {
+   "text": "Same-day chest X-ray report with immediate CT**. Chief radiologist together with the chief physician of primary care",
+   "source_ids": [
+    "ev_same_day_cxr_ct_1"
+   ]
+  },
+  {
+   "text": "Nurse navigator for every suspected lung cancer**. Head nurses of pulmonology and oncology; director of nursing",
+   "source_ids": [
+    "ev_nurse_navigator_1"
+   ]
+  },
+  {
+   "text": "Effects are modelled from published studies and stated assumptions, not observed here. Costs are assumptions.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Low-dose CT screening for long-term heavy smokers**: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €642,653 a year; modelled to avoid 1.1 deaths a year (0.2–2.9). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site.",
+   "source_ids": [
+    "ev_ldct_screening_1",
+    "model"
+   ]
+  },
+  {
+   "text": "Days from diagnosis to start of treatment (median): 39.4 days → 36.9 days by 2028.",
+   "source_ids": [
+    "care_time_to_treatment",
+    "model"
+   ]
+  },
+  {
+   "text": "Share of smoking patients given cessation medicine at the first visit: not published today → 90% by 2027.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Days from suspicious chest X-ray to CT: not published today → 3 days by 2027.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The registry's public figures cover 2019–2023; count these each month from the county's own records.",
+   "source_ids": [
+    "care_curative"
+   ]
+  },
+  {
+   "text": "EUR 309,480 a year buys every measure that avoids deaths in Central Uusimaa. The remaining EUR 690,520 buys nothing more in the model, as no other measure avoids deaths at an acceptable cost.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Low-dose CT screening for long-term heavy smokers needs a national decision.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Lung cancer causes about 72 deaths a year here, and this plan is modelled to avoid 0.9 of them a year (range -0.1 to 2.5).",
+   "source_ids": [
+    "deaths",
+    "model"
+   ]
+  },
+  {
+   "text": "The effects are modelled from stated assumptions, not observed. Each range runs from the lowest to the highest result with all assumptions moved together, not a probability.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The shares are adjusted only for residents' age, not for stage, other illness, histology, how the cancer was found or smoking. County figures cannot show cause.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "The symptom-to-treatment clock is estimated, not measured, and is only a secondary view. A check against measured outcomes did not confirm it (0 of 3).",
+   "source_ids": [
+    "model"
+   ]
+  }
+ ],
+ "review": {
+  "removed": [
+   {
+    "sentence": "More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision. [^model]",
+    "reason": "The clause 'More would come from' claims an effect that the material does not state or quantify. It was cut, leaving only the supported statement that screening needs a national decision."
+   },
+   {
+    "sentence": "The estimated symptom-to-treatment clock is not used in this plan.",
+    "reason": "The material does not say the clock is unused in the plan, only that it is an estimated secondary view. The sentence was replaced with the supported wording from clock_note."
+   }
+  ],
+  "flagged": [
+   {
+    "sentence": "The remaining EUR 690,520 buys nothing more, as no other measure avoids deaths at an acceptable cost. [^model]",
+    "reason": "This stated a modelled result as fact. 'in the model' was added, as in the source saturation_note."
+   }
+  ],
+  "checked_by": "claude-opus-5-5 reviewer pass against the source material"
+ },
+ "sources": {
+  "care_curative": {
+   "title": "Treatment that aims to cure (measured; 2019–2023; read by Gemini). Keuhkosyöpäraportti (lung cancer quality report, interactive factsheet), p. 14",
+   "publisher": "Finnish Cancer Registry (Syöpärekisteri)",
+   "url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+   "retrieved_at": "2026-11-13T19:59:59Z",
+   "kind": "measured"
+  },
+  "model": {
+   "title": "Kello model: the optimiser and its stated assumptions (estimated; see Sources & method)",
+   "url": null,
+   "kind": "estimated"
+  },
+  "ev_cpp_pathway_1": {
+   "title": "Three-year relative survival for symptomatic cancer patients diagnosed via primary care rose from 45 % to 54 % after Danish cancer patient pathways were introduced.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/",
+   "year": 2017,
+   "design": "before-during-after cohort, Denmark",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_smoking_cessation_at_diagnosis_1": {
+   "title": "Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC.",
+   "url": "https://doi.org/10.7326/M21-0252",
+   "year": 2021,
+   "design": "prospective cohort, Moscow",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_same_day_cxr_ct_1": {
+   "title": "Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis.",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "year": 2023,
+   "design": "randomised controlled trial (radioX), single London hospital",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_nurse_navigator_1": {
+   "title": "Scoping review of 13 studies: navigation shortened diagnosis-to-treatment waits.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "year": 2026,
+   "design": "scoping review, 13 studies, several cancers including lung",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "ev_ldct_screening_1": {
+   "title": "Meta-analysis of nine randomised trials: 16 % lower lung cancer mortality with LDCT screening.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8589726/",
+   "year": 2021,
+   "design": "randomised trial (UKLS) + random-effects meta-analysis of 9 trials",
+   "verified": true,
+   "kind": "evidence"
+  },
+  "care_time_to_treatment": {
+   "title": "Days from diagnosis to first treatment (estimated; 1.1.2018-30.6.2022; published for the collaborative area; read by Gemini). Finnish Cancer Registry lung cancer report, p. 28",
+   "publisher": null,
+   "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+   "retrieved_at": null,
+   "kind": "estimated"
+  },
+  "deaths": {
+   "title": "Lung cancer deaths and age-standardised mortality by area, 2020-2024 (measured). Finnish Cancer Registry statistics",
+   "publisher": "Finnish Cancer Registry",
+   "url": "https://tilastot.syoparekisteri.fi/syovat/?_inputs_&in.subset.sites=%5B%220L%22,%2214L%22,%2216L%22,%2221L%22%5D&value_type=%22mort.rate_finland_2014%22&submit=1&tabset_panel=%222%22&value_theme=%22theme_mort%22&in.subset.sex=%5B%22-1L%22,%220L%22,%221L%22%5D&tabu=%22mort_latest5%22&in.subset.area=%5B%22-1L%22,%2210100L%22,%2210101L%22,%2210102L%22,%2210103L%22,%2210104L%22,%2210109L%22,%2210110L%22,%2210111L%22,%2210190L%22,%2210200L%22,%2210212L%22,%2210213L%22,%2210214L%22,%2210215L%22,%2210300L%22,%2210307L%22,%2210308L%22,%2210316L%22,%2210400L%22,%2210405L%22,%2210406L%22,%2210417L%22,%2210500L%22,%2210518L%22,%2210519L%22,%2210520L%22,%2210521L%22,%2210600L%22%5D&language=%22fi%22&table_view=%22v2%22",
+   "kind": "measured"
+  }
+ },
+ "area_id": "02",
+ "budget_eur": 1000000.0,
+ "lang": "en",
+ "objective": "deaths",
+ "objective_fell_back": false,
+ "excluded": [],
+ "actions": [
+  {
+   "n": 1,
+   "id": "cpp_pathway",
+   "name": "Standardised lung cancer pathway with booked slots",
+   "study_line_en": "Evidence: Three-year relative survival for symptomatic cancer patients diagnosed via primary care rose from 45 % to 54 % after Danish cancer patient pathways were introduced. (2017) · https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/",
+   "why_here_en": "Central Uusimaa already treats more patients to cure than Finland (33.7 against 27.0 of 100), so this action is not about closing a gap."
+  },
+  {
+   "n": 2,
+   "id": "smoking_cessation_at_diagnosis",
+   "name": "Smoking cessation started at the first specialist visit",
+   "study_line_en": "Evidence: Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC. (2021) · https://doi.org/10.7326/M21-0252",
+   "why_here_en": "Central Uusimaa already treats more patients to cure than Finland (33.7 against 27.0 of 100), so this action is not about closing a gap."
+  },
+  {
+   "n": 3,
+   "id": "same_day_cxr_ct",
+   "name": "Same-day chest X-ray report with immediate CT",
+   "study_line_en": "Evidence: Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis. (2023) · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "why_here_en": "Time from referral to CT for suspected lung cancer is not published by county. Central Uusimaa would start by counting it."
+  },
+  {
+   "n": 4,
+   "id": "nurse_navigator",
+   "name": "Nurse navigator for every suspected lung cancer",
+   "study_line_en": "Evidence: Scoping review of 13 studies: navigation shortened diagnosis-to-treatment waits. (2026) · https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "why_here_en": "Central Uusimaa already treats more patients to cure than Finland (33.7 against 27.0 of 100), so this action is not about closing a gap."
+  }
+ ],
+ "pilot": null,
+ "action_studies": [
+  {
+   "id": "cpp_pathway",
+   "study_line_en": "Evidence: Three-year relative survival for symptomatic cancer patients diagnosed via primary care rose from 45 % to 54 % after Danish cancer patient pathways were introduced. (2017) · https://pmc.ncbi.nlm.nih.gov/articles/PMC5585953/",
+   "why_here_en": "Central Uusimaa already treats more patients to cure than Finland (33.7 against 27.0 of 100), so this action is not about closing a gap."
+  },
+  {
+   "id": "smoking_cessation_at_diagnosis",
+   "study_line_en": "Evidence: Quitting after diagnosis: 33 % lower all-cause mortality in early-stage NSCLC. (2021) · https://doi.org/10.7326/M21-0252",
+   "why_here_en": "Central Uusimaa already treats more patients to cure than Finland (33.7 against 27.0 of 100), so this action is not about closing a gap."
+  },
+  {
+   "id": "same_day_cxr_ct",
+   "study_line_en": "Evidence: Immediate reporting of primary-care chest X-rays halved time to lung cancer diagnosis. (2023) · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10447363/",
+   "why_here_en": "Time from referral to CT for suspected lung cancer is not published by county. Central Uusimaa would start by counting it."
+  },
+  {
+   "id": "nurse_navigator",
+   "study_line_en": "Evidence: Scoping review of 13 studies: navigation shortened diagnosis-to-treatment waits. (2026) · https://pmc.ncbi.nlm.nih.gov/articles/PMC13457979/",
+   "why_here_en": "Central Uusimaa already treats more patients to cure than Finland (33.7 against 27.0 of 100), so this action is not about closing a gap."
+  }
+ ],
+ "strip": {
+  "closes": null,
+  "of": null,
+  "pct": null,
+  "deaths": 0.9,
+  "spent": 309480.0,
+  "budget": 1000000.0,
+  "left": 690520.0,
+  "saturated": true,
+  "lead_en": "About 0.9 deaths avoided a year (modelled)",
+  "lead_fi": "Arviolta 0,9 kuolemaa vähemmän vuodessa (mallinnettu)",
+  "money_en": "€309,480 of €1.00M",
+  "money_fi": "309 480 € / 1 milj. €",
+  "left_en": "€690,520 left: nothing else pays off at these assumptions",
+  "left_fi": "690 520 € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää",
+  "text_en": "About 0.9 deaths avoided a year (modelled) · €309,480 of €1.00M · €690,520 left: nothing else pays off at these assumptions",
+  "text_fi": "Arviolta 0,9 kuolemaa vähemmän vuodessa (mallinnettu) · 309 480 € / 1 milj. € · 690 520 € jää käyttämättä: näillä oletuksilla mikään muu ei tuo lisää"
+ },
+ "written_sections": [
+  "The gap",
+  "What more money buys, and what it cannot",
+  "Limits"
+ ],
+ "generated_at": "2026-11-14T08:30:52+00:00",
+ "generated_by": "claude-opus-5-5",
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in Central Uusimaa, 34 get treatment that aims to cure. In Finland it is 27. No stage of the care path is below the national level beyond chance. [^care_curative] There is no shortfall: Central Uusimaa gives more patients treatment that aims to cure than Finland as a whole, and is at or above the best quarter of counties (30.4%). [^care_curative] [^model] So this plan ranks measures by deaths avoided instead of by extra patients treated to cure. [^model]\n\n## What more money buys, and what it cannot\nEUR 309,480 a year buys every measure that avoids deaths in Central Uusimaa. The remaining EUR 690,520 buys nothing more, as no other measure avoids deaths at an acceptable cost. [^model] More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision. [^model] Lung cancer causes about 72 deaths a year here, and this plan is modelled to avoid 0.9 of them a year (range -0.1 to 2.5). [^deaths] [^model]\n\n## Limits\n- The effects are modelled from stated assumptions, not observed. Each range runs from the lowest to the highest result with all assumptions moved together, not a probability. [^model]\n- The shares are adjusted only for residents' age, not for stage, other illness, histology, how the cancer was found or smoking. County figures cannot show cause. [^model]\n- The estimated symptom-to-treatment clock is not used in this plan. A check against measured outcomes did not confirm it (0 of 3). [^model]"
+}

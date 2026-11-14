@@ -54,13 +54,13 @@ export default function FunnelPlot({ f, hot, setHot, onPick }: { f: Funnel; hot:
     const struck = (b: Box) => {
       const inside = (py: number) => py > b.y0 + 2 && py < b.y1 - 2;
       let n = inside(y(f.national.pct)) ? 2 : 0;
-      for (const px of [b.x0, (b.x0 + b.x1) / 2, b.x1]) { const l = at(px); for (const k of ["lo95", "hi95", "lo998", "hi998"] as const) if (inside(y(l[k]))) n++; }
+      for (const px of [b.x0, b.x0 + (b.x1 - b.x0) / 4, (b.x0 + b.x1) / 2, b.x1 - (b.x1 - b.x0) / 4, b.x1]) { const l = at(px); for (const k of ["lo95", "hi95", "lo998", "hi998"] as const) if (inside(y(l[k]))) n++; }
       return n;
     };
     const labels: { id: string; text: string; x: number; y: number; anchor: "start" | "end" | "middle" }[] = [];
     const out = f.areas.filter((a) => a.outside !== "none").sort((a, b) => Math.abs(b.pct - f.national.pct) - Math.abs(a.pct - f.national.pct));
     for (const a of out) {
-      const cx = x(a.n), cy = y(a.pct), w = a.short_en.length * 6.4 + 4;
+      const cx = x(a.n), cy = y(a.pct), w = a.short_en.length * (narrow ? 7.2 : 6.4) + 4;
       const up = a.side === "above";
       const cands: { x: number; y: number; anchor: "start" | "end" | "middle"; b: Box }[] = [
         { x: cx + 9, y: cy + 4, anchor: "start", b: { x0: cx + 8, y0: cy - 8, x1: cx + 9 + w, y1: cy + 8 } },
@@ -68,10 +68,14 @@ export default function FunnelPlot({ f, hot, setHot, onPick }: { f: Funnel; hot:
         { x: cx, y: up ? cy - 10 : cy + 20, anchor: "middle", b: { x0: cx - w / 2, y0: up ? cy - 23 : cy + 8, x1: cx + w / 2, y1: up ? cy - 7 : cy + 24 } },
         { x: cx, y: up ? cy + 20 : cy - 10, anchor: "middle", b: { x0: cx - w / 2, y0: up ? cy + 8 : cy - 23, x1: cx + w / 2, y1: up ? cy + 24 : cy - 7 } },
       ];
+      // On a phone the plot is narrow and names are long: also try the corners above and below the dot.
+      if (narrow) for (const dy of [-12, 22]) for (const [dx, anchor] of [[8, "start"], [-8, "end"]] as const)
+        cands.push({ x: cx + dx, y: cy + dy, anchor, b: { x0: dx > 0 ? cx + dx - 1 : cx + dx - w, y0: cy + dy - 12, x1: dx > 0 ? cx + dx + w : cx + dx + 1, y1: cy + dy + 4 } });
       const free = cands.filter((c) => c.b.x0 >= M.l + 2 && c.b.x1 <= W - M.r - 2 && c.b.y0 >= 2 && c.b.y1 <= H - M.b && !placed.some((p) => hit(p, c.b)) && !dots.some((d, i) => f.areas[i].id !== a.id && hit(d, c.b)));
       // Among the free spots, take the one the national line and the limit curves cross least, so no name is struck through.
       const ok = free.map((c) => ({ c, n: struck(c.b) })).sort((p, q) => p.n - q.n)[0]?.c;
-      if (ok) { placed.push(ok.b); labels.push({ id: a.id, text: a.short_en, x: ok.x, y: ok.y, anchor: ok.anchor }); }
+      // On a phone a name that a line would strike through is left off; tapping the dot still names the county.
+      if (ok && !(narrow && struck(ok.b) > 0)) { placed.push(ok.b); labels.push({ id: a.id, text: a.short_en, x: ok.x, y: ok.y, anchor: ok.anchor }); }
     }
     return { x, y, x0, x1, y0, y1, xt, yt, curve, labels };
   }, [W, H, f, narrow]); // eslint-disable-line react-hooks/exhaustive-deps
