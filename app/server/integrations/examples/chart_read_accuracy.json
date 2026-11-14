@@ -1,0 +1,214 @@
+{
+ "figure": "Kuva 13",
+ "caption": "Keuhkosyöpäpotilaiden levinneisyysluokitus hyvinvointialueittain",
+ "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
+ "model": "gemini-4-hydrogen",
+ "built_at": "2026-11-13T23:49:16+00:00",
+ "what": "Stage classification by wellbeing services county, published only as a stacked bar chart without numbers.",
+ "rows": 110,
+ "shipped": true,
+ "error_limit_pp": 2.0,
+ "check_a_blind_read_vs_table": {
+  "how": "Kuva 12 (same chart design, collaborative areas) with its printed counts painted out; truth = printed count / area total in Taulukko 10",
+  "n": 17,
+  "mean_abs_error_pp": 0.07,
+  "max_abs_error_pp": 0.2,
+  "within_1pp": 17,
+  "within_2pp": 17,
+  "expected_values": 17,
+  "values": [
+   {
+    "area": "Etelä-Suomen yhteistyöalue",
+    "series": "Ei tietoa",
+    "table_pct": 49.2,
+    "gemini_pct": 49.1,
+    "error_pp": -0.1
+   },
+   {
+    "area": "Etelä-Suomen yhteistyöalue",
+    "series": "Syre -levinneisyys",
+    "table_pct": 20.1,
+    "gemini_pct": 20.2,
+    "error_pp": 0.1
+   },
+   {
+    "area": "Etelä-Suomen yhteistyöalue",
+    "series": "TNM",
+    "table_pct": 27.0,
+    "gemini_pct": 27.0,
+    "error_pp": -0.0
+   },
+   {
+    "area": "Itä-Suomen yhteistyöalue",
+    "series": "Ei tietoa",
+    "table_pct": 53.2,
+    "gemini_pct": 53.2,
+    "error_pp": 0.0
+   },
+   {
+    "area": "Itä-Suomen yhteistyöalue",
+    "series": "Syre -levinneisyys",
+    "table_pct": 18.2,
+    "gemini_pct": 18.2,
+    "error_pp": -0.0
+   },
+   {
+    "area": "Itä-Suomen yhteistyöalue",
+    "series": "TNM",
+    "table_pct": 25.0,
+    "gemini_pct": 24.9,
+    "error_pp": -0.1
+   },
+   {
+    "area": "Länsi-Suomen yhteistyöalue",
+    "series": "Ei tietoa",
+    "table_pct": 46.4,
+    "gemini_pct": 46.5,
+    "error_pp": 0.1
+   },
+   {
+    "area": "Länsi-Suomen yhteistyöalue",
+    "series": "Syre -levinneisyys",
+    "table_pct": 15.2,
+    "gemini_pct": 15.1,
+    "error_pp": -0.1
+   },
+   {
+    "area": "Länsi-Suomen yhteistyöalue",
+    "series": "Stage",
+    "table_pct": 6.1,
+    "gemini_pct": 6.2,
+    "error_pp": 0.1
+   },
+   {
+    "area": "Länsi-Suomen yhteistyöalue",
+    "series": "TNM",
+    "table_pct": 29.0,
+    "gemini_pct": 28.9,
+    "error_pp": -0.1
+   },
+   {
+    "area": "Pohjois-Suomen yhteistyöalue",
+    "series": "Ei tietoa",
+    "table_pct": 41.2,
+    "gemini_pct": 41.2,
+    "error_pp": 0.0
+   },
+   {
+    "area": "Pohjois-Suomen yhteistyöalue",
+    "series": "Syre -levinneisyys",
+    "table_pct": 16.6,
+    "gemini_pct": 16.6,
+    "error_pp": 0.0
+   },
+   {
+    "area": "Pohjois-Suomen yhteistyöalue",
+    "series": "Sanallinen",
+    "table_pct": 19.6,
+    "gemini_pct": 19.7,
+    "error_pp": 0.1
+   },
+   {
+    "area": "Pohjois-Suomen yhteistyöalue",
+    "series": "TNM",
+    "table_pct": 20.7,
+    "gemini_pct": 20.5,
+    "error_pp": -0.2
+   },
+   {
+    "area": "Sisä-Suomen yhteistyöalue",
+    "series": "Ei tietoa",
+    "table_pct": 45.5,
+    "gemini_pct": 45.6,
+    "error_pp": 0.1
+   },
+   {
+    "area": "Sisä-Suomen yhteistyöalue",
+    "series": "Syre -levinneisyys",
+    "table_pct": 14.6,
+    "gemini_pct": 14.5,
+    "error_pp": -0.1
+   },
+   {
+    "area": "Sisä-Suomen yhteistyöalue",
+    "series": "TNM",
+    "table_pct": 34.9,
+    "gemini_pct": 34.9,
+    "error_pp": -0.0
+   }
+  ]
+ },
+ "check_b_county_values_vs_pixel_measure": {
+  "how": "each county value against the exact colour widths of the same bar in the image",
+  "n": 110,
+  "mean_abs_error_pp": 0.2,
+  "max_abs_error_pp": 0.67,
+  "within_1pp": 110,
+  "within_2pp": 110,
+  "bars_gemini": 22,
+  "bars_in_image": 22,
+  "areas_mapped": 22,
+  "ruler_vs_table_kuva_12": {
+   "n": 17,
+   "mean_abs_error_pp": 0.13,
+   "max_abs_error_pp": 0.33,
+   "within_1pp": 17,
+   "within_2pp": 17
+  },
+  "two_gemini_reads": {
+   "n": 110,
+   "mean_abs_error_pp": 0.07,
+   "max_abs_error_pp": 0.2,
+   "within_1pp": 110,
+   "within_2pp": 110
+  }
+ },
+ "check_c_weighted_vs_national_table": {
+  "how": "county values weighted by county patient counts (Taulukko 11) against Taulukko 4",
+  "n": 5,
+  "mean_abs_error_pp": 0.04,
+  "max_abs_error_pp": 0.1,
+  "within_1pp": 5,
+  "within_2pp": 5,
+  "patients_covered": 14774,
+  "patients_in_table_4": 14873,
+  "values": [
+   {
+    "series": "TNM",
+    "table_4_pct": 27.3,
+    "gemini_weighted_pct": 27.3,
+    "error_pp": -0.0
+   },
+   {
+    "series": "Sanallinen",
+    "table_4_pct": 5.8,
+    "gemini_weighted_pct": 5.8,
+    "error_pp": 0.0
+   },
+   {
+    "series": "Stage",
+    "table_4_pct": 1.7,
+    "gemini_weighted_pct": 1.7,
+    "error_pp": 0.0
+   },
+   {
+    "series": "Syre -levinneisyys",
+    "table_4_pct": 17.6,
+    "gemini_weighted_pct": 17.5,
+    "error_pp": -0.1
+   },
+   {
+    "series": "Ei tietoa",
+    "table_4_pct": 47.7,
+    "gemini_weighted_pct": 47.6,
+    "error_pp": -0.1
+   }
+  ]
+ },
+ "seconds": {
+  "kuva_12": 12.2,
+  "kuva_13": 22.6,
+  "kuva_13_second_read": 31.9
+ },
+ "limits": "Values are read off an axis, so they stay unverified with confidence 0.6 (0.4 where two reads differ by more than 1 point). Segments thinner than about 1 point can be missed. Only this chart design (100 % stacked bars) was tested."
+}

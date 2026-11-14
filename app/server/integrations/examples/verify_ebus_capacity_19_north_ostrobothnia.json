@@ -1,0 +1,503 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in North Ostrobothnia wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: EBUS as first test, with enough bronchoscopy capacity. Endobronchial ultrasound-guided needle biopsy as the first invasive test after CT for suspected stage I-IIIA disease, giving diagnosis and staging in one procedure, with enough EBUS lists (own or bought) to do it within a week.",
+ "area_id": "19",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "In the Lung-BOOST randomised trial, the median time to treatment decision was 14 days with EBUS-TBNA first and 29 days with conventional work-up, so about 15 days shorter; the trial measured time to treatment decision, not time from first symptom to start of treatment.",
+ "supported_en": "The Lancet Respiratory Medicine trial (2015) found a median time to treatment decision of 14 days with EBUS first versus 29 days with the usual work-up, about 15 days shorter.",
+ "not_supported_en": "The trial did not measure time from first symptom to treatment start, and it was run in the UK, not Finland.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: We found no public sign that OYS or Pohde already uses EBUS as the first test with a one-week target. The OYS lung clinic page lists only imaging, lung function tests and lab tests, the OYS lung cancer pathway pages could not be opened (error 404), and a search for an OYS EBUS patient guide found none. A: A UK randomised trial (Lancet Respiratory Medicine, 2015) found a median time to treatment decision of 14 days with EBUS first versus 29 days with the usual work-up, which matches the 15 days we assume, but it measured time to treatment decision rather than time from first symptom to treatment start.",
+ "unanswered_en": "We could not find OYS's own description of how suspected lung cancer is investigated or of its EBUS waiting times, because its pathway pages returned 404 errors and no OYS EBUS patient guide turned up.",
+ "sources": [
+  {
+   "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+   "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS",
+   "quote": "Teemme esimerkiksi kuvantamistutkimuksia, keuhkojen toimintakokeita ja laboratoriokokeita.",
+   "about": "context",
+   "published": "2025-10-21T12:16:39+00:00",
+   "fetched_at": "2026-11-14T00:46:09+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/",
+   "title": "Lung cancer diagnosis and staging with endobronchial ultrasound-guided transbronchial needle aspiration compared with conventional approaches: an open-label, pragmatic, randomised controlled trial",
+   "quote": "The median time to treatment decision was shorter with EBUS-TBNA (14 days; 95% CI 14–15) than with CDS (29 days; 23–35) resulting in a hazard ratio of 1·98, (1·39–2·82, p<0·0001).",
+   "about": "effect",
+   "published": "2015",
+   "fetched_at": "2026-11-13T23:55:11+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, syovanhoitokeskus.pshyvinvointialue.fi, hyvaks.fi",
+   "ms": 2114,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    },
+    {
+     "url": "https://www.pirha.fi/fi/asiakkaalle/hoito-ja-palvelupolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohde EBUS",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pohde.fi",
+   "ms": 2322,
+   "results": [
+    {
+     "url": "https://pohde.fi/",
+     "title": "Etusivu - Pohjois-Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://pohde.fi/yhteystiedot/",
+     "title": "Yhteystiedot - Pohde"
+    },
+    {
+     "url": "https://pohde.fi/meilla-asiakkaana/asiakasmaksut-ja-laskut/",
+     "title": "Asiakasmaksut ja asiakaslaskut - Pohde"
+    },
+    {
+     "url": "https://pohde.fi/meilla-asiakkaana/asiakasmaksut-ja-laskut/asiakasmaksujen-ja-asiakaslaskutuksen-yhteystiedot/",
+     "title": "Asiakasmaksujen ja asiakaslaskutuksen yhteystiedot - Pohde"
+    },
+    {
+     "url": "https://pohde.fi/usein-kysytyt-kysymykset/",
+     "title": "Usein kysytyt kysymykset - Pohde"
+    },
+    {
+     "url": "https://pohde.fi/palvelut/apuvalinepalvelut/",
+     "title": "Apuvälinepalvelut - Pohjois-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkoputkien ultraäänitähystys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: potilasohjeet.pirha.fi, parempaaelamaa.fi, duodecimlehti.fi, terveyskyla.fi",
+   "ms": 2316,
+   "results": [
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/keuhkoputkien-ultraaanitahystys-ebus-bronkoskopia-",
+     "title": "Keuhkoputkien ultraäänitähystys (EBUS-bronkoskopia) - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://parempaaelamaa.fi/keuhkosyopa/keuhkosyovan-diagnosointi/",
+     "title": "Keuhkosyöpädiagnoosi ja kuvantamistutkimukset"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo11158",
+     "title": "Keuhkoputkien kaikutähystys - milloin tarpeen?"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/keuhkotalo/tutkimus-ja-hoito/keuhkosairauksien-tutkimukset/keuhkoputken-tahystys",
+     "title": "Keuhkoputken tähystys"
+    },
+    {
+     "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/VSSHP/Keuhkoputken%20t%C3%A4hystys%20ja%20n%C3%A4ytteiden%20otto%20ultra%C3%A4%C3%A4niohjatusti.pdf",
+     "title": "Keuhkoputken tähystys ja näytteiden otto ultraääniohjatusti"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/01/80T_Keuhkoputkitahystys.pdf",
+     "title": "POTILASOHJE Keuhkosairaudet Sijainti: Keuhkosairaudet"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Pohjois-Pohjanmaan bronkoskopia jono keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: pohjanmaanhyvinvointi.fi, terveyskyla.fi, potilasohjeet.pirha.fi",
+   "ms": 2757,
+   "results": [
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/wp-content/uploads/2024/07/Keuhkoputkien-tahystystutkimus.pdf",
+     "title": "Keuhkoputkien tähystystutkimuksen ohjeet (bronkoskopia)"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/keuhkotalo/tutkimus-ja-hoito/keuhkosairauksien-tutkimukset/keuhkoputken-tahystys",
+     "title": "Keuhkoputken tähystys"
+    },
+    {
+     "url": "https://pohjanmaanhyvinvointi.fi/palvelumme/terveys-ja-sairaanhoitopalvelut/sairaalapalvelut/kirurgiapalvelut/skopiayksikko/",
+     "title": "Skopiayksikkö - Pohjanmaan hyvinvointialue"
+    },
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/keuhkoputkien-tahystys",
+     "title": "Keuhkoputkien tähystys - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://www.apollohospitals.com/fi/diagnostics-investigations/bronchoscopy",
+     "title": "Bronkoskopia – tarkoitus, tulokset, normaalialue ja paljon muuta"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo11158",
+     "title": "Keuhkoputkien kaikutähystys - milloin tarpeen?"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.8,
+   "result_en": "2 reads: B: OYS pathway diagnostics; A effect",
+   "ms": 5074
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+   "focus": "EBUS bronkoskopia tutkimukset viikko",
+   "why": "B: OYS pathway diagnostics",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2332,
+   "error": true
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/",
+   "focus": "median time to treatment decision 14 days 29 days",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 7.8,
+   "result_en": "\"Lung cancer diagnosis and staging with endobronchial ultrasound-guided\" · 33 282 chars · 7 of 53 passages kept · from cache",
+   "ms": 9,
+   "title": "Lung cancer diagnosis and staging with endobronchial ultrasound-guided transbronchial needle aspiration compared with conventional approaches: an open-label, pragmatic, randomised controlled trial",
+   "chars": 33282,
+   "from_cache": true,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 10.2,
+   "result_en": "1 search: B: OYS diagnostics pathway",
+   "ms": 2527
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyövän hoitopolku tutkimukset EBUS",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: OYS diagnostics pathway",
+   "status": "done",
+   "t_s": 12.7,
+   "result_en": "6 results: hus.fi, oys.fi",
+   "ms": 1855,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://oys.fi/keuhkosyovan-hoitopolku/lahete/",
+     "title": "Lähete - Keuhkosyövän hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/ajankohtaista/uutiset/oys-mukana-keuhkosyovan-seulontapilotissa-tavoitteena-parantaa-taudin-varhaista-toteamista/",
+     "title": "OYS mukana keuhkosyövän seulontapilotissa – tavoitteena parantaa taudin varhaista toteamista - OYS"
+    },
+    {
+     "url": "https://oys.fi/sisatautikeskus/keuhkosairaudet/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/tutkimuspalvelut/myonnetyt-tutkimus-ja-tietoluvat-seka-opinnaytetoiden-luvat/",
+     "title": "Myönnetyt tutkimus- ja tietoluvat sekä opinnäytetöiden luvat - OYS"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 14.6,
+   "result_en": "2 reads: B",
+   "ms": 3755
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/sisatautikeskus/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+   "focus": "EBUS bronkoskopia keuhkosyöpäepäily tutkimukset",
+   "why": "B",
+   "status": "done",
+   "t_s": 18.3,
+   "result_en": "\"Keuhkosairauksien hoito sairaalan poliklinikalla - OYS\" · 1 033 chars · from cache",
+   "ms": 5,
+   "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS",
+   "chars": 1033,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+   "published": "2025-10-21T12:16:39+00:00",
+   "js_render": false
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/syopakeskus/hoitopolut/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/syopakeskus/hoitopolut/",
+   "focus": "keuhkosyöpä tutkimukset EBUS tähystys",
+   "why": "B",
+   "status": "done",
+   "t_s": 18.3,
+   "result_en": "could not read: the site answered HTTP 404",
+   "ms": 2343,
+   "error": true
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 20.7,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Pohde / OYS / OYS Oulun yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 10935
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 31.6,
+   "result_en": "1 search: B: does OYS do EBUS",
+   "ms": 2950
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS EBUS-tutkimus potilasohje",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: does OYS do EBUS",
+   "status": "done",
+   "t_s": 34.5,
+   "result_en": "6 results: potilasohjeet.pirha.fi, kymenhva.fi, oys.fi, terveyskyla.fi",
+   "ms": 1533,
+   "results": [
+    {
+     "url": "https://potilasohjeet.pirha.fi/w/keuhkoputkien-ultraaanitahystys-ebus-bronkoskopia-",
+     "title": "Keuhkoputkien ultraäänitähystys (EBUS-bronkoskopia) - Potilasohjeet - intra.pirha.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/01/80T_EBUS.pdf",
+     "title": "POTILASOHJE Keuhkosairaudet Sijainti: Keuhkosairaudet"
+    },
+    {
+     "url": "https://oys.fi/kohderyhmille/tutkijat-ja-yhteistyokumppanit/tutkimuspalvelut/tutkimuspalveluiden-lomakkeita-ja-ohjeita/",
+     "title": "Tutkimuspalveluiden lomakkeita ja ohjeita - OYS"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/tutkimukseen/ennen-tutkimusta/ohjeet-potilaille",
+     "title": "Potilasohjeet tutkimuksiin | Tutkimukseen tulijan talo | Terveyskylä.fi"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo11158",
+     "title": "Keuhkoputkien kaikutähystys - milloin tarpeen?"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/kuvantaminen-ja-muu-diagnostiikka/",
+     "title": "Kuvantaminen ja muu diagnostiikka - OYS"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 36.1,
+   "result_en": "writes the answer",
+   "ms": 9529
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4648022/",
+   "title": "Lung cancer diagnosis and staging with endobronchial ultrasound-guided transbronchial needle aspiration compared with conventional approaches: an open-label, pragmatic, randomised controlled trial",
+   "chars": 33282,
+   "kind": "article",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:55:11+00:00",
+   "published": "2015",
+   "js_render": false
+  },
+  {
+   "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+   "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS",
+   "chars": 1033,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:09+00:00",
+   "published": "2025-10-21T12:16:39+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:52:03+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no OYS or Pohde page we could read says that EBUS is the first test or that there are enough EBUS lists to do it within a week, though a quick question to the OYS lung disease unit about its current EBUS practice would be cheap.",
+ "seconds": 45.6,
+ "searched_en": "Searched 6 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Pohde EBUS\"; \"OYS keuhkoputkien ultraäänitähystys\"; \"Pohjois-Pohjanmaan bronkoskopia jono keuhkosyöpä\", ...) and read 2 pages on pmc.ncbi.nlm.nih.gov, oys.fi.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Pohde EBUS",
+  "OYS keuhkoputkien ultraäänitähystys",
+  "Pohjois-Pohjanmaan bronkoskopia jono keuhkosyöpä",
+  "OYS keuhkosyövän hoitopolku tutkimukset EBUS",
+  "OYS EBUS-tutkimus potilasohje"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 2,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no OYS or Pohde page we could read says that EBUS is the first test or that there are enough EBUS lists to do it within a week, though a quick question to the OYS lung disease unit about its current EBUS practice would be cheap.",
+ "verdict_en": "No public sign that it is running in North Ostrobothnia. Evidence supports that it works, but not the size of effect we assume. Supported: The Lancet Respiratory Medicine trial (2015) found a median time to treatment decision of 14 days with EBUS first versus 29 days with the usual work-up, about 15 days shorter. Not supported: The trial did not measure time from first symptom to treatment start, and it was run in the UK, not Finland.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "ebus_capacity",
+ "intervention_name_en": "EBUS as first test, with enough bronchoscopy capacity",
+ "area_name_en": "North Ostrobothnia wellbeing services county"
+}

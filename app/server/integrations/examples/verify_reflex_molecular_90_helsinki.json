@@ -1,0 +1,629 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in City of Helsinki (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Reflex molecular testing ordered by pathology. The pathologist starts the biomarker panel (EGFR, ALK, ROS1, PD-L1, NGS) as soon as non-small cell lung cancer is seen, without waiting for the oncologist to order it. The result now decides treatment at every stage: osimertinib or alectinib after surgery, durvalumab or osimertinib after chemoradiotherapy in stage III, and the first drug in advanced disease.",
+ "area_id": "90",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "A 2026 systematic review of 20 NSCLC studies reports reflex testing shortened time to treatment by 1–44 days.",
+ "supported_en": "Reflex testing shortens NSCLC time to treatment by 1–44 days (Future Oncology systematic review, 2026).",
+ "not_supported_en": "No HUS or Finnish data on the ordering delay, so the 7-day gain locally is unverified.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign of reflex testing started by pathology at HUS. HUSLAB has offered an NGS panel with EGFR and ALK since March 2020, but no page says who orders it.",
+ "missing_en": "",
+ "summary_en": "HUS pages say biopsies are tested for molecular changes that guide treatment, with results in 2–3 weeks. HUSLAB has run an in-house NGS panel that includes EGFR and ALK since 30.3.2020. No page says the testing is started by pathology rather than ordered by the clinician. A 2026 systematic review (Future Oncology) found that reflex testing in non-small cell lung cancer cut time to treatment by 1–44 days, so our 7-day assumption fits inside that range, but no Finnish figure confirms it.",
+ "unanswered_en": "Whether HUS pathologists already order the panel automatically was not stated on any page found.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "title": "Keuhkosyövän lisätutkimukset",
+   "quote": "Kudosnäytteiden patologisten ja molekyyligeneettisten määritysten kesto laboratorioissa on yleensä 2–3 viikkoa.",
+   "about": "context",
+   "published": "04.06.2026",
+   "fetched_at": "2026-11-14T00:59:39+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://huslab.fi/ohjekirjan_liitteet/tutkimustiedotteet/tutkimustiedotteet_2020/2020_30_laajennettu_ngs_paneeli_kiinteiden_kasvainten_somaattisille_muutoksille_30_3_2020_alkaen.pdf",
+   "title": "HUSLAB tutkimustiedote",
+   "quote": "Uudet geenit paneelissa ovat ALK, KEAP1 ja STK11.",
+   "about": "context",
+   "published": "2020-03-20",
+   "fetched_at": "2026-11-13T23:32:49+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41797649/",
+   "title": "Systematic review of reflex biomarker testing and its influence on diagnostic and treatment timelines in cancer pathways.",
+   "quote": "In non-small-cell lung cancer (n = 20), reductions were observed in turnaround time (1-38 days), initiation/request intervals (13-29 days), and time to treatment (1-44 days).",
+   "about": "effect",
+   "published": "2026-03-09",
+   "fetched_at": "2026-11-14T01:50:50+00:00",
+   "from_cache": false
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi",
+   "ms": 1719,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsingin kaupunki refleksitestaus keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kaupunkitieto.hel.fi, hel.fi, sttinfo.fi, numerot.hel.fi",
+   "ms": 2289,
+   "results": [
+    {
+     "url": "https://kaupunkitieto.hel.fi/fi/helsinkilaisten-keuhkosyopakuolleisuus-on-vahentynyt-selvasti",
+     "title": "Helsinkiläisten keuhkosyöpäkuolleisuus on vähentynyt selvästi | Helsingin kaupunki"
+    },
+    {
+     "url": "https://www.hel.fi/fi/uutiset/helsinkilaisten-keuhkosyopakuolleisuus-on-vahentynyt-selvasti",
+     "title": "Helsinkiläisten keuhkosyöpäkuolleisuus on vähentynyt selvästi | Helsingin kaupunki"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/71189027/helsinkilaisten-keuhkosyopakuolleisuus-on-vahentynyt-selvasti?lang=fi",
+     "title": "Helsinkiläisten keuhkosyöpäkuolleisuus on vähentynyt selvästi | Helsingin kaupunki, kaupunginkanslia"
+    },
+    {
+     "url": "https://numerot.hel.fi/fi/kaupunkiympariston-toimiala/palvelut-ja-luvat/ymparistopalvelut/ymparistoterveys",
+     "title": "Ympäristöterveys | Numerot.hel.fi"
+    },
+    {
+     "url": "https://kaupunkitieto.hel.fi/fi/vaesto/vaestonmuutokset/kuolleisuus-ja-elinajanodote",
+     "title": "Kuolleisuus ja elinajanodote | Helsingin kaupunki"
+    },
+    {
+     "url": "https://kokeilukiihdyttamo.hel.fi/",
+     "title": "Helsingin kaupunki"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS NGS keuhkosyöpä patologia",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, diagnostiikka.hus.fi",
+   "ms": 2425,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://diagnostiikka.hus.fi/patologia",
+     "title": "Patologia - Ammattilaisen sivusto - HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/tutkimus-ja-opetus/tieteelliset-tutkimukset/syopatutkimukset",
+     "title": "Syöpätutkimukset | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+     "title": "Keuhkosyövän lisätutkimukset | HUS"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Helsinki molekyylipatologia EGFR ALK keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tuhat.helsinki.fi, s3-eu-west-1.amazonaws.com, docplayer.fi",
+   "ms": 2983,
+   "results": [
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554989/Keuhkosy_v_n_molekyylipatologinen.pdf",
+     "title": "593 Duodecim 2016;132:593–9 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    },
+    {
+     "url": "https://s3-eu-west-1.amazonaws.com/frantic/syopa-jarjestot/FocusO2015_NETTI.pdf",
+     "title": "I Focus Oncologiae SYÖPÄSÄÄTIÖN JULKAISUSARJA – NO 16, 2015"
+    },
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554377/Levinneen_keuhkosy_v_n_nykyaikainen.pdf",
+     "title": "555 Duodecim 2016;132:555–60 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    },
+    {
+     "url": "https://docplayer.fi/50787063-Keuhkosyovan-molekyylipatologinen-diagnostiikka-edellyttaa-perustietoja-myos-kliinikoilta.html",
+     "title": "Keuhkosyövän molekyylipatologinen diagnostiikka edellyttää perustietoja myös kliinikoilta - PDF Ilmainen lataus"
+    },
+    {
+     "url": "https://1587791.169.directo.fi/@Bin/ca44cc4be61a4d44fb75009fd0f23cfa/1791884992/application/pdf/173596/Jussi%20Koivunen%20-%20Molekyylidiagnostiikka%20keuhkosy%c3%b6v%c3%a4n%20hoidossa.pdf",
+     "title": "Molekyylidiagnostiikka keuhkosyövän hoidossa Jussi Koivunen, el, dos."
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo10588",
+     "title": "Keuhkosyöpien tarkentuva diagnostiikka"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.0,
+   "result_en": "2 reads: B: reflex testing at HUS; B: who orders molecular tests",
+   "ms": 5669
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "molekyyligeneettiset tutkimukset patologi EGFR PD-L1 automaattisesti",
+   "why": "B: reflex testing at HUS",
+   "status": "done",
+   "t_s": 8.7,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 3,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "focus": "molekyyligeneettiset tutkimukset patologi näyte",
+   "why": "B: who orders molecular tests",
+   "status": "done",
+   "t_s": 8.7,
+   "result_en": "\"Keuhkosyövän lisätutkimukset\" · 1 461 chars · from cache",
+   "ms": 4,
+   "title": "Keuhkosyövän lisätutkimukset",
+   "chars": 1461,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "published": "04.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.7,
+   "result_en": "2 searches: A: effect size; B: reflex ordering at HUS pathology",
+   "ms": 5442
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "reflex testing NSCLC time to treatment days",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "US",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "6 results: pubmed.ncbi.nlm.nih.gov, onclive.com, ascopubs.org, sciencedirect.com",
+   "ms": 2720,
+   "results": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41797649/",
+     "title": "Systematic review of reflex biomarker testing and its ..."
+    },
+    {
+     "url": "https://www.onclive.com/view/reflex-testing-for-patients-with-suspected-lung-cancer",
+     "title": "Reflex Testing for Patients with Suspected Lung Cancer | OncLive"
+    },
+    {
+     "url": "https://ascopubs.org/doi/10.1200/JCO.2024.42.16_suppl.8060",
+     "title": "Next-generation sequencing (NGS) completion and timeliness using reflex testing protocol for patients with stage II-III non-squamous non-small cell lung cancer (NS-NSCLC). | Journal of Clinical Oncology"
+    },
+    {
+     "url": "https://www.sciencedirect.com/science/article/pii/S1525730426000926",
+     "title": "Next-Generation Sequencing Completion and Timeliness Using a ..."
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42485753/",
+     "title": "Next-Generation Sequencing Completion and Timeliness Using a Reflex Testing Protocol for Patients with Stage II to IV Nonsquamous Non-Small Cell Lung Cancer - PubMed"
+    },
+    {
+     "url": "https://gmcancer.org.uk/wp-content/uploads/2024/06/GM-NSCLC-Reflex-Testing-Protocol-update-August-2023-final-version.pdf",
+     "title": "Greater Manchester Cancer Non-small cell lung cancer reflex testing protocol"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS patologia keuhkosyöpä molekyylitestaus automaattisesti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: reflex ordering at HUS pathology",
+   "status": "done",
+   "t_s": 14.1,
+   "result_en": "6 results: hus.fi, tuhat.helsinki.fi, bin.yhdistysavain.fi",
+   "ms": 2129,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/61554989/Keuhkosy_v_n_molekyylipatologinen.pdf",
+     "title": "593 Duodecim 2016;132:593–9 KEUHKOSYÖVÄN DIAGNOSTIIKKA JA HOITO KATSAUS TEEMA"
+    },
+    {
+     "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+     "title": "Keuhkosyövän lisätutkimukset | HUS"
+    },
+    {
+     "url": "https://bin.yhdistysavain.fi/1587600/FQzJZQUXURVJI4cZguTS0WHCgJ/30112020_Keuhkosy%C3%B6v%C3%A4n%20tutkimusalgoritmi%20patologian%20laboratorioss.pdf",
+     "title": "Keuhkosyövän tutkimusalgoritmi patologian laboratoriossa IAP, Suomen osasto/"
+    },
+    {
+     "url": "https://1587791.169.directo.fi/@Bin/ca44cc4be61a4d44fb75009fd0f23cfa/1791884992/application/pdf/173596/Jussi%20Koivunen%20-%20Molekyylidiagnostiikka%20keuhkosy%c3%b6v%c3%a4n%20hoidossa.pdf",
+     "title": "Molekyylidiagnostiikka keuhkosyövän hoidossa Jussi Koivunen, el, dos."
+    },
+    {
+     "url": "https://aidiagme.com/fi/pathologies-and-diseases/lung-cancer/",
+     "title": "Keuhkosyöpä: oireet, diagnoosi ja hoito - AI DiagMe"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.8,
+   "result_en": "2 reads: A: effect size; B: pathologist-initiated testing in Finland/HUSLAB",
+   "ms": 5364
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pubmed.ncbi.nlm.nih.gov/41797649/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41797649/",
+   "focus": "time to treatment days reflex non-small-cell lung cancer",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 22.2,
+   "result_en": "\"Systematic review of reflex biomarker testing and its influence on dia\" · 1 627 chars",
+   "ms": 3307,
+   "title": "Systematic review of reflex biomarker testing and its influence on diagnostic and treatment timelines in cancer pathways.",
+   "chars": 1627,
+   "from_cache": false,
+   "kind": "abstract",
+   "page_url": "https://pubmed.ncbi.nlm.nih.gov/41797649/",
+   "published": "2026-03-09",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://bin.yhdistysavain.fi/1587600/FQzJZQUXURVJI4cZguTS0WHCgJ/30112020_Keuhkosy%C3%B6v%C3%A4n%20tutkimusalgoritmi%20patologian%20laboratorioss.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://bin.yhdistysavain.fi/1587600/FQzJZQUXURVJI4cZguTS0WHCgJ/30112020_Keuhkosy%C3%B6v%C3%A4n%20tutkimusalgoritmi%20patologian%20laboratorioss.pdf",
+   "focus": "refleksi EGFR ALK PD-L1 patologi käynnistää",
+   "why": "B: pathologist-initiated testing in Finland/HUSLAB",
+   "status": "done",
+   "t_s": 22.2,
+   "result_en": "\"Keuhkokasvaimen biopsia\" · 2 790 chars · PDF 5 p. · from cache",
+   "ms": 1,
+   "title": "Keuhkokasvaimen biopsia",
+   "chars": 2790,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://bin.yhdistysavain.fi/1587600/FQzJZQUXURVJI4cZguTS0WHCgJ/30112020_Keuhkosy%C3%B6v%C3%A4n%20tutkimusalgoritmi%20patologian%20laboratorioss.pdf",
+   "published": "2020-11-30",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 25.5,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Helsingin kaupunki / HUS / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 15142
+  },
+  {
+   "step": 15,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.6,
+   "result_en": "1 search: B: does HUS pathology order panel itself",
+   "ms": 2643
+  },
+  {
+   "step": 16,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUSLAB keuhkosyöpä NGS-paneeli patologi tilaa",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: does HUS pathology order panel itself",
+   "status": "done",
+   "t_s": 43.3,
+   "result_en": "6 results: bin.yhdistysavain.fi, huslab.fi, hus.fi, hyvaks.fi",
+   "ms": 2321,
+   "results": [
+    {
+     "url": "https://bin.yhdistysavain.fi/1587600/FQzJZQUXURVJI4cZguTS0WHCgJ/30112020_Keuhkosy%C3%B6v%C3%A4n%20tutkimusalgoritmi%20patologian%20laboratorioss.pdf",
+     "title": "Keuhkosyövän tutkimusalgoritmi patologian laboratoriossa IAP, Suomen osasto/"
+    },
+    {
+     "url": "https://huslab.fi/ohjekirjan_liitteet/tutkimustiedotteet/tutkimustiedotteet_2020/2020_30_laajennettu_ngs_paneeli_kiinteiden_kasvainten_somaattisille_muutoksille_30_3_2020_alkaen.pdf",
+     "title": "TUTKIMUSTIEDOTE 2020:30 1 (1) HUS Diagnostiikkakeskus, HUSLAB, Genetiikka"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/sites/default/files/ohjeet/NGS_syopageenipaneeli1_9944.pdf",
+     "title": "NGS-geenipaneelitutkimus tiettyjen kliinisesti merkittävien ..."
+    },
+    {
+     "url": "https://fimlab.fi/tutkimus/10045",
+     "title": "Tutkimusohjekirja - Fimlab"
+    },
+    {
+     "url": "https://tutkimusohjekirja.fimlab.fi/ohjekirja/nayta.tmpl?sivu_id=322&setid=10045",
+     "title": "Somaattisten mutaatioiden NGS-tuumoripaneeli (32 geeniä)"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 45.6,
+   "result_en": "1 read: B: who orders NGS at HUSLAB",
+   "ms": 3810
+  },
+  {
+   "step": 18,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://huslab.fi/ohjekirjan_liitteet/tutkimustiedotteet/tutkimustiedotteet_2020/2020_30_laajennettu_ngs_paneeli_kiinteiden_kasvainten_somaattisille_muutoksille_30_3_2020_alkaen.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://huslab.fi/ohjekirjan_liitteet/tutkimustiedotteet/tutkimustiedotteet_2020/2020_30_laajennettu_ngs_paneeli_kiinteiden_kasvainten_somaattisille_muutoksille_30_3_2020_alkaen.pdf",
+   "focus": "keuhkosyöpä patologi pyynnöstä tilaus",
+   "why": "B: who orders NGS at HUSLAB",
+   "status": "done",
+   "t_s": 49.4,
+   "result_en": "\"HUSLAB tutkimustiedote\" · 1 909 chars · PDF 1 p. · from cache",
+   "ms": 0,
+   "title": "HUSLAB tutkimustiedote",
+   "chars": 1909,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://huslab.fi/ohjekirjan_liitteet/tutkimustiedotteet/tutkimustiedotteet_2020/2020_30_laajennettu_ngs_paneeli_kiinteiden_kasvainten_somaattisille_muutoksille_30_3_2020_alkaen.pdf",
+   "published": "2020-03-20",
+   "js_render": false
+  },
+  {
+   "step": 19,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 49.4,
+   "result_en": "writes the answer",
+   "ms": 15178
+  }
+ ],
+ "rounds": 3,
+ "searches": 7,
+ "pages_read": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/keuhkosyovan-lisatutkimukset",
+   "title": "Keuhkosyövän lisätutkimukset",
+   "chars": 1461,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:59:39+00:00",
+   "published": "04.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://bin.yhdistysavain.fi/1587600/FQzJZQUXURVJI4cZguTS0WHCgJ/30112020_Keuhkosy%C3%B6v%C3%A4n%20tutkimusalgoritmi%20patologian%20laboratorioss.pdf",
+   "title": "Keuhkokasvaimen biopsia",
+   "chars": 2790,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:32:51+00:00",
+   "published": "2020-11-30",
+   "js_render": false
+  },
+  {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41797649/",
+   "title": "Systematic review of reflex biomarker testing and its influence on diagnostic and treatment timelines in cancer pathways.",
+   "chars": 1627,
+   "kind": "abstract",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:50:50+00:00",
+   "published": "2026-03-09",
+   "js_render": false
+  },
+  {
+   "url": "https://huslab.fi/ohjekirjan_liitteet/tutkimustiedotteet/tutkimustiedotteet_2020/2020_30_laajennettu_ngs_paneeli_kiinteiden_kasvainten_somaattisille_muutoksille_30_3_2020_alkaen.pdf",
+   "title": "HUSLAB tutkimustiedote",
+   "chars": 1909,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:32:49+00:00",
+   "published": "2020-03-20",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:51:29+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: no HUS or HUSLAB page we read says that pathologists start the lung cancer biomarker panel without an order. HUSLAB pathology is the body to ask before spending.",
+ "seconds": 64.6,
+ "searched_en": "Searched 7 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Helsingin kaupunki refleksitestaus keuhkosyöpä\"; \"HUS NGS keuhkosyöpä patologia\"; \"Helsinki molekyylipatologia EGFR ALK keuhkosyöpä\", ...) and read 5 pages on hus.fi, pubmed.ncbi.nlm.nih.gov, bin.yhdistysavain.fi, huslab.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Helsingin kaupunki refleksitestaus keuhkosyöpä",
+  "HUS NGS keuhkosyöpä patologia",
+  "Helsinki molekyylipatologia EGFR ALK keuhkosyöpä",
+  "reflex testing NSCLC time to treatment days",
+  "HUS patologia keuhkosyöpä molekyylitestaus automaattisesti",
+  "HUSLAB keuhkosyöpä NGS-paneeli patologi tilaa"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 7,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: no HUS or HUSLAB page we read says that pathologists start the lung cancer biomarker panel without an order. HUSLAB pathology is the body to ask before spending.",
+ "verdict_en": "No public sign that it is running in Helsinki. Evidence supports that it works, but not the size of effect we assume. Supported: Reflex testing shortens NSCLC time to treatment by 1–44 days (Future Oncology systematic review, 2026). Not supported: No HUS or Finnish data on the ordering delay, so the 7-day gain locally is unverified.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "reflex_molecular",
+ "intervention_name_en": "Reflex molecular testing ordered by pathology",
+ "area_name_en": "City of Helsinki"
+}

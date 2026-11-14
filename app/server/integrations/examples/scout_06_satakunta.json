@@ -1,0 +1,565 @@
+{
+ "area_id": "06",
+ "area_name_en": "Satakunta wellbeing services county",
+ "area_name_fi": "Satakunnan hyvinvointialue",
+ "question": "What is Satakunta wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-11-11",
+   "what_en": "Satakunta's early-diagnosis pathway lets primary care send at-risk patients straight to chest CT without a specialist assessment.",
+   "what_fi": "Satakunnan varhaisdiagnostiikan hoitopolulla perusterveydenhuolto voi lähettää riskipotilaan suoraan keuhkojen TT-kuvaukseen.",
+   "quote": "Mallin keskeinen uudistus on mahdollisuus lähettää keuhkosyövän riskissä oleva potilas keuhkojen tietokonetomografiaan eli TT-kuvaukseen suoraan perusterveydenhuollosta, ilman erillistä erikoissairaanhoidon arviota.",
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "relates_to": "gp_direct_ct",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-11-11",
+   "what_en": "About 170 patients have had a CT through the pathway, which began as a pilot in early 2022 and became routine practice in 2024.",
+   "what_fi": "Hoitopolun kautta noin 170 potilasta on kuvattu; pilotti alkoi 2022 ja vakiintui 2024.",
+   "quote": "Varhaisdiagnostiikan hoitopolun kautta on tähän mennessä tehty keuhkojen TT-kuvaus noin 170 potilaalle. Alkuvuodesta 2022 pilottina käynnistynyt toimintamalli vakiintui osaksi terveydenhuollon käytäntöjä vuonna 2024.",
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "relates_to": "gp_direct_ct",
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025-04-02",
+   "what_en": "In December 2024 Satakunta's regional government decided to keep planning the Satasairaala renewal (new acute 'hot' hospital, up to €150M), which also moves units such as the cancer clinic, radiotherapy and endoscopy.",
+   "what_fi": "Aluehallitus päätti 12/2024 jatkaa Satasairaalan uudistushankkeen (kuuma sairaala, enintään 150 M€) suunnittelua; tilasuunnitelmissa ovat mukana myös syöpäpoliklinikka, sädehoito ja tähystysyksikkö.",
+   "quote": "Aluehallitus tehnyt 12/2024 päätöksen, että suunnittelua jatketaan hybridimallin pohjalta, mutta hankkeen laajuutta tarvittaessa arvioidaan suunnittelun edetessä",
+   "url": "https://sata.cloudnc.fi/download/noname/%7B7bf0db94-aca9-40bb-8de7-2446deea1356%7D/45256",
+   "title": "SATASAIRAALA UUDISTUU-HANKE ” kuuma sairaala - tilannekatsaus” 2.4.2025",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-14T01:33:08+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2025",
+   "what_en": "At Tyks, when chemotherapy was the first treatment, it started on average 35 days after the referral arrived (January–June 2025).",
+   "what_fi": "Tyksissä solunsalpaajahoito ensihoitona alkoi keskimäärin 35 päivää lähetteen saapumisesta (tammi–kesäkuu 2025).",
+   "quote": "2025 tammikuu–kesäkuu | 35 päivää",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "relates_to": "time_to_treatment",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2025",
+   "what_en": "At Tyks, lung cancer surgery took place on average 10 days after the decision to operate (January–June 2025).",
+   "what_fi": "Tyksissä keuhkosyöpäleikkaus tehtiin keskimäärin 10 päivän kuluttua leikkauspäätöksestä (tammi–kesäkuu 2025).",
+   "quote": "2025 tammikuu–kesäkuu | 10 päivää",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "relates_to": "surgery",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  },
+  {
+   "date": null,
+   "what_en": "At Satasairaala, a pulmonologist, a radiation oncologist and a lung surgeon plan treatment together.",
+   "what_fi": "Satasairaalassa keuhkolääkäri, sädehoitolääkäri ja keuhkokirurgi suunnittelevat hoidon yhdessä.",
+   "quote": "Keuhkosyövän hoidon suunnittelevat keuhkolääkäri, sädehoitolääkäri ja keuhkokirurgi. Keuhkolääkäri antaa solunsalpaajahoitoa ja biologisia lääkkeitä.",
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "title": "Keuhkosyöpä",
+   "relates_to": "mdt",
+   "scope": "collaborative_area",
+   "fetched_at": "2026-11-14T01:03:51+00:00",
+   "from_cache": true
+  }
+ ],
+ "summary_en": "Satakunta already runs a lung cancer early-diagnosis pathway in which GPs can send people straight to chest CT. It started as a pilot in 2022, became routine in 2024, has scanned about 170 patients and is now being evaluated. Tyks publishes lung cancer waiting times: 10 days from the decision to operate to surgery, and 35 days from referral to first chemotherapy (January–June 2025). The county is also planning the Satasairaala renewal project (a new acute hospital, up to €150M), but nothing on that page is specific to lung cancer.",
+ "not_found_en": "I found no Satasairaala lung cancer waiting-time figures (only Tyks figures), and no pages on screening pilots, nurse navigators, reflex molecular testing, EBUS capacity, video MDT links with Tyks, or a lung cancer funding decision.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; pathway; decisions; news",
+   "ms": 4153
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: satakunnankansa.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 2429,
+   "results": [
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/keuhkosairaudet-satakunnan-hyvinvointialue/472cf083-5ce3-4379-ac60-e72843536301",
+     "title": "Keuhkosairaudet - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka hyvinvointialueella"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+     "title": "Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala keuhkosyöpä hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "pathway",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: suomi.fi, satakunnanhyvinvointialue.fi, satakunnankansa.fi",
+   "ms": 1775,
+   "results": [
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+     "title": "Keuhkosyöpä - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku - HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunta aluehallitus syöpä investointi sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, sata.cloudnc.fi, suomi.fi",
+   "ms": 2645,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2025/12/09/aluehallituksessa-investointisuunnitelma-2027-2030-sotepe-palveluhinnastot-ja-muutoksia-asiakasmaksuihin/",
+     "title": "Aluehallituksessa investointisuunnitelma 2027–2030, sotepe-palveluhinnastot ja muutoksia asiakasmaksuihin - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://sata.cloudnc.fi/fi-FI/Toimielimet/Aluehallitus/Kokous_3122024/Satakunnan_hyvinvointialueen_investointi(5259)",
+     "title": "Satakunnan hyvinvointialueen investointisuunnitelma 2026-2029 | Satakunnan hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/syopatautien-poliklinikka-satakunnan-hyvinvointialue/dce54c87-91b8-4372-b096-530a73e1f539",
+     "title": "Syöpätautien poliklinikka - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012387760.html",
+     "title": "Sata-alue investoi – katkaisuhoidollekin uudet tilat - Satakunnan Kansa"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/satakunnan-hyvinvointialue/d6a8ae74-8cc9-4663-aebb-2fd51e530efd",
+     "title": "Satakunnan hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala syöpähoito 2026 uutinen",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "news",
+   "status": "done",
+   "t_s": 4.2,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, satakunnankansa.fi",
+   "ms": 1914,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/syopa/syovan-hoito/",
+     "title": "Syövän hoito - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/aihe/syopa/",
+     "title": "Syöpä - Satakunnan Kansa"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 6.8,
+   "result_en": "3 reads: new pathway; care organisation; diagnostics",
+   "ms": 6278
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "focus": "hoitopolku potilasta TT keuhkokuva viive",
+   "why": "new pathway",
+   "status": "done",
+   "t_s": 13.1,
+   "result_en": "\"Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettii\" · 5 089 chars · 6 of 7 passages kept",
+   "ms": 2482,
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "chars": 5089,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "published": "2026-11-11T07:15:00+00:00",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "focus": "TYKS hoitopolku leikkaus sädehoito hoitajat",
+   "why": "care organisation",
+   "status": "done",
+   "t_s": 13.1,
+   "result_en": "\"Keuhkosyöpä\" · 1 749 chars · from cache",
+   "ms": 6,
+   "title": "Keuhkosyöpä",
+   "chars": 1749,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "focus": "bronkoskopia keuhkosyöpä tutkimukset",
+   "why": "diagnostics",
+   "status": "done",
+   "t_s": 13.1,
+   "result_en": "\"Keuhkosairauksien poliklinikka hyvinvointialueella\" · 2 499 chars",
+   "ms": 2025,
+   "title": "Keuhkosairauksien poliklinikka hyvinvointialueella",
+   "chars": 2499,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 15.6,
+   "result_en": "draft answer, still open: all 6 findings come from one site (satakunnanhyvinvointialue.fi), so they describe the service as it is, not what is changing. Search for a decision, a project, an investment, a waiting-time figure or dated local news (aluehallitus, hanke, investointi, uutinen, this year) a",
+   "ms": 19485
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 35.1,
+   "result_en": "2 searches: waiting time figures; investment decision",
+   "ms": 3344
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpä hoitoonpääsy jonotilanne 2026",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "waiting time figures",
+   "status": "done",
+   "t_s": 38.4,
+   "result_en": "6 results: tyks.fi, sttinfo.fi",
+   "ms": 1950,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/syopapotilaiden-hoitoonpaasy-tyksissa",
+     "title": "Syöpäpotilaiden hoitoonpääsy Tyksissä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/72039999/tyks-purki-kiireettoman-erikoissairaanhoidon-jonot-pitkajanteisella-kehittamistyolla?publisherId=69820130&lang=fi",
+     "title": "Tyks purki kiireettömän erikoissairaanhoidon jonot pitkäjänteisellä kehittämistyöllä | Varsinais-Suomen hyvinvointialue, Varha"
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/talous-ja-toimintaluvut/hoitoonpaasy",
+     "title": "Hoitoonpääsy | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala sädehoito laite hankinta päätös",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "investment decision",
+   "status": "done",
+   "t_s": 38.4,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, sata.cloudnc.fi, hankintasampo.fi",
+   "ms": 2243,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/sadehoitoyksikko/",
+     "title": "Sädehoitoyksikkö, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/",
+     "title": "Syöpätaudit ja sädehoito, Satasairaala - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://sata.cloudnc.fi/fi-FI/Viranhaltijat/Sairaalainsinoumloumlri/Angiolaitteen_varaosien_hankinta_Satasai(5698)",
+     "title": "Angiolaitteen varaosien hankinta, Satasairaala kuvantaminen | Satakunnan hyvinvointialue"
+    },
+    {
+     "url": "https://www.hankintasampo.fi/sampo/rftender/read/7509?key=7509%3Bd0f7427221c53808%3Bb2e7d40b148083f5bd673cded5d6415da60bd275a51226192bb290041ba0ab1d&compact=1",
+     "title": "Tarjouspyyntö 20/89 SataDiag Rauman kuvantamisen TT- ..."
+    },
+    {
+     "url": "https://sata.cloudnc.fi/download/noname/%7B7bf0db94-aca9-40bb-8de7-2446deea1356%7D/45256",
+     "title": "SATASAIRAALA UUDISTUU-HANKE ” kuuma sairaala - tilannekatsaus” 2.4.2025 1"
+    },
+    {
+     "url": "https://sata.cloudnc.fi/download/noname/%7B59037d95-d04c-4f39-8add-9f672e374c97%7D/45591",
+     "title": "HANKINNAN KOHDE Vastuualue / toimialue ENNAKOITU ARVO / vuosi tai kertahankinta"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 40.7,
+   "result_en": "2 reads: waiting time figures; investment decision",
+   "ms": 4658
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "focus": "vuorokautta lähetteestä hoidon alkuun keskimäärin",
+   "why": "waiting time figures",
+   "status": "done",
+   "t_s": 45.3,
+   "result_en": "\"Keuhkosyövän hoitoonpääsyajat\" · 806 chars · from cache",
+   "ms": 1,
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://sata.cloudnc.fi/download/noname/%7B7bf0db94-aca9-40bb-8de7-2446deea1356%7D/45256",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://sata.cloudnc.fi/download/noname/%7B7bf0db94-aca9-40bb-8de7-2446deea1356%7D/45256",
+   "focus": "Aluehallituksen päätös syöpä sädehoito keuhko",
+   "why": "investment decision",
+   "status": "done",
+   "t_s": 45.3,
+   "result_en": "\"SATASAIRAALA UUDISTUU-HANKE ” kuuma sairaala - tilannekatsaus” 2.4.202\" · 6 502 chars · PDF 6 p. · 5 of 9 passages kept",
+   "ms": 3214,
+   "title": "SATASAIRAALA UUDISTUU-HANKE ” kuuma sairaala - tilannekatsaus” 2.4.2025",
+   "chars": 6502,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://sata.cloudnc.fi/download/noname/%7B7bf0db94-aca9-40bb-8de7-2446deea1356%7D/45256",
+   "published": "2025-04-02",
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 48.5,
+   "result_en": "writes the answer",
+   "ms": 20652
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+   "title": "Keuhkosyöpä",
+   "chars": 1749,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:03:51+00:00"
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+   "title": "Keuhkosairauksien poliklinikka hyvinvointialueella",
+   "chars": 2499,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:32:35+00:00"
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "chars": 5089,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:32:35+00:00"
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:30:13+00:00"
+  },
+  {
+   "url": "https://sata.cloudnc.fi/download/noname/%7B7bf0db94-aca9-40bb-8de7-2446deea1356%7D/45256",
+   "title": "SATASAIRAALA UUDISTUU-HANKE ” kuuma sairaala - tilannekatsaus” 2.4.2025",
+   "chars": 6502,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:33:08+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:33:29+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 69.2
+}

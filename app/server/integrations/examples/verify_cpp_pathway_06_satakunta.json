@@ -1,0 +1,513 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Satakunta wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure shorten the time from first symptom to treatment start for lung cancer patients, and by how many days?\nMeasure: Standardised lung cancer pathway with booked slots. A lung cancer pathway on the Danish/Swedish/Norwegian model: fixed referral criteria, pre-booked CT, PET-CT, bronchoscopy and MDT slots, a named pathway owner, and published time limits for each step.",
+ "area_id": "06",
+ "verdict": "supported",
+ "effect_check": "supports",
+ "effect_summary_en": "Lung Cancer Europe (2026) reports that in Denmark the time from first referral to start of treatment fell from 56 to 42 days, a cut of 14 days, which matches the assumed value.",
+ "supported_en": "Lung Cancer Europe reports Danish referral-to-treatment time for lung cancer fell from 56 to 42 days (14 days). All.Can reports the Danish wait for any cancer diagnosis fell from 49 to 35 days.",
+ "not_supported_en": "The 14 days comes from a summary by an advocacy group, not a study I read; nothing shows the gain would be the same in Satakunta or covers the time from first symptom.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Alkuvuodesta 2022 pilottina käynnistynyt toimintamalli vakiintui osaksi terveydenhuollon käytäntöjä vuonna 2024.",
+ "in_use_source": {
+  "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+  "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+  "published": "2026-11-11T07:15:00+00:00",
+  "fetched_at": "2026-11-14T01:32:35+00:00"
+ },
+ "in_use_summary_en": "Satakunta wellbeing services county runs an early-diagnosis lung cancer pathway with fixed criteria (at least 20 pack-years of smoking plus symptoms) that let primary care send patients straight to lung CT. It started as a pilot in early 2022 and became routine in 2024. Tyks publishes average waiting times for lung cancer care.",
+ "missing_en": "No page shows pre-booked PET-CT, bronchoscopy or MDT slots, a named pathway owner, or published time limits (targets) for each step.",
+ "summary_en": "Satakunta wellbeing services county says its early-diagnosis lung cancer pathway (fixed criteria, direct CT from primary care) started as a pilot in 2022 and has been routine since 2024. Tyks publishes average waits for lung cancer care. Lung Cancer Europe reports that Denmark's pathway cut referral-to-treatment time for lung cancer from 56 to 42 days, which matches the assumed 14 days.",
+ "unanswered_en": "I found no page on booked imaging, bronchoscopy or MDT slots, a pathway owner or time limits for each step in Satakunta or Tyks, and no study of the Danish 14-day figure.",
+ "sources": [
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "quote": "Alkuvuodesta 2022 pilottina käynnistynyt toimintamalli vakiintui osaksi terveydenhuollon käytäntöjä vuonna 2024.",
+   "about": "in_use",
+   "published": "2026-11-11T07:15:00+00:00",
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "quote": "Keskeisiä kriteereitä ovat vähintään 20 askivuoden tupakointihistoria sekä keuhkosyöpään viittaavat oireet, kuten pitkittynyt yskä.",
+   "about": "in_use",
+   "published": "2026-11-11T07:15:00+00:00",
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://lungcancereurope.eu/news/no-time-to-lose-integrated-rapid-referral-pathways-for-lung-cancer",
+   "title": "No Time to Lose: Integrated Rapid Referral Pathways for Lung Cancer | Lung Cancer Europe",
+   "quote": "In Denmark, the time between first referral and treatment initiation fell from 56 days to 42 days.",
+   "about": "effect",
+   "published": "2026-08-31",
+   "fetched_at": "2026-11-14T01:44:31+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.all-can.org/efficiency-hub/danish-cancer-patient-pathways-three-legged-strategy-for-faster-referral-and-diagnosis-of-cancer/",
+   "title": "Danish Cancer Patient Pathways: three-legged strategy for faster referral and diagnosis of cancer - All.Can",
+   "quote": "After the introduction of CPPs, the waiting period for a cancer diagnosis decreased from 49 to 35 days",
+   "about": "effect",
+   "published": "2023-05-24T11:36:25+00:00",
+   "fetched_at": "2026-11-14T01:44:32+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "quote": "Keuhkosyövässä seurataan seuraavia hoitoonpääsyaikoja lähetteen saapumisesta Tyksin keuhkovastuualueelle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi, hyvaks.fi",
+   "ms": 2603,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satakunnan hyvinvointialue keuhkosyövän hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnankansa.fi, suomi.fi, hyvinvointimajakka.satakunnanhyvinvointialue.fi, satakunnanhyvinvointialue.fi",
+   "ms": 2544,
+   "results": [
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/",
+     "title": "Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+     "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella ..."
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+     "title": "Keuhkosyöpä - Satakunnanhyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyövän hoitoketju",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1262,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/hoitoketjut",
+     "title": "Hoitoketjut - KYS Syövänhoitokeskus - Pohjois-Savo"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/ammattilaiselle/hoitoketjut",
+     "title": "Hoitoketjut - TYKS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Satasairaala hoitoonpääsy määräajat keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: satakunnanhyvinvointialue.fi, suomi.fi",
+   "ms": 1942,
+   "results": [
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/asiointiopas/hoitoonpaasy/",
+     "title": "Hoitoonpääsy - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/syopataudit-ja-sadehoito/keuhkosyopa/",
+     "title": "Keuhkosyöpä - Satakunnanhyvinvointialue"
+    },
+    {
+     "url": "https://satakunnanhyvinvointialue.fi/palvelut/sairaala/keuhkosairaudet/keuhkosairauksien-poliklinikka/",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/keuhkosairauksien-poliklinikka-satasairaala-satakunnan-hyvinvointialue/5aab8ec8-0901-422b-ba42-caed9561eb2b",
+     "title": "Keuhkosairauksien poliklinikka, Satasairaala - Satakunnan hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://hyvinvointimajakka.satakunnanhyvinvointialue.fi/palveluhakemisto/keuhkosairaudet/",
+     "title": "Keuhkosairaudet - Hyvinvointimajakka"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.6,
+   "result_en": "2 reads: B county pathway; B time limits Tyks",
+   "ms": 4977
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "focus": "hoitopolku varatut ajat TT viive päivää potilasta",
+   "why": "B county pathway",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "\"Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettii\" · 5 089 chars · 6 of 7 passages kept · from cache",
+   "ms": 9,
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "chars": 5089,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "published": "2026-11-11T07:15:00+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "focus": "hoitoonpääsyajat päivää lähetteestä hoidon alkuun",
+   "why": "B time limits Tyks",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "\"Keuhkosyövän hoitoonpääsyajat\" · 806 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.6,
+   "result_en": "draft answer, still open: question A: no page read so far reports on the effect.",
+   "ms": 17301
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 24.9,
+   "result_en": "1 search: A effect size",
+   "ms": 2626
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "lung cancer patient pathway Denmark time to treatment days reduction",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "DK",
+   "why": "A effect size",
+   "status": "done",
+   "t_s": 27.5,
+   "result_en": "6 results: all-can.org, ihe.se, nature.com",
+   "ms": 1820,
+   "results": [
+    {
+     "url": "https://www.all-can.org/efficiency-hub/danish-cancer-patient-pathways-three-legged-strategy-for-faster-referral-and-diagnosis-of-cancer/",
+     "title": "Danish Cancer Patient Pathways: three-legged strategy for faster referral and diagnosis of cancer - All.Can"
+    },
+    {
+     "url": "https://ihe.se/app/uploads/2025/11/IHE-Cancer-Dashboard-for-Denmark-%E2%80%93-Lung-cancer_.pdf",
+     "title": "ihe.se Cancer Dashboard for Denmark – Lung cancer"
+    },
+    {
+     "url": "https://www.all-can.org/efficiency-hub/rapid-referral-pathways-reducing-delays-in-the-diagnosis-of-lung-cancer/",
+     "title": "Rapid referral pathways: reducing delays in the diagnosis of lung cancer - All.Can"
+    },
+    {
+     "url": "https://www.nature.com/articles/6605383",
+     "title": "Delay in diagnosis: the experience in Denmark | British Journal of Cancer"
+    },
+    {
+     "url": "https://www.researchgate.net/publication/51849038_Cancer_Patient_Pathways_in_Denmark_as_a_Joint_Effort_between_Bureaucrats_Health_Professionals_and_Politicians-A_National_Danish_Project",
+     "title": "Cancer Patient Pathways in Denmark as a Joint Effort between Bureaucrats, Health Professionals and Politicians—A National Danish Project"
+    },
+    {
+     "url": "https://lungcancereurope.eu/news/no-time-to-lose-integrated-rapid-referral-pathways-for-lung-cancer",
+     "title": "No Time to Lose: Integrated Rapid Referral Pathways for Lung Cancer — Lung Cancer Europe | Advocacy and Access for Lung Cancer in Europe"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 29.3,
+   "result_en": "2 reads: A effect days",
+   "ms": 3677
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://lungcancereurope.eu/news/no-time-to-lose-integrated-rapid-referral-pathways-for-lung-cancer",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://lungcancereurope.eu/news/no-time-to-lose-integrated-rapid-referral-pathways-for-lung-cancer",
+   "focus": "Denmark time between first referral and treatment initiation fell 56 days 42 days",
+   "why": "A effect days",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "\"No Time to Lose: Integrated Rapid Referral Pathways for Lung Cancer | \" · 4 385 chars",
+   "ms": 2598,
+   "title": "No Time to Lose: Integrated Rapid Referral Pathways for Lung Cancer | Lung Cancer Europe",
+   "chars": 4385,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://lungcancereurope.eu/news/no-time-to-lose-integrated-rapid-referral-pathways-for-lung-cancer",
+   "published": "2026-08-31",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.all-can.org/efficiency-hub/danish-cancer-patient-pathways-three-legged-strategy-for-faster-referral-and-diagnosis-of-cancer/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.all-can.org/efficiency-hub/danish-cancer-patient-pathways-three-legged-strategy-for-faster-referral-and-diagnosis-of-cancer/",
+   "focus": "decreased from 49 to 35 days lung",
+   "why": "A effect days",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "\"Danish Cancer Patient Pathways: three-legged strategy for faster refer\" · 5 467 chars · 7 of 10 passages kept",
+   "ms": 4015,
+   "title": "Danish Cancer Patient Pathways: three-legged strategy for faster referral and diagnosis of cancer - All.Can",
+   "chars": 5467,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.all-can.org/efficiency-hub/danish-cancer-patient-pathways-three-legged-strategy-for-faster-referral-and-diagnosis-of-cancer/",
+   "published": "2023-05-24T11:36:25+00:00",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 37.0,
+   "result_en": "writes the answer",
+   "ms": 14488
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+   "title": "Keuhkosyövän hoitoonpääsyajat",
+   "chars": 806,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:30:13+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://satakunnanhyvinvointialue.fi/2026/11/11/keuhkosyopa-todetaan-suomessa-liian-myohaan-sata-alueella-kehitettiin-uusi-keuhkosyovan-hoitopolku/",
+   "title": "Keuhkosyöpä todetaan Suomessa liian myöhään – Sata-alueella kehitettiin uusi keuhkosyövän hoitopolku",
+   "chars": 5089,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T01:32:35+00:00",
+   "published": "2026-11-11T07:15:00+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://lungcancereurope.eu/news/no-time-to-lose-integrated-rapid-referral-pathways-for-lung-cancer",
+   "title": "No Time to Lose: Integrated Rapid Referral Pathways for Lung Cancer | Lung Cancer Europe",
+   "chars": 4385,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:44:31+00:00",
+   "published": "2026-08-31",
+   "js_render": false
+  },
+  {
+   "url": "https://www.all-can.org/efficiency-hub/danish-cancer-patient-pathways-three-legged-strategy-for-faster-referral-and-diagnosis-of-cancer/",
+   "title": "Danish Cancer Patient Pathways: three-legged strategy for faster referral and diagnosis of cancer - All.Can",
+   "chars": 5467,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:44:32+00:00",
+   "published": "2023-05-24T11:36:25+00:00",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:44:47+00:00",
+ "stopped": "finished",
+ "advice": "narrow",
+ "model_reason_en": "Narrow this line to pre-booked PET-CT, bronchoscopy and MDT slots, a named pathway owner and published time limits for each step: Satakunta's own page says the fixed criteria for sending patients straight from primary care to CT have been routine since 2024.",
+ "seconds": 51.5,
+ "searched_en": "Searched 5 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Satakunnan hyvinvointialue keuhkosyövän hoitopolku\"; \"Tyks keuhkosyövän hoitoketju\"; \"Satasairaala hoitoonpääsy määräajat keuhkosyöpä\", ...) and read 4 pages on satakunnanhyvinvointialue.fi, tyks.fi, lungcancereurope.eu, all-can.org.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Satakunnan hyvinvointialue keuhkosyövän hoitopolku",
+  "Tyks keuhkosyövän hoitoketju",
+  "Satasairaala hoitoonpääsy määräajat keuhkosyöpä",
+  "lung cancer patient pathway Denmark time to treatment days reduction"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Narrow this line to pre-booked PET-CT, bronchoscopy and MDT slots, a named pathway owner and published time limits for each step: Satakunta's own page says the fixed criteria for sending patients straight from primary care to CT have been routine since 2024.",
+ "verdict_en": "Partly in place in Satakunta. Missing: No page shows pre-booked PET-CT, bronchoscopy or MDT slots, a named pathway owner, or published time limits (targets) for each step. Recent evidence supports the size of effect we assume. Lung Cancer Europe reports Danish referral-to-treatment time for lung cancer fell from 56 to 42 days (14 days). All.Can reports the Danish wait for any cancer diagnosis fell from 49 to 35 days.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Effect size supported",
+ "intervention_id": "cpp_pathway",
+ "intervention_name_en": "Standardised lung cancer pathway with booked slots",
+ "area_name_en": "Satakunta wellbeing services county"
+}

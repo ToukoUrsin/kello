@@ -1,0 +1,536 @@
+{
+ "area_id": "10",
+ "area_name_en": "Kymenlaakso wellbeing services county",
+ "area_name_fi": "Kymenlaakson hyvinvointialue",
+ "question": "What is Kymenlaakso wellbeing services county doing about lung cancer care right now?",
+ "findings": [
+  {
+   "date": "2026-06-23",
+   "what_en": "In 2024–2025 the central hospital's renovation built new treatment rooms for the cancer outpatient clinic on the hospital's west side.",
+   "what_fi": "Vuosina 2024–2025 keskussairaalan perusparannuksessa valmistui sairaalan länsisivulle uudet hoitotilat syöpätautien vastaanottotoiminnalle.",
+   "quote": "Lisäksi sairaalan länsisivulle valmistui uudet hoitotilat dialyysiyksikölle ja syöpätautien vastaanottotoiminnalle.",
+   "url": "https://kymenhva.fi/tietoa-meista/rakennushankkeet/",
+   "title": "Hyvinvointialueen rakennushankkeet",
+   "relates_to": null,
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:51:49+00:00",
+   "from_cache": false
+  },
+  {
+   "date": "2026-01-08",
+   "what_en": "Kymenhva's pulmonology unit arranges CT and lung tests, then takes samples guided by CT, by bronchoscopy or by EBUS.",
+   "what_fi": "Kymenhvan keuhkosairauksien yksikkö ohjelmoi TT-tutkimuksen ja keuhkotutkimukset, ja näyte otetaan TT-ohjatusti, bronkoskopialla tai EBUS-tähystyksellä.",
+   "quote": "Näiden pohjalta suunnitellaan näytteenotto, joka tapahtuu joko tietokoneohjatusti, keuhkoputken tähystyksellä tai EBUS-tähystyksellä.",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "relates_to": "ebus_capacity",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:34:49+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-01-08",
+   "what_en": "Decisions on lung cancer surgery and the operations themselves are done at HUS Meilahti hospital in Helsinki.",
+   "what_fi": "Keuhkosyövän leikkauspäätös ja leikkaus tehdään HUSin Meilahden sairaalassa Helsingissä.",
+   "quote": "Leikkauspäätös ja leikkaus tehdään Meilahden sairaalassa Helsingissä.",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "relates_to": "surgery",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:34:49+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-01-08",
+   "what_en": "Treatment recommendations are made in Kymenhva's own multidisciplinary lung meeting.",
+   "what_fi": "Hoitosuositukset tehdään Kymenlaakson hyvinvointialueen moniammatillisessa keuhkokokouksessa.",
+   "quote": "Hoitosuositukset tehdään Kymenlaakson hyvinvointialueen moniammatillisessa keuhkokokouksessa.",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "relates_to": "mdt",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:34:49+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2026-01-08",
+   "what_en": "Lung cancer drug therapy is planned at the pulmonology outpatient clinic, and intravenous treatments are given at the treatment centre.",
+   "what_fi": "Syöpälääkehoito suunnitellaan keuhkosairauksien poliklinikalla ja suonensisäiset hoidot annetaan hoitokeskuksessa.",
+   "quote": "Syöpälääkehoito suunnitellaan keuhkosairauksien poliklinikalla, suonensisäiset hoidot annetaan hoitokeskuksessa.",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "relates_to": "drug_therapy",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:34:49+00:00",
+   "from_cache": true
+  },
+  {
+   "date": "2020-10-16",
+   "what_en": "Kymenlaakso Central Hospital's new radiotherapy unit opened in September 2020, and its second treatment machine started on 16 October 2020, with the aim of treating all of the region's radiotherapy patients locally.",
+   "what_fi": "Kymenlaakson keskussairaalan uusi sädehoitoyksikkö avattiin syyskuussa 2020, ja sen toinen sädehoitolaite otettiin käyttöön 16.10.2020 tavoitteena hoitaa kaikki alueen sädehoitopotilaat paikallisesti.",
+   "quote": "Kahden uuden sädehoitolaitteen myötä pääsemme nyt ottamaan merkittävän askeleen kohti kaikkien Kymenlaakson sädehoitopotilaiden hoitamista paikallisesti.",
+   "url": "https://www.kouvola.fi/ajankohtaiset/kymenlaakson-keskussairaalan-uuden-sadehoitoyksikon-toinenkin-sadehoitolaite-kayttoon/",
+   "title": "Kymenlaakson keskussairaalan uuden sädehoitoyksikön toinenkin sädehoitolaite käyttöön - Kouvolan kaupunki",
+   "relates_to": "radiotherapy",
+   "scope": "county",
+   "fetched_at": "2026-11-13T23:51:48+00:00",
+   "from_cache": false
+  }
+ ],
+ "summary_en": "Kymenhva does lung cancer diagnostics itself, including EBUS. It holds its own multidisciplinary lung meeting and gives drug therapy and radiotherapy locally, with two treatment machines in use since 2020, while surgery is done at HUS Meilahti. The only change found is building work: new cancer outpatient rooms were finished in 2024–2025, and renovation of the central hospital continues to 2029. No decision, project or waiting-time figure specific to lung cancer was found.",
+ "not_found_en": "I searched for lung-cancer-specific council decisions, projects, screening pilots, nurse navigators, waiting-time figures and local news from 2025–2026 for Kymenlaakso and found none.",
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "4 searches: county own pages; hospital pathway; decisions; local news",
+   "ms": 5281
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva keuhkosyöpä",
+   "country": "FI",
+   "why": "county own pages",
+   "status": "done",
+   "t_s": 5.3,
+   "result_en": "6 results: kymenhva.fi, kaikkisyovasta.fi, terveyskirjasto.fi",
+   "ms": 1701,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+     "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.terveyskirjasto.fi/dlk00031",
+     "title": "Keuhkosyöpä - Terveyskirjasto"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/terveys-ja-sairaanhoito/syopa",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosairauksien-potilasohjeet/",
+     "title": "Keuhkosairauksien potilasohjeet - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala syöpä hoitoonpääsy",
+   "country": "FI",
+   "why": "hospital pathway",
+   "status": "done",
+   "t_s": 5.3,
+   "result_en": "6 results: kymenhva.fi, suomi.fi",
+   "ms": 3057,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/syopatautien-poliklinikka/",
+     "title": "Syöpätautien poliklinikka - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-kymenlaakson-hyvinvointialue/25d62192-6328-4b07-af6e-8fa620777964",
+     "title": "Syöpätautien ja sädehoidon palvelut - Suomi.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/medisiininen-osasto-p/",
+     "title": "Medisiininen osasto P - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/syopatautien-ja-sadehoidon-palvelut-kymenlaakson-sosiaali-ja-terveyspalvelujen-kuntayhtyma/25d62192-6328-4b07-af6e-8fa620777964/asiointikanavat",
+     "title": "Syöpätautien ja sädehoidon palvelut, asiointikanavat - Suomi.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+     "title": "Sädehoitoyksikkö - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva aluehallitus syöpä sädehoito investointi",
+   "country": "FI",
+   "why": "decisions",
+   "status": "done",
+   "t_s": 5.3,
+   "result_en": "6 results: kymenhva.fi",
+   "ms": 2172,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/12/Kymenlaakson-hyvinvointialue-Osavuosikatsaus-1-9-2025.pdf",
+     "title": "Kymenlaakson hyvinvointialueen Osavuosikatsaus 1-9 2025"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2023/02/talousarvio_2023_ja_taloussuunnitelma_202_2025_hyvaksytty201222.pdf",
+     "title": "Kymenlaakson hyvinvointialue 2023 – www.kymenhva.fi 1"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/01/Talousarvio-2025-ja-taloussuunnitelma-2026-2027_AV-17.12.2024.pdf",
+     "title": "Kymenlaakson hyvinvointialueen Talousarvio 2025 ja taloussuunnitelma 2026-2027"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2025/10/KymenHVA-Osavuosikatsaus-1-7-2025.pdf",
+     "title": "Kymenlaakson hyvinvointialueen Osavuosikatsaus 1-7/2025"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2024/03/Talousarvio-2024-ja-taloussuunnitelma-2025-2026-.pdf",
+     "title": "Kymenlaakson hyvinvointialueen Talousarvio 2024 ja taloussuunnitelma 2025-2026"
+    },
+    {
+     "url": "https://kymenhva.fi/wp-content/uploads/2023/03/Aluevaltuusto-7-poytakirja-270922.pdf",
+     "title": "Kymenlaakson hyvinvointialue Pöytäkirja 7/2022 Aluevaltuusto 27.9.2022"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakso keuhkosyöpä 2026 uutinen",
+   "country": "FI",
+   "why": "local news",
+   "status": "done",
+   "t_s": 5.3,
+   "result_en": "6 results: syopajarjestot.fi, yle.fi, kymenlaaksonsyopayhdistys.fi, mtvuutiset.fi",
+   "ms": 2197,
+   "results": [
+    {
+     "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+     "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa - Syöpäjärjestöt"
+    },
+    {
+     "url": "https://yle.fi/a/74-20206051",
+     "title": "Keuhkosyöpä oli ”valtava pommi” Antti Kaipaiselle, vasta kolmas oire paljasti sairauden | Terveys | Yle"
+    },
+    {
+     "url": "https://kymenlaaksonsyopayhdistys.fi/",
+     "title": "Kymenlaakson syöpäyhdistys on tukenasi | Kymenlaakson Syöpäyhdistys"
+    },
+    {
+     "url": "https://www.mtvuutiset.fi/artikkeli/keuhkosyopa-loytyy-usein-liian-myohaan-kahdella-kolmesta-tauti-on-ehtinyt-jo-levita/9417210",
+     "title": "Keuhkosyövän hoidossa etsitään apua immuunijärjestelmästä | MTV Uutiset"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.satakunnankansa.fi/satakunta/art-2000012403607.html",
+     "title": "Sata-alue kehitti uuden hoitopolun keuhkosyövän löytämiseksi – jo 170 potilasta tutkittu - Satakunnan Kansa"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 8.3,
+   "result_en": "4 reads: county lung cancer pathway; organisation; quality figures; decisions numbers",
+   "ms": 7652
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "focus": "tutkimukset bronkoskopia hoito leikkaus HUS sädehoito",
+   "why": "county lung cancer pathway",
+   "status": "done",
+   "t_s": 16.0,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin mesoteliooma\" · 4 499 chars · from cache",
+   "ms": 2,
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/"
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "focus": "keskitetty sädehoitoyksikkö",
+   "why": "organisation",
+   "status": "done",
+   "t_s": 16.0,
+   "result_en": "\"Syöpä\" · 4 029 chars",
+   "ms": 2481,
+   "title": "Syöpä",
+   "chars": 4029,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/"
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "focus": "Kymenlaakso",
+   "why": "quality figures",
+   "status": "done",
+   "t_s": 16.0,
+   "result_en": "\"Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tieto\" · 5 861 chars · 6 of 10 passages kept",
+   "ms": 7711,
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/"
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/wp-content/uploads/2025/12/Kymenlaakson-hyvinvointialue-Osavuosikatsaus-1-9-2025.pdf",
+   "focus": "syöpätaudit sädehoito keuhko hoitoonpääsy",
+   "why": "decisions numbers",
+   "status": "done",
+   "t_s": 16.0,
+   "result_en": "\"Kymenlaakson hyvinvointialueen Osavuosikatsaus 1-9 2025\" · 136 793 chars · PDF 70 p. · 4 of 186 passages kept",
+   "ms": 9070,
+   "title": "Kymenlaakson hyvinvointialueen Osavuosikatsaus 1-9 2025",
+   "chars": 136793,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://kymenhva.fi/wp-content/uploads/2025/12/Kymenlaakson-hyvinvointialue-Osavuosikatsaus-1-9-2025.pdf"
+  },
+  {
+   "step": 11,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 25.1,
+   "result_en": "draft answer, still open: all 6 findings come from one site (kymenhva.fi), so they describe the service as it is, not what is changing. Search for a decision, a project, an investment, a waiting-time figure or dated local news (aluehallitus, hanke, investointi, uutinen, this year) and read two or th",
+   "ms": 19564
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 44.6,
+   "result_en": "2 searches: investment decision radiotherapy; university area pathway plan",
+   "ms": 3643
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala sädehoitolaite uusi",
+   "country": "FI",
+   "why": "investment decision radiotherapy",
+   "status": "done",
+   "t_s": 48.3,
+   "result_en": "6 results: kouvola.fi, yle.fi, kouvolansanomat.fi, kymenhva.fi",
+   "ms": 1937,
+   "results": [
+    {
+     "url": "https://www.kouvola.fi/ajankohtaiset/kymenlaakson-keskussairaalan-uuden-sadehoitoyksikon-toinenkin-sadehoitolaite-kayttoon/",
+     "title": "Kymenlaakson keskussairaalan uuden sädehoitoyksikön toinenkin sädehoitolaite käyttöön - Kouvolan kaupunki"
+    },
+    {
+     "url": "https://yle.fi/a/3-11594374",
+     "title": "Moderni sädehoitoyksikkö käynnistyi täydellä teholla keskussairaalassa – katso video | Yle"
+    },
+    {
+     "url": "https://www.kouvolansanomat.fi/paikalliset/3507402",
+     "title": "Kymenlaakson keskussairaalan sädehoitoyksikössä otettiin käyttöön uusi sädehoitolaite – \"Pääsemme nyt ottamaan merkittävän askeleen kohti potilaiden hoitamista paikallisesti\" | Paikalliset | Kouvolan Sanomat"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/sadehoitoyksikko/",
+     "title": "Sädehoitoyksikkö - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://yle.fi/a/3-11598172",
+     "title": "Uusista sädehoitolaitteista tuli lääkärimagneetti, joka toi helpotusta pitkään jatkuneeseen lääkäripulaan: \"Kuin Rolls Roycen uudempi malli\" | Yle"
+    },
+    {
+     "url": "https://kymenhva.fi/tietoa-meista/rakennushankkeet/",
+     "title": "Rakennushankkeet - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä hoitoketju Kymenlaakso",
+   "country": "FI",
+   "why": "university area pathway plan",
+   "status": "done",
+   "t_s": 48.3,
+   "result_en": "6 results: kymenhva.fi, hus.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1608,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+     "title": "Syöpä - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+     "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhkosairauksien-hoito",
+     "title": "Keuhkosairauksien hoito | HUS"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 50.2,
+   "result_en": "2 reads: dated radiotherapy investment; hospital renovation plan",
+   "ms": 4120
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.kouvola.fi/ajankohtaiset/kymenlaakson-keskussairaalan-uuden-sadehoitoyksikon-toinenkin-sadehoitolaite-kayttoon/",
+   "focus": "sädehoitolaite käyttöön",
+   "why": "dated radiotherapy investment",
+   "status": "done",
+   "t_s": 54.3,
+   "result_en": "\"Kymenlaakson keskussairaalan uuden sädehoitoyksikön toinenkin sädehoit\" · 2 299 chars",
+   "ms": 1644,
+   "title": "Kymenlaakson keskussairaalan uuden sädehoitoyksikön toinenkin sädehoitolaite käyttöön - Kouvolan kaupunki",
+   "chars": 2299,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.kouvola.fi/ajankohtaiset/kymenlaakson-keskussairaalan-uuden-sadehoitoyksikon-toinenkin-sadehoitolaite-kayttoon/"
+  },
+  {
+   "step": 17,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/tietoa-meista/rakennushankkeet/",
+   "focus": "perusparannus aikataulu syöpä",
+   "why": "hospital renovation plan",
+   "status": "done",
+   "t_s": 54.3,
+   "result_en": "\"Hyvinvointialueen rakennushankkeet\" · 3 205 chars",
+   "ms": 2818,
+   "title": "Hyvinvointialueen rakennushankkeet",
+   "chars": 3205,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/tietoa-meista/rakennushankkeet/"
+  },
+  {
+   "step": 18,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "status": "done",
+   "t_s": 57.2,
+   "result_en": "writes the answer",
+   "ms": 18812
+  }
+ ],
+ "rounds": 2,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:34:49+00:00"
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/syopa/",
+   "title": "Syöpä",
+   "chars": 4029,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:51:11+00:00"
+  },
+  {
+   "url": "https://www.syopajarjestot.fi/uutinen/keuhkosyovan-toteamisessa-on-eroja-hyvinvointialueiden-valilla-tietojen-kattavuudessa-edelleen-parannettavaa/",
+   "title": "Keuhkosyövän toteamisessa on eroja hyvinvointialueiden välillä – tietojen kattavuudessa edelleen parannettavaa",
+   "chars": 5861,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:51:16+00:00"
+  },
+  {
+   "url": "https://kymenhva.fi/wp-content/uploads/2025/12/Kymenlaakson-hyvinvointialue-Osavuosikatsaus-1-9-2025.pdf",
+   "title": "Kymenlaakson hyvinvointialueen Osavuosikatsaus 1-9 2025",
+   "chars": 136793,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:51:17+00:00"
+  },
+  {
+   "url": "https://www.kouvola.fi/ajankohtaiset/kymenlaakson-keskussairaalan-uuden-sadehoitoyksikon-toinenkin-sadehoitolaite-kayttoon/",
+   "title": "Kymenlaakson keskussairaalan uuden sädehoitoyksikön toinenkin sädehoitolaite käyttöön - Kouvolan kaupunki",
+   "chars": 2299,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:51:48+00:00"
+  },
+  {
+   "url": "https://kymenhva.fi/tietoa-meista/rakennushankkeet/",
+   "title": "Hyvinvointialueen rakennushankkeet",
+   "chars": 3205,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-13T23:51:49+00:00"
+  }
+ ],
+ "model": "claude-opus-5-5",
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 90.0,
+ "checked_at": "2026-11-13T23:52:08+00:00",
+ "stopped": "finished",
+ "findings_dropped": {
+  "quote_not_on_page": 0,
+  "not_about_this_county": 0
+ },
+ "seconds": 76.0
+}

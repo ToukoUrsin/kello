@@ -1,0 +1,500 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Fitness assessment and prehabilitation before deciding against curative treatment. Before a stage I-III patient is judged too frail, they get an exercise test, a geriatric assessment if over 75, and four weeks of supervised exercise, breathing training and help to stop smoking. Then the decision is made again.",
+ "area_id": "10",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "",
+ "supported_en": "Cochrane 2022: exercise training before lung surgery more than halves postoperative lung complications (RR 0.45).",
+ "not_supported_en": "No page shows that prehabilitation raises the share of patients treated with curative intent, so the assumed 0.5 percentage points is untested.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "",
+ "missing_en": "",
+ "summary_en": "B: HUS's lung cancer pathway page says surgery is the first choice unless physical condition, other illnesses or lung function prevent it, but it describes no prehabilitation or second fitness review before that decision. Kymenlaakso's Leiko unit only handles general assessment and pre-surgery tests for planned operations. A: A 2022 Cochrane review (10 RCTs) found that exercise before lung surgery cuts lung complications after it (RR 0.45), but it did not measure how many more patients became fit for curative treatment.",
+ "unanswered_en": "Two extra searches found no HUS or Kymenlaakso page about lung cancer prehabilitation, geriatric assessment or a second review of fitness for surgery.",
+ "sources": [
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Leikkaus on ensisijainen paikallisten ja ei-pienisoluisten keuhkosyöpien hoito, ellei fyysinen kunto, muut sairaudet tai keuhkojen toimintakyky ole esteenä.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.suomi.fi/palvelut/leiko-leikkaukseen-kotoa-kymenlaakson-hyvinvointialue/07670db3-2feb-4b41-98da-a2875327d200",
+   "title": "Leiko - leikkaukseen kotoa - Kymenlaakson hyvinvointialue - Suomi.fi",
+   "quote": "Leikkauspotilaiden jonohoito, arviointi, ohjaus ja esitutkimusten ohjelmointi toteutetaan Leiko-yksikön kautta.",
+   "about": "context",
+   "published": "26.9.2025",
+   "fetched_at": "2026-11-14T01:07:10+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "quote": "Preoperative exercise training results in a large reduction in the risk of developing a postoperative pulmonary complication compared to no preoperative exercise training (risk ratio (RR) 0.45, 95% CI 0.33 to 0.61",
+   "about": "effect",
+   "published": "2022-09-28",
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 2268,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva prehabilitaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, kymenhva.suomisote.fi, suomi.fi",
+   "ms": 1189,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/",
+     "title": "Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/kuntoutus-ja-apuvalineet/",
+     "title": "Kuntoutus ja apuvälineet - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.suomisote.fi/",
+     "title": "Ei otsikkoa"
+    },
+    {
+     "url": "https://www.suomi.fi/organisaatio/kymenlaakson-hyvinvointialue/d1b7e5e3-21cc-467f-9c44-c8f42431d972",
+     "title": "Kymenlaakson hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/digitaaliset-palvelut/oma-kymenlaakso/",
+     "title": "Oma Kymenlaakso - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/kuntoutus-ja-apuvalineet/kuntoutuksen-ja-apuvalineiden-ohjeet-ja-videot/",
+     "title": "Kuntoutuksen ja apuvälineiden ohjeet ja videot - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS esikuntoutus syöpäleikkaus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi",
+   "ms": 1466,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/syovan-hoitoonpaasy",
+     "title": "Syövän hoitoonpääsy | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa",
+     "title": "Syöpä | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/rintasyopaleikkaus-ja-muut-rintojen-leikkaukset",
+     "title": "Rintasyöpäleikkaus ja muut rintojen leikkaukset | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/perasuolisyovan-hoitopolku/paikallisen-perasuolisyovan-hoito",
+     "title": "Paikallisen peräsuolisyövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/syopakeskus",
+     "title": "Syöpäkeskus | HUS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala leikkausta edeltävä kuntoutus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi",
+   "ms": 1350,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/leikkaukset/",
+     "title": "Leikkaukset - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/kuntoutus-ja-kipupoliklinikka/",
+     "title": "Kuntoutus- ja kipupoliklinikka - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/operatiivinen-osasto-1/",
+     "title": "Operatiivinen osasto 1 - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/erikoissairaanhoidon-polikliininen-kuntoutus-kymenlaakson-keskussairaala/",
+     "title": "Erikoissairaanhoidon polikliininen kuntoutus Kymenlaakson keskussairaala - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://perhekeskus.kymenhva.fi/ajankohtaista/palveluhakemisto/kuntoutuksen-liikkuvat-palvelut-kotikuntoutus/",
+     "title": "Kuntoutuksen liikkuvat palvelut/Kotikuntoutus - Kymenlaakson..."
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/leiko-leikkaukseen-kotoa-kymenlaakson-hyvinvointialue/07670db3-2feb-4b41-98da-a2875327d200",
+     "title": "Leiko - leikkaukseen kotoa - Kymenlaakson hyvinvointialue -..."
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.3,
+   "result_en": "3 reads: B: HUS pathway prehab; A effect; B: county preop unit",
+   "ms": 5252
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "leikkaus toimintakyky kuntoutus fysioterapia tupakointi",
+   "why": "B: HUS pathway prehab",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 7 of 11 passages kept · from cache",
+   "ms": 2,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/36170564",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/36170564",
+   "focus": "pulmonary complications risk ratio",
+   "why": "A effect",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Preoperative exercise training for people with non-small cell lung can\" · 4 109 chars · from cache",
+   "ms": 0,
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/36170564",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.suomi.fi/palvelut/leiko-leikkaukseen-kotoa-kymenlaakson-hyvinvointialue/07670db3-2feb-4b41-98da-a2875327d200",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.suomi.fi/palvelut/leiko-leikkaukseen-kotoa-kymenlaakson-hyvinvointialue/07670db3-2feb-4b41-98da-a2875327d200",
+   "focus": "arviointi ohjaus kuntoutus",
+   "why": "B: county preop unit",
+   "status": "done",
+   "t_s": 7.5,
+   "result_en": "\"Leiko - leikkaukseen kotoa - Kymenlaakson hyvinvointialue - Suomi.fi\" · 1 102 chars",
+   "ms": 1516,
+   "title": "Leiko - leikkaukseen kotoa - Kymenlaakson hyvinvointialue - Suomi.fi",
+   "chars": 1102,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.suomi.fi/palvelut/leiko-leikkaukseen-kotoa-kymenlaakson-hyvinvointialue/07670db3-2feb-4b41-98da-a2875327d200",
+   "published": "26.9.2025",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.0,
+   "result_en": "1 search: B: HUS prehab for lung surgery",
+   "ms": 4846
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkoleikkaus prehabilitaatio fysioterapia ennen leikkausta",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS prehab for lung surgery",
+   "status": "done",
+   "t_s": 13.9,
+   "result_en": "6 results: mehilainen.fi, hus.fi, sydansairaala.fi, fysioterapiamessut.expomark.fi",
+   "ms": 2280,
+   "results": [
+    {
+     "url": "https://www.mehilainen.fi/terapiapalvelut/fysioterapia/fysioterapia-ennen-ja-jalkeen-leikkauksen",
+     "title": "Fysioterapia ennen ja jälkeen leikkauksen"
+    },
+    {
+     "url": "https://www.hus.fi/tekonivelleikkaus",
+     "title": "Tekonivelleikkaus"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/keuhkoleikkauspotilaan-fysioterapia/",
+     "title": "Keuhkoleikkauspotilaan fysioterapia - Sydänsairaala"
+    },
+    {
+     "url": "https://fysioterapiamessut.expomark.fi/koulutuspaivat/posterit/preoperatiivinen-arvio-ja-ohjaus-ennen-keuhkoleikkausta/",
+     "title": "Preoperatiivinen arvio ja ohjaus ennen keuhkoleikkausta - ..."
+    },
+    {
+     "url": "https://www.aava.fi/palvelut/fysioterapia/pre-ja-postoperatiivinen-fysioterapia/",
+     "title": "Pre- ja postoperatiivinen fysioterapia | Lääkärikeskus Aava"
+    },
+    {
+     "url": "https://fysioterapiamessut.expomark.fi/wp-content/uploads/sites/24/2024/09/Posteri-AiraksinenKivioja.pdf",
+     "title": "FYSIOTERAPEUTIN PREOPERATIIVINEN ARVIO JA OHJAUS ENNEN KEUHKOL..."
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 16.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Kymenhva / Kymenlaakson keskussairaala / HUS Helsingin yliopistollinen sairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision docume",
+   "ms": 10345
+  },
+  {
+   "step": 12,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 26.5,
+   "result_en": "1 search: B: HUS geriatric/prehab before lung cancer decision",
+   "ms": 2391
+  },
+  {
+   "step": 13,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpä geriatrinen arvio leikkauskelpoisuus kuntoutus",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: HUS geriatric/prehab before lung cancer decision",
+   "status": "done",
+   "t_s": 28.9,
+   "result_en": "6 results: hus.fi, duodecimlehti.fi, kaypahoito.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 3063,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo92223",
+     "title": "Keuhkosyövän hoitosuositus"
+    },
+    {
+     "url": "https://www.kaypahoito.fi/xmedia/hoi/hoi50066.pdf",
+     "title": "1 Leikkausta edeltävä arviointi 2769 Vastuun rajaus"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/vanhuksen-leikkauskelpoisuus-kannattaa-arvioida-kokonaisvaltaisesti/",
+     "title": "Vanhuksen leikkauskelpoisuus kannattaa arvioida kokonaisvaltaisesti - Potilaan Lääkärilehti"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 3,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 32.0,
+   "result_en": "writes the answer",
+   "ms": 9458
+  }
+ ],
+ "rounds": 3,
+ "searches": 6,
+ "pages_read": [
+  {
+   "url": "https://europepmc.org/article/MED/36170564",
+   "title": "Preoperative exercise training for people with non-small cell lung cancer.",
+   "chars": 4109,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:44+00:00",
+   "published": "2022-09-28",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.suomi.fi/palvelut/leiko-leikkaukseen-kotoa-kymenlaakson-hyvinvointialue/07670db3-2feb-4b41-98da-a2875327d200",
+   "title": "Leiko - leikkaukseen kotoa - Kymenlaakson hyvinvointialue - Suomi.fi",
+   "chars": 1102,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:07:10+00:00",
+   "published": "26.9.2025",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:07:43+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line: neither the lung cancer pathway page from HUS nor any Kymenlaakso page we read describes an exercise test, prehabilitation or a second decision before a patient is ruled out of curative treatment.",
+ "seconds": 41.4,
+ "searched_en": "Searched 6 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva prehabilitaatio\"; \"HUS esikuntoutus syöpäleikkaus\"; \"Kymenlaakson keskussairaala leikkausta edeltävä kuntoutus\", ...) and read 3 pages on hus.fi, europepmc.org, suomi.fi.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva prehabilitaatio",
+  "HUS esikuntoutus syöpäleikkaus",
+  "Kymenlaakson keskussairaala leikkausta edeltävä kuntoutus",
+  "HUS keuhkoleikkaus prehabilitaatio fysioterapia ennen leikkausta",
+  "HUS keuhkosyöpä geriatrinen arvio leikkauskelpoisuus kuntoutus"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 6,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line: neither the lung cancer pathway page from HUS nor any Kymenlaakso page we read describes an exercise test, prehabilitation or a second decision before a patient is ruled out of curative treatment.",
+ "verdict_en": "No public sign that it is running in Kymenlaakso. Evidence supports that it works, but not the size of effect we assume. Supported: Cochrane 2022: exercise training before lung surgery more than halves postoperative lung complications (RR 0.45). Not supported: No page shows that prehabilitation raises the share of patients treated with curative intent, so the assumed 0.5 percentage points is untested.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "prehab_fitness_assessment",
+ "intervention_name_en": "Fitness assessment and prehabilitation before deciding against curative treatment",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}

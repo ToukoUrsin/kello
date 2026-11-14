@@ -1,0 +1,842 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Travel and accommodation support for patients far from the university hospital. Patients who must travel for surgery or weeks of radiotherapy get a booked patient hotel, organised transport and a named contact, so that distance is not the reason to choose a non-curative treatment.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "Association studies show longer travel time or distance is linked to lower odds of lung cancer surgery (OR 0.55–0.60 in England) and higher 12-month mortality (adjusted HR 1.47 in Ostrobothnia), but no study tested whether travel and accommodation support raises curative-intent treatment by 1.0 percentage points.",
+ "supported_en": "Longer travel time or distance is associated with lower odds of lung cancer surgery (OR 0.60, British Journal of Cancer 2009) and higher 12-month mortality (adjusted HR 1.47, Acta Oncologica 2024).",
+ "not_supported_en": "The evidence read does not test travel and accommodation support or measure a 1.0 percentage point increase in curative-intent treatment.",
+ "in_use_here": "no_evidence",
+ "in_use_scope": "none",
+ "in_use_quote": null,
+ "in_use_source": null,
+ "in_use_summary_en": "No public sign was found of a running booked patient hotel, organised transport, and named contact for far-away lung cancer patients in Southwest Finland (Varha) or Tyks, though Kela provides national travel and overnight allowance and Varha's 2025 procurement plan listed a patient hotel for market mapping.",
+ "missing_en": "",
+ "summary_en": "No public sign was found of a running booked patient hotel, organised transport, and named contact for far-away lung cancer patients in Southwest Finland (Varha) or Tyks; Kela provides national travel and overnight allowance, and Varha's 2025 procurement plan only listed a patient hotel for market mapping in Q2/2025. For the effect, registry studies from England (British Journal of Cancer, 2009) and Ostrobothnia (Acta Oncologica, 2024) show that longer travel time or distance is associated with lower odds of lung cancer surgery (OR 0.60) and higher 12-month mortality (adjusted HR 1.47), but no study tested whether travel and accommodation support raises curative-intent treatment by 1.0 percentage points.",
+ "unanswered_en": "Whether Varha's Q2/2025 patient hotel market mapping has led to any new procurement or service.",
+ "sources": [
+  {
+   "url": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+   "title": "Kilpailutussuunnitelma 2025",
+   "quote": "Varsinais-Suomen hyvinvointialueen kilpailutussuunnitelma ja sen aikataulut ovat arvioita.",
+   "about": "context",
+   "published": "2025-01-16",
+   "fetched_at": "2026-11-14T00:55:55+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.kela.fi/matkat",
+   "title": "Matkakorvaukset",
+   "quote": "Jos joudut yöpymään hoito- tai kuntoutuspaikkakunnalla, voit saada myös yöpymisrahaa.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T01:08:31+00:00",
+   "from_cache": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "quote": "Odds ratios for undergoing surgery for non-small cell lung cancer using (1) travel time to diagnosing hospital were 0.88 (0.70-1.11), 0.74 (0.59-0.94) and 0.60 (0.44-0.84).",
+   "about": "effect",
+   "published": "2009-08-18",
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+   "title": "Area-based disparities in non-small-cell lung cancer survival",
+   "quote": "After adjusting for factors such as performance status, frailty, and stage at diagnosis in a multivariate Cox regression model, the adjusted HR increased to 1.47 (95% CI: 1.07–2.01; p = 0.017) for patients living in rural areas compared to those in urban areas.",
+   "about": "effect",
+   "published": "2024",
+   "fetched_at": "2026-11-14T01:08:04+00:00",
+   "from_cache": false
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi, suomi.fi, tyks.fi",
+   "ms": 1057,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/verkkoasiointi/tyks-syopapotilaan-digihoitopolku-varsinais-suomen-hyvinvointialue/3655f8ca-09c4-484d-9b06-bc94862c2d17",
+     "title": "Tyks Syöpäpotilaan digihoitopolku - Varsinais-Suomen ..."
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi",
+   "ms": 1270,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille",
+     "title": "Potilaille ja läheisille | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palveluhakemisto/potilasasiavastaavapalvelut",
+     "title": "Potilasasiavastaavapalvelut | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi",
+     "title": "Varha: Etusivu"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/potilasasiavastaava",
+     "title": "Potilasasiavastaava | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+     "title": "Ennakoiva markkina- vuoropuhelu Markkina- kartoitus Hankinnan kohde Q1/2025 x"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/potilaalle-ja-laheiselle/potilashotelli",
+     "title": "Potilashotelli - pirha.fi"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks potilaskoti",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi",
+   "ms": 1716,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille",
+     "title": "Potilaille ja läheisille | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/tulosryhmat/medisiinisen-yleislaaketieteen-ja-paivystyksen-tulosryhma/potilaskuljetuspalvelut",
+     "title": "Potilaskuljetuspalvelut | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/potilaan-oikeudet/potilastiedot-ja-asiakirjat",
+     "title": "Potilastiedot ja -asiakirjat | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas",
+     "title": "Potilaan opas | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/potilaan-opas/potilastiedustelut",
+     "title": "Potilastiedustelut | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/tietoa-tyksista/yhteystiedot/potilaskertomusarkistot",
+     "title": "Potilaskertomusarkistot | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen majoitus sädehoidon ajaksi keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hoito-ohjeet.fi, tyks.fi, syopa-alueelliset.s3.eu-west-1.amazonaws.com",
+   "ms": 2559,
+   "results": [
+    {
+     "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/S%C3%A4dehoitoon%20tulevalle.pdf",
+     "title": "Ohje hoitosuhteessa oleville potilaillemme"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/Keuhkojen%20s%C3%A4dehoidon%20haittavaikutukset.pdf",
+     "title": "Keuhkojen sädehoidon haittavaikutukset"
+    },
+    {
+     "url": "https://syopa-alueelliset.s3.eu-west-1.amazonaws.com/sites/271/2016/10/18145128/OhjeitaSinulleJokaSaatSadehoitoa.pdf",
+     "title": "1 Ohjeita sinulle joka saat sädehoitoa Tietoa"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/07/keuhkosyopa_potilaan_opas.pdf",
+     "title": "1 Keuhkosyöpä Potilaan opas"
+    },
+    {
+     "url": "https://syopapotilaat.fi/wp-content/uploads/2025/04/Sadehoito-Cancer-Patient-Guide.pdf",
+     "title": "1 Sädehoito Syöpäpotilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "gemini",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 2.6,
+   "handover": "Claude did not answer (HTTP 401); Gemini took over",
+   "result_en": "Claude did not answer (HTTP 401); Gemini took over. 5 reads: Check Tyks lung cancer pathway for travel and accommodation support; Check Varha 2025 procurement plan for patient hotel; Check radiotherapy patient instructions for accommodation or travel support; Check England study on travel time and lung cancer surgery odds; Check Ostrobothnia study on",
+   "ms": 5617
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "majoitus potilashotelli matka kuljetus sädehoito leikkaus yhteyshenkilö",
+   "why": "Check Tyks lung cancer pathway for travel and accommodation support",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 6 of 30 passages kept · from cache",
+   "ms": 7,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+   "focus": "Potilashotelli",
+   "why": "Check Varha 2025 procurement plan for patient hotel",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"Kilpailutussuunnitelma 2025\" · 3 396 chars · PDF 3 p. · from cache",
+   "ms": 4,
+   "title": "Kilpailutussuunnitelma 2025",
+   "chars": 3396,
+   "from_cache": true,
+   "kind": "pdf",
+   "page_url": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+   "published": "2025-01-16",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/S%C3%A4dehoitoon%20tulevalle.pdf",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/S%C3%A4dehoitoon%20tulevalle.pdf",
+   "focus": "majoitus potilashotelli matka kuljetus Kela",
+   "why": "Check radiotherapy patient instructions for accommodation or travel support",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"Ohje hoitosuhteessa oleville potilaillemme Satakunnan sairaanhoitopiir\" · 6 047 chars · PDF 5 p. · 5 of 7 passages kept",
+   "ms": 2913,
+   "title": "Ohje hoitosuhteessa oleville potilaillemme Satakunnan sairaanhoitopiiri | Vaasan sairaanhoitopiiri | Varsinais-Suomen sairaanhoitopiiri",
+   "chars": 6047,
+   "from_cache": false,
+   "kind": "pdf",
+   "page_url": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/S%C3%A4dehoitoon%20tulevalle.pdf",
+   "published": "2020-11-17",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "focus": "travel time surgery odds 0.60 lung cancer",
+   "why": "Check England study on travel time and lung cancer surgery odds",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"Social and geographical factors affecting access to treatment of lung \" · 1 946 chars · from cache",
+   "ms": 12,
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+   "focus": "50 km mortality lung cancer travel distance",
+   "why": "Check Ostrobothnia study on distance and 12-month mortality",
+   "status": "done",
+   "t_s": 8.2,
+   "result_en": "\"Area-based disparities in non-small-cell lung cancer survival\" · 25 353 chars · 6 of 34 passages kept",
+   "ms": 4626,
+   "title": "Area-based disparities in non-small-cell lung cancer survival",
+   "chars": 25353,
+   "from_cache": false,
+   "kind": "article",
+   "page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+   "published": "2024",
+   "js_render": false
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "gemini",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 12.8,
+   "result_en": "3 searches: Check if Varha has a running patient hotel; Check if Tyks offers accommodation during radiotherapy; Check if Tyks has a patient hotel in Turku",
+   "ms": 3389
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "site:varha.fi potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Check if Varha has a running patient hotel",
+   "status": "done",
+   "t_s": 16.2,
+   "result_en": "6 results: varha.fi",
+   "ms": 850,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/palveluhakemisto/potilasasiavastaavapalvelut",
+     "title": "Potilasasiavastaavapalvelut | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/potilasasiavastaava",
+     "title": "Potilasasiavastaava | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+     "title": "Ennakoiva markkina- vuoropuhelu Markkina- kartoitus Hankinnan kohde Q1/2025 x"
+    },
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/asiakkaana-hyvinvointialueella/tietosuoja/potilasasiakirjat",
+     "title": "Potilasasiakirjat | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/sites/default/files/2024-11/varha-kilpailutussuunnitelma-2025.pdf",
+     "title": "[PDF] vuoropuhelu Markkina- kartoitus Hankinnan kohde Q1/2025 x ..."
+    },
+    {
+     "url": "https://www.varha.fi/sites/default/files/2022-12/Tyks%20Palveluhinnasto%202022.pdf",
+     "title": "Palveluhinnasto 2022 Somaattinen ja psykiatrinen hoito"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "site:tyks.fi majoitus sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Check if Tyks offers accommodation during radiotherapy",
+   "status": "done",
+   "t_s": 16.2,
+   "result_en": "6 results: tyks.fi",
+   "ms": 950,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/sadehoitopoliklinikka",
+     "title": "Sädehoitopoliklinikka | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/sadehoito",
+     "title": "Sädehoito | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/syopaosasto",
+     "title": "Syöpäosasto | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/suolistosyopa",
+     "title": "Suolistosyöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/paan-ja-kaulan-alueen-syopa",
+     "title": "Pään ja kaulan alueen syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/gynekologiset-syovat",
+     "title": "Gynekologiset syövät | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks potilashotelli Turku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Check if Tyks has a patient hotel in Turku",
+   "status": "done",
+   "t_s": 16.2,
+   "result_en": "6 results: tyks.fi, turkulaiset.fi, turku.perussuomalaiset.fi, ts.fi",
+   "ms": 3056,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille",
+     "title": "Potilaille ja läheisille | Tyks"
+    },
+    {
+     "url": "https://www.turkulaiset.fi/hotellit/tyks.html",
+     "title": "Suositeltavat kolme hotellia TYKS:in lähellä"
+    },
+    {
+     "url": "https://turku.perussuomalaiset.fi/kannanotto/tyks-tarvitsee-potilashotellin/",
+     "title": "TYKS tarvitsee potilashotellin - Turun Perussuomalaiset ry"
+    },
+    {
+     "url": "https://www.ts.fi/a/3528732",
+     "title": "Turun PS: Tyks tarvitsee potilashotellin | Turun Sanomat"
+    },
+    {
+     "url": "https://www.turkulainen.fi/paikalliset/1794877",
+     "title": "T-sairaalan viereen suunnitellaan potilashotellia | Paikalliset | Turkulainen"
+    },
+    {
+     "url": "https://www.tyks.fi/ajankohtaista/sairaanhoitopiiri-kaavailee-potilashotellia-tyksin-alueelle",
+     "title": "Sairaanhoitopiiri kaavailee potilashotellia Tyksin alueelle | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "round": 2,
+   "tool": "gemini",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 19.3,
+   "result_en": "2 reads: Check Tyks radiotherapy clinic page for accommodation or travel support; Check Tyks radiotherapy page for accommodation or travel support",
+   "ms": 2336
+  },
+  {
+   "step": 16,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/sadehoitopoliklinikka",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/sadehoitopoliklinikka",
+   "focus": "majoitus potilashotelli matka kuljetus Kela yöpyminen",
+   "why": "Check Tyks radiotherapy clinic page for accommodation or travel support",
+   "status": "done",
+   "t_s": 21.6,
+   "result_en": "\"Sädehoitopoliklinikka\" · 4 033 chars · from cache",
+   "ms": 2,
+   "title": "Sädehoitopoliklinikka",
+   "chars": 4033,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/sadehoitopoliklinikka",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 17,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/sadehoito",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/sadehoito",
+   "focus": "majoitus potilashotelli matka kuljetus Kela yöpyminen",
+   "why": "Check Tyks radiotherapy page for accommodation or travel support",
+   "status": "done",
+   "t_s": 21.6,
+   "result_en": "\"Sädehoito\" · 823 chars",
+   "ms": 3640,
+   "title": "Sädehoito",
+   "chars": 823,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/sadehoito",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 18,
+   "round": 2,
+   "tool": "gemini",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 25.2,
+   "result_en": "draft answer, still open: question B: no page read so far says the measure, or a piece of it, is running or planned in Varha / Tyks / Tyks Turun yliopistollinen keskussairaala. Try another Finnish term from the task, the university hospital's pathway page, or a decision document.",
+   "ms": 6213
+  },
+  {
+   "step": 19,
+   "round": 3,
+   "tool": "gemini",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 31.5,
+   "result_en": "2 searches: Check Varha board decisions for patient hotel; Check national Kela travel and accommodation reimbursement for radiotherapy",
+   "ms": 1553
+  },
+  {
+   "step": 20,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha aluehallitus potilashotelli",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Check Varha board decisions for patient hotel",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "6 results: varha.fi, pirha.fi",
+   "ms": 2590,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/aluehallitus",
+     "title": "Aluehallitus | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto",
+     "title": "Päätöksenteko ja hallinto | Varha"
+    },
+    {
+     "url": "https://pirha.fi/palvelut/sairaalat-tays/potilaalle-ja-laheiselle/potilashotelli",
+     "title": "Potilashotelli - pirha.fi"
+    },
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/esityslistat-poytakirjat-ja-viranhaltijapaatokset",
+     "title": "Esityslistat, pöytäkirjat ja viranhaltijapäätökset | Varha"
+    },
+    {
+     "url": "https://www.sttinfo.fi/tiedote/69891094/kutsu-markkinainfoon-potilashotelli-osana-tulevaisuuden-sairaalaa?publisherId=69817636",
+     "title": "Kutsu markkinainfoon: Potilashotelli osana tulevaisuuden sairaalaa | Pohjois-Pohjanmaan hyvinvointialue Pohde"
+    },
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/organisaatio",
+     "title": "Organisaatio | Varha"
+    }
+   ]
+  },
+  {
+   "step": 21,
+   "round": 3,
+   "tool": "oxylabs /v1/search",
+   "input": "Kela matkakorvaus yöpymisraha sädehoito",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "Check national Kela travel and accommodation reimbursement for radiotherapy",
+   "status": "done",
+   "t_s": 33.0,
+   "result_en": "6 results: kela.fi, sanastot.suomi.fi, helda.helsinki.fi",
+   "ms": 2856,
+   "results": [
+    {
+     "url": "https://www.kela.fi/matkat",
+     "title": "Matkakorvaukset | Henkilöasiakkaat | Kela"
+    },
+    {
+     "url": "https://sanastot.suomi.fi/terminology/kela/concept/c124",
+     "title": "yöpymisraha | Kelan terminologinen sanasto – Etuuksiin ja tehtäviin liittyvät käsitteet, versio 7 | Yhteentoimivuusalusta"
+    },
+    {
+     "url": "https://www.kela.fi/web/selkokieli/korvaukset-matkoista",
+     "title": "Kela-korvaus matkoista | Selkokieli | Kela"
+    },
+    {
+     "url": "https://helda.helsinki.fi/items/02e2803b-417e-4681-ab51-f4a6f5250565",
+     "title": "Yöpyminen sairaanhoidon matkalla : Sairausvakuutuksen yöpymiskorvaukset ja potilashotellitoiminta Suomessa sekä katsaus potilashotellitoimintaan ja tutkimuskirjallisuuteen muissa Pohjoismaissa"
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/sairastuneelle/syopa-ja-taloudellinen-tilanne/syopaa-sairastavan-matkakustannukset/",
+     "title": "Syöpää sairastavan matkakustannukset"
+    },
+    {
+     "url": "https://www.kela.fi/yhteistyokumppanit-terveydenhuolto-matkakorvaukset",
+     "title": "Matkakorvaukset | Kumppanit | Kela"
+    }
+   ]
+  },
+  {
+   "step": 22,
+   "round": 3,
+   "tool": "gemini",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 35.9,
+   "result_en": "2 reads: Check Kela national travel and accommodation reimbursement; Check Varha board page",
+   "ms": 1845
+  },
+  {
+   "step": 23,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.kela.fi/matkat",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.kela.fi/matkat",
+   "focus": "yöpymisraha matkakorvaus taksi",
+   "why": "Check Kela national travel and accommodation reimbursement",
+   "status": "done",
+   "t_s": 37.7,
+   "result_en": "\"Matkakorvaukset\" · 21 681 chars · 7 of 37 passages kept",
+   "ms": 1881,
+   "title": "Matkakorvaukset",
+   "chars": 21681,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.kela.fi/matkat",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 24,
+   "round": 3,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/aluehallitus",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/aluehallitus",
+   "focus": "potilashotelli majoitus",
+   "why": "Check Varha board page",
+   "status": "done",
+   "t_s": 37.7,
+   "result_en": "\"Aluehallitus\" · 3 193 chars",
+   "ms": 1940,
+   "title": "Aluehallitus",
+   "chars": 3193,
+   "from_cache": false,
+   "kind": "html",
+   "page_url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/aluehallitus",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 25,
+   "round": 3,
+   "tool": "gemini",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "gemini-4-hydrogen",
+   "status": "done",
+   "t_s": 39.7,
+   "result_en": "writes the answer",
+   "ms": 4330
+  }
+ ],
+ "rounds": 3,
+ "searches": 9,
+ "pages_read": [
+  {
+   "url": "https://www.varha.fi/sites/default/files/2025-01/varha-kilpailutussuunnitelma-2025.pdf",
+   "title": "Kilpailutussuunnitelma 2025",
+   "chars": 3396,
+   "kind": "pdf",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:55+00:00",
+   "published": "2025-01-16",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743361/",
+   "title": "Social and geographical factors affecting access to treatment of lung cancer.",
+   "chars": 1946,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:16:03+00:00",
+   "published": "2009-08-18",
+   "js_render": false
+  },
+  {
+   "url": "https://hoito-ohjeet.fi/fi/Ohjepankki/YHTEINEN/S%C3%A4dehoitoon%20tulevalle.pdf",
+   "title": "Ohje hoitosuhteessa oleville potilaillemme Satakunnan sairaanhoitopiiri | Vaasan sairaanhoitopiiri | Varsinais-Suomen sairaanhoitopiiri",
+   "chars": 6047,
+   "kind": "pdf",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:02+00:00",
+   "published": "2020-11-17",
+   "js_render": false
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332544/",
+   "title": "Area-based disparities in non-small-cell lung cancer survival",
+   "chars": 25353,
+   "kind": "article",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:04+00:00",
+   "published": "2024",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/sadehoitopoliklinikka",
+   "title": "Sädehoitopoliklinikka",
+   "chars": 4033,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:56:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/sadehoito",
+   "title": "Sädehoito",
+   "chars": 823,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:17+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.kela.fi/matkat",
+   "title": "Matkakorvaukset",
+   "chars": 21681,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:31+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://www.varha.fi/fi/tietoa-meista/paatoksenteko-ja-hallinto/aluehallitus",
+   "title": "Aluehallitus",
+   "chars": 3193,
+   "kind": "html",
+   "from_cache": false,
+   "fetched_at": "2026-11-14T01:08:31+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "gemini-4-hydrogen",
+ "models": [
+  "gemini-4-hydrogen"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:08:35+00:00",
+ "stopped": "finished",
+ "advice": "keep",
+ "model_reason_en": "Keep this line, because no public sign was found of a running travel and accommodation support service for far-away lung cancer patients at Varha or Tyks, and Varha's 2025 procurement plan only listed a patient hotel for market mapping.",
+ "seconds": 44.0,
+ "searched_en": "Searched 9 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha potilashotelli\"; \"Tyks potilaskoti\"; \"Varsinais-Suomen majoitus sädehoidon ajaksi keuhkosyöpä\", ...) and read 9 pages on tyks.fi, varha.fi, hoito-ohjeet.fi, pmc.ncbi.nlm.nih.gov, kela.fi.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha potilashotelli",
+  "Tyks potilaskoti",
+  "Varsinais-Suomen majoitus sädehoidon ajaksi keuhkosyöpä",
+  "site:varha.fi potilashotelli",
+  "site:tyks.fi majoitus sädehoito",
+  "Tyks potilashotelli Turku",
+  "Varha aluehallitus potilashotelli",
+  "Kela matkakorvaus yöpymisraha sädehoito"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 9,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 9,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 4
+  }
+ ],
+ "plan_effect": "keep",
+ "plan_effect_reason_en": "Keep this line, because no public sign was found of a running travel and accommodation support service for far-away lung cancer patients at Varha or Tyks, and Varha's 2025 procurement plan only listed a patient hotel for market mapping.",
+ "verdict_en": "No public sign that it is running in Southwest Finland. Evidence supports that it works, but not the size of effect we assume. Supported: Longer travel time or distance is associated with lower odds of lung cancer surgery (OR 0.60, British Journal of Cancer 2009) and higher 12-month mortality (adjusted HR 1.47, Acta Oncologica 2024). Not supported: The evidence read does not test travel and accommodation support or measure a 1.0 percentage point increase in curative-intent treatment.",
+ "in_use_label_en": "No public sign of it",
+ "effect_label_en": "Works, size not shown"
+}

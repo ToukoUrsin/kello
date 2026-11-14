@@ -1,0 +1,406 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Southwest Finland wellbeing services county (or in the Tyks university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Thoracic surgeon reviews every decision not to operate. A thoracic surgeon from the university hospital sits in the county lung meeting every week and gives a second opinion before a stage I-II patient is refused surgery. Counties without their own thoracic surgeon decide about surgery without one today.",
+ "area_id": "05",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "The English study we already hold (Lau et al. 2013) found resection rates of 20.0% where surgeons were based against 11.6% in peripheral hospitals, but it is observational and the abstract does not give the 14.4% vs 12.0% MDT-attendance figures.",
+ "supported_en": "Lau et al. (J Thorac Oncol 2013) report that hospitals where surgeons were based resected 20.0% of patients, against 11.6% in peripheral hospitals in England.",
+ "not_supported_en": "The abstract does not show the 2.4-point gain from surgeon attendance at MDT meetings, and no page shows that such a gain carries over to Finland.",
+ "in_use_here": "yes",
+ "in_use_scope": "county",
+ "in_use_quote": "MDT-kokouksessa tietyn syöpäsairauden erikoislääkärit (mm. syövän leikkaushoidosta vastaava erikoislääkäri, syöpätautien, patologian ja radiologian erikoislääkäri sekä syöpäsairaanhoitaja)",
+ "in_use_source": {
+  "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syovan-seulonta-perinnollisyys-diagnosointi-ja-hoidon-suunnittelu",
+  "title": "Syövän seulonta, perinnöllisyys, diagnosointi ja hoidon suunnittelu",
+  "published": null,
+  "fetched_at": "2026-11-14T00:55:10+00:00"
+ },
+ "in_use_summary_en": "Tyks says lung cancer diagnostics for Varsinais-Suomi are centralised at its lung clinic, and its multidisciplinary cancer meetings, held mostly weekly, include the specialist responsible for cancer surgery.",
+ "missing_en": "",
+ "summary_en": "Tyks says lung cancer diagnostics are centralised at its lung clinic and that its multidisciplinary cancer meetings, held mostly weekly, include the specialist responsible for cancer surgery. Varsinais-Suomi therefore already has a surgeon in the meeting, and our model counts this measure only in counties without a university hospital. The English evidence (Lau et al. 2013) points the same way, with resection rates of 20.0% where surgeons were based against 11.6% in peripheral hospitals, but it is observational.",
+ "unanswered_en": "No page names a thoracic surgeon specifically in the lung cancer meeting; the Tyks page describes cancer meetings in general.",
+ "sources": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syovan-seulonta-perinnollisyys-diagnosointi-ja-hoidon-suunnittelu",
+   "title": "Syövän seulonta, perinnöllisyys, diagnosointi ja hoidon suunnittelu",
+   "quote": "MDT-kokouksessa tietyn syöpäsairauden erikoislääkärit (mm. syövän leikkaushoidosta vastaava erikoislääkäri, syöpätautien, patologian ja radiologian erikoislääkäri sekä syöpäsairaanhoitaja)",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:10+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syovan-seulonta-perinnollisyys-diagnosointi-ja-hoidon-suunnittelu",
+   "title": "Syövän seulonta, perinnöllisyys, diagnosointi ja hoidon suunnittelu",
+   "quote": "Tyksissä niitä järjestetään 14 eri syöpään. Niitä pidetään pääosin viikoittain.",
+   "about": "in_use",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:10+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "quote": "Keuhkosyövän diagnostiikka on keskitetty Tyksin keuhkosairauksien poliklinikalle.",
+   "about": "context",
+   "published": null,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "quote": "with a higher resection rate in hospitals where surgeons were based (base hospitals) than in peripheral hospitals (20.0% versus 11.6%",
+   "about": "effect",
+   "published": "2013-01-01",
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, varha.fi, hyvaks.fi",
+   "ms": 1585,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.varha.fi/fi/asiointikanavat/tyks-syopapotilaan-digihoitopolku",
+     "title": "Tyks Syöpäpotilaan digihoitopolku | Varha"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://testi.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset",
+     "title": "Hoidot ja tutkimukset | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varha thoraxkirurgin konsultaatio",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: varha.fi",
+   "ms": 3152,
+   "results": [
+    {
+     "url": "https://www.varha.fi/fi/tietoa-meista/yhteystiedot",
+     "title": "Yhteystiedot"
+    },
+    {
+     "url": "https://www.varha.fi/sites/default/files/2022-12/Tyks%20Palveluhinnasto%202022.pdf",
+     "title": "Palveluhinnasto 2022 Somaattinen ja psykiatrinen hoito"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palvelut/terveysasemapalvelut",
+     "title": "Terveysasemapalvelut | Varha"
+    },
+    {
+     "url": "https://www.varha.fi/fi/palvelut/terveysasemapalvelut/hoitoon-ja-palveluun-hakeutuminen",
+     "title": "Hoitoon ja palveluun hakeutuminen | Varha"
+    },
+    {
+     "url": "https://www.pirha.fi/ammattilaiselle/ohjeet-ja-toimintamallit/hoitoon-ohjaaminen-laheteohjeet-ja-konsultaatiot/gastroenterologian-ja-gastrokirurgian-laheteohjeet-ja-konsultaatiot",
+     "title": "Gastroenterologian ja gastrokirurgian läheteohjeet ja konsultaatiot - pirha.fi"
+    },
+    {
+     "url": "https://www.hyvaep.fi/palvelu/ortopedia/",
+     "title": "Ortopedia - Etelä-Pohjanmaan hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Tyks keuhkokirurgi leikkausarvio keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: tyks.fi, sydansairaala.fi",
+   "ms": 2343,
+   "results": [
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-sairaala/keuhkosairauksien-poliklinikka-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, A-sairaala | Tyks"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/potilaana/rintaelinten-leikkaushoidot/",
+     "title": "Rintaelinten leikkaushoidot - Sydänsairaala"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitoonpaasyajat",
+     "title": "​Keuhkosyövän hoitoonpääsyajat | Tyks"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    },
+    {
+     "url": "https://www.tyks.fi/potilaille-ja-laheisille/sairaalat-ja-toimipisteet/tyks-t-sairaala/keuhkosairauksien-poliklinikka-t-sairaala",
+     "title": "Keuhkosairauksien poliklinikka, T-sairaala | Tyks"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Varsinais-Suomen keuhkosyöpäleikkaukset keskittäminen keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure under another Finnish name",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: syoparekisteri.fi, kaikkisyovasta.fi, duodecimlehti.fi, tyks.fi",
+   "ms": 3404,
+   "results": [
+    {
+     "url": "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf",
+     "title": "Keuhkosyöpä Suomessa - Katsaus keuhkosyövän hoidon ..."
+    },
+    {
+     "url": "https://kaikkisyovasta.fi/tietoa-syovasta/syopataudit/keuhkosyopa/",
+     "title": "Keuhkosyöpä – oireet, hoito ja ennuste"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/xmedia/duo/duo12032.pdf",
+     "title": "69 Eija-Riitta Salomaa ja Maija Walta | ALKUPERÄISTUTKIMUS"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://www.sydansairaala.fi/tietoa/asiantuntija-artikkelit/keuhkosyovan-leikkaushoito/",
+     "title": "Keuhkosyövän leikkaushoito - Sydänsairaala"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 3.4,
+   "result_en": "2 reads: B: who decides surgery at Tyks; A: effect size",
+   "ms": 5605
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "focus": "moniammatillinen kokous thoraxkirurgi leikkaus hoitopäätös",
+   "why": "B: who decides surgery at Tyks",
+   "status": "done",
+   "t_s": 9.0,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin syöpä\" · 19 118 chars · 7 of 30 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/23242439",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/23242439",
+   "focus": "surgeon attendance MDT resection rate 14.4% 12.0%",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 9.0,
+   "result_en": "\"The effects of increased provision of thoracic surgical specialists on\" · 1 323 chars · from cache",
+   "ms": 8,
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/23242439",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 9.0,
+   "result_en": "1 read: B: does a surgeon attend Tyks lung MDT",
+   "ms": 3385
+  },
+  {
+   "step": 9,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.tyks.fi/node/1331",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syovan-seulonta-perinnollisyys-diagnosointi-ja-hoidon-suunnittelu",
+   "focus": "keuhkosyöpä kirurgi osallistujat kokous viikoittain",
+   "why": "B: does a surgeon attend Tyks lung MDT",
+   "status": "done",
+   "t_s": 12.4,
+   "result_en": "\"Syövän seulonta, perinnöllisyys, diagnosointi ja hoidon suunnittelu\" · 2 996 chars · from cache",
+   "ms": 1,
+   "title": "Syövän seulonta, perinnöllisyys, diagnosointi ja hoidon suunnittelu",
+   "chars": 2996,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syovan-seulonta-perinnollisyys-diagnosointi-ja-hoidon-suunnittelu",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "step": 10,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 12.4,
+   "result_en": "writes the answer",
+   "ms": 12870
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+   "title": "Keuhkosyöpä ja keuhkopussin syöpä",
+   "chars": 19118,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:05+00:00",
+   "published": null,
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/23242439",
+   "title": "The effects of increased provision of thoracic surgical specialists on the variation in lung cancer resection rate in England.",
+   "chars": 1323,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-13T23:42:32+00:00",
+   "published": "2013-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/syovan-seulonta-perinnollisyys-diagnosointi-ja-hoidon-suunnittelu",
+   "title": "Syövän seulonta, perinnöllisyys, diagnosointi ja hoidon suunnittelu",
+   "chars": 2996,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:55:10+00:00",
+   "published": null,
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:52:50+00:00",
+ "stopped": "finished",
+ "advice": "take_out",
+ "model_reason_en": "Take this line out: Tyks, the university hospital, is in Varsinais-Suomi itself, and its pages say lung cancer diagnostics are centralised there and that weekly multidisciplinary meetings include the cancer surgeon, so a surgeon already takes part in surgery decisions.",
+ "seconds": 25.3,
+ "searched_en": "Searched 4 queries (\"Tyks keuhkosyöpäpotilaan hoitopolku\"; \"Varha thoraxkirurgin konsultaatio\"; \"Tyks keuhkokirurgi leikkausarvio keuhkosyöpä\"; \"Varsinais-Suomen keuhkosyöpäleikkaukset keskittäminen keuhkosyöpä\") and read 3 pages on tyks.fi, europepmc.org.",
+ "queries": [
+  "Tyks keuhkosyöpäpotilaan hoitopolku",
+  "Varha thoraxkirurgin konsultaatio",
+  "Tyks keuhkokirurgi leikkausarvio keuhkosyöpä",
+  "Varsinais-Suomen keuhkosyöpäleikkaukset keskittäminen keuhkosyöpä"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 3,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 3
+  }
+ ],
+ "plan_effect": "exclude",
+ "plan_effect_reason_en": "Take this line out: Tyks, the university hospital, is in Varsinais-Suomi itself, and its pages say lung cancer diagnostics are centralised there and that weekly multidisciplinary meetings include the cancer surgeon, so a surgeon already takes part in surgery decisions.",
+ "verdict_en": "Already running in Southwest Finland. Evidence supports that it works, but not the size of effect we assume. Supported: Lau et al. (J Thorac Oncol 2013) report that hospitals where surgeons were based resected 20.0% of patients, against 11.6% in peripheral hospitals in England. Not supported: The abstract does not show the 2.4-point gain from surgeon attendance at MDT meetings, and no page shows that such a gain carries over to Finland.",
+ "in_use_label_en": "Already running here",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "surgeon_second_opinion",
+ "intervention_name_en": "Thoracic surgeon reviews every decision not to operate",
+ "area_name_en": "Southwest Finland wellbeing services county"
+}

@@ -1,0 +1,353 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Lapland wellbeing services county (or in the OYS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated. Every stage I patient who is too frail for surgery is referred for stereotactic radiotherapy (3-8 visits, no anaesthesia) instead of being left without treatment. The treatment exists in every university hospital; what is missing in some counties is the referral rule.",
+ "area_id": "21",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "In the Netherlands, 7% fewer elderly stage I patients went untreated once stereotactic radiotherapy was fully available (2001-2003 vs 2007-2009); the effect on the share of all lung cancer patients was not measured.",
+ "supported_en": "A Netherlands Cancer Registry study (Annals of Oncology 2012) found 7% fewer elderly stage I patients untreated after stereotactic radiotherapy became available.",
+ "not_supported_en": "The pages do not show the assumed 0.8-point rise in the share of all lung cancer patients treated with curative intent.",
+ "in_use_here": "partly",
+ "in_use_scope": "collaborative_area",
+ "in_use_quote": "Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.",
+ "in_use_source": {
+  "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+  "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+  "published": "2025-09-17T07:00:17+00:00",
+  "fetched_at": "2026-11-14T00:46:15+00:00"
+ },
+ "in_use_summary_en": "The OYS lung cancer care pathway (page dated 2025-09) says stereotactic radiotherapy can be given to local disease when surgery is not possible, and that the university hospital holds the multidisciplinary lung cancer meetings and gives the surgery and radiotherapy.",
+ "missing_en": "No page shows a rule that every inoperable stage I patient, including those from Lapland, is referred to OYS for stereotactic radiotherapy.",
+ "summary_en": "OYS's lung cancer care pathway says patients who cannot be operated can get stereotactic radiotherapy (\"täsmäsädehoito\"). It also says the university hospital runs the multidisciplinary lung cancer meetings and gives all lung cancer surgery and radiotherapy. No page says every frail stage I patient from Lapland must be referred. Dutch registry data (Annals of Oncology 2012) show 7% fewer untreated elderly stage I patients once the treatment was available, which supports the direction of the assumed effect but not its size.",
+ "unanswered_en": "I found no Lapha page and no OYS page that sets a written rule to refer every inoperable stage I patient for stereotactic radiotherapy.",
+ "sources": [
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Paikallisessa tai paikallisesti edenneessä taudissa, jos leikkaushoito ei ole mahdollista, voidaan antaa täsmäsädehoitoa tai yhtä aikaa säde- ja solunsalpaajahoitoa eli kemosädehoitoa.",
+   "about": "in_use",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "quote": "Vastaa keuhkosyövän moniammatillisista kokouksista",
+   "about": "context",
+   "published": "2025-09-17T07:00:17+00:00",
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "quote": "Between period A and C, there was a 7% absolute reduction in patients going untreated, corresponding to an 8-month improvement in median survival",
+   "about": "effect",
+   "published": "2012-05-02",
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: oys.fi, hyvaks.fi, syovanhoitokeskus.pshyvinvointialue.fi",
+   "ms": 1734,
+   "results": [
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "Keuhkosyöpäpotilaan hoitoketju"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    },
+    {
+     "url": "https://oys.fi/syopakeskus/hoitopolut/",
+     "title": "Hoitopolut - OYS Syöpäkeskus"
+    },
+    {
+     "url": "https://oys.fi/palvelut/keuhkosairauksien-hoito-sairaalan-poliklinikalla/",
+     "title": "Keuhkosairauksien hoito sairaalan poliklinikalla - OYS"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapha stereotaktinen sädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: duodecimlehti.fi, docrates.mehilainen.fi, keuhkosyopa.fi",
+   "ms": 2793,
+   "results": [
+    {
+     "url": "https://www.duodecimlehti.fi/duo13049",
+     "title": "Stereotaktinen sädehoito paikallisen ei-pienisoluisen keuhkosyövän hoidossa"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/hypofraktioitu-stereotaktinen-sadehoito-etapesakkeiden-hoidossa/",
+     "title": "Hypofraktioitu stereotaktinen sädehoito ja etäpesäkkeet - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/sadehoito/",
+     "title": "Sädehoito – Keuhkosyöpä"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syovan-hoito/syovan-hoitomuodot/sadehoito/stereotaktinen-sadehoito/",
+     "title": "Stereotaktinen sädehoito - Docrates - Mehiläinen"
+    },
+    {
+     "url": "https://tamamatka.fi/stereotaktinen-sadehoito-aivoihin-keuhkosyopa/",
+     "title": "Stereotaktinen sädehoito aivoihin - Kun lääkkeet menettävät tehonsa - TÄMÄ MATKA"
+    },
+    {
+     "url": "https://terveytta.net/kaikki-mita-sinun-tarvitsee-tietaa-keuhkosyovan-sadehoidosta",
+     "title": "Kaikki mitä sinun tarvitsee tietää keuhkosyövän sädehoidosta"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "OYS täsmäsädehoito keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: terveyskyla.fi, oys.fi, keuhkosyopa.fi",
+   "ms": 1832,
+   "results": [
+    {
+     "url": "https://www.terveyskyla.fi/syopatalo/syopataudit/keuhkosyopa/keuhkosyovan-hoitomuodot-ja-ennuste",
+     "title": "Keuhkosyövän hoitomuodot ja ennuste"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/",
+     "title": "Syöpätautien hoito - OYS"
+    },
+    {
+     "url": "https://oys.fi/palvelut/syopa-ja-veritautien-hoito-sairaalassa/",
+     "title": "Syöpä- ja veritautien hoito sairaalassa - OYS"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/tasmahoidot/",
+     "title": "Täsmähoidot – Keuhkosyöpä"
+    },
+    {
+     "url": "https://keuhkosyopa.fi/hoito/hoitovaihtoehdot/",
+     "title": "Hoitovaihtoehdot – Keuhkosyöpä"
+    },
+    {
+     "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+     "title": "Keuhkosyöpäpotilaan hoitopolku - OYS"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Lapin keskussairaala SBRT",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: lapha.fi, suomi.fi, rovaniemi.fi",
+   "ms": 2190,
+   "results": [
+    {
+     "url": "https://lapha.fi/sairaalapalvelut",
+     "title": "Sairaalapalvelut - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/palvelupiste/lapin-keskussairaala-lapin-hyvinvointialue/e6fe45b2-c2c1-441b-b12e-7d707ec5384d",
+     "title": "Lapin keskussairaala - Lapin hyvinvointialue - Suomi.fi"
+    },
+    {
+     "url": "https://www.rovaniemi.fi/Asiointikanavat/Lapin-keskussairaala/e6fe45b2-c2c1-441b-b12e-7d707ec5384d",
+     "title": "Lapin keskussairaala - Asiointikanavat - Rovaniemi - Arktinen pääkaupunki"
+    },
+    {
+     "url": "https://lapha.fi/yhteystiedot",
+     "title": "Yhteystiedot - Lapin hyvinvointialue"
+    },
+    {
+     "url": "https://lapha.fi/keskussairaalat",
+     "title": "Keskussairaalat - lapha"
+    },
+    {
+     "url": "https://www.suomi.fi/palvelut/puhelinasiointi/lapin-keskussairaalan-virtsa-seka-vatsa-ja-ruoansulatuselinten-kirurgia-lapin-hyvinvointialue/31779a22-9932-486e-a7f3-29360a1c9c17",
+     "title": "Lapin keskussairaalan virtsa- sekä vatsa- ja ruoansulatuselinten kirurgia - Lapin hyvinvointialue - Suomi.fi"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.8,
+   "result_en": "2 reads: B: OYS pathway radiotherapy; A: effect size",
+   "ms": 4296
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "focus": "sädehoito stereotaktinen leikkaukseen soveltumaton hoitokokous",
+   "why": "B: OYS pathway radiotherapy",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Keuhkosyöpäpotilaan hoitopolku - OYS\" · 19 914 chars · 7 of 31 passages kept · from cache",
+   "ms": 4,
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/22553198",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/22553198",
+   "focus": "untreated stereotactic radiotherapy elderly stage I",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "\"Early-stage lung cancer in elderly patients: a population-based study \" · 1 280 chars · from cache",
+   "ms": 6,
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/22553198",
+   "published": "2012-05-02",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 7.1,
+   "result_en": "writes the answer",
+   "ms": 13290
+  }
+ ],
+ "rounds": 1,
+ "searches": 4,
+ "pages_read": [
+  {
+   "url": "https://oys.fi/palvelumme/syopataudit/keuhkosyopapotilaan-hoitopolku/",
+   "title": "Keuhkosyöpäpotilaan hoitopolku - OYS",
+   "chars": 19914,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:46:15+00:00",
+   "published": "2025-09-17T07:00:17+00:00",
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/22553198",
+   "title": "Early-stage lung cancer in elderly patients: a population-based study of changes in treatment patterns and survival in the Netherlands.",
+   "chars": 1280,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:14:16+00:00",
+   "published": "2012-05-02",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:56:43+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask OYS and Lapha's lung clinics first whether every inoperable stage I patient is already discussed in the OYS lung cancer meeting and referred for stereotactic radiotherapy, because OYS's pathway page already offers the treatment and runs those meetings.",
+ "seconds": 20.4,
+ "searched_en": "Searched 4 queries (\"OYS keuhkosyöpäpotilaan hoitopolku\"; \"Lapha stereotaktinen sädehoito keuhkosyöpä\"; \"OYS täsmäsädehoito keuhkosyöpä\"; \"Lapin keskussairaala SBRT\") and read 2 pages on oys.fi, europepmc.org.",
+ "queries": [
+  "OYS keuhkosyöpäpotilaan hoitopolku",
+  "Lapha stereotaktinen sädehoito keuhkosyöpä",
+  "OYS täsmäsädehoito keuhkosyöpä",
+  "Lapin keskussairaala SBRT"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 4,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 2,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 2
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask OYS and Lapha's lung clinics first whether every inoperable stage I patient is already discussed in the OYS lung cancer meeting and referred for stereotactic radiotherapy, because OYS's pathway page already offers the treatment and runs those meetings.",
+ "verdict_en": "Partly in place in the OYS university hospital area, which treats Lapland's patients. Missing: No page shows a rule that every inoperable stage I patient, including those from Lapland, is referred to OYS for stereotactic radiotherapy. Evidence supports that it works, but not the size of effect we assume. Supported: A Netherlands Cancer Registry study (Annals of Oncology 2012) found 7% fewer elderly stage I patients untreated after stereotactic radiotherapy became available. Not supported: The pages do not show the assumed 0.8-point rise in the share of all lung cancer patients treated with curative intent.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "sbrt_pathway",
+ "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
+ "area_name_en": "Lapland wellbeing services county"
+}

@@ -1,0 +1,522 @@
+{
+ "schema": 4,
+ "question": "B. Is this measure already running in Kymenlaakso wellbeing services county (or in the HUS university hospital area that treats its patients)?\nA. Does recent evidence support the size of effect we assume: does this measure raise the share of lung cancer patients who get curative-intent treatment, and by how much?\nMeasure: Video MDT review of every stage I-III patient with the university hospital. Every patient whose cancer has not spread (stage I-III) is discussed by video with the university hospital lung team (surgeon, radiotherapy doctor, oncologist) before anyone decides against treatment that aims to cure. Today a county hospital can decide alone.",
+ "area_id": "10",
+ "verdict": "mixed",
+ "effect_check": "weaker",
+ "effect_summary_en": "One UK before-after study at one district hospital (Southend, 62 patients presented in a year) reported that the annual resection rate rose by 30% after video MDT meetings with a cardiothoracic centre began; it reports no change in the share of patients treated with curative intent.",
+ "supported_en": "A 2004 UK before-after study in the Journal of Telemedicine and Telecare found that the annual resection rate rose by 30% after video MDT meetings began.",
+ "not_supported_en": "The pages read do not show the assumed gain of 1.5 percentage points in the curative-intent share, and they show nothing from Finland.",
+ "in_use_here": "partly",
+ "in_use_scope": "county",
+ "in_use_quote": "Hoitosuositukset tehdään Kymenlaakson hyvinvointialueen moniammatillisessa keuhkokokouksessa.",
+ "in_use_source": {
+  "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+  "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+  "published": "8.1.2026",
+  "fetched_at": "2026-11-14T00:52:38+00:00"
+ },
+ "in_use_summary_en": "Kymenlaakso wellbeing services county says treatment recommendations for patients who cannot have surgery are made in its own multidisciplinary lung meeting, and that surgery decisions are made in Helsinki (Meilahti); no page says HUS joins that meeting by video or that every stage I–III patient is reviewed with HUS.",
+ "missing_en": "No page shows a video review with the HUS surgeon, radiotherapy doctor and oncologist for every stage I–III patient before curative treatment is ruled out.",
+ "summary_en": "Kymenlaakso wellbeing services county runs its own multidisciplinary lung meeting, which makes treatment recommendations when surgery is not possible; surgery decisions and operations happen at Meilahti hospital in Helsinki (HUS). HUS says its own lung specialist team gives recommendations when needed. No page shows a video review with HUS for every stage I–III patient. On effect, a single UK before-after study (2004) reported a 30% relative rise in resections, which supports the direction but not the size we assume.",
+ "unanswered_en": "No page said whether HUS thoracic surgeons or oncologists take part in the Kymenlaakso lung meeting by video.",
+ "sources": [
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "quote": "Hoitosuositukset tehdään Kymenlaakson hyvinvointialueen moniammatillisessa keuhkokokouksessa.",
+   "about": "in_use",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "quote": "Leikkauspäätös ja leikkaus tehdään Meilahden sairaalassa Helsingissä.",
+   "about": "context",
+   "published": "8.1.2026",
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "quote": "Tarvittaessa arvioimme syövän tilanteen ja annamme hoitosuosituksen HUSin moniammatillisessa keuhkosyövän diagnostiikkaan ja hoitoon perehtyneiden erikoislääkäreiden työryhmässä.",
+   "about": "context",
+   "published": "15.06.2026",
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "from_cache": true
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "quote": "The annual resection rate increased by 30% following the introduction of the telemedicine MDTmeetings",
+   "about": "effect",
+   "published": "2004-01-01",
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "from_cache": true
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS keuhkosyöpäpotilaan hoitopolku",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the university hospital's lung cancer pathway page",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, hyvaks.fi",
+   "ms": 732,
+   "results": [
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+     "title": "Keuhkosyövän hoitopolku | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syovan-hoito",
+     "title": "Syövän hoito | HUS"
+    },
+    {
+     "url": "https://www.hyvaks.fi/asiakkaana/hoitopolut/keuhkosyopapotilaan-hoitopolku",
+     "title": "Keuhkosyöpäpotilaan hoitopolku | Keski-Suomen hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/levinneen-keuhkosyovan-hoito",
+     "title": "Levinneen keuhkosyövän hoito | HUS"
+    },
+    {
+     "url": "https://hus.palvelupolku.fi/",
+     "title": "hus.palvelupolku.fi – Akromegalia"
+    },
+    {
+     "url": "https://www.potilaanlaakarilehti.fi/uutiset/nain-syopia-hoidetaan-husissa-katso-eri-syopien-hoitopolut/",
+     "title": "Näin syöpiä hoidetaan Husissa — katso eri syöpien hoitopolut - Potilaan Lääkärilehti"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenhva moniammatillinen kokous keuhkosyöpä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure on the county's own pages",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, docrates.mehilainen.fi, tyks.fi",
+   "ms": 1839,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+     "title": "Keuhkosyöpä ja keuhkopussn msotelioom - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://docrates.mehilainen.fi/syopamuodot/keuhkosyopa/",
+     "title": "Keuhkosyöpä - oireet ja uusimmat hoidot - Docrates Mehiläinen"
+    },
+    {
+     "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/keuhkosyopa-ja-keuhkopussin-syopa",
+     "title": "Keuhkosyöpä ja keuhkopussin syöpä | Tyks"
+    },
+    {
+     "url": "https://syovanhoitokeskus.pshyvinvointialue.fi/documents/268336/269724/KYS+Keuhkosy%C3%B6p%C3%A4potilaan+hoitoketju.pdf/547c35a2-5382-68b4-5bac-afcff530959d?t=1646069320177",
+     "title": "KEUHKOSYÖPÄPOTILAAN HOITOKETJU"
+    },
+    {
+     "url": "https://syopa-alueelliset.s3.eu-west-1.amazonaws.com/sites/271/2016/10/13122739/keuhkosyopa_web_120522.pdf",
+     "title": "Keuhkosyöpä - Potilaan opas"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "HUS MDT-kokous etäyhteydellä",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the university hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: hus.fi, duodecimlehti.fi, kotiseutuliitto.fi",
+   "ms": 2929,
+   "results": [
+    {
+     "url": "https://www.hus.fi/tietoa-meista/hallinto-ja-paatoksenteko/yhtymakokous-yhtymahallitus-ja-konsernijaosto",
+     "title": "Yhtymäkokous, yhtymähallitus ja konsernijaosto | HUS"
+    },
+    {
+     "url": "https://www.duodecimlehti.fi/duo17212",
+     "title": "Syöpäpotilaan hoidon moniammatilliset suunnittelukokoukset"
+    },
+    {
+     "url": "https://www.hus.fi/ajankohtaista/yhtymakokous-jarjestetaan-verkkokokouksena-18122025-klo-10",
+     "title": "Yhtymäkokous järjestetään verkkokokouksena 18.12.2025 klo 10 | HUS"
+    },
+    {
+     "url": "https://kotiseutuliitto.fi/tietopankki/yhdistystoiminta/yhdistyksen-sahkoinen-kokous/",
+     "title": "Yhdistyksen sähköinen kokous - Suomen Kotiseutuliitto"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/yhtiokokousetayhteyttakayttaen/",
+     "title": "Etäyhteydellä osallistuminen taloyhtiön kokoukseen"
+    },
+    {
+     "url": "https://www.kiinteistoliitto.fi/korona/etayhteysteknisellavalineella/",
+     "title": "Yhtiökokoukseen osallistuminen teknisen välineen avulla"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "round": 1,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakson keskussairaala keuhkomeeting videoyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "the measure at the county hospital",
+   "status": "done",
+   "t_s": 0.0,
+   "result_en": "6 results: kymenhva.fi, hus.fi",
+   "ms": 1878,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/",
+     "title": "Kymenlaakson keskussairaala - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kymenlaakson-keskussairaalan-rontgen",
+     "title": "Kymenlaakson keskussairaalan röntgen | HUS"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/ajankohtaista/",
+     "title": "Ajankohtaista keuhkosairauksien alalta - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://kymenhva.fi/toimipisteet-ja-yhteystiedot/yhteystiedot/",
+     "title": "Organisaation yhteystiedot - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.potilas.com/sairaalat/kymenlaakson-keskussairaala/",
+     "title": "Kymenlaakson keskussairaala – yhteystiedot - Potilas.com"
+    },
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "round": 1,
+   "tool": "claude",
+   "input": "plan the first searches",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 2.9,
+   "result_en": "3 reads: B: HUS pathway MDT; B: county MDT; A: effect size",
+   "ms": 5175
+  },
+  {
+   "step": 6,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "focus": "moniammatillinen kokous hoitopäätös keskussairaala etäyhteys",
+   "why": "B: HUS pathway MDT",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "\"Keuhkosyövän hoitopolku\" · 6 373 chars · 6 of 11 passages kept · from cache",
+   "ms": 5,
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "step": 7,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "focus": "moniammatillinen kokous HUS leikkaus sädehoito hoitopäätös",
+   "why": "B: county MDT",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "\"Keuhkosyöpä ja keuhkopussin mesoteliooma\" · 4 499 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 8,
+   "round": 1,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://europepmc.org/article/MED/15237512",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://europepmc.org/article/MED/15237512",
+   "focus": "resection rate video multidisciplinary",
+   "why": "A: effect size",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "\"Telemedicine for multidisciplinary lung cancer meetings.\" · 1 000 chars · from cache",
+   "ms": 7,
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "from_cache": true,
+   "kind": "abstract",
+   "page_url": "https://europepmc.org/article/MED/15237512",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "step": 9,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 8.1,
+   "result_en": "1 search: B: does county meeting include HUS by video",
+   "ms": 2821
+  },
+  {
+   "step": 10,
+   "round": 2,
+   "tool": "oxylabs /v1/search",
+   "input": "Kymenlaakso keuhkokokous HUS thoraxkirurgi etäyhteys",
+   "endpoint": "POST /v1/search",
+   "url": null,
+   "country": "FI",
+   "why": "B: does county meeting include HUS by video",
+   "status": "done",
+   "t_s": 10.9,
+   "result_en": "6 results: kymenhva.fi, hus.fi",
+   "ms": 2159,
+   "results": [
+    {
+     "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+     "title": "Keuhkosairauksien alkusivu - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/tietoa-meista/potilashoidon-organisaatio/sydan-ja-keuhkokeskus",
+     "title": "Sydän- ja keuhkokeskus | HUS"
+    },
+    {
+     "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+     "title": "Keuhkosairauksien poliklinikka Kotka - Kymenlaakson hyvinvointialue"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/keuhko-valikarsina-ja-ruokatorvikirurgia",
+     "title": "Keuhko-, välikarsina- ja ruokatorvikirurgia | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/en/patient/hospitals-and-other-units/kymenlaakso-central-hospital-laboratory",
+     "title": "Kymenlaakso Central Hospital laboratory | HUS"
+    },
+    {
+     "url": "https://www.hus.fi/potilaalle/sairaalat-ja-toimipisteet/kymenlaakson-keskussairaalan-rontgen",
+     "title": "Kymenlaakson keskussairaalan röntgen | HUS"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 13.1,
+   "result_en": "2 reads: B: video link to HUS",
+   "ms": 4212
+  },
+  {
+   "step": 12,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "focus": "keuhkokokous HUS etäyhteys moniammatillinen",
+   "why": "B: video link to HUS",
+   "status": "done",
+   "t_s": 17.3,
+   "result_en": "\"Keuhkosairauksien alkusivu\" · 3 647 chars · from cache",
+   "ms": 0,
+   "title": "Keuhkosairauksien alkusivu",
+   "chars": 3647,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "published": "29.1.2026",
+   "js_render": false
+  },
+  {
+   "step": 13,
+   "round": 2,
+   "tool": "oxylabs /v1/scrape",
+   "input": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "endpoint": "POST /v1/scrape",
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "focus": "keuhkokokous HUS etäyhteys moniammatillinen",
+   "why": "B: video link to HUS",
+   "status": "done",
+   "t_s": 17.3,
+   "result_en": "\"Keuhkosairauksien poliklinikka Kotka\" · 1 376 chars · from cache",
+   "ms": 3,
+   "title": "Keuhkosairauksien poliklinikka Kotka",
+   "chars": 1376,
+   "from_cache": true,
+   "kind": "html",
+   "page_url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "published": "3.9.2026",
+   "js_render": false
+  },
+  {
+   "step": 14,
+   "round": 2,
+   "tool": "claude",
+   "input": "decide the next step",
+   "endpoint": "model",
+   "url": null,
+   "model": "claude-opus-5-5",
+   "status": "done",
+   "t_s": 17.3,
+   "result_en": "writes the answer",
+   "ms": 14547
+  }
+ ],
+ "rounds": 2,
+ "searches": 5,
+ "pages_read": [
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/keuhkosyopa-ja-mesoteliooma/",
+   "title": "Keuhkosyöpä ja keuhkopussin mesoteliooma",
+   "chars": 4499,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:38+00:00",
+   "published": "8.1.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://www.hus.fi/potilaalle/hoidot-ja-tutkimukset/syopa/keuhkosyovan-hoitopolku",
+   "title": "Keuhkosyövän hoitopolku",
+   "chars": 6373,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "15.06.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://europepmc.org/article/MED/15237512",
+   "title": "Telemedicine for multidisciplinary lung cancer meetings.",
+   "chars": 1000,
+   "kind": "abstract",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:15:02+00:00",
+   "published": "2004-01-01",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/palvelut-ja-ajanvaraus/erikoissairaanhoito/poliklinikat-ja-erikoisalat/keuhkosairaudet/",
+   "title": "Keuhkosairauksien alkusivu",
+   "chars": 3647,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:52:24+00:00",
+   "published": "29.1.2026",
+   "js_render": false
+  },
+  {
+   "url": "https://kymenhva.fi/kymenlaakson-keskussairaala/keuhkosairauksien-poliklinikka-kotka/",
+   "title": "Keuhkosairauksien poliklinikka Kotka",
+   "chars": 1376,
+   "kind": "html",
+   "from_cache": true,
+   "fetched_at": "2026-11-14T00:53:24+00:00",
+   "published": "3.9.2026",
+   "js_render": false
+  }
+ ],
+ "quotes_dropped": 0,
+ "model": "claude-opus-5-5",
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "search_backend": "oxylabs-web-api",
+ "budget_s": 75.0,
+ "zero_effect": false,
+ "from_cache": false,
+ "checked_at": "2026-11-14T01:08:15+00:00",
+ "stopped": "finished",
+ "advice": "check_first",
+ "model_reason_en": "Ask Kymenlaakso's chief lung physician (keuhkosairauksien ylilääkäri) first whether HUS specialists already join the county's own lung meeting by video; the county's page shows its own meeting exists but not that HUS reviews every stage I–III patient.",
+ "seconds": 31.9,
+ "searched_en": "Searched 5 queries (\"HUS keuhkosyöpäpotilaan hoitopolku\"; \"Kymenhva moniammatillinen kokous keuhkosyöpä\"; \"HUS MDT-kokous etäyhteydellä\"; \"Kymenlaakson keskussairaala keuhkomeeting videoyhteys\", ...) and read 5 pages on hus.fi, kymenhva.fi, europepmc.org.",
+ "queries": [
+  "HUS keuhkosyöpäpotilaan hoitopolku",
+  "Kymenhva moniammatillinen kokous keuhkosyöpä",
+  "HUS MDT-kokous etäyhteydellä",
+  "Kymenlaakson keskussairaala keuhkomeeting videoyhteys",
+  "Kymenlaakso keuhkokokous HUS thoraxkirurgi etäyhteys"
+ ],
+ "endpoints_used": [
+  {
+   "endpoint": "POST /v1/search",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "finds the pages: Finnish queries run from Finland, so county, hospital and registry pages rank first"
+  },
+  {
+   "endpoint": "POST /v1/scrape",
+   "api": "Oxylabs Web API",
+   "calls": 5,
+   "failed": 0,
+   "why_en": "reads each page: plain fetch first, JavaScript render when the page comes back as navigation only, PDFs as text; journal records go through Europe PMC",
+   "js_render": 0,
+   "from_cache": 5
+  }
+ ],
+ "plan_effect": "flag",
+ "plan_effect_reason_en": "Ask Kymenlaakso's chief lung physician (keuhkosairauksien ylilääkäri) first whether HUS specialists already join the county's own lung meeting by video; the county's page shows its own meeting exists but not that HUS reviews every stage I–III patient.",
+ "verdict_en": "Partly in place in Kymenlaakso. Missing: No page shows a video review with the HUS surgeon, radiotherapy doctor and oncologist for every stage I–III patient before curative treatment is ruled out. Evidence supports that it works, but not the size of effect we assume. Supported: A 2004 UK before-after study in the Journal of Telemedicine and Telecare found that the annual resection rate rose by 30% after video MDT meetings began. Not supported: The pages read do not show the assumed gain of 1.5 percentage points in the curative-intent share, and they show nothing from Finland.",
+ "in_use_label_en": "Partly in place",
+ "effect_label_en": "Works, size not shown",
+ "intervention_id": "video_mdt_stage1_3",
+ "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
+ "area_name_en": "Kymenlaakso wellbeing services county"
+}
