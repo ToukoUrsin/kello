@@ -135,6 +135,13 @@ const ACTIONS = [
   { t: 96.4, tap: (d) => byText(d, "button", "Suomi") },
   { t: 101.2, front: 0 },
   { t: 20.0, step4: true },
+  // The three partner technologies, named on screen at the moment each one's work is shown.
+  { t: 1.4, tech: ["Gemini API", "read 1,628 values from the registry's PDF reports"] },
+  { t: 9.2, tech: null },
+  { t: 29.6, tech: ["Oxylabs Web API", "searched and read the hospital's pages"] },
+  { t: 38.6, tech: ["MongoDB Atlas", "keeps every check; Atlas Search over the 362 quoted sentences"] },
+  { t: 45.2, tech: null },
+  { t: 102.6, tech: ["Built with", "Oxylabs Web API · Gemini API · MongoDB Atlas"] },
 ];
 
 const QS = new URLSearchParams(location.search);
@@ -236,6 +243,9 @@ if (!READ) {
       html.film-zoom-page .st-left { z-index: 60; }
       html.film-zoom-page .st-page[data-page="0"] { scale: 1.8; z-index: 5; box-shadow: 0 18px 50px rgba(15, 25, 40, 0.24); border-color: #104281; transition: opacity 320ms ease-out, scale 520ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 520ms ease-out, z-index 0s; }
       html.film-zoom-page .st-page[data-page="0"] q { -webkit-line-clamp: 8; }
+      .film-tech { position: fixed; right: 32px; bottom: 70px; z-index: 90; height: 34px; display: flex; align-items: center; gap: 7px; padding: 0 14px; border: 1px solid var(--line, #d9dcd8); border-radius: 17px; background: var(--surface, #fff); color: var(--ink, #14181d); font-size: 15px; white-space: nowrap; pointer-events: none; opacity: 0; translate: 0 6px; transition: opacity 320ms ease-out, translate 320ms ease-out; }
+      .film-tech.on { opacity: 1; translate: 0 0; }
+      .film-tech b { font-weight: 650; color: var(--accent, #104281); }
       .st-pin.feat { transform-origin: 0 50%; transition-property: opacity, translate, scale, box-shadow; transition-duration: 300ms, 300ms, 480ms, 480ms; transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
       html.film-zoom-pin .st-pin.feat { scale: 1.5; z-index: 70; box-shadow: 0 14px 40px rgba(15, 25, 40, 0.22); }
       html.film-zoom-pin .st-stack:has(.st-pin.feat), html.film-zoom-pin .st-pinned:has(.st-pin.feat) { z-index: 70; }
@@ -260,6 +270,7 @@ if (!READ) {
   async function act(a) {
     dirty = true;
     if (a.step4) { step4(ranFor); return; }
+    if ("tech" in a) { tech(a.tech); return; }
     if (a.front != null) {
       // Cut to the frame that already shows the last step; the one now behind goes there too, for the next cut.
       const back = frames[cur];
@@ -294,6 +305,18 @@ if (!READ) {
     if (!(await until((x) => x.querySelector(".st-pin.feat .st-chip"), 8000)) || !same()) return;
     await sleep(300); cls("film-zoom-pin", true); await sleep(2400); cls("film-zoom-pin", false);
   }
+  // A small label at the bottom right of the demo, level with the activity line on the left.
+  function tech(pair) {
+    for (const f of frames) { let d = null; try { d = f.contentDocument; } catch (e) { /* loading */ } const old = d?.querySelector(".film-tech"); if (old) { old.classList.remove("on"); setTimeout(() => old.remove(), 400); } }
+    const d = doc();
+    if (!pair || !d?.body) return;
+    style(d);
+    const el = d.createElement("div"); el.className = "film-tech";
+    const b = d.createElement("b"); b.textContent = pair[0];
+    el.append(b, " " + pair[1]);
+    d.body.appendChild(el);
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("on")));
+  }
   // No mouse pointer over the demo during a take.
   function quiet(on) {
     document.body.classList.toggle("on", on);
@@ -310,6 +333,7 @@ if (!READ) {
     $("s-phone").textContent = phone ? "open" : "not open"; $("s-phone").className = phone ? "ok" : "no";
     const t = tNow();
     if (t == null) { if (ranFor != null) { ranFor = null; quiet(false); load(); } return; }
+    if (t > END + 4 && ranFor != null && !done.has("end")) { done.add("end"); tech(null); }
     if (state.start_at !== ranFor) { if (t < 3) begin(); else return; }   // opened in the middle of a take: wait for the next one
     if (t > END + 1) { quiet(false); return; }
     if (t > -1.5) quiet(true);

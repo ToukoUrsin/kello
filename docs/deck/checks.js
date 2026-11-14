@@ -8,7 +8,7 @@ window.KELLO_CHECKS = {
   },
   {
    "q": "Is it because patients there are older?",
-   "a": "No: still lower after age adjustment.",
+   "a": "Not for men: still lower after age adjustment. For women it could be chance.",
    "verdict": "holds"
   },
   {

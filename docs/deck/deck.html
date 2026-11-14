@@ -143,7 +143,7 @@ tr.sum td { border-bottom: 0; font-weight: 700; font-size: 28px; padding-top: 14
   <div class="list">
     <div class="item"><h3>Measured, estimated or assumed</h3><p>Each figure carries one of three labels, its period, the page and the sentence it was read from.</p></div>
     <div class="item"><h3>1,628 values read from registry reports</h3><p>Finnish county cancer data has no API. Gemini read the PDFs and charts; 1,607 values were found again in the source, 21 are shown as unverified.</p></div>
-    <div class="item"><h3>Checked against the web, live</h3><p>For each action: is it already running in this county? Searches and page reads go through the Oxylabs Web API; a quote that is not word for word in the page is dropped. The answer changes the plan.</p></div>
+    <div class="item"><h3>Checked against the web, live</h3><p>For each action: is it already running in this county? Searches and page reads go through the Oxylabs Web API; a quote that is not word for word in the page is dropped. The answer changes the plan. The 362 quoted sentences sit in MongoDB Atlas, searchable in Finnish with Atlas Search.</p></div>
     <div class="item"><h3>What it cannot show</h3><p>No trial has measured these effects, so every range starts at zero. Cancer stage is not published by county. Our first model, a clock from symptom to treatment, did not match outcomes; the app says so.</p></div>
   </div>
   <div class="foot"><span><b>Kello</b> · public data only, no patient-level data</span><span>5 / 6</span></div>
