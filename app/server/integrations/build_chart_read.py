@@ -36,6 +36,7 @@ RAW = ROOT / "data" / "raw" / "fcr" / "fcr_lung_quality_report.html"
 URL = "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html"
 OUT_ROWS = ROOT / "data" / "processed" / "gemini_chart_read.jsonl"
 EXAMPLES = Path(__file__).resolve().parent / "examples"
+MODEL = g.OFFLINE_MODEL  # done ahead of time, nobody waits: the strongest Gemini on the key
 ERR_LIMIT_PP = 2.0   # largest error (percentage points) we accept before shipping rows
 PERIOD = "2019-2023"
 SERIES = {  # legend name -> (indicator, English label)
@@ -166,7 +167,7 @@ def main() -> int:
 
     # ---- A: blind test against the table
     truth12 = {a: {s: 100 * n / K12_TOTAL[a] for s, n in c.items()} for a, c in K12_COUNT.items()}
-    r12 = g.read_chart(blind(k12), figure="Kuva 12", caption=cap12)
+    r12 = g.read_chart(blind(k12), figure="Kuva 12", caption=cap12, model=MODEL)
     a_rows = []
     for b in r12["bars"]:
         for s, t in (truth12.get(b["area"]) or {}).items():
@@ -181,8 +182,8 @@ def main() -> int:
     print(f"[chart] ruler (pixel measure vs table, Kuva 12): {ruler}", file=sys.stderr, flush=True)
 
     # ---- the county figure, read twice
-    r13 = g.read_chart(k13, figure="Kuva 13", caption=cap13)
-    r13b = g.read_chart(k13, figure="Kuva 13", caption=cap13)
+    r13 = g.read_chart(k13, figure="Kuva 13", caption=cap13, model=MODEL)
+    r13b = g.read_chart(k13, figure="Kuva 13", caption=cap13, model=MODEL)
     px13 = pixel_shares(k13)
     same_bars = len(px13) == len(r13["bars"])
     second = {b["area"]: b["shares"] for b in r13b["bars"]}

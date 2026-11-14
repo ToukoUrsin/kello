@@ -16,7 +16,7 @@ function Mark({ c }: { c: GapCheck }) {
 function Check({ c }: { c: GapCheck }) {
   return (
     <li className={`gapcheck ${c.verdict}`}>
-      <div className="gapcheck-q"><Mark c={c} /><b>{c.question_en}</b><span className={`tag ${c.kind}`}>{c.kind}</span></div>
+      <div className="gapcheck-q"><Mark c={c} /><b>{c.question_en}</b>{c.verdict === "cannot_tell" ? <span className="tag">not published</span> : <span className={`tag ${c.kind}`}>{c.kind}</span>}</div>
       <p>{c.answer_en}</p>
       <Source c={c} />
     </li>
@@ -35,7 +35,8 @@ export default function GapChecks({ areaId, variant }: { areaId: string; variant
   if (state.error && !state.data) return <div className={`gapchecks ${variant}`}><Failed message={`The checks of the gap could not be loaded. ${state.error}`} retry={state.reload} /></div>;
   if (!checks.length) return null;
   if (variant === "line") {
-    return <details className="gapchecks line"><summary><b>Is this gap real?</b> {(overall ?? "").split(". ")[0].replace(/\.?$/, ".")} <span className="gapmarks" aria-hidden="true">{checks.map((c) => <i key={c.id} className={c.verdict} />)}</span></summary><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol></details>;
+    const first = (overall ?? "").split(". ")[0].replace(/\.?$/, ".");
+    return <details className="gapchecks line"><summary><b>Is this gap real?</b> <span className="gapsum">{first}</span> <span className="gapmarks" aria-hidden="true">{checks.map((c) => <i key={c.id} className={c.verdict} />)}</span></summary><p className="gapsum-open">{first}</p><ol>{checks.map((c) => <Check key={c.id} c={c} />)}</ol></details>;
   }
   if (variant === "strip") {
     return (

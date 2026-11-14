@@ -14,7 +14,7 @@ const T = {
   fi: { title: (n: string) => `${n}: kuka tekee mitä maanantaina`, sub: (k: number, eur: string) => `${k} toimea, ${eur} vuodessa. Jokainen rivi on yhden ihmisen tehtävä: mitä hän tekee tällä viikolla, mitä se maksaa ja mistä tietää 90 päivän kuluttua, että se on tehty.`,
     who: "Kuka", what: "Toimi", week: "Tällä viikolla", cost: "Kustannus / v", done: "Tehty 90 päivässä, kun", zero: "Vaihe nolla", ask: "Viikko 1: kysy ensin yliopistosairaalalta",
     askSub: "Alueen ja sairaalan verkkosivuilta löytyi merkkejä siitä, että osa tästä on jo käytössä. Yksi puhelu kustakin ratkaisee asian ennen kuin rahaa käytetään.",
-    web: (_w: string, d: string) => `Verkkotarkistus ${d}: osin käytössä, kysy ensin`, total: "Kaikki toimet", print: "Tulosta / tallenna PDF", plan: "Avaa yhden sivun suunnitelma", county: "Takaisin alueeseen",
+    web: (w: string, d: string) => `Verkkotarkistus ${d}: ${({ "take it out": "jo käytössä", "narrow it": "osin käytössä, rajaa", "ask first": "osin käytössä, kysy ensin" } as Record<string, string>)[w.toLowerCase()] ?? "kysy ensin"}`, total: "Kaikki toimet", print: "Tulosta / tallenna PDF", plan: "Avaa yhden sivun suunnitelma", county: "Takaisin alueeseen",
     note: "Kustannukset ovat suunnitteluarvioita. ”Tehty” on työtä, jonka alue voi itse laskea; yksikään tutkimus ei ole mitannut, kuinka monta potilasta enemmän nämä toimet tuovat parantavaan hoitoon.", none: "Tälle alueelle ei ole valittu toimia tällä budjetilla." },
 };
 const day = (iso?: string | null, lang: Lang = "en") => (iso ? new Date(iso).toLocaleDateString(lang === "fi" ? "fi-FI" : "en-GB", { day: "numeric", month: "short" }) : "");
@@ -51,6 +51,18 @@ export default function Monday({ scope, budget, lang, setLang, objective, withou
         </div>
       </header>
       <ExpertQuote scope={scope} lang={lang} />
+      <div className="mweek">
+      {rows.some((c) => zero.has(c.intervention_id)) && rows.length > 1 && <p className="mdecide">{fi
+        ? <><b>Päätös tällä viikolla.</b> Hyväksy rivin 0 kertomustarkistus ({money(rows.find((c) => zero.has(c.intervention_id))!.eur)}) ja soita yliopistosairaalaan alla olevat kysymykset. Rivit 1–{rows.length - 1} käynnistetään vasta, kun vastaukset ja tarkistuksen tulos ovat tiedossa, ja vain ne, joita tulos tukee.</>
+        : <><b>The decision this week.</b> Approve the chart check in row 0 ({money(rows.find((c) => zero.has(c.intervention_id))!.eur)}) and call the university hospital with the questions below. Rows 1–{rows.length - 1} start only when those answers and the chart check are in, and only the ones they support.</>}</p>}
+      {ask.length > 0 && (
+        <section className="mask1" aria-label={t.ask}>
+          <h2>{t.ask}</h2>
+          <p className="small muted">{t.askSub}</p>
+          <ol>{ask.map((q) => <li key={q.intervention_id}>{fi ? q.question_fi ?? q.question_en : q.question_en}</li>)}</ol>
+        </section>
+      )}
+      </div>
       {rows.length === 0 ? <p className="muted">{t.none}</p> : (
         <table className="mtable">
           <thead><tr><th className="mn" aria-label="#" /><th>{t.who}</th><th>{t.what}</th><th>{t.week}</th><th className="r">{t.cost}</th><th>{t.done}</th></tr></thead>
@@ -65,20 +77,13 @@ export default function Monday({ scope, budget, lang, setLang, objective, withou
                     {f && <span className="mask">{t.web(adviceWord(f) ?? "Ask first", day(f.checked_at, lang))}</span>}</td>
                   <td data-th={t.week}>{(fi ? c.first_step_fi : null) ?? c.first_step_en}</td>
                   <td data-th={t.cost} className="r num mcost">{money(c.eur)}</td>
-                  <td data-th={t.done}>{(fi ? c.day90_fi : null) ?? c.day90_en}</td>
+                  <td data-th={t.done} className="mdone">{(() => { const [done, counted] = ((fi ? c.day90_fi : null) ?? c.day90_en ?? "").split(/\s(?=(?:Counted|Lasketaan|Laskenta):)/); return <>{done}{counted && <span className="mcounted">{counted}</span>}</>; })()}</td>
                 </tr>
               );
             })}
           </tbody>
           <tfoot><tr><td /><td colSpan={3}><b>{t.total}</b></td><td className="r num mcost"><b>{money(d.totals.eur)}</b></td><td /></tr></tfoot>
         </table>
-      )}
-      {ask.length > 0 && (
-        <section className="mask1" aria-label={t.ask}>
-          <h2>{t.ask}</h2>
-          <p className="small muted">{t.askSub}</p>
-          <ol>{ask.map((q) => <li key={q.intervention_id}>{fi ? q.question_fi ?? q.question_en : q.question_en}</li>)}</ol>
-        </section>
       )}
       <p className="small muted mnote">{t.note}</p>
       <div className="mlinks noprint"><button className="btn" onClick={openPlan}>{t.plan}</button><button className="btn quiet" onClick={openCounty}>{t.county}</button></div>

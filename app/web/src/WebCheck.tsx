@@ -40,13 +40,13 @@ export function checkCount(ids: string[], checks: Record<string, VerifyResult | 
   const [out, narrow, ask, none] = [n("take_out"), n("narrow"), n("check_first"), n("keep")];
   const bits = fi
     ? [out ? `${out} jo käytössä, poistettu` : null, narrow ? `${narrow} rajaa` : null, ask ? `${ask} kysy ensin` : null, none ? `${none} ei julkista merkkiä` : null]
-    : [out ? `${out} already in place, taken out` : null, narrow ? `${narrow} narrow it` : null, ask ? `${ask} ask first` : null, none ? `${none} no public sign` : null];
+    : [out ? `${out} already in place, taken out` : null, narrow ? `${narrow} narrow it` : null, ask ? `${ask} ask first` : null, none ? `${none} not mentioned on any public page` : null];
   return fi ? `${done.length}/${ids.length} toimesta tarkistettu verkosta${today ? " tänään" : ""}: ${bits.filter(Boolean).join("; ")}`
     : `${done.length} of ${ids.length} actions checked against the web${today ? " today" : ""}: ${bits.filter(Boolean).join("; ")}`;
 }
 /** "Gemini" / "Claude", never a model id. */
 export const modelName = (m?: string | null) => (!m ? null : /gemini/i.test(m) ? "Gemini" : /claude|opus|sonnet|haiku/i.test(m) ? "Claude" : null);
-const IN_USE_SHORT: Record<string, string> = { yes: "Already running here", partly: "Partly in place", planned: "Planned, not running yet", no_evidence: "No public sign of it" };
+export const IN_USE_SHORT: Record<string, string> = { yes: "Already running here", partly: "Partly in place", planned: "Planned, not running yet", no_evidence: "No public page mentions it" };
 const gistOf = (x?: { in_use_here?: string | null; advice?: string | null } | null) => [IN_USE_SHORT[x?.in_use_here ?? ""], ADVICE[x?.advice ?? ""]].filter(Boolean).join(" · ") || "No answer";
 const dayShort = (iso?: string | null) => { const d = new Date(iso ?? ""); return Number.isNaN(d.getTime()) ? "the stored check" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }); };
 
@@ -77,7 +77,7 @@ const text = (x: unknown): string => (typeof x === "string" ? x : x && typeof x 
 const secs = (ms?: number) => (ms == null ? "" : ms >= 950 ? `${(ms / 1000).toFixed(1)} s` : `${Math.round(ms)} ms`);
 const toolName = (t: TraceStep) => (/claude|gemini/i.test(t.tool ?? "") ? modelName(t.model) ?? modelName(t.tool) ?? "Model" : (t.tool ?? "").replace(/^oxylabs/i, "Oxylabs"));
 /** What a step does, in plain words, before the endpoint that did it. */
-const stepLabel = (t: TraceStep) => (isSearch(t) ? "Searching Finnish hospital and county sites" : isRead(t) ? "Reading a page" : /claude|gemini/i.test(t.tool ?? "") ? `${modelName(t.model) ?? modelName(t.tool) ?? "The model"} reads what was found` : "");
+export const stepLabel = (t: TraceStep) => (isSearch(t) ? "Searching Finnish hospital and county sites" : isRead(t) ? "Reading a page" : /claude|gemini/i.test(t.tool ?? "") ? `${modelName(t.model) ?? modelName(t.tool) ?? "The model"} reads what was found` : "");
 
 function Endpoints({ rows }: { rows?: EndpointUse[] | null }) {
   if (!rows?.length) return null;

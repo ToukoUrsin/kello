@@ -1,43 +1,67 @@
-All numbers below come from the six live API responses (6/6 HTTP 200, empty `error` arrays, 197 records total).
+For all six cancer–sex groups, Finland's 5-year relative survival in 2020–2024 is 5–13 percentage points (pp) below the Sweden–Norway mean. Finland trails that mean by roughly 6–19 years. Since 1990 the gap has widened in every decade the data cover. All data were fetched live from the API, release 961, using the parameters you gave. Every API call returned an empty `error` field.
 
-## Where Finland stands, 2020–2024 (5-year relative survival, %)
+## Results (2020–2024, age-standardised 5-year relative survival, %)
 
-| Cancer | Sex | Finland | Sweden | Norway | SE/NO mean | Gap (pp, 95% CI) | Gap change per decade (pp, 95% CI) | Finland lags |
-|---|---|---|---|---|---|---|---|
-| Lung | Male | 17.9 | 31.3 | 30.8 | 31.05 | **−13.15** (−14.74, −11.56) | −3.92 (−5.67, −2.17), p=0.002 | 10.1 y |
-| Lung | Female | 30.8 | 38.9 | 38.4 | 38.65 | **−7.85** (−9.78, −5.92) | −3.36 (−4.68, −2.05), p=0.001 | 6.2 y |
-| Pancreas | Male | 12.1 | 17.3 | 18.7 | 18.00 | **−5.90** (−7.98, −3.82) | −2.29 (−3.49, −1.10), p=0.006 | 8.9 y |
-| Pancreas | Female | 13.6 | 17.9 | 20.0 | 18.95 | **−5.35** (−7.51, −3.19) | −1.53 (−2.93, −0.12), p=0.039 | 8.2 y |
-| Liver | Male | 14.4 | 25.8 | 24.5 | 25.15 | **−10.75** (−13.57, −7.93) | −4.37 (−11.54, +2.80), p=0.12 | 14.7 y |
-| Liver | Female | 12.5 | 23.6 | 25.9 | 24.75 | **−12.25** (−16.08, −8.42) | −4.63 (−6.94, −2.32), p=0.008 | 18.6 y |
+| Cancer | Sex | Finland | Sweden | Norway | SE/NO mean | Gap (pp, approx. 95% CI) | Finland as % of mean | Lag (years) |
+|---|---|---|---|---|---|---|---|---|
+| Lung | Men | 17.9 | 31.3 | 30.8 | 31.05 | −13.2 (−14.7 to −11.6) | 57.6 | 10.1 |
+| Lung | Women | 30.8 | 38.9 | 38.4 | 38.65 | −7.9 (−9.8 to −5.9) | 79.7 | 6.2 |
+| Pancreas | Men | 12.1 | 17.3 | 18.7 | 18.00 | −5.9 (−8.0 to −3.8) | 67.2 | 8.9 |
+| Pancreas | Women | 13.6 | 17.9 | 20.0 | 18.95 | −5.4 (−7.5 to −3.2) | 71.8 | 8.2 |
+| Liver | Men | 14.4 | 25.8 | 24.5 | 25.15 | −10.8 (−13.6 to −7.9) | 57.3 | 14.7 |
+| Liver | Women | 12.5 | 23.6 | 25.9 | 24.75 | −12.3 (−16.1 to −8.4) | 50.5 | 18.6 |
 
-Denmark (shown in the figures for context) is between Finland and the SE/NO mean in every one of the six latest-period series.
+**How the gap changed (Finland minus the SE/NO mean, in pp, at the start of each decade):**
 
-**The gap is not a stalled Finland — it is a slower Finland.** Finnish survival rose in all six series (e.g. lung males +3.4 pp/decade, lung females +5.6, pancreas males +3.3, liver males +2.9). The Sweden/Norway benchmark rose faster in all six (lung males +7.3, lung females +8.9, pancreas males +5.6, liver males +7.5 pp/decade), so the gap widened. Lung and pancreas gaps were near zero in the 1990s — Finnish women with lung cancer were *above* the benchmark through 2000–2004 (+1.4 pp) — and opened after about 2005. The liver-male gap trend is the one estimate not distinguishable from no change (CI spans zero, 4 periods only).
+| Cancer | Sex | 1990–94 | 2000–04 | 2010–14 | 2020–24 | Trend (pp per decade, linear fit) |
+|---|---|---|---|---|---|---|
+| Lung | Men | −1.0 | −1.5 | −5.25 | −13.15 | −3.9 |
+| Lung | Women | +0.7 | +1.35 | −4.15 | −7.85 | −3.4 |
+| Pancreas | Men | +0.6 | −0.9 | −3.45 | −5.9 | −2.3 |
+| Pancreas | Women | −0.85 | −0.2 | −2.35 | −5.35 | −1.5 |
+| Liver | Men | n/a | n/a | −8.9 | −10.75 | −4.4 (4 periods) |
+| Liver | Women | n/a | −2.95 | −7.5 | −12.25 | −4.6 (5 periods) |
 
-**Lag** is the number of calendar years ago that the SE/NO mean curve passed Finland's current value, by linear interpolation between period mid-years: Finland's 2020–2024 lung-male survival (17.9%) sits between the benchmark's 13.85% in 2007 and 17.95% in 2012.
+- **The gap is new.** In 1990–94 Finland was within about 1 pp of Sweden and Norway for lung and pancreas cancer, and ahead of them for women's lung cancer.
+- **Finland improved, but more slowly.** From 1990–94 to 2020–24, men's lung survival rose 9.6 pp in Finland against 21.75 pp for the Sweden–Norway mean. Women's lung survival rose 17.5 pp against 26.05 pp.
+- **Lung cancer in men is the widest gap and is still opening fastest:** it grew 7.9 pp between 2010–14 and 2020–24. Finland's own value barely moved (17.4 → 17.9) between 2015–19 and 2020–24.
+- **Lag** is the number of years before 2022 (the midpoint of 2020–24) at which the Sweden–Norway mean was at Finland's current level. I read it off a straight line drawn between period midpoints.
 
-![Lung cancer survival, Nordic countries 1990–2024](artifacts/nordcan_lung.png)
+![Lung cancer](artifacts/fig_lung_survival_gap.png)
+![Pancreas cancer](artifacts/fig_pancreas_survival_gap.png)
+![Liver cancer](artifacts/fig_liver_survival_gap.png)
 
-![Pancreatic cancer survival, Nordic countries 1990–2024](artifacts/nordcan_pancreas.png)
+## Limits of the data
+1. **Missing values for liver cancer.** The API returns nothing for 11 country–period combinations between 1990 and 2024. These include Finnish liver cancer in 1990–94 (both sexes), and Norwegian liver cancer for 1990–2004 in men and 1990–1999 in women. Where either Sweden or Norway is missing, the mean is left undefined; I did not fill these in. As a result, there are no liver gap values before 2005–09 for men or 2000–04 for women. The liver trends rest on 4–5 points. Pancreas cancer in men in Finland is also missing for 1995–99.
+2. **The latest period is estimated differently.** NORDCAN uses the cohort approach for 5-year survival in all but the last five-year period, for which the period approach was used. The 2020–24 figure is therefore an up-to-date prediction rather than observed 5-year follow-up. Part of the widening in that period could come from the change of method.
+3. **What the numbers measure.** The estimates are age-standardised relative survival estimated using the Pohar Perme estimator, with individual ICSS weights. They are calculated by the API, not by me. The API documentation does not define the path parameter `5` or `age_surv=0`; I used them exactly as you specified.
+4. **The year range has no effect.** `year_end=2023` and `year_end=2024` returned identical data: the latest period is always labelled 2020–2024, with midpoint 2022. I could not check from the API how far follow-up actually extends.
+5. **Confidence intervals and lag are approximate.**
+   - The gap intervals assume symmetric, independent errors. NORDCAN's intervals are asymmetric, so the error was approximated as the CI width divided by 3.92.
+   - The lag uses straight lines between 5-year points, so it is precise to a few years at best. For liver cancer it depends on 2–3 noisy points: Norway's liver CIs are 8–15 pp wide.
+6. **Not adjusted for stage or case mix.** Relative survival does not account for stage at diagnosis or tumour type. The gaps may partly reflect differences in diagnosis, registration or coding between the countries rather than outcomes alone.
 
-![Liver cancer survival, Nordic countries 1990–2024](artifacts/nordcan_liver.png)
+## Files
+- [nordcan_finland_gap_results.csv](artifacts/nordcan_finland_gap_results.csv) — the results table
+- [nordcan_survival_gap.py](artifacts/nordcan_survival_gap.py) — the full analysis script. Running it with `--offline` re-runs everything from the saved raw files; I checked that it reproduces the results table exactly.
+- [nordcan_surv5_long.csv](artifacts/nordcan_surv5_long.csv) — every value returned by the API, flattened into one table
+- Raw API responses, saved with their request URLs, one per cancer and sex:
+  - Lung: [men](artifacts/nordcan_surv5_cancer160_sex1_1973_2024.json), [women](artifacts/nordcan_surv5_cancer160_sex2_1973_2024.json)
+  - Pancreas: [men](artifacts/nordcan_surv5_cancer130_sex1_1973_2024.json), [women](artifacts/nordcan_surv5_cancer130_sex2_1973_2024.json)
+  - Liver: [men](artifacts/nordcan_surv5_cancer110_sex1_1973_2024.json), [women](artifacts/nordcan_surv5_cancer110_sex2_1973_2024.json)
 
-## Limits of these data
+---
 
-1. **Coverage is incomplete for liver.** Eleven country × sex × period cells are absent from the API in 1990–2024, ten of them liver: Norway has no liver estimate before 2005–2009 (males) or 2000–2004 (females), Denmark none for 1995–1999, Finland none for 1990–1994. The liver benchmark therefore begins at 2000–2004 (females) / 2005–2009 (males), and the liver trend uses 5 and 4 periods respectively rather than 7. Finland's 1995–1999 pancreas-male estimate is also absent. Nothing was imputed; these cells are empty in the outputs.
-2. **The latest period may rest on partial follow-up.** The API labels the last band 2020–2024 even though `year_end=2023` was requested, and the response carries no field stating the follow-up cut-off or the estimation method (cohort, period or hybrid). The 2020–2024 figures should be read as provisional.
-3. **What `age_surv=0` returns is not documented in the response.** It yields one value per period (vs. five age-specific rows for `age_surv=1/2`), so it is the all-ages series, but the payload contains no flag saying whether it is age-standardised or crude. If crude, part of the Finland–Sweden/Norway difference could reflect age structure at diagnosis rather than survival itself.
-4. **The benchmark is an unweighted mean** of the two national estimates, matching the "Sweden/Norway average" wording of the strategy target; it is not population-weighted, so Norway (smaller) counts equally with Sweden.
-5. **Gap confidence intervals are derived, not supplied.** The API gives 95% CIs per country only; gap CIs were computed from those, assuming normality and independence between countries. Trend slopes are ordinary least squares on period mid-years, which treats each period estimate as equally precise.
-6. **Lag has ±2.5-year granularity** from the 5-year period grid, and assumes the benchmark rose monotonically. For liver the crossing falls inside the first available benchmark interval, so those two values are especially sensitive to where the series begins.
-7. **Relative survival is not treatment quality alone.** Case counts, stage distribution and registration practice are not returned by this endpoint, so differences in early detection, lead time and death-certificate-only handling cannot be separated from differences in care — the direct implication for a strategy targeting these three sites.
+**Correction after the app's own review of this answer:**
 
-Artifacts:
-- [nordcan_gap_summary.csv](artifacts/nordcan_gap_summary.csv) — the results table above, with full precision, p-values, periods used and lag provenance
-- [nordcan_survival_1990_2024.csv](artifacts/nordcan_survival_1990_2024.csv) — per cancer × sex × period: all four countries, benchmark, gap with CI
-- [nordcan_survival_long_all_periods.csv](artifacts/nordcan_survival_long_all_periods.csv) — tidy long form including the pre-1990 periods the API returned
-- [nordcan_survival_analysis.py](artifacts/nordcan_survival_analysis.py) — full script; set `OFFLINE = True` to re-run from the saved payloads
-- [nordcan_raw_api.tar.gz](artifacts/nordcan_raw_api.tar.gz) and [nordcan_api_manifest.json](artifacts/nordcan_api_manifest.json) — the six raw JSON responses with URLs, record counts and SHA-256 checksums
+Correct: the "widened in every decade" claim was wrong for 1990–94 to 2000–04. Here is the corrected statement, using the values already in the results table:
 
-One note on access: `canapi.iarc.who.int` was not on the sandbox allowlist, so the fetch required a one-time domain grant, which you approved; the data are live from that host, not from any mirror.
+- **From 2000–04 to 2010–14, and from 2010–14 to 2020–24:** the gap widened in every cancer–sex group with data, by 1.85–7.9 pp per decade.
+- **From 1990–94 to 2000–04, the pattern was mixed:**
+  - Lung, men: the gap widened slightly (−1.0 → −1.5 pp).
+  - Pancreas, men: Finland went from slightly ahead to slightly behind (+0.6 → −0.9 pp).
+  - Pancreas, women: the gap narrowed (−0.85 → −0.2 pp).
+  - Lung, women: Finland was ahead and its lead grew (+0.7 → +1.35 pp).
+  - Liver: no values for this decade.
+
+The results table and figures are unchanged. Only the summary sentence was wrong.

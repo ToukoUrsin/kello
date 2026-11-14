@@ -10,7 +10,7 @@ export interface CareSummary { curative_share_pct: number; lo?: number | null; h
 export interface OverviewArea { id: string; short_en: string; short_fi: string; yta?: string | null; total_days: Interval; worst_step: string; care?: CareSummary | null; measured?: Record<string, MeasuredVal | null> | null; patients_per_year?: number | null }
 export interface PathwayFigure { label_en: string; value: number | null; national: number | null; unit?: string; kind: Kind; verdict_en: string; source_id?: string | null; source_url?: string | null; page?: number | string | null; quote?: string | null; read_by?: string | null; period?: string | null; note_en?: string | null }
 export interface PathwayStep { id: string; label_en: string; figures: PathwayFigure[]; verdict?: "here" | "possibly_here" | "not_behind" | "cannot_tell"; verdict_en: string; answer_en?: string; what_not_published_en: string }
-export interface Pathway { steps: PathwayStep[]; note_en?: string; what_finland_does_not_publish?: string[]; distance_en?: string; stage_bound_en?: string; drug_finding?: { drug: PathwayFigure; life_prolonging: PathwayFigure } }
+export interface Pathway { steps: PathwayStep[]; note_en?: string; what_finland_does_not_publish?: string[]; distance_en?: string; stage_bound_en?: string; drug_finding?: { drug: PathwayFigure; life_prolonging: PathwayFigure; next_en?: string | null } }
 export interface Overview { national: { total_days: Interval; gap_checks?: GapCheck[]; gap_checks_overall_en?: string; gap_checks_overall_fi?: string; pathway?: Pathway }; areas: OverviewArea[]; pathway?: Pathway; gap_checks?: GapCheck[]; gap_checks_overall_en?: string; national_lead?: { patients_short_per_year: number; patients_short_in_seven_counties: number; counties: number; plan_budget_eur: number; plan_extra_curative_patients_per_year: number; plan_gap_closed_pct: number; plan_spent_eur: number; note_en?: string }; clock_note_en?: string | null; fixture?: boolean }
 
 /** One stage of the care path: what share of a county's lung cancer patients reach it. */
@@ -51,7 +51,7 @@ export interface Chosen { intervention_id: string; name_en: string; name_fi?: st
   owner_level?: "county" | "collaborative_area" | "national"; owner_en?: string; targets_stage?: string | null;
   extra_curative_patients_per_year: Interval; deaths_avoided_per_year: Interval; eur_per_extra_curative_patient: number | null; eur_per_death_avoided: number | null;
   confidence: string; first_step_en?: string; kpi?: Kpi | null; effect_kind?: Kind; note_en?: string | null; why_first_en?: string | null;
-  shown: { extra: number; deaths: number }; study_line_en?: string | null; why_here_en?: string | null; n?: number; group?: string;
+  shown: { extra: number; deaths: number }; study_line_en?: string | null; why_here_en?: string | null; study_line_fi?: string | null; why_here_fi?: string | null; n?: number; group?: string;
   owner_fi?: string; first_step_fi?: string; day90_en?: string; day90_fi?: string }
 export interface ExpertReview { scope?: string; quote_en: string; quote_fi?: string; name: string; role?: string; org?: string; date?: string; consent: boolean }
 export interface Strip { closes: number | null; of: number | null; pct: number | null; deaths: number | null; spent: number; budget: number; left: number; saturated: boolean; lead_en: string; money_en: string; left_en: string; text_en: string }
@@ -87,7 +87,7 @@ export interface VerifyResult { question?: string; verdict: string; summary_en?:
   in_use_label_en?: string | null; verdict_en?: string | null; effect_label_en?: string | null; supported_en?: string | null; not_supported_en?: string | null; missing_en?: string | null;
   searched_en?: string | null; queries?: string[] | null; endpoints_used?: EndpointUse[] | null; model?: string | null; models?: string[] | null; from_cache?: boolean; live_error?: string | null;
   previous?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string; model?: string; evidence_n?: number } | null; stability?: string; live_candidate?: { verdict?: string; effect_check?: string; in_use_here?: string; plan_effect?: string; advice?: string; checked_at?: string; model?: string; evidence_n?: number } | null;
-  live_outcome?: "first" | "replaced" | "kept" | "failed" | null; live_error_en?: string | null; live_tried_at?: string | null; evidence_n?: number | null; live_trace?: TraceStep[] | null;
+  live_outcome?: "first" | "replaced" | "kept" | "failed" | null; live_slow_s?: number | null; live_error_en?: string | null; live_tried_at?: string | null; evidence_n?: number | null; live_trace?: TraceStep[] | null;
   trace?: TraceStep[] | null; rounds?: number | null; searches?: number | null; pages_read?: unknown[] | null; seconds?: number | null }
 /** A live run followed by id: the steps from `since` on, and once it has ended the result (or, with nothing stored, a plain reason). */
 export interface LiveJob<T> { job_id: string; status: "running" | "done" | "failed"; elapsed_s: number; since: number; next: number; steps: TraceStep[]; result?: T; error_en?: string }
@@ -274,6 +274,8 @@ export function eurx(n: number | null | undefined): string {
   return Math.abs(n) >= 1e6 ? eur(n) : `€${nf0.format(Math.round(n))}`;
 }
 /** Millions in server-written text read like the rest of the page: €1,426,060 -> €1.43M. */
+/** A cost per patient or per death rests on an estimated effect, so it is said in thousands. */
+export const eurAbout = (n: number | null | undefined) => (n == null ? "–" : `about ${eurx(Math.round(n / 1000) * 1000)}`);
 export const plainMoney = (t?: string | null) => (t ?? "").replace(/€(\d{1,3}(?:,\d{3}){2,})(?![\d,])/g, (_m, d: string) => eurx(Number(d.replace(/,/g, ""))));
 /** A range in the same decimals as its point: 0–7.7 */
 export const rng1 = (lo: number, hi: number) => {

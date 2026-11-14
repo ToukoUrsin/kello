@@ -186,8 +186,8 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
     const src = new EventSource(`/api/plan/${scope}/stream?${q}`);
     es.current = src;
     src.addEventListener("status", (e) => setStage(JSON.parse((e as MessageEvent).data).stage));
-    src.addEventListener("delta", (e) => setDraft((d) => d + JSON.parse((e as MessageEvent).data).text));
-    src.addEventListener("done", (e) => { const p: Plan = JSON.parse((e as MessageEvent).data); setPlan(p); setStage(null); api.notePlan(p.fixture === true); src.close(); });
+    src.addEventListener("delta", (e) => my === planGen.current && setDraft((d) => d + JSON.parse((e as MessageEvent).data).text));
+    src.addEventListener("done", (e) => { if (my !== planGen.current) { src.close(); return; } const p: Plan = JSON.parse((e as MessageEvent).data); setPlan(p); setStage(null); api.notePlan(p.fixture === true); src.close(); });
     src.addEventListener("error", (e) => {
       const data = (e as MessageEvent).data;
       src.close();
@@ -298,7 +298,7 @@ export default function PlanView({ scope, budget, setBudget, lang, setLang, obje
             </section>}
             {((plan?.action_studies?.length ?? 0) > 0 || (opt.data?.chosen?.some((c) => c.study_line_en) ?? false)) && <section className="planstudies" aria-label="Effect studies">
               <h2>{lang === "fi" ? "Vaikutusarviot ja tutkimukset" : "Effect sizes and their studies"}</h2>
-              <ul>{(plan?.action_studies ?? opt.data?.chosen?.map((c) => ({ id: c.intervention_id, study_line_en: c.study_line_en, why_here_en: c.why_here_en })) ?? []).filter((x) => x.study_line_en || x.why_here_en).filter((x, i, all) => all.findIndex((y) => y.id === x.id && y.why_here_en === x.why_here_en && y.study_line_en === x.study_line_en) === i).map((x, i) => <li key={`${x.id}-${i}`}>{x.why_here_en && <><b>{lang === "fi" ? "Miksi täällä:" : "Why here:"}</b> {x.why_here_en}<br /></>}{x.study_line_en && <StudyLine text={x.study_line_en} label={lang === "fi" ? "Vaikutusarvio perustuu:" : "The effect comes from:"} linkLabel={lang === "fi" ? "avaa tutkimus" : "open the study"} />}</li>)}</ul>
+              <ul>{((lang === "fi" && opt.data?.chosen?.some((c) => c.why_here_fi || c.study_line_fi) ? opt.data.chosen.map((c) => ({ id: c.intervention_id, study_line_en: c.study_line_fi ?? c.study_line_en, why_here_en: c.why_here_fi ?? c.why_here_en })) : null) ?? plan?.action_studies ?? opt.data?.chosen?.map((c) => ({ id: c.intervention_id, study_line_en: c.study_line_en, why_here_en: c.why_here_en })) ?? []).filter((x) => x.study_line_en || x.why_here_en).filter((x, i, all) => all.findIndex((y) => y.id === x.id && y.why_here_en === x.why_here_en && y.study_line_en === x.study_line_en) === i).map((x, i) => <li key={`${x.id}-${i}`}>{x.why_here_en && <><b>{lang === "fi" ? "Miksi täällä:" : "Why here:"}</b> {x.why_here_en}<br /></>}{x.study_line_en && <StudyLine text={x.study_line_en} label={lang === "fi" ? "Vaikutusarvio perustuu:" : "The effect comes from:"} linkLabel={lang === "fi" ? "avaa tutkimus" : "open the study"} />}</li>)}</ul>
             </section>}
             {!plan && stage && <PlanSkeleton rest />}
             {plan && left.length > 0 && <p className="leftout"><b>{t.without}:</b> {left.join("; ")}.</p>}

@@ -1,0 +1,390 @@
+{
+ "dataset": [
+  {
+   "label": "Denmark",
+   "id": 208,
+   "country": 208,
+   "time": 5,
+   "sex": 1,
+   "year": 1992.0,
+   "period": "1990-1994",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "4.3",
+    "lowCI": "2.7",
+    "upCI": "6.7"
+   }
+  },
+  {
+   "label": "Denmark",
+   "id": 208,
+   "country": 208,
+   "time": 5,
+   "sex": 1,
+   "year": 2002.0,
+   "period": "2000-2004",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "4.1",
+    "lowCI": "2.8",
+    "upCI": "6.0"
+   }
+  },
+  {
+   "label": "Denmark",
+   "id": 208,
+   "country": 208,
+   "time": 5,
+   "sex": 1,
+   "year": 2007.0,
+   "period": "2005-2009",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "6.9",
+    "lowCI": "5.2",
+    "upCI": "9.0"
+   }
+  },
+  {
+   "label": "Denmark",
+   "id": 208,
+   "country": 208,
+   "time": 5,
+   "sex": 1,
+   "year": 2012.0,
+   "period": "2010-2014",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "10.7",
+    "lowCI": "8.9",
+    "upCI": "13.0"
+   }
+  },
+  {
+   "label": "Denmark",
+   "id": 208,
+   "country": 208,
+   "time": 5,
+   "sex": 1,
+   "year": 2017.0,
+   "period": "2015-2019",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "16.8",
+    "lowCI": "14.6",
+    "upCI": "19.4"
+   }
+  },
+  {
+   "label": "Denmark",
+   "id": 208,
+   "country": 208,
+   "time": 5,
+   "sex": 1,
+   "year": 2022.0,
+   "period": "2020-2024",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "19.5",
+    "lowCI": "17.2",
+    "upCI": "22.0"
+   }
+  },
+  {
+   "label": "Finland",
+   "id": 246,
+   "country": 246,
+   "time": 5,
+   "sex": 1,
+   "year": 1997.0,
+   "period": "1995-1999",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "7.4",
+    "lowCI": "5.4",
+    "upCI": "10.2"
+   }
+  },
+  {
+   "label": "Finland",
+   "id": 246,
+   "country": 246,
+   "time": 5,
+   "sex": 1,
+   "year": 2002.0,
+   "period": "2000-2004",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "8.2",
+    "lowCI": "6.0",
+    "upCI": "11.1"
+   }
+  },
+  {
+   "label": "Finland",
+   "id": 246,
+   "country": 246,
+   "time": 5,
+   "sex": 1,
+   "year": 2007.0,
+   "period": "2005-2009",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "10.9",
+    "lowCI": "8.9",
+    "upCI": "13.4"
+   }
+  },
+  {
+   "label": "Finland",
+   "id": 246,
+   "country": 246,
+   "time": 5,
+   "sex": 1,
+   "year": 2012.0,
+   "period": "2010-2014",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "9.3",
+    "lowCI": "7.6",
+    "upCI": "11.5"
+   }
+  },
+  {
+   "label": "Finland",
+   "id": 246,
+   "country": 246,
+   "time": 5,
+   "sex": 1,
+   "year": 2017.0,
+   "period": "2015-2019",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "14.2",
+    "lowCI": "12.3",
+    "upCI": "16.5"
+   }
+  },
+  {
+   "label": "Finland",
+   "id": 246,
+   "country": 246,
+   "time": 5,
+   "sex": 1,
+   "year": 2022.0,
+   "period": "2020-2024",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "14.4",
+    "lowCI": "12.5",
+    "upCI": "16.6"
+   }
+  },
+  {
+   "label": "Norway",
+   "id": 578,
+   "country": 578,
+   "time": 5,
+   "sex": 1,
+   "year": 2007.0,
+   "period": "2005-2009",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "13.6",
+    "lowCI": "10.4",
+    "upCI": "17.7"
+   }
+  },
+  {
+   "label": "Norway",
+   "id": 578,
+   "country": 578,
+   "time": 5,
+   "sex": 1,
+   "year": 2012.0,
+   "period": "2010-2014",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "16.8",
+    "lowCI": "14.0",
+    "upCI": "20.2"
+   }
+  },
+  {
+   "label": "Norway",
+   "id": 578,
+   "country": 578,
+   "time": 5,
+   "sex": 1,
+   "year": 2017.0,
+   "period": "2015-2019",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "21.7",
+    "lowCI": "18.8",
+    "upCI": "25.2"
+   }
+  },
+  {
+   "label": "Norway",
+   "id": 578,
+   "country": 578,
+   "time": 5,
+   "sex": 1,
+   "year": 2022.0,
+   "period": "2020-2024",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "24.5",
+    "lowCI": "21.4",
+    "upCI": "28.0"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 1987.0,
+   "period": "1985-1989",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "3.7",
+    "lowCI": "2.5",
+    "upCI": "5.5"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 1992.0,
+   "period": "1990-1994",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "4.9",
+    "lowCI": "3.7",
+    "upCI": "6.7"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 1997.0,
+   "period": "1995-1999",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "7.1",
+    "lowCI": "5.6",
+    "upCI": "9.0"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 2002.0,
+   "period": "2000-2004",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "7.7",
+    "lowCI": "6.2",
+    "upCI": "9.7"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 2007.0,
+   "period": "2005-2009",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "14.7",
+    "lowCI": "12.8",
+    "upCI": "16.9"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 2012.0,
+   "period": "2010-2014",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "19.6",
+    "lowCI": "17.8",
+    "upCI": "21.6"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 2017.0,
+   "period": "2015-2019",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "23.2",
+    "lowCI": "21.5",
+    "upCI": "25.1"
+   }
+  },
+  {
+   "label": "Sweden",
+   "id": 752,
+   "country": 752,
+   "time": 5,
+   "sex": 1,
+   "year": 2022.0,
+   "period": "2020-2024",
+   "cancer": 110,
+   "surv_period": 5,
+   "survival": {
+    "value": "25.8",
+    "lowCI": "23.9",
+    "upCI": "27.9"
+   }
+  }
+ ],
+ "error": [],
+ "_request_url": "https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/110/?&surv_period=5&age_surv=0&year_start=1973&year_end=2024"
+}

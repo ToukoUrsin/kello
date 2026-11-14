@@ -10,11 +10,17 @@ export default function ExpertQuote({ scope, lang = "en" }: { scope?: string; la
   const quote = (lang === "fi" ? r.quote_fi : null) ?? r.quote_en;
   const who = [r.role, r.org].filter(Boolean).join(", ");
   const day = r.date ? new Date(`${r.date}T12:00:00`).toLocaleDateString(lang === "fi" ? "fi-FI" : "en-GB", { day: "numeric", month: "long", year: "numeric" }) : null;
+  const initials = r.name.split(/\s+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
   return (
-    <figure className="expert" aria-label={lang === "fi" ? "Asiantuntijan arvio" : "Expert review"}>
-      <span className="eyebrow">{lang === "fi" ? "Asiantuntijan arvio" : "Reviewed by"}</span>
-      <blockquote>“{quote}”</blockquote>
-      <figcaption><b>{r.name}</b>{who ? `, ${who}` : ""}{day ? <span className="muted"> · {day}</span> : null}</figcaption>
+    <figure className="expert" aria-label={lang === "fi" ? "Asiantuntijan arvio" : "Reviewed by"}>
+      <blockquote><span className="qm" aria-hidden="true">“</span>{quote}”</blockquote>
+      <figcaption>
+        <span className="avatar" aria-hidden="true">{initials}</span>
+        <span className="whois">
+          <span><span className="muted">{lang === "fi" ? "Arvioinut" : "Reviewed by"}</span> <b>{r.name}</b></span>
+          <span className="muted">{who}{who && day ? " · " : ""}{day}</span>
+        </span>
+      </figcaption>
     </figure>
   );
 }

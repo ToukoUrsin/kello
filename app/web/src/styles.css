@@ -1960,12 +1960,19 @@ ol.pathway-grid { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 1100px) { .hero { grid-template-areas: "h" "e" "v" "r" "g" "p" "a" "n" "l" "x" "y"; } }
 .hero > .nationalresult { grid-area: x; }
 .hero > .pathwayline { grid-area: y; }
-.hero > .expert { grid-area: e; margin-top: 18px; max-width: 54ch; }
-.expert { margin: 0; padding: 14px 16px 13px; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; box-shadow: 0 0 0 1px var(--line); }
-.expert blockquote { margin: 2px 0 8px; font-size: 17px; line-height: 1.4; font-weight: 500; color: var(--ink); text-wrap: pretty; }
-.expert figcaption { font-size: 13px; color: var(--ink-2); }
+.hero > .expert { grid-area: e; margin: 22px 0 6px 0.5em; max-width: 52ch; }
+/* A person's words: set as a quote with a name under it, not as a callout box. */
+.expert { margin: 0; padding: 0; max-width: 60ch; }
+.expert blockquote { margin: 0; position: relative; font-size: 19px; line-height: 1.45; font-weight: 450; letter-spacing: -0.006em; color: var(--ink); text-wrap: pretty; }
+.expert .qm { position: absolute; left: -0.5em; top: 0; color: var(--ink-3); }
+.expert figcaption { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; line-height: 1.35; color: var(--ink-2); }
 .expert figcaption b { color: var(--ink); font-weight: 650; }
-.county > .expert, .monday > .expert { max-width: 80ch; }
+.expert .avatar { flex: 0 0 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-wash); color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.02em; }
+.expert .whois { display: grid; min-width: 0; }
+.county .pagehead .expert { margin-top: 18px; }
+.monday > .expert { padding-left: 0.5em; }
+@media (max-width: 640px) { .expert blockquote { font-size: 17px; } .expert { padding-left: 0.5em; } }
+@media print { .expert blockquote { font-size: 10pt; } .expert .avatar { display: none; } .expert figcaption { margin-top: 3pt; font-size: 8pt; } }
 .card .c90 { color: var(--ink-2); }
 
 .monday { max-width: 1240px; margin: 0 auto; padding: 32px 24px 56px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
@@ -1991,7 +1998,7 @@ ol.pathway-grid { list-style: none; margin: 0; padding: 0; }
 .mask1 ol { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 5px; font-size: 14px; }
 .mnote { max-width: 100ch; }
 .mlinks { display: flex; gap: 10px; }
-@media (max-width: 860px) {
+@media screen and (max-width: 860px) {
   .monday { padding: 20px 16px 40px; }
   .mhead h1 { font-size: 23px; }
   .mtable, .mtable tbody, .mtable tr, .mtable td, .mtable tfoot { display: block; }
@@ -2053,3 +2060,11 @@ ol.pathway-grid { list-style: none; margin: 0; padding: 0; }
   .rsteps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rwho { grid-template-columns: 1fr; }
 }
+
+/* v12: the gate between the audit and the spend */
+.pilotgate { margin: 2px 0; padding: 9px 12px; border-left: 3px solid var(--ink); background: var(--sunken); font-size: 14px; line-height: 1.45; max-width: 92ch; }
+.pilotgate b { font-weight: 700; }
+.mdecide { margin: 0; padding: 12px 14px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); font-size: 15px; line-height: 1.45; max-width: 100ch; }
+.mdecide b { font-weight: 700; }
+.drugnext { margin-top: 6px; font-size: 14px; }
+@media print { .pilotgate, .mdecide { font-size: 8.5pt; padding: 4pt 6pt; } }

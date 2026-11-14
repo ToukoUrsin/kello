@@ -7,6 +7,7 @@ let Gemini read the resulting table: lung cancer (C33-34) for every area at once
 from __future__ import annotations
 
 import json
+import os
 import sys
 
 from . import gemini_reader as g
@@ -83,6 +84,8 @@ def read_view(theme: str, tabu_suffix: str, value_suffix: str, hint: str) -> dic
 
 def main(argv: list[str]) -> int:
     append = "--append" in argv
+    if "--model" in argv:  # reads done ahead of time pass gemini_reader.OFFLINE_MODEL
+        os.environ["GEMINI_READER_MODEL"] = argv[argv.index("--model") + 1]
     views = VIEWS
     if "--view" in argv:  # run one view (0-based), so several can run side by side
         views = [VIEWS[int(argv[argv.index("--view") + 1])]]

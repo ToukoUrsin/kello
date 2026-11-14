@@ -340,7 +340,7 @@ def main() -> int:
     ap.add_argument("--prompt-file")
     ap.add_argument("--out")
     ap.add_argument("--frame", help="collect, or run: root frame id of an existing session")
-    ap.add_argument("--model", help="e.g. claude-opus-5 (default: the app's selection)")
+    ap.add_argument("--model", help="e.g. claude-opus-5-5 (default: the app's selection)")
     ap.add_argument("--timeout", type=int, default=3600)
     a = ap.parse_args()
     app = App()

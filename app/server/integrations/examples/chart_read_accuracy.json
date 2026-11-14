@@ -2,8 +2,8 @@
  "figure": "Kuva 13",
  "caption": "Keuhkosyöpäpotilaiden levinneisyysluokitus hyvinvointialueittain",
  "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
- "model": "gemini-4-hydrogen",
- "built_at": "2026-11-13T23:49:16+00:00",
+ "model": "gemini-4-carbon",
+ "built_at": "2026-11-14T10:04:33+00:00",
  "what": "Stage classification by wellbeing services county, published only as a stacked bar chart without numbers.",
  "rows": 110,
  "shipped": true,
@@ -11,7 +11,7 @@
  "check_a_blind_read_vs_table": {
   "how": "Kuva 12 (same chart design, collaborative areas) with its printed counts painted out; truth = printed count / area total in Taulukko 10",
   "n": 17,
-  "mean_abs_error_pp": 0.07,
+  "mean_abs_error_pp": 0.08,
   "max_abs_error_pp": 0.2,
   "within_1pp": 17,
   "within_2pp": 17,
@@ -42,64 +42,64 @@
     "area": "Itä-Suomen yhteistyöalue",
     "series": "Ei tietoa",
     "table_pct": 53.2,
-    "gemini_pct": 53.2,
-    "error_pp": 0.0
+    "gemini_pct": 53.1,
+    "error_pp": -0.1
    },
    {
     "area": "Itä-Suomen yhteistyöalue",
     "series": "Syre -levinneisyys",
     "table_pct": 18.2,
-    "gemini_pct": 18.2,
-    "error_pp": -0.0
+    "gemini_pct": 18.3,
+    "error_pp": 0.1
    },
    {
     "area": "Itä-Suomen yhteistyöalue",
     "series": "TNM",
     "table_pct": 25.0,
-    "gemini_pct": 24.9,
-    "error_pp": -0.1
+    "gemini_pct": 24.8,
+    "error_pp": -0.2
    },
    {
     "area": "Länsi-Suomen yhteistyöalue",
     "series": "Ei tietoa",
     "table_pct": 46.4,
-    "gemini_pct": 46.5,
-    "error_pp": 0.1
+    "gemini_pct": 46.4,
+    "error_pp": -0.0
    },
    {
     "area": "Länsi-Suomen yhteistyöalue",
     "series": "Syre -levinneisyys",
     "table_pct": 15.2,
-    "gemini_pct": 15.1,
-    "error_pp": -0.1
+    "gemini_pct": 15.2,
+    "error_pp": -0.0
    },
    {
     "area": "Länsi-Suomen yhteistyöalue",
     "series": "Stage",
     "table_pct": 6.1,
-    "gemini_pct": 6.2,
-    "error_pp": 0.1
+    "gemini_pct": 6.1,
+    "error_pp": -0.0
    },
    {
     "area": "Länsi-Suomen yhteistyöalue",
     "series": "TNM",
     "table_pct": 29.0,
-    "gemini_pct": 28.9,
-    "error_pp": -0.1
+    "gemini_pct": 29.0,
+    "error_pp": -0.0
    },
    {
     "area": "Pohjois-Suomen yhteistyöalue",
     "series": "Ei tietoa",
     "table_pct": 41.2,
-    "gemini_pct": 41.2,
-    "error_pp": 0.0
+    "gemini_pct": 41.1,
+    "error_pp": -0.1
    },
    {
     "area": "Pohjois-Suomen yhteistyöalue",
     "series": "Syre -levinneisyys",
     "table_pct": 16.6,
-    "gemini_pct": 16.6,
-    "error_pp": 0.0
+    "gemini_pct": 16.7,
+    "error_pp": 0.1
    },
    {
     "area": "Pohjois-Suomen yhteistyöalue",
@@ -112,8 +112,8 @@
     "area": "Pohjois-Suomen yhteistyöalue",
     "series": "TNM",
     "table_pct": 20.7,
-    "gemini_pct": 20.5,
-    "error_pp": -0.2
+    "gemini_pct": 20.6,
+    "error_pp": -0.1
    },
    {
     "area": "Sisä-Suomen yhteistyöalue",
@@ -126,8 +126,8 @@
     "area": "Sisä-Suomen yhteistyöalue",
     "series": "Syre -levinneisyys",
     "table_pct": 14.6,
-    "gemini_pct": 14.5,
-    "error_pp": -0.1
+    "gemini_pct": 14.4,
+    "error_pp": -0.2
    },
    {
     "area": "Sisä-Suomen yhteistyöalue",
@@ -142,7 +142,7 @@
   "how": "each county value against the exact colour widths of the same bar in the image",
   "n": 110,
   "mean_abs_error_pp": 0.2,
-  "max_abs_error_pp": 0.67,
+  "max_abs_error_pp": 0.77,
   "within_1pp": 110,
   "within_2pp": 110,
   "bars_gemini": 22,
@@ -157,7 +157,7 @@
   },
   "two_gemini_reads": {
    "n": 110,
-   "mean_abs_error_pp": 0.07,
+   "mean_abs_error_pp": 0.04,
    "max_abs_error_pp": 0.2,
    "within_1pp": 110,
    "within_2pp": 110
@@ -176,8 +176,8 @@
    {
     "series": "TNM",
     "table_4_pct": 27.3,
-    "gemini_weighted_pct": 27.3,
-    "error_pp": -0.0
+    "gemini_weighted_pct": 27.2,
+    "error_pp": -0.1
    },
    {
     "series": "Sanallinen",
@@ -189,13 +189,13 @@
     "series": "Stage",
     "table_4_pct": 1.7,
     "gemini_weighted_pct": 1.7,
-    "error_pp": 0.0
+    "error_pp": -0.0
    },
    {
     "series": "Syre -levinneisyys",
     "table_4_pct": 17.6,
-    "gemini_weighted_pct": 17.5,
-    "error_pp": -0.1
+    "gemini_weighted_pct": 17.6,
+    "error_pp": 0.0
    },
    {
     "series": "Ei tietoa",
@@ -206,9 +206,9 @@
   ]
  },
  "seconds": {
-  "kuva_12": 12.2,
-  "kuva_13": 22.6,
-  "kuva_13_second_read": 31.9
+  "kuva_12": 25.1,
+  "kuva_13": 44.3,
+  "kuva_13_second_read": 61.3
  },
  "limits": "Values are read off an axis, so they stay unverified with confidence 0.6 (0.4 where two reads differ by more than 1 point). Segments thinner than about 1 point can be missed. Only this chart design (100 % stacked bars) was tested."
 }

@@ -91,7 +91,7 @@ export default function FunnelPlot({ f, hot, setHot, onPick }: { f: Funnel; hot:
     <section className="panel funnel" aria-label="Funnel plot: share treated with the aim to cure, by county">
       <div className="fhead">
         <h2><b>{f.observed_outside_95} of {f.n_areas} counties</b> are further from Finland than chance explains. Chance alone would put about {exp} there.</h2>
-        <p className="small muted">Each dot is a county: its number of lung cancer patients (across) and the share treated to cure (up). Small counties swing more by chance, so the band where chance keeps a county is wider on the left. {f.observed_outside_998} of {f.n_areas} are outside even the wider band.</p>
+        <p className="small muted">Each dot is a county: its number of lung cancer patients (across) and the share treated to cure (up). Small counties swing more by chance, so the bands are wider on the left. Chance keeps a county inside the inner band 19 times in 20, and inside the outer band 499 times in 500. {f.observed_outside_95} of {f.n_areas} are outside the inner band; {f.observed_outside_998} of those are outside the outer band too.</p>
       </div>
       <div className="fplot" ref={box}>
         {g && (

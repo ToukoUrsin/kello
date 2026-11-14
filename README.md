@@ -41,7 +41,8 @@ Set `JUNCTION_OXYLABS_API_KEY`, `GEMINI_API_KEY`, and `ANTHROPIC_API_KEY`; set `
   person's job, with the owner's role, the first step this week, the cost a year and what done looks like in 90 days.
 - **The ask.** Six months with Lapland and the Oulu university hospital. Week 1: ask the hospital which actions already
   run. Weeks 1–8: audit 50 charts (€8,000). Months 3–6: start the two actions the audit says are new. Counted: about
-  71 patients, 64 decisions not to operate reviewed, decisions changed, referrals made. Model estimate: 18.5% → 20.5%
+  71 patients, about 22 decisions not to operate reviewed (patients whose cancer has not spread, at Finland's stage mix),
+  decisions changed, referrals made. Model estimate: 18.5% → 20.5%
   treated to cure by 2028.
 - **A one-page plan** per county, and one for Finland, in Finnish or English.
 
@@ -83,7 +84,7 @@ support the size of effect we assume?
 
 What changes in the plan: `yes` takes the measure out and frees its euros for the next one; `partly` or
 `planned` flags the line with what to ask whom ("Ask OYS first whether every frail stage I patient is already
-referred"); "no public sign of it" keeps the line and says what was searched. Example, Lapland: the check
+referred"); "no public page mentions it" keeps the line and says what was searched. Example, Lapland: the check
 found on OYS's own pathway page that the university hospital already "vastaa keuhkosyövän moniammatillisista
 kokouksista" (runs the lung cancer team meetings), so the video-meeting line is flagged instead of paid in full.
 Example of `yes`, Satakunta: direct CT referral from the health centre is "already running", from a

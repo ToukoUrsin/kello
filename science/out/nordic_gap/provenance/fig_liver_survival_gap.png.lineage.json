@@ -1,0 +1,1828 @@
+{
+ "artifact_id": "c6463516-1b87-418f-ab68-bed6eefd174a",
+ "version_id": "70c405ff-3214-4772-bd1f-c19f6696136f",
+ "version_number": 1,
+ "filename": "fig_liver_survival_gap.png",
+ "code": null,
+ "code_description": null,
+ "messages": [
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "[System] <skill_discovery signal=\"user_message\">\nReference material **available if needed** \u2014 these surfaced on keyword overlap with the request, not because the task requires them. Load when the task is analytic (compute, measure, process data) and the skill covers the API/library you'll use; for descriptive tasks (design, explain, survey, plan), you can often answer directly without loading.\n\nKeyword pre-scan \u2014 top lexical matches from a much larger catalog (word-overlap only, synonym-blind). For a task request, one on-point hit here usually suffices. For \"what can you do in X\" questions it doesn't \u2014 fan `search_skills` across the field's own terms first, then answer from the union. Only name skills actually retrieved this conversation; don't fill gaps from training.\n- managed-model-endpoints \u2014 Register a model service in the managed family \u2014 a local model server container the daemon starts/stops on demand, or a remote upstream model API (https). Read the runbook, allocate a port (local only), compose idempotent start/stop scripts (local only), register once. Load when the user wants a model service available for inference, or when list_compute shows managed endpoints.\n- indication-dossier \u2014 Generate a therapeutic indication dossier. Covers the patient population, epidemiology, disease biology, standard of care, regulatory precedent, and landmark clinical trials.\n- self-awareness \u2014 Claude Science's own session database schema and SDK surface for introspection via host.query(). Load this when you need to query your own conversation history, token usage, cost accounting, execution log, or artifact metadata beyond what host.frames()/host.artifacts() provide \u2014 e.g. \"how many tokens has this session used\", \"what was my last tool call\", \"list every file I've written\", \"where are messages stored\", \"what tables can I query\", \"inspect frames.context_data\", or any time you're about to PRAGMA-probe the Claude Science metadata DB to discover its schema.\n- figure-style \u2014 Publication-grade figure correctness and legibility rules for final-deliverable figures \u2014 not every plot. Quick look or iterating on the analysis (EDA scatters, sanity-check histograms)? Plot plainly without this skill. Producing a figure that ships \u2014 report, paper, export, or kept artifact \u2014 load this skill first and call `apply_figure_style()` \u2014 sets a role-mapped font-size ladder, outward ticks, frameless legends, and 300-dpi output. The skill is a checklist, not a house look: data fidelity (claim-titles tested against every row, excluded data never enters summaries), label economy (floor and ceiling), color threading, chart-choice-by-data-shape, layout, and a render-then-verify QA loop (bbox collision + per-panel perceptual check). Ships helpers: focal_palette, bar_with_points, strip_with_median, end_of_line_labels, panel_letter, set_frame, panel_crops. For multi-panel figures load `figure-composer`; for whole-paper figure arc load `paper-narrative`.\n- pdf-explore \u2014 Use this skill when the user has attached a PDF, paper, report, or other document and the answer needs content from more than one place in it: summarize the methods or any other section, compare sections, find where a topic is discussed, read a value or label off a figure or chart, or find/list/extract every instance of something across the whole document (datasets, benchmarks, citations, figures, table rows, accession numbers \u2014 including appendices). Skip it only for a single lookup of 1\u20134 pages quoted in your very next response \u2014 `read_file(pages=[...])` attaches pages as images that are dropped from context after one turn, so multi-section answers end up re-reading the same ranges repeatedly. Parses the PDF once in the Python kernel: `pdf_pages` (pages as persistent text), `pdf_outline` (TOC), `pdf_scan` (rank pages by relevance), `pdf_map`/`pdf_extract` (per-page summary / structured fields via parallel haiku calls). For PDF creation/manipulation, use reportlab/pypdf directly.\n- compute-env-setup \u2014 Set up a compute environment on a remote provider so Claude Science jobs can run there. Covers direct SSH/conda hosts, Slurm clusters, container-via-bridge runners, and managed-API providers (Modal, GCP, RunPod). Use when standing up a new provider, porting an env to a different backend, adding a tool that needs its own software stack, or wiring weight caches. Triggers on \"new compute provider\", \"set up env on\", \"port env to\", \"build GPU image\", \"weight cache\", \"compute_details\", \"conda env on the box\", \"apptainer on slurm\".\n- chrome-browser \u2014 Read this skill before the first step that uses Claude in Chrome, the browser extension whose tools are named mcp__claude-in-chrome__* (also called Chrome, the browser extension, or the external browser) and which acts in the person's real Chrome with their own sign-ins; before those tools are turned on there may be a single enable__mcp__claude-in-chrome tool instead. It covers loading the tools in one ToolSearch call, checking the person's open tabs and working in a new tab, site permissions, GIF recordings, console logs, dialogs to avoid, and when to stop and ask. It is not for the built-in browser (mcp__Claude_Browser__* or mcp__remote-devices__Claude_Browser__* tools), which has its own skill, and it does not decide which browser to use.\n</skill_discovery>"
+    }
+   ],
+   "_harness_notice": true,
+   "_uuid": "beb93a86-b0c7-4cfa-b952-6badd081f957",
+   "_ts": 1794650505291
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "Using the NORDCAN API (https://canapi.iarc.who.int/api/nordcan/v2/961/ \u2014 e.g. /survival/population/5/1/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023; sex 1 male 2 female; countries 246 Finland, 752 Sweden, 578 Norway, 208 Denmark; cancers 160 lung, 130 pancreas, 110 liver), compute 5-year relative survival trends 1990\u20132024 for lung, pancreas and liver cancer by sex. Quantify Finland's gap to the mean of Sweden and Norway in the latest period, how the gap has changed per decade, and how many years Finland lags. Produce one clear figure per cancer and a results table, and state the limits of the data.\n\nContext: Finland's National Cancer Strategy 2026\u20132035 sets the target of reaching the Sweden/Norway average for exactly these three cancers.\n\nRequirements:\n- Fetch the data live from the API in code; save the raw API responses as artifacts so the analysis can be re-run offline.\n- Save the results table as CSV, one PNG figure per cancer, and the full analysis script.\n- Report only numbers that come from the API responses. If an endpoint, period or parameter is unavailable, say so rather than substituting values.\n"
+    }
+   ],
+   "_uuid": "866c7310-dc69-435f-8379-7a17fcfc228e",
+   "_ts": 1794650505292
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "[System] compute snapshot \u2014 machine 504 GiB RAM, ~353 GiB available \u00b7 72 cores"
+    }
+   ],
+   "_harness_notice": true,
+   "_uuid": "7f9f7fe6-377e-44b4-83bc-e547bcedf47c",
+   "_ts": 1794650505293
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQShAYKEAgTGAI4AUIIdGhpbmtpbmcSDNg9oYTIjG5zjJQHyhoMgSPck2LBAtUkD3KRIjAU5LjtS3C7Q/2ayq1YfS8tCw0X1h/OrSpB0D3g63e+BDEblcCTcWahPkKhuESCm5QqoQU50ksxdKXrrLPDjsxO2E8ElINdK8nXOfNxbcQ4X0RrtVcVTDwpPwfs2kZDbPfDbITfyPubSXp6urrfv431r2bCcVQqP25QGl3MbUXj4Du1jK8JQwIWJzUWMbjQqbokzXRdsIqfR4JUI375KCZ7nb1FjvI1ZYitqpx10hVK6xVRrqANedWJjaNFBszi8Q2gZ96yaeWcPQ1e9Qf57JvBpPZPe0L/n36m8A10yrbPFqlt+tq+BGr9vPfTqlu6hJlp1ue4920xC8wJvogg0LgXNsRaIbxL/543jv4Z5QVDHRdbPgv4GOK5QYScDET5Ik4Gi3pLWpvMTvhrFgcd9dNbsYl5Vp7AX+nnji3yKTr9TlukccHx1y2r3GSvR5cAcRVVYnfii2G+G05eHM8fM/Nwafg3/iotunsBkTOJPiR5Ke8O2Q1EPrI6QcikcacVCXKl/p8mBJFf4oK2ezzR0n3HPRR+pYJSm8xtcAJkAqiPtL0fD1ft323e1sDJMbbfR82w89NGZ4ddSUcot/Bavf3+z0yQ+7VcoIHlyxFDACR5xn1PcE1hYVp1ANIm0oSM23ipBLWTYKUrGVaFh3eipHpb2+0+urWsm2o193Z56QkgIeVkSw7RbJUPsGOXikdK7EQnBRIYdFGjzdcJrcUTFbSyFb3uVLwtrvFb6nhzG8klPmRHm0JeZSyhcnea1lTlxZL0rqf0dA+4V0cr9lxWNzg1TpN6Iq4DUXYn2wwhY0wrsSFD8tqsJAV7XVfY9B6fhhp6TElIMCg3l1WRy2KrRhv5Ya1I5cjy5rJjB4GZd6Ul2xUoTZMKoDf5uxvGNb00H8kyhgWVDSoDxEw5cjQkXiJPjIUdUamgGvXP5oT3szY/nQ/0BefTOh2Hg8pAbFfA6g61CSU+GAE="
+    },
+    {
+     "type": "text",
+     "text": "I'll start by probing the NORDCAN API with the example endpoint to see the response structure."
+    },
+    {
+     "type": "tool_use",
+     "id": "toolu_0153PEjqpGsNVc679koscTbY",
+     "name": "bash",
+     "input": {
+      "command": "mkdir -p raw; curl -s -m 60 -o raw/probe.json -w \"%{http_code}\\n\" \"https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023\"; head -c 1500 raw/probe.json",
+      "environment": "python",
+      "human_description": "Probing NORDCAN survival endpoint"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 22941,
+    "output": 317,
+    "cache_read": 0,
+    "cache_write": 22937,
+    "uncached": 4
+   },
+   "_response_id": "msg_011Ch2dNJsPKhyVyuCR7B1xo",
+   "_uuid": "139feed3-34cf-44af-9188-5b9b3970f51c",
+   "_ts": 1794650509297
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_0153PEjqpGsNVc679koscTbY",
+     "content": "{\"stdout\":\"200\\n{\\\"dataset\\\":[{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":1977.0,\\\"period\\\":\\\"1975-1979\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"7.4\\\",\\\"lowCI\\\":\\\"6.8\\\",\\\"upCI\\\":\\\"8.2\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":1982.0,\\\"period\\\":\\\"1980-1984\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"6.2\\\",\\\"lowCI\\\":\\\"5.6\\\",\\\"upCI\\\":\\\"6.8\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":1987.0,\\\"period\\\":\\\"1985-1989\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"6.1\\\",\\\"lowCI\\\":\\\"5.6\\\",\\\"upCI\\\":\\\"6.7\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":1992.0,\\\"period\\\":\\\"1990-1994\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"6.5\\\",\\\"lowCI\\\":\\\"6.0\\\",\\\"upCI\\\":\\\"7.1\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":1997.0,\\\"period\\\":\\\"1995-1999\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"7.5\\\",\\\"lowCI\\\":\\\"6.9\\\",\\\"upCI\\\":\\\"8.2\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":2002.0,\\\"period\\\":\\\"2000-2004\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"9.0\\\",\\\"lowCI\\\":\\\"8.3\\\",\\\"upCI\\\":\\\"9.7\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":2007.0,\\\"period\\\":\\\"2005-2009\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"11.0\\\",\\\"lowCI\\\":\\\"10.2\\\",\\\"upCI\\\":\\\"11.8\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1,\\\"year\\\":2012.0,\\\"period\\\":\\\"2010-2014\\\",\\\"cancer\\\":160,\\\"surv_period\\\":5,\\\"survival\\\":{\\\"value\\\":\\\"15.2\\\",\\\"lowCI\\\":\\\"14.4\\\",\\\"upCI\\\":\\\"16.1\\\"}},{\\\"label\\\":\\\"Denmark\\\",\\\"id\\\":208,\\\"country\\\":208,\\\"time\\\":5,\\\"sex\\\":1\",\"stderr\":\"\",\"exit_code\":0}",
+     "_outcome": {
+      "status": "ok"
+     }
+    }
+   ],
+   "_uuid": "808b6d3b-6c5b-4e55-b1bb-f570902082a8",
+   "_ts": 1794650509304
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS2gYKEAgTGAI4AUIIdGhpbmtpbmcSDN9OOkXANDcoCKxbkhoM46uDD9twsMjHBWC/IjDJvXAq6dyk+wZBKPLWTmvHf3DhL6FPMEFQn5Ve3jSjTntLbXXp6a+wFkhpZRb1zv8q9wXll/8JxYAtB8EYDeffcpwiv820BBKepQMrIFNWqR7mM1j7noWudmx+b5s5mC7Ej+KFZkGNQq6gEmAwzEg+2svY56z+a6vMfmaSNw8RkzQATcOdYa+xzgXTU+3RmYYjG/ipypqlToAKZQRLO5XJ+vbhTDk4ntpjvJ0GqdX1jgjuyimyQrT8LuTCGDKU7dsc+DITChTKOC7Irk3/5zCOQCkWake8lvq/PD4cP+tpzhxzU1adosF84yLnhmBosnt39Nqgwa5FdXexro4ZM4fLhk69yCZQogG1br8eiNgrdrEa1YgjEyb2qGWWB9uqqVprhFOBvTW+5K9mdD1W5YzkvHs36QzKzXN1IOgJU9ExmxcYXSI1MwHZdoTNLgRS1sgPtDzTp+ne8lKu8wWCrW8mTFr1nW0xeEgezNG6n10ywRG+PY+e0gn5R0EL6D+EaFQqiq5srLga6w/Fs0lrDj5Ko8wSVTKFSyZ9oiKFBgPISkv6JEe2bDQvmTmaC26Kdekia7yPcHwHvDH3Q4oOQ7ad9YmbuFpYUpro+9LWAUJm2pbt6DiQj1HFdv1ObYRk73OqrN88gR7RqoESxyi539Tg+vS2u2BieNadmaqorSWpPNueRL9hWM7rbV8zbO3F2TuJT4AbYwDw3DLFTLJjXvBtkXpBS0Fz6xEXlHiHn2leMZAYiY+F67Gcv9V37LjJU2Zze1tLANkfmOwxoQjRIhr4r7/jbg39gharnEeckqZ9iwkiMQQ494IkwnIFMIfCreBpdOXEeWaXw0cg1py8k9AuVeOHqbGRCxuAb1O0tgcm1sgkl6XJ0KSjGRp+3ZxL3pScXrhW/t4yx8Zr4GGmDUKSMsldqcQ54Rdm/ASikUUtZQevQtL12Yiy4fdZmEsQeLGJXLlAMn5NGJqVNfI3kqkYzfRhd30JP7B81OE+mi79WnrI1mHxnx8+d/2IbWCpD3ys79RsEXZULPzJpws/Gx0Un8Obja6BY2EyBUK+yMeYBO6tRnUgDVmBVwsYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "The API is reachable. Next I'll check which periods exist and whether `year_end=2024` is accepted."
+    },
+    {
+     "type": "tool_use",
+     "id": "toolu_01RUZrMKebUviQ9cghucnPgA",
+     "name": "python",
+     "input": {
+      "code": "\nimport requests, json, pandas as pd\nB=\"https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/{sex}/246_752_578_208/{c}/?&surv_period=5&age_surv=0&year_start={ys}&year_end={ye}\"\ndef get(sex,c,ys,ye):\n    r=requests.get(B.format(sex=sex,c=c,ys=ys,ye=ye),timeout=60); return r.status_code, r.json()\nfor ys,ye in [(1973,2023),(1990,2024),(1973,2024)]:\n    s,j=get(1,160,ys,ye); d=j.get('dataset',[])\n    print(ys,ye,s,len(d),sorted({x['period'] for x in d}), list(j.keys()))\n",
+      "environment": "python",
+      "human_description": "Checking available survival periods"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 24426,
+    "output": 454,
+    "cache_read": 22937,
+    "cache_write": 1487,
+    "uncached": 2
+   },
+   "_response_id": "msg_011Ch2dPDNmMd3qYY5AkcvH9",
+   "_uuid": "a96bf715-0a9d-4785-a872-810a2965c0b6",
+   "_ts": 1794650522065
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_01RUZrMKebUviQ9cghucnPgA",
+     "content": "{\"stdout\":\"1973 2023 200 39 ['1975-1979', '1980-1984', '1985-1989', '1990-1994', '1995-1999', '2000-2004', '2005-2009', '2010-2014', '2015-2019', '2020-2024'] ['dataset', 'error']\\n1990 2024 200 28 ['1990-1994', '1995-1999', '2000-2004', '2005-2009', '2010-2014', '2015-2019', '2020-2024'] ['dataset', 'error']\\n1973 2024 200 39 ['1975-1979', '1980-1984', '1985-1989', '1990-1994', '1995-1999', '2000-2004', '2005-2009', '2010-2014', '2015-2019', '2020-2024'] ['dataset', 'error']\\n\",\"stderr\":\"\",\"exit_code\":0,\"resources\":\"wall 2.7s \u00b7 cpu 0.9s \u00b7 peak rss 83 MB\"}",
+     "_outcome": {
+      "status": "ok"
+     }
+    }
+   ],
+   "_uuid": "c1ae107a-ab99-47e5-8453-0a608549c1c6",
+   "_ts": 1794650522074
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSjwkKEAgTGAI4AUIIdGhpbmtpbmcSDBBp8AahGswbfbc4UhoMQ/C98E0uy7wQngEiIjBfsmii1/XbxgHInWEfiE6xUGYeNhPjY6AR/+goRUmlTAtzRQioMT9QgIYCgA835TwqrAhksI2Wsvkz5rDCVukAFkE43SXFX4OIKfU9WzvGkoLnT+M8P6g9I6R8s6Ddl8OTwLGja052o1q23uRfGZ7c8Cac+EfSZDsVJRngPlP9SzlXK3UJwErXNw+dMIFKaMduJPw90nRSRSdT3WfJ19JvnIHouRYXOCDKOTSpueZFBjfvGuaN9yhMyJWDyvK0MXDOzGqMEVMiyHJghV5EFfYkv/OcPkISZv9Hqa9YmE474Tevg1exxDyqxcRDrUY7gJX7LLfNprtDte82Kor8suMlAB2vBM8g16KWeHAjx2oyGqKU+w45AG+jUfdiZKweA2yvo3+YbiPr84HbKhG+XXjYp+zE40JRDmEKAMibFx1MteNnLl3T/uoHILE1IvuN1xW6j9B3TTgGrlvK4BdUdEzjtwcnBt6/31vzIZa1byAki76G2xMWvcKYvoo+2Xxny9TZ/MhtY7MYT46sB+8mQPP6lQAfAdD2vfyQZzgKGuGnzfXDPCww62DNESjU/BNgrxiJUtB+mA0p10HWBkCBkh5xO4IXXeIwr+h+6ikiS3eT73xm+hch0azI1ciJv+6q2xxcchRwbcpXXMmxmpNBBD2WK3m3FnyoLJ7W0SaMwIogDhphreZf1xOiKbIe1vnPYFNlJNEbHZ3S8/N4rXgYtczmz6+D4ZV6UkBDqLRuS+FQjQtR5YG5S33Hnwiem5V1PbmvrjYlagDM6iJGcuYKYwZS+g2JaXnbZATKHtgNWMjBL4qcSYT4p+wVSZoGXor6NReJGC0YZ4vcDwVzBq8mMMlkqv9JPPlIm2Spnlqf1n3CsVdRw3qJtZziTlBRNUq4LEtjoNt1YxqtMX+5mBGqSjpWkWf5e46kS5OnYlzPzfxAQQcaxdS5JChqmZ/o9LdbxSMq4WXJ2MmjtZ3epcaYUAet//ZAh/2w7O9lMPO/+8LqWqJb+I4IzgPxMsDY+YRzTjzsuOBJx2iQYGAAcpryg+aAkTOIhU8leOtj8raFFdyT1inqgTP5pn/bEcqRljhORl4AOYVscdPXYv/PEl/x2ZjdaBIs6JBYs9vG7uMs8bhcGFw5Xy+MY/kGWNOWiJNw0bDrICRoSKRYporYQLwS9AtCibMxYUKSJm2EwijqAqjV1R/EdUNV83SeqMLIczrYS+oc1Ub7hJYJ3sEk1YZGnpsx27PB+FMNU8bctZNniIlogASvbkOl3elMcmhHLcrcq44PFnOa5PKFn9oCyTnmAgcT9de7TahqnY8vXitdSuAhCi81JkkolXsqGKfTfzSh9+LCLR/zpT7GaM4yo2eLBtI/uTjLTtx3cTWSKJdD7UvC4ys7Ys7c4LCAecUjEQjPPgNWy1UZjPlBmRJKq2TxdqSLSCwL7dzXkmZ+jDOX+w00oqqfs/baRVlc9LJMkgW8rcM+yrakZxBwAPTBd9SJErkYAQ=="
+    },
+    {
+     "type": "tool_use",
+     "id": "toolu_01JU4xgNUQQzPkY8EEzGc6SY",
+     "name": "python",
+     "input": {
+      "code": "\ns,a=get(1,160,1973,2023); s,b=get(1,160,1973,2024)\nprint(a['error'])\nda=pd.json_normalize(a['dataset']); db=pd.json_normalize(b['dataset'])\nprint(pd.crosstab(da.label,da.period).T)\nprint(da.equals(db))\nprint(da[da.period=='2020-2024'][['label','year','survival.value','survival.lowCI','survival.upCI']])\n",
+      "environment": "python",
+      "human_description": "Inspecting missing rows and errors"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 25200,
+    "output": 426,
+    "cache_read": 24424,
+    "cache_write": 774,
+    "uncached": 2
+   },
+   "_response_id": "msg_011Ch2dQ1TwPxpbSDzLmLGes",
+   "_uuid": "c701d5b3-a2a2-4172-abe4-b97a1994bdec",
+   "_ts": 1794650533056
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_01JU4xgNUQQzPkY8EEzGc6SY",
+     "content": "{\"stdout\":\"[]\\nlabel      Denmark  Finland  Norway  Sweden\\nperiod                                     \\n1975-1979        1        1       0       1\\n1980-1984        1        1       1       1\\n1985-1989        1        1       1       1\\n1990-1994        1        1       1       1\\n1995-1999        1        1       1       1\\n2000-2004        1        1       1       1\\n2005-2009        1        1       1       1\\n2010-2014        1        1       1       1\\n2015-2019        1        1       1       1\\n2020-2024        1        1       1       1\\nTrue\\n      label    year survival.value survival.lowCI survival.upCI\\n9   Denmark  2022.0           28.1           27.0          29.4\\n19  Finland  2022.0           17.9           16.7          19.2\\n28   Norway  2022.0           30.8           29.4          32.3\\n38   Sweden  2022.0           31.3           30.0          32.7\\n\",\"stderr\":\"\",\"exit_code\":0,\"resources\":\"wall 1.1s \u00b7 cpu 0.1s \u00b7 peak rss 86 MB\"}",
+     "_outcome": {
+      "status": "ok"
+     }
+    }
+   ],
+   "_uuid": "f18ed51d-2ac0-4368-a915-c31e9681e4b1",
+   "_ts": 1794650533064
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "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"
+    },
+    {
+     "type": "thinking",
+     "thinking": "Data are complete for 1990\u20132024 with no errors, so I'm loading the figure-style skill and checking the endpoint's parameters next.\n\n",
+     "signature": "CAQS0wcKEQgTGAI4AUIJbmFycmF0aW9uEgyfxmbWMB/xZUEv63kaDLJ/FAvcPZCHfD2GHyIwVfI3XhM/7UjWIAfjSOvz/QkpB2rz7El9kf8j7mnvq9/gew1iSkbNQj4+bQjIIM/NKu8GNw2RjqCLcrJyckY9HsHFyAnqclnfpVUDKcgQKkkIMl7bXcpWRpq3mGYFBOBVNomD3n9H9i4HhSJJ4x+i6SzHAeX/r6zWKwvVbsBgAhrrLwF44WiWHmAmdnrlbve5L/+bkw1rw+vAypxYyL/JOo2AUaHlNH4xazYIpk7Qqq2tsoRrkruKjrIGyI8k0/+o/mUEfCY0k3RjIkafzbk97BD1bIGXclWLgyqMVylEyTixQkigEFFna7zcTYUVeLipqpZtL/nwFiVlsILUeLqj+PXhqZikEqGQ1YhpNEPxKW9kGVgn3Oc6Wx9YMH5gDwFydnPyJwi5h31aseXJ2AHhF/+PhxzEuESlXLswftE2Ras5CuMDQ3EfqWyXbh+/yWbpt5M4jy/abePRB9u0m6cPC8wLCZwwZHiy46a18QDAHvlCThOa7wgmvuJ9VxAkUmHpU0x+jVi9ez9S/GmT7c433AbgByb2T7pc1N2B/3WPBnT2PhG/Khm8Rmzq2vmh5pCVsI59t0YQV/Bhm80LRFm3KUzJTuHz35OkWk7HpBzJeSukG5OKabeZUagJk0ZuayPpgx8etiI3PSCfSAFJL1NXaBIdDzlrLZrlKW0cmDITkMX7aom3t6Jm8VKAWRxdgiD1Vmf+bkrgPWd05OAF3cPn1el6qpaxLKrRzJ0uYl2Fa3G1h7oJ6t7Np9+Wz3G9E6JLQrpHH+5Gf1ru6yrwtXP5XTUTsOgjTyYbz2l/7h89m6+LVM3OqX62pYQjYPxrmBhy/gla/IXwsf3aVBs43aCAerFiR3i5IHk1Y3jkTjIs241l2TEf3voko38XDoOGgFZCAPGfDNgNFB6KZwE+1zrL5wg1o4dM7b3ZgkGWOgeXzHFmLuHqZIReM6IsDxM15kQxmROkRnifrRVhb+FXRK4YMwg4VL8jqBCt9fY7/+Yg5dNtydu8jpLmyFFMe5HC2hNAKHpFz5+IWNp4NtrZzV6cmXpJhz1/uX2AgJUWkp5yJQz0b+SfFgoyRUyfjHjmJzs6O875gN8tWKxKcUnA7BvKYV9Hdic4QJsmfGRxXinEteM//pMY5miXJoYAqW076A6dQl5BaBeEdc49YvvBRMglYMarXNW7fHdcTtCJOCx1f5W6WJR/E7vb/6zgWCG7nv7Tp+JBLmPlqqAgv+JbQ2fEskYuGAE=",
+     "_progress_update": true
+    },
+    {
+     "type": "tool_use",
+     "id": "toolu_01P4guNYEAFLcRthkfJW4Wqi",
+     "name": "skill",
+     "input": {
+      "skill": "figure-style",
+      "human_description": "Loading figure style skill"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 25996,
+    "output": 934,
+    "cache_read": 25198,
+    "cache_write": 796,
+    "uncached": 2
+   },
+   "_response_id": "msg_011Ch2dQTcJatbpGAZsSHUps",
+   "_has_server_tools": true,
+   "_uuid": "ac441e88-d5bd-4d8d-85ff-f99c809d911a",
+   "_ts": 1794650544712
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_01P4guNYEAFLcRthkfJW4Wqi",
+     "content": "<skill-metadata name=\"figure-style\" source=\"anthropic\" note=\"read-only \u2014 fork under a new name to modify\" />\n\n# Publication-Grade Figure Rules\n\n*A checklist for correct, legible, internally-consistent scientific figures. This\nskill does not impose a visual house style \u2014 frame, font, and palette are\nparameters. Once loaded, call `apply_figure_style()` before plotting.*\n\n## \u00a70 Scope\n\n**Load trigger** (same rule as the system prompt's \"Publication-grade plots\"\nsection): this skill is for **final-deliverable figures** \u2014 those shipping in a\nreport, paper, or export, or saved as an artifact the user will keep \u2014 not for\nexploratory/intermediate plots (quick looks, EDA, sanity checks), which are\ndrawn plainly without it. Once loaded, \"every plot\" below means every plot you\nrender toward the deliverable.\n\n\u00a71\u2013\u00a73, \u00a78, and \u00a79 are **correctness** \u2014 they apply to every plot, in every\ncontext, and have no aesthetic content. \u00a74\u2013\u00a77 are **guidance** \u2014 defaults that\nproduce a clean result but that a deliberate alternative can override\n(individual rules inside \u00a74\u2013\u00a77 that state a factual/perceptual invariant \u2014 e.g.\n\u00a74.4 semantic-zero centering, \u00a74.5 CVD, \u00a76.9 leader anchoring \u2014 still bind). On\nits own, this skill is the inner tier (make one plot good); `figure-composer`\nand `paper-narrative` supply multi-panel and whole-paper context.\n\n---\n\n## \u00a71 Data fidelity & self-consistency\n\n**1.1 Excluded rows.** A row marked excluded or flagged in the source data is\neither omitted entirely or drawn with a visually distinct open/hatched marker\nand named in the key. It **never** enters a summary statistic plotted alongside\nthe included rows.\n\n**1.2 Comparable conditions only.** Arms measured under non-comparable\nconditions (different N, epoch budget, initialization, protocol) are not plotted\nas visual peers. Separate them with a facet break or a marker on the label, and\nstate the difference once in the caption.\n\n**1.3 Self-consistency.** Every key, threshold, and title inside the figure must\nbe satisfied by every plotted row. Before saving, walk each categorical outcome\nlabel back to the rule that defines it; if a row's value contradicts its label\nor the title, the figure is wrong, not the data.\n\n**1.4 Claim-titles must be true.** A sentence-title (\u00a75.1) is tested against\nevery category on the axis before rendering. If any contradicts it, qualify the\ntitle (\"on 3 of 4 pairs\") or downgrade it to a description.\n\n**1.5 State n and what was held fixed.** Every panel that draws a summary mark\nstates `n` and the unit of replication, and every small-multiple that holds a\nvariable fixed states the fixed value \u2014 in the panel or, when \u00a72 budget is\ntight, in the caption.\n\n**1.6 Reference structure is reference.** A tree, ordering, or topology drawn as\n*context* (a scale bar, a category strip) uses an established reference, not\none inferred from the plotted data. Infer the structure only when the structure\n*is* the result.\n\n**1.7 One number per claim.** A quantitative claim (runtime, accuracy, count)\nhas exactly one canonical value across every panel, caption, and the abstract.\nDefine what it measures and use that value everywhere.\n\n---\n\n## \u00a72 Label economy \u2014 floor and ceiling\n\nThe figure shows the pattern; the **caption** carries the context. Design for a\ngeneral scientific reader, not the author.\n\n**2.1 Floor (non-removable).** Every distinct mark, series, glyph, or comparator\nmust be identifiable from the figure alone. The caption explains *why it\nmatters*, not *what it is*. A label is non-removable if deleting it leaves a\nreader asking \"what is that?\"; it is removable only if the question becomes \"why\nis that there?\". Comparator labels name the thing (\"prior method\", \"no joint\ntraining\"), never a bare role word (\"baseline\", \"previous\"). Any term a general\nscientist can't parse gets a one-word gloss.\n\n**2.2 Ceiling.** Per panel: title + axis labels + tick labels + series identity\n(labeled once per row of small multiples) + at most 2\u20133 result annotations.\nCount the strings; >6 beyond axes/ticks means you're over. The ceiling counts\n*narrative* annotations (callouts, value labels, brackets) \u2014 identity labels are\nfloor, not budget.\n\n**2.3 Move to the caption:** n=, what's-held-fixed, abbreviation expansions,\nnon-comparable footnotes, exclusion rationale, methodological caveats.\n\n**2.4 Titles are takeaways.** A reader seeing only the title knows what the\npanel shows. \"Robust to gene dropout\" passes; \"Fewer genes\" fails. Test: read it\naloud cold \u2014 if the listener asks \"fewer genes *what*?\", rewrite. For a row of\nsmall multiples that vary one thing, drop per-panel titles for one row-header.\n\n**2.5 Value-on-mark only for the headline number** \u2014 the one a reader would\nquote. Everything else is read off the axis.\n\n**2.6 When in doubt, delete the label and re-read.** If the message survives, it\nstays deleted.\n\n---\n\n## \u00a73 Axes, scales, small multiples\n\n**3.1 Axis padding.** Axis limits clear the data by \u2265 one marker radius on every\nside; markers and text never touch a spine. `ax.margins(0.04)` after plotting,\nor extend the limit past any annotation.\n\n**3.2 Axis breaks over wasted range.** When data occupy <40 % of an axis, break\nthe axis or start it at the data floor with a clear non-zero tick. Never draw a\nreference line, threshold, or annotation inside a broken-axis gap \u2014 the gap has\nno coordinate.\n\n**3.3 Log axes get human-readable ticks** \u2014 `10\u00b2`, `10\u00b3`, or `1k / 10k / 100k`,\nnot raw exponents. **Never** draw filled bars on a log-scaled value axis (bar\nlength encodes ratio to an arbitrary floor); use points + median tick instead.\n\n**3.4 Shared axes across small multiples.** A row or column of small multiples\nshows tick labels once (leftmost / bottommost panel); interior panels keep ticks\nbut drop labels. When the panels share a y-axis and differ only by x-variable,\nrender them as abutting subplots (`wspace\u22640.06`) with one row-header title.\n\n**3.5 Fill the box.** A panel's data envelope occupies \u226575 % of its allotted\nrectangle. If a panel's natural aspect leaves dead bands, reshape the grid\n(rowspan, stacked complementary panels) \u2014 don't pad the panel.\n\n**3.6 Direction of goodness.** When higher- or lower-is-better is not obvious\nfrom the axis label, place a small upright cue (\"higher = better\") in the\nmargin \u2014 once per row of panels, never per panel, and never only in the caption.\nA directional glyph embedded in rotated text rotates with it; set the cue\nupright.\n\n**3.7 Physical width.** A single-row figure at 300 dpi fits the venue's\ndouble-column width. Adding a schematic or labels does not push data panels narrower than\nthey were before.\n\n---\n\n## \u00a74 Color\n\n**4.1 Threading.** Once a color is bound to an entity (a method, a feature, a\ncondition), reuse that exact color for every mark representing that entity\nacross the figure \u2014 line, fill, marker, text, heatmap row. Color *is* the\ncross-reference; a reader should never have to consult a legend twice.\n\n**4.2 Limit hues.** Use as few distinct hues as the data require. When the\nfigure compares a focal series against others, make the focal series visually\ndominant (saturated, heavier weight) and render comparators with lower visual\nweight (desaturated, lighter, or thinner). The focal hue must not coincide with\nany hue in a categorical palette used in the same figure. The focal series must\nremain identifiable even when its mark is zero-width or coincident with others \u2014\nvia outline, marker, or a light tinted band.\n\n**4.3 Hierarchical categories.** When categories nest (groups within groups),\nthe outer level picks the hue family and the inner level samples within it.\n\n**4.4 Continuous and diverging.** Use a perceptually uniform sequential map for\ngeneric continuous values; a single-hue ramp for ordinal rank or size; a\ndiverging map for signed quantities \u2014 **always** centered at the semantically\nmeaningful zero (0, 1.0, or median), never the data midpoint.\n\n**4.5 CVD safety.** Never rely on a red/green contrast for a binary or opposing\ndistinction. Any binary pair should remain distinguishable in deuteranopia\nsimulation. Reserve one alarm hue for error/anomaly/perturbation marks and do\nnot reuse it as a data-series color.\n\n**4.6 Two palettes, two legends.** When a figure uses two categorical color\nsystems, each legend sits adjacent to the first panel where its palette applies.\n\n---\n\n## \u00a75 Typography\n\n**5.1 Sentence titles.** A panel title states the comparison in plain language,\nregular weight, left-aligned. Metric names go on the axis, not in the title.\n\n**5.2 Role-mapped size ladder.** A figure uses **at most three** font sizes,\nmapped to *role* not space: titles/axis-labels/series-identity at the base size;\nlegend/annotation text one step down; tick labels one step further. Panel\nletters are the only exception (bold, larger). If a label doesn't fit at its\nrole's size, fix the layout or shorten the text \u2014 don't reach for an\nintermediate size. `apply_figure_style(sizes=(8,7,6))` sets the ladder.\n\n**5.3 Nomenclature.** Species, gene, and variable names that scientific\nconvention italicizes are italicized. Abbreviated codes inherit the rule; expand\nonce on first appearance.\n\n**5.4 Magnitude suffixes.** Large counts use `k / M / B` (`4.2B`, `120 kb`),\nnot comma-grouped full numerals.\n\n**5.5 Numeric annotations.** On-mark numbers use at most 2 significant figures \u2014\nunless 2-sf rounding would make two distinct rows print the same value, in which\ncase show the digit that separates them. Text on a filled mark reaches \u22654.5:1\ncontrast; if it doesn't, place the text outside the mark.\n\n**5.6 No internal codes.** Axis labels use plain-language names; codebase\nabbreviations appear only in parentheses after the readable name or in the\ncaption. Comparator series are labeled with what they *are*, not a role word.\n\n**5.7 Panel letters.** Bold, top-left, outside the axes box. Case follows the\ntarget venue's convention; `panel_letter(ax, 'a', case=...)` handles either.\n\n---\n\n## \u00a76 Chart-family guidance (by data shape)\n\n**6.1 Categorical \u00d7 numeric.** Show the distribution, not just the summary.\nChart choice follows n: jittered strip with a median tick for small n; box or\nviolin for large n; bar + overlaid raw points or bar + interval when the mean is\nthe message. The `errorbar='ci95'` interval is the t-distribution 95% CI of the\nmean (half-width `t_{0.975,n\u22121}\u00b7s/\u221an`), so it is valid at small n. Error bars\nand raw-point overlays are alternatives \u2014 showing both is usually redundant. A\ncategory absent from a group is marked (`n.d.`, `\u2014`, or a hatched ghost) at its\nslot; an empty slot reads as zero. A zero-valued bar\ngets a visible stub or dot at the baseline.\n\n**6.2 Single-observation categories.** A filled dot with a thin neutral stem to\nthe semantic zero (lollipop). Value labels sit beside the dot.\n\n**6.3 Continuous series.** Mean-per-x as a line with markers; individual runs as\nthin translucent lines or points behind it. Label each series with direct text\nat the right end of its line in preference to a legend box. Summary glyphs\n(per-bin mean/median) use a shape that cannot be mistaken for a raw observation,\nidentical across series, drawn below the raw points in z-order.\n\n**6.4 Distributions on shared support.** When two distributions overlap heavily,\nstack them as small panels with a shared x-axis or use a ridgeline. Overlay only\nwhen the separation is visually clear.\n\n**6.5 Matrices.** When a heatmap is small enough to read (< ~200 cells), print\nthe value in every cell. State the threshold once in the colorbar label.\n\n**6.6 Embeddings.** Dimensionality-reduction scatters (UMAP, t-SNE, PCA) drop\nticks and tick labels; a small corner arrow pair names the axes. Clusters are\nlabeled by thin leader lines to text in surrounding whitespace.\n\n**6.7 Paired prediction vs. observation.** Stack the two as adjacent tracks with\nidentical x and color; let the alignment carry the comparison. Target regions\nare translucent spans registered in the legend.\n\n**6.8 Insets.** Connect a detail inset to its source region visibly \u2014 a bounding\nbox with connector lines, or a translucent wedge.\n\n**6.9 Label the extremes.** On a scatter of named observations, direct-label at\nleast the maximum, minimum, and any flagged point with a thin leader line. After\nrendering, verify every leader endpoint terminates within one marker radius of\nthe row it names.\n\n---\n\n## \u00a77 Layout & narrative\n\n**7.1 Show what is measured before the result.** A reader should grasp what's\nbeing compared before seeing the comparison \u2014 via a plain-language title, a\nlabeled schematic, or panel ordering. Any schematic uses the same words and\nglyphs as the data panels' labels.\n\n**7.2 One figure, one message.** A multi-panel figure has a single sentence it\nis trying to make true. Every panel either states it, supports it, or bounds it;\npanels that do none of these belong in supplement.\n\n**7.3 Legends live in whitespace.** Frameless, placed inside the figure's\nnatural whitespace, or replaced by direct labeling. Legend entries are\nswatch-first, left-aligned, and resolve every visually distinct glyph on the\npanel.\n\n**7.4 Row-band headers for nested faceting.** When small multiples are grouped,\neach group gets one spanning header, not repeated per-panel titles.\n\n**7.5 The figure arc.** For a paper: Figure 1 renders the paper's one-sentence\npitch as data \u2014 scope, not architecture. Subsequent figures cover mechanism,\nevidence, robustness, application. A panel is judged against the paper's pitch,\nnot just its own figure's claim; content moves between figures if that's where\nthe story needs it. (`paper-narrative` runs this review.)\n\n**7.6 Don't re-decorate a passing panel.** Between revision rounds, a panel that\nalready passes is not made more visually complex to fix nothing. Adding marks or\nlabels to a clean panel is a regression.\n\n---\n\n## \u00a78 Anti-patterns\n\nThese are correctness failures, not style preferences:\n\n- Red and green as opposing categories.\n- Filled bars on a log-scaled value axis.\n- Colorbar ticks that are evenly spaced but miss the semantic center.\n- A diverging colormap whose center is the data midpoint, not the semantic zero.\n- An axis title that restates the tick labels.\n- Explaining the direction of goodness only in the caption.\n- A \"reference\" line drawn at a value that is itself one of the plotted points.\n- An excluded row that enters a plotted summary statistic.\n- A leader line whose nearest mark is not the row it labels.\n\n---\n\n## \u00a79 Render-then-verify\n\nAfter `fig.savefig(...)`, before `save_artifacts`:\n\n**9.1 Geometric (bbox) check.**\n```python\nr = fig.canvas.get_renderer()\ntexts = [(t, t.get_window_extent(r)) for t in fig.findobj(mpl.text.Text)\n         if t.get_text().strip() and t.get_visible()]\nspines = [(s, s.get_window_extent(r)) for ax in fig.axes\n          for s in ax.spines.values() if s.get_visible()]\nticklabels = {ax: set(ax.get_xticklabels(which='both') + ax.get_yticklabels(which='both'))\n              for ax in fig.axes}\noverlaps  = [(a, b) for i, (a, ba) in enumerate(texts) for b, bb in texts[i+1:] if ba.overlaps(bb)]\noverlaps += [(t, s) for t, bt in texts for s, bs in spines\n             if bt.overlaps(bs) and t not in ticklabels[s.axes]]\n# assert: overlaps == [] and every text box lies within fig.bbox\n```\nOverlap is defined between *visible* boxes, and a tick label sitting on its own\nspine is not a finding. Fix (move, shorten, stagger) and re-save until clean.\n\n**9.2 Perceptual check.** The bbox check is geometric, not perceptual \u2014 it will\nnot catch a low-contrast label, a leader that crosses three others, or a series\ncolor mistakable for another. Crop the saved PNG to each panel and look:\n```python\nfig.savefig(\"figure.png\")\nfor letter, box in panel_crops(fig).items():\n    host.view_image(\"figure.png\", crop=box)\n```\nFor each crop: Is every glyph and mark legible against its background? Does the\nsmallest plotted element have a stroke or stub? Do any leaders cross? Could any\nseries color be mistaken for another? Does the legend sit beside what it keys?\nA perceptual defect that passes \u00a79.1 is still a defect.\n\n---\n*When in doubt: fewer hues, more direct labels, raw data over summary stats, and\nstate what is being measured before showing the result.*\n\n<kernel-plugin language=\"python\" file=\"kernel.py\">\nLoaded into the python kernel: META_GREY, apply_figure_style, bar_with_points, end_of_line_labels, focal_palette, goodness_arrow, panel_crops, panel_letter, set_frame, strip_with_median, two_tier_label\nCall these directly in subsequent `python` tool calls.\n</kernel-plugin>",
+     "_outcome": {
+      "status": "ok"
+     }
+    }
+   ],
+   "_uuid": "c49d052c-a4e7-4623-9999-0f6faf054958",
+   "_ts": 1794650544716
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "[System] web_search({\"query\":\"NORDCAN 2.0 survival relative survival age-standardised method period approach\"}) in your last turn was not executed \u2014 a web search or page fetch issued in parallel with other tool calls is not run. Call it again on its own if you still need it."
+    }
+   ],
+   "_harness_notice": true,
+   "_uuid": "ce65e301-f1c7-4a3f-ba16-2e36ad18ea54",
+   "_ts": 1794650544812
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "server_tool_use",
+     "id": "srvtoolu_0129aiNeQbeyWkeJUwf3p1XC",
+     "name": "web_search",
+     "input": {
+      "query": "NORDCAN survival relative survival age-standardised period approach methods"
+     }
+    },
+    {
+     "type": "web_search_tool_result",
+     "tool_use_id": "srvtoolu_0129aiNeQbeyWkeJUwf3p1XC",
+     "content": [
+      {
+       "type": "web_search_result",
+       "title": "nordcansurvival \u00b7 CancerRegistryOfNorway/NORDCAN Wiki \u00b7 GitHub",
+       "url": "https://github.com/CancerRegistryOfNorway/NORDCAN/wiki/nordcansurvival",
+       "encrypted_content": "EsINCioIFRgCIiRjZGYzZDRhNS1kMGVhLTQ2YTAtOWI0My1hMWU5OThlMWY0N2USDIAg5B8OsOPPen0TPRoMF/nOT2MOLFxuL3XJIjDInaZWY90OTZyaBc1tzC8m9xcsSDwenw8CvKbKhuYAJ2qcwFR47OrlosOvHxzMEiQqxQxpa5moH8sf9GUk/rilx4WxSpSt4JQZ6fbnsrHMJGsJ9TBRfA7s+IQm5FXttKivJNd/z8ClPcmzTUln4zUiF7cq4+z0jfOvj5cXyIEtziL6lUzgyUIvZ8FH1NkLnd9xGyA8FM9MBtuC4qoQR9fm0fJnCzz383IMtTGmh1A6v8iHfNIpn0scFg2iEoHiUFOCEpPlswp04s2I4Of5oK7QkCc6aTVIxUcBpQ7jEMYNfZdllEVbEg4k8+FvXAZYR9R6oHzxq1g6xpiBmpiruCMbD/ekckponKoiQJEWGDbHPMp+CmrDe+Yy+9BrA7UlGjGZIxRwiqVqgREEdCUwDw0CECajUhalt1PABZRDKHWyL/15+TG3V3BqKwwUaQ/LE12yrJR2s1YK1H0QsSSW4Gyqw3RpuMhCSlvDaBLgc9jIpNFnE9gZG+jzB0W81B8uwvHz+IB107N94JqDsjyIt8nFCwC7NvuhxVHuZtGGzJy8n8UWIp7Qh9qRfWiLJP2yFCOFy8mrT3rDgsyer1gRRSGXMx2lufSVn8RRfhOjBKCcR6xZYON4HfaNAOS4PT1AUDg3RAa7pz9SLRiTh5DhnEhcx56yzQC1km6aET+vctpLbCEUA7I0Rq4kfAUVuOVhW01JVuPzaqkhnLIjtyUs7Fdj2cQ070hNkc1LeiVnTIf+WEd5KTQRsOLtJfHSG8owed1XX0ce7b3JuPPDr7bR2S6AeRYt2lIhPpkkIn7Px5HX5epFvbVzh/aAI+smPDtp9ZmUbpR4jvyfNIxXXj14Bf6RN1mXjJDuT+r1rUVYPL1/xVqTMiNZMGe4Dlp4WDplfc2L5xNPrUK2i9ZeO1SAlx1qwXi97mzYWOMb9iW8ZiCOEorB11oxQeH15R60aMT+mTIJAgO0xNSfbWavDgk4W71RvZwonMobqqht5faNzaPw0PQnpRwNZZSJD3dh0v8vb7nqSxIugSHKcGrfnbhIhqTg6mIpozgoYx6RUvsWrpM9NfamM7xTq8FVihrXaxBfkkRcXP1wpRXuJAMbgHzs35Vem+DPvc7UIjUQpRZsEZm9cFbx3+9l+YfE8WFLMQFDuNLd9Uspdz6QDMjN5LxC6Doe8yOAcyfpwaqmtW7eBA9k1cS42rET2bNmBwQ9ky4rnBirunCXpKotIvjVmh4wxjC2CSCfMXGeGWSJumz76LXt3Fe74V/Oo53Lb+/rOdZu7HZojzid/eXAca6Ub0TtkPoPb72sOx9/Hxyg3zGYM7aFu8dhxrPbhq+0GnTSbL2Vx4DyhIW6csVsirMZBwQgPgu6m3KgQCfX4OpLqKnz+WPjDPo3Cc4c+AeudQGd4KKWLUVpY29o2puL9jCs7gkkmSy9JgQ9J+o9pJmR7FiYQAWUoI7wR/g+jS5FvcD6XUoYvObxZCeBOZfAyLF5bOWy3oss9iGbHkuOtgJr8Fkc+yzzGY36k7wLfylq1yHY6qaaTQ08dmEfnzFJtvDZZvM/bhGICl/Eq2bqXm7Vquf4g3d3y4RQq26LqZ+faAc6dtWOtSgFeXiNwr1+kWgCtD3Tpmjx0pABjmc2VsOJCCc/coH0LPMUESyuM5ADKwKtgA11bKHCha10/eR64kK5zVikLjXYwykXOM6vjjRJg3MV6ww15K7pVm7O4dLZ09j3LnwS7FGXCW2pvt8ZJ8Co0cIOHtM7FbgAbk3bi1VA56v5BgS43n6sDVDTGIJTwM82KXqNI/ByoeKR4/SW16LDftWXQ9dolQgHcTMnYJcFM2U3u/OVvUAWFn1ZfydxpID5FNXdb9PhRrFLJFUY7iJSTopMO1HBRDMGT+LIWvSbf417r/H/JPGTSIfX6SDdUJ4cT3rmpEqaMVF9J2Z43jhpnnbsPzid3ruiWPRL9S6GM1DUx+fjl28+OYPsm1/fGSTaKDcAwm6QprK7I7Rfytx8XBB6zSvdAHefaqkGLKoj5bejTEWQHYm99Cvb67YgebiYKfCgmsabUYzlqW/vFyOjIbqVO6/da3kDpgjd/Dfrqdl1wG801dgyMAWyObJY3aDg5k9lttSNdoEfA+kVa02akprfTTMOeXQOG8KzYhH8jSRxafrKqyFG3zTNUpHwO1XylXOx6DmVZpGaKZC6wgOTaWSvwUAFPzjKheqWQHkYAw==",
+       "page_age": null
+      },
+      {
+       "type": "web_search_result",
+       "title": "Visual presentation of age differences in relative survival of hematological neoplasms in Sweden and the neighboring countries - PMC",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12031788/",
+       "encrypted_content": "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",
+       "page_age": "618 days ago"
+      },
+      {
+       "type": "web_search_result",
+       "title": "Survival trends for patients diagnosed with cutaneous malignant melanoma in the Nordic countries 1990-2016: The NORDCAN survival studies - ScienceDirect",
+       "url": "https://www.sciencedirect.com/science/article/pii/S0959804924001369",
+       "encrypted_content": "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",
+       "page_age": "988 days ago"
+      },
+      {
+       "type": "web_search_result",
+       "title": "(PDF) Survival trends in patients diagnosed with colon and rectal cancer in the nordic countries 1990-2016: The NORDCAN survival studies",
+       "url": "https://www.researchgate.net/publication/361597064_Survival_trends_in_patients_diagnosed_with_colon_and_rectal_cancer_in_the_nordic_countries_1990-2016_The_NORDCAN_survival_studies",
+       "encrypted_content": "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",
+       "page_age": "1604 days ago"
+      },
+      {
+       "type": "web_search_result",
+       "title": "Laryngeal cancer relative survival trends from 1972 to 2021 in the Nordic countries - PMC",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332480",
+       "encrypted_content": "Eu8KCioIFRgCIiRjZGYzZDRhNS1kMGVhLTQ2YTAtOWI0My1hMWU5OThlMWY0N2USDHszVg8Pr0Y3VXZxcRoM5zzp2wxvguNJ+gMqIjD8SRdzX04The3uLn1zx+Te3dv4Owy6aBMuyDkKkUZVNQPQxHikXpwoidh4SLjkkBoq8gnLfZ4SCGlRlxPnV/fI/znEdU3xRV6SHu/ZG79Qi/3At/bW0XQN/q8KK04dGeU95VRA5ZTUgo+p/kE78iR0mqIUGDwO8sQS0/YOyBBc9fzF3Z6icVG+MQe7le9/EIMz64rio438kbgRwcEOpGxLJITcprs0ze2D9YPuvC2+7uxuQ2Zagj5Rtm4lJ+33Sscd4+YxNxAev1Wtdfum/I7gyeyob8DSpLAa7vaA7snoaO6SbJoKt1A4YU76837vcxx1nmhoH5zQqp25FC2VCTDJ5bxQ2V20NVZgEwtL+7Pp4RWZIj7ijEIy7eLK4i5bh8voVmfjt0gcJ0J5DZP8XrNPSt2wymOeD7xQlfTvPYp4q83up5OvsaS3AVk1lf6ZpmlOxzBzz3opwW9Nd7WGngDBcmT47ycDLzY1Mvll+zl3SbXeu5gLFgYLZwMoJECBBZ9Kh0V5qBCZ9iNv7p/kQmjqA+BbH6cJHTUMYJmuqMsRUyAyUUl3wU+ukFKAS4BxRDMTbvGlgzMBzM1NwQdDRKLfZ3qNlFiwys9habOuC64s3zIyaxLv8CpYW3QtYZcKLGRKhQgc66chu7d5dkjeOZ+eiXOQl5RHtI3eYSCSQcspihhqBu1ZNNJz82FszIskScGC5tTvSrGfhK74uFpRcDmPiM/PUsHxAeiGMzK41A39Q5Yh9MPpfhPPBUBgDUIm0DpPCOBLxT0C4SOwNYdvM2g0p2zB2w2xgfLD8F+zTXhRTXmkesE2fsgOM/23TxRBhFML+I1wEbH4fWJvi6CZ7dojxNDG8/PQqGl6cjBVYaFFEnxKR7EwoGimC+avCxrxOXHikSRCipBkl9y/w8IVZWuByNPqvyWvtzdd4yipYFffhZPmkYDfMDNPMZAR6tBxkngUHJrBwdOag/HIGmf3y9NQJ31WfcXugGZ4+b6GdlYk7e6oY+1e8zHqCARks/6PXje2em4E4rxUhUKqwMEeMtclQFkbjM30sKb5on2b4ATgy9oAEj9rYAuHdFFhMxhyCtMuNEG5F0OBE71xL6l2lnvh1aV/jjy16/eLawm7zTI2IBozmvGw2hmdBmx5LUqmfpdCBCAj1lzQczGCdOsefHuuMYEDZj/k9gElkfmckTF3zWhBUM91+9JWnPSdwfB1iMMeXuV1HoREsgInBWqi0PclSM/DQOKERXx0S+XgIO1QIB18gTJU8ntA2pe6NGz2O1yROsfAhZa0ufuW8/4fp6XCw0HHlw1MfvAVK7Un8RHKZ0HeUbqKTboaCuWDGNqE55b0/qwFQ6SGD+iqnEYxyTcNmueIVllg4l9csVeAwi7T9EiFBMz2VKBaaWNhNv1nT2ER9lypQN3wcFUih4QoqGyLpiZzQt87S2S66H2iyJUezYAK8eF/2HszPGqkps6movG/GX3wBwI3wbZFVQakig8U/HJEGY31Clj7I8kd5Tbs5O/e/F0l4tSZJ5HUuHTpghBYl2TMf2EPC/6LVWbZM/j7868dw8ZTu7JulwbyCH6+/9on6sWrO3BlyA5Qi2jZchlTp3Sdhl2c+uo9JGH+Ny8hwc8/Ytcev6wQvZL4dRJjZQHvH4QusffI6D3bkBgzG8uIQk9/YvI5m/0QBFEwMC2ViCZvRZBpl+NlUAPgVVEGsGZGVGY7m2g1c1d7LgYGwyujNgDNuCHfen2LPl4svsFHhCGFHAEYAw==",
+       "page_age": "832 days ago"
+      },
+      {
+       "type": "web_search_result",
+       "title": "Full article: Trends in survival of patients diagnosed with cancer of the digestive organs in the Nordic countries 1964\u20132003 followed up to the end of 2006",
+       "url": "https://www.tandfonline.com/doi/full/10.3109/02841861003739330",
+       "encrypted_content": "EvENCioIFRgCIiRjZGYzZDRhNS1kMGVhLTQ2YTAtOWI0My1hMWU5OThlMWY0N2USDMu0/zUWo2ixMznkjRoM+BWCXKHgdqrE+zagIjALcimvaWC9WQZArAIxRx9EkM+6eIjimPJMU37wX88TtNfX+HS4BFenAoepbsNOj0Mq9Azuib7jGOPZmabh3wh2t2M0EPYv7kuQGBI7tnpXedTAUZmLW81+QFa3XdBSZlNcIzX2gA2t9GvegnjEp8IIdhxm+fkiGsS7d+baGZYhXGvPoaLV0BNvcGx6g0GlW4tJrP4Aj1dOw3WnituFpZYjwi9VDsLM0V23GUElaQhvYqHgkqghMj5K1ZT1a6b3UgVq/UpcRZPpbs7Raq9gK1iCwxLwmNh2j6enaEMlgYexWs/w6gZozU3pjnvrlV0WOupFjsWvH1+ppECKGpR/dgNXjdX6p8z5uc+ABVobNj/gowbCDI3eqUydbiyhd6jC3RIkTIDyeRKbl4rwoQNO2kCWKZpgv8fCnOzfDfDFaVH/KfdoVc7+di7ZF0Q1u20WobY8zZPa0iOS70Bo/JIMKhnLtxZ+VpAP+/ZXuCWDYR0A+fbxFRWliFo6W6vK18lZCcAlpPPNDa5YlcGfQiVM02F9Qd19Bq90BlnIN7MUt+H4XTj0H4vZnIEXIJaX31VeTjgd0klKxk/FEcwTzc8AmxW4wMKBkeKGF1pKeBcbVY9jwXQ1J5YiHcN7ffjvmi2kdridfzJGsKacF2mF0SnMyoSsynjgRkOjyIc/S+K2t3ymoREm97Z9ySAYXpy8gYOkKcz9Pha2h/+g+zSRhbMASRUSx8r/sxXzszQlcw2N1SACCqswuXx/xWvzdNJXsjZCow/1bIvmv5GUZIqXP70shn89qdSQXp0aq6yU1SbdJgqKNtl/biPORMXw1eIgOCxndIiJ124f29vJwNFhRZT+KeoiDQAvhjQV9LUKgnU5IipEInzu/fbywqp8g1a9l0JbOISFrOMOFvD19ZaBo0OHVAQCRTFzxaEuQgywqGoZN7dcjB/iFt7HaO2oK/GW4ozeWslGmBDol2+4MGiJXk/tKIDmN3va/7TNiB5YYVQCCUSPzPQSQVWG/9loxZdP2bN5SVUxzUsZvyJXXtFWkEft1dANobEi7wNmWZQdL45AokkLzfHKyKVfuI9kFusxgD4/jXHgDttpBrDy4KJEYlph1yt04ZHOV3hLtMVJ1UPXiW8aypZUJ2Baph07SutB/O5Y2kXXtUVyqRBjitz/bEQSw57/aNTiqF39aRT1zgoz8jycX9cpiQ7kS4VQ82wpi0Ckdq7zidW7BI+ds1onfdDuDtwiOVZq36ASpMzOx3HxvTJ+0dm2qBjrwAVZYegAPg7PP5WIZlwflBdAXCKLMFma8OsR3Ohs6tRTrVWJvHk9DdDEWxD3f2eYPVOBQ6UEcOCSKLyFQx53+DZ5FuS8xY98nD31eQh9ZU+7vhFhVRWUnkkVCK6+r7liMORl3yQ9277yBXp9V0H7XUDfx3CYZdQbMTv8eECFLaq8SVJ9YuMCOW/Dm4ZO9ST0y/7jmDXe6O0HJWD5bEO2NRyrRF7UDkAlPMCdCjKP9Q1oDUKsXImCXJ/6aKFp6YWYKOWQX7Gt+/Swf3vH6jjtEMVrPhDtfmXuQaTg5/k7p/36kKSGPj8SwVWGJyR64vxXM2/xwLWJgpxOFBl1rNHJQ3uIPMuPinJlt+FfHTV0YNqj2kS6NycOhVKFMrjQmHebl7y6/EdxgIyhqd+oPw35FhDW3Iz4J9/28rwXCL72c4GZbdAnkjH66qfX21jJnYDpYE74XJ07p8IBq1UGo8nc0vrNncqDItjUQk0y0+1Vu1poVIs1hE+NGrUjmi0A3gV48h+jgA8ovk7Ka5wRLPveUwRUUPaK9vMnf09Wlq2L/51TpEq99Af5k4e0TYMvUVqpXUrsi8DKMU3fuoTSpkmcE4he7f+Htq2yHFa11FNwc5beVWIEpdvoV3q3Ot2qYc1Ypt/e7/0lhgKvj7zGgLk5HdmUDYBpk0FVdYL4aai9Ns1wG3H5gnG9cJ/kFhB1ysMvQ/UsiAbZmuCnky7YBknajXj+Xf3rBHyYDS0k8Ktldg/K+xQZvFHicF1C/mPN+7J7S1xLxwi8+fYNKBiy+KnkaqwOnyaUI55IyHE3qjGDHd5jfKDlzHmzC0kAhgR94N1bnIiRzwvI3YmLD8Z544t3GBcDjpa6fmGSjzk3/AB7Lh8baqaTc5n3V4mujocuixJANQzZCw6zLjUme3fS7GjSRw/qQKy4JYBmP8CcR9bhQx5HuI57TIOOrU0+feLo8mKZkG6624YaCinPIqPbdjDEi3/X60EZhmLskOwtqJ+V1juJEBgD",
+       "page_age": null
+      },
+      {
+       "type": "web_search_result",
+       "title": "Laryngeal cancer relative survival trends from 1972 to 2021 in the Nordic countries",
+       "url": "https://medicaljournalssweden.se/actaoncologica/article/download/40823/46953?inline=1",
+       "encrypted_content": "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",
+       "page_age": null
+      },
+      {
+       "type": "web_search_result",
+       "title": "Laryngeal cancer relative survival trends from 1972 to 2021 in the Nordic countries",
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11332480/",
+       "encrypted_content": "EtQNCioIFRgCIiRjZGYzZDRhNS1kMGVhLTQ2YTAtOWI0My1hMWU5OThlMWY0N2USDKShb7stHQak2wR1iBoMfXaN9qlQEVdCv9hIIjDsFe59FJIbfb4mjKnYB7E1sMkmPN1WYxxydkwbMtgW2cBXoswktAiWIw/6q/UHgZoq1wxpxrk67vidVIYneWmH3rQiFynx1PCvYCXcAn04xMMX+2CYWsTuN/JKiOm8XadD0rOySbnm58g2Rgz0MFXdnKhUVdGu+uoanj9kvjBaYAF+8AGbgWCRg+9+QHXEAlFB3m3OqDL6rkyW3/WLX3DL+iVocscvJ0rmrVuS0iVZOC5HHF/Qhjof2bAbB0PK6U1a2DLlUmOSbsdKmBJ696wLndpHXB9bG+LiAjghjTek8tm1YVyJRUEMUr5rrpowI5VTXsSJJEnQprWU1ize/+DFIECR6qK0fRn5X+IIyDwJu+pzIe/Fuie7BE34peTqWdHRJid+x0p7RegSb63XevhE6ZqvyKPBJjnFCwCJlNqw20gvP2I6KXCKNQlHwRHHNX/dKt4cGaNO+NWYRnx35vsMShWznTY1jWj8Qf5+TSoiw22aVYtwWpaJ9L+AkdJQs3tAL0tYpPvzHkw/9i2Q/y5e3nx4zIV2ooQUgwPAHq/SVOMqoGkVRlz9zdzubLEvcdK/5mXSgEgJ0RV0fGTdlmG4GuptK30ns5hYCApMx7T8xZNuDWL9dEgTuzKUVndOgFgnxITO6I3NOVlY/5wp8osqCDVCBs+8RsA3C2jZ+h9mXbjeMqCouBjXJExJY/e+sfP5y0J3Kzu7+De8hQU6vZU42rT6n3Nvtsrsh1NzGjVcCqctq/zzVxBXP7sQBRS9xD/cNOUH67gatrjNYhcbahTwQN5ExOzzVWO5BjPJUOdBsH0lay3Bd/JWfI6B6pAls020Plf8Yv3siZ9ww443ad10cpuQVTr1y6qF+rkUW+HPuDHqvUnThl9wYwQRJ547STxlDQEQqZm1QK1WytTv8LqvLFYCNP1y4p4KBvnkEXE5aAoHWyONfq+w9xZcfciNKyEHgniVO8/9A0PKLdk36Dusl8A1DR0x0WUH3zXYBvhl6WJQRqsknOGMo3AK96HFKD1EfnGg0gkT9PxRHtA43wNO4a4YyuppZuVEyw4ugKH+d6Ra31ZWFfQvdqC0XiK6VXH5cBa8Wme2RcQzK+rQrqKV2dVyP7ouDjrdw4H90b8LtxMtzpaSWX9xhZw7IlzF3bhLb/X6uPRBRuMjMm+1CuQvxWHZVhBiegw/AM+RLDPLqnWP2H/KueF6ESJ8h0BNRplNacOx9AHEvK/BDjPjUKX2kXKbdVqs2WyueT8cb7pES+pBD1k+yVQQ6mdunSa8myhq9x3g/pSM5F8JP+ejDEdHiYrnOdNY5Wl7Q40O72/W8gzv6TEV+HzvZVjj24eSrtHRsBDMJlNZMcW67gOd+UMp3mIoXI2vp+2YF2RjG0J6iXadUk+vnPrHGreZdJXrOQ4lOrVPHkS/2rpx0oujHvHGW4zLJRSGLGliOMLfFXgtyj+rR0vjjzg/AcS6XSYcQNMFeugJbgIY1zdFgL2nHUpj3VEOgIMlQKz2U++QZ+lN42ukkuekddRNf/fpu+9NKmybBABzAJTO0khTinK6GPazgOUkYKuz6dECzYtfCFIn/AqG4l19JOtqEVPY9qVgvLYTBABnPtWiZwv9a29IbFQU423glAW50iNUvJ3dKt7SUky2csZdB3QIkTJjNYGvqR1uJL4aTPQ5Cj2C+qYwfTAuvevuSHKw9ZEvppKtVEty9NzbyGfwwG83fUr9GkN5pmV2vG7MuvH9IcK0q3FcCYGOi+vWCZlFyi4kk2urAuAyZUBVkwqHq1tGSOjBqJcWb7WddZQLWRBUsqDZV0W4dV/+Fj9oFjQjPgg6g4AVRVLQJsmZm8vsv5sKPP4AF7knNzKevCaLurXgHAsIzN/9uXoA7yxquN9Ny0v/jPE115jFiB2nPp78Cpq/00b6LL0h2r2Xt3wHfU52u9kcT890KLwA17u/H7IlA/eYx2O7pr2EBXLAqzwI2WZ9KxHVvzH4uKH0p+keSudeZbxsLykX48jRRH7grvZM7NKDN4S7qf/zMHyWRtdQ6aJgpHB5gtSboRADu3+2Np9PFyLucbnzZ314qPta5jcYMq9NUWTtjkSNUZWywPVkmEvbG+0nJ/1XU6nKl0/ARHoPv9wkCsyNxeAp1txGZXWoODd8b0KOsM9LS2+Zwy/7GwI/i06ajmQz+HGtP4IIQTRqEuXRPXPbwjXQyrR2JguT7Mflz4Y2nLR/rj2ybDz22okA53YYAw==",
+       "page_age": null
+      },
+      {
+       "type": "web_search_result",
+       "title": "Full article: Trends in cancer survival in the Nordic countries 1990\u20132016: the NORDCAN survival studies",
+       "url": "https://www.tandfonline.com/doi/full/10.1080/0284186X.2020.1822544",
+       "encrypted_content": "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",
+       "page_age": "2217 days ago"
+      },
+      {
+       "type": "web_search_result",
+       "title": "Survival trends in hematological malignancies in the Nordic countries through 50 years",
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9637692/",
+       "encrypted_content": "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",
+       "page_age": null
+      }
+     ]
+    },
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "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"
+    },
+    {
+     "type": "thinking",
+     "thinking": "The analysis uses age-standardised Pohar Perme relative survival with ICSS weights, cohort approach for all periods but the last, which uses the period approach. I'm writing the full script and running it next.\n\n",
+     "signature": "CAQS4QcKEQgTGAI4AUIJbmFycmF0aW9uEgyf89gnU2BtEvrENpkaDIyk9hfYBf8GEtbF4CIwDsJjocMq1/UR3AL3QUle/mbczMOnrJNZPDs0f9+5YKwDMfl/n/VPzmMII3MNbEDhKv0G3RbX9mxUeTqz2CtvEKx2uP3WIwmqsJSFN+izBvXsDaurjlsBGcr/rSDkBucPKfIN4URuLdx8j8xLz6yQZD90YSc2a8d3zDUL0SDsdy6BGBo14xNV1EeespSCtFMirlan1RghdcSDigFMkHYbGJ2NfjxoJRRuV5LpD+7JFEUA9PwVWe4n3usDt9uJY25mXg+XkvsMBjfiu5vLmlfnJjKhNBJWZnG9/B168tyQjZOtcIzpBmNtNzUOXh4p4dVxGMmxib8xlFPVF8ISRaWynFscvrYQp+maxXw1kwgk0SyrRe1L/0e70YD7MRWv3wMoWFqoqRMj27/vGNENmvsyN4KtzTgE4ifSTOgij/PRARj/seO6zR508BOvaG2mK9/8LL8JeA8AJNhPF5F/T1faplu7aH9XcMGdSPmnDfgVq0fcHWK0vHyj5FmG8SjpIytxgxRnNUg+3sjaw7CSPH8Qwnt0NPVmwV4mf3omFxa5Pp+4Rmf3j2qm34+5GsqtflFL33SB8dYN9sctQxKRiemnIJNovdID9kIrX+DYJ9Qu0BrvBRs2HG6M+9gjctzpXNaJVB68SVitfO07HoAZQTZ4s9/H2SVOunYZ2fL4a9RGGTGz1oNsp1iBlnchH/gCNmv1HwUVdsyMo1/itY80A5vpCsO+Ciywhi571c4ppW4Y38DJtxeB+sZmcMl+/gNaknCHASBtiZdYRVeqhzQ/eLvIc0nlO66bt3j9izNnObof/ZXjoFiObvc0RdTgU63z+tCgLAC6Flu6TSiGWGZH+8WQDzxmQi4FhqFCkC6hKMUXdQJyLsPWZPPM7wqZm7DiFHgxgW5kzR5BjIH2UZQOOx7oVBA6UIxRMIdscUZPy3Lq7wn8T7293QTvMrzaWb3l2oBX5SpUBpR2LdcH7/65/w002uGY9A4dvL3Z0qpKgNdKk6i+MlE0dmVp2GdOIDvOf6JG8cyjKvEr0A5L2+CFIs6KFYO0+032d+Uc1JH5zeuk5fzSWmWzxOXYCSLoeC9StNjycWx/jSn8yDD+nFVfD2CnXrsw59l9y2h9FzJgLPkVRTrqmJzy+E5u1k8KmBlTimNQoVEjloGLgxfjvZdi6xKBDY1a+sP5CgUyfkLKbqcWUe+XEIfE2yfolak+nIIJoCFwaOp//lZv+R+3F9TqOrqoTfa5VwYIjgtmRM2EOxZrypIYAQ==",
+     "_progress_update": true
+    },
+    {
+     "type": "tool_use",
+     "id": "toolu_01DNoFrG7e9kWyhEwUiE2u7G",
+     "name": "bash",
+     "input": {
+      "command": "cat > nordcan_survival_gap.py <<'EOF'\n\"\"\"Finland vs Sweden/Norway mean: 5-year relative survival, lung/pancreas/liver, NORDCAN API.\nUsage: python nordcan_survival_gap.py            (fetch live, save raw JSON to raw/)\n       python nordcan_survival_gap.py --offline  (re-run from raw/ JSON)\n\"\"\"\nimport sys, os, json, requests, numpy as np, pandas as pd\nimport matplotlib; matplotlib.use(\"Agg\"); import matplotlib.pyplot as plt\n\nURL = (\"https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/{sex}/\"\n       \"246_752_578_208/{c}/?&surv_period=5&age_surv=0&year_start={ys}&year_end={ye}\")\nYS, YE = 1973, 2024          # fetch full span; 1990+ used for trends, earlier only for lag search\nTREND_START = 1990\nCANCERS = {160: \"Lung\", 130: \"Pancreas\", 110: \"Liver\"}\nSEXES = {1: \"Men\", 2: \"Women\"}\nCTRY = {246: \"Finland\", 752: \"Sweden\", 578: \"Norway\", 208: \"Denmark\"}\nOFFLINE = \"--offline\" in sys.argv\nos.makedirs(\"raw\", exist_ok=True)\n\n# ---------- 1. fetch / load ----------\nrows, log = [], []\nfor c in CANCERS:\n    for s in SEXES:\n        fn = f\"raw/nordcan_surv5_cancer{c}_sex{s}_{YS}_{YE}.json\"\n        url = URL.format(sex=s, c=c, ys=YS, ye=YE)\n        if OFFLINE:\n            j = json.load(open(fn))\n        else:\n            r = requests.get(url, timeout=60); r.raise_for_status(); j = r.json()\n            j[\"_request_url\"] = url\n            json.dump(j, open(fn, \"w\"), indent=1)\n        log.append((c, s, len(j.get(\"dataset\", [])), j.get(\"error\")))\n        for d in j[\"dataset\"]:\n            v = d[\"survival\"]\n            rows.append(dict(cancer=CANCERS[c], sex=SEXES[s], country=CTRY[d[\"country\"]],\n                             period=d[\"period\"], mid=float(d[\"year\"]),\n                             rs=float(v[\"value\"]) if v[\"value\"] not in (None, \"\") else np.nan,\n                             lo=float(v[\"lowCI\"]) if v[\"lowCI\"] not in (None, \"\") else np.nan,\n                             hi=float(v[\"upCI\"]) if v[\"upCI\"] not in (None, \"\") else np.nan))\nfor l in log: print(\"cancer %s sex %s: %d rows, error=%s\" % l)\ndf = pd.DataFrame(rows)\ndf.to_csv(\"nordcan_surv5_long.csv\", index=False)\n\n# missing-cell report for the trend window\ntw = df[df.mid >= TREND_START]\ngrid = pd.MultiIndex.from_product([CANCERS.values(), SEXES.values(), CTRY.values(),\n                                   sorted(tw.period.unique())])\nhave = set(map(tuple, tw.dropna(subset=[\"rs\"])[[\"cancer\",\"sex\",\"country\",\"period\"]].values))\nmissing = [g for g in grid if g not in have]\nprint(\"Missing cells 1990-2024:\", missing if missing else \"none\")\n\n# ---------- 2. gap metrics ----------\ndef se(lo, hi): return (hi - lo) / (2 * 1.96)   # approx SE from (asymmetric) 95% CI\n\ndef lag_years(t, ref, target, t_latest):\n    \"\"\"First calendar time at which ref series (linear interp. between period midpoints)\n    reached `target`; returns (lag, flag).\"\"\"\n    o = np.argsort(t); t, ref = np.asarray(t)[o], np.asarray(ref)[o]\n    if ref[0] >= target: return np.nan, f\"ref already >= target in {int(t[0])} (lag > {t_latest - t[0]:.0f} y)\"\n    for i in range(1, len(t)):\n        if ref[i] >= target:\n            tc = t[i-1] + (target - ref[i-1]) / (ref[i] - ref[i-1]) * (t[i] - t[i-1])\n            return t_latest - tc, \"\"\n    return 0.0, \"Finland at/above reference\"\n\nout, series = [], {}\nfor cn in CANCERS.values():\n    for sx in SEXES.values():\n        w = df[(df.cancer == cn) & (df.sex == sx)].pivot_table(index=\"mid\", columns=\"country\",\n                                                              values=[\"rs\", \"lo\", \"hi\"])\n        ref = (w[\"rs\"][\"Sweden\"] + w[\"rs\"][\"Norway\"]) / 2\n        ref_se = np.sqrt(se(w[\"lo\"][\"Sweden\"], w[\"hi\"][\"Sweden\"])**2 +\n                         se(w[\"lo\"][\"Norway\"], w[\"hi\"][\"Norway\"])**2) / 2\n        fi = w[\"rs\"][\"Finland\"]; fi_se = se(w[\"lo\"][\"Finland\"], w[\"hi\"][\"Finland\"])\n        gap = fi - ref; gap_se = np.sqrt(fi_se**2 + ref_se**2)\n        series[(cn, sx)] = (w, ref, gap)\n        g = gap[gap.index >= TREND_START].dropna()\n        tl = g.index.max()\n        slope = np.polyfit(g.index, g.values, 1)[0] * 10\n        dec = {int(m): g.get(m, np.nan) for m in [1992.0, 2002.0, 2012.0, 2022.0]}\n        lag, flag = lag_years(ref.dropna().index, ref.dropna().values, fi[tl], tl)\n        per = df.loc[(df.mid == tl), \"period\"].iloc[0]\n        out.append(dict(\n            cancer=cn, sex=sx, latest_period=per,\n            finland_rs=fi[tl], sweden_rs=w[\"rs\"][\"Sweden\"][tl], norway_rs=w[\"rs\"][\"Norway\"][tl],\n            denmark_rs=w[\"rs\"][\"Denmark\"][tl], se_no_mean_rs=round(ref[tl], 2),\n            gap_pp=round(gap[tl], 2),\n            gap_pp_95ci_lo=round(gap[tl] - 1.96*gap_se[tl], 1), gap_pp_95ci_hi=round(gap[tl] + 1.96*gap_se[tl], 1),\n            finland_pct_of_ref=round(100 * fi[tl] / ref[tl], 1),\n            gap_1990_94=round(dec[1992], 2), gap_2000_04=round(dec[2002], 2),\n            gap_2010_14=round(dec[2012], 2), gap_2020_24=round(dec[2022], 2),\n            gap_change_1990s_to_2000s=round(dec[2002]-dec[1992], 2),\n            gap_change_2000s_to_2010s=round(dec[2012]-dec[2002], 2),\n            gap_change_2010s_to_2020s=round(dec[2022]-dec[2012], 2),\n            gap_trend_pp_per_decade_OLS=round(slope, 2),\n            finland_change_1990_94_to_2020_24=round(fi[tl] - fi[1992.0], 1),\n            ref_change_1990_94_to_2020_24=round(ref[tl] - ref[1992.0], 2),\n            lag_years=round(lag, 1) if np.isfinite(lag) else np.nan, lag_note=flag))\nres = pd.DataFrame(out)\nres.to_csv(\"nordcan_finland_gap_results.csv\", index=False)\nprint(res.to_string())\n\n# ---------- 3. figures ----------\ntry:\n    apply_figure_style()  # provided in the interactive environment; plain matplotlib otherwise\nexcept NameError:\n    plt.rcParams.update({\"font.size\": 8, \"axes.spines.top\": False, \"axes.spines.right\": False})\nCOL = {\"Finland\": \"#0b4f9c\", \"Sweden\": \"#e0a100\", \"Norway\": \"#b2182b\", \"Denmark\": \"#9a9a9a\"}\nfor cn in CANCERS.values():\n    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.3), sharey=True)\n    for ax, sx in zip(axes, SEXES.values()):\n        w, ref, gap = series[(cn, sx)]\n        w = w[w.index >= TREND_START]; ref = ref[ref.index >= TREND_START]\n        for ctry in [\"Denmark\", \"Norway\", \"Sweden\", \"Finland\"]:\n            focal = ctry == \"Finland\"\n            ax.fill_between(w.index, w[\"lo\"][ctry], w[\"hi\"][ctry], color=COL[ctry],\n                            alpha=0.18 if focal else 0.08, lw=0)\n            ax.plot(w.index, w[\"rs\"][ctry], \"-o\", color=COL[ctry], lw=2.2 if focal else 1.1,\n                    ms=3.5 if focal else 2.5, zorder=4 if focal else 2,\n                    alpha=1 if focal else (0.55 if ctry == \"Denmark\" else 0.8))\n        ax.plot(ref.index, ref.values, \"--\", color=\"black\", lw=1.3, zorder=3)\n        r = res[(res.cancer == cn) & (res.sex == sx)].iloc[0]\n        tl = ref.index.max()\n        ax.annotate(\"\", xy=(tl + 1.2, r.finland_rs), xytext=(tl + 1.2, r.se_no_mean_rs),\n                    arrowprops=dict(arrowstyle=\"<->\", color=\"black\", lw=0.8))\n        lagtxt = f\", lag \u2248 {r.lag_years:.0f} y\" if np.isfinite(r.lag_years) else \"\"\n        ax.text(0.03, 0.97, f\"{sx}\\n2020\u201324 gap: {r.gap_pp:+.1f} pp{lagtxt}\",\n                transform=ax.transAxes, va=\"top\", ha=\"left\")\n        ax.set_xticks(w.index); ax.set_xticklabels([p for p in sorted(df.period.unique()) if int(p[:4]) >= TREND_START],\n                                                    rotation=45, ha=\"right\")\n        ax.set_xlim(TREND_START - 0.5, tl + 2.5)\n        ax.set_xlabel(\"Period of diagnosis\")\n    axes[0].set_ylabel(\"5-year relative survival (%)\")\n    axes[0].set_ylim(bottom=0)\n    hs = [plt.Line2D([], [], color=COL[c], lw=2.2 if c == \"Finland\" else 1.1, marker=\"o\", ms=3) for c in COL]\n    hs.append(plt.Line2D([], [], color=\"black\", ls=\"--\", lw=1.3))\n    fig.legend(hs, list(COL) + [\"Sweden\u2013Norway mean\"], loc=\"upper center\", ncol=5, frameon=False,\n               bbox_to_anchor=(0.5, 1.0))\n    fig.suptitle(f\"{cn} cancer: Finland vs the Sweden\u2013Norway mean, age-standardised 5-year relative survival\",\n                 y=1.07)\n    fig.tight_layout()\n    fig.savefig(f\"fig_{cn.lower()}_survival_gap.png\", dpi=300, bbox_inches=\"tight\")\n    plt.close(fig)\nprint(\"done\")\nEOF\necho ok",
+      "environment": "python",
+      "human_description": "Writing full analysis script"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 74662,
+    "output": 4525,
+    "cache_read": 59015,
+    "cache_write": 15641,
+    "uncached": 6
+   },
+   "_response_id": "msg_011Ch2dRDNKxbxCQi4bRhi7u",
+   "_has_server_tools": true,
+   "_uuid": "2e102d49-944d-44d8-a736-babe4fd72867",
+   "_ts": 1794650583191
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_01DNoFrG7e9kWyhEwUiE2u7G",
+     "content": "{\"stdout\":\"ok\\n\",\"stderr\":\"\",\"exit_code\":0}",
+     "_outcome": {
+      "status": "ok"
+     }
+    }
+   ],
+   "_uuid": "54b8b91f-def8-4e88-9dd7-8f5b32dede75",
+   "_ts": 1794650583196
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "tool_use",
+     "id": "toolu_01H9TqpLiTenSLHog8qpjgQy",
+     "name": "python",
+     "input": {
+      "code": "\nimport sys; sys.argv=[\"x\"]\nexec(open(\"nordcan_survival_gap.py\").read())\n",
+      "environment": "python",
+      "human_description": "Running analysis with live fetch"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 46124,
+    "output": 135,
+    "cache_read": 41635,
+    "cache_write": 4487,
+    "uncached": 2
+   },
+   "_response_id": "msg_011Ch2dU83gXdyEBdgx7D3UR",
+   "_uuid": "050ecbc0-beee-46b1-a5c3-64c74656affc",
+   "_ts": 1794650586582
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_01H9TqpLiTenSLHog8qpjgQy",
+     "content": "{\"stdout\":\"cancer 160 sex 1: 39 rows, error=[]\\ncancer 160 sex 2: 37 rows, error=[]\\ncancer 130 sex 1: 36 rows, error=[]\\ncancer 130 sex 2: 36 rows, error=[]\\ncancer 110 sex 1: 24 rows, error=[]\\ncancer 110 sex 2: 25 rows, error=[]\\nMissing cells 1990-2024: [('Pancreas', 'Men', 'Finland', '1995-1999'), ('Liver', 'Men', 'Finland', '1990-1994'), ('Liver', 'Men', 'Norway', '1990-1994'), ('Liver', 'Men', 'Norway', '1995-1999'), ('Liver', 'Men', 'Norway', '2000-2004'), ('Liver', 'Men', 'Denmark', '1995-1999'), ('Liver', 'Women', 'Finland', '1990-1994'), ('Liver', 'Women', 'Norway', '1990-1994'), ('Liver', 'Women', 'Norway', '1995-1999'), ('Liver', 'Women', 'Denmark', '1990-1994'), ('Liver', 'Women', 'Denmark', '1995-1999')]\\n     cancer    sex latest_period  finland_rs  sweden_rs  norway_rs  denmark_rs  se_no_mean_rs  gap_pp  gap_pp_95ci_lo  gap_pp_95ci_hi  finland_pct_of_ref  gap_1990_94  gap_2000_04  gap_2010_14  gap_2020_24  gap_change_1990s_to_2000s  gap_change_2000s_to_2010s  gap_change_2010s_to_2020s  gap_trend_pp_per_decade_OLS  finland_change_1990_94_to_2020_24  ref_change_1990_94_to_2020_24  lag_years lag_note\\n0      Lung    Men     2020-2024        17.9       31.3       30.8        28.1          31.05  -13.15           -14.7           -11.6                57.6        -1.00        -1.50        -5.25       -13.15                      -0.50                      -3.75                      -7.90                        -3.92                                9.6                          21.75       10.1         \\n1      Lung  Women     2020-2024        30.8       38.9       38.4        37.2          38.65   -7.85            -9.8            -5.9                79.7         0.70         1.35        -4.15        -7.85                       0.65                      -5.50                      -3.70                        -3.36                               17.5                          26.05        6.2         \\n2  Pancreas    Men     2020-2024        12.1       17.3       18.7        15.8          18.00   -5.90            -8.0            -3.8                67.2         0.60        -0.90        -3.45        -5.90                      -1.50                      -2.55                      -2.45                        -2.29                                9.1                          15.60        8.9         \\n3  Pancreas  Women     2020-2024        13.6       17.9       20.0        15.3          18.95   -5.35            -7.5            -3.2                71.8        -0.85        -0.20        -2.35        -5.35                       0.65                      -2.15                      -3.00                        -1.52                               10.4                          14.90        8.2         \\n4     Liver    Men     2020-2024        14.4       25.8       24.5        19.5          25.15  -10.75           -13.6            -7.9                57.3          NaN          NaN        -8.90       -10.75                        NaN                        NaN                      -1.85                        -4.37                                NaN                            NaN       14.7         \\n5     Liver  Women     2020-2024        12.5       23.6       25.9        19.9          24.75  -12.25           -16.1            -8.4                50.5          NaN        -2.95        -7.50       -12.25                        NaN                      -4.55                      -4.75                        -4.63                                NaN                            NaN       18.6         \\ndone\\n\",\"stderr\":\"\",\"exit_code\":0,\"resources\":\"wall 6.5s \u00b7 cpu 2.4s \u00b7 peak rss 159 MB\"}",
+     "_outcome": {
+      "status": "ok"
+     }
+    },
+    {
+     "type": "text",
+     "text": "[System] Attached file: fig_lung_survival_gap.png (workspace preview \u2014 not saved as an artifact; save_artifacts + ![caption]({{artifact:<version_id>}}) gives the user a durable copy)"
+    },
+    {
+     "type": "image",
+     "source": {
+      "type": "_disk_ref",
+      "path": "~/.claude-science/ORG/tool-results/c397f19d-f85d-4008-89ea-cf2d795b254e/images/2f1171a7a6223466f22d84b626e4892667d9bf69f6bbb91a595bcae6bdfe9157.jpg",
+      "media_type": "image/jpeg"
+     }
+    },
+    {
+     "type": "text",
+     "text": "[System] Attached file: fig_pancreas_survival_gap.png (preview \u2014 not an artifact)"
+    },
+    {
+     "type": "image",
+     "source": {
+      "type": "_disk_ref",
+      "path": "~/.claude-science/ORG/tool-results/c397f19d-f85d-4008-89ea-cf2d795b254e/images/aee6b494c7304539d990459342fe6e1063274256e129d5a7ccb8ffa53c5035c9.jpg",
+      "media_type": "image/jpeg"
+     }
+    },
+    {
+     "type": "text",
+     "text": "[System] Attached file: fig_liver_survival_gap.png (preview \u2014 not an artifact)"
+    },
+    {
+     "type": "image",
+     "source": {
+      "type": "_disk_ref",
+      "path": "~/.claude-science/ORG/tool-results/c397f19d-f85d-4008-89ea-cf2d795b254e/images/997e8b8161d6a68999ff0e981a5c49b48ff9437a64bf37c09e03701e04800a8f.jpg",
+      "media_type": "image/jpeg"
+     }
+    }
+   ],
+   "_uuid": "cf2287d4-e6e8-445a-9eb7-17b0d518566c",
+   "_ts": 1794650586585,
+   "_cell_images": {
+    "toolu_01H9TqpLiTenSLHog8qpjgQy": [
+     {
+      "sha256": "2f1171a7a6223466f22d84b626e4892667d9bf69f6bbb91a595bcae6bdfe9157",
+      "filename": "fig_lung_survival_gap.png",
+      "content_type": "image/jpeg",
+      "width": 1567,
+      "height": 790
+     },
+     {
+      "sha256": "aee6b494c7304539d990459342fe6e1063274256e129d5a7ccb8ffa53c5035c9",
+      "filename": "fig_pancreas_survival_gap.png",
+      "content_type": "image/jpeg",
+      "width": 1567,
+      "height": 790
+     },
+     {
+      "sha256": "997e8b8161d6a68999ff0e981a5c49b48ff9437a64bf37c09e03701e04800a8f",
+      "filename": "fig_liver_survival_gap.png",
+      "content_type": "image/jpeg",
+      "width": 1567,
+      "height": 790
+     }
+    ]
+   }
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "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"
+    },
+    {
+     "type": "text",
+     "text": "The figures render cleanly. Next I'll check that the offline re-run reproduces the results, then save the artifacts."
+    },
+    {
+     "type": "tool_use",
+     "id": "toolu_01Xpvj91bbgX1BRhQc1K51qv",
+     "name": "bash",
+     "input": {
+      "command": "cp nordcan_finland_gap_results.csv /tmp/live.csv; python nordcan_survival_gap.py --offline > /tmp/off.log 2>&1; tail -1 /tmp/off.log; cmp /tmp/live.csv nordcan_finland_gap_results.csv && echo IDENTICAL; ls raw/",
+      "environment": "python",
+      "human_description": "Verifying offline re-run reproducibility"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 52685,
+    "output": 757,
+    "cache_read": 46122,
+    "cache_write": 6559,
+    "uncached": 4
+   },
+   "_response_id": "msg_011Ch2dUpSoC7iFnAA3wzV3u",
+   "_uuid": "e1166eec-678e-4561-882b-30716115bfc6",
+   "_ts": 1794650603822
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_01Xpvj91bbgX1BRhQc1K51qv",
+     "content": "{\"stdout\":\"done\\nIDENTICAL\\nnordcan_surv5_cancer110_sex1_1973_2024.json\\nnordcan_surv5_cancer110_sex2_1973_2024.json\\nnordcan_surv5_cancer130_sex1_1973_2024.json\\nnordcan_surv5_cancer130_sex2_1973_2024.json\\nnordcan_surv5_cancer160_sex1_1973_2024.json\\nnordcan_surv5_cancer160_sex2_1973_2024.json\\nprobe.json\\n\",\"stderr\":\"\",\"exit_code\":0}",
+     "_outcome": {
+      "status": "ok"
+     }
+    },
+    {
+     "type": "text",
+     "text": "[System] Attached file: fig_lung_survival_gap.png (preview \u2014 not an artifact)"
+    },
+    {
+     "type": "image",
+     "source": {
+      "type": "_disk_ref",
+      "path": "~/.claude-science/ORG/tool-results/c397f19d-f85d-4008-89ea-cf2d795b254e/images/23c13decf6de0f202be9aca1fd05c61f4c6f96bf28a98af165993d22211d4460.jpg",
+      "media_type": "image/jpeg"
+     }
+    },
+    {
+     "type": "text",
+     "text": "[System] Attached file: fig_pancreas_survival_gap.png (preview \u2014 not an artifact)"
+    },
+    {
+     "type": "image",
+     "source": {
+      "type": "_disk_ref",
+      "path": "~/.claude-science/ORG/tool-results/c397f19d-f85d-4008-89ea-cf2d795b254e/images/779b8da4c707c696548d1a11e41541cae27d3dfef3a929f051588f85902c2a0a.jpg",
+      "media_type": "image/jpeg"
+     }
+    },
+    {
+     "type": "text",
+     "text": "[System] Attached file: fig_liver_survival_gap.png (preview \u2014 not an artifact)"
+    },
+    {
+     "type": "image",
+     "source": {
+      "type": "_disk_ref",
+      "path": "~/.claude-science/ORG/tool-results/c397f19d-f85d-4008-89ea-cf2d795b254e/images/56f618a1ddd9bfa2ed5f11eabfcbce65bf1e9797433ab7f18aabe11aa4f33b88.jpg",
+      "media_type": "image/jpeg"
+     }
+    }
+   ],
+   "_uuid": "b9b7038c-f8bd-4a66-ac89-a038229935f9",
+   "_ts": 1794650603824,
+   "_cell_images": {
+    "toolu_01Xpvj91bbgX1BRhQc1K51qv": [
+     {
+      "sha256": "23c13decf6de0f202be9aca1fd05c61f4c6f96bf28a98af165993d22211d4460",
+      "filename": "fig_lung_survival_gap.png",
+      "content_type": "image/jpeg",
+      "width": 1567,
+      "height": 792
+     },
+     {
+      "sha256": "779b8da4c707c696548d1a11e41541cae27d3dfef3a929f051588f85902c2a0a",
+      "filename": "fig_pancreas_survival_gap.png",
+      "content_type": "image/jpeg",
+      "width": 1567,
+      "height": 792
+     },
+     {
+      "sha256": "56f618a1ddd9bfa2ed5f11eabfcbce65bf1e9797433ab7f18aabe11aa4f33b88",
+      "filename": "fig_liver_survival_gap.png",
+      "content_type": "image/jpeg",
+      "width": 1567,
+      "height": 792
+     }
+    ]
+   }
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "tool_use",
+     "id": "toolu_015tD4wsG4kN1ebJaFeYwtyG",
+     "name": "save_artifacts",
+     "input": {
+      "files": [
+       "nordcan_survival_gap.py",
+       "nordcan_finland_gap_results.csv",
+       "nordcan_surv5_long.csv",
+       "fig_lung_survival_gap.png",
+       "fig_pancreas_survival_gap.png",
+       "fig_liver_survival_gap.png",
+       "raw/nordcan_surv5_cancer160_sex1_1973_2024.json",
+       "raw/nordcan_surv5_cancer160_sex2_1973_2024.json",
+       "raw/nordcan_surv5_cancer130_sex1_1973_2024.json",
+       "raw/nordcan_surv5_cancer130_sex2_1973_2024.json",
+       "raw/nordcan_surv5_cancer110_sex1_1973_2024.json",
+       "raw/nordcan_surv5_cancer110_sex2_1973_2024.json"
+      ],
+      "language": "python",
+      "human_description": "Saving script, results, figures, raw JSON"
+     },
+     "caller": {
+      "type": "direct"
+     }
+    }
+   ],
+   "_tokens": {
+    "input": 58631,
+    "output": 370,
+    "cache_read": 52681,
+    "cache_write": 5946,
+    "uncached": 4
+   },
+   "_response_id": "msg_011Ch2dVr7Gt8ZVco7Tz1as9",
+   "_uuid": "ed318477-35de-4140-8105-75a29422302e",
+   "_ts": 1794650612472
+  },
+  {
+   "role": "user",
+   "content": [],
+   "_uuid": "434e67ba-aabd-4bda-86f5-50df683979d1",
+   "_ts": 1794650612475
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "tool_result",
+     "tool_use_id": "toolu_015tD4wsG4kN1ebJaFeYwtyG",
+     "content": "{\"artifacts\":[{\"artifact_id\":\"7eff7108-679c-44a1-8949-e2984cb0d65d\",\"version_id\":\"08b8e7f4-7955-42bc-854d-1d3c5b185782\",\"version_number\":1,\"filename\":\"nordcan_survival_gap.py\",\"content_type\":\"text/x-python\",\"size_bytes\":8083,\"checksum\":\"629da6cd839f9a326abb3edc1027c2c18f37d45c4ef839243b7e23a52b57b50f\",\"storage_path\":\"proj_1991fae6fb4b/7eff7108-679c-44a1-8949-e2984cb0d65d/v08b8e7f4_nordcan_survival_gap.py\",\"input_path\":\"nordcan_survival_gap.py\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/7eff7108-679c-44a1-8949-e2984cb0d65d/v08b8e7f4_nordcan_survival_gap.py\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/nordcan_survival_gap.py\",\"is_checkpoint\":false,\"uri\":\"/artifacts/7eff7108-679c-44a1-8949-e2984cb0d65d\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"18c607d5-b99a-4378-adc8-c38f6a042e28\",\"version_id\":\"5a07fbc5-8aba-4830-8668-194317d06e22\",\"version_number\":1,\"filename\":\"nordcan_finland_gap_results.csv\",\"content_type\":\"text/csv\",\"size_bytes\":1109,\"checksum\":\"69cf593a05655e5b7c8448a50cd398d41ee823b58b326f925ce29e9e726e44c2\",\"storage_path\":\"proj_1991fae6fb4b/18c607d5-b99a-4378-adc8-c38f6a042e28/v5a07fbc5_nordcan_finland_gap_results.csv\",\"input_path\":\"nordcan_finland_gap_results.csv\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/18c607d5-b99a-4378-adc8-c38f6a042e28/v5a07fbc5_nordcan_finland_gap_results.csv\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/nordcan_finland_gap_results.csv\",\"is_checkpoint\":false,\"uri\":\"/artifacts/18c607d5-b99a-4378-adc8-c38f6a042e28\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"9332ee16-49f7-47d4-87d8-6cadc368c166\",\"version_id\":\"4835b3f1-ab7f-463d-bcc9-823d52e9075f\",\"version_number\":1,\"filename\":\"nordcan_surv5_long.csv\",\"content_type\":\"text/csv\",\"size_bytes\":9850,\"checksum\":\"72e0755e616621915215922de8ae1a51a936df18cc8f186e54013537805a20f0\",\"storage_path\":\"proj_1991fae6fb4b/9332ee16-49f7-47d4-87d8-6cadc368c166/v4835b3f1_nordcan_surv5_long.csv\",\"input_path\":\"nordcan_surv5_long.csv\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/9332ee16-49f7-47d4-87d8-6cadc368c166/v4835b3f1_nordcan_surv5_long.csv\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/nordcan_surv5_long.csv\",\"is_checkpoint\":false,\"uri\":\"/artifacts/9332ee16-49f7-47d4-87d8-6cadc368c166\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"9c359566-cd6c-41cb-ad45-6934f19b3948\",\"version_id\":\"243761ea-2dbb-495b-bea6-3bcc7e7266fa\",\"version_number\":1,\"filename\":\"fig_lung_survival_gap.png\",\"content_type\":\"image/png\",\"size_bytes\":240493,\"checksum\":\"22e7a079e25c4a9c6946f23cd1e44118fdeb45928398f5b06432f97acf4ed4c7\",\"storage_path\":\"proj_1991fae6fb4b/9c359566-cd6c-41cb-ad45-6934f19b3948/v243761ea_fig_lung_survival_gap.png\",\"input_path\":\"fig_lung_survival_gap.png\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/9c359566-cd6c-41cb-ad45-6934f19b3948/v243761ea_fig_lung_survival_gap.png\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/fig_lung_survival_gap.png\",\"is_checkpoint\":false,\"uri\":\"/artifacts/9c359566-cd6c-41cb-ad45-6934f19b3948\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"95086231-41e8-4538-8638-e73cdce63abe\",\"version_id\":\"94ddbe79-8fca-48ad-ad84-9626144db0a0\",\"version_number\":1,\"filename\":\"fig_pancreas_survival_gap.png\",\"content_type\":\"image/png\",\"size_bytes\":247180,\"checksum\":\"1f4a4b4ce0f596df12bb35729d267a0b99e74ae797423c2a1f62b0ed2a27e23f\",\"storage_path\":\"proj_1991fae6fb4b/95086231-41e8-4538-8638-e73cdce63abe/v94ddbe79_fig_pancreas_survival_gap.png\",\"input_path\":\"fig_pancreas_survival_gap.png\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/95086231-41e8-4538-8638-e73cdce63abe/v94ddbe79_fig_pancreas_survival_gap.png\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/fig_pancreas_survival_gap.png\",\"is_checkpoint\":false,\"uri\":\"/artifacts/95086231-41e8-4538-8638-e73cdce63abe\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"c6463516-1b87-418f-ab68-bed6eefd174a\",\"version_id\":\"70c405ff-3214-4772-bd1f-c19f6696136f\",\"version_number\":1,\"filename\":\"fig_liver_survival_gap.png\",\"content_type\":\"image/png\",\"size_bytes\":233390,\"checksum\":\"b7b0a2bd1241ad89a1f52aaa72a42698d7f26960ddc097da8ddb3f300293b260\",\"storage_path\":\"proj_1991fae6fb4b/c6463516-1b87-418f-ab68-bed6eefd174a/v70c405ff_fig_liver_survival_gap.png\",\"input_path\":\"fig_liver_survival_gap.png\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/c6463516-1b87-418f-ab68-bed6eefd174a/v70c405ff_fig_liver_survival_gap.png\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/fig_liver_survival_gap.png\",\"is_checkpoint\":false,\"uri\":\"/artifacts/c6463516-1b87-418f-ab68-bed6eefd174a\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"e7970840-3d12-4183-ab4e-5c1405a9b2a3\",\"version_id\":\"938f1cf3-c758-47a4-812f-500c8f51993b\",\"version_number\":1,\"filename\":\"nordcan_surv5_cancer160_sex1_1973_2024.json\",\"content_type\":\"application/json\",\"size_bytes\":10229,\"checksum\":\"a78424b6bedbc190d4a3d7d2b96260fe183c02bcd0b4a464a7e274bb3bb2380f\",\"storage_path\":\"proj_1991fae6fb4b/e7970840-3d12-4183-ab4e-5c1405a9b2a3/v938f1cf3_nordcan_surv5_cancer160_sex1_1973_2024.json\",\"input_path\":\"raw/nordcan_surv5_cancer160_sex1_1973_2024.json\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/e7970840-3d12-4183-ab4e-5c1405a9b2a3/v938f1cf3_nordcan_surv5_cancer160_sex1_1973_2024.json\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/raw/nordcan_surv5_cancer160_sex1_1973_2024.json\",\"is_checkpoint\":false,\"uri\":\"/artifacts/e7970840-3d12-4183-ab4e-5c1405a9b2a3\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"5dbda44b-834d-4e40-b155-2b70ba8d1974\",\"version_id\":\"c3998a51-52f7-44a9-bb50-9ea8bd5c79c9\",\"version_number\":1,\"filename\":\"nordcan_surv5_cancer160_sex2_1973_2024.json\",\"content_type\":\"application/json\",\"size_bytes\":9750,\"checksum\":\"dcfac6d2c57cf1e341ed6bc9cbc1d4f679b5558a166d9fd65b61228af3c6f75a\",\"storage_path\":\"proj_1991fae6fb4b/5dbda44b-834d-4e40-b155-2b70ba8d1974/vc3998a51_nordcan_surv5_cancer160_sex2_1973_2024.json\",\"input_path\":\"raw/nordcan_surv5_cancer160_sex2_1973_2024.json\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/5dbda44b-834d-4e40-b155-2b70ba8d1974/vc3998a51_nordcan_surv5_cancer160_sex2_1973_2024.json\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/raw/nordcan_surv5_cancer160_sex2_1973_2024.json\",\"is_checkpoint\":false,\"uri\":\"/artifacts/5dbda44b-834d-4e40-b155-2b70ba8d1974\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"75feb50c-40c3-468e-9537-144daead198c\",\"version_id\":\"ccccc8f9-c0ab-4c12-ba96-e36aca64f756\",\"version_number\":1,\"filename\":\"nordcan_surv5_cancer130_sex1_1973_2024.json\",\"content_type\":\"application/json\",\"size_bytes\":9429,\"checksum\":\"c1f6c21e3be91f80ea77de823e4060a9f39894ad54f7b93ab10eb46476b11f92\",\"storage_path\":\"proj_1991fae6fb4b/75feb50c-40c3-468e-9537-144daead198c/vccccc8f9_nordcan_surv5_cancer130_sex1_1973_2024.json\",\"input_path\":\"raw/nordcan_surv5_cancer130_sex1_1973_2024.json\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/75feb50c-40c3-468e-9537-144daead198c/vccccc8f9_nordcan_surv5_cancer130_sex1_1973_2024.json\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/raw/nordcan_surv5_cancer130_sex1_1973_2024.json\",\"is_checkpoint\":false,\"uri\":\"/artifacts/75feb50c-40c3-468e-9537-144daead198c\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"13db2d20-60fc-48b0-abc0-57e6f43fc768\",\"version_id\":\"5dbf6fca-bba8-4db1-9f83-25dba0bee1e5\",\"version_number\":1,\"filename\":\"nordcan_surv5_cancer130_sex2_1973_2024.json\",\"content_type\":\"application/json\",\"size_bytes\":9434,\"checksum\":\"418ebda22dd81c004f760bf89e9b74c96122bc956cadf92c377d938946dac5ea\",\"storage_path\":\"proj_1991fae6fb4b/13db2d20-60fc-48b0-abc0-57e6f43fc768/v5dbf6fca_nordcan_surv5_cancer130_sex2_1973_2024.json\",\"input_path\":\"raw/nordcan_surv5_cancer130_sex2_1973_2024.json\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/13db2d20-60fc-48b0-abc0-57e6f43fc768/v5dbf6fca_nordcan_surv5_cancer130_sex2_1973_2024.json\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/raw/nordcan_surv5_cancer130_sex2_1973_2024.json\",\"is_checkpoint\":false,\"uri\":\"/artifacts/13db2d20-60fc-48b0-abc0-57e6f43fc768\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"445fe6a9-3606-4438-9d33-8f911879a097\",\"version_id\":\"36641e6f-f12e-43e8-8973-6b637629790f\",\"version_number\":1,\"filename\":\"nordcan_surv5_cancer110_sex1_1973_2024.json\",\"content_type\":\"application/json\",\"size_bytes\":6376,\"checksum\":\"fe037b7a3eb669216092990a4f5255deda021415336080d5fed98699ff4f67d9\",\"storage_path\":\"proj_1991fae6fb4b/445fe6a9-3606-4438-9d33-8f911879a097/v36641e6f_nordcan_surv5_cancer110_sex1_1973_2024.json\",\"input_path\":\"raw/nordcan_surv5_cancer110_sex1_1973_2024.json\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/445fe6a9-3606-4438-9d33-8f911879a097/v36641e6f_nordcan_surv5_cancer110_sex1_1973_2024.json\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/raw/nordcan_surv5_cancer110_sex1_1973_2024.json\",\"is_checkpoint\":false,\"uri\":\"/artifacts/445fe6a9-3606-4438-9d33-8f911879a097\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"},{\"artifact_id\":\"633f17ec-9ed4-46be-9779-cbebe01569b4\",\"version_id\":\"8db7ab29-3ffc-4596-9756-fc12ab42670e\",\"version_number\":1,\"filename\":\"nordcan_surv5_cancer110_sex2_1973_2024.json\",\"content_type\":\"application/json\",\"size_bytes\":6636,\"checksum\":\"fde5c61449f9647dd3ad597f17fd73e6fa66aa85af755b190910af90056762b9\",\"storage_path\":\"proj_1991fae6fb4b/633f17ec-9ed4-46be-9779-cbebe01569b4/v8db7ab29_nordcan_surv5_cancer110_sex2_1973_2024.json\",\"input_path\":\"raw/nordcan_surv5_cancer110_sex2_1973_2024.json\",\"file_path\":\"~/.claude-science/ORG/artifacts/proj_1991fae6fb4b/633f17ec-9ed4-46be-9779-cbebe01569b4/v8db7ab29_nordcan_surv5_cancer110_sex2_1973_2024.json\",\"source_path\":\"~/.claude-science/ORG/WORKSPACE/raw/nordcan_surv5_cancer110_sex2_1973_2024.json\",\"is_checkpoint\":false,\"uri\":\"/artifacts/633f17ec-9ed4-46be-9779-cbebe01569b4\",\"root_frame_id\":\"c397f19d-f85d-4008-89ea-cf2d795b254e\",\"environment\":\"python\"}]}"
+    }
+   ]
+  }
+ ],
+ "environment_snapshot": {
+  "environment_name": "python",
+  "packages": [
+   {
+    "name": "_openmp_mutex",
+    "version": "4.5",
+    "channel": "conda"
+   },
+   {
+    "name": "_python_abi3_support",
+    "version": "1.0",
+    "channel": "conda"
+   },
+   {
+    "name": "alsa-lib",
+    "version": "1.2.16.1",
+    "channel": "conda"
+   },
+   {
+    "name": "brotli",
+    "version": "1.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "brotli-bin",
+    "version": "1.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "bzip2",
+    "version": "1.0.8",
+    "channel": "conda"
+   },
+   {
+    "name": "c-ares",
+    "version": "1.34.9",
+    "channel": "conda"
+   },
+   {
+    "name": "ca-certificates",
+    "version": "2026.10.18",
+    "channel": "conda"
+   },
+   {
+    "name": "cairo",
+    "version": "1.18.6",
+    "channel": "conda"
+   },
+   {
+    "name": "certifi",
+    "version": "2026.10.18",
+    "channel": "conda"
+   },
+   {
+    "name": "charset-normalizer",
+    "version": "3.5.2",
+    "channel": "conda"
+   },
+   {
+    "name": "contourpy",
+    "version": "1.3.3",
+    "channel": "conda"
+   },
+   {
+    "name": "cpython",
+    "version": "3.11.18",
+    "channel": "conda"
+   },
+   {
+    "name": "cycler",
+    "version": "0.12.1",
+    "channel": "conda"
+   },
+   {
+    "name": "cyrus-sasl",
+    "version": "2.1.28",
+    "channel": "conda"
+   },
+   {
+    "name": "dbus",
+    "version": "1.16.2",
+    "channel": "conda"
+   },
+   {
+    "name": "font-ttf-dejavu-sans-mono",
+    "version": "2.37",
+    "channel": "conda"
+   },
+   {
+    "name": "font-ttf-inconsolata",
+    "version": "3.000",
+    "channel": "conda"
+   },
+   {
+    "name": "font-ttf-source-code-pro",
+    "version": "2.038",
+    "channel": "conda"
+   },
+   {
+    "name": "font-ttf-ubuntu",
+    "version": "0.83",
+    "channel": "conda"
+   },
+   {
+    "name": "fontconfig",
+    "version": "2.18.3",
+    "channel": "conda"
+   },
+   {
+    "name": "fonts-conda-ecosystem",
+    "version": "1",
+    "channel": "conda"
+   },
+   {
+    "name": "fonts-conda-forge",
+    "version": "1",
+    "channel": "conda"
+   },
+   {
+    "name": "fonttools",
+    "version": "4.68.0",
+    "channel": "conda"
+   },
+   {
+    "name": "formulaic",
+    "version": "1.2.2",
+    "channel": "conda"
+   },
+   {
+    "name": "freetype",
+    "version": "2.14.3",
+    "channel": "conda"
+   },
+   {
+    "name": "fribidi",
+    "version": "1.0.18",
+    "channel": "conda"
+   },
+   {
+    "name": "gh",
+    "version": "2.104.0",
+    "channel": "conda"
+   },
+   {
+    "name": "git",
+    "version": "2.56.1",
+    "channel": "conda"
+   },
+   {
+    "name": "glib",
+    "version": "2.90.1",
+    "channel": "conda"
+   },
+   {
+    "name": "glib-tools",
+    "version": "2.90.1",
+    "channel": "conda"
+   },
+   {
+    "name": "graphite2",
+    "version": "1.3.15",
+    "channel": "conda"
+   },
+   {
+    "name": "gst-plugins-base",
+    "version": "1.26.11",
+    "channel": "conda"
+   },
+   {
+    "name": "gstreamer",
+    "version": "1.26.11",
+    "channel": "conda"
+   },
+   {
+    "name": "harfbuzz",
+    "version": "15.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "icu",
+    "version": "78.3",
+    "channel": "conda"
+   },
+   {
+    "name": "idna",
+    "version": "3.20",
+    "channel": "conda"
+   },
+   {
+    "name": "interface_meta",
+    "version": "1.3.0",
+    "channel": "conda"
+   },
+   {
+    "name": "keyutils",
+    "version": "1.6.3",
+    "channel": "conda"
+   },
+   {
+    "name": "kiwisolver",
+    "version": "1.5.1",
+    "channel": "conda"
+   },
+   {
+    "name": "krb5",
+    "version": "1.22.2",
+    "channel": "conda"
+   },
+   {
+    "name": "lame",
+    "version": "4.0",
+    "channel": "conda"
+   },
+   {
+    "name": "lcms2",
+    "version": "2.20",
+    "channel": "conda"
+   },
+   {
+    "name": "ld_impl_linux-64",
+    "version": "2.46.1",
+    "channel": "conda"
+   },
+   {
+    "name": "lerc",
+    "version": "4.3.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libblas",
+    "version": "3.11.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libbrotlicommon",
+    "version": "1.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libbrotlidec",
+    "version": "1.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libbrotlienc",
+    "version": "1.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libcap",
+    "version": "2.78",
+    "channel": "conda"
+   },
+   {
+    "name": "libcblas",
+    "version": "3.11.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libclang-cpp22.1",
+    "version": "22.1.8",
+    "channel": "conda"
+   },
+   {
+    "name": "libclang-cpp23.1",
+    "version": "23.1.5",
+    "channel": "conda"
+   },
+   {
+    "name": "libclang13",
+    "version": "23.1.5",
+    "channel": "conda"
+   },
+   {
+    "name": "libcups",
+    "version": "2.3.3",
+    "channel": "conda"
+   },
+   {
+    "name": "libcurl",
+    "version": "8.23.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libdeflate",
+    "version": "1.26",
+    "channel": "conda"
+   },
+   {
+    "name": "libdrm",
+    "version": "2.4.129",
+    "channel": "conda"
+   },
+   {
+    "name": "libedit",
+    "version": "3.1.20260512",
+    "channel": "conda"
+   },
+   {
+    "name": "libegl",
+    "version": "1.7.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libev",
+    "version": "4.33",
+    "channel": "conda"
+   },
+   {
+    "name": "libevent",
+    "version": "2.1.12",
+    "channel": "conda"
+   },
+   {
+    "name": "libexpat",
+    "version": "2.9.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libffi",
+    "version": "3.7.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libflac",
+    "version": "1.5.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libfreetype",
+    "version": "2.14.3",
+    "channel": "conda"
+   },
+   {
+    "name": "libfreetype6",
+    "version": "2.14.3",
+    "channel": "conda"
+   },
+   {
+    "name": "libgcc",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libgcc-ng",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libgfortran",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libgfortran5",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libgl",
+    "version": "1.7.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libglib",
+    "version": "2.90.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libglvnd",
+    "version": "1.7.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libglx",
+    "version": "1.7.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libgomp",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libharfbuzz",
+    "version": "15.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libharfbuzz-devel",
+    "version": "15.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libiconv",
+    "version": "1.18",
+    "channel": "conda"
+   },
+   {
+    "name": "libjpeg-turbo",
+    "version": "3.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "liblapack",
+    "version": "3.11.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libllvm22",
+    "version": "22.1.8",
+    "channel": "conda"
+   },
+   {
+    "name": "libllvm23",
+    "version": "23.1.5",
+    "channel": "conda"
+   },
+   {
+    "name": "liblzma",
+    "version": "5.8.3",
+    "channel": "conda"
+   },
+   {
+    "name": "libnghttp2",
+    "version": "1.71.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libnsl",
+    "version": "2.0.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libntlm",
+    "version": "1.8",
+    "channel": "conda"
+   },
+   {
+    "name": "libogg",
+    "version": "1.3.5",
+    "channel": "conda"
+   },
+   {
+    "name": "libopenblas",
+    "version": "0.3.34",
+    "channel": "conda"
+   },
+   {
+    "name": "libopengl",
+    "version": "1.7.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libopus",
+    "version": "1.6.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libpango",
+    "version": "1.58.2",
+    "channel": "conda"
+   },
+   {
+    "name": "libpango-devel",
+    "version": "1.58.2",
+    "channel": "conda"
+   },
+   {
+    "name": "libpciaccess",
+    "version": "0.19",
+    "channel": "conda"
+   },
+   {
+    "name": "libpng",
+    "version": "1.6.59",
+    "channel": "conda"
+   },
+   {
+    "name": "libpq",
+    "version": "18.7",
+    "channel": "conda"
+   },
+   {
+    "name": "libpsl",
+    "version": "0.23.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libpython",
+    "version": "3.11.18",
+    "channel": "conda"
+   },
+   {
+    "name": "libsndfile",
+    "version": "1.2.2",
+    "channel": "conda"
+   },
+   {
+    "name": "libsqlite",
+    "version": "3.54.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libssh2",
+    "version": "1.11.1",
+    "channel": "conda"
+   },
+   {
+    "name": "libstdcxx",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libstdcxx-ng",
+    "version": "16.2.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libsystemd0",
+    "version": "262.2",
+    "channel": "conda"
+   },
+   {
+    "name": "libtiff",
+    "version": "4.7.2",
+    "channel": "conda"
+   },
+   {
+    "name": "libuuid",
+    "version": "2.42.4",
+    "channel": "conda"
+   },
+   {
+    "name": "libvorbis",
+    "version": "1.3.7",
+    "channel": "conda"
+   },
+   {
+    "name": "libwebp-base",
+    "version": "1.6.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libxcb",
+    "version": "1.17.0",
+    "channel": "conda"
+   },
+   {
+    "name": "libxcrypt",
+    "version": "4.4.38",
+    "channel": "conda"
+   },
+   {
+    "name": "libxkbcommon",
+    "version": "1.13.2",
+    "channel": "conda"
+   },
+   {
+    "name": "libxml2",
+    "version": "2.15.4",
+    "channel": "conda"
+   },
+   {
+    "name": "libxml2-16",
+    "version": "2.15.4",
+    "channel": "conda"
+   },
+   {
+    "name": "libzlib",
+    "version": "1.3.2",
+    "channel": "conda"
+   },
+   {
+    "name": "matplotlib",
+    "version": "3.9.1",
+    "channel": "conda"
+   },
+   {
+    "name": "matplotlib-base",
+    "version": "3.9.1",
+    "channel": "conda"
+   },
+   {
+    "name": "mpg123",
+    "version": "1.33.7",
+    "channel": "conda"
+   },
+   {
+    "name": "munkres",
+    "version": "1.1.4",
+    "channel": "conda"
+   },
+   {
+    "name": "narwhals",
+    "version": "2.28.0",
+    "channel": "conda"
+   },
+   {
+    "name": "ncurses",
+    "version": "6.6",
+    "channel": "conda"
+   },
+   {
+    "name": "nspr",
+    "version": "4.40",
+    "channel": "conda"
+   },
+   {
+    "name": "nss",
+    "version": "3.118",
+    "channel": "conda"
+   },
+   {
+    "name": "numpy",
+    "version": "2.4.6",
+    "channel": "conda"
+   },
+   {
+    "name": "openjpeg",
+    "version": "2.5.4",
+    "channel": "conda"
+   },
+   {
+    "name": "openldap",
+    "version": "2.6.13",
+    "channel": "conda"
+   },
+   {
+    "name": "openssl",
+    "version": "3.6.5",
+    "channel": "conda"
+   },
+   {
+    "name": "packaging",
+    "version": "26.3",
+    "channel": "conda"
+   },
+   {
+    "name": "pandas",
+    "version": "2.3.3",
+    "channel": "conda"
+   },
+   {
+    "name": "pango",
+    "version": "1.58.2",
+    "channel": "conda"
+   },
+   {
+    "name": "patsy",
+    "version": "1.0.3",
+    "channel": "conda"
+   },
+   {
+    "name": "pcre2",
+    "version": "10.49",
+    "channel": "conda"
+   },
+   {
+    "name": "perl",
+    "version": "5.44.0",
+    "channel": "conda"
+   },
+   {
+    "name": "pillow",
+    "version": "13.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "pip",
+    "version": "26.2.2",
+    "channel": "conda"
+   },
+   {
+    "name": "pixman",
+    "version": "0.46.4",
+    "channel": "conda"
+   },
+   {
+    "name": "ply",
+    "version": "3.11",
+    "channel": "conda"
+   },
+   {
+    "name": "pthread-stubs",
+    "version": "0.4",
+    "channel": "conda"
+   },
+   {
+    "name": "pulseaudio-client",
+    "version": "17.0",
+    "channel": "conda"
+   },
+   {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "channel": "conda"
+   },
+   {
+    "name": "pypdfium2",
+    "version": "5.9.0",
+    "channel": "pip"
+   },
+   {
+    "name": "pyqt",
+    "version": "5.15.11",
+    "channel": "conda"
+   },
+   {
+    "name": "PyQt5",
+    "version": "5.15.11",
+    "channel": "pip"
+   },
+   {
+    "name": "pyqt5-sip",
+    "version": "12.17.0",
+    "channel": "conda"
+   },
+   {
+    "name": "pysocks",
+    "version": "1.7.1",
+    "channel": "conda"
+   },
+   {
+    "name": "python",
+    "version": "3.11.18",
+    "channel": "conda"
+   },
+   {
+    "name": "python_abi",
+    "version": "3.11",
+    "channel": "conda"
+   },
+   {
+    "name": "python-dateutil",
+    "version": "4.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "python-gil",
+    "version": "3.11.18",
+    "channel": "conda"
+   },
+   {
+    "name": "python-tzdata",
+    "version": "2026.6",
+    "channel": "conda"
+   },
+   {
+    "name": "pytz",
+    "version": "2026.6",
+    "channel": "conda"
+   },
+   {
+    "name": "qhull",
+    "version": "2020.2",
+    "channel": "conda"
+   },
+   {
+    "name": "qt-main",
+    "version": "5.15.15",
+    "channel": "conda"
+   },
+   {
+    "name": "readline",
+    "version": "8.3",
+    "channel": "conda"
+   },
+   {
+    "name": "requests",
+    "version": "2.34.2",
+    "channel": "conda"
+   },
+   {
+    "name": "scipy",
+    "version": "1.17.1",
+    "channel": "conda"
+   },
+   {
+    "name": "seaborn",
+    "version": "0.13.2",
+    "channel": "conda"
+   },
+   {
+    "name": "seaborn-base",
+    "version": "0.13.2",
+    "channel": "conda"
+   },
+   {
+    "name": "setuptools",
+    "version": "84.2.1",
+    "channel": "conda"
+   },
+   {
+    "name": "sip",
+    "version": "6.10.0",
+    "channel": "conda"
+   },
+   {
+    "name": "socksio",
+    "version": "1.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "statsmodels",
+    "version": "0.15.0",
+    "channel": "conda"
+   },
+   {
+    "name": "tk",
+    "version": "8.6.13",
+    "channel": "conda"
+   },
+   {
+    "name": "toml",
+    "version": "0.10.2",
+    "channel": "conda"
+   },
+   {
+    "name": "tomli",
+    "version": "2.5.0",
+    "channel": "conda"
+   },
+   {
+    "name": "tornado",
+    "version": "6.6.1",
+    "channel": "conda"
+   },
+   {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "channel": "conda"
+   },
+   {
+    "name": "tzdata",
+    "version": "2026e",
+    "channel": "conda"
+   },
+   {
+    "name": "unicodedata2",
+    "version": "18.0.0",
+    "channel": "conda"
+   },
+   {
+    "name": "urllib3",
+    "version": "2.8.0",
+    "channel": "conda"
+   },
+   {
+    "name": "wheel",
+    "version": "0.48.0",
+    "channel": "conda"
+   },
+   {
+    "name": "wrapt",
+    "version": "2.5.2",
+    "channel": "conda"
+   },
+   {
+    "name": "xcb-util",
+    "version": "0.4.1",
+    "channel": "conda"
+   },
+   {
+    "name": "xcb-util-image",
+    "version": "0.4.0",
+    "channel": "conda"
+   },
+   {
+    "name": "xcb-util-keysyms",
+    "version": "0.4.1",
+    "channel": "conda"
+   },
+   {
+    "name": "xcb-util-renderutil",
+    "version": "0.3.10",
+    "channel": "conda"
+   },
+   {
+    "name": "xcb-util-wm",
+    "version": "0.4.2",
+    "channel": "conda"
+   },
+   {
+    "name": "xkeyboard-config",
+    "version": "2.48",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libice",
+    "version": "1.1.2",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libsm",
+    "version": "1.2.6",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libx11",
+    "version": "1.8.14",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxau",
+    "version": "1.0.12",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxcomposite",
+    "version": "0.4.7",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxdamage",
+    "version": "1.1.6",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxdmcp",
+    "version": "1.1.5",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxext",
+    "version": "1.3.7",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxfixes",
+    "version": "6.0.2",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxrender",
+    "version": "0.9.13",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxshmfence",
+    "version": "1.3.3",
+    "channel": "conda"
+   },
+   {
+    "name": "xorg-libxxf86vm",
+    "version": "1.1.7",
+    "channel": "conda"
+   },
+   {
+    "name": "zlib-ng",
+    "version": "2.3.3",
+    "channel": "conda"
+   },
+   {
+    "name": "zstd",
+    "version": "1.5.7",
+    "channel": "conda"
+   }
+  ],
+  "python_version": "3.11.18",
+  "op_log": [
+   {
+    "timestamp": "2026-11-13T19:56:17.708Z",
+    "operation": "create",
+    "packages": [
+     "numpy",
+     "pandas<3",
+     "scipy",
+     "matplotlib",
+     "seaborn",
+     "pillow",
+     "socksio",
+     "pysocks",
+     "requests",
+     "certifi==2026.10.18",
+     "ca-certificates==2026.10.18",
+     "git",
+     "gh"
+    ],
+    "result": "success",
+    "python_version": "3.11"
+   },
+   {
+    "timestamp": "2026-11-13T19:56:21.279Z",
+    "operation": "install",
+    "packages": [
+     "pypdfium2==5.9.0"
+    ],
+    "result": "success",
+    "channel": "pip"
+   }
+  ],
+  "conda_history": {
+   "specs": [
+    "python=3.11",
+    "pip",
+    "numpy",
+    "pandas<3",
+    "scipy",
+    "matplotlib",
+    "seaborn",
+    "pillow",
+    "socksio",
+    "pysocks",
+    "requests",
+    "certifi==2026.10.18",
+    "ca-certificates==2026.10.18",
+    "git",
+    "gh"
+   ],
+   "channels": [
+    "conda-forge"
+   ]
+  }
+ },
+ "language": "python",
+ "interactions": [
+  {
+   "source": "mkdir -p raw; curl -s -m 60 -o raw/probe.json -w \"%{http_code}\\n\" \"https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/1/246_752_578_208/160/?&surv_period=5&age_surv=0&year_start=1973&year_end=2023\"; head -c 1500 raw/probe.json",
+   "cell_index": 0,
+   "language": "bash",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "a821db01-10e0-458c-8fe4-43b9a38aa9c2"
+  },
+  {
+   "source": "\nimport requests, json, pandas as pd\nB=\"https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/{sex}/246_752_578_208/{c}/?&surv_period=5&age_surv=0&year_start={ys}&year_end={ye}\"\ndef get(sex,c,ys,ye):\n    r=requests.get(B.format(sex=sex,c=c,ys=ys,ye=ye),timeout=60); return r.status_code, r.json()\nfor ys,ye in [(1973,2023),(1990,2024),(1973,2024)]:\n    s,j=get(1,160,ys,ye); d=j.get('dataset',[])\n    print(ys,ye,s,len(d),sorted({x['period'] for x in d}), list(j.keys()))\n",
+   "cell_index": 1,
+   "language": "python",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "f07d84e6-60c2-47fa-a794-5d8b4feeff76"
+  },
+  {
+   "source": "\ns,a=get(1,160,1973,2023); s,b=get(1,160,1973,2024)\nprint(a['error'])\nda=pd.json_normalize(a['dataset']); db=pd.json_normalize(b['dataset'])\nprint(pd.crosstab(da.label,da.period).T)\nprint(da.equals(db))\nprint(da[da.period=='2020-2024'][['label','year','survival.value','survival.lowCI','survival.upCI']])\n",
+   "cell_index": 2,
+   "language": "python",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "4b66778c-65c0-4b63-afb1-b616368250d0"
+  },
+  {
+   "source": "# skill:figure-style kernel.py (auto-injected on skill load)\nMETA_GREY = \"#888888\"\n\n\ndef apply_figure_style(*, frame=\"open\", font=None, sizes=(8, 7, 6), grid=False):\n    \"\"\"Set matplotlib rcParams for publication-grade output. Call once before plotting.\n\n    This sets mechanics (role-mapped font-size ladder, outward ticks, frameless\n    legends, 300-dpi save, Type-42 embedded fonts) \u2014 not a house aesthetic.\n    Frame, font and the size ladder are parameters.\n\n    frame : 'open' (bottom+left spines, default) | 'boxed' (all four) | 'none'\n    font  : sans-serif family name; None = system default sans-serif\n    sizes : (base, secondary, tick) \u2014 titles/axis-labels, legend/annotation, ticks\n    grid  : whether to draw axes.grid (default False)\n    \"\"\"\n    import matplotlib as mpl\n    if frame not in (\"open\", \"boxed\", \"none\"):\n        raise ValueError(f\"frame must be 'open'|'boxed'|'none', got {frame!r}\")\n\n    try:\n        import os, sys, glob, matplotlib.font_manager as fm\n        fdir = os.path.join(os.environ.get(\"CONDA_PREFIX\") or sys.prefix, \"fonts\")\n        if os.path.isdir(fdir):\n            known = {f.fname for f in fm.fontManager.ttflist}\n            for f in glob.glob(os.path.join(fdir, \"*.ttf\")):\n                if f not in known:\n                    fm.fontManager.addfont(f)\n    except Exception:\n        pass\n    base, secondary, tick = sizes\n    boxed = (frame == \"boxed\")\n    rc = {\n        \"font.family\": \"sans-serif\",\n        \"font.size\": base,\n        \"axes.labelsize\": base,\n        \"axes.titlesize\": base,\n        \"legend.fontsize\": secondary,\n        \"xtick.labelsize\": tick,\n        \"ytick.labelsize\": tick,\n        \"axes.linewidth\": 0.6,\n        \"xtick.direction\": \"out\", \"ytick.direction\": \"out\",\n        \"xtick.major.size\": 3, \"ytick.major.size\": 3,\n        \"xtick.major.width\": 0.6, \"ytick.major.width\": 0.6,\n        \"axes.spines.top\": boxed, \"axes.spines.right\": boxed,\n        \"axes.spines.left\": frame != \"none\", \"axes.spines.bottom\": frame != \"none\",\n        \"axes.grid\": bool(grid),\n        \"legend.frameon\": False,\n        \"figure.dpi\": 200,\n        \"savefig.dpi\": 300,\n        \"savefig.bbox\": \"tight\",\n        \"axes.titleweight\": \"normal\",\n        \"axes.titlelocation\": \"left\",\n        \"axes.labelweight\": \"normal\",\n        \"lines.linewidth\": 1.2,\n        \"patch.linewidth\": 0.6,\n        \"pdf.fonttype\": 42, \"ps.fonttype\": 42,\n    }\n    if font:\n        rc[\"font.sans-serif\"] = [font, \"DejaVu Sans\"]\n    mpl.rcParams.update(rc)\n\n\ndef set_frame(ax, style=\"open\"):\n    \"\"\"\u00a73: set spine visibility on an existing axes. style \u2208 {'open','boxed','none'}.\"\"\"\n    show = {\"open\": (False, False, True, True),\n            \"boxed\": (True, True, True, True),\n            \"none\": (False, False, False, False)}[style]\n    for side, vis in zip((\"top\", \"right\", \"bottom\", \"left\"), show):\n        ax.spines[side].set_visible(vis)\n        if vis:\n            ax.spines[side].set_linewidth(0.6)\n    ax.tick_params(direction=\"out\", length=0 if style == \"none\" else 3, width=0.6)\n\n\ndef panel_letter(ax, letter, dx=-0.18, dy=1.02, case=\"lower\", fontsize=None):\n    \"\"\"\u00a75.7: bold panel letter outside top-left of axes. case \u2208 {'lower','upper'}.\"\"\"\n    import matplotlib.pyplot as plt\n    if fontsize is None:\n        fontsize = plt.rcParams.get(\"font.size\", 8) + 1\n    s = letter.lower() if case == \"lower\" else letter.upper()\n    ax.text(dx, dy, s, transform=ax.transAxes,\n            fontweight=\"bold\", fontsize=fontsize, va=\"bottom\", ha=\"left\")\n\n\ndef focal_palette(labels, focal, focal_color, other=\"muted\", base_colors=None):\n    \"\"\"\u00a74.2: map labels \u2192 colors with the focal series visually dominant.\n\n    other='muted'   \u2014 desaturate base_colors (or a default cycle) toward gray\n    other='grey'    \u2014 uniform light gray for all non-focal\n    other='ordinal' \u2014 non-focal on a single light\u2192dark gray ramp (input order)\n    \"\"\"\n    import matplotlib.colors as mcolors\n    import matplotlib.pyplot as plt\n    focal_set = {focal} if isinstance(focal, str) else set(focal)\n    n = len(labels)\n    if not focal_set & set(labels):\n        raise ValueError(f\"focal {focal!r} not found in labels\")\n    if base_colors is None:\n        base_colors = plt.rcParams[\"axes.prop_cycle\"].by_key().get(\"color\", [\"#444444\"])\n    base_colors = [base_colors[i % len(base_colors)] for i in range(n)]\n    if other == \"grey\":\n        rest = [\"#BCBCBC\"] * n\n    elif other == \"ordinal\":\n        nf = max(1, n - len(focal_set))\n        ramp = [mcolors.to_hex((v, v, v)) for v in\n                ([0.55] if nf == 1 else [0.80 - 0.35 * i / (nf - 1) for i in range(nf)])]\n        rest, k = [], 0\n        for l in labels:\n            rest.append(ramp[min(k, nf - 1)]); k += (l not in focal_set)\n    else:\n        def mute(c):\n            r, g, b = mcolors.to_rgb(c)\n            m = (r + g + b) / 3\n            return mcolors.to_hex((0.3 * r + 0.7 * m, 0.3 * g + 0.7 * m, 0.3 * b + 0.7 * m))\n        rest = [mute(c) for c in base_colors]\n    return [focal_color if l in focal_set else rest[i] for i, l in enumerate(labels)]\n\n\ndef bar_with_points(ax, x, ymat, labels, colors, jitter=0.08, show_points=True,\n                    errorbar=None, point_alpha=0.5, point_size=8):\n    \"\"\"\u00a76.1: bar = mean; optionally overlay raw points or draw an interval.\n\n    colors   : per-label color list (e.g. from focal_palette)\n    errorbar : None | 'sd' | 'ci95' \u2014 drawn only when show_points is False.\n               'ci95' is the t-distribution 95% CI of the mean\n               (half-width t_{0.975,n-1} \u00b7 s/\u221an); correct at small n where the\n               z-approximation (1.96\u00b7s/\u221an) is markedly too narrow.\n    \"\"\"\n    import numpy as np\n    means = np.array([np.mean(y) for y in ymat], float)\n    err = None\n    if errorbar and not show_points:\n        if errorbar == \"sd\":\n            err = np.array([np.std(y, ddof=1) if np.asarray(y).size > 1 else 0 for y in ymat])\n        elif errorbar == \"ci95\":\n            from scipy.stats import t\n            def _hw(y):\n                n = np.asarray(y).size\n                return t.ppf(0.975, n - 1) * np.std(y, ddof=1) / np.sqrt(n) if n > 1 else 0\n            err = np.array([_hw(y) for y in ymat])\n    ax.bar(x, means, color=colors, width=0.7, edgecolor=\"none\",\n           yerr=err, error_kw={\"elinewidth\": 0.8, \"capsize\": 0})\n    if show_points:\n        for xi, ys in zip(x, ymat):\n            ys = np.asarray(ys)\n            if ys.ndim and ys.size > 1:\n                jit = (np.random.rand(ys.size) - 0.5) * 2 * jitter\n                ax.scatter(np.full(ys.size, xi) + jit, ys, s=point_size, color=\"black\",\n                           alpha=point_alpha, zorder=3, linewidths=0)\n    ax.set_xticks(x); ax.set_xticklabels(labels)\n    return ax\n\n\ndef strip_with_median(ax, groups, values, colors=None, jitter=0.12):\n    \"\"\"\u00a76.1: jittered points + bold horizontal median tick per group.\"\"\"\n    import numpy as np\n    labs = list(groups)\n    if colors is None:\n        colors = [\"#444444\"] * len(labs)\n    for i, (ys, c) in enumerate(zip(values, colors)):\n        ys = np.asarray(ys)\n        jit = (np.random.rand(ys.size) - 0.5) * 2 * jitter\n        ax.scatter(np.full(ys.size, i) + jit, ys, s=10, color=c, alpha=0.6, linewidths=0, zorder=2)\n        m = np.median(ys)\n        ax.plot([i - 0.22, i + 0.22], [m, m], color=\"black\", lw=1.6, zorder=3)\n    ax.set_xticks(range(len(labs))); ax.set_xticklabels(labs)\n    return ax\n\n\ndef goodness_arrow(ax, text=\"higher = better\", loc=\"upper left\", axis=\"y\", fontsize=None):\n    \"\"\"\u00a73.6: small upright direction-of-goodness cue in the margin.\"\"\"\n    import matplotlib.pyplot as plt\n    if fontsize is None:\n        fontsize = plt.rcParams[\"legend.fontsize\"]\n    pos = {\"upper left\": (0.02, 0.98), \"upper right\": (0.98, 0.98),\n           \"lower left\": (0.02, 0.02), \"lower right\": (0.98, 0.02)}[loc]\n    ha = \"left\" if \"left\" in loc else \"right\"\n    va = \"top\" if \"upper\" in loc else \"bottom\"\n    arrow = \"\u2191 \" if axis == \"y\" else \"\u2192 \"\n    ax.text(pos[0], pos[1], arrow + text, transform=ax.transAxes,\n            fontsize=fontsize, color=META_GREY, ha=ha, va=va)\n\n\ndef two_tier_label(name, meta):\n    \"\"\"\u00a75: two-line label string (name / metadata). Meta line styled separately by caller.\"\"\"\n    return f\"{name}\\n{meta}\"\n\n\ndef end_of_line_labels(ax, xs, ys, labels, colors=None, dx=0.01, fontsize=None):\n    \"\"\"\u00a76.3 / \u00a77.3: label each line series at its right end instead of a legend box.\"\"\"\n    import matplotlib.pyplot as plt\n    if fontsize is None:\n        fontsize = plt.rcParams[\"font.size\"]\n    if colors is None:\n        colors = [None] * len(labels)\n    span = ax.get_xlim()[1] - ax.get_xlim()[0]\n    for x, y, lab, c in zip(xs, ys, labels, colors):\n        ax.text(x[-1] + dx * span, y[-1], lab, color=c, va=\"center\", ha=\"left\", fontsize=fontsize)\n\n\ndef panel_crops(fig, dpi=None, pad_px=6, bbox_inches=None, pad_inches=None):\n    \"\"\"\u00a79.2: pixel-space crop boxes for each lettered panel in the SAVED PNG.\n\n    Returns ``{letter: (x0, y0, x1, y1)}`` in image-space pixels (origin\n    top-left, matching ``host.view_image(path, crop=...)`` and PIL's\n    ``Image.crop``). Panels are detected as bold single-character ``Text``\n    objects placed by :func:`panel_letter`; each panel's crop is its axes'\n    tightbbox mapped into the saved file's pixel space, padded by ``pad_px``.\n    For \u00a73.4 composites (abutting subplots sharing an axis, letter on the\n    leftmost only) the crop unions in letterless ``sharex``/``sharey`` siblings\n    on the same grid row/col so the whole composite is covered. When no axes\n    carries a panel letter (standalone plot, or a figure-composer sub-agent),\n    falls back to one crop per axes keyed by index.\n\n    ``bbox_inches`` mirrors ``Figure.savefig`` semantics: ``None`` means\n    *consult rcParams* (so under :func:`apply_figure_style` it resolves to\n    ``'tight'``); pass an explicit ``Bbox`` only if you saved with one. The\n    boxes are clamped to the saved image extent regardless.\n\n        >>> fig.savefig(\"fig.png\")            # bbox_inches='tight' via rcParams\n        >>> for letter, box in panel_crops(fig).items():\n        ...     host.view_image(\"fig.png\", crop=box)\n    \"\"\"\n    import matplotlib as mpl\n    import matplotlib.text\n    if dpi is None:\n        dpi = mpl.rcParams.get(\"savefig.dpi\", fig.dpi)\n        if dpi == \"figure\":\n            dpi = fig.dpi\n    dpi = float(dpi)\n    if bbox_inches is None:\n        bbox_inches = mpl.rcParams.get(\"savefig.bbox\")\n    fig.canvas.draw()\n    r = fig.canvas.get_renderer()\n\n    if bbox_inches == \"tight\":\n        if pad_inches is None:\n            pad_inches = mpl.rcParams.get(\"savefig.pad_inches\", 0.1)\n        tb = fig.get_tightbbox(r).padded(pad_inches)\n        ox_in, oy_in = tb.x0, tb.y0\n        W_in, H_in = tb.width, tb.height\n    elif isinstance(bbox_inches, mpl.transforms.BboxBase):\n        ox_in, oy_in = bbox_inches.x0, bbox_inches.y0\n        W_in, H_in = bbox_inches.width, bbox_inches.height\n    else:\n        ox_in, oy_in = 0.0, 0.0\n        W_in, H_in = fig.get_size_inches()\n    W_px, H_px = int(round(W_in * dpi)), int(round(H_in * dpi))\n    lettered = {}\n    for ax in fig.axes:\n        for t in ax.findobj(matplotlib.text.Text):\n            s = (t.get_text() or \"\").strip()\n            if len(s) == 1 and s.isalpha() and t.get_fontweight() in (\"bold\", 700):\n                lettered[ax] = s\n                break\n\n\n\n    if not lettered:\n        lettered = {ax: str(i) for i, ax in enumerate(fig.axes)}\n    out = {}\n    for ax, letter in lettered.items():\n        bbs = [ax.get_tightbbox(r)]\n\n\n\n\n        ss = ax.get_subplotspec()\n        for sib in fig.axes:\n            if sib is ax or sib in lettered:\n                continue\n            ssib = sib.get_subplotspec()\n            same_row = ss is None or ssib is None or ss.rowspan == ssib.rowspan\n            same_col = ss is None or ssib is None or ss.colspan == ssib.colspan\n            if ((ax.get_shared_y_axes().joined(ax, sib) and same_row)\n                    or (ax.get_shared_x_axes().joined(ax, sib) and same_col)):\n                bbs.append(sib.get_tightbbox(r))\n        bb = mpl.transforms.Bbox.union(bbs)\n\n        bx0 = (bb.x0 / fig.dpi - ox_in) * dpi\n        bx1 = (bb.x1 / fig.dpi - ox_in) * dpi\n        by0 = H_px - (bb.y1 / fig.dpi - oy_in) * dpi\n        by1 = H_px - (bb.y0 / fig.dpi - oy_in) * dpi\n        out[letter] = (\n            max(int(bx0) - pad_px, 0),\n            max(int(by0) - pad_px, 0),\n            min(int(bx1) + pad_px, W_px),\n            min(int(by1) + pad_px, H_px),\n        )\n    return out\n",
+   "cell_index": 3,
+   "language": "python",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "e59b9a64-38d3-4181-ba32-cde90a53647c"
+  },
+  {
+   "source": "cat > nordcan_survival_gap.py <<'EOF'\n\"\"\"Finland vs Sweden/Norway mean: 5-year relative survival, lung/pancreas/liver, NORDCAN API.\nUsage: python nordcan_survival_gap.py            (fetch live, save raw JSON to raw/)\n       python nordcan_survival_gap.py --offline  (re-run from raw/ JSON)\n\"\"\"\nimport sys, os, json, requests, numpy as np, pandas as pd\nimport matplotlib; matplotlib.use(\"Agg\"); import matplotlib.pyplot as plt\n\nURL = (\"https://canapi.iarc.who.int/api/nordcan/v2/961/survival/population/5/{sex}/\"\n       \"246_752_578_208/{c}/?&surv_period=5&age_surv=0&year_start={ys}&year_end={ye}\")\nYS, YE = 1973, 2024          # fetch full span; 1990+ used for trends, earlier only for lag search\nTREND_START = 1990\nCANCERS = {160: \"Lung\", 130: \"Pancreas\", 110: \"Liver\"}\nSEXES = {1: \"Men\", 2: \"Women\"}\nCTRY = {246: \"Finland\", 752: \"Sweden\", 578: \"Norway\", 208: \"Denmark\"}\nOFFLINE = \"--offline\" in sys.argv\nos.makedirs(\"raw\", exist_ok=True)\n\n# ---------- 1. fetch / load ----------\nrows, log = [], []\nfor c in CANCERS:\n    for s in SEXES:\n        fn = f\"raw/nordcan_surv5_cancer{c}_sex{s}_{YS}_{YE}.json\"\n        url = URL.format(sex=s, c=c, ys=YS, ye=YE)\n        if OFFLINE:\n            j = json.load(open(fn))\n        else:\n            r = requests.get(url, timeout=60); r.raise_for_status(); j = r.json()\n            j[\"_request_url\"] = url\n            json.dump(j, open(fn, \"w\"), indent=1)\n        log.append((c, s, len(j.get(\"dataset\", [])), j.get(\"error\")))\n        for d in j[\"dataset\"]:\n            v = d[\"survival\"]\n            rows.append(dict(cancer=CANCERS[c], sex=SEXES[s], country=CTRY[d[\"country\"]],\n                             period=d[\"period\"], mid=float(d[\"year\"]),\n                             rs=float(v[\"value\"]) if v[\"value\"] not in (None, \"\") else np.nan,\n                             lo=float(v[\"lowCI\"]) if v[\"lowCI\"] not in (None, \"\") else np.nan,\n                             hi=float(v[\"upCI\"]) if v[\"upCI\"] not in (None, \"\") else np.nan))\nfor l in log: print(\"cancer %s sex %s: %d rows, error=%s\" % l)\ndf = pd.DataFrame(rows)\ndf.to_csv(\"nordcan_surv5_long.csv\", index=False)\n\n# missing-cell report for the trend window\ntw = df[df.mid >= TREND_START]\ngrid = pd.MultiIndex.from_product([CANCERS.values(), SEXES.values(), CTRY.values(),\n                                   sorted(tw.period.unique())])\nhave = set(map(tuple, tw.dropna(subset=[\"rs\"])[[\"cancer\",\"sex\",\"country\",\"period\"]].values))\nmissing = [g for g in grid if g not in have]\nprint(\"Missing cells 1990-2024:\", missing if missing else \"none\")\n\n# ---------- 2. gap metrics ----------\ndef se(lo, hi): return (hi - lo) / (2 * 1.96)   # approx SE from (asymmetric) 95% CI\n\ndef lag_years(t, ref, target, t_latest):\n    \"\"\"First calendar time at which ref series (linear interp. between period midpoints)\n    reached `target`; returns (lag, flag).\"\"\"\n    o = np.argsort(t); t, ref = np.asarray(t)[o], np.asarray(ref)[o]\n    if ref[0] >= target: return np.nan, f\"ref already >= target in {int(t[0])} (lag > {t_latest - t[0]:.0f} y)\"\n    for i in range(1, len(t)):\n        if ref[i] >= target:\n            tc = t[i-1] + (target - ref[i-1]) / (ref[i] - ref[i-1]) * (t[i] - t[i-1])\n            return t_latest - tc, \"\"\n    return 0.0, \"Finland at/above reference\"\n\nout, series = [], {}\nfor cn in CANCERS.values():\n    for sx in SEXES.values():\n        w = df[(df.cancer == cn) & (df.sex == sx)].pivot_table(index=\"mid\", columns=\"country\",\n                                                              values=[\"rs\", \"lo\", \"hi\"])\n        ref = (w[\"rs\"][\"Sweden\"] + w[\"rs\"][\"Norway\"]) / 2\n        ref_se = np.sqrt(se(w[\"lo\"][\"Sweden\"], w[\"hi\"][\"Sweden\"])**2 +\n                         se(w[\"lo\"][\"Norway\"], w[\"hi\"][\"Norway\"])**2) / 2\n        fi = w[\"rs\"][\"Finland\"]; fi_se = se(w[\"lo\"][\"Finland\"], w[\"hi\"][\"Finland\"])\n        gap = fi - ref; gap_se = np.sqrt(fi_se**2 + ref_se**2)\n        series[(cn, sx)] = (w, ref, gap)\n        g = gap[gap.index >= TREND_START].dropna()\n        tl = g.index.max()\n        slope = np.polyfit(g.index, g.values, 1)[0] * 10\n        dec = {int(m): g.get(m, np.nan) for m in [1992.0, 2002.0, 2012.0, 2022.0]}\n        lag, flag = lag_years(ref.dropna().index, ref.dropna().values, fi[tl], tl)\n        per = df.loc[(df.mid == tl), \"period\"].iloc[0]\n        out.append(dict(\n            cancer=cn, sex=sx, latest_period=per,\n            finland_rs=fi[tl], sweden_rs=w[\"rs\"][\"Sweden\"][tl], norway_rs=w[\"rs\"][\"Norway\"][tl],\n            denmark_rs=w[\"rs\"][\"Denmark\"][tl], se_no_mean_rs=round(ref[tl], 2),\n            gap_pp=round(gap[tl], 2),\n            gap_pp_95ci_lo=round(gap[tl] - 1.96*gap_se[tl], 1), gap_pp_95ci_hi=round(gap[tl] + 1.96*gap_se[tl], 1),\n            finland_pct_of_ref=round(100 * fi[tl] / ref[tl], 1),\n            gap_1990_94=round(dec[1992], 2), gap_2000_04=round(dec[2002], 2),\n            gap_2010_14=round(dec[2012], 2), gap_2020_24=round(dec[2022], 2),\n            gap_change_1990s_to_2000s=round(dec[2002]-dec[1992], 2),\n            gap_change_2000s_to_2010s=round(dec[2012]-dec[2002], 2),\n            gap_change_2010s_to_2020s=round(dec[2022]-dec[2012], 2),\n            gap_trend_pp_per_decade_OLS=round(slope, 2),\n            finland_change_1990_94_to_2020_24=round(fi[tl] - fi[1992.0], 1),\n            ref_change_1990_94_to_2020_24=round(ref[tl] - ref[1992.0], 2),\n            lag_years=round(lag, 1) if np.isfinite(lag) else np.nan, lag_note=flag))\nres = pd.DataFrame(out)\nres.to_csv(\"nordcan_finland_gap_results.csv\", index=False)\nprint(res.to_string())\n\n# ---------- 3. figures ----------\ntry:\n    apply_figure_style()  # provided in the interactive environment; plain matplotlib otherwise\nexcept NameError:\n    plt.rcParams.update({\"font.size\": 8, \"axes.spines.top\": False, \"axes.spines.right\": False})\nCOL = {\"Finland\": \"#0b4f9c\", \"Sweden\": \"#e0a100\", \"Norway\": \"#b2182b\", \"Denmark\": \"#9a9a9a\"}\nfor cn in CANCERS.values():\n    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.3), sharey=True)\n    for ax, sx in zip(axes, SEXES.values()):\n        w, ref, gap = series[(cn, sx)]\n        w = w[w.index >= TREND_START]; ref = ref[ref.index >= TREND_START]\n        for ctry in [\"Denmark\", \"Norway\", \"Sweden\", \"Finland\"]:\n            focal = ctry == \"Finland\"\n            ax.fill_between(w.index, w[\"lo\"][ctry], w[\"hi\"][ctry], color=COL[ctry],\n                            alpha=0.18 if focal else 0.08, lw=0)\n            ax.plot(w.index, w[\"rs\"][ctry], \"-o\", color=COL[ctry], lw=2.2 if focal else 1.1,\n                    ms=3.5 if focal else 2.5, zorder=4 if focal else 2,\n                    alpha=1 if focal else (0.55 if ctry == \"Denmark\" else 0.8))\n        ax.plot(ref.index, ref.values, \"--\", color=\"black\", lw=1.3, zorder=3)\n        r = res[(res.cancer == cn) & (res.sex == sx)].iloc[0]\n        tl = ref.index.max()\n        ax.annotate(\"\", xy=(tl + 1.2, r.finland_rs), xytext=(tl + 1.2, r.se_no_mean_rs),\n                    arrowprops=dict(arrowstyle=\"<->\", color=\"black\", lw=0.8))\n        lagtxt = f\", lag \u2248 {r.lag_years:.0f} y\" if np.isfinite(r.lag_years) else \"\"\n        ax.text(0.03, 0.97, f\"{sx}\\n2020\u201324 gap: {r.gap_pp:+.1f} pp{lagtxt}\",\n                transform=ax.transAxes, va=\"top\", ha=\"left\")\n        ax.set_xticks(w.index); ax.set_xticklabels([p for p in sorted(df.period.unique()) if int(p[:4]) >= TREND_START],\n                                                    rotation=45, ha=\"right\")\n        ax.set_xlim(TREND_START - 0.5, tl + 2.5)\n        ax.set_xlabel(\"Period of diagnosis\")\n    axes[0].set_ylabel(\"5-year relative survival (%)\")\n    axes[0].set_ylim(bottom=0)\n    hs = [plt.Line2D([], [], color=COL[c], lw=2.2 if c == \"Finland\" else 1.1, marker=\"o\", ms=3) for c in COL]\n    hs.append(plt.Line2D([], [], color=\"black\", ls=\"--\", lw=1.3))\n    fig.legend(hs, list(COL) + [\"Sweden\u2013Norway mean\"], loc=\"upper center\", ncol=5, frameon=False,\n               bbox_to_anchor=(0.5, 1.0))\n    fig.suptitle(f\"{cn} cancer: Finland vs the Sweden\u2013Norway mean, age-standardised 5-year relative survival\",\n                 y=1.07)\n    fig.tight_layout()\n    fig.savefig(f\"fig_{cn.lower()}_survival_gap.png\", dpi=300, bbox_inches=\"tight\")\n    plt.close(fig)\nprint(\"done\")\nEOF\necho ok",
+   "cell_index": 4,
+   "language": "bash",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "bc93ae69-9a0e-41d6-b1e7-d07ceabde041"
+  },
+  {
+   "source": "\nimport sys; sys.argv=[\"x\"]\nexec(open(\"nordcan_survival_gap.py\").read())\n",
+   "cell_index": 5,
+   "language": "python",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "0d803b37-d457-4d9e-8355-20845a94c4a5"
+  },
+  {
+   "source": "cp nordcan_finland_gap_results.csv /tmp/live.csv; python nordcan_survival_gap.py --offline > /tmp/off.log 2>&1; tail -1 /tmp/off.log; cmp /tmp/live.csv nordcan_finland_gap_results.csv && echo IDENTICAL; ls raw/",
+   "cell_index": 6,
+   "language": "bash",
+   "exit_status": "ok",
+   "error_lineno": null,
+   "execution_log_id": "f2205be3-0570-4fc1-ba13-c531ca8481d1"
+  }
+ ],
+ "has_cell_sources": true,
+ "has_messages": true,
+ "has_environment": true,
+ "pending": true,
+ "dependency_mappings": {
+  "inputs": [],
+  "outputs": [
+   {
+    "workspace_path": null,
+    "filename": "nordcan_survival_gap.py",
+    "artifact_id": "7eff7108-679c-44a1-8949-e2984cb0d65d",
+    "version_id": "08b8e7f4-7955-42bc-854d-1d3c5b185782"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_finland_gap_results.csv",
+    "artifact_id": "18c607d5-b99a-4378-adc8-c38f6a042e28",
+    "version_id": "5a07fbc5-8aba-4830-8668-194317d06e22"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_long.csv",
+    "artifact_id": "9332ee16-49f7-47d4-87d8-6cadc368c166",
+    "version_id": "4835b3f1-ab7f-463d-bcc9-823d52e9075f"
+   },
+   {
+    "workspace_path": null,
+    "filename": "fig_lung_survival_gap.png",
+    "artifact_id": "9c359566-cd6c-41cb-ad45-6934f19b3948",
+    "version_id": "243761ea-2dbb-495b-bea6-3bcc7e7266fa"
+   },
+   {
+    "workspace_path": null,
+    "filename": "fig_pancreas_survival_gap.png",
+    "artifact_id": "95086231-41e8-4538-8638-e73cdce63abe",
+    "version_id": "94ddbe79-8fca-48ad-ad84-9626144db0a0"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_cancer160_sex1_1973_2024.json",
+    "artifact_id": "e7970840-3d12-4183-ab4e-5c1405a9b2a3",
+    "version_id": "938f1cf3-c758-47a4-812f-500c8f51993b"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_cancer160_sex2_1973_2024.json",
+    "artifact_id": "5dbda44b-834d-4e40-b155-2b70ba8d1974",
+    "version_id": "c3998a51-52f7-44a9-bb50-9ea8bd5c79c9"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_cancer130_sex1_1973_2024.json",
+    "artifact_id": "75feb50c-40c3-468e-9537-144daead198c",
+    "version_id": "ccccc8f9-c0ab-4c12-ba96-e36aca64f756"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_cancer130_sex2_1973_2024.json",
+    "artifact_id": "13db2d20-60fc-48b0-abc0-57e6f43fc768",
+    "version_id": "5dbf6fca-bba8-4db1-9f83-25dba0bee1e5"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_cancer110_sex1_1973_2024.json",
+    "artifact_id": "445fe6a9-3606-4438-9d33-8f911879a097",
+    "version_id": "36641e6f-f12e-43e8-8973-6b637629790f"
+   },
+   {
+    "workspace_path": null,
+    "filename": "nordcan_surv5_cancer110_sex2_1973_2024.json",
+    "artifact_id": "633f17ec-9ed4-46be-9779-cbebe01569b4",
+    "version_id": "8db7ab29-3ffc-4596-9756-fc12ab42670e"
+   }
+  ],
+  "mapping_status": "pending",
+  "mapping_attempts": 1,
+  "producing_cell_multi": true
+ }
+}

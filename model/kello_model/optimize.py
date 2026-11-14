@@ -98,6 +98,9 @@ class Optimizer:
         if aud in m.iv and aud not in exclude:
             for a in areas:
                 c = self.cost(aud, a)[2]
+                # under the gap objective a county at or above the national share has no gap for the audit to explain
+                if objective == "gap" and self.shortfall(a) <= 0:
+                    continue
                 if m.flagged[a] and spent + c <= budget + 1e-6:
                     state[a] = state[a] | {aud}
                     spent += c
@@ -351,6 +354,11 @@ class Optimizer:
                 code, r = "national_decision", ("Needs a national decision (Ministry of Social Affairs and Health, Palko): a county cannot "
                                                 "start it alone, so it is never bought from a county budget. Its numbers are listed "
                                                 "under needs_national_decision.")
+            elif access and j == priors.RECORDING_AUDIT_ID and objective == "gap" and any(m.flagged[a] for a in areas) \
+                    and all(self.shortfall(a) <= 0 for a in areas if m.flagged[a]):
+                code, r = "no_shortfall", ("Under the gap objective the audit is bought only below the national share: there it tells "
+                                           "a care gap from a recording gap. " + ("This county is" if county else "The flagged counties are")
+                                           + " at or above it.")
             elif access and j == priors.RECORDING_AUDIT_ID:
                 code, r = "no_effect", ("Not needed first here: the care path carries no recording flag" + ("" if county else " in any county")
                                         + ". It treats no extra patient.") if not any(m.flagged[a] for a in areas) else \

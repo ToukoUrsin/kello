@@ -27,7 +27,9 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-DEFAULT_MODEL = "gemini-4-hydrogen"  # newest generation on this key with 65k output; see README
+DEFAULT_MODEL = "gemini-4-hydrogen"  # when a person is waiting on the page: the fastest Gemini 4, 65k output
+OFFLINE_MODEL = "gemini-4-carbon"    # for reads done ahead of time (build_raw_reads, build_chart_read): the strongest
+_OUT_LIMIT = {"gemini-4-carbon": 32768}  # output tokens the model allows; a long read continues in rounds (_extract)
 ROOT = Path(__file__).resolve().parents[3]
 AREAS_PATH = ROOT / "data" / "processed" / "areas.json"
 OUT_JSONL = ROOT / "data" / "processed" / "gemini_extracted.jsonl"
@@ -561,9 +563,14 @@ def _model() -> str:
     return os.environ.get("GEMINI_READER_MODEL", "").strip() or DEFAULT_MODEL
 
 
+def _out_cap(max_out: int) -> int:
+    return min(max_out, _OUT_LIMIT.get(_model(), 65536))
+
+
 def _generate(client, parts: list, schema, max_out: int = 60000, tries: int = 3):
     from google.genai import types
 
+    max_out = _out_cap(max_out)
     cfg = types.GenerateContentConfig(
         response_mime_type="application/json", response_schema=schema,
         temperature=0, max_output_tokens=max_out,
@@ -580,6 +587,90 @@ def _generate(client, parts: list, schema, max_out: int = 60000, tries: int = 3)
             print(f"[gemini_reader] attempt {attempt + 1} failed: {type(exc).__name__}: {str(exc)[:200]}", file=sys.stderr, flush=True)
             time.sleep(2 + 3 * attempt)
     raise RuntimeError(f"Gemini call failed after {tries} tries: {type(last).__name__}: {str(last)[:300]}")
+
+
+def _salvage(text: str) -> tuple[Optional[_Doc], list[_Item]]:
+    """The complete items of an answer that was cut off mid-list (output limit reached)."""
+    dec = json.JSONDecoder()
+    doc = None
+    m = re.search(r'"document"\s*:\s*', text)
+    if m:
+        try:
+            doc = _Doc.model_validate(dec.raw_decode(text, m.end())[0])
+        except Exception:  # noqa: BLE001 - the document block itself was cut
+            doc = None
+    items: list[_Item] = []
+    m = re.search(r'"extracted"\s*:\s*\[', text)
+    pos = m.end() if m else len(text)
+    while pos < len(text):
+        while pos < len(text) and text[pos] in " \r\n\t,":
+            pos += 1
+        if pos >= len(text) or text[pos] != "{":
+            break
+        try:
+            obj, pos = dec.raw_decode(text, pos)
+            items.append(_Item.model_validate(obj))
+        except Exception:  # noqa: BLE001 - the cut-off item
+            break
+    return doc, items
+
+
+def _extract(client, parts: list, rounds: int = 6) -> _Extraction:
+    """Pass 1. When the answer stops at the model's output limit, keep the complete items and ask for the rest."""
+    from google.genai import types
+
+    cfg = types.GenerateContentConfig(response_mime_type="application/json", response_schema=_Extraction,
+                                      temperature=0, max_output_tokens=_out_cap(60000))
+    doc, notes, items, seen = None, "", [], set()
+
+    def add(new) -> int:
+        n = 0
+        for it in new:
+            key = (it.indicator_guess, it.area, it.period, it.value, it.page, it.label)
+            if key not in seen:
+                seen.add(key)
+                items.append(it)
+                n += 1
+        return n
+
+    for rnd in range(rounds):
+        more = []
+        if items:
+            more = [f"CONTINUE. The answer stopped at the output limit. These {len(items)} values are already extracted "
+                    "(indicator | area | period | value | page). Do not repeat them. Extract only the values still "
+                    "missing, by the same rules, in document order. If nothing is missing, return an empty list.\n"
+                    + "\n".join(f"{it.indicator_guess} | {it.area} | {it.period} | {it.value} | {it.page}" for it in items)]
+        cut, last = False, None
+        for attempt in range(3):
+            try:
+                resp = client.models.generate_content(model=_model(), contents=parts + more, config=cfg)
+                reason = str(getattr((resp.candidates or [None])[0], "finish_reason", "") or "")
+                if "MAX_TOKENS" in reason:
+                    d, got = _salvage(resp.text or "")
+                    doc, cut = doc or d, True
+                    n = add(got)
+                    print(f"[gemini_reader] pass 1 round {rnd + 1}: output limit reached, {n} more values kept", file=sys.stderr, flush=True)
+                    if not n:
+                        cut = False  # nothing complete came back: stop instead of asking again
+                    break
+                out = resp.parsed if resp.parsed is not None else _Extraction.model_validate_json(resp.text or "")
+                doc = doc or out.document
+                notes = " ".join(x for x in (notes, (out.notes or "").strip()) if x)
+                add(out.extracted)
+                break
+            except Exception as exc:  # 429/5xx/broken JSON: back off and retry
+                last = exc
+                print(f"[gemini_reader] attempt {attempt + 1} failed: {type(exc).__name__}: {str(exc)[:200]}", file=sys.stderr, flush=True)
+                time.sleep(2 + 3 * attempt)
+        else:
+            if not items:
+                raise RuntimeError(f"Gemini call failed after 3 tries: {type(last).__name__}: {str(last)[:300]}")
+            notes = (notes + " A later round of the read failed, so the list may be incomplete.").strip()
+        if not cut:
+            break
+    else:
+        notes = (notes + f" The read stopped after {rounds} rounds at the output limit, so the list may be incomplete.").strip()
+    return _Extraction(document=doc or _Doc(title="", publisher="", pages=0), extracted=items, notes=notes)
 
 
 def _pdf_part(data: bytes):
@@ -757,7 +848,7 @@ def read_report(source, hint: str = "", mime: str | None = None, *, verify: bool
             notes.append(f"page longer than {MAX_TILES} screenshots; the rest was read from text only")
 
     print(f"[gemini_reader] loaded {src['kind']} in {time.time() - t0:.1f} s; pass 1 with {_model()}", file=sys.stderr, flush=True)
-    out = _generate(client, parts, _Extraction)
+    out = _extract(client, parts)
     print(f"[gemini_reader] pass 1: {len(out.extracted)} values at {time.time() - t0:.1f} s; pass 2 (re-read cited pages)", file=sys.stderr, flush=True)
     items = [it.model_dump() for it in out.extracted]
     targets_read = False
@@ -987,7 +1078,10 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--no-verify", action="store_true")
     ap.add_argument("--append", action="store_true", help=f"append rows to {OUT_JSONL}")
     ap.add_argument("--out", help="write the full JSON result here")
+    ap.add_argument("--model", help=f"Gemini model for this read (default {DEFAULT_MODEL}; reads done ahead of time use {OFFLINE_MODEL})")
     a = ap.parse_args(argv)
+    if a.model:
+        os.environ["GEMINI_READER_MODEL"] = a.model
     res = read_report(a.source, hint=a.hint, verify=not a.no_verify)
     if a.out:
         Path(a.out).write_text(json.dumps(res, ensure_ascii=False, indent=1))

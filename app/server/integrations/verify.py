@@ -493,8 +493,8 @@ def present(res: dict) -> dict:
         elif res.get("error"):
             reason = "The check did not finish, so the measure stays in the plan unchecked."
         else:
-            reason = (f"No public sign that this is running in {name}"
-                      + (f" after {len(queries)} search{'' if len(queries) == 1 else 'es'} and {n_read} page{'' if n_read == 1 else 's'} read" if queries else "") + ": it stays in the plan.")
+            reason = (f"No public page says this is running in {name}"
+                      + (f" after {len(queries)} search{'' if len(queries) == 1 else 'es'} and {n_read} page{'' if n_read == 1 else 's'} read" if queries else "") + ". That does not prove it is absent, so it stays in the plan and the hospital is asked.")
     res["plan_effect"] = effect
     res["plan_effect_reason_en"] = reason
     # One answer per action: the advice word always agrees with what the check does to the plan.
@@ -509,7 +509,7 @@ def present(res: dict) -> dict:
         "yes": f"Already running in {where}.",
         "partly": f"Partly in place in {where}." + (f" Missing: {_sentence(res.get('missing_en'))}" if res.get("missing_en") else ""),
         "planned": f"Decided or being prepared in {where}, not running yet.",
-        "no_evidence": f"No public sign that it is running in {name}.",
+        "no_evidence": f"No public page says it is running in {name}; that is not proof it is absent.",
     }[use]
     sup, nsup = _sentence(res.get("supported_en") or ""), _sentence(res.get("not_supported_en") or "")
     if eff == "supports":
@@ -680,9 +680,9 @@ def check_measure(iv: dict, area_id: str | None = None, on_event=None, budget_s:
     (the run did not finish; the stored answer is returned with `live_error_en`)."""
     iid = str(iv.get("id"))
     question, context, focus = question_for(iv, area_id)
-    old = stored(iid, area_id)
     res = verify_claim(question, context, area_id=area_id, on_event=on_event, focus=focus, budget_s=budget_s,
                        intervention_id=iid, name_fi=str(iv.get("name_fi") or ""), zero_effect=_zero_effect(iv))
+    old = stored(iid, area_id)  # read after the run: the store can change while it is searching
     h = counties.hints(area_id)
     res.update(intervention_id=iv.get("id"), intervention_name_en=iv.get("name_en"),
                area_name_en=h["name_en"] if h else "Finland")

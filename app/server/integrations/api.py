@@ -254,10 +254,25 @@ except Exception:  # noqa: BLE001 - the app must start without it
     _SEED = {}
 
 
+_DEMO_FRESH: dict[str, Path] = {}   # "action:county" -> its stored check, put aside by a demo reset until that check is run
+DEMO_LIMIT_S = 20.0                 # the first run of such a check answers within this, from the stored check if need be
+
+
+def _put_back(key: str) -> None:
+    f = _DEMO_FRESH.pop(key, None)
+    if f is not None and f in _SEED and not f.exists():
+        f.write_bytes(_SEED[f])
+
+
 @router.post("/api/demo/reset")
-def demo_reset():
+def demo_reset(fresh: str | None = None):
     """Put the stored web checks, county scouts and kept report rows back to what the server started with,
-    and forget finished runs, so a demo always begins from the same screen."""
+    and forget finished runs, so a demo always begins from the same screen.
+    `fresh=action:county` then puts that one stored check aside, so the action starts unchecked and the demo
+    can show the check changing the plan. Its first run answers within DEMO_LIMIT_S: the live answer when it is
+    in by then, otherwise the stored one, said as such."""
+    from . import verify
+
     restored = removed = 0
     with _jobs_lock:
         for f in _demo_files():
@@ -278,7 +293,19 @@ def demo_reset():
         for d in (_jobs, _by_id):
             for k in [k for k, j in d.items() if j["done"]]:
                 d.pop(k, None)
-    return {"ok": True, "restored": restored, "removed": removed}
+        _DEMO_FRESH.clear()
+        for pair in (fresh or "").split(","):
+            iid, _, area = pair.strip().partition(":")
+            if not iid or not area:
+                continue
+            f = verify._file(iid, area)
+            if f in _SEED and f.exists():
+                try:
+                    f.unlink()
+                    _DEMO_FRESH[f"{iid}:{area}"] = f
+                except OSError:
+                    pass
+    return {"ok": True, "restored": restored, "removed": removed, "fresh": sorted(_DEMO_FRESH)}
 
 
 @router.get("/api/integrations/status")
@@ -319,8 +346,39 @@ def _verify_job(intervention_id: str, area_id: str | None) -> dict:
     from . import verify
 
     iv, area = _intervention(intervention_id), _area(area_id)
-    return _start(f"verify:{intervention_id}:{area or 'FI'}", verify.check_measure, iv, area,
-                  fallback=lambda why: verify.from_store(intervention_id, area, why), limit_s=verify.BUDGET_S + 45)
+    key = f"{intervention_id}:{area or 'FI'}"
+    if key not in _DEMO_FRESH:
+        return _start(f"verify:{key}", verify.check_measure, iv, area,
+                      fallback=lambda why: verify.from_store(intervention_id, area, why), limit_s=verify.BUDGET_S + 45)
+
+    # A check a demo reset put aside. The run is a normal live run; what differs is that an answer is on the page
+    # within DEMO_LIMIT_S, and that a run that fails or finds less gives the stored check back instead of a blank.
+    def stored_answer(why: str, slow: bool = False) -> dict | None:
+        _put_back(key)
+        old = verify.from_store(intervention_id, area, why)
+        if old is not None and slow:
+            old["live_slow_s"] = int(DEMO_LIMIT_S)
+        return old
+
+    def run(iv_: dict, area_: str | None, on_event=None) -> dict:
+        res = verify.check_measure(iv_, area_, on_event=on_event)
+        if res.get("error"):
+            return stored_answer(str(res["error"])) or res
+        if res.get("live_outcome") != "first":       # the stored check was already put back (the limit passed)
+            return res
+        seed = verify.present(json.loads(_SEED[verify._file(intervention_id, area_)].decode("utf-8")))
+        if verify.local_evidence(res) >= verify.local_evidence(seed):
+            _DEMO_FRESH.pop(key, None)
+            return res
+        f = _DEMO_FRESH.pop(key, None)                # found less than the stored check: the stored one stays
+        if f is not None:
+            f.write_bytes(_SEED[f])
+        seed.update(from_cache=True, live_outcome="kept", live_candidate=verify._view(res),
+                    live_trace=res.get("trace") or [], live_seconds=res.get("seconds"))
+        return seed
+
+    return _start(f"verify:{key}", run, iv, area,
+                  fallback=lambda why: stored_answer(why, slow="did not finish within" in why), limit_s=DEMO_LIMIT_S)
 
 
 async def run_verify(intervention_id: str, area_id: str | None = None) -> dict:

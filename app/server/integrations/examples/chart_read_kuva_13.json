@@ -1,7 +1,7 @@
 {
  "figure": "Kuva 13",
  "caption": "Keuhkosyöpäpotilaiden levinneisyysluokitus hyvinvointialueittain",
- "model": "gemini-4-hydrogen",
+ "model": "gemini-4-carbon",
  "chart_type": "stacked horizontal bar chart",
  "axis_label": "Osuus potilaista (%)",
  "series": [
@@ -16,10 +16,10 @@
    "area": "Etelä-Karjalan hva",
    "area_id": "11",
    "shares": {
-    "Ei tietoa": 61.2,
-    "Syre -levinneisyys": 27.0,
-    "Sanallinen": 2.8,
-    "TNM": 9.0
+    "Ei tietoa": 61.1,
+    "Syre -levinneisyys": 27.1,
+    "Sanallinen": 2.9,
+    "TNM": 8.9
    },
    "sum": 100.0
   },
@@ -28,9 +28,9 @@
    "area_id": "90",
    "shares": {
     "Ei tietoa": 42.3,
-    "Syre -levinneisyys": 19.0,
+    "Syre -levinneisyys": 19.1,
     "Sanallinen": 3.1,
-    "TNM": 35.6
+    "TNM": 35.5
    },
    "sum": 100.0
   },
@@ -40,8 +40,8 @@
    "shares": {
     "Ei tietoa": 58.6,
     "Syre -levinneisyys": 19.5,
-    "Sanallinen": 3.2,
-    "TNM": 18.7
+    "Sanallinen": 3.3,
+    "TNM": 18.6
    },
    "sum": 100.0
   },
@@ -51,8 +51,8 @@
    "shares": {
     "Ei tietoa": 40.2,
     "Syre -levinneisyys": 16.8,
-    "Sanallinen": 3.1,
-    "TNM": 39.9
+    "Sanallinen": 3.2,
+    "TNM": 39.8
    },
    "sum": 100.0
   },
@@ -60,10 +60,10 @@
    "area": "Kymenlaakson hva",
    "area_id": "10",
    "shares": {
-    "Ei tietoa": 65.2,
-    "Syre -levinneisyys": 25.6,
-    "Sanallinen": 4.5,
-    "TNM": 4.7
+    "Ei tietoa": 65.1,
+    "Syre -levinneisyys": 25.8,
+    "Sanallinen": 4.6,
+    "TNM": 4.5
    },
    "sum": 100.0
   },
@@ -71,10 +71,10 @@
    "area": "Länsi-Uudenmaan hva",
    "area_id": "03",
    "shares": {
-    "Ei tietoa": 48.7,
-    "Syre -levinneisyys": 20.3,
+    "Ei tietoa": 48.8,
+    "Syre -levinneisyys": 20.1,
     "Sanallinen": 2.7,
-    "TNM": 28.3
+    "TNM": 28.4
    },
    "sum": 100.0
   },
@@ -82,10 +82,10 @@
    "area": "Päijät-Hämeen hva",
    "area_id": "09",
    "shares": {
-    "Ei tietoa": 60.2,
-    "Syre -levinneisyys": 20.0,
-    "Stage": 0.6,
-    "Sanallinen": 6.3,
+    "Ei tietoa": 60.1,
+    "Syre -levinneisyys": 20.2,
+    "Stage": 0.3,
+    "Sanallinen": 6.5,
     "TNM": 12.9
    },
    "sum": 100.0
@@ -94,8 +94,8 @@
    "area": "Vantaan ja Keravan hva",
    "area_id": "04",
    "shares": {
-    "Ei tietoa": 35.6,
-    "Syre -levinneisyys": 15.7,
+    "Ei tietoa": 35.5,
+    "Syre -levinneisyys": 15.8,
     "Sanallinen": 4.3,
     "TNM": 44.4
    },
@@ -106,10 +106,10 @@
    "area_id": "12",
    "shares": {
     "Ei tietoa": 54.2,
-    "Syre -levinneisyys": 19.5,
-    "Stage": 1.3,
-    "Sanallinen": 3.8,
-    "TNM": 21.2
+    "Syre -levinneisyys": 19.7,
+    "Stage": 1.1,
+    "Sanallinen": 3.9,
+    "TNM": 21.1
    },
    "sum": 100.0
   },
@@ -117,8 +117,8 @@
    "area": "Keski-Suomen hva",
    "area_id": "15",
    "shares": {
-    "Ei tietoa": 59.6,
-    "Syre -levinneisyys": 20.7,
+    "Ei tietoa": 59.5,
+    "Syre -levinneisyys": 20.8,
     "Sanallinen": 2.3,
     "TNM": 17.4
    },
@@ -140,10 +140,10 @@
    "area_id": "13",
    "shares": {
     "Ei tietoa": 63.0,
-    "Syre -levinneisyys": 19.8,
-    "Stage": 2.3,
+    "Syre -levinneisyys": 20.0,
+    "Stage": 2.2,
     "Sanallinen": 2.4,
-    "TNM": 12.5
+    "TNM": 12.4
    },
    "sum": 100.0
   },
@@ -151,10 +151,10 @@
    "area": "Pohjanmaan hva",
    "area_id": "17",
    "shares": {
-    "Ei tietoa": 55.8,
-    "Syre -levinneisyys": 23.6,
-    "Stage": 1.0,
-    "Sanallinen": 1.6,
+    "Ei tietoa": 55.7,
+    "Syre -levinneisyys": 23.9,
+    "Stage": 0.9,
+    "Sanallinen": 1.5,
     "TNM": 18.0
    },
    "sum": 100.0
@@ -163,11 +163,11 @@
    "area": "Satakunnan hva",
    "area_id": "06",
    "shares": {
-    "Ei tietoa": 68.4,
-    "Syre -levinneisyys": 19.8,
+    "Ei tietoa": 68.5,
+    "Syre -levinneisyys": 20.0,
     "Stage": 3.5,
-    "Sanallinen": 2.4,
-    "TNM": 5.9
+    "Sanallinen": 2.3,
+    "TNM": 5.7
    },
    "sum": 100.0
   },
@@ -176,10 +176,10 @@
    "area_id": "05",
    "shares": {
     "Ei tietoa": 33.2,
-    "Syre -levinneisyys": 10.2,
-    "Stage": 9.0,
+    "Syre -levinneisyys": 10.4,
+    "Stage": 8.9,
     "Sanallinen": 4.4,
-    "TNM": 43.2
+    "TNM": 43.1
    },
    "sum": 100.0
   },
@@ -187,11 +187,11 @@
    "area": "Kainuun hva",
    "area_id": "20",
    "shares": {
-    "Ei tietoa": 61.5,
-    "Syre -levinneisyys": 21.1,
+    "Ei tietoa": 61.6,
+    "Syre -levinneisyys": 21.2,
     "Stage": 0.6,
     "Sanallinen": 8.5,
-    "TNM": 8.3
+    "TNM": 8.1
    },
    "sum": 100.0
   },
@@ -199,11 +199,11 @@
    "area": "Keski-Pohjanmaan hva",
    "area_id": "18",
    "shares": {
-    "Ei tietoa": 43.3,
+    "Ei tietoa": 43.4,
     "Syre -levinneisyys": 15.5,
     "Stage": 10.8,
     "Sanallinen": 12.3,
-    "TNM": 18.1
+    "TNM": 18.0
    },
    "sum": 100.0
   },
@@ -211,11 +211,11 @@
    "area": "Lapin hva",
    "area_id": "21",
    "shares": {
-    "Ei tietoa": 32.3,
-    "Syre -levinneisyys": 11.6,
+    "Ei tietoa": 32.5,
+    "Syre -levinneisyys": 11.5,
     "Stage": 2.6,
-    "Sanallinen": 20.1,
-    "TNM": 33.4
+    "Sanallinen": 20.2,
+    "TNM": 33.2
    },
    "sum": 100.0
   },
@@ -223,11 +223,11 @@
    "area": "Pohjois-Pohjanmaan hva",
    "area_id": "19",
    "shares": {
-    "Ei tietoa": 42.5,
-    "Syre -levinneisyys": 19.1,
-    "Stage": 0.9,
+    "Ei tietoa": 42.6,
+    "Syre -levinneisyys": 19.2,
+    "Stage": 0.8,
     "Sanallinen": 22.5,
-    "TNM": 15.0
+    "TNM": 14.9
    },
    "sum": 100.0
   },
@@ -236,9 +236,9 @@
    "area_id": "16",
    "shares": {
     "Ei tietoa": 55.0,
-    "Syre -levinneisyys": 17.6,
+    "Syre -levinneisyys": 17.7,
     "Sanallinen": 1.7,
-    "TNM": 25.7
+    "TNM": 25.6
    },
    "sum": 100.0
   },
@@ -246,11 +246,11 @@
    "area": "Kanta-Hämeen hva",
    "area_id": "07",
    "shares": {
-    "Ei tietoa": 22.3,
+    "Ei tietoa": 22.5,
     "Syre -levinneisyys": 6.0,
     "Stage": 1.1,
-    "Sanallinen": 7.9,
-    "TNM": 62.7
+    "Sanallinen": 7.8,
+    "TNM": 62.6
    },
    "sum": 100.0
   },
@@ -258,17 +258,17 @@
    "area": "Pirkanmaan hva",
    "area_id": "08",
    "shares": {
-    "Ei tietoa": 51.6,
-    "Syre -levinneisyys": 16.9,
-    "Stage": 1.8,
+    "Ei tietoa": 51.7,
+    "Syre -levinneisyys": 17.0,
+    "Stage": 1.7,
     "Sanallinen": 3.2,
-    "TNM": 26.5
+    "TNM": 26.4
    },
    "sum": 100.0
   }
  ],
- "notes": "Values are visually estimated from the 0, 25, 50, 75, 100 axis ticks; white separating borders between segments may introduce minor rounding uncertainty.",
- "seconds": 22.6,
+ "notes": "All labels and segments are legible; Päijät-Hämeen hva and Kainuun hva have very thin (<1%) Stage segments visible between Syre -levinneisyys and Sanallinen.",
+ "seconds": 44.3,
  "rows": [
   {
    "area_id": "11",
@@ -276,12 +276,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 9.0,
+   "value": 8.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -289,12 +289,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 9.0,
+    "second_read": 8.8,
     "pixel_measure": 8.8,
-    "error_pp": 0.2
+    "error_pp": 0.1
    },
    "n_patients_table_11": 355,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "11",
@@ -307,7 +307,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -320,7 +320,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 355,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "11",
@@ -328,12 +328,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 2.8,
+   "value": 2.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -341,12 +341,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 2.9,
+    "second_read": 3.0,
     "pixel_measure": 2.6,
-    "error_pp": 0.2
+    "error_pp": 0.3
    },
    "n_patients_table_11": 355,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "11",
@@ -354,12 +354,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 27.0,
+   "value": 27.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -369,10 +369,10 @@
    "check": {
     "second_read": 27.1,
     "pixel_measure": 27.1,
-    "error_pp": -0.1
+    "error_pp": 0.0
    },
    "n_patients_table_11": 355,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "11",
@@ -380,12 +380,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 61.2,
+   "value": 61.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -393,12 +393,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 61.0,
+    "second_read": 61.1,
     "pixel_measure": 61.5,
-    "error_pp": -0.3
+    "error_pp": -0.4
    },
    "n_patients_table_11": 355,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "90",
@@ -406,12 +406,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 35.6,
+   "value": 35.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -419,12 +419,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 35.7,
+    "second_read": 35.4,
     "pixel_measure": 35.8,
-    "error_pp": -0.2
+    "error_pp": -0.3
    },
    "n_patients_table_11": 1486,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "90",
@@ -437,7 +437,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -450,7 +450,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 1486,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "90",
@@ -463,7 +463,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -476,7 +476,7 @@
     "error_pp": 0.3
    },
    "n_patients_table_11": 1486,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "90",
@@ -484,12 +484,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 19.0,
+   "value": 19.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -497,12 +497,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 19.0,
+    "second_read": 19.1,
     "pixel_measure": 18.9,
-    "error_pp": 0.1
+    "error_pp": 0.2
    },
    "n_patients_table_11": 1486,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "90",
@@ -515,7 +515,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -523,12 +523,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 42.2,
+    "second_read": 42.4,
     "pixel_measure": 42.5,
     "error_pp": -0.2
    },
    "n_patients_table_11": 1486,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "01",
@@ -536,12 +536,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 18.7,
+   "value": 18.6,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -549,12 +549,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 18.7,
+    "second_read": 18.5,
     "pixel_measure": 18.7,
-    "error_pp": 0.0
+    "error_pp": -0.1
    },
    "n_patients_table_11": 272,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "01",
@@ -567,7 +567,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -580,7 +580,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 272,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "01",
@@ -588,12 +588,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 3.2,
+   "value": 3.3,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -601,12 +601,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 3.3,
+    "second_read": 3.5,
     "pixel_measure": 3.0,
-    "error_pp": 0.2
+    "error_pp": 0.3
    },
    "n_patients_table_11": 272,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "01",
@@ -619,7 +619,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -627,12 +627,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 19.5,
+    "second_read": 19.4,
     "pixel_measure": 19.4,
     "error_pp": 0.1
    },
    "n_patients_table_11": 272,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "01",
@@ -645,7 +645,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -653,12 +653,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 58.5,
+    "second_read": 58.6,
     "pixel_measure": 58.9,
     "error_pp": -0.3
    },
    "n_patients_table_11": 272,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "02",
@@ -666,12 +666,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 39.9,
+   "value": 39.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -679,12 +679,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 39.9,
+    "second_read": 39.8,
     "pixel_measure": 40.1,
-    "error_pp": -0.2
+    "error_pp": -0.3
    },
    "n_patients_table_11": 481,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "02",
@@ -697,7 +697,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -710,7 +710,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 481,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "02",
@@ -718,12 +718,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 3.1,
+   "value": 3.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -731,12 +731,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 3.3,
+    "second_read": 3.2,
     "pixel_measure": 2.9,
-    "error_pp": 0.2
+    "error_pp": 0.3
    },
    "n_patients_table_11": 481,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "02",
@@ -749,7 +749,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -757,12 +757,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 16.7,
+    "second_read": 16.8,
     "pixel_measure": 16.7,
     "error_pp": 0.1
    },
    "n_patients_table_11": 481,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "02",
@@ -775,7 +775,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -783,12 +783,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 40.1,
+    "second_read": 40.2,
     "pixel_measure": 40.3,
     "error_pp": -0.1
    },
    "n_patients_table_11": 481,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "10",
@@ -796,12 +796,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 4.7,
+   "value": 4.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -809,12 +809,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 4.7,
+    "second_read": 4.6,
     "pixel_measure": 4.5,
-    "error_pp": 0.2
+    "error_pp": 0.0
    },
    "n_patients_table_11": 591,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "10",
@@ -827,7 +827,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -840,7 +840,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 591,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "10",
@@ -848,12 +848,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 4.5,
+   "value": 4.6,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -861,12 +861,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 4.5,
+    "second_read": 4.6,
     "pixel_measure": 4.3,
-    "error_pp": 0.2
+    "error_pp": 0.3
    },
    "n_patients_table_11": 591,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "10",
@@ -874,12 +874,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 25.6,
+   "value": 25.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -889,10 +889,10 @@
    "check": {
     "second_read": 25.7,
     "pixel_measure": 25.6,
-    "error_pp": -0.0
+    "error_pp": 0.2
    },
    "n_patients_table_11": 591,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "10",
@@ -900,12 +900,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 65.2,
+   "value": 65.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -915,10 +915,10 @@
    "check": {
     "second_read": 65.1,
     "pixel_measure": 65.6,
-    "error_pp": -0.4
+    "error_pp": -0.5
    },
    "n_patients_table_11": 591,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "03",
@@ -926,12 +926,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 28.3,
+   "value": 28.4,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -939,12 +939,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 28.5,
+    "second_read": 28.4,
     "pixel_measure": 28.6,
-    "error_pp": -0.3
+    "error_pp": -0.2
    },
    "n_patients_table_11": 1058,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "03",
@@ -957,7 +957,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -970,7 +970,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 1058,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "03",
@@ -983,7 +983,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -991,12 +991,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 2.6,
+    "second_read": 2.7,
     "pixel_measure": 2.2,
     "error_pp": 0.5
    },
    "n_patients_table_11": 1058,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "03",
@@ -1004,12 +1004,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 20.3,
+   "value": 20.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1017,12 +1017,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 20.3,
+    "second_read": 20.1,
     "pixel_measure": 20.0,
-    "error_pp": 0.3
+    "error_pp": 0.1
    },
    "n_patients_table_11": 1058,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "03",
@@ -1030,12 +1030,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 48.7,
+   "value": 48.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1043,12 +1043,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 48.6,
+    "second_read": 48.8,
     "pixel_measure": 49.1,
-    "error_pp": -0.4
+    "error_pp": -0.3
    },
    "n_patients_table_11": 1058,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "09",
@@ -1061,7 +1061,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1069,12 +1069,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 13.0,
+    "second_read": 12.9,
     "pixel_measure": 12.9,
     "error_pp": -0.0
    },
    "n_patients_table_11": 659,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "09",
@@ -1082,12 +1082,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 0.6,
+   "value": 0.3,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1095,12 +1095,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 0.5,
+    "second_read": 0.4,
     "pixel_measure": 0.1,
-    "error_pp": 0.5
+    "error_pp": 0.2
    },
    "n_patients_table_11": 659,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "09",
@@ -1108,12 +1108,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 6.3,
+   "value": 6.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1121,12 +1121,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 6.4,
+    "second_read": 6.5,
     "pixel_measure": 6.2,
-    "error_pp": 0.1
+    "error_pp": 0.3
    },
    "n_patients_table_11": 659,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "09",
@@ -1134,12 +1134,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 20.0,
+   "value": 20.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1149,10 +1149,10 @@
    "check": {
     "second_read": 20.1,
     "pixel_measure": 20.2,
-    "error_pp": -0.2
+    "error_pp": 0.0
    },
    "n_patients_table_11": 659,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "09",
@@ -1160,12 +1160,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 60.2,
+   "value": 60.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1173,12 +1173,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 60.0,
+    "second_read": 60.1,
     "pixel_measure": 60.6,
-    "error_pp": -0.4
+    "error_pp": -0.5
    },
    "n_patients_table_11": 659,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "04",
@@ -1191,7 +1191,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1204,7 +1204,7 @@
     "error_pp": -0.3
    },
    "n_patients_table_11": 595,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "04",
@@ -1217,7 +1217,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1230,7 +1230,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 595,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "04",
@@ -1243,7 +1243,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1251,12 +1251,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 4.4,
+    "second_read": 4.3,
     "pixel_measure": 4.1,
     "error_pp": 0.2
    },
    "n_patients_table_11": 595,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "04",
@@ -1264,12 +1264,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 15.7,
+   "value": 15.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1279,10 +1279,10 @@
    "check": {
     "second_read": 15.8,
     "pixel_measure": 15.6,
-    "error_pp": 0.1
+    "error_pp": 0.2
    },
    "n_patients_table_11": 595,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "04",
@@ -1290,12 +1290,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 35.6,
+   "value": 35.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1303,12 +1303,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 35.4,
+    "second_read": 35.5,
     "pixel_measure": 35.6,
-    "error_pp": -0.0
+    "error_pp": -0.1
    },
    "n_patients_table_11": 595,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "12",
@@ -1316,12 +1316,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 21.2,
+   "value": 21.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1329,12 +1329,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 21.2,
+    "second_read": 21.1,
     "pixel_measure": 21.2,
-    "error_pp": -0.0
+    "error_pp": -0.1
    },
    "n_patients_table_11": 448,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "12",
@@ -1342,12 +1342,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 1.3,
+   "value": 1.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1355,12 +1355,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 1.2,
+    "second_read": 1.1,
     "pixel_measure": 0.9,
-    "error_pp": 0.4
+    "error_pp": 0.2
    },
    "n_patients_table_11": 448,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "12",
@@ -1368,12 +1368,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 3.8,
+   "value": 3.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1381,12 +1381,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 3.8,
+    "second_read": 3.9,
     "pixel_measure": 3.6,
-    "error_pp": 0.2
+    "error_pp": 0.3
    },
    "n_patients_table_11": 448,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "12",
@@ -1394,12 +1394,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 19.5,
+   "value": 19.7,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1407,12 +1407,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 19.6,
+    "second_read": 19.7,
     "pixel_measure": 19.6,
-    "error_pp": -0.1
+    "error_pp": 0.1
    },
    "n_patients_table_11": 448,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "12",
@@ -1425,7 +1425,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1438,7 +1438,7 @@
     "error_pp": -0.5
    },
    "n_patients_table_11": 448,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "15",
@@ -1451,7 +1451,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1464,7 +1464,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 637,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "15",
@@ -1477,7 +1477,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1490,7 +1490,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 637,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "15",
@@ -1503,7 +1503,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1511,12 +1511,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 2.4,
+    "second_read": 2.3,
     "pixel_measure": 2.1,
     "error_pp": 0.2
    },
    "n_patients_table_11": 637,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "15",
@@ -1524,12 +1524,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 20.7,
+   "value": 20.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1537,12 +1537,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 20.7,
+    "second_read": 20.8,
     "pixel_measure": 20.6,
-    "error_pp": 0.1
+    "error_pp": 0.2
    },
    "n_patients_table_11": 637,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "15",
@@ -1550,12 +1550,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 59.6,
+   "value": 59.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1565,10 +1565,10 @@
    "check": {
     "second_read": 59.5,
     "pixel_measure": 59.9,
-    "error_pp": -0.3
+    "error_pp": -0.4
    },
    "n_patients_table_11": 637,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "14",
@@ -1581,7 +1581,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1594,7 +1594,7 @@
     "error_pp": -0.4
    },
    "n_patients_table_11": 510,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "14",
@@ -1607,7 +1607,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1620,7 +1620,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 510,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "14",
@@ -1633,7 +1633,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1646,7 +1646,7 @@
     "error_pp": 0.2
    },
    "n_patients_table_11": 510,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "14",
@@ -1659,7 +1659,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1667,12 +1667,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 11.7,
+    "second_read": 11.6,
     "pixel_measure": 11.4,
     "error_pp": 0.3
    },
    "n_patients_table_11": 510,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "14",
@@ -1685,7 +1685,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1693,12 +1693,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 32.0,
+    "second_read": 32.1,
     "pixel_measure": 32.2,
     "error_pp": -0.1
    },
    "n_patients_table_11": 510,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "13",
@@ -1706,12 +1706,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 12.5,
+   "value": 12.4,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1719,12 +1719,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 12.7,
+    "second_read": 12.4,
     "pixel_measure": 12.5,
-    "error_pp": -0.0
+    "error_pp": -0.1
    },
    "n_patients_table_11": 641,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "13",
@@ -1732,12 +1732,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 2.3,
+   "value": 2.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1747,10 +1747,10 @@
    "check": {
     "second_read": 2.2,
     "pixel_measure": 2.0,
-    "error_pp": 0.3
+    "error_pp": 0.2
    },
    "n_patients_table_11": 641,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "13",
@@ -1763,7 +1763,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1771,12 +1771,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 2.3,
+    "second_read": 2.5,
     "pixel_measure": 2.1,
     "error_pp": 0.3
    },
    "n_patients_table_11": 641,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "13",
@@ -1784,12 +1784,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 19.8,
+   "value": 20.0,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1799,10 +1799,10 @@
    "check": {
     "second_read": 19.9,
     "pixel_measure": 19.9,
-    "error_pp": -0.1
+    "error_pp": 0.1
    },
    "n_patients_table_11": 641,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "13",
@@ -1815,7 +1815,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1823,12 +1823,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 62.9,
+    "second_read": 63.0,
     "pixel_measure": 63.5,
     "error_pp": -0.5
    },
    "n_patients_table_11": 641,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "17",
@@ -1841,7 +1841,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1849,12 +1849,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 18.1,
+    "second_read": 18.0,
     "pixel_measure": 18.1,
     "error_pp": -0.1
    },
    "n_patients_table_11": 449,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "17",
@@ -1862,12 +1862,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 1.0,
+   "value": 0.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1875,12 +1875,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 0.9,
+    "second_read": 0.8,
     "pixel_measure": 0.5,
-    "error_pp": 0.5
+    "error_pp": 0.4
    },
    "n_patients_table_11": 449,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "17",
@@ -1888,12 +1888,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 1.6,
+   "value": 1.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1903,10 +1903,10 @@
    "check": {
     "second_read": 1.6,
     "pixel_measure": 1.3,
-    "error_pp": 0.3
+    "error_pp": 0.2
    },
    "n_patients_table_11": 449,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "17",
@@ -1914,12 +1914,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 23.6,
+   "value": 23.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1927,12 +1927,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 23.8,
+    "second_read": 23.9,
     "pixel_measure": 24.0,
-    "error_pp": -0.4
+    "error_pp": -0.1
    },
    "n_patients_table_11": 449,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "17",
@@ -1940,12 +1940,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 55.8,
+   "value": 55.7,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1953,12 +1953,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 55.6,
+    "second_read": 55.7,
     "pixel_measure": 56.1,
-    "error_pp": -0.3
+    "error_pp": -0.4
    },
    "n_patients_table_11": 449,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "06",
@@ -1966,12 +1966,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 5.9,
+   "value": 5.7,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -1979,12 +1979,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 5.9,
+    "second_read": 5.8,
     "pixel_measure": 5.8,
-    "error_pp": 0.1
+    "error_pp": -0.1
    },
    "n_patients_table_11": 682,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "06",
@@ -1997,7 +1997,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2010,7 +2010,7 @@
     "error_pp": 0.2
    },
    "n_patients_table_11": 682,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "06",
@@ -2018,12 +2018,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 2.4,
+   "value": 2.3,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2033,10 +2033,10 @@
    "check": {
     "second_read": 2.3,
     "pixel_measure": 2.0,
-    "error_pp": 0.4
+    "error_pp": 0.3
    },
    "n_patients_table_11": 682,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "06",
@@ -2044,12 +2044,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 19.8,
+   "value": 20.0,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2059,10 +2059,10 @@
    "check": {
     "second_read": 19.9,
     "pixel_measure": 19.9,
-    "error_pp": -0.1
+    "error_pp": 0.1
    },
    "n_patients_table_11": 682,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "06",
@@ -2070,12 +2070,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 68.4,
+   "value": 68.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2083,12 +2083,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 68.3,
+    "second_read": 68.4,
     "pixel_measure": 69.0,
-    "error_pp": -0.6
+    "error_pp": -0.5
    },
    "n_patients_table_11": 682,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "05",
@@ -2096,12 +2096,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 43.2,
+   "value": 43.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2109,12 +2109,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 43.3,
+    "second_read": 43.2,
     "pixel_measure": 43.6,
-    "error_pp": -0.4
+    "error_pp": -0.5
    },
    "n_patients_table_11": 1437,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "05",
@@ -2122,12 +2122,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 9.0,
+   "value": 8.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2135,12 +2135,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 8.9,
+    "second_read": 8.8,
     "pixel_measure": 8.8,
-    "error_pp": 0.2
+    "error_pp": 0.1
    },
    "n_patients_table_11": 1437,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "05",
@@ -2153,7 +2153,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2161,12 +2161,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 4.4,
+    "second_read": 4.5,
     "pixel_measure": 4.1,
     "error_pp": 0.3
    },
    "n_patients_table_11": 1437,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "05",
@@ -2174,12 +2174,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 10.2,
+   "value": 10.4,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2187,12 +2187,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 10.3,
+    "second_read": 10.4,
     "pixel_measure": 10.1,
-    "error_pp": 0.1
+    "error_pp": 0.3
    },
    "n_patients_table_11": 1437,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "05",
@@ -2205,7 +2205,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2218,7 +2218,7 @@
     "error_pp": -0.1
    },
    "n_patients_table_11": 1437,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "20",
@@ -2226,12 +2226,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 8.3,
+   "value": 8.1,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2239,12 +2239,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 8.4,
+    "second_read": 8.2,
     "pixel_measure": 8.2,
-    "error_pp": 0.1
+    "error_pp": -0.1
    },
    "n_patients_table_11": 226,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "20",
@@ -2257,7 +2257,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2265,12 +2265,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 0.6,
+    "second_read": 0.5,
     "pixel_measure": 0.3,
     "error_pp": 0.3
    },
    "n_patients_table_11": 226,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "20",
@@ -2283,7 +2283,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2291,12 +2291,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 8.4,
+    "second_read": 8.6,
     "pixel_measure": 8.3,
     "error_pp": 0.2
    },
    "n_patients_table_11": 226,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "20",
@@ -2304,12 +2304,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 21.1,
+   "value": 21.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2317,12 +2317,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 21.1,
+    "second_read": 21.2,
     "pixel_measure": 21.2,
-    "error_pp": -0.1
+    "error_pp": -0.0
    },
    "n_patients_table_11": 226,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "20",
@@ -2330,12 +2330,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 61.5,
+   "value": 61.6,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2345,10 +2345,10 @@
    "check": {
     "second_read": 61.5,
     "pixel_measure": 62.1,
-    "error_pp": -0.6
+    "error_pp": -0.5
    },
    "n_patients_table_11": 226,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "18",
@@ -2356,12 +2356,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 18.1,
+   "value": 18.0,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2369,12 +2369,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 18.2,
+    "second_read": 18.1,
     "pixel_measure": 18.2,
-    "error_pp": -0.1
+    "error_pp": -0.2
    },
    "n_patients_table_11": 148,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "18",
@@ -2387,7 +2387,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2395,12 +2395,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 10.7,
+    "second_read": 10.8,
     "pixel_measure": 10.7,
     "error_pp": 0.1
    },
    "n_patients_table_11": 148,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "18",
@@ -2413,7 +2413,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2426,7 +2426,7 @@
     "error_pp": 0.2
    },
    "n_patients_table_11": 148,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "18",
@@ -2439,7 +2439,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2447,12 +2447,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 15.7,
+    "second_read": 15.5,
     "pixel_measure": 15.4,
     "error_pp": 0.1
    },
    "n_patients_table_11": 148,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "18",
@@ -2460,12 +2460,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 43.3,
+   "value": 43.4,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2473,12 +2473,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 43.1,
+    "second_read": 43.3,
     "pixel_measure": 43.6,
-    "error_pp": -0.3
+    "error_pp": -0.2
    },
    "n_patients_table_11": 148,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "21",
@@ -2486,12 +2486,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 33.4,
+   "value": 33.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2499,12 +2499,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 33.5,
+    "second_read": 33.2,
     "pixel_measure": 33.6,
-    "error_pp": -0.2
+    "error_pp": -0.4
    },
    "n_patients_table_11": 710,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "21",
@@ -2517,7 +2517,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2530,7 +2530,7 @@
     "error_pp": 0.4
    },
    "n_patients_table_11": 710,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "21",
@@ -2538,12 +2538,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 20.1,
+   "value": 20.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2551,12 +2551,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 20.1,
+    "second_read": 20.3,
     "pixel_measure": 20.2,
-    "error_pp": -0.1
+    "error_pp": 0.0
    },
    "n_patients_table_11": 710,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "21",
@@ -2564,12 +2564,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 11.6,
+   "value": 11.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2579,10 +2579,10 @@
    "check": {
     "second_read": 11.6,
     "pixel_measure": 11.5,
-    "error_pp": 0.1
+    "error_pp": 0.0
    },
    "n_patients_table_11": 710,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "21",
@@ -2590,12 +2590,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 32.3,
+   "value": 32.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2603,12 +2603,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 32.3,
+    "second_read": 32.4,
     "pixel_measure": 32.5,
-    "error_pp": -0.2
+    "error_pp": -0.0
    },
    "n_patients_table_11": 710,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "19",
@@ -2616,12 +2616,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 15.0,
+   "value": 14.9,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2629,12 +2629,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 15.1,
+    "second_read": 14.9,
     "pixel_measure": 15.0,
-    "error_pp": -0.0
+    "error_pp": -0.1
    },
    "n_patients_table_11": 1050,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "19",
@@ -2642,12 +2642,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 0.9,
+   "value": 0.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2657,10 +2657,10 @@
    "check": {
     "second_read": 0.9,
     "pixel_measure": 0.5,
-    "error_pp": 0.4
+    "error_pp": 0.3
    },
    "n_patients_table_11": 1050,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "19",
@@ -2673,7 +2673,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2686,7 +2686,7 @@
     "error_pp": -0.0
    },
    "n_patients_table_11": 1050,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "19",
@@ -2694,12 +2694,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 19.1,
+   "value": 19.2,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2707,12 +2707,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 19.1,
+    "second_read": 19.2,
     "pixel_measure": 19.1,
-    "error_pp": 0.0
+    "error_pp": 0.1
    },
    "n_patients_table_11": 1050,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "19",
@@ -2720,12 +2720,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 42.5,
+   "value": 42.6,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2733,12 +2733,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 42.4,
+    "second_read": 42.5,
     "pixel_measure": 42.8,
-    "error_pp": -0.3
+    "error_pp": -0.2
    },
    "n_patients_table_11": 1050,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "16",
@@ -2746,12 +2746,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 25.7,
+   "value": 25.6,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2759,12 +2759,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 25.8,
+    "second_read": 25.6,
     "pixel_measure": 25.8,
-    "error_pp": -0.1
+    "error_pp": -0.2
    },
    "n_patients_table_11": 540,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "16",
@@ -2777,7 +2777,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2790,7 +2790,7 @@
     "error_pp": 0.0
    },
    "n_patients_table_11": 540,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "16",
@@ -2803,7 +2803,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2816,7 +2816,7 @@
     "error_pp": 0.2
    },
    "n_patients_table_11": 540,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "16",
@@ -2824,12 +2824,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 17.6,
+   "value": 17.7,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2837,12 +2837,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 17.7,
+    "second_read": 17.8,
     "pixel_measure": 17.6,
-    "error_pp": -0.0
+    "error_pp": 0.1
    },
    "n_patients_table_11": 540,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "16",
@@ -2855,7 +2855,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2863,12 +2863,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 54.8,
+    "second_read": 54.9,
     "pixel_measure": 55.2,
     "error_pp": -0.2
    },
    "n_patients_table_11": 540,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "07",
@@ -2876,12 +2876,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 62.7,
+   "value": 62.6,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2889,12 +2889,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 62.8,
+    "second_read": 62.7,
     "pixel_measure": 63.4,
-    "error_pp": -0.7
+    "error_pp": -0.8
    },
    "n_patients_table_11": 546,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "07",
@@ -2907,7 +2907,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2915,12 +2915,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 1.3,
+    "second_read": 1.2,
     "pixel_measure": 0.8,
     "error_pp": 0.3
    },
    "n_patients_table_11": 546,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "07",
@@ -2928,12 +2928,12 @@
    "indicator": "lung_stage_class_verbal_pct",
    "label_en": "Stage reported to the registry in words only",
    "label_fi": "Levinneisyysluokitus: Sanallinen",
-   "value": 7.9,
+   "value": 7.8,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2943,10 +2943,10 @@
    "check": {
     "second_read": 7.7,
     "pixel_measure": 7.6,
-    "error_pp": 0.3
+    "error_pp": 0.2
    },
    "n_patients_table_11": 546,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "07",
@@ -2959,7 +2959,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2967,12 +2967,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 5.9,
+    "second_read": 6.0,
     "pixel_measure": 5.8,
     "error_pp": 0.2
    },
    "n_patients_table_11": 546,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "07",
@@ -2980,12 +2980,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 22.3,
+   "value": 22.5,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -2993,12 +2993,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 22.3,
+    "second_read": 22.4,
     "pixel_measure": 22.4,
-    "error_pp": -0.1
+    "error_pp": 0.1
    },
    "n_patients_table_11": 546,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "08",
@@ -3006,12 +3006,12 @@
    "indicator": "lung_stage_class_tnm_pct",
    "label_en": "Stage reported to the registry as TNM",
    "label_fi": "Levinneisyysluokitus: TNM",
-   "value": 26.5,
+   "value": 26.4,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -3019,12 +3019,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 26.7,
+    "second_read": 26.3,
     "pixel_measure": 26.8,
-    "error_pp": -0.2
+    "error_pp": -0.4
    },
    "n_patients_table_11": 1253,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "08",
@@ -3032,12 +3032,12 @@
    "indicator": "lung_stage_class_stage_pct",
    "label_en": "Stage reported to the registry as a stage group",
    "label_fi": "Levinneisyysluokitus: Stage",
-   "value": 1.8,
+   "value": 1.7,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -3045,12 +3045,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 1.6,
+    "second_read": 1.7,
     "pixel_measure": 1.4,
-    "error_pp": 0.4
+    "error_pp": 0.2
    },
    "n_patients_table_11": 1253,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "08",
@@ -3063,7 +3063,7 @@
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -3071,12 +3071,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 3.2,
+    "second_read": 3.3,
     "pixel_measure": 2.9,
     "error_pp": 0.3
    },
    "n_patients_table_11": 1253,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "08",
@@ -3084,12 +3084,12 @@
    "indicator": "lung_stage_class_registry_coded_pct",
    "label_en": "Stage coded by the registry (Syre) from other records",
    "label_fi": "Levinneisyysluokitus: Syre -levinneisyys",
-   "value": 16.9,
+   "value": 17.0,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -3099,10 +3099,10 @@
    "check": {
     "second_read": 17.0,
     "pixel_measure": 16.9,
-    "error_pp": 0.0
+    "error_pp": 0.1
    },
    "n_patients_table_11": 1253,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   },
   {
    "area_id": "08",
@@ -3110,12 +3110,12 @@
    "indicator": "lung_stage_unknown_pct",
    "label_en": "No stage information in the registry",
    "label_fi": "Levinneisyysluokitus: Ei tietoa",
-   "value": 51.6,
+   "value": 51.7,
    "unit": "%",
    "period": "2019-2023",
    "kind": "measured",
    "verified": false,
-   "read_by": "gemini:gemini-4-hydrogen",
+   "read_by": "gemini:gemini-4-carbon",
    "read_from": "chart",
    "confidence": 0.6,
    "figure": "Kuva 13",
@@ -3123,12 +3123,12 @@
    "source_url": "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html",
    "source_title": "Keuhkosyöpäpotilaiden hoidon laatu Suomessa (Suomen Syöpärekisteri)",
    "check": {
-    "second_read": 51.5,
+    "second_read": 51.7,
     "pixel_measure": 52.0,
-    "error_pp": -0.4
+    "error_pp": -0.3
    },
    "n_patients_table_11": 1253,
-   "read_at": "2026-11-13T23:49:16+00:00"
+   "read_at": "2026-11-14T10:04:33+00:00"
   }
  ]
 }

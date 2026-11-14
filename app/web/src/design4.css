@@ -1,0 +1,355 @@
+/* Round 4 design pass. Loaded after styles.css; overrides only. */
+
+textarea { font: inherit; color: inherit; }
+
+/* ---------- the web check trace: a long step label wraps instead of running over the query ---------- */
+.trace li { grid-template-columns: 168px minmax(0, 1fr) auto; }
+.trace .tool { white-space: normal; overflow-wrap: anywhere; min-width: 0; }
+@media (max-width: 720px) { .trace li { grid-template-columns: minmax(0, 1fr) auto; } .trace .tool { grid-column: 1 / -1; } }
+
+/* ---------- Monday: a work order ---------- */
+.monday { gap: 20px; }
+.mhead { align-items: flex-end; }
+.mhead .lede { max-width: 72ch; }
+.mweek { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.mweek > * { min-width: 0; }
+.mweek .mdecide { border: 0; background: none; border-radius: 0; padding: 16px 18px; max-width: none; font-size: 15px; line-height: 1.5; }
+.mweek .mdecide b { display: block; font-size: 16px; margin-bottom: 4px; }
+.mweek .mask1 { border: 0; border-radius: 0; background: none; padding: 16px 18px; border-left: 1px solid var(--line); }
+.mweek > :only-child { grid-column: 1 / -1; border-left: 0; }
+.mask1 h2 { font-size: 16px; }
+.mask1 ol { font-size: 14px; gap: 6px; }
+.mask1 ol li::marker { color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.mtable { font-size: 14px; }
+.mtable th { font-size: 12px; color: var(--ink-3); }
+.mtable .mn { width: 30px; font-size: 13px; }
+.mtable .mwho { width: 17%; font-weight: 500; color: var(--ink-2); font-size: 13px; }
+.mtable .mwhat { width: 22%; }
+.mtable .mwhat b { font-weight: 650; color: var(--ink); }
+.mtable td:nth-child(4) { color: var(--ink); }
+.mtable .mdone { color: var(--ink-2); }
+.mtable .mcounted { display: block; margin-top: 4px; font-size: 12.5px; color: var(--ink-3); }
+.mtable .mask { font-weight: 550; }
+.mtable tbody tr:hover td { background: #f7f8f6; }
+.mtable tr.zero td, .mtable tbody tr.zero:hover td { background: var(--accent-wash); }
+.mtable tr.zero .mn { color: var(--accent); }
+.mtable tfoot td { font-size: 14px; }
+.mnote { font-size: 12.5px; }
+
+@media screen and (max-width: 860px) {
+  .mhead { gap: 14px; }
+  .mweek { grid-template-columns: minmax(0, 1fr); }
+  .mweek .mask1 { border-left: 0; border-top: 1px solid var(--line); }
+  .mweek .mdecide, .mweek .mask1 { padding: 14px; }
+  .mask1 ol { padding-left: 18px; }
+  /* one card per job: number and action on top with the cost, then who, this week, done */
+  .mtable tbody tr { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; grid-template-areas: "n what cost" ". who who" ". week week" ". done done"; gap: 0 10px; padding: 14px 14px 14px 12px; }
+  .mtable tbody tr > td { margin: 0 !important; }
+  .mtable .mn { grid-area: n; position: static; font-size: 15px; line-height: 1.35; }
+  .mtable .mwhat { grid-area: what; font-size: 15px; line-height: 1.35; }
+  .mtable .mcost { grid-area: cost; font-size: 15px; line-height: 1.35; text-align: right !important; }
+  .mtable .mwho { grid-area: who; margin-top: 3px !important; font-size: 13px; }
+  .mtable td:nth-child(4) { grid-area: week; margin-top: 10px !important; font-size: 14px; }
+  .mtable .mdone { grid-area: done; margin-top: 8px !important; padding-top: 8px !important; border-top: 1px solid var(--line) !important; font-size: 13px; }
+  .mtable td[data-th]::before { display: none !important; }
+  .mtable td:nth-child(4)::before, .mtable .mdone::before { display: inline !important; content: attr(data-th) ". " !important; font-size: inherit !important; letter-spacing: 0 !important; text-transform: none !important; font-weight: 650 !important; color: var(--ink) !important; margin: 0 !important; }
+  .mtable .mwho::before { display: none !important; }
+  .mtable tr.zero { background: var(--accent-wash) !important; border-color: #c9d9f0 !important; }
+  .mtable tfoot tr { display: flex; justify-content: space-between; padding: 12px 14px 12px 44px; }
+  .mtable tfoot td { margin: 0 !important; }
+  .mtable tbody tr:hover td { background: none; }
+}
+
+@media print {
+  @page { size: A4; margin: 11mm 11mm 10mm; }
+  .monday { gap: 7pt; }
+  .mhead h1 { font-size: 15pt; }
+  .mhead .lede { font-size: 8.5pt; margin-top: 2pt; }
+  .mweek { grid-template-columns: 0.85fr 1.15fr; border-color: #999; break-inside: avoid; }
+  .mweek .mdecide, .mweek .mask1 { padding: 5pt 7pt; font-size: 8.3pt; line-height: 1.35; }
+  .mweek .mdecide b { font-size: 9pt; margin-bottom: 1pt; }
+  .mweek .mask1 { border-left-color: #999; }
+  .mask1 h2 { font-size: 9pt; margin: 0; }
+  .mask1 p.small { font-size: 7.5pt; }
+  .mask1 ol { font-size: 8pt; gap: 1pt; margin-top: 3pt; padding-left: 13pt; }
+  .mtable { font-size: 7.8pt; line-height: 1.28; border-color: #999; table-layout: fixed; }
+  .mtable th { font-size: 7pt; padding: 3pt 4pt; white-space: normal; }
+  .mtable td { padding: 3.5pt 4pt; hyphens: auto; }
+  .mtable .mn { width: 14pt; padding-right: 0; }
+  .mtable .mwho { width: 17%; font-size: 7.3pt; }
+  .mtable .mwhat { width: 21%; }
+  .mtable th:nth-child(4) { width: 26%; }
+  .mtable th:nth-child(5) { width: 10%; }
+  .mtable .mcounted { font-size: 7pt; margin-top: 1pt; }
+  .mtable .mask { font-size: 6.8pt; padding: 0 4pt; margin-top: 2pt; }
+  .mtable tr { break-inside: avoid; }
+  .mtable tr.zero td { background: #eef3fa !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .mtable tfoot td { font-size: 8.3pt; padding: 3pt 5pt; }
+  .mnote { font-size: 7pt; }
+  .monday > .expert { break-inside: avoid; }
+}
+
+/* ---------- Review: one screen for a clinician ---------- */
+.reviewpage { max-width: 1320px; margin: 0 auto; padding: 28px 24px 32px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 32px; align-items: start; font-size: 15px; }
+.reviewpage h1 { font-size: 29px; line-height: 1.18; font-weight: 600; letter-spacing: -0.02em; margin: 0; max-width: 22em; text-wrap: balance; }
+.reviewpage h1 b { font-weight: 750; }
+.reviewpage .rmeta { margin-top: 8px; font-size: 13px; color: var(--ink-3); }
+.reviewpage .rclaim h2 { font-size: 13px; color: var(--ink-2); font-weight: 650; margin: 22px 0 8px; }
+.reviewpage .rclaim > p.small { margin-top: 10px; max-width: 70ch; }
+/* the care path as a track: the step where the patients are lost is the only one in colour */
+.reviewpage .rsteps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.reviewpage .rsteps li { margin: 0; padding: 9px 2px 0 0; border-top: 3px solid var(--line-strong); background: none; border-radius: 0; display: grid; gap: 3px; font-size: 12.5px; line-height: 1.3; color: var(--ink-3); }
+.reviewpage .rsteps li b { font-size: 14px; color: var(--ink-2); font-weight: 600; }
+.reviewpage .rsteps li.here { border-top-color: var(--bad); color: var(--ink); }
+.reviewpage .rsteps li.here b { color: var(--bad); font-size: 15px; font-weight: 700; }
+.reviewpage .racts li { margin: 0; color: inherit; }
+.reviewpage .rlinks { margin-top: 14px; }
+.reviewpage .rform { padding: 22px 24px; gap: 16px; position: sticky; top: 76px; }
+.reviewpage .rform h2 { font-size: 18px; color: var(--ink); margin: 0; }
+.reviewpage .rq > label { font-size: 15px; }
+.reviewpage .rq input[type="text"], .reviewpage .rq textarea { height: 40px; background: #fff; }
+.reviewpage .rq textarea { height: auto; min-height: 60px; }
+.reviewpage .rq input:focus, .reviewpage .rq textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+.reviewpage .rpick button { height: 38px; min-width: 78px; font-size: 14px; }
+.reviewpage .rconsent { font-size: 14px; color: var(--ink); align-items: flex-start; cursor: pointer; }
+.reviewpage .rconsent input { width: 18px; height: 18px; margin-top: 1px; accent-color: var(--accent); flex: 0 0 auto; }
+.reviewpage .rsend { padding-top: 4px; }
+@media (max-width: 900px) {
+  .reviewpage { grid-template-columns: minmax(0, 1fr); padding: 18px 16px 0; gap: 22px; }
+  .reviewpage h1 { font-size: 23px; }
+  .reviewpage .rsteps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
+  .reviewpage .rform { position: static; padding: 18px 16px 0; border-radius: var(--radius) var(--radius) 0 0; margin: 0 -16px; border-left: 0; border-right: 0; border-bottom: 0; }
+  .reviewpage .rpick { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .reviewpage .rpick button { height: 46px; font-size: 15px; }
+  .reviewpage .rq input[type="text"] { height: 46px; font-size: 16px; }
+  .reviewpage .rq textarea { font-size: 16px; }
+  .reviewpage .rwho { grid-template-columns: 1fr; }
+  .reviewpage .rconsent { padding: 6px 0; }
+  .reviewpage .rconsent input { width: 22px; height: 22px; }
+  /* the send bar stays under the thumb */
+  .reviewpage .rsend { position: sticky; bottom: 0; margin: 0 -16px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; }
+  .reviewpage .rsend .btn { height: 46px; font-size: 15px; }
+  .reviewpage .rsend > span { grid-column: 1 / -1; order: 3; }
+}
+
+/* ---------- Reviewed by ---------- */
+.expert blockquote { background: none; padding: 0; border-radius: 0; font-size: 19px; }
+@media (max-width: 640px) { .expert blockquote { font-size: 17px; } }
+@media print { .expert blockquote { font-size: 10pt; } }
+.mweek { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+@media print { .mweek { grid-template-columns: 0.8fr 1.2fr; } }
+.reviewpage .rsteps li { border: 0; border-top: 3px solid var(--line-strong); padding: 8px 4px 0 0; }
+.reviewpage .rsteps li.here { border: 0; border-top: 3px solid var(--bad); background: none; }
+@media (max-width: 900px) { .reviewpage .rq textarea { min-height: 88px; } }
+
+/* ---------- County: an action at rest is three lines ---------- */
+.county .pagehead { align-items: flex-start; }
+.card.card3 { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; column-gap: 20px; row-gap: 0; align-items: center; padding: 13px 24px; }
+.card.card3.numbered { grid-template-columns: 22px minmax(0, 1fr) auto auto; column-gap: 10px; }
+.card.card3 > .cmore { grid-row: 1; margin-left: 10px; }
+.card.card3 > .no { grid-row: 1; align-self: start; font-size: 16px; line-height: 1.4; color: var(--ink-3); }
+.card.card3 > .cbody { grid-row: 1; min-width: 0; }
+.card.card3 > .crow { grid-row: 1; display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 6px 12px; max-width: 440px; }
+.card.card3 > .readerr, .card.card3 > .cafter, .card.card3 > .cdetail { grid-column: 1 / -1; margin-left: 0; }
+.card.card3.numbered > .readerr, .card.card3.numbered > .cafter, .card.card3.numbered > .cdetail { grid-column: 2 / -1; }
+.card3 .cbody h3 { margin: 0; font-size: 16px; line-height: 1.35; font-weight: 650; letter-spacing: -0.005em; color: var(--ink); max-width: 46em; text-wrap: pretty; }
+.card3 .cfacts { margin: 2px 0 0; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+.card3 .cfacts b { color: var(--ink); font-weight: 650; }
+.card3 .cfacts .rg { font-size: 12.5px; color: var(--ink-3); }
+.card3 .cown { margin: 1px 0 0; font-size: 13px; line-height: 1.4; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card3 .cown > span { color: var(--ink-3); margin-right: 2px; }
+.card3 .crow .btn { white-space: nowrap; }
+.card3 .cprog { display: inline-flex; align-items: center; font-size: 13px; color: var(--ink-2); min-width: 0; }
+.card3 .cprog .spin { width: 12px; height: 12px; margin-right: 7px; flex: none; }
+.card3 .cstored { font-size: 12px; color: var(--ink-3); }
+.card3 .cmore { font-size: 13px; font-weight: 600; white-space: nowrap; }
+.card3 .cmore::after { content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 0.15s ease-out; }
+.card3 .cmore[aria-expanded="true"]::after { transform: translateY(1px) rotate(-135deg); }
+.card3 .readerr { margin: 10px 0 0; }
+/* after a check: the chip above, then the one sentence from the page, then how it was checked */
+.card3 .cafter { margin-top: 10px; display: grid; gap: 6px; justify-items: start; }
+.cquote { margin: 0; padding: 2px 0 2px 12px; border: 0; border-left: 2px solid var(--line-strong); border-radius: 0; background: none; font-size: 15px; line-height: 1.5; color: var(--ink); max-width: 78ch; text-wrap: pretty; }
+.cquote a { margin-left: 4px; font-size: 13px; color: var(--accent); white-space: normal; }
+.card3 .cafter .cquote { border-left-color: var(--gain); animation: fade 0.4s ease-out both; }
+.chow { margin: 0; width: 100%; }
+.chow > summary { font-size: 13px; }
+.chow[open] .verify { margin: 6px 0 0; }
+.card3 .cdetail { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); display: grid; gap: 8px; max-width: 92ch; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.card3 .cdetail > p { margin: 0; }
+.card3 .cdetail > p > b { font-weight: 650; }
+.card3 .cdetail .askfirst { display: block; margin: 0; padding: 8px 12px; background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: var(--radius); }
+.card3 .cdetail .askfirst > b { color: var(--warn-ink); }
+.card3 .cdetail .studyline { font-size: 13.5px; color: var(--ink-2); }
+.card3 .cdetail .cweb { display: grid; gap: 6px; padding: 10px 12px; background: var(--page); border-radius: var(--radius); }
+.card3 .cdetail .cweb > b { font-size: 13px; font-weight: 650; }
+.card3 .cdetail .inplan { justify-self: start; }
+.card3 .cdetail > .vhow .meta { margin-top: 8px; }
+@media (max-width: 720px) {
+  /* phone: title, cost and patients, owner with Details at its end, then the check */
+  .card.card3, .card.card3.numbered { grid-template-columns: 20px minmax(0, 1fr) auto; grid-template-areas: "no t t" ". f f" ". o m" "r r r"; column-gap: 8px; padding: 12px 14px; }
+  .card.card3:not(.numbered) { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "t t" "f f" "o m" "r r"; }
+  .card.card3 > .cbody { display: contents; }
+  .card.card3 > .no { grid-area: no; font-size: 15px; }
+  .card3 .cbody h3 { grid-area: t; font-size: 15.5px; }
+  .card3 .cfacts { grid-area: f; font-size: 13.5px; }
+  .card3 .cfacts .rg { display: none; }
+  .card3 .cown { grid-area: o; min-width: 0; }
+  .card.card3 > .cmore { grid-area: m; margin: 0; padding: 0 0 0 10px; align-self: center; }
+  .card.card3 > .crow { grid-area: r; justify-content: flex-start; max-width: none; margin-top: 8px; gap: 6px 8px; }
+  .card.card3 > .readerr, .card.card3 > .cafter, .card.card3 > .cdetail, .card.card3.numbered > .readerr, .card.card3.numbered > .cafter, .card.card3.numbered > .cdetail { grid-column: 1 / -1; grid-area: auto / 1 / auto / -1; }
+  .card3 .crow .btn { height: 30px; padding: 0 9px; font-size: 12.5px; }
+  .card3 .crow .inuse { padding: 1px 7px; }
+  .card3 .crow .inuse { white-space: nowrap; }
+  .cquote { font-size: 14.5px; }
+  /* the page around the cards */
+  .county .pagehead > .btn.lg { display: none; }
+  .missing h3 .big { display: inline; margin: 0 6px 0 0; font-size: 28px; }
+  .missing { gap: 10px; padding: 16px; }
+  .morelist.behind > summary .muted { display: none; }
+  .totals .strip { display: block; font-size: 14px; line-height: 1.45; }
+  .totals .strip > * { display: inline; }
+  .totals .strip > * + *::before { content: " · "; color: var(--ink-3); }
+  .totals .strip .webline { display: block; margin-top: 4px; font-size: 12.5px; }
+  .totals .strip .webline::before { content: none; }
+  .page.county { gap: 12px; padding-bottom: 24px; }
+  .care > header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+  .care > header h2 { flex: 1 1 100%; }
+  .care > header .spacer { display: none; }
+  .care > header > .chip { flex: 1 1 0; min-width: 0; max-width: max-content; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: block; }
+  .care > header > .seg { margin-left: auto; flex: none; }
+  .acts details.tune > summary .muted, .acts details.national > summary .muted { display: none; }
+  .gh { padding: 14px 14px 2px; }
+  .card.card3, .card.card3.numbered { padding: 10px 14px; }
+  .card3 .cbody h3 { line-height: 1.3; }
+  .card3 .cfacts, .card3 .cown { line-height: 1.35; }
+  .card.card3 > .crow { margin-top: 6px; }
+  .card3 .crow .btn { height: 28px; }
+  /* the page headline already asks the chart's question */
+  .care > header h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .care > header { padding-top: 12px; padding-bottom: 12px; }
+  .missbar .keys { gap: 2px 14px; font-size: 13px; }
+  .missbar .keys .chip { display: none; }
+  .missbar .closes { height: 10px; }
+  .missing h3 { font-size: 14px; }
+  .dotkey { gap: 3px 12px; font-size: 11.5px; margin-top: 10px; }
+  .totals .strip .webline { display: none; }
+  ol.pathway-grid .pathway-step { padding: 6px 0 8px; }
+  .dotkey { grid-template-columns: minmax(0, 1fr); }
+  .page.county { padding-left: 12px; padding-right: 12px; }
+  /* "Is this gap real?" on one line; its sentence opens with the checks */
+  .gapline .gapchecks.line > summary .gapsum { display: none; }
+  .gapline .gapchecks.line > summary::after { content: "Show"; }
+  .gapline .gapchecks.line .gapsum-open { display: block; margin: 10px 0 0; font-size: 14px; }
+}
+.gapsum-open { display: none; }
+.gapline.incare { border: 0; border-top: 1px solid var(--line); border-radius: 0; margin: 0; background: none; padding: 12px 24px; }
+@media (max-width: 720px) { .gapline.incare { padding: 10px 14px; } .missbar .keys li.closed:not(.on) { display: none; } }
+
+/* ---------- Behind these numbers: one row until opened ---------- */
+.morelist.behind { display: block; }
+.morelist.behind > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; padding: 14px 24px; }
+.morelist.behind > summary::-webkit-details-marker { display: none; }
+.morelist.behind > summary h2 { font-size: 15px; margin: 0; }
+.morelist.behind > summary h2::after { content: ""; display: inline-block; width: 7px; height: 7px; margin-left: 10px; border-right: 1.5px solid var(--accent); border-bottom: 1.5px solid var(--accent); transform: translateY(-3px) rotate(45deg); }
+.morelist.behind[open] > summary h2::after { transform: translateY(0) rotate(-135deg); }
+.morelist.behind > summary .muted { font-size: 13px; }
+.morelist.behind[open] > summary { border-bottom: 1px solid var(--line); }
+.morelist.behind > details.more { border-top: 1px solid var(--line); border-left: 0; }
+.morelist.behind > summary + details.more { border-top: 0; }
+.morelist.behind details.more > .drugfinding { padding: 12px 24px 16px 42px; border: 0; }
+.morelist.behind details.more > .drugfinding h2 { display: none; }
+@media (max-width: 640px) { .morelist.behind > summary { padding: 12px 14px; } .morelist.behind details.more > .drugfinding { padding: 12px 14px; } }
+
+/* ---------- where on the care path: the step that loses patients is the only one in colour ---------- */
+ol.pathway-grid { gap: 0 16px; padding: 4px 24px 0; }
+.pathway-step, .pathway-step:nth-child(2), .pathway-step:last-child { border: 0; border-top: 3px solid var(--line-strong); padding: 10px 2px 14px 0; }
+.pathway-step .pathway-q { color: var(--ink-3); }
+.pathway-step .pathway-index { display: none; }
+.pathway-step .pathway-v { font-size: 15px; color: var(--ink-3); font-weight: 600; }
+.pathway-step p { color: var(--ink-3); font-size: 12.5px; }
+.pathway-step.here { border-top-color: var(--bad); }
+.pathway-step.here .pathway-q { color: var(--ink); font-weight: 600; }
+.pathway-step.here .pathway-v { color: var(--bad); font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+.pathway-step.here p { color: var(--ink); font-size: 13.5px; }
+@media (max-width: 900px) { .pathway-step, .pathway-step:nth-child(-n+2) { border-bottom: 0; } }
+@media (max-width: 600px) {
+  ol.pathway-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 14px 4px; gap: 0 12px; }
+  .pathway-step, .pathway-step:nth-child(2), .pathway-step:last-child { border-bottom: 0; border-right: 0; }
+  .pathway-step { padding: 8px 0 10px; }
+  .pathway-step .pathway-q { font-size: 13px; line-height: 1.3; }
+  .pathway-step .pathway-v { font-size: 14px; }
+  .pathway-step.here .pathway-v { font-size: 17px; }
+}
+.drugfinding { background: none; }
+.drugfinding .eyebrow { display: none; }
+.drugfinding h2 { font-size: 15px; }
+
+/* ---------- the ask: what happens on the left, what is counted on the right ---------- */
+.county .ask { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 40px; row-gap: 16px; padding: 24px 28px 24px; }
+.county .ask > header, .county .ask > .asklead, .county .ask > .askcannot { grid-column: 1 / -1; }
+.county .ask > .pilotsteps { grid-column: 1; grid-row: 3 / span 2; margin: 0; }
+.county .ask > .pfigs { grid-column: 2; grid-row: 3; align-self: start; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; border: 0; gap: 0; }
+.county .ask > .pfigs > div { padding: 14px 14px 14px 0; border: 0 !important; border-top: 1px solid var(--line) !important; }
+.county .ask > .pfigs > div:nth-child(even) { padding-left: 14px; border-left: 1px solid var(--line) !important; }
+.county .ask > .pfigs dd b { font-size: 28px; }
+.county .ask > .pfigs dd b .pname { font-size: 18px; }
+.asklead { font-size: 20px; max-width: 46ch; }
+
+/* the three steps as a timeline; the gate sits on the line between the audit and the spend */
+.pilotsteps { position: relative; gap: 14px; }
+.pilotsteps article::before { content: ""; position: absolute; left: 11px; top: 0; bottom: -14px; width: 1.5px; background: var(--line-strong); }
+.pilotsteps article:first-of-type::before { top: 12px; }
+.pilotsteps article:last-of-type::before { bottom: auto; height: 12px; }
+.pilotsteps .pilotgate::after { content: ""; position: absolute; left: -26px; top: -1px; bottom: -15px; width: 1.5px; background: var(--line-strong); }
+.pilotsteps article { position: relative; grid-template-columns: 24px minmax(0, 1fr); gap: 12px; }
+.pilotsteps article > b { width: 24px; height: 24px; background: var(--surface); border: 1.5px solid var(--accent); color: var(--accent); font-size: 12px; font-weight: 700; z-index: 1; }
+.pilotsteps article:last-of-type > b { background: var(--accent); color: #fff; }
+.pilotsteps h3 { font-size: 15px; margin-bottom: 3px; }
+.pilotsteps p, .pilotsteps li { font-size: 13.5px; line-height: 1.45; }
+.pilotsteps .pilotgate { position: relative; margin: 0 0 0 36px; padding: 9px 12px; border: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); font-size: 13.5px; line-height: 1.45; }
+.pilotsteps .pilotgate::before { content: ""; position: absolute; left: -31px; top: 50%; width: 16px; height: 3px; margin-top: -1.5px; background: var(--ink); border-radius: 2px; }
+.pilotsuccess { margin-left: 36px; display: grid; gap: 3px; padding: 10px 12px; border: 0; background: var(--gain-wash); border-radius: var(--radius); font-size: 13px; line-height: 1.4; }
+.pilotsuccess b { font-size: 13.5px; }
+.pilotsuccess small { color: var(--gain-ink); opacity: 0.85; font-size: 12px; }
+.pilotcomparison { margin-left: 36px; }
+@media (max-width: 900px) {
+  .county .ask { grid-template-columns: minmax(0, 1fr); padding: 18px 16px; }
+  .county .ask > .pilotsteps, .county .ask > .pfigs { grid-column: 1; grid-row: auto; }
+  .county .ask > .pfigs dd b { font-size: 22px; }
+  .county .ask > .pfigs dd b .pname { font-size: 16px; }
+  .asklead { font-size: 17px; }
+}
+
+/* ---------- the ask, short: three steps on a rail, the gate under the audit ---------- */
+.county .ask.askshort { grid-template-columns: minmax(0, 1fr); row-gap: 14px; }
+.askrail { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-areas: "a b c" "g g g"; gap: 0 20px; }
+.askrail > li { position: relative; display: grid; gap: 2px; padding: 14px 0 0; border-top: 2px solid var(--line-strong); font-size: 15px; line-height: 1.35; }
+.askrail > li:nth-child(1) { grid-area: a; }
+.askrail > li:nth-child(2) { grid-area: b; }
+.askrail > li.gate { grid-area: g; border: 0; padding: 12px 0 0; }
+.askrail > li.go { grid-area: c; border-top-color: var(--accent); }
+.askrail > li::before { content: ""; position: absolute; left: 0; top: -6px; width: 10px; height: 10px; border-radius: 50%; background: var(--surface); border: 2px solid var(--ink-3); box-sizing: border-box; }
+.askrail > li.go::before { background: var(--accent); border-color: var(--accent); }
+.askrail > li.gate::before { display: none; }
+.askrail .when { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.askrail .what { font-weight: 650; color: var(--ink); }
+.askrail .what .muted { font-weight: 400; }
+.askrail .pilotgate { margin: 0; padding: 10px 14px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--page); font-size: 14px; line-height: 1.5; max-width: 100ch; }
+.askmore > summary { cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--accent); }
+.askmore[open] { display: grid; gap: 14px; }
+.askmore[open] > summary { margin-bottom: 4px; }
+.askmore .pfigs { margin: 0; }
+@media (max-width: 720px) {
+  .askrail { grid-template-columns: minmax(0, 1fr); grid-template-areas: "a" "b" "g" "c"; gap: 0; padding-left: 18px; }
+  .askrail > li, .askrail > li.go { border-top: 0; border-left: 2px solid var(--line-strong); padding: 0 0 12px 14px; margin-left: -18px; padding-left: 30px; }
+  .askrail > li::before { left: -6px; top: 3px; }
+  .askrail > li.go { border-left-color: transparent; padding-bottom: 0; }
+  .askrail > li.gate { border-left: 2px solid var(--line-strong); padding: 0 0 12px 30px; }
+  .askrail .pilotgate { font-size: 13px; line-height: 1.45; padding: 8px 10px; }
+  .askrail > li:not(.gate) { grid-template-columns: 78px minmax(0, 1fr); align-items: baseline; font-size: 14.5px; }
+}
+
+/* After a live check that changes what the plan does: the one sentence, under the quote. */
+.card3 .cafter .cplan { margin: 0; padding: 8px 12px; background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: var(--radius); font-size: 14px; line-height: 1.45; max-width: 78ch; animation: fade 0.4s ease-out both; }
+.card3 .cafter .cplan > b { color: var(--warn-ink); }
+@media (prefers-reduced-motion: reduce) { .card3 .cafter .cplan { animation: none; } }

@@ -1,4 +1,8 @@
-{"title": "Finland is about ten years behind Sweden and Norway in lung cancer survival, and the gap is growing",
- "finding_en": "Men diagnosed with lung cancer in Finland in 2020–2024 have a 5-year relative survival of 17.9%. The Sweden/Norway average passed that level about 10 years ago and is now 31.1%. The gap was close to zero in the 1990s and has widened by about 4 percentage points per decade (95% interval 2.2 to 5.7). For women the gap is 7.9 points, about 6 years. Pancreas and liver show the same pattern. Source: NORDCAN, fetched live by the analysis.",
- "figure": "artifacts/nordcan_lung.png",
- "figure_alt": "Line charts of 5-year relative survival for lung cancer in Finland, Sweden, Norway and Denmark from 1990 to 2024, for men and women, and Finland's gap to the Sweden/Norway average, which falls from about zero to minus 13 points for men."}
+{
+ "title": "Finland is about ten years behind Sweden and Norway in lung cancer survival, and the gap is growing",
+ "finding_en": "Men diagnosed with lung cancer in Finland in 2020–2024 have a 5-year relative survival of 17.9%. The Sweden/Norway average passed that level about 10 years ago and is now 31.1%. The gap was about 1 point in the early 1990s and has widened by about 4 percentage points per decade (straight-line fit). For women the gap is 7.9 points, about 6 years. Pancreas and liver show the same pattern. NORDCAN estimates the latest period with a different method than the earlier ones, so part of the latest widening may come from that. Source: NORDCAN, fetched live by the analysis.",
+ "figure": "artifacts/fig_lung_survival_gap.png",
+ "figure_alt": "Line charts of 5-year relative survival for lung cancer in Finland, Sweden, Norway and Denmark from 1990 to 2024, for men and women, and Finland's gap to the Sweden/Norway average, which falls from about zero to minus 13 points for men.",
+ "model": "claude-opus-5-5",
+ "run_at": "2026-11-14"
+}

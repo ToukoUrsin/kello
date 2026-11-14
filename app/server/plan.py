@@ -394,6 +394,7 @@ def target_section(mat: dict) -> str:
     iv = t.get("extra_curative_patients_per_year") or {}
     now, after = t.get("curative_share_now_pct"), t.get("curative_share_after_pct")
     per = t.get("eur_per_extra_curative_patient")
+    per = round(float(per), -3) if per else per  # the effect is an estimate: thousands are all it can carry
     by_en, by_fi = (f" by {year}", f" vuoteen {year} mennessä") if year else ("", "")
     if now is not None and after is not None:
         s = f.t(f"Raise the share of lung cancer patients treated to cure from {f.pct(now)} to {f.pct(after)}{by_en}: {f.n(shown.get('extra'))} more patients a year "

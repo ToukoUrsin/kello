@@ -1,14 +1,14 @@
 import { StudyLine } from "./StudyLine";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { api, AreaDetail, AreaMeta, CarePath, Chosen, days, eurx, Intervention, KIND_LABEL, one, OptResult, period, plainMoney, range, rng1, ScoutFinding, ScoutResult, SrcRef, Stage, useAsync, VerifyResult, when } from "./lib";
+import { api, AreaDetail, AreaMeta, CarePath, Chosen, days, eurAbout, eurx, Intervention, KIND_LABEL, one, OptResult, period, plainMoney, range, rng1, ScoutFinding, ScoutResult, SrcRef, Stage, useAsync, VerifyResult, when } from "./lib";
 import { Failed, Skeleton } from "./App";
 import { SourceChip } from "./Source";
 import GapChecks from "./GapChecks";
 import { PilotAsk } from "./Pilot";
-import Pathway from "./Pathway";
+import Pathway, { DrugFinding } from "./Pathway";
 import ExpertQuote from "./ExpertQuote";
 import { Col, Dots } from "./Dots";
-import { effectWord, Finding, host, inUseWord, LiveOutcome, movesOut, Scout, Trace, useLiveRun, WebCheckResult, adviceWord, checkCount } from "./WebCheck";
+import { Finding, host, inUseWord, IN_USE_SHORT, LiveOutcome, movesOut, Scout, stepLabel, useLiveRun, WebCheckResult, adviceWord, checkCount } from "./WebCheck";
 
 /* The county page tells one story: where this county loses lung cancer patients between diagnosis and treatment
    that aims to cure, and what closes that gap. Every number on it comes from the API. */
@@ -36,6 +36,11 @@ const lower = (t: string) => (t && !/^[A-Z]{2}/.test(t) ? t[0].toLowerCase() + t
 function reading(s: Stage): { word: string; tone: "bad" | "good" | "plain" } {
   if (s.level === "collaborative_area") return { word: "Published for the university hospital area, not the county", tone: "plain" };
   if (s.id === "surgery") return { word: "Lower than Finland; the registry's age-adjusted comparison is not significant for women", tone: "plain" };
+  // No interval was published for this figure, so chance cannot be judged: say only which way it differs.
+  if (s.lo == null && s.hi == null && s.value != null && s.national != null && (!s.outside_limits || s.outside_limits === "none")) {
+    const d = s.value - s.national;
+    return { word: Math.abs(d) < 3 ? "Close to Finland" : `${d > 0 ? "Higher" : "Lower"} than Finland; no count is published, so chance cannot be judged`, tone: "plain" };
+  }
   if (!s.outside_limits || s.outside_limits === "none" || !s.side) return { word: "Not different from Finland beyond chance", tone: "plain" };
   const word = `${s.side === "below" ? "Lower" : "Higher"} than Finland, beyond chance`;
   if (s.direction === "context") return { word, tone: "plain" };
@@ -101,6 +106,14 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
 
   // The dots open on Today; the reader switches the plan on and sees the patients it moves.
   useEffect(() => { setPlanOn(false); }, [scope]);
+  // #/reset/demo opens this page on the action whose web check it put aside (see main.tsx).
+  const planReady = !!opt.data;
+  useEffect(() => {
+    if (!planReady) return;
+    let id: string | null = null;
+    try { id = sessionStorage.getItem("kello-focus"); sessionStorage.removeItem("kello-focus"); } catch { /* private window */ }
+    if (id) window.setTimeout(() => document.getElementById(id!)?.scrollIntoView({ block: "center" }), 150);
+  }, [planReady]);
 
   const meta = area.data?.area ?? areas.find((a) => a.id === scope);
   const name = isFI ? "Finland" : meta?.short_en ?? scope;
@@ -198,10 +211,9 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
           <h1>{headline}</h1>
           {headRest && <p className="phlead">{headRest}</p>}
           <p className="phsub">{isFI ? "Finland, all wellbeing services counties" : meta?.name_en ?? name}{cp?.patients_per_year ? `, ${Math.round(cp.patients_per_year).toLocaleString("en-GB")} new lung cancer patients a year.` : "."}
-            {waitLine && ttt && <> {name}'s patients do not wait longer: {one(ttt.value)} days from diagnosis to treatment in the {YTA[meta?.yta ?? ""] ?? "university hospital"} area, {one(ttt.national)} in Finland. <b>Fewer are treated to cure.</b>{" "}
-              <SourceChip short s={{ ...stageRef(ttt, `${YTA[meta?.yta ?? ""] ?? "university hospital"} area`), note: "Estimated weighted mix for the university hospital area, not a county measurement." }} /></>}
             {!cp?.stages.length && cp?.note_en && <> {cp.note_en}</>}
           </p>
+          <ExpertQuote scope={scope} />
         </div>
         <button className="btn primary lg" onClick={openPlan}>Open the plan</button>
       </div>
@@ -225,7 +237,7 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
               <ul className="dotkey">
                 {cols.some((c) => c.op != null) && <li><i className="s-op" />Operated</li>}
                 {cols.some((c) => c.op != null) && <li><i className="s-ot" />Radiotherapy or other treatment that aims to cure</li>}
-                {cols.some((c) => c.op == null) && <li><i className="s-cure" />Treated to cure (operated share not loaded)</li>}
+                {cols.some((c) => c.op == null) && <li><i className="s-cure" />Treated to cure (the split by operation is not published for every column)</li>}
                 {gain > 0 && <li><i className="s-gain" />Moved by this plan (modelled, {one(gain)} of 100)</li>}
                 <li><i className="s-no" />Not treated to cure</li>
               </ul>
@@ -246,40 +258,18 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
             </div>
           </div>
 
-          <div id="sec-why" className="anchor gapstripwrap incare"><GapChecks areaId={scope} variant="strip" /></div>
+          <div id="sec-why" className="anchor gapline incare"><GapChecks areaId={scope} variant="line" /></div>
 
-          <div className="carefoot">
-          <details className="more">
-            <summary>Stage by stage <span className="muted">{cp.stages.length} figures with intervals and sources, against Finland and the best county</span></summary>
-            <div className="srows">
-              {[...KEY_STAGES.map((id) => stages.get(id)).filter((s): s is Stage => !!s), ...cp.stages.filter((s) => !KEY_STAGES.includes(s.id))].map((s) => <StageRow own={isFI} key={s.id} s={s} where={name} flag={flags.get(s.id)} best={!isFI} />)}
-            </div>
-          </details>
-          <details className="more">
-            <summary>How to read these figures <span className="muted">what a dot is, what “beyond chance” means, what the count cannot say</span></summary>
-            <div className="prose">
-              {sur && <p>One dot is one patient in a hundred; a part-filled dot is a fraction. The operated share is the registry's age-standardised figure for {period(sur.period)}, the total is for {period(cur.period)}; the rest of the treated is the total minus the operated. Not adjusted for stage or other illness.</p>}
-              {short > 0 && mp && (
-                <p>
-                  {mp.top_quartile && mp.top_quartile.per_year > 0 && <>Compared with the best quarter of counties ({one(mp.top_quartile.reference_pct)}%) the missing patients are <b>{one(mp.top_quartile.per_year)}</b> a year{mp.top_quartile.lo != null && mp.top_quartile.hi != null ? <> ({rng1(mp.top_quartile.lo, mp.top_quartile.hi)})</> : null}. </>}
-                  The count is arithmetic on registry shares, not a causal estimate: the registry cannot say which of these patients could have been treated to cure.
-                </p>
-              )}
-              {cp.limits_note_en && <p>“Beyond chance” means outside the range that chance alone gives a county of this size around the national share (95% limits). It shows a real difference, not its cause.</p>}
-            </div>
-          </details>
-          </div>
         </section>
       )}
 
-      {!(cp && cp.stages.length > 0 && cur) && <div id="sec-why" className="anchor gapstripwrap"><GapChecks areaId={scope} variant="strip" /></div>}
+      {!(cp && cp.stages.length > 0 && cur) && <div id="sec-why" className="anchor gapline"><GapChecks areaId={scope} variant="line" /></div>}
 
-      <ExpertQuote scope={scope} />
-      <Pathway pathway={d.pathway} where={name} />
+      <Pathway pathway={d.pathway} where={name} drug={false} />
 
       <section className="panel acts" aria-label="Budget and actions" id="sec-plan">
         <header>
-          <h2>{nothing ? `What ${name} can do` : metric === "extra" ? `What closes the gap in ${name}, in order` : `What the plan buys in ${name}, in order`}</h2>
+          <h2>{nothing ? `What ${name} can do` : metric === "extra" ? (short > 0 || isFI ? `What closes the gap in ${name}, in order` : `What ${name} could still do, in order`) : `What the plan buys in ${name}, in order`}</h2>
           <div className="spacer" />
           <button className="btn sm" onClick={openMonday}>Who does what on Monday</button>
           <button className="btn sm" onClick={openPlan}>Open the plan</button>
@@ -291,18 +281,21 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
                 <b>{plainMoney(ui.strip.lead_en)}</b><span className="num">{plainMoney(ui.strip.money_en)} a year</span><span className="num">{plainMoney(ui.strip.left_en)}</span>
                 {checked && <span className="webline" key={checked}>{checked}</span>}
               </div>
-              {nothing ? <p className="lede">No measure adds to this objective in {name} at this budget. {euro(o.saturation_note_en)}</p> : (
+              {nothing && <p className="lede">No measure adds to this objective in {name} at this budget. {euro(o.saturation_note_en)}</p>}
+            </div>
+            <details className="more tune">
+              <summary>Budget, ranking and what the plan adds <span className="muted num">{eurx(budget)} a year, ranked by {(OBJECTIVES.find(([x]) => x === o.objective)?.[1] ?? "").toLowerCase()}</span></summary>
+            <div className="totals inner">
+              {!nothing && (
                 <p className="lede">
                   <b>{chosen.length} action{chosen.length === 1 ? "" : "s"}{isFI ? ` in ${ui.by_county?.length ?? 0} counties` : ""}, {eurx(t.eur)} a year</b>:{" "}
-                  {metric === "extra" ? <><b>{one(t.shown.extra)}</b> more patients a year treated to cure <span className="muted">({rng1(t.extra_curative_patients_per_year.lo, t.extra_curative_patients_per_year.hi)})</span>{t.eur_per_extra_curative_patient ? <>, {eurx(t.eur_per_extra_curative_patient)} per extra patient</> : null}.</>
-                    : <>about <b>{one(t.shown.deaths)}</b> deaths avoided a year <span className="muted">({rng1(t.deaths_avoided_per_year.lo, t.deaths_avoided_per_year.hi)}, modelled)</span>{t.eur_per_death_avoided ? <>, {eurx(t.eur_per_death_avoided)} per death avoided</> : null}.</>}
+                  {metric === "extra" ? <><b>{one(t.shown.extra)}</b> more patients a year treated to cure <span className="muted">({rng1(t.extra_curative_patients_per_year.lo, t.extra_curative_patients_per_year.hi)})</span>{t.eur_per_extra_curative_patient ? <>, {eurAbout(t.eur_per_extra_curative_patient)} per extra patient</> : null}.</>
+                    : <>about <b>{one(t.shown.deaths)}</b> deaths avoided a year <span className="muted">({rng1(t.deaths_avoided_per_year.lo, t.deaths_avoided_per_year.hi)}, modelled)</span>{t.eur_per_death_avoided ? <>, {eurAbout(t.eur_per_death_avoided)} per death avoided</> : null}.</>}
                   {" "}<SourceChip s={{ kind: "estimated", what: `What the plan adds, ${name}`, note: t.interval_en }} />
                   {metric === "extra" && <span className="lcaveat"> No trial has measured these effects; the low end of every range is zero. The ranges show what the plan adds if every assumption is at its lowest or its highest.</span>}
                 </p>
               )}
             </div>
-            <details className="more tune">
-              <summary>Budget and ranking <span className="muted num">{eurx(budget)} a year, ranked by {(OBJECTIVES.find(([x]) => x === o.objective)?.[1] ?? "").toLowerCase()}</span></summary>
             <div className="controls">
               <div>
                 <span className="lb" id="lb-obj">Rank the actions by</span>
@@ -399,10 +392,37 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
         )}
       </section>
 
-      {ui?.pilot && !isFI && <PilotAsk p={ui.pilot} chosen={chosen} name={name} openPlan={openPlan} />}
+      {ui?.pilot && !isFI && <PilotAsk p={ui.pilot} chosen={chosen} name={name} openPlan={openPlan} short />}
 
-      <section className="panel morelist" aria-label="More detail">
-      <header><h2>Behind these numbers</h2></header>
+      <details className="panel morelist behind" aria-label="More detail">
+      <summary><h2>Behind these numbers</h2><span className="muted">stage by stage, the second finding, how the plan was chosen, sources</span></summary>
+      {cp && cp.stages.length > 0 && cur && (<>
+          <details className="more">
+            <summary>Stage by stage <span className="muted">{cp.stages.length} figures with intervals and sources, against Finland and the best county</span></summary>
+            <div className="srows">
+              {[...KEY_STAGES.map((id) => stages.get(id)).filter((s): s is Stage => !!s), ...cp.stages.filter((s) => !KEY_STAGES.includes(s.id))].map((s) => <StageRow own={isFI} key={s.id} s={s} where={name} flag={flags.get(s.id)} best={!isFI} />)}
+            </div>
+          </details>
+          <details className="more">
+            <summary>How to read these figures <span className="muted">what a dot is, what “beyond chance” means, what the count cannot say</span></summary>
+            <div className="prose">
+              {sur && <p>One dot is one patient in a hundred; a part-filled dot is a fraction. The operated share is the registry's age-standardised figure for {period(sur.period)}, the total is for {period(cur.period)}; the rest of the treated is the total minus the operated. Not adjusted for stage or other illness.</p>}
+              {short > 0 && mp && (
+                <p>
+                  {mp.top_quartile && mp.top_quartile.per_year > 0 && <>Compared with the best quarter of counties ({one(mp.top_quartile.reference_pct)}%) the missing patients are <b>{one(mp.top_quartile.per_year)}</b> a year{mp.top_quartile.lo != null && mp.top_quartile.hi != null ? <> ({rng1(mp.top_quartile.lo, mp.top_quartile.hi)})</> : null}. </>}
+                  The count is arithmetic on registry shares, not a causal estimate: the registry cannot say which of these patients could have been treated to cure.
+                </p>
+              )}
+              {cp.limits_note_en && <p>“Beyond chance” means outside the range that chance alone gives a county of this size around the national share (95% limits). It shows a real difference, not its cause.</p>}
+            </div>
+          </details>
+      </>)}
+      {!isFI && d.pathway?.drug_finding && (
+        <details className="more">
+          <summary>The second finding: drug treatment <span className="muted">what is on record here against Finland, and what the plan does about it</span></summary>
+          <DrugFinding pathway={d.pathway} where={name} />
+        </details>
+      )}
       {!isFI && (
         <details className="more">
           <summary>What is {name} already doing? <span className="muted">a web search of county and hospital pages{findings.length ? `, ${findings.length} findings` : ""}</span></summary>
@@ -476,7 +496,7 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
           <ul className="gaps">{d.data_gaps.map((g) => <li key={g.what_en}><b>{g.what_en}</b><p>{g.why_it_matters_en}</p><p className="who">Who could publish it: {g.who_could_publish_en}</p></li>)}</ul>
         </details>
       )}
-      </section>
+      </details>
     </div>
   );
 }
@@ -496,128 +516,99 @@ function BudgetField({ budget, setBudget }: { budget: number; setBudget: (n: num
 interface CardProps { c: Chosen; iv?: Intervention; stage?: Stage; name: string; areaId: string; metric: "extra" | "deaths"; showExtra: boolean; showDeaths: boolean; national?: boolean;
   check?: VerifyResult; fresh: boolean; onCheck: (v: VerifyResult) => void; onDrop: () => void; findings: ScoutFinding[]; roadmap: { id: string; title_en?: string }[] }
 
-/** The study link at the end of a study line ("… · https://…"), shown on the card's last line; the sentence opens with the evidence. */
-const studyUrl = (t?: string | null) => t?.match(/(https?:\/\/\S+)\s*$/)?.[1] ?? null;
-
-/* An action scans in one look: what (title), why here (with its number), the first step, the owner, and on the right the
-   cost and the patients. The web check, the evidence and the study sentence open on demand. */
+/* An action at rest is three lines: what (title), what it costs and buys, who owns it; then the web check button and,
+   once a check exists, its one verdict chip. Everything else opens under "Details". After a live check the card shows
+   the chip and the one quote that decided it; how the check was made opens under "How we checked". */
 function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths, national, check, fresh, onCheck, onDrop, findings, roadmap }: CardProps) {
   const run = useLiveRun<VerifyResult>();
-  const [open, setOpen] = useState(false);
-  const [ev, setEv] = useState(false);
+  const [more, setMore] = useState(false);
   const k = c.kpi;
   const zero = c.group === "step_zero";
   const ex = c.extra_curative_patients_per_year, de = c.deaths_avoided_per_year;
   const unit = k?.unit === "%" ? "%" : k?.unit ? ` ${k.unit}` : "";
-  const use = check ? inUseWord(check, name) : null, eff = check ? effectWord(check) : null;
-  // A check that found part of the measure in place changes what to do first: "Ask first" sits next to the title, its reason opens below it.
+  const use = check ? inUseWord(check, name) : null;
+  const chip = check ? IN_USE_SHORT[check.in_use_here ?? ""] ?? use?.[1] ?? null : null;
+  // A check that found part of the measure in place changes what to do first; its reason opens under Details.
   const flag = check && !national && !movesOut(check) && check.plan_effect === "flag" && check.plan_effect_reason_en ? check : null;
   const rm = roadmap.find((r) => r.id === iv?.roadmap_measure);
   // The check runs as a job on the server: a dropped connection loses nothing, and pressing again joins the running check.
-  const prev = useRef<VerifyResult | undefined>();
-  const start = () => { prev.current = check; setOpen(true); run.start(() => api.verifyStart(c.intervention_id, areaId), onCheck); };
+  const start = () => run.start(() => api.verifyStart(c.intervention_id, areaId), onCheck);
   const because = zero ? c.why_first_en : stage && stage.value != null && stage.national != null && areaId !== "FI"
     ? `Because ${name}'s share for “${lower(stage.label_en)}” is ${sval(stage)} against ${sval(stage, stage.national)} in Finland.` : null;
-  const cell = (label: string, value: React.ReactNode, unit: string) => <div><dt className="sr">{label}</dt><dd>{value}<small>{unit}</small></dd></div>;
-  const gist = (v: VerifyResult) => [inUseWord(v, name)?.[1], adviceWord(v)].filter(Boolean).join(" · ") || "No answer";
-  const study = studyUrl(c.study_line_en);
-  // Why here, as one line: the sentence with the county's number. Any sentence after it opens with the evidence.
-  const whyParts = (c.why_here_en ?? "").split(/(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/);
-  const whyLead = whyParts.length > 1 && whyParts[0].length >= 40 ? whyParts[0] : c.why_here_en ?? "";
-  const whyRest = whyLead !== (c.why_here_en ?? "") ? whyParts.slice(1).join(" ") : "";
-  const askOpen = !!flag && (fresh || open);
-  const evId = `ev-${c.intervention_id}`;
+  const lastStep = [...run.steps].reverse().map(stepLabel).find(Boolean);
+  const done = check && !run.running;
+  const quote = done && check.in_use_quote ? (
+    <blockquote className="cquote">“{check.in_use_quote}”{check.in_use_source?.url ? <> <a href={check.in_use_source.url} target="_blank" rel="noreferrer">{check.in_use_source.title ?? host(check.in_use_source.url)}</a></> : null}</blockquote>
+  ) : null;
+  const how = done ? (
+    <details className="vhow chow"><summary>How we checked</summary>
+      <LiveOutcome v={check} retry={start} />
+      <WebCheckResult v={check} areaName={name} fresh={fresh} lead={false}>
+        {!national && (check.in_use_here === "yes" || movesOut(check)) && <p className="small"><b>The budget should not buy it twice.</b> <button type="button" className="btn sm" onClick={onDrop}>Re-plan without it</button></p>}
+      </WebCheckResult>
+    </details>
+  ) : null;
+  const patients = zero ? "no direct effect"
+    : metric === "deaths" || (national && !(c.shown.extra > 0)) ? (showDeaths || national ? <>{one(c.shown.deaths)} deaths avoided a year <span className="rg">({rng1(de.lo, de.hi)}, modelled)</span></> : null)
+    : (showExtra || national) && c.shown.extra > 0 ? <>{one(c.shown.extra)} more treated to cure a year <span className="rg">({+ex.hi.toFixed(1) <= +c.shown.extra.toFixed(1) ? `0 to ${one(ex.hi)} at most` : rng1(ex.lo, ex.hi)})</span></> : null;
+  const numbered = !zero && !national && c.n != null;
+  const detId = `det-${c.intervention_id}`;
   return (
-    <article className={"card" + (national ? " nat" : "") + (flag ? " flagged" : "") + (!zero && !national && c.n != null ? " numbered" : "")}>
-      {!zero && !national && c.n != null && <span className="no num" aria-hidden="true">{c.n}</span>}
+    <article id={`card-${c.intervention_id}`} data-action={c.intervention_id} className={"card card3" + (national ? " nat" : "") + (flag ? " flagged" : "") + (numbered ? " numbered" : "") + (more ? " opened" : "")}>
+      {numbered && <span className="no num" aria-hidden="true">{c.n}</span>}
       <div className="cbody">
-        <div className="ctitle">
-          <h3>{c.name_en}</h3>
-          {flag && !fresh && <button type="button" className="askpill" aria-expanded={open} onClick={() => setOpen((x) => !x)} title={`The web check of ${dayOf(flag.checked_at)} found part of this in place`}>{adviceWord(flag) ?? "Ask first"}</button>}
-        </div>
-        {fresh && check && !run.running && <LiveOutcome v={check} retry={start} />}
-        {askOpen && flag && (
-          <div className={"askfirst" + (fresh && check?.live_outcome === "replaced" ? " new" : "")}>
-            <p><b>{adviceWord(flag) ?? "Ask first"}</b> <span className="muted">(web check, {dayOf(flag.checked_at)})</span>: {flag.plan_effect_reason_en}</p>
-            {flag.in_use_quote && <blockquote>“{flag.in_use_quote}”{flag.in_use_source?.url ? <> <a href={flag.in_use_source.url} target="_blank" rel="noreferrer">{flag.in_use_source.title ?? host(flag.in_use_source.url)}</a></> : null}</blockquote>}
-          </div>
-        )}
-        <div className="cmain">
-          {whyLead && <p className="whyhere">{whyLead}</p>}
-          {c.first_step_en && <p className="cfirst"><b>{flag ? "Then, the first step." : "First step."}</b> {c.first_step_en}</p>}
-          {c.day90_en && !national && <p className="cfirst c90"><b>Done in 90 days when.</b> {c.day90_en.split(" Counted:")[0]}</p>}
-          <div className="cfoot">
-            {c.owner_en && <p className="own"><b>Owner.</b> {c.owner_en}</p>}
-            <span className="clinks">
-              <button type="button" className="linkish" aria-expanded={ev} aria-controls={evId} onClick={() => setEv((x) => !x)}>{ev ? "Hide the evidence" : "Why, and the evidence"}</button>
-              {study && <a className="studylink" href={study} target="_blank" rel="noreferrer">open the study</a>}
-            </span>
-          </div>
-        </div>
-
-        {ev && (
-          <div className="meta" id={evId}>
-            {whyRest && <div><b>Why here:</b> {c.why_here_en}</div>}
-            {c.study_line_en && <div className="studyline"><StudyLine text={c.study_line_en} label="The effect comes from:" linkLabel="open the study" /></div>}
-            {iv?.what_en && <div><b>What it is:</b> {iv.what_en}</div>}
-            {zero && because && <div><b>Why first:</b> {because}</div>}
-            {!zero && c.eur_per_extra_curative_patient != null && c.shown.extra > 0 && <div><b>Cost per extra patient treated to cure:</b> <span className="num">{eurx(c.eur_per_extra_curative_patient)}</span></div>}
-            {c.eur_per_death_avoided != null && (metric === "deaths" || national) && <div><b>Cost per death avoided:</b> <span className="num">{eurx(c.eur_per_death_avoided)}</span></div>}
-            {k && (
-              <div><b>Measure:</b> {k.label_en}: {k.baseline != null && k.target != null ? <><b className="num">{one(k.baseline)}{unit} → {one(k.target)}{unit}</b>{k.by_year ? ` by ${k.by_year}` : ""}</>
-                : <>{k.baseline_note_en ?? "not published today."} {k.target_note_en}</>}
-                {k.baseline != null && k.target != null && k.target_rule_en ? <span className="muted"> ({k.target_rule_en})</span> : null}</div>
-            )}
-            {zero && <div><b>Direct effect:</b> none; it shows how much of the gap is missing records.</div>}
-            {c.owner_en && c.owner_level && <div><b>Whose decision:</b> {c.owner_level === "collaborative_area" ? "needs the university hospital area" : c.owner_level === "national" ? "a national decision" : "the county's own"}</div>}
-            {iv?.roadmap_measure && <div><b>Roadmap measure {iv.roadmap_measure}:</b> {rm?.title_en ?? ""}</div>}
-            {iv?.prerequisite_en && <div><b>Needs first:</b> {iv.prerequisite_en}</div>}
-            {iv?.effect.basis && <div><b>The effect we assume{iv.effect.kind === "assumption" ? " (an assumption)" : ""}:</b> {iv.effect.basis}</div>}
-            {c.note_en && <div><b>How the number is built:</b> {c.note_en}</div>}
-            {(iv?.evidence ?? []).length > 0 && (
-              <div><b>Evidence</b>
-                <ul>{iv!.evidence.map((e, i) => <li key={i}>{e.claim}{e.quote ? <blockquote>“{e.quote}”</blockquote> : null}<span className="muted">{[e.design, e.year].filter(Boolean).join(", ")}{e.url ? <> · <a href={e.url} target="_blank" rel="noreferrer">{host(e.url)}</a></> : null}{e.verified === false ? " · listed, not opened by us" : ""}</span></li>)}</ul>
-              </div>
-            )}
-            {findings.length > 0 && <div className="found"><b>The web scout found, for this action</b><ul>{findings.map((f, i) => <Finding key={i} f={f} />)}</ul></div>}
-            {(iv?.null_results ?? []).length > 0 && (
-              <div><b>What speaks against it</b>
-                <ul>{iv!.null_results!.map((e, i) => <li key={i}>{e.claim}{e.url ? <span className="muted"> · <a href={e.url} target="_blank" rel="noreferrer">{host(e.url)}</a>{e.year ? `, ${e.year}` : ""}</span> : null}</li>)}</ul>
-              </div>
-            )}
-          </div>
-        )}
+        <h3>{c.name_en}</h3>
+        <p className="cfacts num"><b>{eurx(c.eur)}</b> a year{national ? ", outside this budget" : ""}{patients && <> · {patients}</>}</p>
+        {c.owner_en && <p className="cown"><span>Owner</span> {c.owner_en}</p>}
       </div>
-      <div className="cside">
-        <dl className="facts num">
-          {cell("Cost a year", eurx(c.eur), national ? "a year, outside this budget" : "a year")}
-          {zero ? cell("Direct effect", "None", "direct effect") : (
-            <>
-              {(showExtra || (national && c.shown.extra > 0)) && c.shown.extra > 0 && cell("More patients treated to cure a year", <>{one(c.shown.extra)} <span className="rg" title={+ex.hi.toFixed(1) <= +c.shown.extra.toFixed(1) ? "The upper end is capped by the patients left to reach in this county" : undefined}>({+ex.hi.toFixed(1) <= +c.shown.extra.toFixed(1) ? `0 to ${one(ex.hi)} at most` : rng1(ex.lo, ex.hi)})</span></>, "more treated to cure a year")}
-              {(metric === "deaths" || national) && (showDeaths || national) && cell("Deaths avoided a year (modelled)", <>{one(c.shown.deaths)} <span className="rg">({rng1(de.lo, de.hi)})</span></>, "deaths avoided a year, modelled")}
-            </>
-          )}
-        </dl>
-        <div className="verifyrow">
-          {!national && <label className="inplan"><input type="checkbox" checked onChange={onDrop} /> In the plan</label>}
-          <button className="btn sm" onClick={start} disabled={run.running} title="An agent searches and reads county and hospital pages through the Oxylabs Web API: is this already in place here, and does the evidence hold?">Check on the web</button>
-          {check && !run.running && (
-            <button type="button" className="vbadge" onClick={() => setOpen((x) => !x)} aria-expanded={open || fresh}>
-              {use && <span className={`inuse ${use[0]}`}>{use[1]}</span>}
-              {eff && <span className={`verdict ${eff[0]}`}>assumed effect: {eff[1]}</span>}
-              <span className="muted num">checked {dayOf(check.checked_at)}{fresh ? "" : open ? " · hide" : " · show"}</span>
-            </button>
-          )}
-          {!check && !run.running && <span className="muted">Is it already in place in {name}, and does the evidence hold?</span>}
-        </div>
+      <div className="crow">
+        <button className="btn sm" onClick={start} disabled={run.running} title={`Is it already in place in ${name}? An agent searches and reads county and hospital pages through the Oxylabs Web API.`}>Check on the web</button>
+        {run.running ? <span className="cprog" role="status"><i className="spin" aria-hidden="true" />{run.waiting ? "Waiting for the connection" : lastStep ?? "Starting the check"}…</span>
+          : chip && use && <span className={`inuse ${use[0]}`}>{chip}</span>}
       </div>
-      {run.running && <div className="livebox"><b>Checking now, through the Oxylabs Web API: is it in place in {name}, and does the evidence hold?</b>{prev.current && <p className="small muted">Stored answer from {dayOf(prev.current.checked_at)}: {gist(prev.current)}. This run replaces it only if it finds at least as much evidence.</p>}{run.waiting && <p className="small muted">Waiting for the connection. The check goes on on the server; the steps catch up when the page reconnects.</p>}<Trace steps={run.steps} live /></div>}
+      <button type="button" className="linkish cmore" aria-expanded={more} aria-controls={detId} onClick={() => setMore((x) => !x)}>{more ? "Less" : "Details"}</button>
       {run.error && <p className="readerr">{run.error}{check ? ` The stored check of ${dayOf(check.checked_at)} stays.` : ""} <button className="btn sm" onClick={start}>Try again</button></p>}
-      {check && !run.running && (open || fresh || !!run.error) && (
-        <WebCheckResult v={check} areaName={name} fresh={fresh} lead={!flag}>
-          {!national && (check.in_use_here === "yes" || movesOut(check)) && <p className="small"><b>The budget should not buy it twice.</b> <button type="button" className="btn sm" onClick={onDrop}>Re-plan without it</button></p>}
-          {!check.plan_effect && check.in_use_here === "partly" && <p className="small"><b>Part of this exists already.</b> The money stays in the plan; start from what is there.</p>}
-        </WebCheckResult>
+      {done && fresh && <div className="cafter" role="status">{(check.live_outcome === "failed" || check.live_outcome === "kept") && <span className="cstored">{check.live_outcome === "kept" ? "The live run found no more" : check.live_slow_s ? `The live run is still reading after ${check.live_slow_s} s` : "The live run did not finish"}; this is the stored answer of {dayOf(check.checked_at)}.</span>}{quote}{flag && <p className="cplan"><b>The plan changes: {(adviceWord(flag) ?? "ask first").toLowerCase()}.</b> {plainWords(flag.plan_effect_reason_en)}</p>}{how}</div>}
+      {more && (
+        <div className="cdetail" id={detId}>
+          {flag && <p className="askfirst"><b>{adviceWord(flag) ?? "Ask first"}.</b> {plainWords(flag.plan_effect_reason_en)}</p>}
+          {c.why_here_en && <p><b>Why here.</b> {c.why_here_en}</p>}
+          {zero && because && <p><b>Why first.</b> {because}</p>}
+          {c.first_step_en && <p><b>{flag ? "Then, the first step." : "First step."}</b> {c.first_step_en}</p>}
+          {c.day90_en && !national && <p><b>Done in 90 days when.</b> {c.day90_en.split(" Counted:")[0]}</p>}
+          {c.study_line_en && <div className="studyline"><StudyLine text={c.study_line_en} label="The evidence:" linkLabel="open the study" /></div>}
+          {done && !fresh && (quote || how) && <div className="cweb"><b>Web check, {dayOf(check.checked_at)}.</b>{quote}{how}</div>}
+          {!national && <label className="inplan"><input type="checkbox" checked onChange={onDrop} /> In the plan</label>}
+          <details className="vhow"><summary>More on the evidence and the numbers</summary>
+            <div className="meta">
+              {iv?.what_en && <div><b>What it is:</b> {iv.what_en}</div>}
+              {!zero && c.eur_per_extra_curative_patient != null && c.shown.extra > 0 && <div><b>Cost per extra patient treated to cure:</b> <span className="num">{eurAbout(c.eur_per_extra_curative_patient)}</span></div>}
+              {c.eur_per_death_avoided != null && (metric === "deaths" || national) && <div><b>Cost per death avoided:</b> <span className="num">{eurAbout(c.eur_per_death_avoided)}</span></div>}
+              {k && (
+                <div><b>Measure:</b> {k.label_en}: {k.baseline != null && k.target != null ? <><b className="num">{one(k.baseline)}{unit} → {one(k.target)}{unit}</b>{k.by_year ? ` by ${k.by_year}` : ""}</>
+                  : <>{k.baseline_note_en ?? "not published today."} {k.target_note_en}</>}
+                  {k.baseline != null && k.target != null && k.target_rule_en ? <span className="muted"> ({k.target_rule_en})</span> : null}</div>
+              )}
+              {zero && <div><b>Direct effect:</b> none; it shows how much of the gap is missing records.</div>}
+              {c.owner_en && c.owner_level && <div><b>Whose decision:</b> {c.owner_level === "collaborative_area" ? "needs the university hospital area" : c.owner_level === "national" ? "a national decision" : "the county's own"}</div>}
+              {iv?.roadmap_measure && <div><b>Roadmap measure {iv.roadmap_measure}:</b> {rm?.title_en ?? ""}</div>}
+              {iv?.prerequisite_en && <div><b>Needs first:</b> {iv.prerequisite_en}</div>}
+              {iv?.effect.basis && <div><b>The effect we assume{iv.effect.kind === "assumption" ? " (an assumption)" : ""}:</b> {iv.effect.basis}</div>}
+              {c.note_en && <div><b>How the number is built:</b> {c.note_en}</div>}
+              {(iv?.evidence ?? []).length > 0 && (
+                <div><b>Evidence</b>
+                  <ul>{iv!.evidence.map((e, i) => <li key={i}>{e.claim}{e.quote ? <blockquote>“{e.quote}”</blockquote> : null}<span className="muted">{[e.design, e.year].filter(Boolean).join(", ")}{e.url ? <> · <a href={e.url} target="_blank" rel="noreferrer">{host(e.url)}</a></> : null}{e.verified === false ? " · listed, not opened by us" : ""}</span></li>)}</ul>
+                </div>
+              )}
+              {findings.length > 0 && <div className="found"><b>The web scout found, for this action</b><ul>{findings.map((f, i) => <Finding key={i} f={f} />)}</ul></div>}
+              {(iv?.null_results ?? []).length > 0 && (
+                <div><b>What speaks against it</b>
+                  <ul>{iv!.null_results!.map((e, i) => <li key={i}>{e.claim}{e.url ? <span className="muted"> · <a href={e.url} target="_blank" rel="noreferrer">{host(e.url)}</a>{e.year ? `, ${e.year}` : ""}</span> : null}</li>)}</ul>
+                </div>
+              )}
+            </div>
+          </details>
+        </div>
       )}
     </article>
   );

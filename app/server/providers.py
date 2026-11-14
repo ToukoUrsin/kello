@@ -234,7 +234,7 @@ def _pathway_for(area_id: str, cp: dict | None) -> dict:
     if t1 is None or tn is None:
         wait_v, wait_a = "cannot_tell", "Days from diagnosis to treatment are not published by county."
     elif float(t1) <= float(tn) + 1:
-        wait_v, wait_a = "not_behind", f"Treatment starts {float(t1):.0f} days after diagnosis in this university hospital area, {float(tn):.0f} in Finland. Patients here do not wait longer."
+        wait_v, wait_a = "not_behind", f"Treatment starts {float(t1):.0f} days after diagnosis in this university hospital area, {float(tn):.0f} in Finland (all treatments together, estimated). No sign that patients here wait longer."
     elif float(t1) <= float(tn) + 5:
         wait_v, wait_a = "possibly_here", f"Treatment starts {float(t1):.0f} days after diagnosis in this university hospital area, {float(tn):.0f} in Finland: slightly longer."
     else:
@@ -266,9 +266,21 @@ def _pathway_for(area_id: str, cp: dict | None) -> dict:
                        + (f"One-year survival ({float(a1):.1f}% against {float(n1):.1f}%) " if a1 is not None and n1 is not None else "")
                        + (f"and the operated share ({float(s1):.1f}% against {float(sn):.1f}%) " if s1 is not None and sn is not None else "")
                        + "are signals, not proof. The 50-chart audit records each patient's stage and answers it.")
+    # What the plan does about the drug finding: the audit counts biomarker tests, and the next action is named with its owner and cost.
+    drug_next = None
+    rx = next((i for i in (_read(DATA / "evidence/interventions.json") or []) if isinstance(i, dict) and i.get("id") == "reflex_molecular"), None)
+    if rx:
+        cost = rx.get("cost") or {}
+        money = (f" About €{int(cost['eur_setup']):,} to set up and €{int(cost['eur_per_year']):,} per new patient a year (planning assumption)."
+                 if cost.get("eur_setup") and cost.get("eur_per_year") else "")
+        drug_next = ("The 50-chart audit records whether each patient had a biomarker test and where drug treatment was given. "
+                     "If tests are late or missing, the next action is ready: pathology orders the biomarker panel (EGFR, ALK, PD-L1) for every new "
+                     f"lung cancer the day it is diagnosed. Owner: {(rx.get('owner_en') or 'chief pathologist').lower()}.{money} "
+                     "It is outside the costed plan because the model counts only surgery and radiotherapy that aim to cure.")
     return {"area_en": name, "area_fi": cp.get("area_fi"), "period": cp.get("period"), "steps": steps,
             "drug_finding": {"drug": stage_fig("drug_therapy", "Drug therapy on record"),
-                             "life_prolonging": stage_fig("life_prolonging", "Life-prolonging treatment on record")},
+                             "life_prolonging": stage_fig("life_prolonging", "Life-prolonging treatment on record"),
+                             "next_en": drug_next},
             "distance_en": (cp.get("expected") or {}).get("distance_en"),
             "stage_bound_en": stage_bound}
 
@@ -1015,19 +1027,138 @@ def _why_here(area_id: str, row: dict, path: dict | None) -> str | None:
     return None
 
 
+_STUDY_FI = {
+    "cpp_pathway": "Tanska: oireisten, perusterveydenhuollon kautta todettujen syöpäpotilaiden kolmen vuoden suhteellinen elossaolo nousi 45 %:sta 54 %:iin, kun syöpäpotilaan hoitopolut otettiin käyttöön.",
+    "same_day_cxr_ct": "Perusterveydenhuollon keuhkokuvien välitön lausunto puolitti ajan keuhkosyövän diagnoosiin.",
+    "gp_direct_ct": "Tanskalainen ryvässatunnaistettu tutkimus: suora pääsy TT-kuvaukseen lyhensi diagnoosiaikaa 8 päivää (ei tilastollisesti merkitsevä) eikä muuttanut levinneisyysjakaumaa.",
+    "ai_cxr_triage_alone": "Satunnaistettu tutkimus, 93 326 keuhkokuvaa: tekoälyn tekemä kiireellisyysjärjestys ei muuttanut aikaa TT-kuvaukseen eikä diagnoosiin.",
+    "ebus_capacity": "Satunnaistettu tutkimus: EBUS ensimmäisenä tutkimuksena puolitti ajan hoitopäätökseen.",
+    "reflex_molecular": "Leikattu EGFR-mutaatiopositiivinen keuhkosyöpä: 24 kuukauden kohdalla elossa ja taudittomana 89 % (liitännäishoitona osimertinibi) ja 52 % (lume), joten EGFR-tulos tarvitaan leikkauksen jälkeen.",
+    "liquid_biopsy_first": "Verinäytteestä ensin tehty genotyypitys liittyi 23 päivää lyhyempään aikaan hoidon alkuun.",
+    "nurse_navigator": "Kartoittava katsaus, 13 tutkimusta: nimetty hoitaja lyhensi odotusta diagnoosista hoitoon.",
+    "ldct_screening": "Yhdeksän satunnaistetun tutkimuksen meta-analyysi: 16 % pienempi keuhkosyöpäkuolleisuus matala-annos-TT-seulonnalla.",
+    "symptom_campaign": "Englannin kansallinen keuhkosyöpäkampanja: I-asteen osuus +3,1 prosenttiyksikköä.",
+    "nssc_rapid_dx_centre": "Tanskalainen diagnostinen keskus: 8 %:lla epämääräisten oireiden vuoksi lähetetyistä todettiin syöpä.",
+    "gp_capacity_econsult": "Vastaanottoaikaa odotetaan Suomessa 14 päivää, muissa Pohjoismaissa 2–7 päivää.",
+    "video_mdt_stage1_3": "Etäkokous, jossa thoraxkirurgi osallistui aluesairaalan hoitokokoukseen videolla: leikkausten osuus nousi 30 % (suhteellinen muutos).",
+    "surgeon_second_opinion": "Yksiköissä, joissa kirurgi osallistui yli kahteen kolmasosaan keuhkosyövän hoitokokouksista, leikattiin 14,4 % potilaista, muissa 12,0 %.",
+    "sbrt_pathway": "Alankomaat, iäkkäät I-asteen potilaat: hoitamatta jääneiden osuus pieneni 7 prosenttiyksikköä, kun stereotaktinen sädehoito tuli saataville; leikkausten osuus ei muuttunut.",
+    "prehab_fitness_assessment": "Suomessa puolet mahdollisesti leikattavissa olevista potilaista jää leikkaamatta, usein keuhkojen tai sydämen toiminnan vuoksi.",
+    "travel_accommodation_support": "Englanti: mitä pidempi matka-aika, sitä pienempi leikkauksen todennäköisyys; ensimmäinen vertailu 0,88 (95 %:n luottamusväli 0,70–1,11), ei tilastollisesti merkitsevä.",
+    "recording_audit": "Syöpärekisteri toteaa itse, että osa alueiden välisistä eroista johtuu kirjaamiskäytännöistä.",
+    "smoking_cessation_at_diagnosis": "Tupakoinnin lopettaminen diagnoosin jälkeen: 33 % pienempi kokonaiskuolleisuus varhaisvaiheen keuhkosyövässä.",
+}
+
+
+def _study_line_fi(iv: dict) -> str | None:
+    ev = next((e for e in iv.get("evidence") or [] if isinstance(e, dict) and e.get("url")), None)
+    claim = _STUDY_FI.get(str(iv.get("id")))
+    if not ev or not claim:
+        return None
+    year = ev.get("year")
+    return f"Evidence: {claim}{f' ({year})' if year else ''} · {ev.get('url')}"
+
+
+def _why_here_fi(area_id: str, row: dict, path: dict | None) -> str | None:
+    """`_why_here` in Finnish: the same sentence, the same numbers."""
+    if not path:
+        return None
+    stages = {s.get("id"): s for s in path.get("stages") or []}
+    ident = row.get("intervention_id")
+    exp = path.get("expected") or {}
+    km = exp.get("km_to_university_hospital")
+    km_txt = f"{round(float(km))} km" if km else None
+    by_mod = {m.get("id"): m.get("per_year") for m in ((path.get("missing_patients") or {}).get("by_modality") or [])}
+
+    def pair(stage_id):
+        s = stages.get(stage_id) or {}
+        v, n = s.get("value"), s.get("national")
+        return (v, n) if v is not None and n is not None else (None, None)
+
+    f = _fi_num
+    if area_id == "FI":
+        below_n = int((path.get("missing_patients") or {}).get("counties_below_limits") or 0)
+        if ident == "recording_audit":
+            v, _ = pair("no_record")
+            if v is not None:
+                return f"{f(v)} %:lla Suomen potilaista ei ole hoitokirjausta. Ennen kuin kertomukset on tarkistettu kauimpana jäljessä olevilla alueilla, kukaan ei tiedä, kuinka suuri osa erosta on hoitoa."
+        if ident == "surgeon_second_opinion":
+            v, _ = pair("surgery")
+            if v is not None:
+                return f"Koko Suomessa leikataan {f(v)} potilasta sadasta. Arvio aloitetaan alueilta, joilla leikataan vähemmän."
+        if ident == "sbrt_pathway":
+            v, _ = pair("radiotherapy")
+            if v is not None:
+                return f"Koko Suomessa sädehoitoa saa {f(v)} potilasta sadasta. Lähettämisen sääntö aloitetaan alueilta, joilla sitä annetaan vähemmän."
+        if ident == "reflex_molecular":
+            return "Aikaa näytteestä biomarkkeritulokseen ei julkaista alueittain. Alueet aloittaisivat laskemalla sen."
+        if ident in ("same_day_cxr_ct", "gp_direct_ct"):
+            return "Aikaa lähetteestä TT-kuvaukseen keuhkosyöpäepäilyssä ei julkaista alueittain. Alueet aloittaisivat laskemalla sen."
+        v, _ = pair("curative")
+        if v is None:
+            return None
+        start = f"{below_n} aluetta jää tästä enemmän kuin sattuma selittää, ja työ aloitetaan niistä" if below_n else "työ aloitetaan alueilta, jotka jäävät tästä"
+        return f"Suomessa {f(v)} potilasta sadasta saa parantavaan pyrkivää hoitoa; {start}."
+
+    if ident == "recording_audit":
+        v, n = pair("no_record")
+        if v is not None:
+            return f"{f(v)} %:lla alueen potilaista ei ole hoitokirjausta, koko Suomessa {f(n)} %:lla. Ennen kuin nämä kertomukset on tarkistettu, kukaan ei tiedä, kuinka suuri osa erosta on hoitoa."
+    if ident == "surgeon_second_opinion":
+        v, n = pair("surgery")
+        if v is not None:
+            per = by_mod.get("surgery")
+            tail = f" Se on noin {per:.0f} potilasta vuodessa." if per and per >= 0.5 and v < n else ""
+            return f"Täällä leikataan {f(v)} potilasta sadasta, koko Suomessa {f(n)}.{tail}"
+    if ident == "sbrt_pathway":
+        v, n = pair("radiotherapy")
+        if v is not None:
+            return f"Täällä sädehoitoa saa {f(v)} potilasta sadasta, koko Suomessa {f(n)}. Potilas, jota ei voida leikata, voidaan silti parantaa näin, jos joku lähettää hänet."
+    if ident == "video_mdt_stage1_3" and km_txt:
+        return f"Leikkauksesta ja sädehoidosta päättävät erikoislääkärit ovat {km_txt}:n päässä. Kiinteä viikoittainen aika tuo jokaisen alueen potilaan heidän eteensä."
+    if ident == "travel_accommodation_support" and km_txt:
+        return f"Alueen asukkaat asuvat keskimäärin noin {km_txt}:n päässä yliopistosairaalasta, ja parantava sädehoito tarkoittaa viikkojen käyntejä siellä."
+    if ident == "prehab_fitness_assessment":
+        if exp.get("observed_pct") is not None and exp.get("expected_pct") is not None and exp["observed_pct"] < exp["expected_pct"]:
+            return (f"Täällä parantavaan pyrkivää hoitoa saa {f(exp['observed_pct'])} %; alueen ikärakenne ennustaa {f(exp['expected_pct'])} %. "
+                    "Rasituskoe varmistaa, että ”liian huonokuntoinen” on mitattu eikä oletettu.")
+    if ident == "reflex_molecular":
+        return "Aikaa näytteestä biomarkkeritulokseen ei julkaista alueittain. Alue aloittaisi laskemalla sen."
+    if ident in ("same_day_cxr_ct", "gp_direct_ct"):
+        return "Aikaa lähetteestä TT-kuvaukseen keuhkosyöpäepäilyssä ei julkaista alueittain. Alue aloittaisi laskemalla sen."
+    v, n = pair("curative")
+    if v is not None and float(v) >= float(n):
+        return f"Alueella parantavaan pyrkivää hoitoa saa jo useampi kuin koko Suomessa ({f(v)} ja {f(n)} sadasta), joten tämä toimi ei koske eron kaventamista."
+    if v is not None:
+        return f"Alueella {f(v)} potilasta sadasta saa parantavaan pyrkivää hoitoa, koko Suomessa {f(n)}."
+    return None
+
+
+def _stage_iv_share() -> float:
+    """Finland's measured share of lung cancers found at stage IV (no county figure is published)."""
+    v = (((_read(DATA / "evidence/parameters.json") or {}).get("finland_lung_facts") or {}).get("stage_iv_share_pct") or {}).get("value")
+    return float(v) / 100 if v else 0.59
+
+
+def _no_spread_not_operated(patients: float, surgery_pct) -> float:
+    """Of `patients`, those whose cancer has not spread to other organs and who are not operated: the decisions a chest
+    surgeon would review. Uses Finland's stage IV share, because stage is not published by county."""
+    return max(0.0, patients * (1 - _stage_iv_share()) - patients * float(surgery_pct or 0) / 100)
+
+
 def _day90(area_id: str, row: dict, path: dict | None) -> tuple[str, str]:
     """What 'done' looks like 90 days after the first step, and what the county counts. Work done, never a promised effect."""
     ident = row.get("intervention_id")
     patients = float((path or {}).get("patients_per_year") or 0)
     surg = _stage(path or {}, "surgery").get("value")
-    n90 = round(patients / 4 * (1 - float(surg) / 100)) if patients and surg is not None else None
-    about = f": about {n90} decisions in 90 days" if n90 else ""
-    about_fi = f": noin {n90} päätöstä 90 päivässä" if n90 else ""
+    n90 = round(_no_spread_not_operated(patients / 4, surg)) if patients and surg is not None else None
+    about = f": about {n90} in 90 days, if the county's stage mix is Finland's" if n90 else ""
+    about_fi = f": noin {n90} päätöstä 90 päivässä, jos alueen levinneisyysjakauma on koko maan" if n90 else ""
     table = {
         "recording_audit": ("All 50 charts are checked, and one page says how many of these patients were treated after all.",
                             "Kaikki 50 potilaskertomusta on tarkistettu, ja yhdellä sivulla kerrotaan, kuinka moni näistä potilaista oli sittenkin hoidettu."),
-        "surgeon_second_opinion": (f"Every decision not to operate has a chest surgeon's written opinion{about}. Counted: decisions reviewed, decisions changed.",
-                                   f"Jokaisesta päätöksestä jättää leikkaamatta on thoraxkirurgin kirjallinen arvio{about_fi}. Lasketaan: arvioidut päätökset, muuttuneet päätökset."),
+        "surgeon_second_opinion": (f"Every decision not to operate on a patient whose cancer has not spread to other organs has a chest surgeon's written opinion{about}. Counted: decisions reviewed, decisions changed.",
+                                   f"Jokaisesta päätöksestä jättää leikkaamatta potilas, jonka syöpä ei ole lähettänyt etäpesäkkeitä, on thoraxkirurgin kirjallinen arvio{about_fi}. Lasketaan: arvioidut päätökset, muuttuneet päätökset."),
         "sbrt_pathway": ("The referral rule is signed and in use: every patient not accepted for surgery is referred for precise radiotherapy within a week. Counted: referrals made, referrals missed.",
                          "Lähettämisen sääntö on hyväksytty ja käytössä: jokainen potilas, jota ei hyväksytä leikkaukseen, lähetetään täsmäsädehoidon arvioon viikon kuluessa. Lasketaan: tehdyt ja tekemättä jääneet lähetteet."),
         "video_mdt_stage1_3": ("The weekly slot has run 12 times, and every stage I–III patient diagnosed in those weeks was discussed before the treatment decision. Counted: patients discussed out of patients diagnosed.",
@@ -1111,7 +1242,9 @@ def _pilot_for_ui(scope: str, path: dict | None, rows: list[dict]) -> dict | Non
                    "question_fi": "Kysytään yliopistosairaalalta, onko tämä käytäntö jo käytössä."} for aid in ids]
     comparison_line_en = f"Vantaa and Kerava is the comparison because it has Finland's highest recorded curative share ({float(_stage(comp or {}, 'curative').get('value') or 0):.1f}%): a reachable level, not a causal control."
     comparison_line_fi = f"Vantaa ja Kerava on vertailu, koska siellä kirjattu parantavan hoidon osuus on Suomen korkein ({_fi_num(_stage(comp or {}, 'curative').get('value') or 0)} %): tavoiteltava taso, ei kausaalinen verrokki."
-    reviewed = 64 if scope == "21" else round(no_surgery_6m)
+    # The surgeon reviews patients without distant spread, not every non-operated patient (most of those have stage IV disease).
+    reviewed = round(_no_spread_not_operated(patients / 2, surgery.get("value")))
+    not_operated = round(no_surgery_6m)
     return {
         "months": 6, "actions": ids,
         "ask_first": checks,
@@ -1136,7 +1269,9 @@ def _pilot_for_ui(scope: str, path: dict | None, rows: list[dict]) -> dict | Non
                     "Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio."),
         "six_months": {
             "patients_seen": {"expected": round(patients / 2, 1), "baseline": round(patients / 2, 1), "comparison": round(comp_patients / 2, 1), "unit": "patients"},
-            "no_surgery_decisions_reviewed": {"expected": reviewed, "baseline": 0, "comparison": round(max(0.0, comp_patients * (1 - float(comp_s.get("value") or 0) / 100) / 2), 1), "unit": "decisions"},
+            "no_surgery_decisions_reviewed": {"expected": reviewed, "baseline": 0, "comparison": round(_no_spread_not_operated(comp_patients / 2, comp_s.get("value")), 1), "unit": "decisions",
+                                              "not_operated": not_operated, "stage_iv_share_pct": round(_stage_iv_share() * 100),
+                                              "basis_en": f"{not_operated} patients are not operated in six months. Stage is not published by county; with Finland's stage mix ({round(_stage_iv_share() * 100)}% found at stage IV) about {reviewed} of them have cancer that has not spread to other organs. Those are the decisions reviewed. The chart audit gives the county's own number."},
             "decisions_changed": {"expected": round(extra_iv.get("surgeon_second_opinion", 0) / 2, 1), "baseline": 0, "comparison": None, "unit": "decisions"},
             "referrals_made": {"expected": round(extra_iv.get("sbrt_pathway", 0) / 2, 1), "baseline": 0, "comparison": None, "unit": "referrals"},
             "comparison_area_id": comp_id, "comparison_area_en": (comp or {}).get("area_en") if comp else None,
@@ -1156,12 +1291,21 @@ def _shape_for_ui(res: dict, scope: str, budget_eur: float) -> dict:
     Nothing here adds a number the model did not give; only the last decimal of a row can move.
     """
     rows = [c for c in res.get("chosen") or [] if isinstance(c, dict)]
+    # Biomarker testing does not "shorten the pathway" only: its result decides the drug. Say where it belongs instead.
+    for n in res.get("not_chosen") or []:
+        if isinstance(n, dict) and n.get("intervention_id") == "reflex_molecular" and n.get("reason_code") == "no_effect" \
+                and "treated to cure" in str(n.get("reason_en") or ""):
+            n["reason_en"] = ("Not counted in this plan: the model counts only who is operated or given radiotherapy that aims to cure. "
+                              "The biomarker result decides the drug that follows, so this belongs to the second finding, drug treatment. "
+                              "The chart audit counts the tests first.")
     cp = ((_read(DATA / "model/care_path.json") or {}).get("paths") or {}).get(scope)
     iv_by_id = {i.get("id"): i for i in (_read(DATA / "evidence/interventions.json") or []) if isinstance(i, dict)}
     for c in rows:
         iv = iv_by_id.get(c.get("intervention_id"), {})
         c.setdefault("study_line_en", _study_line(iv))
         c.setdefault("why_here_en", _why_here(scope, c, cp))
+        c.setdefault("study_line_fi", _study_line_fi(iv))
+        c.setdefault("why_here_fi", _why_here_fi(scope, c, cp))
         if "day90_en" not in c:
             c["day90_en"], c["day90_fi"] = _day90(scope, c, cp)
     totals = res.get("totals") if isinstance(res.get("totals"), dict) else None

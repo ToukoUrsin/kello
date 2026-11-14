@@ -4,7 +4,9 @@ from pathlib import Path
 from integrations import gemini_reader as g
 
 ROOT = Path(__file__).resolve().parents[3]
-RAW = ROOT / "data/raw/gemini"
+# build_extracted.py [raw folder] [output file]: the defaults are the shipped ones (see build_raw_reads.py)
+RAW = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data/raw/gemini"
+OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "data/processed/gemini_extracted.jsonl"
 A = "https://syoparekisteri.fi/assets/themes/ssy3/factsheets/keuhkosyoparaportti.html"
 B = "https://syoparekisteri.fi/assets/files/2024/12/Keuhkosyopa_Suomessa.pdf"
 C = "https://tilastot.syoparekisteri.fi/syovat/"
@@ -45,11 +47,12 @@ for tag, url, lang, names in SRC:
                         if word in t:
                             row["indicator"] = "lung_days_diagnosis_to_" + suf
                             break
+                row["period"] = re.sub(r"\s*[–—]\s*", "-", str(row["period"] or ""))  # one spelling of a range, whichever dash the report used
                 row["sex"] = sex(row)
                 row["source"] = tag
                 rows.append(row); n_rows += 1
     stats[tag] = (n_vals, n_rows)
-out = ROOT / "data/processed/gemini_extracted.jsonl"
+out = OUT
 out.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
 print("rows", len(rows), stats)
 county = lambda a: a.isdigit()

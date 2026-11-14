@@ -13,7 +13,7 @@ const load = (scope: string): Form => { try { return { ...EMPTY, ...JSON.parse(l
 
 function Pick({ value, set, label }: { value: Ans; set: (a: Ans) => void; label: string }) {
   const opts: [Ans, string][] = [["yes", "Yes"], ["partly", "Partly"], ["no", "No"]];
-  return <div className="seg" role="group" aria-label={label}>{opts.map(([v, l]) => <button key={v} type="button" aria-pressed={value === v} onClick={() => set(value === v ? "" : v)}>{l}</button>)}</div>;
+  return <div className="seg rpick" role="group" aria-label={label}>{opts.map(([v, l]) => <button key={v} type="button" aria-pressed={value === v} onClick={() => set(value === v ? "" : v)}>{l}</button>)}</div>;
 }
 
 export default function Review({ scope, areas, openPlan, openMonday }: { scope: string; areas: AreaMeta[]; openPlan: () => void; openMonday: () => void }) {
@@ -23,9 +23,9 @@ export default function Review({ scope, areas, openPlan, openMonday }: { scope: 
   const [copied, setCopied] = useState(false);
   useEffect(() => { try { localStorage.setItem(key(scope), JSON.stringify(f)); } catch { /* private window: the form still works */ } }, [f, scope]);
   const up = (p: Partial<Form>) => setF((x) => ({ ...x, ...p }));
-  if (scope === "FI") return <div className="review"><p className="muted">Pick a county in the menu above: this page is about one county's plan.</p></div>;
-  if ((area.loading && !area.data) || (opt.loading && !opt.data)) return <div className="review"><Skeleton rows={[60, 120, 240]} /></div>;
-  if (!area.data || !opt.data) return <div className="review"><Failed message={area.error ?? opt.error ?? "This county could not be loaded."} retry={() => { area.reload(); opt.reload(); }} /></div>;
+  if (scope === "FI") return <div className="reviewpage"><p className="muted">Pick a county in the menu above: this page is about one county's plan.</p></div>;
+  if ((area.loading && !area.data) || (opt.loading && !opt.data)) return <div className="reviewpage"><Skeleton rows={[60, 120, 240]} /></div>;
+  if (!area.data || !opt.data) return <div className="reviewpage"><Failed message={area.error ?? opt.error ?? "This county could not be loaded."} retry={() => { area.reload(); opt.reload(); }} /></div>;
   const name = areas.find((a) => a.id === scope)?.short_en ?? opt.data.scope_en ?? scope;
   const steps = area.data.pathway?.steps ?? [];
   const cur = area.data.care_path?.stages?.find((s) => s.id === "curative");
@@ -51,12 +51,12 @@ export default function Review({ scope, areas, openPlan, openMonday }: { scope: 
     setCopied(true); setTimeout(() => setCopied(false), 2500);
   };
   return (
-    <div className="review">
+    <div className="reviewpage">
       <section className="rclaim" aria-label="The claim">
-        <span className="eyebrow">For a clinician's eye · {name} · public registry data 2019–2023</span>
         {cur?.value != null && cur.national != null
           ? <h1>Of 100 lung cancer patients in {name}, <b className="num">{one(cur.value)}</b> get treatment that aims to cure. In Finland, <b className="num">{one(cur.national)}</b>.{miss ? <> That is about <b className="num">{Math.round(miss)}</b> patients a year.</> : null}</h1>
           : <h1>{name}: lung cancer patients treated to cure</h1>}
+        <p className="rmeta">For a clinician's eye · {name} · public registry data 2019–2023</p>
         {steps.length > 0 && <>
           <h2>Where on the care path</h2>
           <ol className="rsteps">{steps.map((s) => <li key={s.id} className={s.verdict ?? ""}><span>{s.label_en}</span><b>{s.verdict_en}</b></li>)}</ol>
