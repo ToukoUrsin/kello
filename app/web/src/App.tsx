@@ -13,6 +13,9 @@ export type Lang = "en" | "fi";
 /** Everything a link has to carry: #/plan/21?budget=1000000&lang=fi&objective=curative&without=sbrt_pathway */
 interface Route { view: View; scope: string; budget: number; lang: Lang; objective: string | null; without: string[]; from?: "FI" | null }
 const DEFAULT_BUDGET = 1_000_000;
+/** Finland as a whole opens on the national plan the map and the Run show: the gap objective under a €5M ceiling. */
+const NATIONAL_BUDGET = 5_000_000;
+const budgetFor = (scope: string) => (scope === "FI" ? NATIONAL_BUDGET : DEFAULT_BUDGET);
 const OBJECTIVES = ["curative", "deaths", "gap"];
 
 function parseHash(): Route {
@@ -20,19 +23,20 @@ function parseHash(): Route {
   const [v, s] = path.split("/");
   const q = new URLSearchParams(query);
   const b = q.get("budget") == null || q.get("budget") === "" ? NaN : Number(q.get("budget"));
+  const scope = s || (v === "run" || !v ? "21" : "FI");
   return {
     // The first screen is the Run for Lapland; the map of every county is one tab away.
-    view: v === "county" || v === "plan" || v === "monday" || v === "review" || v === "run" ? v : v ? "map" : "run", scope: s || (v === "run" || !v ? "21" : "FI"),
-    budget: Number.isFinite(b) && b >= 0 ? Math.min(50_000_000, Math.round(b)) : DEFAULT_BUDGET,
+    view: v === "county" || v === "plan" || v === "monday" || v === "review" || v === "run" ? v : v ? "map" : "run", scope,
+    budget: Number.isFinite(b) && b >= 0 ? Math.min(50_000_000, Math.round(b)) : budgetFor(scope),
     lang: q.get("lang") === "fi" ? "fi" : "en",
-    objective: OBJECTIVES.includes(q.get("objective") ?? "") ? q.get("objective") : null,
+    objective: OBJECTIVES.includes(q.get("objective") ?? "") ? q.get("objective") : scope === "FI" && !Number.isFinite(b) ? "gap" : null,
     without: (q.get("without") ?? "").split(",").map((x) => x.replace(/[^a-z0-9_]/g, "")).filter(Boolean).slice(0, 20),
     from: q.get("from") === "FI" && s && s !== "FI" ? "FI" : null,
   };
 }
 function toHash(r: Route): string {
   const q = new URLSearchParams();
-  if (r.view === "plan" || (r.view === "county" && r.budget !== DEFAULT_BUDGET)) q.set("budget", String(r.budget));
+  if (r.view === "plan" || (r.view === "county" && r.budget !== budgetFor(r.scope))) q.set("budget", String(r.budget));
   if (r.view === "plan" || (r.view === "monday" && r.lang === "fi")) q.set("lang", r.lang);
   if (r.view !== "map" && r.objective) q.set("objective", r.objective);
   if (r.view !== "map" && r.without.length) q.set("without", r.without.join(","));
@@ -87,7 +91,7 @@ export default function App() {
     const other = scope != null && scope !== cur.scope;   // a choice made for one county does not follow to the next
     // A county opened from the national page gets its own plan at the default budget, not the national one; the plan says so.
     const fromFI = other && cur.scope === "FI" && scope !== "FI";
-    window.location.hash = toHash({ ...cur, view, scope: scope ?? cur.scope, ...(other ? { objective: null, without: [], from: null } : {}), ...(fromFI ? { budget: DEFAULT_BUDGET, from: "FI" } : {}) });
+    window.location.hash = toHash({ ...cur, view, scope: scope ?? cur.scope, ...(other ? { objective: null, without: [], from: null } : {}), ...(fromFI ? { budget: DEFAULT_BUDGET, from: "FI" } : {}), ...(other && scope === "FI" ? { budget: NATIONAL_BUDGET, objective: "gap" } : {}) });
     window.scrollTo(0, 0);
     // A step of the 90-second path lands on its own part of the county page once that part has drawn.
     if (section) {

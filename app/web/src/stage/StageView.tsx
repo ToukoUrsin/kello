@@ -141,11 +141,19 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     if (!opt.data || !P) return [];
     if (isFI) { const ps = buildCountyPins(opt.data, counties, P.shapes); relaxBoxes(ps, 132, 27); return ps; }
     const ps = buildPins(opt.data, me?.seat ? [me.seat.x, me.seat.y] : null, hosp ? [hosp.x, hosp.y] : null, [shape?.cx ?? 0, shape?.cy ?? 0]);
+    // The action on the road slides along it until its label covers none of the county's patients.
+    const road = ps.filter((p) => p.group === "line");
+    if (road.length && me?.seat && hosp) {
+      const k = focusCam.k, s = me.seat, mine = dots.filter((d) => d.county === scope && !d.extra);
+      const at = (t: number) => [s.x + (hosp.x - s.x) * t, s.y + (hosp.y - s.y) * t];
+      const t = [0.62, 0.7, 0.78, 0.54, 0.46].find((t) => { const [x, y] = at(t); return !mine.some((d) => { const dx = (d.x - x) * k, dy = (d.y - y) * k; return dx > -230 && dx < 6 && dy > -24 && dy < 42 * road.length - 6; }); });
+      if (t != null) road.forEach((p) => { [p.x, p.y] = at(t); });
+    }
     if (!exclude.length) basePins.current = ps;
     // Actions taken out in Explore stay on the map, struck through, so they can be put back.
     const gone = basePins.current.filter((b) => exclude.includes(b.id) && !ps.some((p) => p.id === b.id));
     return [...ps, ...gone];
-  }, [opt.data, P, isFI, counties, me, hosp, shape, exclude]);
+  }, [opt.data, P, isFI, counties, me, hosp, shape, exclude, dots, focusCam.k, scope]);
   const checkOfPin = useCallback((p: PinM, featured: boolean, live?: VerifyResult | null): CheckM => {
     const m = checks.data;
     if (!isFI) return checkOf(p.id, live && live.intervention_id === p.id ? live : m?.get(scope)?.find((v) => v.intervention_id === p.id), featured);
@@ -257,6 +265,20 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   const zoomed = !isFI && a >= 1 && !levelling && !tooFew;
   const cam = zoomed ? focusCam : NATIONAL;
   useCamera(root, cam, l ?? makeLayout(1200, 800), reduced);
+  /** How far the county's own dots reach around a point of the map, in screen pixels. A label or a pin stack starts outside them, so no person is drawn over. */
+  const around = useCallback((x: number, y: number) => {
+    const out = { up: 0, left: 0, right: 0 };
+    if (!zoomed) return out;
+    const k = focusCam.k, r = 8;
+    for (const d of dots) {
+      if (d.county !== scope || d.extra) continue;
+      const dx = (d.x - x) * k, dy = (d.y - y) * k;
+      if (Math.abs(dx) < 52 && dy < r && dy > -44) out.up = Math.max(out.up, r - dy);
+      if (dy > -24 && dy < 96 && dx > -r && dx < 36) out.right = Math.max(out.right, dx + r);
+      if (dy > -24 && dy < 96 && dx < r && dx > -36) out.left = Math.max(out.left, r - dx);
+    }
+    return out;
+  }, [dots, scope, zoomed, focusCam.k]);
   const recN = explore && tool === "records" && !isFI ? unrec ?? Math.round(me?.hidden ?? 0) : 0;
   const dotCls = useMemo(() => {
     let mine = 0;
@@ -358,7 +380,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   const pilot = opt.data?.pilot ?? opt.data?.ui.pilot ?? null;
   const ask = pilot ? [pilot.six_months?.patients_seen?.expected != null ? `about ${whole(pilot.six_months.patients_seen.expected)} patients` : null, pilot.six_months?.no_surgery_decisions_reviewed?.expected != null ? `about ${whole(pilot.six_months.no_surgery_decisions_reviewed.expected)} decisions not to operate reviewed` : null].filter(Boolean).join(", ") || `${pilot.actions.length} actions` : null;
   // What the pilot does, per action: the part the web check did not find in place.
-  const pilotParts = (pilot?.actions ?? []).map((id) => { const m = pilot?.missing?.find((x) => x.intervention_id === id), p = pins.find((x) => x.id === id); return p ? { id, name: p.short, missing: m?.missing_short_en ?? null, found: m?.in_use_here ?? null } : null; }).filter(Boolean) as { id: string; name: string; missing: string | null; found: string | null }[];
+  const pilotParts = (pilot?.actions ?? []).map((id) => { const m = pilot?.missing?.find((x) => x.intervention_id === id), p = pins.find((x) => x.id === id); return p ? { id, name: p.short, missing: pinChecks.get(id)?.missing ?? m?.missing_short_en ?? null, found: m?.in_use_here ?? null } : null; }).filter(Boolean) as { id: string; name: string; missing: string | null; found: string | null }[];
   const unitWord = deaths ? "deaths avoided" : "patients";
   const found = useMemo(() => {
     const n = new Map<string, number>();
@@ -369,6 +391,11 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     return open && out.length ? [...out, `${open} not checked yet`] : out;
   }, [isFI, checks.data, opt.data, pins, pinChecks, exclude]);
 
+  const cardW = Math.max(220, (l?.colW ?? 380) - (l?.phone ? 0 : 34));
+  const ledger = (part?: "head" | "rows") => (
+    <Ledger rows={rows} total={sumEur} reached={deaths ? landed.reduce((s, p) => s + p.extra, 0) : planExtra} of={deaths ? null : myDots || null} lo={tot ? (deaths ? tot.deaths_avoided_per_year.lo : tot.extra_curative_patients_per_year.lo) : 0} hi={tot ? (deaths ? tot.deaths_avoided_per_year.hi : tot.extra_curative_patients_per_year.hi) : 0}
+      rangeOn={rangeOn} unit={deaths ? "deaths" : "extra"} compact={isFI} sel={sel} onSel={tapPin} flyTo={evId} narrow={narrowOn || (a > 3 && !!narrow && narrow.part.n > 0) ? narrow : null} part={part} />
+  );
   let head: React.ReactNode = null, headKey = `${a}`;
   if (explore) {
     const t = tool === "actions" || tool === "records" ? (isFI ? "budget" : tool) : tool;
@@ -379,6 +406,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     else head = myDots ? <>If {recN} of {name}'s {myDots} were treated but not recorded, the real gap is {myDots - recN}.</> : <>{name} has no gap to question.</>;
   }
   else if (tooFew) head = <>{name}: too few patients to compare.</>;
+  else if (!ready || !total) head = <>Loading the stored run.</>;
   else if (a === 0) {
     // No number counts up here: a frame of the run must never show a figure that is not the real one.
     const beat = !run.started || v.t >= T.gap.headline ? 2 : v.t >= T.gap.dotsFrom ? 1 : 0;
@@ -391,23 +419,24 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
     else {
       const here = steps.filter((s) => s.verdict === "here"), maybe = steps.filter((s) => s.verdict === "possibly_here");
       const wait = steps.find((s) => s.id === "diagnosis")?.verdict === "not_behind";
-      head = here.length ? <>{wait && here.some((s) => s.id === "treatment") ? "Not the wait. " : ""}{name} loses them at {here.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}.</>
+      head = here.length ? <>{wait && here.some((s) => s.id === "treatment") ? "Not the wait. " : ""}{name} loses them at {here.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}.{maybe.length ? ` ${maybe.map((s) => WHERE[s.id] ?? s.label_en).join(" and ").replace(/^./, (c) => c.toUpperCase())} may add to it.` : ""}</>
         : maybe.length ? <>A possible weak point in {name}: {maybe.map((s) => WHERE[s.id] ?? s.label_en).join(" and ")}.</>
         : steps.length ? <>No step of the care path stands out in {name}.</> : <>Where {name} loses them.</>;
     }
   } else if (a === 2) {
     const n = isFI ? opt.data?.chosen.length ?? 0 : landed.length;
-    head = !opt.data ? <>Loading the plan.</> : n === 0 ? <>Which actions close the most of the gap for the money?</> : deaths ? <>{n} {n === 1 ? "action" : "actions"}, {eurx(sumEur)} a year: about {one(landed.reduce((s, p) => s + p.extra, 0))} deaths avoided a year.</>
+    head = !opt.data ? <>Loading the plan.</> : n === 0 ? <>Which actions close the most of the gap for the money?</> : deaths ? <>{myDots === 0 ? "No one is short here, so the plan is ranked by deaths avoided. " : ""}{n} {n === 1 ? "action" : "actions"}, {eurx(sumEur)} a year: about {one(landed.reduce((s, p) => s + p.extra, 0))} a year.</>
       : <>{n} {n === 1 ? "action" : "actions"}{isFI ? ` in ${pins.length} counties` : ""}, {eurx(sumEur)} a year, {n === 1 ? "reaches" : "reach"} about {whole(planExtra)} of the {myDots}.</>;
   } else if (a === 3) {
     if (narrowOn) headKey = "3n";
     head = !checksOk ? <>Loading the stored web checks.</> : !found.length ? <>No stored web check for this plan.</>
-      : narrowOn && narrow ? <>{narrow.part.n} of {narrow.n} actions are already partly in place, so the plan narrows: {eurx(narrow.low)} to {eurx(narrow.high)} a year.</>
+      : narrowOn && narrow ? <>{narrow.part.n} of {narrow.n} actions already partly run. The plan pays only for what is missing: {eurx(narrow.low)} to {eurx(narrow.high)} a year.</>
       : reached(v, 3, restEnd) ? <>Each action checked on the web: {found.join(", ")}.</> : <>Is each action already in place? Reading the public pages.</>;
   }
-  else if (a === 4) { const e = featIv ? effectText(featIv.effect) : null; const p = pins.find((x) => x.id === evId); head = featIv && e ? <>{isFI ? shortName(featIv.id, featIv.name_en) : p?.short}: {e.value}, range {e.range}, {featIv.effect.kind === "measured" ? "measured in" : `an ${featIv.effect.kind ?? "assumption"} from`} {featIv.evidence.length} studies.</> : <>The studies behind the plan.</>; }
+  else if (a === 4) { const e = featIv ? effectText(featIv.effect) : null; const p = pins.find((x) => x.id === evId); head = featIv && e ? <>{isFI ? shortName(featIv.id, featIv.name_en) : p?.short}: {e.value}, range {e.range}. {featIv.effect.kind === "measured" ? "Measured in" : `An ${featIv.effect.kind ?? "assumption"} from`} {featIv.evidence.length} {featIv.evidence.length === 1 ? "study" : "studies"}.</> : <>The studies behind the plan.</>; }
   else if (deaths && tot) head = <>{myDots === 0 ? "At or above the national share: the" : "The"} plan avoids about {one(tot.shown.deaths)} deaths a year.</>;
-  else head = sim.data && yearIdx < years.length ? <>The plan, year by year: {int(sim.data.runs_total ?? 0)} simulated runs.</>
+  else if (askOn && ask && pilot?.audit && pilot.six_months?.no_surgery_decisions_reviewed?.expected != null && sim.data) { headKey = "5a"; head = <>The model says about {whole(sim.data.reached.median)} more a year, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}. Six months replace it with a count: {pilot.audit.charts} charts for {eurx(pilot.audit.cost_eur)}, about {whole(pilot.six_months.no_surgery_decisions_reviewed.expected)} decisions reviewed.</>; }
+  else head = sim.data && yearIdx < years.length ? <>The plan played forward, year by year, to {years[years.length - 1]}.</>
     : sim.data ? (narrow && narrow.part.n > 0 ? <>If all {narrow.n} actions are needed in full: about {whole(sim.data.reached.median)} more a year treated to cure by {years[years.length - 1]}, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>
       : <>By {years[years.length - 1]}, about {whole(sim.data.reached.median)} more a year treated to cure, range {whole(sim.data.reached.lo)} to {whole(sim.data.reached.hi)}.</>)
     : <>The plan, year by year.</>;
@@ -520,7 +549,8 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
   const numbers = useMemo(() => new Map(pins.map((p) => [p.id, p.n])), [pins]);
 
   const fatal = !ready ? geo.error ?? ov.error ?? stage.error : null;
-  const cls = `st a${a}${l?.phone ? " phone" : l && l.H < 700 ? " short" : ""}${explore ? " explore" : ""}${run.playing ? " playing" : ""}${zoomed ? " zoomed" : ""}${reduced ? " reduced" : ""}`;
+  // One-line pins once the check is over (the words have moved to the plan card), and always on a short screen.
+  const cls = `st a${a}${l?.phone ? " phone" : l && l.H < 700 ? " short" : ""}${l && !l.phone && (l.H < 700 || (!explore && a >= 4)) ? " slim" : ""}${explore ? " explore" : ""}${run.playing ? " playing" : ""}${zoomed ? " zoomed" : ""}${reduced ? " reduced" : ""}`;
   const hot = tip ? counties.find((c) => c.id === tip.id) : null;
   const lr = liveResult, storedAt = when(lr?.checked_at ?? featured?.v?.checked_at);
   const liveNote = liveState === "running" ? `Checking live, ${liveSec} s`
@@ -543,24 +573,36 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
               label={`Map of Finland by wellbeing services county. ${total} people a year miss treatment that aims to cure${!isFI && myDots ? `, ${myDots} of them in ${name}` : ""}.`} />
             {links.length > 0 && <svg className="st-links" width={l.W} height={l.H} aria-hidden="true">{links.map((d, i) => <path key={i} d={d} pathLength={1} />)}</svg>}
             <div className="st-over">
-              {mode === "work" && hospitals.filter((h) => isFI || !zoomed || h.id === hosp?.id).map((h) => (
-                <Pinned key={h.id} x={h.x} y={h.y} className={"st-hosp" + ((isFI ? a === 1 : h.id === hosp?.id) ? " lead" : "") + (reached(v, 1, T.where.places) ? " on" : "")}>
-                  <i title={h.name_en} /><span>{h.city}{!isFI && h.id === hosp?.id ? " University Hospital" : ""}</span>
-                </Pinned>
-              ))}
-              {zoomed && me?.seat && apart && !sitePts.some((s) => Math.hypot(s.x - me.seat!.x, s.y - me.seat!.y) < 3) && <Pinned x={me.seat.x} y={me.seat.y} className={"st-seat" + (reached(v, 1, T.where.places) ? " on" : "")}><i /><span>{me.seat.name}</span></Pinned>}
-              {zoomed && me?.seat && hosp && apart && me.km != null && !sitePts.length && (
-                <Pinned x={me.seat.x + (hosp.x - me.seat.x) * 0.3} y={me.seat.y + (hosp.y - me.seat.y) * 0.3} className={"st-km" + (reached(v, 1, T.where.lineLabel) ? " on" : "")}>
-                  <span className="num" title={stage.data?.notes?.places_en}>{int(Math.round(me.km))} km to {hosp.city}</span>
+              {mode === "work" && hospitals.filter((h) => isFI || !zoomed || h.id === hosp?.id).map((h) => {
+                // Where the county's own patients sit around the hospital, its name goes above them.
+                const up = !isFI && h.id === hosp?.id ? around(h.x, h.y).up : 0;
+                return (
+                  <Pinned key={h.id} x={h.x} y={h.y} className={"st-hosp" + ((isFI ? a === 1 : h.id === hosp?.id) ? " lead" : "") + (up ? " over" : "") + (reached(v, 1, T.where.places) ? " on" : "")} style={up ? { ["--up" as string]: `${Math.round(up)}px` } : undefined}>
+                    <i title={h.name_en} /><span>{h.city}{!isFI && h.id === hosp?.id ? " University Hospital" : ""}</span>
+                  </Pinned>
+                );
+              })}
+              {zoomed && me?.seat && apart && !sitePts.some((s) => Math.hypot(s.x - me.seat!.x, s.y - me.seat!.y) < 3) && (
+                <Pinned x={me.seat.x} y={me.seat.y} className={"st-seat" + (reached(v, 1, T.where.places) ? " on" : "")} style={{ ["--up" as string]: `${Math.round(around(me.seat.x, me.seat.y).up)}px` }}>
+                  <i />
+                  <span>
+                    <b>{me.seat.name}</b>
+                    {hosp && me.km != null && !sitePts.length && <em className={"st-km num" + (reached(v, 1, T.where.lineLabel) ? " on" : "")} title={stage.data?.notes?.places_en}>{int(Math.round(me.km))} km to {hosp.city} on average</em>}
+                  </span>
                 </Pinned>
               )}
               {sitePts.map((s) => <Pinned key={s.i} x={s.x} y={s.y} className="st-site on"><i className={s.kind} /><span title={s.place?.name ?? undefined}>{SITE[s.kind]}</span></Pinned>)}
-              {a >= 2 && (!explore || tool === "budget" || tool === "actions" || (isFI && tool === "records")) && groups.map((g) => (
-                <Pinned key={g.key} x={g.x} y={g.y} className={"st-stack" + (!isFI && (g.key === "line" || cam.k * g.x + cam.tx > midX + 60) ? " left" : "") + (isFI ? " fi" : "") + ` g-${g.key}`}>
+              {a >= 2 && (!explore || tool === "budget" || tool === "actions" || (isFI && tool === "records")) && groups.map((g) => {
+                const left = !isFI && (g.key === "line" || cam.k * g.x + cam.tx > midX + 60);
+                // The stack starts clear of the patients drawn around its place.
+                const room = isFI || g.key === "line" ? 0 : around(g.x, g.y)[left ? "left" : "right"];
+                return (
+                <Pinned key={g.key} x={g.x} y={g.y} className={"st-stack" + (left ? " left" : "") + (isFI ? " fi" : "") + ` g-${g.key}`} style={room ? { ["--off" as string]: `${Math.round(room + (l.phone ? 2 : 8))}px` } : undefined}>
                   {g.pins.map((p) => {
                     const i = pins.indexOf(p), c = pinChecks.get(p.id), vOn = !explore && a >= 3 && !!c?.label && verdictOn(p);
+                    const said = vOn ? `${p.name}. ${c!.label}.${c!.missing ? ` Missing: ${c!.missing}.` : ""}` : p.name;
                     return (
-                      <button key={p.id} className={"st-pin" + (pinOn(p, i) ? " on" : "") + (exclude.includes(p.id) ? " off" : "") + (sel === p.id ? " sel" : "") + (p.id === featuredId && a === 3 ? " feat" : "")} onClick={() => tapPin(p.id)} title={p.name} aria-pressed={explore && tool === "actions" ? !exclude.includes(p.id) : sel === p.id}>
+                      <button key={p.id} className={"st-pin" + (pinOn(p, i) ? " on" : "") + (exclude.includes(p.id) ? " off" : "") + (sel === p.id ? " sel" : "") + (p.id === featuredId && a === 3 ? " feat" : "")} onClick={() => tapPin(p.id)} title={said} aria-pressed={explore && tool === "actions" ? !exclude.includes(p.id) : sel === p.id}>
                         <i className="num">{exclude.includes(p.id) ? "–" : p.count ?? p.n}</i>
                         <span className="st-pin-t">
                           <b className={isFI ? "num" : undefined}>{isFI ? eur(p.eur) : p.short}</b>
@@ -572,7 +614,8 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
                     );
                   })}
                 </Pinned>
-              ))}
+                );
+              })}
             </div>
           </>
         )}
@@ -588,6 +631,8 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
           </label>
         </p>
         {head && <h1 className="st-h on" key={headKey}>{head}</h1>}
+        {/* On a phone the sum and its range follow the headline; the rows come after the pages. */}
+        {l?.phone && !explore && a >= 2 && a <= 4 && opt.data && ledger("head")}
 
         {!explore && a === 0 && ready && (
           <div className="st-gap">
@@ -597,17 +642,23 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
                 {!isFI && me?.pct != null && <button onClick={() => { const s = srcOfFunnel(funnel.data, scope, name); if (s) openSource(s); }}><b className="num">{one(me.pct)}%</b><span>in {name}</span></button>}
               </div>
             )}
-            {pcts.length > 0 && (
-              <div className="st-legend" aria-label={`Counties coloured by share treated to cure, from ${one(pMin)}% (dark) to ${one(pMax)}% (light)`}>
-                <span className="num">{one(pMin)}%</span>{SEQ.map((c) => <i key={c} style={{ background: c }} />)}<span className="num">{one(pMax)}%</span>
-                <em>fewer treated to cure → more</em>
-              </div>
-            )}
-            <p className="st-fine on"><i className="st-key lost" /> one person a year short of the national share.</p>
-            {stage.data?.notes?.patients_en && <details className="st-more"><summary>How the dots are placed</summary><p>{stage.data.notes.patients_en}</p></details>}
             {!isFI && me && me.pct != null && myDots === 0 && <p className="st-fine on">At or above the national share.</p>}
-            <p className="st-fine on"><b>Why lung cancer.</b> It is one of the cancers in Goal 3 of the national cancer strategy, and the Cancer Registry publishes treatment by county for it.</p>
-            {otherRuns("Every county gets its own run. Tap one on the map, or:")}
+            {/* How to read the map: one group, so it is not three loose notes. */}
+            <div className="st-mapkey">
+              {pcts.length > 0 && (
+                <div className="st-legend" aria-label={`Counties coloured by share treated to cure, from ${one(pMin)}% (dark) to ${one(pMax)}% (light)`}>
+                  <span className="num">{one(pMin)}%</span>{SEQ.map((c) => <i key={c} style={{ background: c }} />)}<span className="num">{one(pMax)}%</span>
+                  <em>fewer treated to cure → more</em>
+                </div>
+              )}
+              <p className="st-fine on"><i className="st-key lost" /> one person a year short of the national share.</p>
+              {stage.data?.notes?.patients_en && <details className="st-more"><summary>How the dots are placed</summary><p>{stage.data.notes.patients_en}</p></details>}
+            </div>
+            {/* What this run is and where else it goes: at the foot of the column, next to Run. */}
+            <div className="st-foot">
+              <p className="st-fine on"><b>Why lung cancer.</b> It is one of the cancers in Goal 3 of the national cancer strategy, and the Cancer Registry publishes treatment by county for it.</p>
+              {otherRuns("Every county gets its own run. Tap one on the map, or:")}
+            </div>
           </div>
         )}
 
@@ -682,7 +733,7 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
         </nav>
         {explore ? (
           <div className="st-card">
-            <Explore tool={tool} setTool={(t) => { setTool(t); setSiteKind(t === "site" && !sites.length ? "radiotherapy" : null); }} isFI={isFI} name={name} w={(l?.colW ?? 380) - (l?.phone ? 0 : 34)} unit={deaths ? "Deaths avoided a year" : "Patients reached a year"}
+            <Explore tool={tool} setTool={(t) => { setTool(t); setSiteKind(t === "site" && !sites.length ? "radiotherapy" : null); }} isFI={isFI} name={name} w={cardW} unit={deaths ? "Deaths avoided a year" : "Patients reached a year"}
               curve={curve.data} curveLoading={curve.loading} budget={budget} setBudget={setBudget} numbers={numbers} myDots={myDots}
               pins={pins} exclude={exclude} toggle={tapPin} total={opt.data?.totals.eur ?? null} extra={tot ? { median: tot.shown.extra, lo: tot.extra_curative_patients_per_year.lo, hi: tot.extra_curative_patients_per_year.hi } : null} optLoading={opt.loading}
               siteKind={siteKind} setSiteKind={setSiteKind} scenario={sc} scenarioLoading={scenario.loading && sites.length > 0} nSites={sites.length} removeSite={() => setSites((s) => s.slice(0, -1))} siteCost={siteCost} setSiteCost={setSiteCost} hasStage={!!stage.data} focus={focus}
@@ -694,15 +745,16 @@ export default function StageView({ scope, areas, open, openSources }: { scope: 
         ) : a >= 2 && a <= 4 ? (
           <div className="st-card">
             {!opt.data ? <p className="st-quiet" role="status">Loading the plan</p>
-              : <Ledger rows={rows} total={sumEur} reached={deaths ? landed.reduce((s, p) => s + p.extra, 0) : planExtra} of={deaths ? null : myDots || null} lo={tot ? (deaths ? tot.deaths_avoided_per_year.lo : tot.extra_curative_patients_per_year.lo) : 0} hi={tot ? (deaths ? tot.deaths_avoided_per_year.hi : tot.extra_curative_patients_per_year.hi) : 0}
-                  rangeOn={rangeOn} unit={deaths ? "deaths" : "extra"} compact={isFI} sel={sel} onSel={tapPin} flyTo={evId} narrow={narrowOn || (a > 3 && !!narrow && narrow.part.n > 0) ? narrow : null} />}
+              : ledger(l?.phone ? "rows" : undefined)}
           </div>
         ) : a === 5 ? (
           <div className="st-card">
-            {sim.data ? (
+            {deaths && myDots === 0 && tot ? (
+              <p className="st-quiet">{name} already treats a larger share to cure than Finland as a whole, so there is no share to raise and nothing to play forward. Its plan is counted in deaths avoided: about {one(tot.shown.deaths)} a year, range {one(Math.max(0, tot.deaths_avoided_per_year.lo))} to {one(tot.deaths_avoided_per_year.hi)}.</p>
+            ) : sim.data ? (
               <>
-                <p className="st-year"><b className="num">{yearIdx > 0 ? years[yearIdx - 1] : sim.data.baseline_period?.replace("-", "–") ?? sim.data.years[0]}</b><span className="num">{yearIdx === 0 ? "measured, before the plan" : reachedIds.size ? `${treatedN} of ${reachedIds.size} reached are treated to cure` : "share treated to cure, with and without the plan"}</span></p>
-                <SimChart sim={sim.data} nat={!isFI} upto={yearIdx} w={(l?.colW ?? 380) - (l?.phone ? 0 : 34)} scope={`all ${narrow?.n ?? nPins} actions`} />
+                <p className="st-year"><b className="num">{yearIdx > 0 ? years[yearIdx - 1] : sim.data.baseline_period?.replace("-", "–") ?? sim.data.years[0]}</b><span className="num">{yearIdx === 0 ? "measured, before the plan" : reachedIds.size ? (myDots ? `${treatedN} of the ${myDots} missed are now treated to cure` : `${treatedN} of ${reachedIds.size} reached are treated to cure`) : "share treated to cure, with and without the plan"}</span></p>
+                <SimChart sim={sim.data} nat={!isFI} upto={yearIdx} w={cardW} scope={`all ${narrow?.n ?? nPins} actions`} />
                 {reachedIds.size > 0 && <p className="st-fine on"><i className="st-key reached" /> reached by the plan <i className="st-key treated" /> treated to cure <i className="st-key lost" /> still missed</p>}
               </>
             ) : <p className="st-quiet" role="status">{!settled(sim) || stage.loading ? "Loading the simulation" : "No simulation for this plan."}</p>}

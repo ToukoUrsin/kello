@@ -6,15 +6,15 @@ import ExpertQuote from "./ExpertQuote";
 
 type Lang = "en" | "fi";
 const T = {
-  en: { title: (n: string) => `${n}: who does what on Monday`, sub: (k: number, eur: string) => `${k} actions, ${eur} a year. Each row is one person's job: what they do this week, what it costs, and what done looks like in 90 days.`,
+  en: { title: (n: string) => `${n}: who does what on Monday`, sub: (k: number, eur: string) => `${k} actions, at most ${eur} a year: less for each one the hospital says already runs. Each row is one person's job: what they do this week, what it costs, and what done looks like in 90 days.`,
     who: "Who", what: "Action", week: "This week", cost: "Cost a year", done: "Done in 90 days when", zero: "Step zero", ask: "Week 1: ask the university hospital first",
     askSub: "A web search of county and hospital pages found signs that part of this already runs. One phone call each settles it before any money moves.",
-    web: (w: string, d: string) => `Web check ${d}: ${w.toLowerCase()}`, total: "All actions", print: "Print / save PDF", plan: "Open the one-page plan", county: "Back to the county",
+    web: (w: string, d: string) => `Web check ${d}: ${w.toLowerCase()}`, total: "All actions, if each is needed in full", print: "Print / save PDF", plan: "Open the one-page plan", county: "Back to the county",
     note: "Costs are planning estimates. “Done” is work the county can count itself; no trial has measured how many more patients these actions get treated to cure.", none: "No actions are chosen for this county at this budget." },
-  fi: { title: (n: string) => `${n}: kuka tekee mitä maanantaina`, sub: (k: number, eur: string) => `${k} toimea, ${eur} vuodessa. Jokainen rivi on yhden ihmisen tehtävä: mitä hän tekee tällä viikolla, mitä se maksaa ja mistä tietää 90 päivän kuluttua, että se on tehty.`,
+  fi: { title: (n: string) => `${n}: kuka tekee mitä maanantaina`, sub: (k: number, eur: string) => `${k} toimea, enintään ${eur} vuodessa: vähemmän jokaisesta, jonka sairaala kertoo jo olevan käytössä. Jokainen rivi on yhden ihmisen tehtävä: mitä hän tekee tällä viikolla, mitä se maksaa ja mistä tietää 90 päivän kuluttua, että se on tehty.`,
     who: "Kuka", what: "Toimi", week: "Tällä viikolla", cost: "Kustannus / v", done: "Tehty 90 päivässä, kun", zero: "Vaihe nolla", ask: "Viikko 1: kysy ensin yliopistosairaalalta",
     askSub: "Alueen ja sairaalan verkkosivuilta löytyi merkkejä siitä, että osa tästä on jo käytössä. Yksi puhelu kustakin ratkaisee asian ennen kuin rahaa käytetään.",
-    web: (w: string, d: string) => `Verkkotarkistus ${d}: ${({ "take it out": "jo käytössä", "narrow it": "osin käytössä, rajaa", "ask first": "osin käytössä, kysy ensin" } as Record<string, string>)[w.toLowerCase()] ?? "kysy ensin"}`, total: "Kaikki toimet", print: "Tulosta / tallenna PDF", plan: "Avaa yhden sivun suunnitelma", county: "Takaisin alueeseen",
+    web: (w: string, d: string) => `Verkkotarkistus ${d}: ${({ "take it out": "jo käytössä", "narrow it": "osin käytössä, rajaa", "ask first": "osin käytössä, kysy ensin" } as Record<string, string>)[w.toLowerCase()] ?? "kysy ensin"}`, total: "Kaikki toimet, jos jokainen tarvitaan kokonaan", print: "Tulosta / tallenna PDF", plan: "Avaa yhden sivun suunnitelma", county: "Takaisin alueeseen",
     note: "Kustannukset ovat suunnitteluarvioita. ”Tehty” on työtä, jonka alue voi itse laskea; yksikään tutkimus ei ole mitannut, kuinka monta potilasta enemmän nämä toimet tuovat parantavaan hoitoon.", none: "Tälle alueelle ei ole valittu toimia tällä budjetilla." },
 };
 const day = (iso?: string | null, lang: Lang = "en") => (iso ? new Date(iso).toLocaleDateString(lang === "fi" ? "fi-FI" : "en-GB", { day: "numeric", month: "short" }) : "");

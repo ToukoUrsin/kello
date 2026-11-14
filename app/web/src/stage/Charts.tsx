@@ -56,7 +56,7 @@ export function SimChart({ sim, upto, w, nat = true, scope }: { sim: SimPlan; up
       <p className="st-read num" aria-live="off">
         <b>{label(show)}</b> with {what} {one(plan(show))}% <span className="muted">({one(B[show].p10)} to {one(B[show].p90)})</span> · no plan {one(none(show))}% <span className="muted">({one(B[show].no_plan_p10)} to {one(B[show].no_plan_p90)})</span>
       </p>
-      <p className="st-fine on">Line: what the model expects. Band: 8 of 10 simulated years.{sim.plan_above_no_plan_in_100 != null && upto >= n - 1 ? ` In ${sim.plan_above_no_plan_in_100} of 100 simulated ${last.year}s the share with the plan is above the share without.` : ""}</p>
+      <p className="st-fine on">Line: what the model expects. Shaded: where 8 of 10 simulated futures land.{sim.plan_above_no_plan_in_100 != null && upto >= n - 1 ? ` In ${sim.plan_above_no_plan_in_100} of 100 of them the share ends higher with the plan than without.` : ""}</p>
     </figure>
   );
 }
@@ -89,6 +89,7 @@ export function BudgetChart({ curve, budget, w, numbers, unit }: { curve: Budget
         <line x1={X(Math.min(budget, maxB))} x2={X(Math.min(budget, maxB))} y1={m.t} y2={h - m.b} className="st-cross" />
         <circle cx={X(Math.min(budget, maxB))} cy={Y(at.extra)} r={4.5} className="st-pt" />
       </svg>
+      {marks.length > 1 && <p className="st-fine on">Each number is an action on the map, placed where the budget first buys it.</p>}
       {flat != null && flat < maxB && <p className="st-fine on">Shaded: more money buys nothing here: the limit is the reachable shortfall.</p>}
     </figure>
   );

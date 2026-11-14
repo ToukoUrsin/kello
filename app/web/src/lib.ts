@@ -17,7 +17,8 @@ export interface Overview { national: { total_days: Interval; gap_checks?: GapCh
 export interface Stage { id: string; label_en: string; value: number | null; unit?: string; n?: number | null; lo?: number | null; hi?: number | null; national?: number | null;
   best?: number | null; best_area?: string | null; best_area_en?: string | null; worst?: number | null; worst_area_en?: string | null; rank?: number | null; of?: number | null;
   outside_limits?: "none" | "95" | "99.8" | null; side?: "below" | "above" | null; direction?: "higher_better" | "lower_better" | "context"; level?: string; kind?: Kind;
-  source_url?: string | null; page?: number | string | null; quote?: string | null; read_by?: string | null; period?: string | null; note_en?: string | null; count?: number | null }
+  source_url?: string | null; page?: number | string | null; quote?: string | null; read_by?: string | null; period?: string | null; note_en?: string | null; count?: number | null;
+  registry_ci?: Partial<Record<"men" | "women", { pct: number; lo: number; hi: number; national_pct: number }>> | null }
 export interface ArtefactFlag { stage_id: string; strength: "strong" | "possible"; text_en: string }
 export interface MissingPatients { reference_pct?: number | null; per_year: number; lo?: number | null; hi?: number | null; by_modality: { id: string; per_year: number; note_en?: string }[];
   top_quartile?: { reference_pct?: number | null; per_year: number; lo?: number | null; hi?: number | null } | null; note_en?: string | null; split_method_en?: string | null;

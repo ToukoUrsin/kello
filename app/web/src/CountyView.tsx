@@ -35,7 +35,15 @@ const lower = (t: string) => (t && !/^[A-Z]{2}/.test(t) ? t[0].toLowerCase() + t
 /** How a stage compares with Finland, in words. "Beyond chance" = outside the limits chance gives a county of this size. */
 function reading(s: Stage): { word: string; tone: "bad" | "good" | "plain" } {
   if (s.level === "collaborative_area") return { word: "Published for the university hospital area, not the county", tone: "plain" };
-  if (s.id === "surgery") return { word: "Lower than Finland; the registry's age-adjusted comparison is not significant for women", tone: "plain" };
+  if (s.id === "surgery") {
+    // The registry publishes the operated share by sex with a 95% range: say for whom the whole range is below Finland.
+    const ci = s.registry_ci, below = (["men", "women"] as const).filter((k) => ci?.[k] && ci[k]!.hi < ci[k]!.national_pct);
+    const lowerThan = s.value != null && s.national != null && s.value < s.national;
+    if (!ci?.men || !ci?.women) return { word: lowerThan ? "Lower than Finland; a small count, so this step alone could be chance" : "Not lower than Finland", tone: "plain" };
+    if (below.length === 2) return { word: "Lower than Finland for men and women, beyond chance by the registry's age-adjusted ranges", tone: "bad" };
+    if (below.length === 1) return { word: `Lower than Finland; by the registry's age-adjusted ranges beyond chance for ${below[0]}, not for ${below[0] === "men" ? "women" : "men"}`, tone: "plain" };
+    return { word: lowerThan ? "Lower than Finland, but the registry's age-adjusted ranges reach Finland's figure: this step alone could be chance" : "Not lower than Finland", tone: "plain" };
+  }
   // No interval was published for this figure, so chance cannot be judged: say only which way it differs.
   if (s.lo == null && s.hi == null && s.value != null && s.national != null && (!s.outside_limits || s.outside_limits === "none")) {
     const d = s.value - s.national;
@@ -265,7 +273,7 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
 
       {!(cp && cp.stages.length > 0 && cur) && <div id="sec-why" className="anchor gapline"><GapChecks areaId={scope} variant="line" /></div>}
 
-      <Pathway pathway={d.pathway} where={name} drug={false} />
+      {scope !== "FI" && <Pathway pathway={d.pathway} where={name} drug={false} />}
 
       <section className="panel acts" aria-label="Budget and actions" id="sec-plan">
         <header>
@@ -284,7 +292,7 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
               {nothing && <p className="lede">No measure adds to this objective in {name} at this budget. {euro(o.saturation_note_en)}</p>}
             </div>
             <details className="more tune">
-              <summary>Budget, ranking and what the plan adds <span className="muted num">{eurx(budget)} a year, ranked by {(OBJECTIVES.find(([x]) => x === o.objective)?.[1] ?? "").toLowerCase()}</span></summary>
+              <summary>Budget, ranking and what the plan adds <span className="muted num">{eurx(budget)} a year, ranked by {({ curative: "patients treated to cure", gap: "how much of the gap to Finland it closes", deaths: "deaths avoided" } as Record<string, string>)[o.objective ?? ""] ?? "patients treated to cure"}</span></summary>
             <div className="totals inner">
               {!nothing && (
                 <p className="lede">
@@ -477,7 +485,12 @@ export default function CountyView({ scope, budget, setBudget, objective, setObj
           <div className="scrollx">
             <table className="t num">
               <thead><tr><th>Step</th><th className="n">{name}, days</th><th className="n">Range</th><th className="n">Finland</th><th>Kind</th></tr></thead>
-              <tbody>{d.steps.map((s) => <tr key={s.id}><td>{s.label_en}</td><td className="n">{days(s.days.median)}</td><td className="n">{range(s.days.lo, s.days.hi)}</td><td className="n">{days(s.national_days)}</td><td><span className={`tag ${s.kind}`}>{KIND_LABEL[s.kind]}</span>{s.level === "collaborative_area" ? <span className="small muted"> collaborative area</span> : null}</td></tr>)}</tbody>
+              <tbody>{d.steps.map((s) => {
+                // The registry measures the medians per treatment for the university hospital area; mixing them into one number is our arithmetic, so it is an estimate with no range.
+                const mixed = s.level === "collaborative_area", kind = mixed ? "estimated" : s.kind;
+                const above = mixed ? d.care_path?.stages.find((x) => x.id === "time_to_treatment")?.value : null;
+                return <tr key={s.id}><td>{s.label_en}</td><td className="n">{days(s.days.median)}</td><td className="n">{mixed && s.days.lo === s.days.hi ? "not published" : range(s.days.lo, s.days.hi)}</td><td className="n">{days(s.national_days)}</td><td><span className={`tag ${kind}`}>{KIND_LABEL[kind]}</span>{mixed ? <span className="small muted"> university hospital area, weighted by this county's mix of treatments{above != null && Math.abs(above - s.days.median) >= 0.05 ? ` (the ${one(above)} above uses Finland's mix)` : ""}</span> : null}</td></tr>;
+              })}</tbody>
             </table>
           </div>
           {flags.get("time_to_treatment") && <p className="flag"><b>Recording caveat.</b> {flags.get("time_to_treatment")}</p>}
@@ -550,7 +563,9 @@ function ActionCard({ c, iv, stage, name, areaId, metric, showExtra, showDeaths,
   ) : null;
   const patients = zero ? "no direct effect"
     : metric === "deaths" || (national && !(c.shown.extra > 0)) ? (showDeaths || national ? <>{one(c.shown.deaths)} deaths avoided a year <span className="rg">({rng1(de.lo, de.hi)}, modelled)</span></> : null)
-    : (showExtra || national) && c.shown.extra > 0 ? <>{one(c.shown.extra)} more treated to cure a year <span className="rg">({+ex.hi.toFixed(1) <= +c.shown.extra.toFixed(1) ? `0 to ${one(ex.hi)} at most` : rng1(ex.lo, ex.hi)})</span></> : null;
+    : (showExtra || national) && c.shown.extra > 0 ? (+ex.hi.toFixed(1) <= +c.shown.extra.toFixed(1)
+      ? <>up to {one(ex.hi)} more treated to cure a year <span className="rg">(could be 0)</span></>
+      : <>{one(c.shown.extra)} more treated to cure a year <span className="rg">({rng1(ex.lo, ex.hi)})</span></>) : null;
   const numbered = !zero && !national && c.n != null;
   const detId = `det-${c.intervention_id}`;
   return (

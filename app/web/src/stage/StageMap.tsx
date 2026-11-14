@@ -93,6 +93,6 @@ export default function StageMap(p: MapProps) {
 }
 
 /** Something pinned to a point of the map but drawn at screen size: it follows the camera through CSS variables. */
-export function Pinned({ x, y, className, children, ...rest }: { x: number; y: number; className?: string; children?: React.ReactNode } & React.HTMLAttributes<HTMLDivElement>) {
-  return <div {...rest} className={`st-pinned ${className ?? ""}`} style={{ ["--x" as string]: `${x}px`, ["--y" as string]: `${y}px` }}>{children}</div>;
+export function Pinned({ x, y, className, children, style, ...rest }: { x: number; y: number; className?: string; children?: React.ReactNode } & React.HTMLAttributes<HTMLDivElement>) {
+  return <div {...rest} className={`st-pinned ${className ?? ""}`} style={{ ...style, ["--x" as string]: `${x}px`, ["--y" as string]: `${y}px` }}>{children}</div>;
 }

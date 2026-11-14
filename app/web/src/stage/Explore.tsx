@@ -95,7 +95,7 @@ function Site({ siteKind, setSiteKind, scenario: s, scenarioLoading, nSites, rem
       {s && site && (
         <>
           <dl className={"st-nums two" + (scenarioLoading ? " busy" : "")}>
-            {c && <div><dt>{c.name_en ?? "County"}, km to treatment</dt><dd className="num">{int(Math.round(c.km_before))} → {int(Math.round(c.km_after))}<small> · {int(Math.round(c.km_before - c.km_after))} km saved</small></dd></div>}
+            {c && <div><dt>{c.name_en ?? "County"}, km to treatment</dt><dd className="num">{int(Math.round(c.km_before))} → {int(Math.round(c.km_after))}<small> · {int(Math.round(c.km_before) - Math.round(c.km_after))} km saved</small></dd></div>}
             <div><dt>People closer</dt><dd className="num">{int(s.totals.people_closer)}</dd></div>
             {c && <div><dt>Share treated to cure</dt><dd className="num">{one(c.curative_pct_before)}% → {one(c.curative_pct_after.median)}%<small> · range {one(c.curative_pct_after.lo)} to {one(c.curative_pct_after.hi)}</small></dd></div>}
             <div><dt>Patients a year</dt><dd className="num">{r0(s.totals.extra_per_year.median)}<small> · range {r0(s.totals.extra_per_year.lo)} to {r0(s.totals.extra_per_year.hi)}</small></dd></div>

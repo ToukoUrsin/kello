@@ -6,6 +6,8 @@ export const KindTag = ({ kind, title }: { kind: Kind | string; title?: string }
 
 const figRef = (f: PathwayFigure, what: string): SrcRef => ({ kind: f.kind, source_id: f.source_id, source_url: f.source_url, page: f.page, quote: f.quote, read_by: f.read_by, period: f.period, what, value: f.value == null ? null : `${one(f.value)}${f.unit === "%" ? "%" : f.unit ? ` ${f.unit}` : ""}` });
 const figText = (f: PathwayFigure) => (f.unit === "days" ? `${days(f.value)} days here, ${days(f.national)} in Finland` : `${one(f.value)}${f.unit === "%" ? "%" : ""} here, ${one(f.national)}${f.unit === "%" ? "%" : ""} in Finland`);
+/** A figure that does not say what it counts gets a few words in front. */
+const FIG: Record<string, string> = { "Alive one year after diagnosis": "alive after one year", "Lung clinic referrals handled in over 21 days": "referrals taking over 21 days" };
 const TONE: Record<string, string> = { here: "here", possibly_here: "maybe", not_behind: "ok", cannot_tell: "unknown" };
 
 /** The four questions of the care path, one after another; the step where patients are lost turns red. */
@@ -20,7 +22,7 @@ export function CarePathCard({ steps, national, shown, split, splitOn, lost }: {
               <i aria-hidden="true" />
               <div>
                 <b>{s.label_en}</b>
-                {f && <button className="st-fig num" onClick={() => openSource(figRef(f, f.label_en))} title={`${f.label_en}. Open the source.`}>{national ? `${f.unit === "days" ? `${days(f.value)} days` : `${one(f.value)}${f.unit === "%" ? "%" : ""}`} in Finland` : figText(f)}{f.kind !== "measured" && <> <KindTag kind={f.kind} /></>}</button>}
+                {f && <button className="st-fig num" onClick={() => openSource(figRef(f, f.label_en))} title={`${f.label_en}. Open the source.`}>{FIG[f.label_en] ? `${FIG[f.label_en]}: ` : ""}{national ? `${f.unit === "days" ? `${days(f.value)} days` : `${one(f.value)}${f.unit === "%" ? "%" : ""}`} in Finland` : figText(f)}{f.kind !== "measured" && <> <KindTag kind={f.kind} /></>}</button>}
               </div>
               {!national && <span className="st-verdict">{s.verdict_en}</span>}
             </li>
@@ -37,20 +39,22 @@ export function CarePathCard({ steps, national, shown, split, splitOn, lost }: {
   );
 }
 
-export interface LedgerRow { pin: PinM; on: boolean; off?: boolean; check?: CheckM | null; checkOn?: boolean; missOn?: boolean; effect?: { value: string; range: string; kind: string; basis?: string } | null; effectOn?: number }
+export interface LedgerRow { pin: PinM; on: boolean; off?: boolean; check?: CheckM | null; checkOn?: boolean; missOn?: boolean; effect?: { value: string; range: string; short?: string; kind: string; basis?: string } | null; effectOn?: number }
 
 /** The plan as it builds: what it costs, how many of the missing it reaches, and one row per action. */
 export interface Narrow { n: number; low: number; high: number; fresh: { n: number; eur: number; extra: number }; part: { n: number; eur: number; extra: number }; open: { n: number; eur: number; extra: number } }
 const dec = (x: number) => String(+x.toFixed(1));
 
-export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compact, sel, onSel, flyTo, narrow }: {
+export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compact, sel, onSel, flyTo, narrow, part }: {
   rows: LedgerRow[]; total: number; reached: number; of: number | null; lo: number; hi: number; rangeOn: boolean; unit: "extra" | "deaths"; compact: boolean; sel: string | null; onSel: (id: string) => void; flyTo: string | null; narrow?: Narrow | null;
+  /** On a phone the sum sits under the headline and the rows further down: the same ledger, drawn in two places. */
+  part?: "head" | "rows";
 }) {
   const per = unit === "deaths" ? "deaths avoided a year" : "patients a year";
   // The total is the sum of the rows on screen, never a number on its way somewhere: the headline shows the same value.
   return (
-    <div className="st-ledger">
-      {narrow ? (
+    <div className={"st-ledger" + (part ? ` ${part}` : "")}>
+      {part === "rows" ? null : narrow ? (
         <>
           <div className="st-total narrowed" key="n"><b className="num">{eurx(narrow.low)} to {eurx(narrow.high)}</b><span>a year</span></div>
           <ul className="st-narrow">
@@ -62,12 +66,12 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
       ) : (
         <div className="st-total"><b className="num">{eurx(Math.round(total))}</b><span>a year</span></div>
       )}
-      <p className={"st-reach" + (rangeOn ? " on" : "")}>
+      {part !== "rows" && <p className={"st-reach" + (rangeOn ? " on" : "")}>
         <span className="num">{narrow ? `If all ${narrow.n} are needed in full: ` : ""}{unit === "deaths" ? `about ${one(reached)} deaths avoided a year` : of != null ? `${narrow ? "reach" : "reaches"} about ${int(Math.round(reached))} of ${of} a year` : `about ${int(Math.round(reached))} more treated to cure a year`}</span>
         <span className="st-range num">range {int(Math.round(lo) || 0)} to {int(Math.round(hi) || 0)}</span>
         <KindTag kind="estimated" title="Modelled from the measured gap and each action's effect. The range starts at 0: no effect is possible." />
-      </p>
-      <ul className={compact ? "compact" : ""}>
+      </p>}
+      {part !== "head" && <ul className={compact ? "compact" : ""}>
         {rows.map(({ pin: p, on, off, check, checkOn, missOn, effect, effectOn = 0 }) => (
           <li key={p.id} className={(on ? "on" : "") + (off ? " off" : "") + (sel === p.id ? " sel" : "")}>
             <button onClick={() => onSel(p.id)} title={p.name} aria-pressed={sel === p.id}>
@@ -81,7 +85,7 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
                   {checkOn && missOn && check?.missing && <span className="st-miss" title={`Missing: ${check.missing}`}>Missing: {check.missing}</span>}
                   {effect && (
                     <span className={"st-effect num" + (effectOn > 0 ? " on" : "")} data-fly={flyTo === p.id ? "to" : undefined}>
-                      {effect.value}
+                      {effect.short ?? effect.value}
                       <span className={effectOn > 1 ? "on" : ""}> · range {effect.range}</span>
                       <span className={effectOn > 2 ? "on" : ""}> <KindTag kind={effect.kind} title={effect.basis} /></span>
                     </span>
@@ -92,7 +96,7 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
             {sel === p.id && <p className="st-full">{p.name}</p>}
           </li>
         ))}
-      </ul>
+      </ul>}
     </div>
   );
 }
@@ -108,11 +112,11 @@ export function PageCard({ p, on, quoteOn, i }: { p: PageM; on: boolean; quoteOn
   );
 }
 
-export const effectText = (e: Intervention["effect"]): { value: string; range: string } => {
+export const effectText = (e: Intervention["effect"]): { value: string; range: string; short: string } => {
   const f = (n: number) => String(+Math.abs(n).toFixed(2));
-  const unit = e.metric.endsWith("_pp") ? " points" : e.metric === "days" ? " days" : e.metric === "relative_days" ? " of the wait" : e.metric === "mortality_rr" ? " relative risk" : "";
+  const unit = e.metric === "curative_share_pp" ? " more per 100 patients treated to cure" : e.metric.endsWith("_pp") ? (Math.abs(e.value) === 1 ? " point" : " points") : e.metric === "days" ? " days" : e.metric === "relative_days" ? " of the wait" : e.metric === "mortality_rr" ? " relative risk" : "";
   const v = (n: number) => (e.metric === "relative_days" ? `${Math.round(Math.abs(n) * 100)}%` : f(n));
-  return { value: `${v(e.value)}${unit}`, range: `${v(e.lo)} to ${v(e.hi)}` };
+  return { value: `${v(e.value)}${unit}`, range: `${v(e.lo)} to ${v(e.hi)}`, short: e.metric === "curative_share_pp" ? `+${v(e.value)} per 100 patients` : `${v(e.value)}${unit}` };
 };
 
 /** One study behind an action's effect: what kind of study, how many patients, and the sentence the number comes from. */
