@@ -541,5 +541,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "cpp_pathway",
  "intervention_name_en": "Standardised lung cancer pathway with booked slots",
- "area_name_en": "West Uusimaa wellbeing services county"
+ "area_name_en": "West Uusimaa wellbeing services county",
+ "missing_short_en": "HUS plan for booked slots and step time limits",
+ "missing_short_by": "claude-opus-5-5"
 }

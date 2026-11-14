@@ -389,5 +389,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "travel_accommodation_support",
  "intervention_name_en": "Travel and accommodation support for patients far from the university hospital",
- "area_name_en": "Kainuu wellbeing services county"
+ "area_name_en": "Kainuu wellbeing services county",
+ "missing_short_en": "organised transport and a named contact booking stays",
+ "missing_short_by": "claude-opus-5-5"
 }

@@ -433,5 +433,7 @@
  "effect_label_en": "Effect size supported",
  "intervention_id": "smoking_cessation_at_diagnosis",
  "intervention_name_en": "Smoking cessation started at the first specialist visit",
- "area_name_en": "South Ostrobothnia wellbeing services county"
+ "area_name_en": "South Ostrobothnia wellbeing services county",
+ "missing_short_en": "standing cessation order for smokers at first lung visit",
+ "missing_short_by": "claude-opus-5-5"
 }

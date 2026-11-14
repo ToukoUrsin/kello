@@ -389,5 +389,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "smoking_cessation_at_diagnosis",
  "intervention_name_en": "Smoking cessation started at the first specialist visit",
- "area_name_en": "Pirkanmaa wellbeing services county"
+ "area_name_en": "Pirkanmaa wellbeing services county",
+ "missing_short_en": "cessation medication and counselling as standing first-visit order",
+ "missing_short_by": "claude-opus-5-5"
 }

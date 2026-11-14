@@ -509,5 +509,7 @@
  "effect_label_en": "Effect size supported",
  "intervention_id": "cpp_pathway",
  "intervention_name_en": "Standardised lung cancer pathway with booked slots",
- "area_name_en": "Satakunta wellbeing services county"
+ "area_name_en": "Satakunta wellbeing services county",
+ "missing_short_en": "pre-booked PET-CT",
+ "missing_short_by": "claude-opus-5-5"
 }

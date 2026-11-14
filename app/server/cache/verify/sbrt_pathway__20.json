@@ -389,5 +389,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "sbrt_pathway",
  "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
- "area_name_en": "Kainuu wellbeing services county"
+ "area_name_en": "Kainuu wellbeing services county",
+ "missing_short_en": "referral rule for frail stage I patients to precise radiotherapy",
+ "missing_short_by": "claude-opus-5-5"
 }

@@ -349,5 +349,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "gp_direct_ct",
  "intervention_name_en": "GP direct access to low-dose CT",
- "area_name_en": "Satakunta wellbeing services county"
+ "area_name_en": "Satakunta wellbeing services county",
+ "missing_short_en": "county confirmation of the pathway and published evaluation results",
+ "missing_short_by": "claude-opus-5-5"
 }

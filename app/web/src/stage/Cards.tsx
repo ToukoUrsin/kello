@@ -1,7 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { days, eur, eurx, int, Intervention, Kind, one, openSource, PathwayFigure, PathwayStep, SrcRef } from "../lib";
 import { CheckM, figureIn, PageM, PinM } from "./model";
-import { useTween } from "./timeline";
 
 export const KindTag = ({ kind, title }: { kind: Kind | string; title?: string }) => <span className={`tag ${kind}`} title={title}>{kind}</span>;
 
@@ -38,25 +37,38 @@ export function CarePathCard({ steps, national, shown, split, splitOn, lost }: {
   );
 }
 
-export interface LedgerRow { pin: PinM; on: boolean; off?: boolean; check?: CheckM | null; checkOn?: boolean; effect?: { value: string; range: string; kind: string; basis?: string } | null; effectOn?: number }
+export interface LedgerRow { pin: PinM; on: boolean; off?: boolean; check?: CheckM | null; checkOn?: boolean; missOn?: boolean; effect?: { value: string; range: string; kind: string; basis?: string } | null; effectOn?: number }
 
 /** The plan as it builds: what it costs, how many of the missing it reaches, and one row per action. */
-export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compact, sel, onSel, still, flyTo }: {
-  rows: LedgerRow[]; total: number; reached: number; of: number | null; lo: number; hi: number; rangeOn: boolean; unit: "extra" | "deaths"; compact: boolean; sel: string | null; onSel: (id: string) => void; still: boolean; flyTo: string | null;
+export interface Narrow { n: number; low: number; high: number; fresh: { n: number; eur: number; extra: number }; part: { n: number; eur: number; extra: number }; open: { n: number; eur: number; extra: number } }
+const dec = (x: number) => String(+x.toFixed(1));
+
+export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compact, sel, onSel, flyTo, narrow }: {
+  rows: LedgerRow[]; total: number; reached: number; of: number | null; lo: number; hi: number; rangeOn: boolean; unit: "extra" | "deaths"; compact: boolean; sel: string | null; onSel: (id: string) => void; flyTo: string | null; narrow?: Narrow | null;
 }) {
-  const t = useTween(total, 500, still);
+  const per = unit === "deaths" ? "deaths avoided a year" : "patients a year";
+  // The total is the sum of the rows on screen, never a number on its way somewhere: the headline shows the same value.
   return (
     <div className="st-ledger">
-      <div className="st-total">
-        <b className="num">{eurx(Math.round(t))}</b><span>a year</span>
-      </div>
+      {narrow ? (
+        <>
+          <div className="st-total narrowed" key="n"><b className="num">{eurx(narrow.low)} to {eurx(narrow.high)}</b><span>a year</span></div>
+          <ul className="st-narrow">
+            {narrow.fresh.n > 0 && <li><i className="none" aria-hidden="true" /><span><b>{narrow.fresh.n} with no public sign of it:</b> <span className="num">{eurx(narrow.fresh.eur)}, about {dec(narrow.fresh.extra)} {per}</span></span></li>}
+            <li><i className="partly" aria-hidden="true" /><span><b>{narrow.part.n} partly in place:</b> <span className="num">up to {eurx(narrow.part.eur)} for what is missing, up to {dec(narrow.part.extra)} {per}</span></span></li>
+            {narrow.open.n > 0 && <li><i aria-hidden="true" /><span><b>{narrow.open.n} not checked yet:</b> <span className="num">{eurx(narrow.open.eur)}, about {dec(narrow.open.extra)} {per}</span></span></li>}
+          </ul>
+        </>
+      ) : (
+        <div className="st-total"><b className="num">{eurx(Math.round(total))}</b><span>a year</span></div>
+      )}
       <p className={"st-reach" + (rangeOn ? " on" : "")}>
-        <span className="num">{unit === "deaths" ? `about ${one(reached)} deaths avoided a year` : of != null ? `reaches about ${int(Math.round(reached))} of ${of} a year` : `about ${int(Math.round(reached))} more treated to cure a year`}</span>
+        <span className="num">{narrow ? `If all ${narrow.n} are needed in full: ` : ""}{unit === "deaths" ? `about ${one(reached)} deaths avoided a year` : of != null ? `${narrow ? "reach" : "reaches"} about ${int(Math.round(reached))} of ${of} a year` : `about ${int(Math.round(reached))} more treated to cure a year`}</span>
         <span className="st-range num">range {int(Math.round(lo) || 0)} to {int(Math.round(hi) || 0)}</span>
         <KindTag kind="estimated" title="Modelled from the measured gap and each action's effect. The range starts at 0: no effect is possible." />
       </p>
       <ul className={compact ? "compact" : ""}>
-        {rows.map(({ pin: p, on, off, check, checkOn, effect, effectOn = 0 }) => (
+        {rows.map(({ pin: p, on, off, check, checkOn, missOn, effect, effectOn = 0 }) => (
           <li key={p.id} className={(on ? "on" : "") + (off ? " off" : "") + (sel === p.id ? " sel" : "")}>
             <button onClick={() => onSel(p.id)} title={p.name} aria-pressed={sel === p.id}>
               <i className="num">{p.count ?? p.n}</i>
@@ -64,7 +76,9 @@ export function Ledger({ rows, total, reached, of, lo, hi, rangeOn, unit, compac
               <span className="num st-cost">{p.count != null ? eur(p.eur) : eurx(p.eur)}</span>
               {!compact && (
                 <span className="st-row2">
+                  {!(checkOn && check?.advice) && effectOn === 0 && on && <span className="st-per num">{p.extra < 0.05 ? "finds the cause, moves no patient by itself" : `about ${dec(p.extra)} ${per}`}</span>}
                   {check?.advice && <em className={"st-advice" + (checkOn ? " on" : "")}>{check.advice}</em>}
+                  {checkOn && missOn && check?.missing && <span className="st-miss" title={`Missing: ${check.missing}`}>Missing: {check.missing}</span>}
                   {effect && (
                     <span className={"st-effect num" + (effectOn > 0 ? " on" : "")} data-fly={flyTo === p.id ? "to" : undefined}>
                       {effect.value}

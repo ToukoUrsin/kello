@@ -389,5 +389,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "cpp_pathway",
  "intervention_name_en": "Standardised lung cancer pathway with booked slots",
- "area_name_en": "Southwest Finland wellbeing services county"
+ "area_name_en": "Southwest Finland wellbeing services county",
+ "missing_short_en": "booked test slots, named pathway owner, step time limits",
+ "missing_short_by": "claude-opus-5-5"
 }

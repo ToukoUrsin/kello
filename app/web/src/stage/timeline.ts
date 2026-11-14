@@ -5,7 +5,7 @@ export const ACTS = [
   { id: "gap", label: "The gap", ms: 8000 },
   { id: "where", label: "Where they are lost", ms: 10000 },
   { id: "plan", label: "The plan", ms: 10000 },
-  { id: "check", label: "The check", ms: 15000 },
+  { id: "check", label: "The check", ms: 17500 },
   { id: "evidence", label: "The evidence", ms: 8000 },
   { id: "sim", label: "The simulation", ms: 12000 },
 ] as const;
@@ -13,10 +13,10 @@ export const LAST = ACTS.length - 1;
 
 /** When things happen inside each act (ms from the start of the act). One place, so the picture is the same every run. */
 export const T = {
-  gap: { fillEnd: 2800, dotsFrom: 3100, dotsEnd: 6400, headline: 6400 },
+  gap: { fillEnd: 2600, dotsFrom: 2800, dotsEnd: 5400, headline: 5400 },
   where: { places: 900, line: 1900, lineLabel: 2700, step: [3300, 4100, 4900, 5700], split: 6500 },
   plan: { first: 700, every: 1150, range: 8200 },
-  check: { query0: 300, queryEvery: 600, page0: 2900, pageEvery: 2600, quoteAfter: 900, verdict: 8200, advice: 8900, rest0: 9800, restEvery: 1000 },
+  check: { query0: 300, queryEvery: 600, page0: 2900, pageEvery: 2600, quoteAfter: 900, verdict: 8200, advice: 8900, rest0: 9800, restEvery: 600, restSpan: 2600, narrowAfter: 0 },
   evidence: { quote: 900, fly: 2600, value: 3500, range: 4300, kind: 5100 },
   sim: { year0: 400, yearEvery: 2700, ask: 9000 },
 };

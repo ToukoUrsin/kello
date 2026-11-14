@@ -543,7 +543,22 @@ def present(res: dict) -> dict:
         res["verdict_en"] = f"The live check could not finish, so this measure is unchecked. {why} Try again in a minute."
         res["in_use_label_en"] = res["effect_label_en"] = "Not checked"
     res.setdefault("from_cache", False)
+    if use in ("partly", "planned", "yes") and not res.get("missing_short_en"):
+        res["missing_short_en"] = missing_short(res.get("missing_en"))
     return res
+
+
+def missing_short(missing: str | None) -> str | None:
+    """A few words for a pin, cut from the check's own "what is missing" sentence: its first clause, without the
+    "No page shows" opening. The stored checks carry a shorter phrase written once from the same sentence
+    (integrations/missing_short.py); this is what a fresh live check gets."""
+    s = re.sub(r"\s+", " ", missing or "").strip().rstrip(".")
+    if not s:
+        return None
+    s = re.sub(r"^(?:I found )?no (?:public )?(?:page|source|site)s? (?:read )?(?:shows?|says?|describes?|mentions?|confirms?|states?)\s*(?:that\s+)?", "", s, flags=re.I)
+    s = re.split(r",| or that | or any | before | - ", s, maxsplit=1)[0].strip()
+    words = s.split()
+    return (" ".join(words[:12]) + ("…" if len(words) > 12 else "")) or None
 
 
 def question_for(iv: dict, area_id: str | None) -> tuple[str, str, str]:

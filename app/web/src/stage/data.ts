@@ -1,4 +1,4 @@
-import { ApiError, Interval, Kind } from "../lib";
+import { ApiError, Interval, Kind, sleep, VerifyResult } from "../lib";
 
 /* ---------- the map stage: shapes of the answers it draws ---------- */
 export interface StageHospital { id: string; name_en: string; city: string; lat: number; lon: number }
@@ -35,14 +35,22 @@ export interface SimPlan {
 
 /** `null` = the server does not have this answer (yet); anything else that fails is an error the caller shows as a quiet line. */
 async function ask<T>(path: string, body?: unknown): Promise<T | null> {
-  let res: Response;
-  try { res = await fetch(path, body === undefined ? undefined : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }); }
-  catch { throw new ApiError("Kello did not answer.", 0); }
+  let res: Response | null = null;
+  // A dropped connection or a busy server is asked again before it counts as a failure; the view then keeps asking.
+  for (let i = 0; ; i++) {
+    try { res = await fetch(path, body === undefined ? undefined : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }); } catch { res = null; }
+    if ((res === null || [502, 503, 504].includes(res.status)) && i < AGAIN_MS.length) { await sleep(AGAIN_MS[i]); continue; }
+    break;
+  }
+  if (res === null) throw new ApiError("Kello did not answer.", 0);
   if ([404, 405, 501].includes(res.status)) return null;
   if (!res.ok) throw new ApiError("That part of Kello did not answer.", res.status);
   return (await res.json()) as T;
 }
+const AGAIN_MS = [400, 1200, 3000];
 export const stageApi = {
+  /** The stored web checks of one county. A failed load is an error, never "no checks". */
+  checks: (area_id: string) => ask<{ checks?: VerifyResult[] }>(`/api/verify/latest?area_id=${encodeURIComponent(area_id)}`).then((r) => r?.checks ?? []),
   stage: () => ask<StagePayload>("/api/stage"),
   scenario: (sites: { lat: number; lon: number; kind: SiteKind }[], cost_eur_per_year?: number | null) => ask<Scenario>("/api/scenario", { sites, ...(cost_eur_per_year != null ? { cost_eur_per_year } : {}) }),
   budgetCurve: (scope: string, objective?: string | null, exclude?: string[]) => ask<BudgetCurve>("/api/budget-curve", { scope, ...(objective ? { objective } : {}), ...(exclude?.length ? { exclude } : {}) }),

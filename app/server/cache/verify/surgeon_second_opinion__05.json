@@ -402,5 +402,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "surgeon_second_opinion",
  "intervention_name_en": "Thoracic surgeon reviews every decision not to operate",
- "area_name_en": "Southwest Finland wellbeing services county"
+ "area_name_en": "Southwest Finland wellbeing services county",
+ "missing_short_en": "confirmation of a chest surgeon in lung cancer meetings",
+ "missing_short_by": "claude-opus-5-5"
 }

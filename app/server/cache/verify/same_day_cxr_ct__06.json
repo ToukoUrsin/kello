@@ -349,5 +349,7 @@
  "effect_label_en": "Effect size supported",
  "intervention_id": "same_day_cxr_ct",
  "intervention_name_en": "Same-day chest X-ray report with immediate CT",
- "area_name_en": "Satakunta wellbeing services county"
+ "area_name_en": "Satakunta wellbeing services county",
+ "missing_short_en": "same-day chest X-ray reporting and radiology-triggered same-day CT",
+ "missing_short_by": "claude-opus-5-5"
 }

@@ -1,7 +1,7 @@
 {
  "version": "v3-care-path-4",
  "title": "Lapland: 5.2 more lung cancer patients a year treated to cure, for €211,500 a year",
- "markdown": "# Lapland: 5.2 more lung cancer patients a year treated to cure, for €211,500 a year\n\n> Closes 5.2 of 12.1 missing patients a year (43%) · €211,500 of €1.00M · €788,500 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year. [^care_curative] Compared with the best quarter of counties, 16.8 a year are missing (range 12.6–20.8). [^model] Against Finland, 7.2 fewer are operated and 4.9 fewer get radiotherapy that aims to cure. [^model] In the OYS collaborative area, patients do not wait longer: 31.2 days from diagnosis to treatment, against 36.9 in Finland. [^care_time_to_treatment] Fewer are treated to cure. [^care_curative] The share is below the 24.6% that residents' age predicts. [^model] Some of the gap may be unrecorded treatment. [^care_no_record]\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 18.5% to 22.2% by 2028: 5.2 more patients a year (range 0.0–7.7), for €211,500 a year, about €40,000 per extra patient. [^care_curative][^model] That closes 43% of the measured shortfall against Finland as a whole (12.1 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **Step zero: fix the records (no direct effect)** | | | | |\n| 0 | **Check the charts of patients with no treatment on record**[^ev_recording_audit_1]. Chief physician of oncology and the head of clinical coding | €8,000 | 0.0 | Pull 50 patients diagnosed in 2023 with no treatment on record and check their charts this month. | Share of patients with no treatment on record: 33.8% → 27.5% by 2027 |\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €30,400 | 1.1 (0.0–2.3) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 18.5% → 19.3% by 2028 |\n| 2 | **Travel and hotel paid for patients far from the university hospital**[^ev_travel_accommodation_support_1]. Chief physician of oncology and hospital social work; university hospital patient hotel | €43,600 | 0.7 (0.0–0.7) | Name one contact person who books the patient hotel and transport for every patient sent to the university hospital for curative treatment. | Share of patients who get treatment that aims to cure: 18.5% → 19.0% by 2028 |\n| 3 | **Fitness test and training before anyone is ruled too frail for curative treatment**[^ev_prehab_fitness_assessment_1]. Chief physician of pulmonology; leads of rehabilitation and geriatrics | €37,500 | 0.3 (0.0–0.3) | Decide that no stage I-III patient is recorded as \"not fit\" without an exercise test, and book the physiotherapy group. | Share of patients who get treatment that aims to cure: 18.5% → 18.7% by 2028 |\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 4 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 1.7 (0.0–3.4) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 9.8% → 11.0% by 2028 |\n| 5 | **Weekly video review of every stage I-III patient with the university hospital's specialists**[^ev_video_mdt_stage1_3_1]. Chief physician of pulmonology; lead of the university hospital lung MDT | €51,000 | 1.4 (0.0–1.6) | Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there. | Share of patients who get treatment that aims to cure: 18.5% → 19.5% by 2028 |\n| | **Total** | **€211,500** | **5.2 (0.0–7.7)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €548,645 a year; modelled to avoid 0.9 deaths a year (0.2–2.4). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 18.5% (2019–2023, measured) → 22.2% by 2028. [^care_curative][^model]\n- Share of patients with no treatment on record: 33.8% → 27.5% by 2027. [^care_no_record][^model]\n- Share of patients operated: 9.8% → 11.0% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nIn the model, the remaining €788,500 buys nothing more. [^model] €211,500 already funds every measure that adds patients treated to cure, and the reachable shortfall limits these measures, not money. [^model] To see what else the money could do, look at measures that need a national decision, such as low-dose CT screening for long-term heavy smokers, or rank measures by deaths avoided. [^model] About 110 people a year die of lung cancer in Lapland, and this plan is modelled to avoid 0.8 of those deaths (range 0.0–2.3). [^deaths] [^model]\n\n## Pilot ask\n\nSix months with Lapland and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate. [^model]\n\n## Limits\n\n- Effects are assumptions, not trial results. Each range runs from all lower bounds to all upper bounds together and is not a probability. [^model]\n- Shares are adjusted only for residents' age, not stage, fitness, other illness, histology, how cancer was found, smoking, treatment elsewhere or recording. County figures cannot show cause. [^model]\n- 33.8% have no treatment on record (Finland 27.5%), and some treatment was likely given but not recorded. Audit charts before reading this as a gap in care. [^care_no_record]",
+ "markdown": "# Lapland: 5.2 more lung cancer patients a year treated to cure, for €211,500 a year\n\n> Closes 5.2 of 12.1 missing patients a year (43%) · €211,500 of €1.00M · €788,500 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year. [^care_curative] Against the best quarter of counties, 16.8 a year are missing (range 12.6–20.8). [^care_curative][^model] Against Finland, 7.2 fewer are operated and 4.9 fewer get radiotherapy aiming to cure. [^model] In the OYS collaborative area, patients wait no longer: 31.2 days from diagnosis to treatment, Finland 36.9. [^care_time_to_treatment] Fewer are treated to cure. [^care_curative] The share is below the 24.6% residents' age predicts. [^model] Part may be unrecorded treatment. [^care_no_record]\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 18.5% to 22.2% by 2028: 5.2 more patients a year (range 0.0–7.7), for €211,500 a year, about €40,000 per extra patient. [^care_curative][^model] That closes 43% of the measured shortfall against Finland as a whole (12.1 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **Step zero: fix the records (no direct effect)** | | | | |\n| 0 | **Check the charts of patients with no treatment on record**[^ev_recording_audit_1]. Chief physician of oncology and the head of clinical coding | €8,000 | 0.0 | Pull 50 patients diagnosed in 2023 with no treatment on record and check their charts this month. | Share of patients with no treatment on record: 33.8% → 27.5% by 2027 |\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €30,400 | 1.1 (0.0–2.3) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 18.5% → 19.3% by 2028 |\n| 2 | **Travel and hotel paid for patients far from the university hospital**[^ev_travel_accommodation_support_1]. Chief physician of oncology and hospital social work; university hospital patient hotel | €43,600 | 0.7 (0.0–0.7) | Name one contact person who books the patient hotel and transport for every patient sent to the university hospital for curative treatment. | Share of patients who get treatment that aims to cure: 18.5% → 19.0% by 2028 |\n| 3 | **Fitness test and training before anyone is ruled too frail for curative treatment**[^ev_prehab_fitness_assessment_1]. Chief physician of pulmonology; leads of rehabilitation and geriatrics | €37,500 | 0.3 (0.0–0.3) | Decide that no stage I-III patient is recorded as \"not fit\" without an exercise test, and book the physiotherapy group. | Share of patients who get treatment that aims to cure: 18.5% → 18.7% by 2028 |\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 4 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 1.7 (0.0–3.4) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 9.8% → 11.0% by 2028 |\n| 5 | **Weekly video review of every stage I-III patient with the university hospital's specialists**[^ev_video_mdt_stage1_3_1]. Chief physician of pulmonology; lead of the university hospital lung MDT | €51,000 | 1.4 (0.0–1.6) | Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there. | Share of patients who get treatment that aims to cure: 18.5% → 19.5% by 2028 |\n| | **Total** | **€211,500** | **5.2 (0.0–7.7)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €548,645 a year; modelled to avoid 0.9 deaths a year (0.2–2.4). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 18.5% (2019–2023, measured) → 22.2% by 2028. [^care_curative][^model]\n- Share of patients with no treatment on record: 33.8% → 27.5% by 2027. [^care_no_record][^model]\n- Share of patients operated: 9.8% → 11.0% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nIn the model, the remaining €788,500 buys nothing more. [^model] The access measures are limited by the reachable part of the measured shortfall, not by money. [^model] Ranking measures by deaths avoided instead would also show other uses. [^model] Lung cancer causes about 110 deaths a year in Lapland. [^deaths] This plan is modelled to avoid 0.8 of them (range 0.0–2.3). [^deaths][^model]\n\n## Pilot ask\n\nSix months with Lapland and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate. [^model]\n\n## Limits\n\n- Effects are assumptions that no trial has measured. Each range runs from all lower bounds to all upper bounds together and is not a probability. [^model]\n- Shares are adjusted only for age, not stage, performance status, histology, smoking or recording. County figures cannot show cause. [^model]\n- 33.8% have no treatment on record (Finland 27.5%), and some was likely given but not recorded. Audit records before reading this as a gap in care. [^care_no_record][^model]",
  "claims": [
   {
    "text": "Of 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year.",
@@ -10,19 +10,20 @@
    ]
   },
   {
-   "text": "Compared with the best quarter of counties, 16.8 a year are missing (range 12.6–20.8).",
+   "text": "Against the best quarter of counties, 16.8 a year are missing (range 12.6–20.8).",
+   "source_ids": [
+    "care_curative",
+    "model"
+   ]
+  },
+  {
+   "text": "Against Finland, 7.2 fewer are operated and 4.9 fewer get radiotherapy aiming to cure.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Against Finland, 7.2 fewer are operated and 4.9 fewer get radiotherapy that aims to cure.",
-   "source_ids": [
-    "model"
-   ]
-  },
-  {
-   "text": "In the OYS collaborative area, patients do not wait longer: 31.2 days from diagnosis to treatment, against 36.9 in Finland.",
+   "text": "In the OYS collaborative area, patients wait no longer: 31.2 days from diagnosis to treatment, Finland 36.9.",
    "source_ids": [
     "care_time_to_treatment"
    ]
@@ -34,13 +35,13 @@
    ]
   },
   {
-   "text": "The share is below the 24.6% that residents' age predicts.",
+   "text": "The share is below the 24.6% residents' age predicts.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Some of the gap may be unrecorded treatment.",
+   "text": "Part may be unrecorded treatment.",
    "source_ids": [
     "care_no_record"
    ]
@@ -135,59 +136,77 @@
    ]
   },
   {
-   "text": "In the model, the remaining €788,500 buys nothing more. €211,500 already funds every measure that adds patients treated to cure, and the reachable shortfall limits these measures, not money.",
+   "text": "In the model, the remaining €788,500 buys nothing more.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "To see what else the money could do, look at measures that need a national decision, such as low-dose CT screening for long-term heavy smokers, or rank measures by deaths avoided.",
+   "text": "The access measures are limited by the reachable part of the measured shortfall, not by money.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "About 110 people a year die of lung cancer in Lapland, and this plan is modelled to avoid 0.8 of those deaths (range 0.0–2.3).",
+   "text": "Ranking measures by deaths avoided instead would also show other uses.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "Lung cancer causes about 110 deaths a year in Lapland.",
+   "source_ids": [
+    "deaths"
+   ]
+  },
+  {
+   "text": "This plan is modelled to avoid 0.8 of them (range 0.0–2.3).",
    "source_ids": [
     "deaths",
     "model"
    ]
   },
   {
-   "text": "Six months with Lapland and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+   "text": "Six months with Lapland and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Effects are assumptions, not trial results. Each range runs from all lower bounds to all upper bounds together and is not a probability.",
+   "text": "Effects are assumptions that no trial has measured. Each range runs from all lower bounds to all upper bounds together and is not a probability.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Shares are adjusted only for residents' age, not stage, fitness, other illness, histology, how cancer was found, smoking, treatment elsewhere or recording. County figures cannot show cause.",
+   "text": "Shares are adjusted only for age, not stage, performance status, histology, smoking or recording. County figures cannot show cause.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "33.8% have no treatment on record (Finland 27.5%), and some treatment was likely given but not recorded. Audit charts before reading this as a gap in care.",
+   "text": "33.8% have no treatment on record (Finland 27.5%), and some was likely given but not recorded. Audit records before reading this as a gap in care.",
    "source_ids": [
-    "care_no_record"
+    "care_no_record",
+    "model"
    ]
   }
  ],
  "review": {
-  "removed": [],
+  "removed": [
+   {
+    "sentence": "More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision.",
+    "reason": "The material lists screening only as needing a national decision; it gives no figure showing it would add curative treatment in Lapland. The sentence also had no source marker."
+   }
+  ],
   "flagged": [
    {
     "sentence": "The remaining €788,500 buys nothing more.",
-    "reason": "Had no source marker; added [^model]. Also stated a model result as fact; added 'In the model' as in the saturation note."
+    "reason": "This is a model result presented as fact, and it had no marker. Added 'In the model' and [^model]."
    },
    {
-    "sentence": "More would come from a national decision on low-dose CT screening for long-term heavy smokers, or from ranking measures by deaths avoided. [^model]",
-    "reason": "The source gives no figure showing these would add more. It only points to them as other uses of the money. Rewritten to match the saturation note."
+    "sentence": "Lung cancer causes about 110 deaths a year in Lapland.",
+    "reason": "This is a factual number with no marker of its own. Added [^deaths] and split it from the modelled sentence that follows."
    }
   ],
   "checked_by": "claude-opus-5-5 reviewer pass against the source material"
@@ -345,6 +364,18 @@
    "surgeon_second_opinion",
    "sbrt_pathway"
   ],
+  "missing": [
+   {
+    "intervention_id": "surgeon_second_opinion",
+    "in_use_here": "partly",
+    "missing_short_en": "chest surgeon review of Lapland stage I-II surgery refusals"
+   },
+   {
+    "intervention_id": "sbrt_pathway",
+    "in_use_here": "partly",
+    "missing_short_en": "referral rule and audit for inoperable stage I patients"
+   }
+  ],
   "ask_first": [
    {
     "intervention_id": "surgeon_second_opinion",
@@ -396,8 +427,8 @@
   },
   "comparison_en": "Vantaa and Kerava is the comparison because it has Finland's highest recorded curative share (35.6%): a reachable level, not a causal control.",
   "comparison_fi": "Vantaa ja Kerava on vertailu, koska siellä kirjattu parantavan hoidon osuus on Suomen korkein (35,6 %): tavoiteltava taso, ei kausaalinen verrokki.",
-  "targets_en": "Start the two actions the audit says are new: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
-  "targets_fi": "Käynnistetään ne kaksi toimea, jotka tarkistus osoittaa uusiksi: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
+  "targets_en": "Run the two actions that decide who is treated: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy. The web check found both partly in place at the university hospital, so the pilot does only the part the hospital confirms is missing.",
+  "targets_fi": "Tehdään ne kaksi toimea, jotka ratkaisevat, kuka saa parantavaa hoitoa: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon. Verkkotarkistuksen mukaan molemmat ovat yliopistosairaalassa osittain käytössä, joten pilotissa tehdään vain se osa, jonka sairaala vahvistaa puuttuvan.",
   "success": {
    "charts_audited": 50,
    "decisions_not_to_operate_reviewed": 22,
@@ -421,8 +452,8 @@
    "by_year": 2028,
    "kind": "estimated"
   },
-  "text_en": "Six months with Lapland and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
-  "text_fi": "Kuusi kuukautta Lapin hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
+  "text_en": "Six months with Lapland and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+  "text_fi": "Kuusi kuukautta Lapin hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja tehdään kahdesta hoitopäätöksen ratkaisevasta toimesta se osa, joka puuttuu. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 tehdään näistä kahdesta se, minkä sairaala vahvistaa puuttuvan. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
   "six_months": {
    "patients_seen": {
     "expected": 71.0,
@@ -512,7 +543,7 @@
   "What more money buys, and what it cannot",
   "Limits"
  ],
- "generated_at": "2026-11-14T11:04:40+00:00",
+ "generated_at": "2026-11-14T13:51:35+00:00",
  "generated_by": "claude-opus-5-5",
- "draft_markdown": "## The gap\nOf 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year. [^care_curative] Compared with the best quarter of counties, 16.8 a year are missing (range 12.6–20.8). [^model] Against Finland, 7.2 fewer are operated and 4.9 fewer get radiotherapy that aims to cure. [^model] In the OYS collaborative area, patients do not wait longer: 31.2 days from diagnosis to treatment, against 36.9 in Finland. [^care_time_to_treatment] Fewer are treated to cure. [^care_curative] The share is below the 24.6% that residents' age predicts. [^model] Some of the gap may be unrecorded treatment. [^care_no_record]\n\n## What more money buys, and what it cannot\nThe remaining €788,500 buys nothing more. €211,500 already funds every measure that adds patients treated to cure, and the reachable shortfall limits these measures, not money. [^model] More would come from a national decision on low-dose CT screening for long-term heavy smokers, or from ranking measures by deaths avoided. [^model] About 110 people a year die of lung cancer in Lapland, and this plan is modelled to avoid 0.8 of those deaths (range 0.0–2.3). [^deaths] [^model]\n\n## Limits\n- Effects are assumptions, not trial results. Each range runs from all lower bounds to all upper bounds together and is not a probability. [^model]\n- Shares are adjusted only for residents' age, not stage, fitness, other illness, histology, how cancer was found, smoking, treatment elsewhere or recording. County figures cannot show cause. [^model]\n- 33.8% have no treatment on record (Finland 27.5%), and some treatment was likely given but not recorded. Audit charts before reading this as a gap in care. [^care_no_record]"
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in Lapland, 18 get treatment that aims to cure. In Finland it is 27. That is about 12 patients a year. [^care_curative] Against the best quarter of counties, 16.8 a year are missing (range 12.6–20.8). [^care_curative][^model] Against Finland, 7.2 fewer are operated and 4.9 fewer get radiotherapy aiming to cure. [^model] In the OYS collaborative area, patients wait no longer: 31.2 days from diagnosis to treatment, Finland 36.9. [^care_time_to_treatment] Fewer are treated to cure. [^care_curative] The share is below the 24.6% residents' age predicts. [^model] Part may be unrecorded treatment. [^care_no_record]\n\n## What more money buys, and what it cannot\nThe remaining €788,500 buys nothing more. The access measures are limited by the reachable part of the measured shortfall, not by money. [^model] More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision. Ranking measures by deaths avoided instead would also show other uses. [^model] Lung cancer causes about 110 deaths a year in Lapland. This plan is modelled to avoid 0.8 of them (range 0.0–2.3). [^deaths][^model]\n\n## Limits\n- Effects are assumptions that no trial has measured. Each range runs from all lower bounds to all upper bounds together and is not a probability. [^model]\n- Shares are adjusted only for age, not stage, performance status, histology, smoking or recording. County figures cannot show cause. [^model]\n- 33.8% have no treatment on record (Finland 27.5%), and some was likely given but not recorded. Audit records before reading this as a gap in care. [^care_no_record][^model]"
 }

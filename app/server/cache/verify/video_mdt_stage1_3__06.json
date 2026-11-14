@@ -380,5 +380,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "video_mdt_stage1_3",
  "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
- "area_name_en": "Satakunta wellbeing services county"
+ "area_name_en": "Satakunta wellbeing services county",
+ "missing_short_en": "rule that every stage I–III patient is discussed first",
+ "missing_short_by": "claude-opus-5-5"
 }

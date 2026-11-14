@@ -525,5 +525,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "cpp_pathway",
  "intervention_name_en": "Standardised lung cancer pathway with booked slots",
- "area_name_en": "Pirkanmaa wellbeing services county"
+ "area_name_en": "Pirkanmaa wellbeing services county",
+ "missing_short_en": "published step time limits, pre-booked test slots, pathway owner",
+ "missing_short_by": "claude-opus-5-5"
 }

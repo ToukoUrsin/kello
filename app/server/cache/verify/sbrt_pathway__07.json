@@ -389,5 +389,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "sbrt_pathway",
  "intervention_name_en": "Stereotactic radiotherapy pathway for early cancer in patients who cannot be operated",
- "area_name_en": "Kanta-Häme wellbeing services county"
+ "area_name_en": "Kanta-Häme wellbeing services county",
+ "missing_short_en": "written stage I referral rule and audit",
+ "missing_short_by": "claude-opus-5-5"
 }

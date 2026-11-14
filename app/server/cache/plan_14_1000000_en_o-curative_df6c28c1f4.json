@@ -1,7 +1,7 @@
 {
  "version": "v3-care-path-4",
  "title": "North Karelia: 3.1 more lung cancer patients a year treated to cure, for €146,000 a year",
- "markdown": "# North Karelia: 3.1 more lung cancer patients a year treated to cure, for €146,000 a year\n\n> Closes 3.1 of 5.7 missing patients a year (54%) · €146,000 of €1.00M · €854,000 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in North Karelia, 21 get treatment that aims to cure. In Finland it is 27. That is about 6 patients a year. [^care_curative] Compared with the best quarter of counties, 9.1 patients a year are missing (range 5.3–12.7). [^care_curative] [^model] Compared with Finland as a whole, the shortfall splits into 1.0 patient a year operated and 4.7 given radiotherapy that aims to cure; the operated share on its own is within the range chance allows. [^care_curative] [^care_surgery] [^model] Patients in the KYS collaborative area do not wait longer than in Finland: 29.4 against 36.9 days from diagnosis to treatment. [^care_time_to_treatment] Fewer are treated to cure. [^care_curative]\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 21.4% to 24.4% by 2028: 3.1 more patients a year (range 0.0–4.2), for €146,000 a year, about €47,000 per extra patient. [^care_curative][^model] That closes 54% of the measured shortfall against Finland as a whole (5.7 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €22,400 | 0.8 (0.0–1.6) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 21.4% → 22.2% by 2028 |\n| 2 | **Travel and hotel paid for patients far from the university hospital**[^ev_travel_accommodation_support_1]. Chief physician of oncology and hospital social work; university hospital patient hotel | €31,600 | 0.3 (0.0–0.3) | Name one contact person who books the patient hotel and transport for every patient sent to the university hospital for curative treatment. | Share of patients who get treatment that aims to cure: 21.4% → 21.7% by 2028 |\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 3 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 1.1 (0.0–1.1) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 13.9% → 14.9% by 2028 |\n| 4 | **Weekly video review of every stage I-III patient with the university hospital's specialists**[^ev_video_mdt_stage1_3_1]. Chief physician of pulmonology; lead of the university hospital lung MDT | €51,000 | 0.9 (0.0–1.3) | Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there. | Share of patients who get treatment that aims to cure: 21.4% → 22.3% by 2028 |\n| | **Total** | **€146,000** | **3.1 (0.0–4.2)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €504,254 a year; modelled to avoid 0.9 deaths a year (0.2–2.2). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 21.4% (2019–2023, measured) → 24.4% by 2028. [^care_curative][^model]\n- Share of patients operated: 13.9% → 14.9% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nIn the model, the remaining €854,000 buys nothing more. [^model] €146,000 a year already buys every measure that adds patients treated to cure, and these measures are limited by the reachable shortfall, not money. [^model] Adding more would need a national decision on low-dose CT screening for long-term heavy smokers, or ranking measures by deaths avoided instead. [^model] Lung cancer causes about 81 deaths a year in North Karelia, and this plan is modelled to avoid 0.5 of them a year. [^deaths] [^model]\n\n## Pilot ask\n\nSix months with North Karelia and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate. [^model]\n\n## Limits\n\n- Effects are ranges, not probabilities: the lowest and highest values when every assumed effect moves together. No trial has measured them. [^model]\n- Shares are adjusted only for residents' age, not stage, fitness, histology, smoking or recording. County figures cannot show cause. [^model]\n- The symptom-to-treatment clock is estimated, not measured. In a check, 0 of 3 measured outcomes matched it beyond chance. [^model]",
+ "markdown": "# North Karelia: 3.1 more lung cancer patients a year treated to cure, for €146,000 a year\n\n> Closes 3.1 of 5.7 missing patients a year (54%) · €146,000 of €1.00M · €854,000 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in North Karelia, 21 get treatment that aims to cure. In Finland it is 27. That is about 6 patients a year. [^care_curative] Compared with the best quarter of counties, 9.1 patients a year are missing (range 5.3–12.7) [^model]. Compared with Finland as a whole, these missing patients split into 1.0 a year not operated and 4.7 a year not given radiotherapy that aims to cure; the share operated on its own is within the range chance allows [^model] [^care_surgery]. Patients in the KYS collaborative area do not wait longer: 29.4 days from diagnosis to first treatment, against 36.9 in Finland [^care_time_to_treatment]. Fewer are treated to cure [^care_curative].\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 21.4% to 24.4% by 2028: 3.1 more patients a year (range 0.0–4.2), for €146,000 a year, about €47,000 per extra patient. [^care_curative][^model] That closes 54% of the measured shortfall against Finland as a whole (5.7 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €22,400 | 0.8 (0.0–1.6) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 21.4% → 22.2% by 2028 |\n| 2 | **Travel and hotel paid for patients far from the university hospital**[^ev_travel_accommodation_support_1]. Chief physician of oncology and hospital social work; university hospital patient hotel | €31,600 | 0.3 (0.0–0.3) | Name one contact person who books the patient hotel and transport for every patient sent to the university hospital for curative treatment. | Share of patients who get treatment that aims to cure: 21.4% → 21.7% by 2028 |\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 3 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 1.1 (0.0–1.1) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 13.9% → 14.9% by 2028 |\n| 4 | **Weekly video review of every stage I-III patient with the university hospital's specialists**[^ev_video_mdt_stage1_3_1]. Chief physician of pulmonology; lead of the university hospital lung MDT | €51,000 | 0.9 (0.0–1.3) | Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there. | Share of patients who get treatment that aims to cure: 21.4% → 22.3% by 2028 |\n| | **Total** | **€146,000** | **3.1 (0.0–4.2)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €504,254 a year; modelled to avoid 0.9 deaths a year (0.2–2.2). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 21.4% (2019–2023, measured) → 24.4% by 2028. [^care_curative][^model]\n- Share of patients operated: 13.9% → 14.9% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\n€146,000 buys every measure that adds to this objective [^model]. In the model, the remaining €854,000 buys nothing more, because the reachable part of the shortfall limits the access measures, not money [^model]. Lung cancer causes about 81 deaths a year in North Karelia, and this plan is modelled to avoid 0.5 of them (range 0.0–1.2) [^deaths] [^model].\n\n## Pilot ask\n\nSix months with North Karelia and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate. [^model]\n\n## Limits\n\n- Each effect is given as a range, not a probability [^model]. The range runs from all assumed effect sizes at their lowest to all at their highest [^model].\n- The expected share is adjusted only for residents' age, not for stage at diagnosis, other illness, smoking or recording completeness [^model]. County figures cannot show cause [^model].\n- In a check, 0 of 3 measured outcomes matched the estimated symptom-to-treatment clock beyond chance [^model].",
  "claims": [
   {
    "text": "Of 100 lung cancer patients in North Karelia, 21 get treatment that aims to cure. In Finland it is 27. That is about 6 patients a year.",
@@ -10,29 +10,11 @@
    ]
   },
   {
-   "text": "Compared with the best quarter of counties, 9.1 patients a year are missing (range 5.3–12.7).",
+   "text": "Compared with the best quarter of counties, 9.1 patients a year are missing (range 5.3–12.7) . Compared with Finland as a whole, these missing patients split into 1.0 a year not operated and 4.7 a year not given radiotherapy that aims to cure; the share operated on its own is within the range chance allows . Patients in the KYS collaborative area do not wait longer: 29.4 days from diagnosis to first treatment, against 36.9 in Finland . Fewer are treated to cure .",
    "source_ids": [
-    "care_curative",
-    "model"
-   ]
-  },
-  {
-   "text": "Compared with Finland as a whole, the shortfall splits into 1.0 patient a year operated and 4.7 given radiotherapy that aims to cure; the operated share on its own is within the range chance allows.",
-   "source_ids": [
-    "care_curative",
+    "model",
     "care_surgery",
-    "model"
-   ]
-  },
-  {
-   "text": "Patients in the KYS collaborative area do not wait longer than in Finland: 29.4 against 36.9 days from diagnosis to treatment.",
-   "source_ids": [
-    "care_time_to_treatment"
-   ]
-  },
-  {
-   "text": "Fewer are treated to cure.",
-   "source_ids": [
+    "care_time_to_treatment",
     "care_curative"
    ]
   },
@@ -107,44 +89,32 @@
    ]
   },
   {
-   "text": "In the model, the remaining €854,000 buys nothing more. €146,000 a year already buys every measure that adds patients treated to cure, and these measures are limited by the reachable shortfall, not money.",
+   "text": "€146,000 buys every measure that adds to this objective . In the model, the remaining €854,000 buys nothing more, because the reachable part of the shortfall limits the access measures, not money . Lung cancer causes about 81 deaths a year in North Karelia, and this plan is modelled to avoid 0.5 of them (range 0.0–1.2) .",
+   "source_ids": [
+    "model",
+    "deaths"
+   ]
+  },
+  {
+   "text": "Six months with North Karelia and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Adding more would need a national decision on low-dose CT screening for long-term heavy smokers, or ranking measures by deaths avoided instead.",
+   "text": "Each effect is given as a range, not a probability . The range runs from all assumed effect sizes at their lowest to all at their highest .",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Lung cancer causes about 81 deaths a year in North Karelia, and this plan is modelled to avoid 0.5 of them a year.",
-   "source_ids": [
-    "deaths",
-    "model"
-   ]
-  },
-  {
-   "text": "Six months with North Karelia and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+   "text": "The expected share is adjusted only for residents' age, not for stage at diagnosis, other illness, smoking or recording completeness . County figures cannot show cause .",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Effects are ranges, not probabilities: the lowest and highest values when every assumed effect moves together. No trial has measured them.",
-   "source_ids": [
-    "model"
-   ]
-  },
-  {
-   "text": "Shares are adjusted only for residents' age, not stage, fitness, histology, smoking or recording. County figures cannot show cause.",
-   "source_ids": [
-    "model"
-   ]
-  },
-  {
-   "text": "The symptom-to-treatment clock is estimated, not measured. In a check, 0 of 3 measured outcomes matched it beyond chance.",
+   "text": "In a check, 0 of 3 measured outcomes matched the estimated symptom-to-treatment clock beyond chance .",
    "source_ids": [
     "model"
    ]
@@ -153,18 +123,34 @@
  "review": {
   "removed": [
    {
-    "sentence": "This plan does not use the estimated symptom-to-treatment clock.",
-    "reason": "The material does not say the plan does not use the clock. It only calls the clock a secondary, estimated view. The unsupported claim was replaced with the supported statement that the clock is estimated, not measured."
+    "sentence": "More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided [^model].",
+    "reason": "The source does not say these would yield more; it only points the reader to the deaths objective and the national-decision measures to see other uses of the money."
+   },
+   {
+    "sentence": "The estimated symptom-to-treatment clock is not used in this plan.",
+    "reason": "Not stated in the source, which calls the clock a secondary view and says days saved is not a headline number. The following sentence was adjusted to name the clock instead of 'it'."
    }
   ],
   "flagged": [
    {
-    "sentence": "Compared with Finland as a whole, 1.0 fewer patients a year are operated and 4.7 fewer get radiotherapy that aims to cure. [^model]",
-    "reason": "The 1.0 and 4.7 are an arithmetic split of the curative shortfall. The operated share itself (13.9% vs 14.9%) is inside the range chance allows, so it cannot be presented as a real gap. Rewritten as a split of the shortfall, with that caveat and the matching sources added."
+    "sentence": "Compared with Finland as a whole, 1.0 fewer are operated and 4.7 fewer get radiotherapy that aims to cure each year [^model].",
+    "reason": "This is an arithmetic split of the shortfall. The share operated (13.9% vs 14.9%) is within the range chance allows, so 'fewer are operated' implied a gap that is not shown. Rewritten as a split and noted as within chance."
    },
    {
-    "sentence": "The remaining €854,000 buys nothing more.",
-    "reason": "The sentence had no source marker, and it presents a model result as a plain fact. Added 'In the model' and the [^model] marker."
+    "sentence": "The remaining €854,000 buys nothing more, because the reachable part of the shortfall limits the access measures, not money [^model].",
+    "reason": "This is a model result stated as fact. Added 'In the model', as in the source."
+   },
+   {
+    "sentence": "€146,000 buys every measure that adds to this objective.",
+    "reason": "The number had no source marker. Added [^model] (plan saturation note)."
+   },
+   {
+    "sentence": "Each effect is given as a range, not a probability.",
+    "reason": "The sentence had no source marker. Added [^model]."
+   },
+   {
+    "sentence": "Shares are adjusted only for residents' age, not for stage at diagnosis, other illness, smoking or recording completeness.",
+    "reason": "The measured shares are not adjusted; only the expected share in the model is. Rewritten and [^model] added."
    }
   ],
   "checked_by": "claude-opus-5-5 reviewer pass against the source material"
@@ -285,6 +271,18 @@
    "surgeon_second_opinion",
    "sbrt_pathway"
   ],
+  "missing": [
+   {
+    "intervention_id": "surgeon_second_opinion",
+    "in_use_here": "no_evidence",
+    "missing_short_en": null
+   },
+   {
+    "intervention_id": "sbrt_pathway",
+    "in_use_here": "partly",
+    "missing_short_en": "a rule that every stage I patient too frail for surgery is…"
+   }
+  ],
   "ask_first": [
    {
     "intervention_id": "sbrt_pathway",
@@ -329,8 +327,8 @@
   },
   "comparison_en": "Vantaa and Kerava is the comparison because it has Finland's highest recorded curative share (35.6%): a reachable level, not a causal control.",
   "comparison_fi": "Vantaa ja Kerava on vertailu, koska siellä kirjattu parantavan hoidon osuus on Suomen korkein (35,6 %): tavoiteltava taso, ei kausaalinen verrokki.",
-  "targets_en": "Start the two actions the audit says are new: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
-  "targets_fi": "Käynnistetään ne kaksi toimea, jotka tarkistus osoittaa uusiksi: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
+  "targets_en": "Start the two actions that decide who is treated: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
+  "targets_fi": "Käynnistetään ne kaksi toimea, jotka ratkaisevat, kuka saa parantavaa hoitoa: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
   "success": {
    "charts_audited": 50,
    "decisions_not_to_operate_reviewed": 14,
@@ -354,8 +352,8 @@
    "by_year": 2028,
    "kind": "estimated"
   },
-  "text_en": "Six months with North Karelia and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
-  "text_fi": "Kuusi kuukautta Pohjois-Karjalan hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
+  "text_en": "Six months with North Karelia and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+  "text_fi": "Kuusi kuukautta Pohjois-Karjalan hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja tehdään kahdesta hoitopäätöksen ratkaisevasta toimesta se osa, joka puuttuu. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 tehdään näistä kahdesta se, minkä sairaala vahvistaa puuttuvan. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
   "six_months": {
    "patients_seen": {
     "expected": 51.0,
@@ -435,7 +433,7 @@
   "What more money buys, and what it cannot",
   "Limits"
  ],
- "generated_at": "2026-11-14T11:00:40+00:00",
+ "generated_at": "2026-11-14T13:50:05+00:00",
  "generated_by": "claude-opus-5-5",
- "draft_markdown": "## The gap\nOf 100 lung cancer patients in North Karelia, 21 get treatment that aims to cure. In Finland it is 27. That is about 6 patients a year. [^care_curative] Compared with the best quarter of counties, 9.1 patients a year are missing (range 5.3–12.7). [^care_curative] [^model] Compared with Finland as a whole, 1.0 fewer patients a year are operated and 4.7 fewer get radiotherapy that aims to cure. [^model] Patients in the KYS collaborative area do not wait longer than in Finland: 29.4 against 36.9 days from diagnosis to treatment. [^care_time_to_treatment] Fewer are treated to cure. [^care_curative]\n\n## What more money buys, and what it cannot\nThe remaining €854,000 buys nothing more. €146,000 a year already buys every measure that adds patients treated to cure, and these measures are limited by the reachable shortfall, not money. [^model] Adding more would need a national decision on low-dose CT screening for long-term heavy smokers, or ranking measures by deaths avoided instead. [^model] Lung cancer causes about 81 deaths a year in North Karelia, and this plan is modelled to avoid 0.5 of them a year. [^deaths] [^model]\n\n## Limits\n- Effects are ranges, not probabilities: the lowest and highest values when every assumed effect moves together. No trial has measured them. [^model]\n- Shares are adjusted only for residents' age, not stage, fitness, histology, smoking or recording. County figures cannot show cause. [^model]\n- This plan does not use the estimated symptom-to-treatment clock. In a check, 0 of 3 measured outcomes matched it beyond chance. [^model]"
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in North Karelia, 21 get treatment that aims to cure. In Finland it is 27. That is about 6 patients a year. [^care_curative] Compared with the best quarter of counties, 9.1 patients a year are missing (range 5.3–12.7) [^model]. Compared with Finland as a whole, 1.0 fewer are operated and 4.7 fewer get radiotherapy that aims to cure each year [^model]. Patients in the KYS collaborative area do not wait longer: 29.4 days from diagnosis to first treatment, against 36.9 in Finland [^care_time_to_treatment]. Fewer are treated to cure [^care_curative].\n\n## What more money buys, and what it cannot\n€146,000 buys every measure that adds to this objective. The remaining €854,000 buys nothing more, because the reachable part of the shortfall limits the access measures, not money [^model]. More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided [^model]. Lung cancer causes about 81 deaths a year in North Karelia, and this plan is modelled to avoid 0.5 of them (range 0.0–1.2) [^deaths] [^model].\n\n## Limits\n- Each effect is given as a range, not a probability. The range runs from all assumed effect sizes at their lowest to all at their highest [^model].\n- Shares are adjusted only for residents' age, not for stage at diagnosis, other illness, smoking or recording completeness. County figures cannot show cause [^model].\n- The estimated symptom-to-treatment clock is not used in this plan. In a check, 0 of 3 measured outcomes matched it beyond chance [^model]."
 }

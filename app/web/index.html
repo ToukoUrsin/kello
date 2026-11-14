@@ -9,6 +9,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // A stylesheet or script that fails to load on a flaky network leaves a broken page: load the page again, at most three times.
+      addEventListener("error", function (e) {
+        var t = e.target;
+        if (!t || (t.tagName !== "LINK" && t.tagName !== "SCRIPT")) return;
+        try { var n = Number(sessionStorage.getItem("kello-again") || 0); if (n >= 3) return; sessionStorage.setItem("kello-again", String(n + 1)); } catch (x) { return; }
+        setTimeout(function () { location.reload(); }, 700);
+      }, true);
+      addEventListener("load", function () { setTimeout(function () { try { sessionStorage.removeItem("kello-again"); } catch (x) {} }, 5000); });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

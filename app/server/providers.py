@@ -1263,28 +1263,39 @@ def _pilot_for_ui(scope: str, path: dict | None, rows: list[dict]) -> dict | Non
     # The surgeon reviews patients without distant spread, not every non-operated patient (most of those have stage IV disease).
     reviewed = round(_no_spread_not_operated(patients / 2, surgery.get("value")))
     not_operated = round(no_surgery_6m)
+    # Why these two when the web check found them partly in place: what the check says is still missing, in its own words.
+    stored = {aid: (_read(SERVER / "cache" / "verify" / f"{aid}__{scope}.json") or {}) for aid in ids}
+    missing = [{"intervention_id": aid, "in_use_here": stored[aid].get("in_use_here"), "missing_short_en": stored[aid].get("missing_short_en")} for aid in ids]
+    partly = all(stored[aid].get("in_use_here") in ("partly", "planned") for aid in ids)
+    two_en = "a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy"
+    two_fi = "thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon"
+    targets_en = (f"Run the two actions that decide who is treated: {two_en}. The web check found both partly in place at the university hospital, "
+                  "so the pilot does only the part the hospital confirms is missing." if partly
+                  else f"Start the two actions that decide who is treated: {two_en}.")
+    targets_fi = (f"Tehdään ne kaksi toimea, jotka ratkaisevat, kuka saa parantavaa hoitoa: {two_fi}. Verkkotarkistuksen mukaan molemmat ovat "
+                  "yliopistosairaalassa osittain käytössä, joten pilotissa tehdään vain se osa, jonka sairaala vahvistaa puuttuvan." if partly
+                  else f"Käynnistetään ne kaksi toimea, jotka ratkaisevat, kuka saa parantavaa hoitoa: {two_fi}.")
     return {
-        "months": 6, "actions": ids,
+        "months": 6, "actions": ids, "missing": missing,
         "ask_first": checks,
         "audit": {"weeks": 8, "charts": 50, "cost_eur": 8000,
                    "fields_en": ["stage", "fitness", "biomarker tested", "why no curative treatment", "where treated"],
                    "fields_fi": ["levinneisyysaste", "toimintakyky", "biomarkkeri tutkittu", "miksi parantavaa hoitoa ei annettu", "missä hoito annettiin"]},
         "comparison_en": comparison_line_en, "comparison_fi": comparison_line_fi,
-        "targets_en": "Start the two actions the audit says are new: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
-        "targets_fi": "Käynnistetään ne kaksi toimea, jotka tarkistus osoittaa uusiksi: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
+        "targets_en": targets_en, "targets_fi": targets_fi,
         "success": {"charts_audited": 50, "decisions_not_to_operate_reviewed": reviewed, "decisions_changed": "count", "referrals_made": "count",
                     "patients_moved": {"model_estimate": round(extra / 2, 1), "lo": 0, "hi": round(hi / 2, 1), "kind": "estimated"}},
         "effect": {"extra_curative_patients_per_year": {"median": round(extra, 2), "lo": round(lo, 2), "hi": round(hi, 2)},
                     "curative_share_now_pct": float(cur.get("value") or 0), "curative_share_after_pct": round(after, 1),
                     "by_year": 2028, "kind": "estimated"},
-        "text_en": (f"Six months with {path.get('area_en') or scope} and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. "
+        "text_en": (f"Six months with {path.get('area_en') or scope} and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. "
                     "In week 1, take the stored web-check questions to the university hospital. "
                     "In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. "
-                    "In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate."),
-        "text_fi": (f"Kuusi kuukautta {_fi_place(path.get('area_fi') or scope)[1]} ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. "
+                    "In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate."),
+        "text_fi": (f"Kuusi kuukautta {_fi_place(path.get('area_fi') or scope)[1]} ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja tehdään kahdesta hoitopäätöksen ratkaisevasta toimesta se osa, joka puuttuu. "
                     "Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. "
                     "Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. "
-                    "Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio."),
+                    "Kuukausina 3–6 tehdään näistä kahdesta se, minkä sairaala vahvistaa puuttuvan. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio."),
         "six_months": {
             "patients_seen": {"expected": round(patients / 2, 1), "baseline": round(patients / 2, 1), "comparison": round(comp_patients / 2, 1), "unit": "patients"},
             "no_surgery_decisions_reviewed": {"expected": reviewed, "baseline": 0, "comparison": round(_no_spread_not_operated(comp_patients / 2, comp_s.get("value")), 1), "unit": "decisions",

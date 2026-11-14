@@ -358,5 +358,7 @@
  "effect_label_en": "Effect size supported",
  "intervention_id": "ldct_screening",
  "intervention_name_en": "Low-dose CT screening for long-term heavy smokers",
- "area_name_en": "North Ostrobothnia wellbeing services county"
+ "area_name_en": "North Ostrobothnia wellbeing services county",
+ "missing_short_en": "routine screening after the pilot and local participant numbers",
+ "missing_short_by": "claude-opus-5-5"
 }

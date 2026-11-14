@@ -545,5 +545,7 @@
  "effect_label_en": "Effect size supported",
  "intervention_id": "smoking_cessation_at_diagnosis",
  "intervention_name_en": "Smoking cessation started at the first specialist visit",
- "area_name_en": "North Savo wellbeing services county"
+ "area_name_en": "North Savo wellbeing services county",
+ "missing_short_en": "quit-smoking medicines and counselling at first KYS visit",
+ "missing_short_by": "claude-opus-5-5"
 }

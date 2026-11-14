@@ -351,5 +351,7 @@
  "intervention_id": "sbrt_pathway",
  "intervention_name_en": "Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated",
  "area_name_en": "Lapland wellbeing services county",
- "live_outcome": "first"
+ "live_outcome": "first",
+ "missing_short_en": "referral rule and audit for inoperable stage I patients",
+ "missing_short_by": "claude-opus-5-5"
 }

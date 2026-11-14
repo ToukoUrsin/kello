@@ -380,5 +380,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "smoking_cessation_at_diagnosis",
  "intervention_name_en": "Smoking cessation started at the first specialist visit",
- "area_name_en": "Southwest Finland wellbeing services county"
+ "area_name_en": "Southwest Finland wellbeing services county",
+ "missing_short_en": "routine cessation offer to every smoker at first visit",
+ "missing_short_by": "claude-opus-5-5"
 }

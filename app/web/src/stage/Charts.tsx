@@ -11,7 +11,7 @@ const nice = (lo: number, hi: number, n = 4): number[] => {
 };
 
 /** Share treated to cure by year: the plan against no plan, the spread of the simulated years, and Finland's share. */
-export function SimChart({ sim, upto, w, nat = true }: { sim: SimPlan; upto: number; w: number; nat?: boolean }) {
+export function SimChart({ sim, upto, w, nat = true, scope }: { sim: SimPlan; upto: number; w: number; nat?: boolean; scope?: string }) {
   const [hot, setHot] = useState<number | null>(null);
   const h = 176, m = { l: 34, r: 76, t: 12, b: 24 };
   const n = sim.band.length;
@@ -22,17 +22,21 @@ export function SimChart({ sim, upto, w, nat = true }: { sim: SimPlan; upto: num
   const line = (f: (i: number) => number) => sim.band.map((_, i) => `${i ? "L" : "M"}${X(i).toFixed(1)},${Y(f(i)).toFixed(1)}`).join("");
   const band = (lo: (i: number) => number, hi: (i: number) => number) => `${line(hi)}${sim.band.map((_, i) => `L${X(n - 1 - i).toFixed(1)},${Y(lo(n - 1 - i)).toFixed(1)}`).join("")}Z`;
   const B = sim.band, last = B[n - 1];
+  // One number per scope: the line is the model's expected share (the plan page shows the same figure); the band is the spread of the simulated years.
+  const plan = (i: number) => B[i].expected ?? B[i].p50;
+  const none = (i: number) => (B[i].expected != null ? sim.baseline_pct : B[i].no_plan_p50);
+  const what = scope ?? "the plan";
   const label = (i: number) => (i === 0 ? sim.baseline_period?.replace("-", "–").replace(/–20/, "–") ?? String(B[0].year) : String(B[i].year));
   const clipW = X(Math.max(0, Math.min(n - 1, upto))) + 3;
   const show = hot ?? Math.max(0, Math.min(n - 1, upto));
   // Three labels at the right edge: keep them apart.
   const natOn = nat && sim.national_pct != null;
-  const ends = [{ k: "plan", y: Y(last.p50), t: "with the plan" }, { k: "none", y: Y(last.no_plan_p50), t: "no plan" }, ...(natOn ? [{ k: "nat", y: Y(sim.national_pct as number), t: `Finland ${one(sim.national_pct)}` }] : [])].sort((a, b) => a.y - b.y);
+  const ends = [{ k: "plan", y: Y(plan(n - 1)), t: `plan ${one(plan(n - 1))}` }, { k: "none", y: Y(none(n - 1)), t: `no plan ${one(none(n - 1))}` }, ...(natOn ? [{ k: "nat", y: Y(sim.national_pct as number), t: `Finland ${one(sim.national_pct)}` }] : [])].sort((a, b) => a.y - b.y);
   for (let pass = 0; pass < 4; pass++) for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 13) { const mid = (ends[i].y + ends[i - 1].y) / 2; ends[i - 1].y = mid - 6.5; ends[i].y = mid + 6.5; }
   return (
     <figure className="st-chart">
-      <figcaption>Share treated to cure, % <span className="tag estimated">estimated</span></figcaption>
-      <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label={`Share treated to cure by year in ${sim.runs_total ?? ""} simulated runs: ${one(last.p50)}% with the plan in ${last.year}, ${one(last.no_plan_p50)}% without.`}
+      <figcaption>Share treated to cure, %, with {what} <span className="tag estimated">estimated</span></figcaption>
+      <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label={`Share treated to cure by year in ${sim.runs_total ?? ""} simulated runs: ${one(plan(n - 1))}% with ${what} in ${last.year}, ${one(none(n - 1))}% without.`}
         onMouseMove={(e) => { const r = e.currentTarget.getBoundingClientRect(); const i = Math.round(((e.clientX - r.left - m.l) / (w - m.l - m.r)) * (n - 1)); setHot(Math.max(0, Math.min(n - 1, i))); }} onMouseLeave={() => setHot(null)}>
         <defs><clipPath id="st-sim-clip"><rect x={0} y={0} width={clipW} height={h} style={{ transition: "width 700ms cubic-bezier(0.16,1,0.3,1)" }} /></clipPath></defs>
         {ticks.map((t) => <g key={t}><line x1={m.l} x2={w - m.r} y1={Y(t)} y2={Y(t)} className="st-grid" /><text x={m.l - 6} y={Y(t) + 4} textAnchor="end" className="st-tick">{t}</text></g>)}
@@ -42,16 +46,17 @@ export function SimChart({ sim, upto, w, nat = true }: { sim: SimPlan; upto: num
           <path d={band((i) => B[i].no_plan_p10, (i) => B[i].no_plan_p90)} className="st-band none" />
           <path d={band((i) => B[i].p10, (i) => B[i].p90)} className="st-band plan" />
           {(sim.runs ?? []).slice(0, 40).map((r, k) => <path key={k} d={r.map((v, i) => `${i ? "L" : "M"}${X(i).toFixed(1)},${Y(Math.max(y0, Math.min(y1, v))).toFixed(1)}`).join("")} className="st-runline" />)}
-          <path d={line((i) => B[i].no_plan_p50)} className="st-line none" />
-          <path d={line((i) => B[i].p50)} className="st-line plan" />
-          {B.map((b, i) => i > 0 && <circle key={i} cx={X(i)} cy={Y(b.p50)} r={3.5} className="st-pt" />)}
+          <path d={line(none)} className="st-line none" />
+          <path d={line(plan)} className="st-line plan" />
+          {B.map((_, i) => i > 0 && <circle key={i} cx={X(i)} cy={Y(plan(i))} r={3.5} className="st-pt" />)}
         </g>
         {ends.filter((e) => e.k === "nat" || upto >= n - 1).map((e) => <text key={e.k} x={w - m.r + 6} y={e.y + 4} className={"st-lab " + e.k}>{e.t}</text>)}
         {hot != null && <line x1={X(hot)} x2={X(hot)} y1={m.t} y2={h - m.b} className="st-cross" />}
       </svg>
       <p className="st-read num" aria-live="off">
-        <b>{label(show)}</b> with the plan {one(B[show].p50)}% <span className="muted">({one(B[show].p10)} to {one(B[show].p90)})</span> · no plan {one(B[show].no_plan_p50)}% <span className="muted">({one(B[show].no_plan_p10)} to {one(B[show].no_plan_p90)})</span>
+        <b>{label(show)}</b> with {what} {one(plan(show))}% <span className="muted">({one(B[show].p10)} to {one(B[show].p90)})</span> · no plan {one(none(show))}% <span className="muted">({one(B[show].no_plan_p10)} to {one(B[show].no_plan_p90)})</span>
       </p>
+      <p className="st-fine on">Line: what the model expects. Band: 8 of 10 simulated years.{sim.plan_above_no_plan_in_100 != null && upto >= n - 1 ? ` In ${sim.plan_above_no_plan_in_100} of 100 simulated ${last.year}s the share with the plan is above the share without.` : ""}</p>
     </figure>
   );
 }

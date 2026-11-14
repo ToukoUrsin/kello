@@ -40,7 +40,7 @@ Set `JUNCTION_OXYLABS_API_KEY`, `GEMINI_API_KEY`, and `ANTHROPIC_API_KEY`; set `
 - **Who does what on Monday.** One printable page per county (`#/monday/21`, Finnish or English): each row is one
   person's job, with the owner's role, the first step this week, the cost a year and what done looks like in 90 days.
 - **The ask.** Six months with Lapland and the Oulu university hospital. Week 1: ask the hospital which actions already
-  run. Weeks 1–8: audit 50 charts (€8,000). Months 3–6: start the two actions the audit says are new. Counted: about
+  run. Weeks 1–8: audit 50 charts (€8,000). Months 3–6: run the two actions that decide who is treated, for the part the hospital confirms is missing. Counted: about
   71 patients, about 22 decisions not to operate reviewed (patients whose cancer has not spread, at Finland's stage mix),
   decisions changed, referrals made. Model estimate: 18.5% → 20.5%
   treated to cure by 2028.

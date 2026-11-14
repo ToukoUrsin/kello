@@ -518,5 +518,7 @@
  "effect_label_en": "Works, size not shown",
  "intervention_id": "video_mdt_stage1_3",
  "intervention_name_en": "Video MDT review of every stage I-III patient with the university hospital",
- "area_name_en": "Kymenlaakso wellbeing services county"
+ "area_name_en": "Kymenlaakso wellbeing services county",
+ "missing_short_en": "HUS video review of every stage I–III patient",
+ "missing_short_by": "claude-opus-5-5"
 }

@@ -1,7 +1,7 @@
 {
  "version": "v3-care-path-4",
  "title": "South Savo: 2.4 more lung cancer patients a year treated to cure, for €111,920 a year",
- "markdown": "# South Savo: 2.4 more lung cancer patients a year treated to cure, for €111,920 a year\n\n> Closes 2.4 of 3.2 missing patients a year (74%) · €111,920 of €1.00M · €888,080 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in South Savo, 23 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, where 30.4 in 100 are treated to cure, 6.2 patients a year are missing (range 2.5–9.6). [^care_curative] [^model] Compared with Finland as a whole, 3.2 patients a year are missing (range 0.0–6.6): 2.4 fewer operated and 0.8 fewer given radiotherapy that aims to cure. [^model]\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 23.4% to 26.0% by 2028: 2.4 more patients a year (range 0.0–3.1), for €111,920 a year, about €47,000 per extra patient. [^care_curative][^model] That closes 74% of the measured shortfall against Finland as a whole (3.2 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €19,920 | 0.7 (0.0–1.4) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 23.4% → 24.2% by 2028 |\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 2 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 1.1 (0.0–1.7) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 12.2% → 13.4% by 2028 |\n| 3 | **Weekly video review of every stage I-III patient with the university hospital's specialists**[^ev_video_mdt_stage1_3_1]. Chief physician of pulmonology; lead of the university hospital lung MDT | €51,000 | 0.6 (0.0–0.6) | Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there. | Share of patients who get treatment that aims to cure: 23.4% → 24.0% by 2028 |\n| | **Total** | **€111,920** | **2.4 (0.0–3.1)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €404,432 a year; modelled to avoid 0.7 deaths a year (0.1–1.8). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 23.4% (2019–2023, measured) → 26.0% by 2028. [^care_curative][^model]\n- Share of patients operated: 12.2% → 13.4% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nIn the model, the remaining €888,080 buys nothing more for treatment to cure. [^model] These measures are limited by the reachable part of the measured shortfall, not by money. [^model] To see what else the money could do, look at low-dose CT screening for long-term heavy smokers, which needs a national decision, or rank measures by deaths avoided instead. [^model] Lung cancer causes 70.8 deaths a year in South Savo, and this plan is modelled to avoid 0.4 of them (range 0.0–0.93). [^deaths] [^model]\n\n## Pilot ask\n\nSix months with South Savo and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate. [^model]\n\n## Limits\n\n- Effects are ranges, not probabilities. Each range runs from the lowest to the highest result when every assumed effect moves together from its low to its high value. [^model]\n- The expected share is adjusted only for residents' age, not for stage, fitness, histology, smoking or treatment recording. County figures cannot show cause. [^model]\n- A check found that none of 3 measured outcomes matched the estimated symptom-to-treatment clock beyond chance. [^model]",
+ "markdown": "# South Savo: 2.4 more lung cancer patients a year treated to cure, for €111,920 a year\n\n> Closes 2.4 of 3.2 missing patients a year (74%) · €111,920 of €1.00M · €888,080 left: nothing else pays off at these assumptions\n\n## The gap\n\nOf 100 lung cancer patients in South Savo, 23 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, about 6.2 patients a year are missing from treatment that aims to cure (range 2.5–9.6). [^care_curative][^model] Compared with Finland as a whole, the figure is 3.2 a year (range 0.0–6.6): 2.4 fewer operated and 0.8 fewer given radiotherapy that aims to cure. [^care_curative][^model]\n\n## The target\n\nRaise the share of lung cancer patients treated to cure from 23.4% to 26.0% by 2028: 2.4 more patients a year (range 0.0–3.1), for €111,920 a year, about €47,000 per extra patient. [^care_curative][^model] That closes 74% of the measured shortfall against Finland as a whole (3.2 patients a year). [^model]\n\n## Funded actions\n\n| # | Action and owner | Cost a year | More patients treated to cure a year (range) | First step this week | Measure: today → target |\n|---|---|---|---|---|---|\n| | **The county can start on Monday** | | | | |\n| 1 | **Precise radiotherapy (SBRT) for early cancer in patients who cannot be operated**[^ev_sbrt_pathway_1]. Chief physician of oncology; chief of radiotherapy at the university hospital | €19,920 | 0.7 (0.0–1.4) | Write the referral rule: every stage I patient not accepted for surgery is referred for stereotactic radiotherapy the same week. | Share of patients who get treatment that aims to cure: 23.4% → 24.2% by 2028 |\n| | **Needs the collaborative area (university hospital)** | | | | |\n| 2 | **A chest surgeon reviews every decision not to operate**[^ev_surgeon_second_opinion_1]. Chief physician of pulmonology; chief of thoracic surgery at the university hospital | €41,000 | 1.1 (0.0–1.7) | Agree with the university hospital that a thoracic surgeon joins the weekly lung meeting, and send last quarter's stage I-II patients who were not operated for a second look. | Share of patients operated: 12.2% → 13.4% by 2028 |\n| 3 | **Weekly video review of every stage I-III patient with the university hospital's specialists**[^ev_video_mdt_stage1_3_1]. Chief physician of pulmonology; lead of the university hospital lung MDT | €51,000 | 0.6 (0.0–0.6) | Ask the university hospital for a fixed weekly video slot and list every stage I-III patient diagnosed last month who was not discussed there. | Share of patients who get treatment that aims to cure: 23.4% → 24.0% by 2028 |\n| | **Total** | **€111,920** | **2.4 (0.0–3.1)** | | |\n\nNo trial has measured these effects; the low end of every range is zero. The ranges do not add up to the range of the total, because the measures share one ceiling. Costs are assumptions. [^model]\n\n## Needs a national decision (outside this budget)\n\n- **Low-dose CT screening for long-term heavy smokers**[^ev_ldct_screening_1]: Ministry of Social Affairs and Health and Palko (decision), Finnish Cancer Registry (steering), county (delivery). €404,432 a year; modelled to avoid 0.7 deaths a year (0.1–1.8). Not counted in this budget. Not a county decision. Ask the Ministry and Palko for the timetable after the 2026-2028 pilot and offer the county as a pilot site. [^model]\n\n## What to measure from Monday\n\n- Share of patients treated to cure: 23.4% (2019–2023, measured) → 26.0% by 2028. [^care_curative][^model]\n- Share of patients operated: 12.2% → 13.4% by 2028. [^care_surgery][^model]\n- The registry's public figures cover 2019–2023; count these each month from the county's own records. [^care_curative]\n\n## What more money buys, and what it cannot\n\nIn the model, the remaining €888,080 buys nothing more toward treatment that aims to cure. [^model] These measures are limited by the reachable part of the measured shortfall, not by money. [^model] More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision. [^model] Ranking measures by deaths avoided instead would also add more. [^model] South Savo has about 71 lung cancer deaths a year, and this plan is modelled to avoid 0.4 of them (range 0.0–0.93). [^deaths][^model]\n\n## Pilot ask\n\nSix months with South Savo and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate. [^model]\n\n## Limits\n\n- Effect ranges are not probabilities. They run from every assumption at its lowest to every assumption at its highest, and no trial has measured these effects. [^model]\n- The county's expected share is adjusted only for residents' age, not for stage, fitness, histology, smoking or recording completeness. County figures cannot show cause. [^model]\n- The estimated symptom-to-treatment clock is only a secondary view here; in a check, none of 3 measured outcomes matched it beyond chance. [^model]",
  "claims": [
   {
    "text": "Of 100 lung cancer patients in South Savo, 23 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size.",
@@ -10,15 +10,16 @@
    ]
   },
   {
-   "text": "Compared with the best quarter of counties, where 30.4 in 100 are treated to cure, 6.2 patients a year are missing (range 2.5–9.6).",
+   "text": "Compared with the best quarter of counties, about 6.2 patients a year are missing from treatment that aims to cure (range 2.5–9.6).",
    "source_ids": [
     "care_curative",
     "model"
    ]
   },
   {
-   "text": "Compared with Finland as a whole, 3.2 patients a year are missing (range 0.0–6.6): 2.4 fewer operated and 0.8 fewer given radiotherapy that aims to cure.",
+   "text": "Compared with Finland as a whole, the figure is 3.2 a year (range 0.0–6.6): 2.4 fewer operated and 0.8 fewer given radiotherapy that aims to cure.",
    "source_ids": [
+    "care_curative",
     "model"
    ]
   },
@@ -87,7 +88,7 @@
    ]
   },
   {
-   "text": "In the model, the remaining €888,080 buys nothing more for treatment to cure.",
+   "text": "In the model, the remaining €888,080 buys nothing more toward treatment that aims to cure.",
    "source_ids": [
     "model"
    ]
@@ -99,66 +100,67 @@
    ]
   },
   {
-   "text": "To see what else the money could do, look at low-dose CT screening for long-term heavy smokers, which needs a national decision, or rank measures by deaths avoided instead.",
+   "text": "More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Lung cancer causes 70.8 deaths a year in South Savo, and this plan is modelled to avoid 0.4 of them (range 0.0–0.93).",
+   "text": "Ranking measures by deaths avoided instead would also add more.",
+   "source_ids": [
+    "model"
+   ]
+  },
+  {
+   "text": "South Savo has about 71 lung cancer deaths a year, and this plan is modelled to avoid 0.4 of them (range 0.0–0.93).",
    "source_ids": [
     "deaths",
     "model"
    ]
   },
   {
-   "text": "Six months with South Savo and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+   "text": "Six months with South Savo and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "Effects are ranges, not probabilities. Each range runs from the lowest to the highest result when every assumed effect moves together from its low to its high value.",
+   "text": "Effect ranges are not probabilities. They run from every assumption at its lowest to every assumption at its highest, and no trial has measured these effects.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "The expected share is adjusted only for residents' age, not for stage, fitness, histology, smoking or treatment recording. County figures cannot show cause.",
+   "text": "The county's expected share is adjusted only for residents' age, not for stage, fitness, histology, smoking or recording completeness. County figures cannot show cause.",
    "source_ids": [
     "model"
    ]
   },
   {
-   "text": "A check found that none of 3 measured outcomes matched the estimated symptom-to-treatment clock beyond chance.",
+   "text": "The estimated symptom-to-treatment clock is only a secondary view here; in a check, none of 3 measured outcomes matched it beyond chance.",
    "source_ids": [
     "model"
    ]
   }
  ],
  "review": {
-  "removed": [
-   {
-    "sentence": "The estimated symptom-to-treatment clock is not used in this plan.",
-    "reason": "The material only says the clock is a secondary view and that days saved is not a headline number. It does not say the clock is unused in this plan."
-   }
-  ],
+  "removed": [],
   "flagged": [
    {
-    "sentence": "The remaining €888,080 buys nothing more for treatment to cure.",
-    "reason": "The sentence had no source marker; added [^model]. It also stated a model result as fact, so 'In the model' was added, as in the source's saturation note."
+    "sentence": "The remaining €888,080 buys nothing more toward treatment that aims to cure.",
+    "reason": "Model result stated as fact and no source marker; added 'In the model' and [^model], as the source says it 'buys nothing more in the model'."
    },
    {
-    "sentence": "More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided instead.",
-    "reason": "This claimed that more would come from these options. The source only says to look at them to see what else the money could do, and pathway measures do not add patients treated to cure. Rewritten to match the source."
+    "sentence": "More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision.",
+    "reason": "Claim had no source marker; supporting id is obviously the model plan (needs_national_decision), so [^model] was added."
    },
    {
-    "sentence": "Shares are adjusted only for residents' age, not for stage, fitness, histology, smoking or treatment recording.",
-    "reason": "The measured shares are not adjusted. Only the expected share (18.9%) is adjusted for age. Changed 'Shares are' to 'The expected share is'."
+    "sentence": "County shares are adjusted only for residents' age, not for stage, fitness, histology, smoking or recording completeness.",
+    "reason": "The measured shares are not adjusted; only the model's expected share is adjusted for the share of residents aged 65+. Reworded to 'The county's expected share is adjusted'."
    },
    {
-    "sentence": "A check found that none of 3 measured outcomes matched it beyond chance.",
-    "reason": "Removing the previous sentence left 'it' without a referent, so it now names the estimated symptom-to-treatment clock. The claim itself is unchanged."
+    "sentence": "The estimated symptom-to-treatment clock is not used here: in a check, none of 3 measured outcomes matched it beyond chance.",
+    "reason": "Source does not say the clock is unused or that it was dropped because of the check; it calls the clock a secondary view. Reworded so the check is not presented as the reason."
    }
   ],
   "checked_by": "claude-opus-5-5 reviewer pass against the source material"
@@ -257,6 +259,18 @@
    "surgeon_second_opinion",
    "sbrt_pathway"
   ],
+  "missing": [
+   {
+    "intervention_id": "surgeon_second_opinion",
+    "in_use_here": "no_evidence",
+    "missing_short_en": null
+   },
+   {
+    "intervention_id": "sbrt_pathway",
+    "in_use_here": "partly",
+    "missing_short_en": "referral rule and figures for frail stage I patients"
+   }
+  ],
   "ask_first": [
    {
     "intervention_id": "sbrt_pathway",
@@ -294,8 +308,8 @@
   },
   "comparison_en": "Vantaa and Kerava is the comparison because it has Finland's highest recorded curative share (35.6%): a reachable level, not a causal control.",
   "comparison_fi": "Vantaa ja Kerava on vertailu, koska siellä kirjattu parantavan hoidon osuus on Suomen korkein (35,6 %): tavoiteltava taso, ei kausaalinen verrokki.",
-  "targets_en": "Start the two actions the audit says are new: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
-  "targets_fi": "Käynnistetään ne kaksi toimea, jotka tarkistus osoittaa uusiksi: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
+  "targets_en": "Start the two actions that decide who is treated: a chest surgeon reviews every decision not to operate, and every patient who cannot be operated is referred for precise radiotherapy.",
+  "targets_fi": "Käynnistetään ne kaksi toimea, jotka ratkaisevat, kuka saa parantavaa hoitoa: thoraxkirurgi arvioi jokaisen päätöksen jättää leikkaamatta, ja jokainen potilas, jota ei voida leikata, lähetetään täsmäsädehoidon arvioon.",
   "success": {
    "charts_audited": 50,
    "decisions_not_to_operate_reviewed": 13,
@@ -319,8 +333,8 @@
    "by_year": 2028,
    "kind": "estimated"
   },
-  "text_en": "Six months with South Savo and its university hospital: ask what already runs, check 50 charts, then start the two actions that turn out to be new. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, start the two actions the audit says are new. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
-  "text_fi": "Kuusi kuukautta Etelä-Savon hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja käynnistetään ne kaksi toimea, jotka osoittautuvat uusiksi. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 käynnistetään kaksi toimea sen mukaan, mitä tarkistus osoittaa. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
+  "text_en": "Six months with South Savo and its university hospital: ask what already runs, check 50 charts, then run the two actions that decide who is treated, for the part that is missing. In week 1, take the stored web-check questions to the university hospital. In weeks 1–8 spend €8,000 auditing 50 charts for stage, fitness, biomarker testing, why curative treatment was not given and where treatment happened. In months 3–6, run those two for what the hospital confirms is missing. Success is counted in charts audited, decisions reviewed, decisions changed and referrals made; patients moved are a secondary model estimate.",
+  "text_fi": "Kuusi kuukautta Etelä-Savon hyvinvointialueen ja sen yliopistosairaalan kanssa: kysytään, mikä on jo käytössä, tarkistetaan 50 potilaskertomusta ja tehdään kahdesta hoitopäätöksen ratkaisevasta toimesta se osa, joka puuttuu. Viikolla 1 viedään tallennetuista verkkotarkistuksista saadut kysymykset yliopistosairaalaan. Viikoilla 1–8 käytetään 8 000 euroa 50 potilaskertomuksen tarkistukseen: levinneisyysaste, toimintakyky, biomarkkerit, miksi parantavaa hoitoa ei annettu ja missä hoito annettiin. Kuukausina 3–6 tehdään näistä kahdesta se, minkä sairaala vahvistaa puuttuvan. Onnistuminen lasketaan tarkistetuista kertomuksista, arvioiduista päätöksistä, muuttuneista päätöksistä ja lähetteistä; potilassiirtymät ovat toissijainen malliarvio.",
   "six_months": {
    "patients_seen": {
     "expected": 44.8,
@@ -395,7 +409,7 @@
   "What more money buys, and what it cannot",
   "Limits"
  ],
- "generated_at": "2026-11-14T10:59:35+00:00",
+ "generated_at": "2026-11-14T13:49:36+00:00",
  "generated_by": "claude-opus-5-5",
- "draft_markdown": "## The gap\nOf 100 lung cancer patients in South Savo, 23 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, where 30.4 in 100 are treated to cure, 6.2 patients a year are missing (range 2.5–9.6). [^care_curative] [^model] Compared with Finland as a whole, 3.2 patients a year are missing (range 0.0–6.6): 2.4 fewer operated and 0.8 fewer given radiotherapy that aims to cure. [^model]\n\n## What more money buys, and what it cannot\nThe remaining €888,080 buys nothing more for treatment to cure. These measures are limited by the reachable part of the measured shortfall, not by money. [^model] More would come from low-dose CT screening for long-term heavy smokers, which needs a national decision, or from ranking measures by deaths avoided instead. [^model] Lung cancer causes 70.8 deaths a year in South Savo, and this plan is modelled to avoid 0.4 of them (range 0.0–0.93). [^deaths] [^model]\n\n## Limits\n- Effects are ranges, not probabilities. Each range runs from the lowest to the highest result when every assumed effect moves together from its low to its high value. [^model]\n- Shares are adjusted only for residents' age, not for stage, fitness, histology, smoking or treatment recording. County figures cannot show cause. [^model]\n- The estimated symptom-to-treatment clock is not used in this plan. A check found that none of 3 measured outcomes matched it beyond chance. [^model]"
+ "draft_markdown": "## The gap\nOf 100 lung cancer patients in South Savo, 23 get treatment that aims to cure. In Finland it is 27. The difference is within what chance alone gives a county of this size. [^care_curative] Compared with the best quarter of counties, about 6.2 patients a year are missing from treatment that aims to cure (range 2.5–9.6). [^care_curative][^model] Compared with Finland as a whole, the figure is 3.2 a year (range 0.0–6.6): 2.4 fewer operated and 0.8 fewer given radiotherapy that aims to cure. [^care_curative][^model]\n\n## What more money buys, and what it cannot\nThe remaining €888,080 buys nothing more toward treatment that aims to cure. These measures are limited by the reachable part of the measured shortfall, not by money. [^model] More could come from low-dose CT screening for long-term heavy smokers, which needs a national decision. Ranking measures by deaths avoided instead would also add more. [^model] South Savo has about 71 lung cancer deaths a year, and this plan is modelled to avoid 0.4 of them (range 0.0–0.93). [^deaths][^model]\n\n## Limits\n- Effect ranges are not probabilities. They run from every assumption at its lowest to every assumption at its highest, and no trial has measured these effects. [^model]\n- County shares are adjusted only for residents' age, not for stage, fitness, histology, smoking or recording completeness. County figures cannot show cause. [^model]\n- The estimated symptom-to-treatment clock is not used here: in a check, none of 3 measured outcomes matched it beyond chance. [^model]"
 }
