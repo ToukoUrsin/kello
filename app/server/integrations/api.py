@@ -392,10 +392,29 @@ async def verify_stream(intervention_id: str, area_id: str | None = None):
 
 
 @router.get("/api/verify/latest")
-def verify_latest(area_id: str | None = None):
+def verify_latest(area_id: str | None = None, stored: bool = False):
+    """`stored=true`: also the checks a demo reset put aside. The Run plays the stored run, whatever a demo
+    on another page is in the middle of."""
+    import json
+
     from . import verify
 
-    return {"area_id": area_id or "FI", "checks": verify.latest(area_id)}
+    checks = verify.latest(area_id)
+    if stored:
+        have = {c.get("intervention_id") for c in checks}
+        for key, f in list(_DEMO_FRESH.items()):
+            iid, _, area = key.partition(":")
+            if area != (area_id or "FI") or iid in have or f not in _SEED:
+                continue
+            try:
+                r = verify.present(json.loads(_SEED[f].decode("utf-8")))
+            except ValueError:
+                continue
+            for k in ("previous", "live_candidate", "stability", "live_trace", "live_outcome"):
+                r.pop(k, None)
+            checks.append(r)
+        checks.sort(key=lambda r: r.get("checked_at") or "", reverse=True)
+    return {"area_id": area_id or "FI", "checks": checks}
 
 
 # ----------------------------------------------------------------- county scout

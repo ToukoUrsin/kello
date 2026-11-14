@@ -21,7 +21,8 @@ function parseHash(): Route {
   const q = new URLSearchParams(query);
   const b = q.get("budget") == null || q.get("budget") === "" ? NaN : Number(q.get("budget"));
   return {
-    view: v === "county" || v === "plan" || v === "monday" || v === "review" || v === "run" ? v : "map", scope: s || (v === "run" ? "21" : "FI"),
+    // The first screen is the Run for Lapland; the map of every county is one tab away.
+    view: v === "county" || v === "plan" || v === "monday" || v === "review" || v === "run" ? v : v ? "map" : "run", scope: s || (v === "run" || !v ? "21" : "FI"),
     budget: Number.isFinite(b) && b >= 0 ? Math.min(50_000_000, Math.round(b)) : DEFAULT_BUDGET,
     lang: q.get("lang") === "fi" ? "fi" : "en",
     objective: OBJECTIVES.includes(q.get("objective") ?? "") ? q.get("objective") : null,

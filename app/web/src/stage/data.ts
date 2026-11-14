@@ -50,7 +50,7 @@ async function ask<T>(path: string, body?: unknown): Promise<T | null> {
 const AGAIN_MS = [400, 1200, 3000];
 export const stageApi = {
   /** The stored web checks of one county. A failed load is an error, never "no checks". */
-  checks: (area_id: string) => ask<{ checks?: VerifyResult[] }>(`/api/verify/latest?area_id=${encodeURIComponent(area_id)}`).then((r) => r?.checks ?? []),
+  checks: (area_id: string) => ask<{ checks?: VerifyResult[] }>(`/api/verify/latest?area_id=${encodeURIComponent(area_id)}&stored=1`).then((r) => r?.checks ?? []),
   stage: () => ask<StagePayload>("/api/stage"),
   scenario: (sites: { lat: number; lon: number; kind: SiteKind }[], cost_eur_per_year?: number | null) => ask<Scenario>("/api/scenario", { sites, ...(cost_eur_per_year != null ? { cost_eur_per_year } : {}) }),
   budgetCurve: (scope: string, objective?: string | null, exclude?: string[]) => ask<BudgetCurve>("/api/budget-curve", { scope, ...(objective ? { objective } : {}), ...(exclude?.length ? { exclude } : {}) }),
