@@ -548,6 +548,48 @@ async def read_report(request: Request):
         raise HTTPException(status_code=502, detail={"error": "Reading the report failed", "detail": str(e)[:300]})
 
 
+# ---- film mode: a second screen follows the demo -----------------------------
+# /film.html plays the Run on a fixed timeline; /film.html?read on a phone shows the narration in step with it.
+# The two only share a start time, kept here in memory. Nothing else is stored.
+
+_FILM: dict[str, dict] = {}
+
+
+class FilmBody(BaseModel):
+    action: str = Field(pattern="^(start|reset)$")
+
+
+def _film_room(room: str) -> dict:
+    if not (1 <= len(room) <= 16 and room.isascii() and room.isalnum()):
+        raise HTTPException(status_code=404, detail="No such room")
+    if room not in _FILM and len(_FILM) >= 20:
+        _FILM.pop(next(iter(_FILM)))
+    return _FILM.setdefault(room, {"start_at": None, "epoch": 0, "stage_seen": 0, "reader_seen": 0})
+
+
+def _film_view(st: dict) -> dict:
+    return {"now": int(time.time() * 1000), **st}
+
+
+@app.get("/api/film/{room}")
+def film_state(room: str, role: str | None = None):
+    st = _film_room(room)
+    if role in ("stage", "reader"):
+        st[f"{role}_seen"] = int(time.time() * 1000)
+    return JSONResponse(_film_view(st), headers={"Cache-Control": "no-store"})
+
+
+@app.post("/api/film/{room}")
+def film_set(room: str, body: FilmBody):
+    st = _film_room(room)
+    if body.action == "start":
+        st["start_at"] = int(time.time() * 1000) + 4000      # both screens count down to the same moment
+    else:
+        st["start_at"] = None
+        st["epoch"] += 1
+    return JSONResponse(_film_view(st), headers={"Cache-Control": "no-store"})
+
+
 @app.api_route("/api/{rest:path}", methods=["GET", "POST"])
 def api_404(rest: str):
     raise HTTPException(status_code=404, detail=f"No such endpoint: /api/{rest}")

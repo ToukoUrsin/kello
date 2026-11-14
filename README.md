@@ -117,6 +117,9 @@ starts; on the public site the answer on screen is pinned, so without this a vis
 No personal data is stored: only public pages and the checks themselves. Code: `app/server/integrations/mongo_store.py`;
 routes `GET /api/evidence/search`, `/api/evidence/stats`, `/api/verify/history`.
 
+**Film mode.** `/film.html` plays the Run and the what-if on a fixed two-minute timeline, with every tap shown;
+`/film.html?read` on a phone shows the narration in step with it. The two share only a start time (`/api/film/{room}`).
+
 **Reproducible analyses.** `science/drive.py` drives a local analysis app from a script and
 answers its permission cards from a fixed allowlist. Each analysis is saved with its code, environment and
 execution log under `science/out/` and listed in the app under Sources & method.

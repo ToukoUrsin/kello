@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Kello film mode</title>
+<style>
+  :root { color-scheme: dark; --bg: #0b0d10; --ink: #f4f5f3; --dim: #7d858f; --line: #262b32; --accent: #6aa5f0; --go: #2f7d4f; --font: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: var(--font); -webkit-text-size-adjust: 100%; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+
+  /* ---------- the laptop: the demo, full window, nothing else on screen ---------- */
+  body.stage { overflow: hidden; background: #f4f5f3; }
+  body.stage.on, body.stage.on * { cursor: none !important; }
+  #demo { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+  #card { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(520px, 92vw); background: #11161c; color: #f4f5f3; border-radius: 12px; padding: 22px 24px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); z-index: 5; }
+  #card[hidden] { display: none; }
+  #card h1 { font-size: 18px; margin: 0 0 12px; }
+  #card ol { margin: 0 0 14px; padding-left: 20px; line-height: 1.5; font-size: 15px; }
+  #card code { background: #262b32; padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+  #card .st { display: flex; gap: 16px; font-size: 14px; color: #b9bdb9; margin-bottom: 14px; }
+  #card .st b.ok { color: #7fd29f; } #card .st b.no { color: #e9cf8e; }
+  #card .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  #card .row button { height: 34px; padding: 0 12px; border-radius: 6px; border: 1px solid #48505a; background: none; }
+  #card .row button:hover { background: #262b32; }
+  #card small { color: #7d858f; font-size: 12px; margin-left: auto; }
+
+  /* ---------- the phone: what to say, in step with the demo ---------- */
+  body.read { display: flex; flex-direction: column; min-height: 100dvh; padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom); }
+  #bar { height: 4px; background: var(--line); }
+  #bar i { display: block; height: 100%; width: 0; background: var(--accent); }
+  #top { display: flex; align-items: center; gap: 12px; padding: 10px 18px 0; font-size: 14px; color: var(--dim); font-variant-numeric: tabular-nums; }
+  #top b { color: var(--ink); font-size: 16px; }
+  #top span { flex: 1; }
+  #stop { border: 1px solid var(--line); background: none; border-radius: 6px; padding: 6px 10px; color: var(--dim); font-size: 13px; }
+  #say { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 8px 18px 16px; max-width: 760px; width: 100%; margin: 0 auto; }
+  #tag { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; min-height: 18px; }
+  #now { font-size: clamp(25px, 6.6vw, 40px); line-height: 1.32; font-weight: 600; letter-spacing: -0.005em; }
+  #now span { transition: color 120ms linear; }
+  #now span.said { color: #5b636d; }
+  #now span.at { color: #fff; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 6px; text-decoration-thickness: 3px; }
+  #now.wait span { color: #c9cdd2; }
+  #next { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); font-size: clamp(15px, 4vw, 20px); line-height: 1.4; color: var(--dim); }
+  #next b { display: block; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+  #count { position: fixed; inset: 0; display: none; align-items: flex-start; justify-content: center; padding-top: 9vh; font-size: 22vh; font-weight: 700; color: var(--accent); pointer-events: none; opacity: 0.95; }
+  #count.on { display: flex; }
+  #idle { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 24px 22px; max-width: 520px; margin: 0 auto; width: 100%; }
+  #idle h1 { font-size: 22px; margin: 0; }
+  #idle ol { margin: 0; padding-left: 22px; line-height: 1.55; color: #c9cdd2; font-size: 16px; }
+  #idle p { margin: 0; font-size: 14px; color: var(--dim); }
+  #idle p b.ok { color: #7fd29f; } #idle p b.no { color: #e9cf8e; }
+  #start { height: 64px; border: 0; border-radius: 12px; background: var(--go); color: #fff; font-size: 20px; font-weight: 650; }
+  #start:active { filter: brightness(0.9); }
+  .hide { display: none !important; }
+</style>
+</head>
+<body>
+<!-- laptop -->
+<iframe id="demo" class="hide" title="Kello" allow="fullscreen"></iframe>
+<div id="card" class="hide">
+  <h1>Film mode</h1>
+  <ol>
+    <li>On your phone open <code id="readurl"></code></li>
+    <li>Start the screen recording of this screen.</li>
+    <li>Tap <b>Start</b> on the phone and read what it shows. The demo plays by itself.</li>
+  </ol>
+  <div class="st"><span>Demo: <b id="s-demo" class="no">loading</b></span><span>Phone: <b id="s-phone" class="no">waiting</b></span></div>
+  <div class="row"><button id="b-full">Full screen (F)</button><button id="b-hide">Hide this (H)</button><small>S start · R restart</small></div>
+</div>
+
+<!-- phone -->
+<div id="reader" class="hide" style="display:contents">
+  <div id="bar"><i></i></div>
+  <div id="top" class="hide"><b id="clock">0:00</b><span id="total"></span><button id="stop">Stop</button></div>
+  <div id="idle">
+    <h1>Kello: what to say</h1>
+    <ol>
+      <li>Laptop: open <b id="stageurl">/film.html</b> and start recording the screen.</li>
+      <li>Tap Start. After 3, 2, 1 read the big text aloud.</li>
+      <li>Follow the underlined word. Grey means it should be said already.</li>
+    </ol>
+    <p>Laptop: <b id="r-stage" class="no">not open yet</b>. <span id="r-hint">Without it you can still practise here.</span></p>
+    <button id="start">Start</button>
+    <p id="done" class="hide">Done. Stop the recording. Tap Start for another take.</p>
+  </div>
+  <div id="say" class="hide">
+    <div id="tag"></div>
+    <div id="now"></div>
+    <div id="next"></div>
+  </div>
+  <div id="count"></div>
+</div>
+
+<script>
+"use strict";
+/* One timeline, in seconds from the start. The laptop taps the demo at these moments; the phone shows these lines.
+   The Run plays its six steps by itself: they begin 0, 8, 18, 28, 45.5 and 53.5 s after Run is tapped and end at 65.5. */
+const LINES = [
+  { s: 0.2, e: 8.8, tag: "1 · The gap", text: "Sixty-six lung cancer patients a year in Finland miss treatment that aims to cure. Twelve of them in Lapland." },
+  { s: 9.6, e: 18.3, tag: "2 · Where they are lost", text: "Where are they lost? Stage isn't published. Referral and waiting are fine. Lapland loses them at the treatment decision." },
+  { s: 19.0, e: 28.2, tag: "3 · The plan", text: "So Kello builds a plan. Six actions, 212 thousand euros a year, for about five of the twelve." },
+  { s: 28.8, e: 45.0, tag: "4 · The check", text: "Then it checks its own plan against the hospital's public pages. This is Oulu University Hospital, word for word. Four of the six actions already run in part. The plan pays only for what's missing." },
+  { s: 45.9, e: 53.4, tag: "5 · The evidence", text: "The effects come from published studies, not from Lapland. So every range starts at zero." },
+  { s: 54.3, e: 65.2, tag: "6 · To 2028", text: "If the hospital needs all six: about five more patients a year treated to cure by 2028. Honest range: zero to eight." },
+  { s: 66.2, e: 77.0, tag: "Another county", text: "And it's a tool, not a single report. Tap another county: Kymenlaakso gets its own plan. Five actions, 186 thousand euros." },
+  { s: 78.4, e: 93.2, tag: "What if", text: "What if Rovaniemi gets a radiotherapy unit? The drive goes from 250 kilometres to 93. But that's one more patient a year, for one and a half million euros." },
+  { s: 94.4, e: 102.6, tag: "The Monday page", text: "What the county gets is one page: who does what on Monday, and what it costs. In Finnish." },
+  { s: 104.0, e: 116.2, tag: "The ask", text: "We ask AstraZeneca for one introduction, to Lapland and Oulu University Hospital. Six months there, every treatment decision reviewed. Then the twelve counties with a gap." },
+];
+const END = 117.5;
+const START = "/#/run/21";
+const byText = (doc, sel, text) => [...doc.querySelectorAll(sel)].find((b) => b.textContent.trim().startsWith(text));
+const ACTIONS = [
+  { t: 0.5, tap: (d) => d.querySelector(".st-run") },
+  { t: 66.0, tap: (d) => byText(d, ".st-others button", "Kymenlaakso") },
+  { t: 67.8, tap: (d) => d.querySelector(".st-steps li:nth-child(3) button") },
+  { t: 78.0, go: "#/run/21?act=6" },
+  { t: 79.6, tap: (d) => d.querySelector(".st-explore") },
+  { t: 81.0, tap: (d) => byText(d, "button", "New site") },
+  { t: 82.4, map: true },
+  { t: 94.0, tap: (d) => byText(d, ".st-nav button", "Who does what on Monday") },
+  { t: 100.4, tap: (d) => byText(d, "button", "Suomi") },
+  { t: 103.6, go: "#/run/21?act=6" },
+];
+
+const ROOM = (new URLSearchParams(location.search).get("r") || "main").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 16) || "main";
+const READ = /[?&]read\b/.test(location.search);
+const $ = (id) => document.getElementById(id);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/* ---------- the shared start time ---------- */
+let offset = 0, bestRtt = Infinity, state = { start_at: null, epoch: 0, stage_seen: 0, reader_seen: 0 };
+const serverNow = () => Date.now() + offset;
+const tNow = () => (state.start_at == null ? null : (serverNow() - state.start_at) / 1000);
+function take(r, t0, t1) {
+  const rtt = t1 - t0;
+  if (rtt <= bestRtt + 30) { bestRtt = Math.min(bestRtt, rtt); offset = r.now - (t0 + t1) / 2; }
+  state = r;
+}
+async function poll() {
+  const t0 = Date.now();
+  try {
+    const r = await (await fetch(`/api/film/${ROOM}?role=${READ ? "reader" : "stage"}`, { cache: "no-store" })).json();
+    take(r, t0, Date.now());
+  } catch (e) { /* keep the last known state: a running take goes on from the local clock */ }
+}
+async function send(action) {
+  const t0 = Date.now();
+  try {
+    const r = await (await fetch(`/api/film/${ROOM}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ action }) })).json();
+    take(r, t0, Date.now());
+  } catch (e) { /* the next poll says where things stand */ }
+}
+const running = () => { const t = tNow(); return t != null && t < END + 1; };
+(async function loop() { for (;;) { await poll(); await sleep(running() && tNow() > 0 ? 1500 : 350); } })();
+let lock = null;
+const awake = async () => { try { lock = await navigator.wakeLock?.request("screen"); } catch (e) { /* not supported: fine */ } };
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && lock) awake(); });
+
+/* ================= laptop ================= */
+if (!READ) {
+  document.body.className = "stage";
+  const frame = $("demo"), card = $("card");
+  frame.classList.remove("hide"); card.classList.remove("hide");
+  $("readurl").textContent = `${location.host}/film.html?read`;
+  let dirty = false, done = new Set(), ranFor = null, chain = Promise.resolve(), hideAt = 0;
+  const doc = () => frame.contentDocument;
+  const ready = () => { const b = doc()?.querySelector(".st-run"); return !!b && !b.disabled; };
+  const load = () => { dirty = false; frame.src = "about:blank"; setTimeout(() => { frame.src = START; }, 30); };
+  load();
+  // Open the other screens of the film once, out of sight, so nothing has to load during the take.
+  setTimeout(() => {
+    for (const u of ["/#/run/10?act=3", "/#/monday/21?lang=fi", "/#/run/21?act=6"]) {
+      const f = document.createElement("iframe");
+      f.style.cssText = "position:fixed;left:-3000px;top:0;width:1280px;height:800px;border:0;visibility:hidden";
+      f.src = u; document.body.appendChild(f);
+      setTimeout(() => f.remove(), 12000);
+    }
+  }, 2500);
+
+  function style(d) {
+    if (d.getElementById("film-style")) return;
+    const s = d.createElement("style"); s.id = "film-style";
+    s.textContent = `html.film-on, html.film-on * { cursor: none !important; }
+      .film-tap { position: fixed; z-index: 99999; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; border: 3px solid #104281; background: rgba(16, 66, 129, 0.16); pointer-events: none; animation: film-tap 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      @keyframes film-tap { 0% { transform: scale(0.35); opacity: 0; } 25% { opacity: 1; } 60% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.25); opacity: 0; } }`;
+    d.head.appendChild(s);
+  }
+  function ripple(x, y) {
+    const d = doc(); style(d);
+    const el = d.createElement("div"); el.className = "film-tap"; el.style.left = `${x}px`; el.style.top = `${y}px`;
+    d.body.appendChild(el); setTimeout(() => el.remove(), 800);
+  }
+  async function until(find, ms = 5000) {
+    const t0 = performance.now();
+    for (;;) {
+      let el = null; try { el = find(doc()); } catch (e) { /* the page is between two views */ }
+      if (el && !el.disabled) return el;
+      if (performance.now() - t0 > ms) return null;
+      await sleep(70);
+    }
+  }
+  async function act(a) {
+    dirty = true;
+    if (a.go) { frame.contentWindow.location.hash = a.go; return; }
+    if (a.map) {
+      // The new site goes on the county's main town: the ring on the map.
+      const seat = await until((d) => (d.querySelector(".st-svg.placing") ? d.querySelector(".st-seat i") : null));
+      const svg = doc().querySelector(".st-svg");
+      if (!seat || !svg) return;
+      const r = seat.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+      ripple(x, y); await sleep(240);
+      svg.dispatchEvent(new (frame.contentWindow.MouseEvent)("click", { bubbles: true, cancelable: true, clientX: x, clientY: y, view: frame.contentWindow }));
+      return;
+    }
+    const el = await until(a.tap);
+    if (!el) return;
+    el.scrollIntoView({ block: "nearest" });
+    const r = el.getBoundingClientRect();
+    ripple(r.left + r.width / 2, r.top + r.height / 2); await sleep(240);
+    el.click();
+  }
+  function begin() {
+    ranFor = state.start_at; done = new Set(); chain = Promise.resolve();
+    card.hidden = true; hideAt = -1;
+    if (dirty || !ready()) load();
+  }
+  setInterval(() => {
+    $("s-demo").textContent = ready() ? "ready" : "loading"; $("s-demo").className = ready() ? "ok" : "no";
+    const phone = serverNow() - (state.reader_seen || 0) < 2500;
+    $("s-phone").textContent = phone ? "connected" : "waiting"; $("s-phone").className = phone ? "ok" : "no";
+    if (phone && ready() && !card.hidden && !hideAt) hideAt = Date.now() + 3000;
+    if (hideAt && Date.now() > hideAt) { card.hidden = true; hideAt = -1; }
+    const t = tNow();
+    if (t == null) { if (ranFor != null) { ranFor = null; document.body.classList.remove("on"); doc()?.documentElement.classList.remove("film-on"); load(); } return; }
+    if (state.start_at !== ranFor) { if (t < 3) begin(); else return; }   // opened in the middle of a take: wait for the next one
+    if (t > END + 1) { document.body.classList.remove("on"); doc()?.documentElement.classList.remove("film-on"); return; }
+    if (t > -1.5) { document.body.classList.add("on"); const d = doc(); if (d?.head) { style(d); d.documentElement.classList.add("film-on"); } }
+    ACTIONS.forEach((a, i) => { if (t >= a.t && !done.has(i)) { done.add(i); chain = chain.then(() => act(a)).catch(() => {}); } });
+  }, 50);
+
+  const full = () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.());
+  $("b-full").onclick = full;
+  $("b-hide").onclick = () => { card.hidden = true; hideAt = -1; };
+  const key = (e) => {
+    const k = (e.key || "").toLowerCase();
+    if (e.metaKey || e.ctrlKey || e.altKey || /^(input|textarea|select)$/i.test(e.target?.tagName || "")) return;
+    if (k === "f") full(); else if (k === "h") { card.hidden = !card.hidden; hideAt = -1; } else if (k === "s" && !running()) { awake(); send("start"); } else if (k === "r") send("reset"); else return;
+    e.preventDefault(); e.stopPropagation();
+  };
+  window.addEventListener("keydown", key, true);
+  // A demo someone has clicked around in is loaded again before a take; our own taps are not real pointer events.
+  frame.addEventListener("load", () => { try { frame.contentWindow.addEventListener("keydown", key, true); frame.contentWindow.addEventListener("pointerdown", () => { dirty = true; }, true); } catch (e) { /* blank page */ } });
+}
+
+/* ================= phone ================= */
+if (READ) {
+  document.body.className = "read";
+  $("reader").classList.remove("hide");
+  const mmss = (t) => `${Math.floor(Math.max(0, t) / 60)}:${String(Math.floor(Math.max(0, t) % 60)).padStart(2, "0")}`;
+  $("total").textContent = `of ${mmss(END)}`;
+  $("stageurl").textContent = `${location.host}/film.html`;
+  // How long each word takes to say, roughly: longer words, numbers and sentence ends take longer.
+  const weigh = (w) => { let n = w.replace(/[^\p{L}\p{N}]/gu, "").length + 2; if (/\d/.test(w)) n += 8; if (/[.?!:]$/.test(w)) n += 5; else if (/,$/.test(w)) n += 2; return n; };
+  const lines = LINES.map((l) => { const words = l.text.split(/\s+/), w = words.map(weigh), sum = w.reduce((a, b) => a + b, 0); let acc = 0; return { ...l, words, ends: w.map((x) => (acc += x) / sum) }; });
+  let shown = -1, wasRunning = false, finished = false, stopArmed = 0;
+  function show(i) {
+    shown = i;
+    const l = lines[i];
+    $("tag").textContent = l.tag;
+    $("now").innerHTML = ""; l.words.forEach((w, k) => { const s = document.createElement("span"); s.textContent = w; $("now").append(s, k < l.words.length - 1 ? " " : ""); });
+    const n = lines[i + 1];
+    $("next").innerHTML = ""; if (n) { const b = document.createElement("b"); b.textContent = "Next"; $("next").append(b, n.text); }
+  }
+  function frame() {
+    requestAnimationFrame(frame);
+    const t = tNow(), on = t != null && t < END;
+    if (on !== wasRunning) {
+      wasRunning = on; shown = -1;
+      $("idle").classList.toggle("hide", on); $("say").classList.toggle("hide", !on); $("top").classList.toggle("hide", !on);
+      if (!on) { $("count").className = ""; $("bar").firstElementChild.style.width = "0"; $("done").classList.toggle("hide", !finished); }
+    }
+    const stage = serverNow() - (state.stage_seen || 0) < 2500;
+    $("r-stage").textContent = stage ? "ready" : "not open yet"; $("r-stage").className = stage ? "ok" : "no";
+    $("r-hint").classList.toggle("hide", stage);
+    if (!on) return;
+    finished = t > END - 3;
+    $("clock").textContent = mmss(t);
+    $("bar").firstElementChild.style.width = `${Math.max(0, Math.min(100, (t / END) * 100))}%`;
+    $("count").className = t < 0 ? "on" : ""; if (t < 0) $("count").textContent = String(Math.min(3, Math.ceil(-t)));
+    // A line comes up a moment before it is said, so there is time to read ahead.
+    let i = 0; while (i + 1 < lines.length && t >= lines[i + 1].s - 0.9) i++;
+    if (i !== shown) show(i);
+    const l = lines[i], f = (t - l.s) / (l.e - l.s), spans = $("now").children;
+    $("now").classList.toggle("wait", f < 0);
+    for (let k = 0; k < spans.length; k++) { const said = f >= l.ends[k], at = !said && f >= 0 && (k === 0 || f >= l.ends[k - 1]); const c = said ? "said" : at ? "at" : ""; if (spans[k].className !== c) spans[k].className = c; }
+  }
+  requestAnimationFrame(frame);
+  $("start").onclick = () => { awake(); finished = false; $("done").classList.add("hide"); send("start"); };
+  $("stop").onclick = () => {
+    if (Date.now() - stopArmed < 2500) { stopArmed = 0; $("stop").textContent = "Stop"; finished = false; send("reset"); }
+    else { stopArmed = Date.now(); $("stop").textContent = "Tap again to stop"; setTimeout(() => { if (stopArmed && Date.now() - stopArmed >= 2400) { stopArmed = 0; $("stop").textContent = "Stop"; } }, 2500); }
+  };
+}
+</script>
+</body>
+</html>
