@@ -75,7 +75,7 @@ def claude_ready() -> bool:
 
 
 def _gemini_key() -> str:
-    return (os.environ.get("GEMINI_API_KEY") or os.environ.get("JUNCTION_GEMINI_API_KEY") or "").strip()
+    return (os.environ.get("JUNCTION_GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY") or "").strip()
 
 
 def gemini_ready() -> bool:

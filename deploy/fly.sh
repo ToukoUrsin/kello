@@ -24,7 +24,7 @@ fly() { flyctl "$@"; }
 send_secrets() {
   : "${FLY_API_TOKEN:?set FLY_API_TOKEN}"
   local oxylabs="${OXYLABS_API_KEY:-${JUNCTION_OXYLABS_API_KEY:-}}"
-  local gemini="${GEMINI_API_KEY:-${JUNCTION_GEMINI_API_KEY:-}}"
+  local gemini="${JUNCTION_GEMINI_API_KEY:-${GEMINI_API_KEY:-}}"
   : "${oxylabs:?set OXYLABS_API_KEY or JUNCTION_OXYLABS_API_KEY}"
   : "${gemini:?set GEMINI_API_KEY or JUNCTION_GEMINI_API_KEY}"
   fly secrets set -a "$APP" "JUNCTION_OXYLABS_API_KEY=$oxylabs" "JUNCTION_GEMINI_API_KEY=$gemini" >/dev/null
